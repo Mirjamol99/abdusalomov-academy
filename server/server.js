@@ -8,11 +8,20 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHAT_ID = process.env.CHAT_ID;
 
+// Server tekshirish
+app.get("/", (req, res) => {
+    res.json({
+        success: true,
+        message: "Abdusalomov Academy Server ishlayapti 🚀"
+    });
+});
+
+// Telegramga xabar yuborish
 app.post("/send-message", async (req, res) => {
 
     const { name, email, message } = req.body;
@@ -75,15 +84,9 @@ ${message}
             success: false,
             message: "Telegramga ulanishda xatolik"
         });
-
     }
-
 });
 
 app.listen(PORT, () => {
-
-    console.log(
-        `Server http://localhost:${PORT} da ishlayapti`
-    );
-
+    console.log(`Server ${PORT} portda ishlayapti 🚀`);
 });
