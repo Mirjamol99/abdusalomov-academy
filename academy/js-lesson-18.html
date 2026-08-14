@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 18-dars | Ternary operator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ⚡ 18-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Ternary operator
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugun <code>if / else</code> ning qisqa
+            ko‘rinishi bo‘lgan
+            <code>ternary operator</code> bilan
+            ishlashni o‘rganamiz.
+
+            <br><br>
+
+            Ternary operator oddiy shartlarda
+            kodni qisqa va tushunarli yozish
+            uchun ishlatiladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ternary operator nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ternary operator — shartni tekshirib,
+            ikkita qiymatdan bittasini tanlash
+            imkonini beradigan operator.
+
+            <br><br>
+
+            U <code>if / else</code> ga o‘xshaydi,
+            lekin ancha qisqa yoziladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Sintaksisi 📚
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>shart ? trueQiymat : falseQiymat;</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda:
+
+            <br><br>
+
+            <code>?</code> — shartdan keyin yoziladi.
+
+            <br>
+
+            <code>:</code> — true va false holatlarini
+            ajratadi.
+
+            <br><br>
+
+            Agar shart <code>true</code> bo‘lsa,
+            <code>?</code> dan keyingi qiymat olinadi.
+
+            <br><br>
+
+            Agar shart <code>false</code> bo‘lsa,
+            <code>:</code> dan keyingi qiymat olinadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Eng oddiy misol
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 20;
+
+let result = age >= 18
+    ? "Kirish mumkin"
+    : "Kirish mumkin emas";
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Kirish mumkin</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Chunki:
+
+            <br><br>
+
+            <code>20 >= 18</code> → <code>true</code>
+
+            <br><br>
+
+            Shuning uchun:
+
+            <br>
+
+            <code>"Kirish mumkin"</code>
+            tanlanadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if / else bilan solishtiramiz 🔄
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ternary operator aslida oddiy
+            <code>if / else</code> shartini
+            qisqaroq yozishimizga yordam beradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 20;
+
+if (age >= 18) {
+    console.log("Katta");
+} else {
+    console.log("Kichik");
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Ternary ko‘rinishi:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 20;
+
+let result = age >= 18
+    ? "Katta"
+    : "Kichik";
+
+console.log(result);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean bilan ishlash 🧠
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = true;
+
+let message = isLogin
+    ? "Xush kelibsiz!"
+    : "Iltimos, tizimga kiring.";
+
+console.log(message);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Xush kelibsiz!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            false holati ❌
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = false;
+
+let message = isLogin
+    ? "Xush kelibsiz!"
+    : "Iltimos, tizimga kiring.";
+
+console.log(message);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Iltimos, tizimga kiring.</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Comparison operator bilan ⚖️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let number = 10;
+
+let result = number > 5
+    ? "Katta"
+    : "Kichik";
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Katta</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Natijani o‘zgaruvchiga saqlash
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 16;
+
+let status = age >= 18
+    ? "Voyaga yetgan"
+    : "Voyaga yetmagan";
+
+console.log(status);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Voyaga yetmagan</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String bilan ishlatish 📝
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let username = "Mirjamol";
+
+let message = username
+    ? "Foydalanuvchi mavjud"
+    : "Foydalanuvchi mavjud emas";
+
+console.log(message);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Foydalanuvchi mavjud</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Sonni tekshirish 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let number = 7;
+
+let result = number % 2 === 0
+    ? "Juft son"
+    : "Toq son";
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Toq son</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Imtihon natijasi 🎓
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let score = 75;
+
+let result = score >= 60
+    ? "Imtihondan o'tdingiz"
+    : "Imtihondan o'tmadingiz";
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Imtihondan o'tdingiz</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            && bilan ternary 🔥
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 20;
+let hasTicket = true;
+
+let result = age >= 18 && hasTicket
+    ? "Kirish mumkin"
+    : "Kirish mumkin emas";
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Kirish mumkin</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ternary bilan qiymat tanlash
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isStudent = true;
+
+let discount = isStudent ? 20 : 0;
+
+console.log(discount);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>20</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Agar foydalanuvchi talaba bo‘lsa,
+            <code>20</code> qiymati olinadi.
+
+            <br><br>
+
+            Aks holda <code>0</code> olinadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ternary bilan HTML chiqarish 🌐
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = true;
+
+let button = isLogin
+    ? "Profil"
+    : "Kirish";
+
+console.log(button);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Profil</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu usul keyinchalik JavaScript
+            yordamida interfeys yaratishda
+            juda foydali bo‘ladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ternary operatorni ketma-ket yozish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ternary ichida yana ternary yozish
+            mumkin.
+
+            <br><br>
+
+            Lekin bunday kod juda murakkab
+            bo‘lib ketishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let score = 85;
+
+let grade =
+    score >= 90
+        ? "A"
+        : score >= 70
+            ? "B"
+            : "C";
+
+console.log(grade);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>B</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Oddiy shartlarda ternary juda qulay,
+            lekin ko‘p shart bo‘lsa
+            <code>if / else if / else</code>
+            tushunarliroq bo‘lishi mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qachon ternary ishlatamiz? 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ternary operator ayniqsa:
+
+            <br><br>
+
+            ✅ Bitta oddiy shart bo‘lganda
+
+            <br>
+
+            ✅ Ikki xil natijadan bittasini
+            tanlash kerak bo‘lganda
+
+            <br>
+
+            ✅ Kodni qisqa yozish kerak bo‘lganda
+
+            <br><br>
+
+            foydali.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Muhim farq ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>if / else</code> ko‘proq
+            murakkab yoki bir nechta amal
+            bajariladigan shartlarda qulay.
+
+            <br><br>
+
+            <code>ternary</code> esa odatda
+            bitta qiymat yoki qisqa natijani
+            tanlash uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>// Ternary
+
+let age = 20;
+
+let result =
+    age >= 18 ? "Katta" : "Kichik";</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>// if / else
+
+let age = 20;
+
+if (age >= 18) {
+    console.log("Katta");
+} else {
+    console.log("Kichik");
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Natijani oldindan topishga harakat
+            qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 17;
+
+let result =
+    age >= 18 ? "A" : "B";
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let number = 12;
+
+let result =
+    number % 2 === 0
+        ? "Juft"
+        : "Toq";
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let isStudent = false;
+
+let result =
+    isStudent ? "Talaba" : "Talaba emas";
+
+console.log(result);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 🛒
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Mahsulot narxiga qarab
+            chegirma beramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let price = 150000;
+
+let discount =
+    price >= 100000 ? 10 : 0;
+
+console.log(discount + "% chegirma");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>10% chegirma</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            <code>age</code> yarating.
+            Ternary yordamida 18 yoshdan
+            katta yoki kichikligini aniqlang.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            <code>number</code> yarating.
+            Ternary yordamida sonning
+            juft yoki toq ekanini aniqlang.
+
+            <br><br>
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            <code>isLogin</code> yarating.
+            Agar <code>true</code> bo‘lsa
+            <code>"Xush kelibsiz!"</code>,
+            aks holda
+            <code>"Kirish kerak"</code>
+            chiqaring.
+
+            <br><br>
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            <code>score</code> yarating.
+            Agar ball 60 yoki undan katta bo‘lsa
+            <code>"O‘tdi"</code>,
+            aks holda
+            <code>"Yiqildi"</code>
+            chiqaring.
+
+            <br><br>
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            <code>isStudent</code> yordamida
+            talaba uchun 20% chegirma,
+            talaba bo‘lmaganlar uchun 0%
+            chegirma belgilang.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ⚡ Ternary — qisqa shart operatori.
+            </p>
+
+            <p>
+                ❓ <code>?</code> — true holatni bildiradi.
+            </p>
+
+            <p>
+                ➗ <code>:</code> — false holatni
+                ajratadi.
+            </p>
+
+            <p>
+                🔀 Ternary:
+                <code>shart ? true : false</code>
+                ko‘rinishida yoziladi.
+            </p>
+
+            <p>
+                🧠 Oddiy shartlarda ternary,
+                murakkab shartlarda esa
+                <code>if / else</code> qulayroq.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ⚡
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            18-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 18-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 17-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(17)) {
+
+        alert("Avval 17-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-17.html";
+
+        return;
+    }
+
+
+    // 18-darsni saqlash
+
+    if (!completedLessons.includes(18)) {
+
+        completedLessons.push(18);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 18-dars tugatildi! 19-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 18-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

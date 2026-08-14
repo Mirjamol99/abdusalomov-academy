@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 5-dars | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="css-course.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-blue-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- MAIN -->
+
+<main class="max-w-5xl mx-auto
+            px-6 py-12">
+
+         <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="inline-flex
+                     items-center gap-2
+                     bg-blue-500/10
+                     border border-blue-500/20
+                     text-blue-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            5-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+            CSS Text & Fonts ✍️
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5
+                  leading-8">
+
+            CSS yordamida matnning joylashuvi,
+            o'lchami, qalinligi, shrift turi
+            va ko'rinishini boshqarishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+         <!-- 1. TEXT-ALIGN -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+
+            <i class="fa-solid fa-align-center"></i>
+
+        </div>
+
+
+        <h2 class="lesson-title">
+
+            1. `text-align`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `text-align` matnning gorizontal
+            joylashuvini belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>text-align: left;
+
+text-align: center;
+
+text-align: right;</code></pre>
+
+        </div>
+
+
+        <div class="text-demo">
+
+            <p class="text-left">
+
+                Chap tomonda
+
+            </p>
+
+
+            <p class="text-center mt-4">
+
+                Markazda
+
+            </p>
+
+
+            <p class="text-right mt-4">
+
+                O'ng tomonda
+
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡 Eng ko'p ishlatiladigan qiymatlar:
+
+            <br><br>
+
+            `left` → chap
+
+            <br>
+
+            `center` → markaz
+
+            <br>
+
+            `right` → o'ng
+
+        </div>
+
+    </section>
+
+         <!-- 2. TEXT-DECORATION -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            2. `text-decoration`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Matnning tagiga, ustiga yoki
+            ustidan chiziq qo'yish uchun
+            ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>text-decoration: underline;
+
+text-decoration: line-through;
+
+text-decoration: overline;
+
+text-decoration: none;</code></pre>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-6">
+
+
+            <div class="decoration-card">
+
+                <p class="underline
+                          text-xl">
+
+                    Underline
+
+                </p>
+
+            </div>
+
+
+            <div class="decoration-card">
+
+                <p class="line-through
+                          text-xl">
+
+                    Line Through
+
+                </p>
+
+            </div>
+
+
+            <div class="decoration-card">
+
+                <p class="overline
+                          text-xl">
+
+                    Overline
+
+                </p>
+
+            </div>
+
+
+            <div class="decoration-card">
+
+                <p class="text-xl">
+
+                    None
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 3. TEXT-TRANSFORM -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            3. `text-transform`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Matn harflarining ko'rinishini
+            ozgartirish uchun ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>text-transform: uppercase;
+
+text-transform: lowercase;
+
+text-transform: capitalize;</code></pre>
+
+        </div>
+
+
+        <div class="transform-demo">
+
+            <p class="uppercase">
+
+                abdusalomov academy
+
+            </p>
+
+
+            <p class="lowercase mt-4">
+
+                ABDUSALOMOV ACADEMY
+
+            </p>
+
+
+            <p class="capitalize mt-4">
+
+                abdusalomov academy
+
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            📌 `uppercase` → HAMMASI KATTA
+
+            <br>
+
+            📌 `lowercase` → hammasi kichik
+
+            <br>
+
+            📌 `capitalize` → Har Bir So'z Bosh Harfi Katta
+
+        </div>
+
+    </section>
+
+         <!-- 4. FONT-SIZE -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            4. `font-size`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Matnning o'lchamini belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}</code></pre>
+
+        </div>
+
+
+        <div class="font-size-demo">
+
+            <p class="small-text">
+
+                16px matn
+
+            </p>
+
+
+            <p class="medium-text">
+
+                24px matn
+
+            </p>
+
+
+            <p class="large-text">
+
+                36px matn
+
+            </p>
+
+        </div>
+
+    </section>
+
+         <!-- 5. FONT-WEIGHT -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            5. `font-weight`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Matnning qalinligini belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>font-weight: 400;
+
+font-weight: 500;
+
+font-weight: 700;
+
+font-weight: 900;</code></pre>
+
+        </div>
+
+
+        <div class="weight-demo">
+
+            <p class="weight-400">
+
+                Font Weight 400
+
+            </p>
+
+
+            <p class="weight-500">
+
+                Font Weight 500
+
+            </p>
+
+
+            <p class="weight-700">
+
+                Font Weight 700
+
+            </p>
+
+
+            <p class="weight-900">
+
+                Font Weight 900
+
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡 `700` odatda bold ko'rinishga
+            yaqin bo'ladi.
+
+        </div>
+
+    </section>
+
+         <!-- 6. FONT-FAMILY -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            6. `font-family`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Matn qaysi shrift yordamida
+            ko'rsatilishini belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>body {
+    font-family: Arial, sans-serif;
+}</code></pre>
+
+        </div>
+
+
+        <div class="font-family-demo">
+
+            <p class="arial-font">
+
+                Arial Font
+
+            </p>
+
+
+            <p class="serif-font">
+
+                Georgia Font
+
+            </p>
+
+
+            <p class="mono-font">
+
+                Monospace Font
+
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            📌 Ko'p ishlatiladigan shriftlar:
+
+            <br><br>
+
+            Arial
+
+            <br>
+
+            Georgia
+
+            <br>
+
+            Verdana
+
+            <br>
+
+            Tahoma
+
+            <br>
+
+            sans-serif
+
+        </div>
+
+    </section>
+
+         <!-- 7. FONT-STYLE -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            7. `font-style`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Matnni oddiy yoki qiya
+            ko'rinishga keltiradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>font-style: normal;
+
+font-style: italic;</code></pre>
+
+        </div>
+
+
+        <div class="style-demo">
+
+            <p>
+
+                Oddiy matn
+
+            </p>
+
+
+            <p class="italic mt-4">
+
+                Qiya matn
+
+            </p>
+
+        </div>
+
+    </section>
+
+         <!-- 8. LINE-HEIGHT -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            8. `line-height`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Qatorlar orasidagi masofani
+            boshqaradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>p {
+    line-height: 1.8;
+}</code></pre>
+
+        </div>
+
+
+        <div class="line-height-demo">
+
+            CSS — web sahifalarni
+            chiroyli ko'rsatish uchun
+            ishlatiladi.
+
+            CSS yordamida matn,
+            rang, o'lcham va
+            joylashuvni boshqarish mumkin.
+
+        </div>
+
+    </section>
+
+         <!-- 9. AMALIY LOYIHA -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            9. Amaliy loyiha 💻
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            O'rgangan propertylarimizdan
+            foydalanib Academy card yaratamiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;div class="card"&gt;
+
+    &lt;h2&gt;
+        Abdusalomov Academy
+    &lt;/h2&gt;
+
+    &lt;p&gt;
+        CSS Text & Fonts
+    &lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>.card {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.card h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #3b82f6;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #94a3b8;
+}</code></pre>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="project-card">
+
+            <h2>
+
+                Abdusalomov Academy
+
+            </h2>
+
+
+            <p>
+
+                CSS Text & Fonts 🚀
+
+            </p>
+
+        </div>
+
+    </section>
+
+         <!-- MINI TEST -->
+    <section class="lesson-box">
+
+        <span class="text-blue-400
+                     font-bold">
+
+            MINI TEST 🧠
+
+        </span>
+
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold
+                   mt-4">
+
+            Matnni markazga joylashtirish
+            uchun qaysi property ishlatiladi?
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                A) text-align
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B) font-size
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) color
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) line-height
+
+            </button>
+
+        </div>
+
+
+        <p id="answerResult"
+           class="mt-6
+                  font-bold
+                  text-lg">
+
+        </p>
+
+    </section>
+
+         <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8
+                    text-center">
+
+        <div class="text-5xl mb-5">
+
+            🎉
+
+        </div>
+
+
+        <h2 class="text-3xl
+                   md:text-4xl
+                   font-extrabold">
+
+            5-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 6-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- COMPLETE BUTTON -->
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full
+                   bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5
+                   rounded-2xl
+                   font-bold
+                   text-lg
+                   transition">
+
+            5-darsni tugatish
+
+            <i class="fa-solid
+                      fa-check
+                      ml-2">
+            </i>
+
+        </button>
+
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+        </p>
+
+    </section>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8
+               mt-10">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- STYLE -->
+
+<style>
+
+.lesson-box {
+
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+}
+
+
+.lesson-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.lesson-title {
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+
+.code-box {
+
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+
+}
+
+
+.code-box pre {
+
+    color: #4ade80;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+
+}
+
+
+.info-box {
+
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: rgba(59,130,246,.08);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    border-radius: 16px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+
+}
+
+
+.text-demo,
+.transform-demo,
+.font-size-demo,
+.weight-demo,
+.font-family-demo,
+.style-demo {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+}
+
+
+.decoration-card {
+
+    padding: 25px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+}
+
+
+.small-text {
+
+    font-size: 16px;
+
+}
+
+
+.medium-text {
+
+    font-size: 24px;
+
+    margin-top: 15px;
+
+}
+
+
+.large-text {
+
+    font-size: 36px;
+
+    margin-top: 15px;
+
+    font-weight: 800;
+
+}
+
+
+.weight-400 {
+
+    font-weight: 400;
+
+}
+
+
+.weight-500 {
+
+    font-weight: 500;
+
+    margin-top: 15px;
+
+}
+
+
+.weight-700 {
+
+    font-weight: 700;
+
+    margin-top: 15px;
+
+}
+
+
+.weight-900 {
+
+    font-weight: 900;
+
+    margin-top: 15px;
+
+}
+
+
+.arial-font {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 24px;
+
+}
+
+
+.serif-font {
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    margin-top: 15px;
+
+}
+
+
+.mono-font {
+
+    font-family: monospace;
+
+    font-size: 24px;
+
+    margin-top: 15px;
+
+}
+
+
+.style-demo {
+
+    font-size: 22px;
+
+}
+
+
+.line-height-demo {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    line-height: 1.8;
+
+    color: #cbd5e1;
+
+}
+
+
+.project-card {
+
+    margin-top: 25px;
+
+    padding: 35px;
+
+    background: #020617;
+
+    border: 1px solid #3b82f6;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+.project-card h2 {
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    color: #3b82f6;
+
+}
+
+
+.project-card p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #94a3b8;
+
+    margin-top: 10px;
+
+}
+
+
+.answer-btn {
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+
+}
+
+
+.answer-btn:hover {
+
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+
+}
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById(
+            "answerResult"
+        );
+
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! Matnni markazga joylashtirish uchun text-align ishlatiladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 5
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "cssCompletedLessons"
+            )
+        ) || [];
+
+
+    // 4-dars tugaganini tekshiramiz
+
+    if (!completedLessons.includes(4)) {
+
+        alert(
+            "Avval 4-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-4.html";
+
+        return;
+
+    }
+
+
+    // 5-darsni qo‘shamiz
+
+    if (!completedLessons.includes(5)) {
+
+        completedLessons.push(5);
+
+    }
+
+
+    // Saqlaymiz
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    // Xabar
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 5-dars tugatildi! 6-dars ochildi 🔓";
+
+
+    // Button
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.innerHTML =
+        "✅ 5-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    // Kurs sahifasiga qaytish
+
+    setTimeout(
+        function() {
+
+            window.location.href =
+                "css-course.html";
+
+        },
+        1500
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

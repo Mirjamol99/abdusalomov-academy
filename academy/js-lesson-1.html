@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 1-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- HEADER -->
+
+    <header class="sticky top-0 z-50 bg-slate-950/90
+                   backdrop-blur-xl border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto px-6 py-4
+                    flex items-center justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-yellow-400">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+            <a href="js-course.html" class="text-slate-400 hover:text-yellow-400
+                       transition flex items-center gap-2">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                JS kursi
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+        <!-- TITLE -->
+
+        <section>
+
+            <span class="lesson-number">
+
+                <i class="fa-brands fa-js"></i>
+
+                1-DARS
+
+            </span>
+
+
+            <h1 class="text-4xl md:text-6xl
+                       font-extrabold mt-6">
+
+                JavaScript nima? 🚀
+
+            </h1>
+
+
+            <p class="text-slate-400
+                      text-lg md:text-xl
+                      mt-5 leading-8">
+
+                JavaScript — web-saytlarga harakat,
+                interaktivlik va funksionallik qo'shadigan
+                dasturlash tili.
+
+            </p>
+
+        </section>
+
+
+        <!-- 1 -->
+
+        <section class="lesson-box">
+
+            <div class="lesson-icon">
+
+                <i class="fa-brands fa-js"></i>
+
+            </div>
+
+
+            <h2 class="lesson-title">
+
+                JavaScript nima?
+
+            </h2>
+
+
+            <p class="text-slate-400 leading-8">
+
+                HTML saytning tuzilishini yaratadi.
+                CSS saytni chiroyli qiladi.
+                JavaScript esa saytni
+
+                <span class="text-yellow-400 font-bold">
+                    interaktiv
+                </span>
+
+                qiladi.
+
+            </p>
+
+
+            <div class="grid md:grid-cols-3 gap-5 mt-7">
+
+                <div class="info-card">
+
+                    <div class="text-3xl">
+                        🏗️
+                    </div>
+
+                    <h3>
+                        HTML
+                    </h3>
+
+                    <p>
+                        Sayt tuzilishi
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="text-3xl">
+                        🎨
+                    </div>
+
+                    <h3>
+                        CSS
+                    </h3>
+
+                    <p>
+                        Sayt dizayni
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="text-3xl">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Sayt funksiyasi
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 2 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+
+                JavaScript nima qila oladi?
+
+            </h2>
+
+
+            <div class="space-y-4 text-slate-300">
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    Tugmalarni ishlatish
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    Menyular yaratish
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    Formalarni tekshirish
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    Animatsiyalar yaratish
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    API bilan ishlash
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    Web-ilovalar yaratish
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 3 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+
+                Birinchi JavaScript kodingiz 👨‍💻
+
+            </h2>
+
+
+            <p class="text-slate-400 leading-8">
+
+                JavaScript kodini brauzer Console'ida
+                ishga tushirishimiz mumkin.
+
+            </p>
+
+
+            <div class="code-box">
+
+                <pre><code>console.log("Salom, JavaScript!");</code></pre>
+
+            </div>
+
+
+            <button onclick="runExample()" class="mt-5 bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       px-6 py-3 rounded-xl
+                       font-extrabold transition">
+
+                ▶ Kodni ishga tushirish
+
+            </button>
+
+
+            <p id="exampleResult" class="mt-5 text-green-400 font-bold">
+            </p>
+
+        </section>
+
+
+        <!-- 4 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+
+                JavaScript qayerda yoziladi?
+
+            </h2>
+
+
+            <p class="text-slate-400 leading-8">
+
+                JavaScript'ni HTML ichida
+
+                <code class="text-yellow-400">
+                    &lt;script&gt;
+                </code>
+
+                tegi yordamida yozish mumkin.
+
+            </p>
+
+
+            <div class="code-box">
+
+                <pre><code>&lt;script&gt;
+
+    console.log("Hello World");
+
+&lt;/script&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- 5 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+
+                Alohida JavaScript fayli
+
+            </h2>
+
+
+            <p class="text-slate-400 leading-8">
+
+                Katta loyihalarda JavaScript kodini
+                alohida
+
+                <span class="text-yellow-400">
+                    .js
+                </span>
+
+                faylga yozish qulay.
+
+            </p>
+
+
+            <div class="code-box">
+
+                <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+            </div>
+
+
+            <p class="text-slate-500 mt-4">
+
+                Masalan:
+
+                <span class="text-yellow-400">
+                    script.js
+                </span>
+
+            </p>
+
+        </section>
+
+
+        <!-- 6 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+
+                Mini topshiriq 🧠
+
+            </h2>
+
+
+            <p class="text-slate-400 leading-8">
+
+                Console'ga quyidagi xabarni chiqarishga
+                harakat qiling:
+
+            </p>
+
+
+            <div class="code-box">
+
+                <pre><code>Men JavaScript o‘rganishni boshladim!</code></pre>
+
+            </div>
+
+
+            <button onclick="showTask()" class="mt-5 bg-slate-800
+                       hover:bg-slate-700
+                       border border-slate-700
+                       px-6 py-3 rounded-xl
+                       font-bold transition">
+
+                💡 Javobni ko‘rsatish
+
+            </button>
+
+
+            <p id="taskAnswer" class="hidden mt-5 text-green-400 font-bold">
+
+                console.log("Men JavaScript
+                o'rganishni boshladim!");
+
+            </p>
+
+        </section>
+
+
+        <!-- COMPLETE -->
+
+        <section class="lesson-box text-center">
+
+            <div class="text-6xl mb-5">
+
+                🎯
+
+            </div>
+
+
+            <h2 class="text-3xl md:text-4xl
+                       font-extrabold">
+
+                1-darsni tugatdingizmi?
+
+            </h2>
+
+
+            <p id="completeMessage" class="text-slate-400 mt-4">
+
+                Darsni tugatganingizdan keyin
+                2-dars ochiladi.
+
+            </p>
+
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5 rounded-2xl
+                       font-extrabold text-lg
+                       transition">
+
+                🔓 1-DARSNI TUGATISH
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="border-t border-slate-800
+                   py-8 mt-10 text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </footer>
+
+
+    <!-- CSS -->
+
+    <style>
+        .lesson-number {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 10px 18px;
+
+            border-radius: 999px;
+
+            background: rgba(250, 204, 21, .1);
+
+            border: 1px solid rgba(250, 204, 21, .2);
+
+            color: #facc15;
+
+            font-weight: 800;
+
+        }
+
+
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 30px;
+
+        }
+
+
+        .lesson-icon {
+
+            width: 60px;
+
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 17px;
+
+            background:
+                rgba(250, 204, 21, .1);
+
+            color: #facc15;
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .lesson-title {
+
+            font-size: 28px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .info-card {
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            transition: .3s;
+
+        }
+
+
+        .info-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: #facc15;
+
+        }
+
+
+        .info-card h3 {
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            margin-top: 12px;
+
+        }
+
+
+        .info-card p {
+
+            color: #64748b;
+
+            margin-top: 5px;
+
+        }
+
+
+        .feature {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            padding: 15px;
+
+            background: #020617;
+
+            border-radius: 14px;
+
+            border: 1px solid #1e293b;
+
+        }
+
+
+        .feature i {
+
+            color: #4ade80;
+
+        }
+
+
+        .code-box {
+
+            margin-top: 24px;
+
+            padding: 22px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box pre {
+
+            color: #4ade80;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+        }
+    </style>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // Birinchi misol
+
+        function runExample() {
+
+            console.log(
+                "Salom, JavaScript!"
+            );
+
+            document.getElementById(
+                "exampleResult"
+            ).textContent =
+                "✅ Kod ishladi! Console'ni ham tekshiring.";
+
+        }
+
+
+        // Topshiriq javobi
+
+        function showTask() {
+
+            document.getElementById(
+                "taskAnswer"
+            ).classList.remove("hidden");
+
+        }
+
+
+        // Darsni tugatish
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "jsCompletedLessons"
+                    )
+                ) || [];
+
+
+            // 1-darsni saqlash
+
+            if (
+                !completedLessons.includes(1)
+            ) {
+
+                completedLessons.push(1);
+
+            }
+
+
+            localStorage.setItem(
+                "jsCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "✅ 1-dars tugatildi! 2-dars ochildi 🔓";
+
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.textContent =
+                "✅ 1-DARS TUGATILDI";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-yellow-400",
+                "hover:bg-yellow-300"
+            );
+
+
+            button.classList.add(
+                "bg-green-600",
+                "text-white"
+            );
+
+
+            // Kurs sahifasiga qaytish
+
+            setTimeout(function () {
+
+                window.location.href =
+                    "js-course.html";
+
+            }, 1200);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

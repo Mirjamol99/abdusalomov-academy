@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Kursi | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+          <!-- LOGIN TEKSHIRISH -->
+<script>
+
+    const currentUser =
+        JSON.parse(
+            localStorage.getItem("academyCurrentUser")
+        );
+
+    if (!currentUser) {
+
+        window.location.href = "login.html";
+
+    }
+
+</script>
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl
+                  font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <!-- BACK -->
+
+        <a href="index.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-blue-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Bosh sahifa
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- HERO -->
+
+<section class="relative overflow-hidden">
+
+    <!-- Glow -->
+
+    <div class="absolute
+                top-10
+                left-10
+                w-72
+                h-72
+                bg-blue-600/20
+                rounded-full
+                blur-3xl">
+    </div>
+
+
+    <div class="absolute
+                bottom-10
+                right-10
+                w-72
+                h-72
+                bg-purple-600/20
+                rounded-full
+                blur-3xl">
+    </div>
+
+
+    <div class="relative
+                max-w-7xl
+                mx-auto
+                px-6
+                py-16">
+
+
+        <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+            <i class="fa-brands fa-html5 mr-2"></i>
+
+            HTML KURSI
+
+        </span>
+
+
+        <h1 class="text-4xl
+                   md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+            HTML ni
+            <span class="text-transparent
+                         bg-clip-text
+                         bg-gradient-to-r
+                         from-orange-400
+                         to-yellow-300">
+
+                0 dan
+
+            </span>
+
+            o'rganing 🚀
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  md:text-xl
+                  mt-6
+                  max-w-3xl">
+
+            HTML asoslarini bosqichma-bosqich
+            o'rganing. Har bir darsni tugatganingizdan
+            keyin keyingi dars ochiladi.
+
+        </p>
+
+
+        <!-- PROGRESS -->
+
+        <div class="mt-10 max-w-xl">
+
+            <div class="flex
+                        justify-between
+                        mb-3">
+
+                <span class="text-slate-400">
+                    Kurs jarayoni
+                </span>
+
+                <span id="progressText"
+                      class="text-blue-400
+                             font-bold">
+
+                    0 / 20
+
+                </span>
+
+            </div>
+
+
+            <div class="w-full
+                        h-3
+                        bg-slate-800
+                        rounded-full
+                        overflow-hidden">
+
+                <div id="progressBar"
+                     class="h-full
+                            bg-gradient-to-r
+                            from-blue-500
+                            to-cyan-400
+                            transition-all
+                            duration-500"
+                     style="width: 0%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+     <!-- LESSONS -->
+
+<main class="max-w-7xl
+            mx-auto
+            px-6
+            pb-20">
+
+
+    <div class="text-center mb-12">
+
+        <h2 class="text-3xl
+                   md:text-4xl
+                   font-bold">
+
+            HTML Darslari 📚
+
+        </h2>
+
+
+        <p class="text-slate-400
+                  mt-3">
+
+            20 ta dars orqali HTML asoslarini
+            mukammal o'rganing.
+
+        </p>
+
+    </div>
+
+         <!-- LESSON GRID -->
+
+    <div id="lessonGrid"
+         class="grid
+                sm:grid-cols-2
+                lg:grid-cols-3
+                gap-6">
+
+             <!-- 1 -->
+
+        <div class="lesson-card"
+             data-lesson="1">
+
+            <div class="lesson-number">
+                01
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-brands fa-html5"></i>
+            </div>
+
+            <h3>
+                HTML bilan tanishuv
+            </h3>
+
+            <p>
+                HTML nima va web sahifa qanday yaratiladi?
+            </p>
+
+            <a href="lesson-1.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 2 -->
+
+        <div class="lesson-card"
+             data-lesson="2">
+
+            <div class="lesson-number">
+                02
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>
+                HTML Strukturasi
+            </h3>
+
+            <p>
+                html, head, title va body teglari.
+            </p>
+
+            <a href="lesson-2.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 3 -->
+
+        <div class="lesson-card"
+             data-lesson="3">
+
+            <div class="lesson-number">
+                03
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-heading"></i>
+            </div>
+
+            <h3>
+                Sarlavhalar
+            </h3>
+
+            <p>
+                h1 dan h6 gacha bo'lgan sarlavhalar.
+            </p>
+
+            <a href="lesson-3.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 4 -->
+
+        <div class="lesson-card"
+             data-lesson="4">
+
+            <div class="lesson-number">
+                04
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-paragraph"></i>
+            </div>
+
+            <h3>
+                Matn va Paragraflar
+            </h3>
+
+            <p>
+                p, br va hr teglari bilan ishlash.
+            </p>
+
+            <a href="lesson-4.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 5 -->
+
+        <div class="lesson-card"
+             data-lesson="5">
+
+            <div class="lesson-number">
+                05
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-link"></i>
+            </div>
+
+            <h3>
+                Linklar
+            </h3>
+
+            <p>
+                a href orqali boshqa sahifalarga o'tish.
+            </p>
+
+            <a href="lesson-5.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 6 -->
+
+        <div class="lesson-card"
+             data-lesson="6">
+
+            <div class="lesson-number">
+                06
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-regular fa-image"></i>
+            </div>
+
+            <h3>
+                Rasmlar
+            </h3>
+
+            <p>
+                img tegi va rasm qo'shish.
+            </p>
+
+            <a href="lesson-6.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 7 -->
+
+        <div class="lesson-card"
+             data-lesson="7">
+
+            <div class="lesson-number">
+                07
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-list"></i>
+            </div>
+
+            <h3>
+                Ro'yxatlar
+            </h3>
+
+            <p>
+                ul, ol va li teglari bilan ro'yxatlar.
+            </p>
+
+            <a href="lesson-7.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 8 -->
+
+        <div class="lesson-card"
+             data-lesson="8">
+
+            <div class="lesson-number">
+                08
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-table"></i>
+            </div>
+
+            <h3>
+                HTML Table
+            </h3>
+
+            <p>
+                Jadval yaratish va table teglari.
+            </p>
+
+            <a href="lesson-8.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 9 -->
+
+        <div class="lesson-card"
+             data-lesson="9">
+
+            <div class="lesson-number">
+                09
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-border-all"></i>
+            </div>
+
+            <h3>
+                Colspan va Rowspan
+            </h3>
+
+            <p>
+                Jadval kataklarini birlashtirish.
+            </p>
+
+            <a href="lesson-9.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 10 -->
+
+        <div class="lesson-card"
+             data-lesson="10">
+
+            <div class="lesson-number">
+                10
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-regular fa-rectangle-list"></i>
+            </div>
+
+            <h3>
+                Form va Input
+            </h3>
+
+            <p>
+                Foydalanuvchidan ma'lumot olish.
+            </p>
+
+            <a href="lesson-10.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 11 -->
+
+        <div class="lesson-card locked"
+             data-lesson="11">
+
+            <div class="lesson-number">
+                11
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-check-square"></i>
+            </div>
+
+            <h3>
+                Checkbox va Radio
+            </h3>
+
+            <p>
+                Tanlash tugmalari bilan ishlash.
+            </p>
+
+            <a href="lesson-11.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+        </div>
+
+             <!-- 12 -->
+        <div class="lesson-card locked"
+             data-lesson="12">
+
+            <div class="lesson-number">
+                12
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+
+            <h3>
+                Select va Option
+            </h3>
+
+            <p>
+                Tanlash menyularini yaratish.
+            </p>
+
+            <a href="lesson-12.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 13 -->
+        <div class="lesson-card locked"
+             data-lesson="13">
+
+            <div class="lesson-number">
+                13
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-align-left"></i>
+            </div>
+
+            <h3>
+                Textarea
+            </h3>
+
+            <p>
+                Ko'p qatorli matn maydoni.
+            </p>
+
+            <a href="lesson-13.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+        </div>
+
+
+             <!-- 14 -->
+
+        <div class="lesson-card locked"
+             data-lesson="14">
+
+            <div class="lesson-number">
+                14
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+
+            <h3>
+                Div va Span
+            </h3>
+
+            <p>
+                HTML elementlarini guruhlash.
+            </p>
+
+             <a href="lesson-14.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+        </div>
+
+
+             <!-- 15 -->
+
+        <div class="lesson-card locked"
+             data-lesson="15">
+
+            <div class="lesson-number">
+                15
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-window-maximize"></i>
+            </div>
+
+            <h3>
+                Semantic HTML
+            </h3>
+
+            <p>
+                header, nav, main va footer.
+            </p>
+
+            <a href="lesson-15.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+             <!-- 16 -->
+
+        <div class="lesson-card locked"
+             data-lesson="16">
+
+            <div class="lesson-number">
+                16
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-video"></i>
+            </div>
+
+            <h3>
+                Audio va Video
+            </h3>
+
+            <p>
+                Web sahifaga media qo'shish.
+            </p>
+
+            <a href="lesson-16.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 17 -->
+
+        <div class="lesson-card locked"
+             data-lesson="17">
+
+            <div class="lesson-number">
+                17
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>
+                iframe
+            </h3>
+
+            <p>
+                Boshqa sahifalarni sahifaga joylash.
+            </p>
+
+           <a href="lesson-17.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 18 -->
+
+        <div class="lesson-card locked"
+             data-lesson="18">
+
+            <div class="lesson-number">
+                18
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-tags"></i>
+            </div>
+
+            <h3>
+                HTML Attributes
+            </h3>
+
+            <p>
+                class, id, title va boshqa atributlar.
+            </p>
+
+            <a href="lesson-18.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 19 -->
+
+        <div class="lesson-card locked"
+             data-lesson="19">
+
+            <div class="lesson-number">
+                19
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+
+            <h3>
+                Responsive HTML
+            </h3>
+
+            <p>
+                Mobil qurilmalar uchun HTML.
+            </p>
+
+            <a href="lesson-19.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+             <!-- 20 -->
+
+        <div class="lesson-card locked"
+             data-lesson="20">
+
+            <div class="lesson-number">
+                20
+            </div>
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <h3>
+                HTML Final Project
+            </h3>
+
+            <p>
+                O'rgangan bilimlarimiz bilan katta loyiha.
+            </p>
+
+             <a href="lesson-20.html"
+               class="lesson-btn">
+
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-10">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+        <h3 class="text-xl
+                   font-bold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </h3>
+
+
+        <p class="text-slate-500 mt-3">
+
+            HTML kursi • 20 ta dars
+
+        </p>
+
+
+        <p class="text-slate-600 mt-5 text-sm">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+     <!-- CSS -->
+
+<style>
+
+.lesson-card {
+
+    position: relative;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    min-height: 310px;
+
+    transition: .3s;
+
+    overflow: hidden;
+
+}
+
+
+.lesson-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.25);
+
+}
+
+
+.lesson-card.locked {
+
+    opacity: .65;
+
+}
+
+
+.lesson-card.locked:hover {
+
+    transform: none;
+
+    border-color: #1e293b;
+
+    box-shadow: none;
+
+}
+
+
+.lesson-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+.lesson-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.lesson-card:nth-child(n+7)
+.lesson-icon {
+
+    background: rgba(249,115,22,.1);
+
+    color: #fb923c;
+
+}
+
+
+.lesson-card h3 {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.lesson-card p {
+
+    color: #94a3b8;
+
+    line-height: 1.7;
+
+    margin-top: 10px;
+
+    min-height: 55px;
+
+}
+
+
+.lesson-btn {
+
+    margin-top: 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    padding: 13px 18px;
+
+    border-radius: 14px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+.lesson-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.locked .lesson-btn {
+
+    background: #1e293b;
+
+    color: #64748b;
+
+    cursor: not-allowed;
+
+}
+
+
+.locked .lesson-btn:hover {
+
+    background: #1e293b;
+
+}
+
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // COMPLETED LESSONS
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "htmlCompletedLessons"
+            )
+        ) || [];
+
+    // SORT UNIQUE
+
+    completedLessons =
+        [...new Set(completedLessons)];
+
+    // LESSON CARDS
+
+    const cards =
+        document.querySelectorAll(
+            ".lesson-card"
+        );
+
+
+    cards.forEach(card => {
+
+        const lessonNumber =
+            Number(
+                card.dataset.lesson
+            );
+
+
+        const button =
+            card.querySelector(
+                ".lesson-btn"
+            );
+
+
+        const isCompleted =
+            completedLessons.includes(
+                lessonNumber
+            );
+
+
+        /*
+        Dars ochiladi agar:
+
+        1. Bu 1-dars bo‘lsa
+        YOKI
+        2. Oldingi dars tugatilgan bo‘lsa
+        */
+
+        const isUnlocked =
+            lessonNumber === 1 ||
+            completedLessons.includes(
+                lessonNumber - 1
+            );
+
+        // COMPLETED
+    
+        if (isCompleted) {
+
+            card.classList.remove(
+                "locked"
+            );
+
+
+            button.innerHTML =
+                `
+                <i class="fa-solid fa-check"></i>
+                Tugatilgan
+                `;
+
+
+            button.style.background =
+                "#16a34a";
+
+
+            button.href =
+                `lesson-${lessonNumber}.html`;
+
+
+            return;
+
+        }
+
+        // UNLOCKED
+       
+        if (isUnlocked) {
+
+            card.classList.remove(
+                "locked"
+            );
+
+
+            button.innerHTML =
+                `
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+                `;
+
+
+            button.href =
+                `lesson-${lessonNumber}.html`;
+
+
+            button.style.background =
+                "#2563eb";
+
+
+            return;
+
+        }
+
+        // LOCKED
+      
+        card.classList.add(
+            "locked"
+        );
+
+
+        button.removeAttribute(
+            "href"
+        );
+
+
+        button.innerHTML =
+            `
+            <i class="fa-solid fa-lock"></i>
+            Qulflangan
+            `;
+
+
+        button.onclick =
+            function () {
+
+                alert(
+                    `🔒 ${lessonNumber}-dars hozircha qulflangan!\n\nAvval ${lessonNumber - 1}-darsni tugating.`
+                );
+
+            };
+
+    });
+
+    // PROGRESS
+   
+    const completedCount =
+        completedLessons.filter(
+            number =>
+                number >= 1 &&
+                number <= 20
+        ).length;
+
+
+    const progress =
+        (completedCount / 20) * 100;
+
+
+    document.getElementById(
+        "progressText"
+    ).textContent =
+        `${completedCount} / 20`;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        `${progress}%`;
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

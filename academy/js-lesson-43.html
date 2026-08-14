@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 43-dars | sort()</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        📊 43-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        sort()
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript Array'laridagi
+        <code>sort()</code> metodini o‘rganamiz.
+
+        <br><br>
+
+        <code>sort()</code> yordamida Array ichidagi
+        elementlarni tartiblash mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📊 sort() nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>sort()</code> Array elementlarini
+        tartibga solish uchun ishlatiladi.
+
+        <br><br>
+
+        Masalan, ismlarni alifbo bo‘yicha yoki
+        sonlarni kichikdan kattaga tartiblash
+        mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let names = [
+    "Vali",
+    "Ali",
+    "Hasan",
+    "Zafar"
+];
+
+names.sort();
+
+console.log(names);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Ali",
+    "Hasan",
+    "Vali",
+    "Zafar"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔤 Stringlarni sort()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        String qiymatlar bilan
+        <code>sort()</code> juda oddiy ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let fruits = [
+    "Banana",
+    "Apple",
+    "Orange",
+    "Mango"
+];
+
+fruits.sort();
+
+console.log(fruits);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Apple",
+    "Banana",
+    "Mango",
+    "Orange"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ Sonlarda sort() muammosi
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        JavaScript'da <code>sort()</code> sonlarni
+        oddiy chaqirganda har doim matematik
+        tartibda joylashtirmaydi.
+
+        <br><br>
+
+        Chunki standart holatda elementlar
+        string sifatida solishtiriladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    5,
+    20,
+    1,
+    100
+];
+
+numbers.sort();
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    1,
+    10,
+    100,
+    20,
+    5
+]</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ❗ Bu matematik tartib emas.
+
+        <br><br>
+
+        Shuning uchun sonlarni tartiblashda
+        <b>compare function</b> ishlatamiz.
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Sonlarni kichikdan kattaga
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    5,
+    20,
+    1,
+    100
+];
+
+numbers.sort(
+    function(a, b) {
+        return a - b;
+    }
+);
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    1,
+    5,
+    10,
+    20,
+    100
+]</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>a - b</code>
+
+        <br><br>
+
+        → kichikdan kattaga tartiblaydi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔽 Kattadan kichikka
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    5,
+    20,
+    1,
+    100
+];
+
+numbers.sort(
+    function(a, b) {
+        return b - a;
+    }
+);
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    100,
+    20,
+    10,
+    5,
+    1
+]</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>b - a</code>
+
+        <br><br>
+
+        → kattadan kichikka tartiblaydi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ Arrow Function bilan sort()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    30,
+    10,
+    50,
+    20
+];
+
+numbers.sort(
+    (a, b) => a - b
+);
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    10,
+    20,
+    30,
+    50
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Compare function qanday ishlaydi?
+
+    </h2>
+
+
+    <div class="method-card">
+
+        <p class="text-yellow-400 text-xl">
+            sort((a, b) => a - b)
+        </p>
+
+        <p class="text-4xl text-center my-5">
+            ↓
+        </p>
+
+        <p class="text-slate-400">
+            a va b ikkita element solishtiriladi
+        </p>
+
+        <p class="text-4xl text-center my-5">
+            ↓
+        </p>
+
+        <p class="text-green-400">
+            Natija manfiy → a oldinda
+        </p>
+
+        <p class="text-green-400 mt-3">
+            Natija musbat → b oldinda
+        </p>
+
+        <p class="text-green-400 mt-3">
+            0 → joylashuv o‘zgarmaydi
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👨‍🎓 Ballarni tartiblash
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let scores = [
+    75,
+    92,
+    60,
+    88,
+    100
+];
+
+scores.sort(
+    (a, b) => b - a
+);
+
+console.log(scores);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    100,
+    92,
+    88,
+    75,
+    60
+]</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu usul reytinglar va ballarni
+        yuqoridan pastga tartiblashda
+        foydali.
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔤 Stringlarni teskari tartiblash
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let names = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Zafar"
+];
+
+names.sort();
+
+names.reverse();
+
+console.log(names);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Zafar",
+    "Vali",
+    "Hasan",
+    "Ali"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 reverse()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>reverse()</code> Array tartibini
+        teskari qiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5
+];
+
+numbers.reverse();
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    5,
+    4,
+    3,
+    2,
+    1
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👨‍💻 Object Array'ni sort()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Objectlardan tashkil topgan Array'ni
+        ham <code>sort()</code> yordamida
+        tartiblash mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let students = [
+
+    {
+        name: "Ali",
+        age: 20
+    },
+
+    {
+        name: "Vali",
+        age: 18
+    },
+
+    {
+        name: "Hasan",
+        age: 22
+    }
+
+];
+
+students.sort(
+    (a, b) => a.age - b.age
+);
+
+console.log(students);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Natija:
+
+        <br><br>
+
+        Vali → 18
+
+        <br>
+
+        Ali → 20
+
+        <br>
+
+        Hasan → 22
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔽 Objectlarni kattadan kichikka
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let students = [
+
+    {
+        name: "Ali",
+        age: 20
+    },
+
+    {
+        name: "Vali",
+        age: 18
+    },
+
+    {
+        name: "Hasan",
+        age: 22
+    }
+
+];
+
+students.sort(
+    (a, b) => b.age - a.age
+);
+
+console.log(students);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Hasan → 22
+
+        <br>
+
+        Ali → 20
+
+        <br>
+
+        Vali → 18
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Mahsulotlarni narx bo‘yicha
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let products = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 30000
+    },
+
+    {
+        name: "Cola",
+        price: 10000
+    }
+
+];
+
+products.sort(
+    (a, b) => a.price - b.price
+);
+
+console.log(products);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Arzondan qimmatga:
+
+        <br><br>
+
+        Cola → 10 000
+
+        <br>
+
+        Burger → 30 000
+
+        <br>
+
+        Pizza → 50 000
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        💰 Eng qimmat mahsulot birinchi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>products.sort(
+    (a, b) => b.price - a.price
+);
+
+console.log(products);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>b.price - a.price</code>
+
+        <br><br>
+
+        → qimmat mahsulotni birinchi
+        o‘ringa olib keladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔤 Objectlarni name bo‘yicha
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let users = [
+
+    {
+        name: "Vali"
+    },
+
+    {
+        name: "Ali"
+    },
+
+    {
+        name: "Hasan"
+    }
+
+];
+
+users.sort(
+    (a, b) =>
+        a.name.localeCompare(b.name)
+);
+
+console.log(users);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+Hasan
+Vali</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Stringlarni object ichidagi
+        property bo‘yicha tartiblash uchun
+        <code>localeCompare()</code> ishlatish
+        qulay.
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🆚 sort() va reverse()
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-yellow-400">
+
+                sort()
+
+            </h3>
+
+            <p class="text-slate-400 mt-5">
+                Elementlarni tartiblaydi.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>numbers.sort(
+    (a, b) => a - b
+);</code></pre>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-green-400">
+
+                reverse()
+
+            </h3>
+
+            <p class="text-slate-400 mt-5">
+                Mavjud tartibni teskari qiladi.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>numbers.reverse();</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ sort() Array'ni o‘zgartiradi
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Muhim!
+
+        <br><br>
+
+        <code>sort()</code> yangi Array yaratmaydi.
+        U original Array'ning o‘zini tartiblaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    30,
+    10,
+    20
+];
+
+numbers.sort(
+    (a, b) => a - b
+);
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    10,
+    20,
+    30
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 sort() + slice()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar original Array o‘zgarmasligini
+        xohlasak, avval nusxa olishimiz mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    30,
+    10,
+    20
+];
+
+let sortedNumbers =
+    [...numbers].sort(
+        (a, b) => a - b
+    );
+
+console.log(sortedNumbers);
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>sortedNumbers:
+[10, 20, 30]
+
+numbers:
+[30, 10, 20]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Real loyiha: mahsulot reytingi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let products = [
+
+    {
+        name: "Pizza",
+        rating: 4.5
+    },
+
+    {
+        name: "Burger",
+        rating: 4.9
+    },
+
+    {
+        name: "Cola",
+        rating: 4.2
+    },
+
+    {
+        name: "Lavash",
+        rating: 4.7
+    }
+
+];
+
+products.sort(
+    (a, b) => b.rating - a.rating
+);
+
+console.log(products);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Reyting bo‘yicha:
+
+        <br><br>
+
+        🥇 Burger → 4.9
+
+        <br>
+
+        🥈 Lavash → 4.7
+
+        <br>
+
+        🥉 Pizza → 4.5
+
+        <br>
+
+        Cola → 4.2
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa
+            </b>
+
+            <br>
+
+            Sonlarni kichikdan kattaga
+            <code>sort()</code> yordamida
+            tartiblang.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    45,
+    12,
+    89,
+    3,
+    27
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa
+            </b>
+
+            <br>
+
+            Sonlarni kattadan kichikka
+            tartiblang.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    15,
+    90,
+    32,
+    7,
+    50
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa
+            </b>
+
+            <br>
+
+            Studentlarni yosh bo‘yicha
+            kichikdan kattaga tartiblang.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let students = [
+
+    {
+        name: "Ali",
+        age: 21
+    },
+
+    {
+        name: "Vali",
+        age: 18
+    },
+
+    {
+        name: "Hasan",
+        age: 25
+    }
+
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 🛒
+            </b>
+
+            <br>
+
+            Mahsulotlarni narxi bo‘yicha
+            qimmatdan arzonga tartiblang.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 35000
+    },
+
+    {
+        name: "Cola",
+        price: 12000
+    },
+
+    {
+        name: "Lavash",
+        price: 45000
+    }
+
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🔥
+            </b>
+
+            <br>
+
+            Mahsulotlarni reyting bo‘yicha
+            eng yuqori reytingdan pastga
+            tartiblang.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+
+    {
+        name: "Pizza",
+        rating: 4.5
+    },
+
+    {
+        name: "Burger",
+        rating: 4.9
+    },
+
+    {
+        name: "Lavash",
+        rating: 4.7
+    }
+
+];</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            📊 <code>sort()</code>
+            Array elementlarini tartiblaydi.
+        </p>
+
+
+        <p>
+            🔢 Sonlarni kichikdan kattaga:
+            <code>(a, b) => a - b</code>
+        </p>
+
+
+        <p>
+            🔽 Sonlarni kattadan kichikka:
+            <code>(a, b) => b - a</code>
+        </p>
+
+
+        <p>
+            🔤 Stringlarni tartiblashda
+            oddiy <code>sort()</code> ishlatish mumkin.
+        </p>
+
+
+        <p>
+            👨‍💻 Objectlarni property bo‘yicha
+            <code>sort()</code> bilan tartiblash mumkin.
+        </p>
+
+
+        <p>
+            ⚠️ <code>sort()</code>
+            original Array'ni o‘zgartiradi.
+        </p>
+
+
+        <p>
+            🧠 Original Array'ni saqlash kerak bo‘lsa,
+            <code>[...array]</code> bilan nusxa olish mumkin.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        📊
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        43-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 43-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        42-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(42)) {
+
+        alert(
+            "Avval 42-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-42.html";
+
+        return;
+
+    }
+
+
+    /*
+        43-darsni saqlash
+    */
+
+    if (!completedLessons.includes(43)) {
+
+        completedLessons.push(43);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 43-dars tugatildi! 44-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 43-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

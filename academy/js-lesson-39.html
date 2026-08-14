@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 39-dars | filter()</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔎 39-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            filter()
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            <code>filter()</code> — Array ichidan
+            berilgan shartga mos keladigan
+            elementlarni tanlab olib,
+            <b>yangi Array</b> qaytaradi.
+
+            <br><br>
+
+            Masalan:
+
+            <br><br>
+
+            <span class="text-yellow-400 font-bold">
+                [1, 2, 3, 4, 5, 6]
+            </span>
+
+            ichidan faqat juft sonlarni
+            olishimiz mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔎 filter() nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>filter()</code> Array'dagi
+            elementlarni birma-bir tekshiradi.
+
+            <br><br>
+
+            Agar shart <code>true</code> bo‘lsa,
+            element yangi Array'ga qo‘shiladi.
+
+            <br><br>
+
+            Agar shart <code>false</code> bo‘lsa,
+            element olinmaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+];
+
+let evenNumbers = numbers.filter(
+    function(number) {
+
+        return number % 2 === 0;
+
+    }
+);
+
+console.log(evenNumbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[2, 4, 6]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 filter() qanday ishlaydi?
+        </h2>
+
+
+        <div class="method-card">
+
+            <p class="text-xl">
+                Boshlang‘ich Array:
+            </p>
+
+            <p class="text-yellow-400 text-2xl mt-3">
+                [1, 2, 3, 4, 5, 6]
+            </p>
+
+
+            <p class="text-4xl text-center my-6">
+                ↓
+            </p>
+
+
+            <p class="text-xl">
+                Shart:
+            </p>
+
+            <p class="text-yellow-400 text-2xl mt-3">
+                number % 2 === 0
+            </p>
+
+
+            <p class="text-4xl text-center my-6">
+                ↓
+            </p>
+
+
+            <p class="text-xl">
+                Mos kelganlar:
+            </p>
+
+            <p class="text-green-400 text-2xl mt-3">
+                [2, 4, 6]
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📌 filter() sintaksisi
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let newArray = array.filter(
+    function(element) {
+
+        return shart;
+
+    }
+);</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>filter()</code> callback funksiyasidan
+            <b>true yoki false</b> kutadi.
+
+            <br><br>
+
+            <b>true</b> → element olinadi.
+
+            <br>
+
+            <b>false</b> → element olinmaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚡ Arrow Function bilan filter()
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    15,
+    20,
+    25,
+    30
+];
+
+let result = numbers.filter(
+    number => number &gt; 20
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[25, 30]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 10 dan katta sonlar
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    5,
+    12,
+    8,
+    20,
+    30
+];
+
+let result = numbers.filter(
+    number => number &gt; 10
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[12, 20, 30]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 10 dan kichik sonlar
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    5,
+    12,
+    8,
+    20,
+    3
+];
+
+let result = numbers.filter(
+    number => number &lt; 10
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[5, 8, 3]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➗ Juft sonlarni olish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+];
+
+let evenNumbers = numbers.filter(
+    number => number % 2 === 0
+);
+
+console.log(evenNumbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[2, 4, 6, 8]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 Toq sonlarni olish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+];
+
+let oddNumbers = numbers.filter(
+    number => number % 2 !== 0
+);
+
+console.log(oddNumbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[1, 3, 5]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔤 String bilan filter()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>filter()</code> faqat sonlar
+            uchun emas.
+
+            <br><br>
+
+            Stringlardan iborat Array'dan ham
+            kerakli elementlarni tanlash mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let names = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];
+
+let result = names.filter(
+    name => name.length &gt; 3
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Vali",
+    "Hasan",
+    "Husan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔤 Ma'lum harf bilan boshlanadiganlar
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let names = [
+    "Ali",
+    "Anvar",
+    "Vali",
+    "Aziz"
+];
+
+let result = names.filter(
+    name => name.startsWith("A")
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Ali",
+    "Anvar",
+    "Aziz"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔤 Ma'lum harf bilan tugaydiganlar
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let names = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];
+
+let result = names.filter(
+    name => name.endsWith("n")
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Hasan",
+    "Husan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎓 Yosh bo‘yicha filter
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let ages = [
+    12,
+    16,
+    18,
+    20,
+    25
+];
+
+let adults = ages.filter(
+    age => age &gt;= 18
+);
+
+console.log(adults);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[18, 20, 25]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            👨‍🎓 Object'lar bilan filter()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Real loyihalarda <code>filter()</code>
+            ko‘pincha Object'lardan iborat
+            Array bilan ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        age: 17
+    },
+    {
+        name: "Vali",
+        age: 20
+    },
+    {
+        name: "Hasan",
+        age: 18
+    }
+];
+
+let adults = users.filter(
+    user => user.age &gt;= 18
+);
+
+console.log(adults);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    {
+        name: "Vali",
+        age: 20
+    },
+    {
+        name: "Hasan",
+        age: 18
+    }
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            💰 Narx bo‘yicha filter
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    {
+        name: "Telefon",
+        price: 3000000
+    },
+    {
+        name: "Noutbuk",
+        price: 7000000
+    },
+    {
+        name: "Quloqchin",
+        price: 500000
+    }
+];
+
+let cheapProducts =
+    products.filter(
+        product => product.price &lt; 5000000
+    );
+
+console.log(cheapProducts);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Mahsulot mavjudligini tekshirish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    {
+        name: "Telefon",
+        available: true
+    },
+    {
+        name: "Noutbuk",
+        available: false
+    },
+    {
+        name: "Quloqchin",
+        available: true
+    }
+];
+
+let availableProducts =
+    products.filter(
+        product => product.available
+    );
+
+console.log(availableProducts);</code></pre>
+
+        </div>
+
+
+        <div class="info mt-6">
+
+            Bu yerda faqat
+            <code>available: true</code>
+            bo‘lgan mahsulotlar olinadi.
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔍 Bir nechta shart
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Bir vaqtning o‘zida bir nechta
+            shartdan foydalanish mumkin.
+
+            <br><br>
+
+            Buning uchun <code>&&</code> ishlatamiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        age: 20
+    },
+    {
+        name: "Vali",
+        age: 16
+    },
+    {
+        name: "Hasan",
+        age: 25
+    }
+];
+
+let result = users.filter(
+    user =>
+        user.age &gt;= 18 &&
+        user.age &lt;= 22
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    {
+        name: "Ali",
+        age: 20
+    }
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔀 OR sharti bilan filter()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>||</code> yordamida bir nechta
+            variantdan biriga mos keladigan
+            elementlarni olish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        role: "admin"
+    },
+    {
+        name: "Vali",
+        role: "user"
+    },
+    {
+        name: "Hasan",
+        role: "admin"
+    }
+];
+
+let admins = users.filter(
+    user => user.role === "admin"
+);
+
+console.log(admins);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧩 filter() va map() birga
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `filter()` va `map()`ni ketma-ket
+            ishlatish juda kuchli usul.
+
+            <br><br>
+
+            Avval kerakli elementlarni tanlaymiz,
+            keyin ularni o‘zgartiramiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+];
+
+let result = numbers
+    .filter(number => number % 2 === 0)
+    .map(number => number * 10);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[20, 40, 60]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔥 Real loyiha misoli
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, internet-do‘konda
+            1 000 000 so‘mdan arzon
+            mahsulotlarni chiqarish.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    {
+        name: "Telefon",
+        price: 3000000
+    },
+    {
+        name: "Quloqchin",
+        price: 500000
+    },
+    {
+        name: "Sichqoncha",
+        price: 300000
+    },
+    {
+        name: "Noutbuk",
+        price: 7000000
+    }
+];
+
+let cheapProducts =
+    products.filter(
+        product => product.price &lt; 1000000
+    );
+
+console.log(cheapProducts);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🖥️ filter() va DOM
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, faqat mavjud mahsulotlarni
+            HTML'ga chiqarishimiz mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    {
+        name: "Telefon",
+        available: true
+    },
+    {
+        name: "Noutbuk",
+        available: false
+    },
+    {
+        name: "Quloqchin",
+        available: true
+    }
+];
+
+let availableProducts =
+    products.filter(
+        product => product.available
+    );
+
+let list =
+    document.getElementById("list");
+
+availableProducts.forEach(
+    product => {
+
+        list.innerHTML +=
+            `<li>${product.name}</li>`;
+
+    }
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;ul id="list"&gt;&lt;/ul&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚖️ filter() va map() farqi
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+            <div class="method-card">
+
+                <h3 class="text-2xl font-bold
+                           text-yellow-400">
+
+                    filter()
+
+                </h3>
+
+                <p class="text-slate-400 mt-4 leading-8">
+
+                    Kerakli elementlarni
+                    <b>tanlab oladi</b>.
+
+                </p>
+
+                <div class="code-box">
+
+<pre><code>[1, 2, 3, 4]
+      ↓
+   filter
+      ↓
+[2, 4]</code></pre>
+
+                </div>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl font-bold
+                           text-green-400">
+
+                    map()
+
+                </h3>
+
+                <p class="text-slate-400 mt-4 leading-8">
+
+                    Elementlarni
+                    <b>o‘zgartiradi</b>.
+
+                </p>
+
+                <div class="code-box">
+
+<pre><code>[1, 2, 3, 4]
+      ↓
+     map
+      ↓
+[2, 4, 6, 8]</code></pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 filter() va forEach() farqi
+        </h2>
+
+
+        <div class="info text-lg leading-9">
+
+            <p>
+                <code>forEach()</code> —
+                Array elementlarini ko‘rib chiqadi
+                va amal bajaradi.
+            </p>
+
+            <p class="mt-4">
+                <code>filter()</code> —
+                shartga mos elementlardan
+                <b>yangi Array</b> yaratadi.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [1, 2, 3, 4];
+
+numbers.forEach(number => {
+    console.log(number);
+});
+
+
+let evenNumbers = numbers.filter(
+    number => number % 2 === 0
+);
+
+console.log(evenNumbers);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 23 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ Muhim
+        </h2>
+
+
+        <div class="info text-lg leading-9">
+
+            <p>
+                <code>filter()</code> original Array'ni
+                odatda o‘zgartirmaydi.
+            </p>
+
+            <p class="mt-4">
+                U yangi Array qaytaradi.
+            </p>
+
+            <p class="mt-4">
+                Agar hech qanday element shartga
+                mos kelmasa, natija
+                <code>[]</code> bo‘ladi.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [1, 2, 3];
+
+let result = numbers.filter(
+    number => number &gt; 100
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 24 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎯 Eng muhim formula
+        </h2>
+
+
+        <div class="method-card text-center">
+
+            <p class="text-2xl">
+                Array
+            </p>
+
+            <p class="text-4xl my-4">
+                ↓
+            </p>
+
+            <p class="text-yellow-400
+                      text-2xl
+                      font-bold">
+
+                filter(shart)
+
+            </p>
+
+            <p class="text-4xl my-4">
+                ↓
+            </p>
+
+            <p class="text-green-400
+                      text-2xl
+                      font-bold">
+
+                Yangi Array
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8">
+
+            <p>
+                <b class="text-white">
+                    1-vazifa:
+                </b>
+
+                <br>
+
+                Array ichidan faqat juft sonlarni
+                ajratib oling.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1, 2, 3, 4, 5, 6,
+    7, 8, 9, 10
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    2-vazifa:
+                </b>
+
+                <br>
+
+                18 yosh va undan kattalarni
+                ajratib oling.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let ages = [
+    12, 15, 18, 20, 16, 25
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    3-vazifa:
+                </b>
+
+                <br>
+
+                1 000 000 so‘mdan arzon
+                mahsulotlarni toping.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    {
+        name: "Telefon",
+        price: 3000000
+    },
+    {
+        name: "Quloqchin",
+        price: 500000
+    },
+    {
+        name: "Sichqoncha",
+        price: 300000
+    }
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    4-vazifa:
+                </b>
+
+                <br>
+
+                Ismi 4 ta belgidan uzun
+                bo‘lganlarni toping.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    5-vazifa:
+                </b>
+
+                <br>
+
+                "A" harfi bilan boshlanadigan
+                ismlarni toping.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    6-vazifa:
+                </b>
+
+                <br>
+
+                <code>filter()</code> va
+                <code>map()</code>ni birga ishlating:
+                avval juft sonlarni toping,
+                keyin ularni 10 ga ko‘paytiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    7-vazifa:
+                </b>
+
+                <br>
+
+                Object'lardan yoshi 18 yoki undan
+                katta bo‘lganlarni ajrating.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔎 <code>filter()</code> —
+                kerakli elementlarni tanlaydi.
+            </p>
+
+            <p>
+                ✅ <code>true</code> —
+                element yangi Array'ga qo‘shiladi.
+            </p>
+
+            <p>
+                ❌ <code>false</code> —
+                element olinmaydi.
+            </p>
+
+            <p>
+                🆕 <code>filter()</code>
+                yangi Array qaytaradi.
+            </p>
+
+            <p>
+                🔢 Sonlar bilan ham,
+                String bilan ham,
+                Object bilan ham ishlaydi.
+            </p>
+
+            <p>
+                🔥 <code>filter()</code> va
+                <code>map()</code>ni birga ishlatish
+                real loyihalarda juda foydali.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔎
+        </div>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            39-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 39-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(38)) {
+
+        alert("Avval 38-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-38.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(39)) {
+
+        completedLessons.push(39);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 39-dars tugatildi! 40-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 39-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

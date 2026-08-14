@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 24-dars | Nested Loop</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔁 24-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Nested loop
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugun JavaScript'da bir loop ichida
+            boshqa loopdan foydalanishni o‘rganamiz.
+
+            <br><br>
+
+            Bunday loop
+            <b class="text-white">Nested loop</b>
+            deb ataladi.
+
+            <br><br>
+
+            Nested looplar ayniqsa
+            <b class="text-white">
+                jadvallar, matritsalar, rasmlar,
+                kombinatsiyalar va ko‘p qatorli
+                ma'lumotlar
+            </b>
+            bilan ishlaganda juda foydali.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Nested loop nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nested loop — bu
+            <b class="text-white">
+                bir loop ichida boshqa loop
+            </b>
+            joylashgan holat.
+
+            <br><br>
+
+            Masalan:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        console.log(i, j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda tashqi
+            <code>for</code> — birinchi loop.
+
+            <br><br>
+
+            Ichkaridagi
+            <code>for</code> — ikkinchi loop.
+
+            <br><br>
+
+            Demak, bir loop ichida
+            yana bir loop mavjud.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oddiy nested loop 🔁
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 2; j++) {
+
+        console.log("i =", i, "j =", j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>i = 1 j = 1
+i = 1 j = 2
+
+i = 2 j = 1
+i = 2 j = 2
+
+i = 3 j = 1
+i = 3 j = 2</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Tashqi loopning har bir
+            aylanishida ichki loop
+            <b class="text-white">to‘liq bajariladi</b>.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Nested loop qanday ishlaydi? 🧠
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodni ko‘ramiz:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        console.log(j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>i = 1</code> bo‘lganda
+            ichki loop 3 marta ishlaydi.
+
+            <br><br>
+
+            Keyin <code>i = 2</code> bo‘ladi
+            va ichki loop yana 3 marta ishlaydi.
+
+            <br><br>
+
+            Keyin <code>i = 3</code> bo‘ladi
+            va ichki loop yana 3 marta ishlaydi.
+
+            <br><br>
+
+            Shuning uchun ichki loop jami
+            <b class="text-white">9 marta</b>
+            bajariladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            3 × 3 jadval 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        console.log(i * j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+
+2
+4
+6
+
+3
+6
+9</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ko‘paytirish jadvali ✖️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nested loop yordamida
+            1 dan 5 gacha bo‘lgan
+            sonlarning ko‘paytirish
+            jadvalini chiqarishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    for (let j = 1; j <= 10; j++) {
+
+        console.log(
+            i + " x " + j + " = " + i * j
+        );
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Avval 1 sonining jadvali,
+            keyin 2, 3, 4 va 5 sonlarining
+            jadvali chiqariladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Nested loop va Array 📦
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Arraylar ichida ham Array
+            bo‘lishi mumkin.
+
+            <br><br>
+
+            Bunday ma'lumot
+            <b class="text-white">
+                ikki o‘lchamli Array
+            </b>
+            deb qaraladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+for (let i = 0; i < numbers.length; i++) {
+
+    for (let j = 0; j < numbers[i].length; j++) {
+
+        console.log(numbers[i][j]);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ikki o‘lchamli Array nima? 🧩
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let students = [
+    ["Ali", "Vali"],
+    ["Hasan", "Husan"],
+    ["Sardor", "Jasur"]
+];</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda asosiy Array ichida
+            3 ta kichik Array bor.
+
+            <br><br>
+
+            Nested loop yordamida
+            ularning barcha elementlarini
+            olish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 0; i < students.length; i++) {
+
+    for (let j = 0; j < students[i].length; j++) {
+
+        console.log(students[i][j]);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Jadval ko‘rinishida chiqarish 📋
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+for (let i = 0; i < numbers.length; i++) {
+
+    let row = "";
+
+    for (let j = 0; j < numbers[i].length; j++) {
+
+        row += numbers[i][j] + " ";
+
+    }
+
+    console.log(row);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1 2 3
+4 5 6
+7 8 9</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Yulduzchalar bilan ishlash ⭐
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nested loop yordamida
+            turli shakllar yaratish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    let stars = "";
+
+    for (let j = 1; j <= 5; j++) {
+
+        stars += "* ";
+
+    }
+
+    console.log(stars);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uchburchak yasash 🔺
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    let stars = "";
+
+    for (let j = 1; j <= i; j++) {
+
+        stars += "* ";
+
+    }
+
+    console.log(stars);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>*
+* *
+* * *
+* * * *
+* * * * *</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda ichki loopning
+            sharti <code>j <= i</code>.
+
+            <br><br>
+
+            Shuning uchun har bir qator
+            oldingisidan bitta ko‘proq
+            yulduzchaga ega bo‘ladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Teskari uchburchak 🔻
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 5; i >= 1; i--) {
+
+    let stars = "";
+
+    for (let j = 1; j <= i; j++) {
+
+        stars += "* ";
+
+    }
+
+    console.log(stars);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>* * * * *
+* * * *
+* * *
+* *
+*</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ichma-ich for...of 🔁
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nested loop faqat oddiy
+            <code>for</code> bilan emas,
+            <code>for...of</code> bilan ham ishlaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let groups = [
+    ["Ali", "Vali"],
+    ["Hasan", "Husan"]
+];
+
+for (let group of groups) {
+
+    for (let student of group) {
+
+        console.log(student);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ali
+Vali
+Hasan
+Husan</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break nested loopda 🛑
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nested loop ichida
+            <code>break</code> ishlatilsa,
+            odatda u joylashgan
+            <b class="text-white">
+                eng yaqin loopni
+            </b>
+            to‘xtatadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        if (j === 2) {
+            break;
+        }
+
+        console.log(i, j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1 1
+2 1
+3 1</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>break</code> ichki loopni
+            to‘xtatdi.
+
+            <br><br>
+
+            Tashqi loop esa o‘z ishini
+            davom ettirdi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            continue nested loopda ⏭️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        if (j === 2) {
+            continue;
+        }
+
+        console.log(i, j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1 1
+1 3
+
+2 1
+2 3
+
+3 1
+3 3</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>j === 2</code> bo‘lganda
+            shu aylanish tashlab ketildi.
+
+            <br><br>
+
+            Lekin ichki loop davom etdi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            3 o‘lchamli nested loop 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nazariy jihatdan loop ichida
+            yana loop va uning ichida yana
+            loop bo‘lishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 2; i++) {
+
+    for (let j = 1; j <= 2; j++) {
+
+        for (let k = 1; k <= 2; k++) {
+
+            console.log(i, j, k);
+
+        }
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bunday usuldan foydalanish mumkin,
+            lekin looplar soni ko‘paygan sari
+            kodning ishlash hajmi ham ortadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Nested loop qayerda ishlatiladi? 🎯
+        </h2>
+
+        <div class="space-y-4 text-slate-300 leading-8">
+
+            <p>
+                📊 Jadvallar bilan ishlashda.
+            </p>
+
+            <p>
+                🧩 Ikki o‘lchamli Arraylarda.
+            </p>
+
+            <p>
+                🎮 O‘yinlarda kataklar bilan ishlashda.
+            </p>
+
+            <p>
+                ⭐ Turli shakllarni yaratishda.
+            </p>
+
+            <p>
+                🔢 Ko‘paytirish jadvallarida.
+            </p>
+
+            <p>
+                🔎 Ma'lumotlarni bir necha
+                darajada qidirishda.
+            </p>
+
+            <p>
+                🧮 Matritsalar bilan ishlashda.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Muhim qoida ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nested loopda har bir loopning
+            o‘z o‘zgaruvchisi bo‘lishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        console.log(i, j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda:
+
+            <br><br>
+
+            <code>i</code> — tashqi loop.
+
+            <br>
+
+            <code>j</code> — ichki loop.
+
+            <br><br>
+
+            Ularni bir-biridan farqlash
+            kodni tushunishni osonlashtiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: 5×5 jadval 📋
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let row = 1; row <= 5; row++) {
+
+    let line = "";
+
+    for (let column = 1; column <= 5; column++) {
+
+        line += column + " ";
+
+    }
+
+    console.log(line);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: koordinatalar 📍
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let x = 1; x <= 3; x++) {
+
+    for (let y = 1; y <= 3; y++) {
+
+        console.log(
+            "x:", x,
+            "y:", y
+        );
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>x: 1 y: 1
+x: 1 y: 2
+x: 1 y: 3
+
+x: 2 y: 1
+x: 2 y: 2
+x: 2 y: 3
+
+x: 3 y: 1
+x: 3 y: 2
+x: 3 y: 3</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Nested loopni tushunish usuli 🧠
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nested loopni tushunish uchun
+            uni ikki qismga ajrating:
+
+            <br><br>
+
+            <b class="text-white">
+                1. Tashqi loop
+            </b>
+
+            <br>
+
+            Necha marta qator yoki katta
+            jarayon takrorlanishini belgilaydi.
+
+            <br><br>
+
+            <b class="text-white">
+                2. Ichki loop
+            </b>
+
+            <br>
+
+            Har bir tashqi loop ichida
+            necha marta amal bajarilishini
+            belgilaydi.
+
+            <br><br>
+
+            Masalan:
+
+            <br><br>
+
+            5 ta qator × 5 ta ustun
+            = 25 ta amal.
+
+        </p>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarning natijasini
+            o‘zingiz topishga harakat qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 2; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        console.log(i, j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    let result = "";
+
+    for (let j = 1; j <= i; j++) {
+
+        result += "*";
+
+    }
+
+    console.log(result);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let arr = [
+    [10, 20],
+    [30, 40]
+];
+
+for (let i = 0; i < arr.length; i++) {
+
+    for (let j = 0; j < arr[i].length; j++) {
+
+        console.log(arr[i][j]);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Xatolarga e'tibor bering ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Nested loop yozayotganda
+            qavslarni to‘g‘ri yopish juda muhim.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        console.log(i, j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Har bir ochilgan
+            <code>{</code> uchun mos
+            yopiladigan <code>}</code> bo‘lishi kerak.
+
+            <br><br>
+
+            Shuningdek, ichki loopning
+            shartini noto‘g‘ri yozish
+            cheksiz loopga olib kelishi mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            Nested loop yordamida
+            1 dan 3 gacha bo‘lgan sonlarni
+            har birini 1 dan 3 gacha
+            juftliklarda chiqaring.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            1 dan 5 gacha bo‘lgan
+            ko‘paytirish jadvalini
+            nested loop yordamida yarating.
+
+            <br><br>
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            Quyidagi ko‘rinishni yarating:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>*
+**
+***
+****
+*****</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            Teskari uchburchak yarating:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>*****
+****
+***
+**
+*</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            Quyidagi Array ichidagi
+            barcha sonlarni nested loop
+            yordamida chiqaring:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <b class="text-white">6-vazifa:</b>
+
+            <br>
+
+            5×5 yulduzcha jadvalini yarating.
+
+            <br><br>
+
+            <b class="text-white">7-vazifa:</b>
+
+            <br>
+
+            1 dan 10 gacha sonlarning
+            ko‘paytirish jadvalini chiqaring.
+
+            <br><br>
+
+            <b class="text-white">8-vazifa:</b>
+
+            <br>
+
+            Nested loop ichida
+            <code>break</code> ishlatib,
+            ichki loopni to‘xtating.
+
+            <br><br>
+
+            <b class="text-white">9-vazifa:</b>
+
+            <br>
+
+            Nested loop ichida
+            <code>continue</code> ishlatib,
+            ma'lum bir qiymatni tashlab keting.
+
+            <br><br>
+
+            <b class="text-white">10-vazifa:</b>
+
+            <br>
+
+            Quyidagi matritsani jadval
+            ko‘rinishida chiqaring:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let matrix = [
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90]
+];</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔁 <code>Nested loop</code> —
+                bir loop ichida boshqa loop.
+            </p>
+
+            <p>
+                🧠 Tashqi loopning har bir
+                aylanishida ichki loop
+                to‘liq bajariladi.
+            </p>
+
+            <p>
+                📦 Nested loop ikki o‘lchamli
+                Arraylar bilan ishlashda juda foydali.
+            </p>
+
+            <p>
+                ⭐ Yulduzcha shakllari va
+                jadvallarni yaratishda ishlatiladi.
+            </p>
+
+            <p>
+                🔢 Ko‘paytirish jadvallarini
+                yaratish mumkin.
+            </p>
+
+            <p>
+                🛑 <code>break</code> odatda
+                o‘zi joylashgan eng yaqin
+                loopni to‘xtatadi.
+            </p>
+
+            <p>
+                ⏭️ <code>continue</code> joriy
+                aylanishni tashlab ketadi.
+            </p>
+
+            <p>
+                ⚠️ Nested looplarda looplar
+                soni ko‘paygani sari bajariladigan
+                amallar soni ham ko‘payadi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔁
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            24-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 24-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 23-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(23)) {
+
+        alert("Avval 23-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-23.html";
+
+        return;
+    }
+
+
+    // 24-darsni saqlash
+
+    if (!completedLessons.includes(24)) {
+
+        completedLessons.push(24);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 24-dars tugatildi! 25-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 24-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+
+</html>

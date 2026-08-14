@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>20-Dars | HTML Multimedia | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="html-course.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Kursga qaytish
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <div class="mb-10">
+
+        <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+            20-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+            HTML Multimedia 🎬
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+            Saytga audio, video va boshqa
+            web-sahifalarni joylashtirishni
+            o'rganamiz.
+
+        </p>
+
+    </div>
+
+         <!-- 1. AUDIO -->
+
+    <section class="lesson-box">
+
+        <div class="icon-box">
+
+            <i class="fa-solid fa-music"></i>
+
+        </div>
+
+
+        <h2 class="lesson-heading">
+
+            1. &lt;audio&gt; — Audio qo'shish 🎵
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            HTML'da audio faylni saytga
+            joylashtirish uchun
+            <strong class="text-orange-400">
+                &lt;audio&gt;
+            </strong>
+            tegidan foydalanamiz.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;audio controls&gt;
+
+    &lt;source
+        src="audio/music.mp3"
+        type="audio/mpeg"&gt;
+
+&lt;/audio&gt;</code></pre>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡
+            <strong>controls</strong>
+            foydalanuvchiga audio boshqaruv
+            tugmalarini ko'rsatadi.
+
+        </div>
+
+    </section>
+
+         <!-- 2. AUDIO ATTRIBUTES -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            2. Audio atributlari
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-4 mt-6">
+
+
+            <div class="type-card">
+
+                <code class="text-orange-400">
+                    controls
+                </code>
+
+                <p>
+                    Audio boshqaruvlarini chiqaradi.
+                </p>
+
+            </div>
+
+
+            <div class="type-card">
+
+                <code class="text-orange-400">
+                    autoplay
+                </code>
+
+                <p>
+                    Audio avtomatik boshlanishi uchun.
+                </p>
+
+            </div>
+
+
+            <div class="type-card">
+
+                <code class="text-orange-400">
+                    loop
+                </code>
+
+                <p>
+                    Audio qayta-qayta ijro etiladi.
+                </p>
+
+            </div>
+
+
+            <div class="type-card">
+
+                <code class="text-orange-400">
+                    muted
+                </code>
+
+                <p>
+                    Audio ovozsiz boshlanadi.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 3. VIDEO -->
+
+    <section class="lesson-box">
+
+        <div class="icon-box">
+
+            <i class="fa-solid fa-video"></i>
+
+        </div>
+
+
+        <h2 class="lesson-heading">
+
+            3. &lt;video&gt; — Video qo'shish 🎥
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            Saytga video joylashtirish uchun
+            <strong class="text-orange-400">
+                &lt;video&gt;
+            </strong>
+            tegidan foydalanamiz.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;video controls width="600"&gt;
+
+    &lt;source
+        src="video/dars.mp4"
+        type="video/mp4"&gt;
+
+&lt;/video&gt;</code></pre>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡
+            <strong>controls</strong>
+            video boshqaruvlarini chiqaradi.
+
+        </div>
+
+    </section>
+
+         <!-- 4. VIDEO ATTRIBUTES -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            4. Video atributlari
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-4 mt-6">
+
+
+            <div class="type-card">
+
+                <code class="text-orange-400">
+                    controls
+                </code>
+
+                <p>
+                    Play, pause va ovoz boshqaruvlari.
+                </p>
+
+            </div>
+
+
+            <div class="type-card">
+
+                <code class="text-orange-400">
+                    width
+                </code>
+
+                <p>
+                    Video kengligini belgilaydi.
+                </p>
+
+            </div>
+
+
+            <div class="type-card">
+
+                <code class="text-orange-400">
+                    height
+                </code>
+
+                <p>
+                    Video balandligini belgilaydi.
+                </p>
+
+            </div>
+
+
+            <div class="type-card">
+
+                <code class="text-orange-400">
+                    poster
+                </code>
+
+                <p>
+                    Video boshlanishidan oldingi rasm.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 5. IFRAME -->
+
+    <section class="lesson-box">
+
+        <div class="icon-box">
+
+            <i class="fa-solid fa-window-maximize"></i>
+
+        </div>
+
+
+        <h2 class="lesson-heading">
+
+            5. &lt;iframe&gt; — Boshqa sahifani joylashtirish 🌐
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            <strong class="text-orange-400">
+                &lt;iframe&gt;
+            </strong>
+            yordamida boshqa web-sahifa,
+            video yoki xaritani sahifamiz
+            ichida ko'rsatish mumkin.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;iframe
+    src="https://example.com"
+    width="600"
+    height="400"&gt;
+
+&lt;/iframe&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- 6. YOUTUBE -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            6. YouTube videosini joylashtirish ▶️
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            YouTube videosini saytga
+            <strong class="text-orange-400">
+                iframe
+            </strong>
+            orqali joylashtirish mumkin.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;iframe
+    width="560"
+    height="315"
+    src="YOUTUBE_EMBED_LINK"
+    title="YouTube video"
+    allowfullscreen&gt;
+
+&lt;/iframe&gt;</code></pre>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡 YouTube'dan video uchun
+            <strong>Share → Embed</strong>
+            orqali iframe kodini olish mumkin.
+
+        </div>
+
+    </section>
+
+         <!-- 7. FIGURE -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            7. &lt;figure&gt; va &lt;figcaption&gt; 🖼️
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            Rasm va uning izohini birgalikda
+            ifodalash uchun
+            <strong class="text-orange-400">
+                figure
+            </strong>
+            va
+            <strong class="text-orange-400">
+                figcaption
+            </strong>
+            ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;figure&gt;
+
+    &lt;img
+        src="images/html.jpg"
+        alt="HTML"&gt;
+
+    &lt;figcaption&gt;
+        HTML darsi
+    &lt;/figcaption&gt;
+
+&lt;/figure&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- 8. MEDIA LOYIHA -->
+
+    <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+        <p class="text-orange-400
+                  font-semibold">
+
+            MINI LOYIHA 🚀
+
+        </p>
+
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+            Abdusalomov Academy Media
+
+        </h2>
+
+
+        <p class="text-slate-400 mt-4">
+
+            Quyidagi kod yordamida
+            Academy saytiga multimedia
+            elementlarini qo'shish mumkin.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;section&gt;
+
+    &lt;h2&gt;
+        Bizning darslar
+    &lt;/h2&gt;
+
+
+    &lt;figure&gt;
+
+        &lt;img
+            src="images/html.jpg"
+            alt="HTML darsi"&gt;
+
+        &lt;figcaption&gt;
+            HTML darsi
+        &lt;/figcaption&gt;
+
+    &lt;/figure&gt;
+
+
+    &lt;video controls&gt;
+
+        &lt;source
+            src="video/html.mp4"
+            type="video/mp4"&gt;
+
+    &lt;/video&gt;
+
+
+    &lt;audio controls&gt;
+
+        &lt;source
+            src="audio/music.mp3"
+            type="audio/mpeg"&gt;
+
+    &lt;/audio&gt;
+
+&lt;/section&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- 9. MINI TEST -->
+
+    <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+        <p class="text-orange-400
+                  font-semibold">
+
+            MINI TEST 🧠
+
+        </p>
+
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+            HTML'da video qo'shish uchun
+            qaysi teg ishlatiladi?
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                A) &lt;video&gt; 
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B) &lt;audio&gt;
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) &lt;table&gt;
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) &lt;form&gt;
+
+            </button>
+
+        </div>
+
+
+        <p id="answerResult"
+           class="mt-6
+                  font-semibold
+                  text-lg">
+
+        </p>
+
+    </section>
+
+         <!-- COURSE COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-purple-600/20
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8
+                    text-center">
+
+        <div class="text-5xl mb-5">
+
+            🎉
+
+        </div>
+
+
+        <h2 class="text-3xl
+                   md:text-4xl
+                   font-extrabold">
+
+            HTML kursini yakunlashga tayyormisiz?
+
+        </h2>
+
+
+        <p class="text-slate-400
+                  mt-4">
+
+            20-darsni tugatganingizdan so'ng
+            HTML kursidagi barcha darslar
+            bajarilgan deb belgilanadi.
+
+        </p>
+
+    </section>
+
+         <!-- COMPLETE BUTTON -->
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full
+                   px-7 py-5
+                   rounded-2xl
+                   bg-orange-500
+                   hover:bg-orange-600
+                   font-bold
+                   text-lg
+                   transition">
+
+            20-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+        </p>
+
+    </section>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8 mt-10">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- STYLE -->
+
+<style>
+
+.lesson-box {
+
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+}
+
+
+.icon-box {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(249,115,22,.1);
+
+    color: #fb923c;
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.lesson-heading {
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+
+.code-box-inner {
+
+    margin-top: 24px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    overflow-x: auto;
+
+}
+
+
+.code-box-inner pre {
+
+    color: #4ade80;
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+
+.info-box {
+
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: rgba(249,115,22,.08);
+
+    border: 1px solid rgba(249,115,22,.2);
+
+    border-radius: 16px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+
+}
+
+
+.type-card {
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+}
+
+
+.type-card p {
+
+    color: #94a3b8;
+
+    margin-top: 8px;
+
+}
+
+
+.answer-btn {
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+
+}
+
+
+.answer-btn:hover {
+
+    border-color: #f97316;
+
+    color: #fb923c;
+
+    transform: translateY(-2px);
+
+}
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById(
+            "answerResult"
+        );
+
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! Video uchun <video> tegi ishlatiladi.";
+
+        result.className =
+            "mt-6 font-semibold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+        result.className =
+            "mt-6 font-semibold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "htmlCompletedLessons"
+            )
+        ) || [];
+
+
+    // 20-darsni qo‘shamiz
+
+    if (!completedLessons.includes(20)) {
+
+        completedLessons.push(20);
+
+    }
+
+
+    // Saqlaymiz
+
+    localStorage.setItem(
+        "htmlCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    // Xabar
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "🎉 Tabriklayman! HTML kursini tugatdingiz! 🏆";
+
+
+    // Tugma
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.innerHTML =
+        "🏆 HTML KURSI TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-orange-500",
+        "hover:bg-orange-600"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    // Kurs sahifasiga qaytish
+
+    setTimeout(
+        function() {
+
+            window.location.href =
+                "html-course.html";
+
+        },
+        1800
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

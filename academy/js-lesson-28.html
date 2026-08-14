@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 28-dars | Arrow Function</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400 hover:text-yellow-400 transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ➡️ 28-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Arrow Function
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Arrow Function — JavaScript'da
+            function yozishning qisqaroq va
+            zamonaviy usuli.
+
+            <br><br>
+
+            U ayniqsa qisqa functionlar va
+            Array metodlari bilan ishlaganda
+            juda qulay.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Arrow Function nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Oddiy function:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salom() {
+
+    console.log("Salom!");
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-6 leading-8">
+
+            Shu functionni Arrow Function
+            ko‘rinishida yozsak:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const salom = () => {
+
+    console.log("Salom!");
+
+};</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Arrow belgisi ➡️
+        </h2>
+
+        <div class="info">
+
+            <p class="text-lg">
+                <code>=></code>
+                belgisi Arrow Function'ning
+                asosiy belgisi hisoblanadi.
+            </p>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>const salom = () => {
+
+    console.log("Salom");
+
+};</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu yerda:
+
+            <br><br>
+
+            <code>()</code> → parametrlar
+
+            <br>
+
+            <code>=></code> → arrow
+
+            <br>
+
+            <code>{ }</code> → function tanasi
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Arrow Functionni chaqirish 📞
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const salom = () => {
+
+    console.log("Salom, JavaScript!");
+
+};
+
+salom();</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom, JavaScript!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametr bilan Arrow Function 📥
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const salom = (ism) => {
+
+    console.log("Salom, " + ism);
+
+};
+
+salom("Ali");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom, Ali</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda <code>ism</code> —
+            parametr.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta parametr 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const qoshish = (a, b) => {
+
+    console.log(a + b);
+
+};
+
+qoshish(10, 20);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>30</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            return bilan Arrow Function ↩️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Arrow Function oddiy function kabi
+            <code>return</code> ishlatishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const qoshish = (a, b) => {
+
+    return a + b;
+
+};
+
+console.log(qoshish(5, 7));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>12</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Implicit return ⚡
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar Arrow Function faqat bitta
+            expressionni qaytarsa,
+            <code>return</code> va
+            <code>{ }</code> ni qisqartirish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const qoshish = (a, b) => a + b;
+
+console.log(qoshish(5, 7));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>12</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            <p>
+                Bu:
+            </p>
+
+            <br>
+
+            <code>const qoshish = (a, b) => a + b;</code>
+
+            <br><br>
+
+            quyidagiga teng:
+
+            <br><br>
+
+            <code>
+                const qoshish = (a, b) => {
+                    return a + b;
+                };
+            </code>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bitta parametr bo‘lsa 🔹
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bitta parametr bo‘lsa,
+            qavslarni yozmaslik mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const kvadrat = son => son * son;
+
+console.log(kvadrat(5));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>25</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Qavs bilan ham yozish mumkin:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const kvadrat = (son) => son * son;</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Ikkala yozilish ham to‘g‘ri.
+
+        </p>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametr bo‘lmasa 🔸
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Parametr bo‘lmasa,
+            bo‘sh qavs yoziladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const salom = () => "Salom!";
+
+console.log(salom());</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String bilan ishlash 📝
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const kattaHarf = matn =>
+    matn.toUpperCase();
+
+console.log(
+    kattaHarf("javascript")
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>JAVASCRIPT</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean qaytarish ✅
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const juftmi = son =>
+    son % 2 === 0;
+
+console.log(juftmi(10));
+console.log(juftmi(7));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Arrow Function va if 🔀
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const baho = ball => {
+
+    if (ball >= 90) {
+        return "A";
+    }
+
+    if (ball >= 70) {
+        return "B";
+    }
+
+    return "C";
+
+};
+
+console.log(baho(95));
+console.log(baho(75));
+console.log(baho(60));</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Arrow Function va ternary ⚡
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const tekshir = yosh =>
+    yosh >= 18
+        ? "Kirish mumkin"
+        : "Kirish mumkin emas";
+
+console.log(tekshir(20));
+console.log(tekshir(15));</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oddiy function va Arrow Function ⚖️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>// Oddiy function
+
+function qoshish(a, b) {
+
+    return a + b;
+
+}
+
+
+// Arrow Function
+
+const qoshish2 = (a, b) => {
+
+    return a + b;
+
+};</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Ikkalasi ham function hisoblanadi.
+            Arrow Function esa qisqaroq yozilish
+            imkonini beradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Eng qisqa ko‘rinish 🚀
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const qoshish = (a, b) => a + b;
+
+const ayirish = (a, b) => a - b;
+
+const kopaytirish = (a, b) => a * b;
+
+const bolish = (a, b) => a / b;</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>console.log(qoshish(10, 5));
+console.log(ayirish(10, 5));
+console.log(kopaytirish(10, 5));
+console.log(bolish(10, 5));</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Arrow Function Object qaytarishi 🧩
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Arrow Functiondan Object qaytarishda
+            qavsga e'tibor berish kerak.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const user = () => ({
+    name: "Ali",
+    age: 16
+});
+
+console.log(user());</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Objectni <code>( )</code> ichiga
+            olish kerak.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Arrow Function va Array 📚
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+const birinchi = arr => arr[0];
+
+console.log(
+    birinchi(mevalar)
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Olma</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Arrow Functionni o‘zgaruvchiga saqlash 📦
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const ismniChiqar = ism =>
+    `Salom, ${ism}!`;
+
+let result = ismniChiqar("Mirjamol");
+
+console.log(result);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function sifatida boshqa functionga berish 🔗
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Keyingi darslarda Arrow Function
+            boshqa functionlarga argument sifatida
+            berilishini ko‘p ko‘ramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const qoshish = (a, b) => a + b;
+
+function hisobla(fn, a, b) {
+
+    return fn(a, b);
+
+}
+
+console.log(
+    hisobla(qoshish, 10, 20)
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>30</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Muhim: Arrow Function va this ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Arrow Function oddiy functiondan
+            ayrim jihatlari bilan farq qiladi.
+
+            <br><br>
+
+            Eng muhim farqlardan biri —
+            Arrow Function o‘zining
+            <code>this</code> qiymatini yaratmaydi.
+
+            <br><br>
+
+            <code>this</code> mavzusini keyinroq
+            alohida darsda batafsil o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qachon Arrow Function ishlatamiz? 🤔
+        </h2>
+
+        <div class="space-y-5 text-slate-300 leading-8">
+
+            <p>
+                ✅ Qisqa function yozishda
+            </p>
+
+            <p>
+                ✅ Array metodlarida
+            </p>
+
+            <p>
+                ✅ Callback functionlarda
+            </p>
+
+            <p>
+                ✅ Biror qiymatni tez qaytarishda
+            </p>
+
+            <p>
+                ✅ Zamonaviy JavaScript kodlarida
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oddiy function → Arrow Function 🔄
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>// 1
+
+function salom() {
+    return "Salom";
+}
+
+
+// 2
+
+const salom2 = () => {
+    return "Salom";
+};
+
+
+// 3
+
+const salom3 = () => "Salom";</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Uchalasining natijasi bir xil:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>Salom</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 23 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: Calculator 🧮
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const qoshish = (a, b) => a + b;
+
+const ayirish = (a, b) => a - b;
+
+const kopaytirish = (a, b) => a * b;
+
+const bolish = (a, b) => {
+
+    if (b === 0) {
+        return "0 ga bo‘lish mumkin emas";
+    }
+
+    return a / b;
+};
+
+console.log(qoshish(20, 10));
+console.log(ayirish(20, 10));
+console.log(kopaytirish(20, 10));
+console.log(bolish(20, 10));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>30
+10
+200
+2</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 24 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: Student 🎓
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const studentInfo = (ism, yosh, ball) => {
+
+    return `
+Ism: ${ism}
+Yosh: ${yosh}
+Ball: ${ball}
+`;
+
+};
+
+console.log(
+    studentInfo("Ali", 16, 95)
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 25 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi asosiy sintaksis 📌
+        </h2>
+
+        <div class="info">
+
+            <p class="text-lg leading-9">
+
+                🔹 Parametrsiz:
+
+                <br>
+
+                <code>const fn = () => qiymat;</code>
+
+                <br><br>
+
+                🔹 Bitta parametr:
+
+                <br>
+
+                <code>const fn = x => qiymat;</code>
+
+                <br><br>
+
+                🔹 Bir nechta parametr:
+
+                <br>
+
+                <code>const fn = (x, y) => qiymat;</code>
+
+                <br><br>
+
+                🔹 Ko‘p qatorli:
+
+                <br>
+
+                <code>
+                const fn = (x) => {<br>
+                &nbsp;&nbsp;return x;<br>
+                };
+                </code>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <div class="space-y-6 text-slate-400 leading-8">
+
+            <p>
+                <b class="text-white">1-vazifa:</b>
+                <br>
+                "Salom JavaScript" qaytaradigan
+                Arrow Function yarating.
+            </p>
+
+            <p>
+                <b class="text-white">2-vazifa:</b>
+                <br>
+                Ism qabul qilib,
+                <code>Salom, [ism]!</code>
+                qaytaradigan Arrow Function yozing.
+            </p>
+
+            <p>
+                <b class="text-white">3-vazifa:</b>
+                <br>
+                Ikki sonni qo‘shadigan
+                Arrow Function yarating.
+            </p>
+
+            <p>
+                <b class="text-white">4-vazifa:</b>
+                <br>
+                Sonning kvadratini
+                hisoblaydigan Arrow Function yozing.
+            </p>
+
+            <p>
+                <b class="text-white">5-vazifa:</b>
+                <br>
+                Son juft yoki toq ekanini
+                aniqlaydigan Arrow Function yozing.
+            </p>
+
+            <p>
+                <b class="text-white">6-vazifa:</b>
+                <br>
+                Uchta sonning eng kattasini
+                topadigan Arrow Function yarating.
+            </p>
+
+            <p>
+                <b class="text-white">7-vazifa:</b>
+                <br>
+                Yoshni qabul qilib,
+                18 yoshdan katta yoki kichikligini
+                aniqlaydigan Arrow Function yozing.
+            </p>
+
+            <p>
+                <b class="text-white">8-vazifa:</b>
+                <br>
+                String qabul qilib,
+                uni katta harflarga o‘giradigan
+                Arrow Function yarating.
+            </p>
+
+            <p>
+                <b class="text-white">9-vazifa:</b>
+                <br>
+                Array qabul qilib,
+                birinchi elementini qaytaradigan
+                Arrow Function yozing.
+            </p>
+
+            <p>
+                <b class="text-white">10-vazifa:</b>
+                <br>
+                <code>+</code>,
+                <code>-</code>,
+                <code>*</code>,
+                <code>/</code>
+                amallarini bajaradigan
+                Arrow Function kalkulyator yarating.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+        <div class="space-y-4 text-slate-300 leading-8">
+
+            <p>
+                ➡️ Arrow Function —
+                functionning zamonaviy va
+                qisqa yozilish usuli.
+            </p>
+
+            <p>
+                📥 Parametrlar qavs ichida yoziladi.
+            </p>
+
+            <p>
+                ⚡ <code>=></code> Arrow belgisi.
+            </p>
+
+            <p>
+                ↩️ Implicit return yordamida
+                <code>return</code>ni qisqartirish mumkin.
+            </p>
+
+            <p>
+                🔹 Bitta parametrda qavslarni
+                tashlab ketish mumkin.
+            </p>
+
+            <p>
+                📦 Arrow Functionni
+                o‘zgaruvchiga saqlash mumkin.
+            </p>
+
+            <p>
+                🚀 Keyingi Array metodlarida
+                Arrow Function juda ko‘p ishlatiladi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ➡️
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+
+            28-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 28-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(27)) {
+
+        alert("Avval 27-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-27.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(28)) {
+
+        completedLessons.push(28);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 28-dars tugatildi! 29-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 28-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+
+</html>

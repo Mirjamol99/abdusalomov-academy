@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 36-dars | includes va indexOf</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔎 36-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            includes() va indexOf()
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            35-darsda <code>concat()</code> yordamida
+            Array'larni birlashtirishni o‘rgandik.
+
+            <br><br>
+
+            Bugun esa Array ichidan kerakli
+            elementni <b>qidirish</b>ni o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔎 includes() nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>includes()</code> — Array ichida
+            ma'lum bir qiymat bor yoki yo‘qligini
+            tekshiradi.
+
+            <br><br>
+
+            Natija doimo:
+
+            <br><br>
+
+            <span class="text-green-400 font-bold">
+                true
+            </span>
+            yoki
+            <span class="text-red-400 font-bold">
+                false
+            </span>
+
+            bo‘ladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(
+    fruits.includes("Banan")
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ❌ Element mavjud bo‘lmasa
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(
+    fruits.includes("Anor")
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>false</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400
+                  mt-5
+                  leading-8">
+
+            Chunki <code>"Anor"</code> Array ichida
+            mavjud emas.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 includes() qanday ishlaydi?
+        </h2>
+
+
+        <div class="method-card">
+
+            <p class="text-lg">
+                Array:
+            </p>
+
+            <p class="text-xl mt-3
+                      text-yellow-400">
+
+                ["Olma", "Banan", "Uzum"]
+
+            </p>
+
+
+            <hr class="border-slate-700 my-5">
+
+
+            <p>
+                <code>includes("Banan")</code>
+            </p>
+
+            <p class="text-green-400
+                      font-bold
+                      mt-2">
+
+                → true ✅
+
+            </p>
+
+
+            <p class="mt-5">
+                <code>includes("Anor")</code>
+            </p>
+
+            <p class="text-red-400
+                      font-bold
+                      mt-2">
+
+                → false ❌
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔤 String bilan includes()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>includes()</code> faqat Array'da
+            emas, String bilan ham ishlaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let name = "Mirjamol";
+
+console.log(
+    name.includes("jam")
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Chunki <code>"jam"</code>
+            String ichida mavjud.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ includes() katta-kichik harfga sezgir
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript'da <code>includes()</code>
+            katta va kichik harflarni farqlaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(
+    fruits.includes("olma")
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>false</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Array'da <code>"Olma"</code> bor,
+            lekin <code>"olma"</code> boshqa qiymat.
+
+        </p>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 Sonlar bilan includes()
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40
+];
+
+console.log(
+    numbers.includes(30)
+);
+
+console.log(
+    numbers.includes(50)
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>true
+
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 indexOf() nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>indexOf()</code> — Array ichidan
+            berilgan elementni qidiradi va uning
+            <b>indexini</b> qaytaradi.
+
+            <br><br>
+
+            Agar element topilmasa:
+
+            <br><br>
+
+            <span class="text-red-400 font-bold">
+                -1
+            </span>
+
+            qaytaradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(
+    fruits.indexOf("Banan")
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>1</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 indexlarni eslaymiz
+        </h2>
+
+
+        <div class="method-card">
+
+            <p class="text-xl">
+                0 → Olma
+            </p>
+
+            <p class="text-xl mt-3">
+                1 → Banan
+            </p>
+
+            <p class="text-xl mt-3">
+                2 → Uzum
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>fruits.indexOf("Olma");
+// 0
+
+fruits.indexOf("Banan");
+// 1
+
+fruits.indexOf("Uzum");
+// 2</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ❌ Element topilmasa
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(
+    fruits.indexOf("Anor")
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>-1</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>-1</code> — qidirilgan element
+            Array ichida yo‘qligini bildiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔁 Bir xil elementlar bo‘lsa
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Agar Array'da bir xil qiymat
+            bir necha marta bo‘lsa,
+            <code>indexOf()</code> birinchi
+            uchragan indexni qaytaradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    10,
+    30
+];
+
+console.log(
+    numbers.indexOf(10)
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>0</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔍 Oxirgi indexni topish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Agar bir xil elementning
+            <b>oxirgi uchragan indexini</b>
+            topmoqchi bo‘lsak,
+            <code>lastIndexOf()</code> metodidan
+            foydalanamiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    10,
+    30
+];
+
+console.log(
+    numbers.lastIndexOf(10)
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>2</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚖️ includes() va indexOf() farqi
+        </h2>
+
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Metod
+                        </th>
+
+                        <th class="p-4">
+                            Natija
+                        </th>
+
+                        <th class="p-4">
+                            Topilmasa
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4
+                                   text-green-400
+                                   font-bold">
+
+                            includes()
+
+                        </td>
+
+                        <td class="p-4">
+                            true / false
+                        </td>
+
+                        <td class="p-4">
+                            false
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="p-4
+                                   text-yellow-400
+                                   font-bold">
+
+                            indexOf()
+
+                        </td>
+
+                        <td class="p-4">
+                            index
+                        </td>
+
+                        <td class="p-4">
+                            -1
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 Qaysi birini ishlatamiz?
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl
+                           font-bold
+                           text-green-400">
+
+                    includes()
+
+                </h3>
+
+                <p class="text-slate-400
+                          mt-4
+                          leading-8">
+
+                    Savol:
+
+                    <br><br>
+
+                    "Bu element bormi?"
+
+                    <br><br>
+
+                    Javob:
+
+                    <br>
+
+                    <b>true / false</b>
+
+                </p>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl
+                           font-bold
+                           text-yellow-400">
+
+                    indexOf()
+
+                </h3>
+
+                <p class="text-slate-400
+                          mt-4
+                          leading-8">
+
+                    Savol:
+
+                    <br><br>
+
+                    "Bu element qaysi indexda?"
+
+                    <br><br>
+
+                    Javob:
+
+                    <br>
+
+                    <b>index yoki -1</b>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Real loyiha — mahsulot qidirish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin",
+    "Sichqoncha"
+];
+
+let product = "Noutbuk";
+
+if (products.includes(product)) {
+
+    console.log(
+        "Mahsulot mavjud!"
+    );
+
+} else {
+
+    console.log(
+        "Mahsulot topilmadi!"
+    );
+
+}</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>Mahsulot mavjud!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 indexOf() bilan mahsulot joylashuvi
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin",
+    "Sichqoncha"
+];
+
+let index =
+    products.indexOf("Quloqchin");
+
+console.log(index);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>2</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Demak, <b>"Quloqchin"</b>
+            Array'ning 2-indexida turibdi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔐 Login tizimida includes()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, saytda ruxsat berilgan
+            rollar ro‘yxati mavjud.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let roles = [
+    "admin",
+    "teacher",
+    "student"
+];
+
+let userRole = "student";
+
+if (roles.includes(userRole)) {
+
+    console.log(
+        "Ruxsat berildi!"
+    );
+
+} else {
+
+    console.log(
+        "Ruxsat yo‘q!"
+    );
+
+}</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>Ruxsat berildi!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔎 indexOf() orqali tekshirish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Eski usullarda element borligini
+            <code>indexOf()</code> bilan ham
+            tekshirish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+if (fruits.indexOf("Banan") !== -1) {
+
+    console.log(
+        "Banan mavjud!"
+    );
+
+} else {
+
+    console.log(
+        "Banan mavjud emas!"
+    );
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚡ includes() bilan osonroq
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Yuqoridagi vazifani
+            <code>includes()</code> bilan
+            qisqaroq yozish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+if (fruits.includes("Banan")) {
+
+    console.log(
+        "Banan mavjud!"
+    );
+
+}</code></pre>
+
+        </div>
+
+
+        <div class="info mt-6">
+
+            💡 Element faqat mavjud yoki yo‘qligini
+            tekshirish kerak bo‘lsa,
+            <code>includes()</code> juda qulay.
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧩 Amaliy misol
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let students = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];
+
+let name = "Hasan";
+
+let index =
+    students.indexOf(name);
+
+
+if (students.includes(name)) {
+
+    console.log(
+        name + " topildi!"
+    );
+
+    console.log(
+        "Index:",
+        index
+    );
+
+} else {
+
+    console.log(
+        name + " topilmadi!"
+    );
+
+}</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>Hasan topildi!
+
+Index: 2</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ Muhim: index 0 dan boshlanadi
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(
+    fruits.indexOf("Olma")
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>0</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>0</code> chiqishi
+            "topilmadi" degani emas.
+
+            <br><br>
+
+            <b>0</b> — bu elementning birinchi
+            indexi.
+
+            <br><br>
+
+            Faqat <code>-1</code> chiqsa,
+            element topilmagan bo‘ladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8">
+
+            <p>
+                <b class="text-white">
+                    1-vazifa:
+                </b>
+
+                <br>
+
+                Quyidagi Array ichida
+                <code>"JavaScript"</code> borligini
+                <code>includes()</code> bilan tekshiring.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let languages = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python"
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    2-vazifa:
+                </b>
+
+                <br>
+
+                <code>indexOf()</code> yordamida
+                <code>"CSS"</code> indexini toping.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    3-vazifa:
+                </b>
+
+                <br>
+
+                <code>"React"</code> mavjud yoki
+                mavjud emasligini tekshiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    4-vazifa:
+                </b>
+
+                <br>
+
+                Array'dagi <code>"Python"</code>
+                elementining indexini toping.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    5-vazifa:
+                </b>
+
+                <br>
+
+                Foydalanuvchining
+                <code>"admin"</code> roli borligini
+                <code>includes()</code> yordamida
+                tekshiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    6-vazifa:
+                </b>
+
+                <br>
+
+                Bir xil elementlar qatnashgan
+                Array yarating va
+                <code>indexOf()</code> birinchi
+                indexni qaytarishini tekshiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    7-vazifa:
+                </b>
+
+                <br>
+
+                <code>includes()</code> va
+                <code>indexOf()</code> farqini
+                o‘zingizning misolingiz bilan
+                ko‘rsating.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔎 <code>includes()</code> —
+                element borligini tekshiradi.
+            </p>
+
+            <p>
+                ✅ Natija:
+                <code>true</code> yoki
+                <code>false</code>.
+            </p>
+
+            <p>
+                🔢 <code>indexOf()</code> —
+                element indexini topadi.
+            </p>
+
+            <p>
+                ❌ Topilmasa:
+                <code>-1</code>.
+            </p>
+
+            <p>
+                🔁 Bir xil elementlar bo‘lsa,
+                <code>indexOf()</code> birinchi
+                uchragan indexni qaytaradi.
+            </p>
+
+            <p>
+                🏁 <code>lastIndexOf()</code> —
+                oxirgi uchragan indexni topadi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔎
+        </div>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            36-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 36-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(35)) {
+
+        alert("Avval 35-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-35.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(36)) {
+
+        completedLessons.push(36);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 36-dars tugatildi! 37-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 36-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

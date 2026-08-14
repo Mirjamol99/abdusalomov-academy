@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 10-dars | null va undefined</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ❓ 10-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            null va undefined
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            JavaScript'da ba'zan o‘zgaruvchida
+            qiymat bo‘lmasligi mumkin.
+            Bunday holatlarda <code>null</code>
+            va <code>undefined</code> tushunchalari
+            juda muhim.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            undefined nima? ❓
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar o‘zgaruvchi yaratilgan bo‘lsa,
+            lekin unga hali qiymat berilmagan bo‘lsa,
+            uning qiymati odatda
+            <code>undefined</code> bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let username;
+
+console.log(username);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>undefined</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            undefined — qiymat berilmagan
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi o‘zgaruvchiga hech qanday
+            qiymat berilmagan:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age;
+
+console.log(age);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            JavaScript:
+
+            <br><br>
+
+            "Bu o‘zgaruvchi mavjud,
+            lekin unga qiymat berilmagan"
+
+            <br><br>
+
+            deb qaraydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            null nima? ❌
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>null</code> — qiymat ataylab
+            mavjud emasligini bildiradi.
+
+            <br><br>
+
+            Ya'ni dasturchi o‘zgaruvchiga
+            "hozircha hech qanday qiymat yo‘q"
+            deb aniq belgilaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let user = null;
+
+console.log(user);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>null</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            null va undefined farqi 🔎
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            undefined
+                        </th>
+
+                        <th class="p-4">
+                            null
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            Qiymat berilmagan
+                        </td>
+
+                        <td class="p-4">
+                            Qiymat ataylab bo‘sh qilingan
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            Ko‘pincha avtomatik hosil bo‘ladi
+                        </td>
+
+                        <td class="p-4">
+                            Dasturchi o‘zi belgilaydi
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4">
+                            <code>let age;</code>
+                        </td>
+
+                        <td class="p-4">
+                            <code>let age = null;</code>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            type bilan tekshirish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Qiymatning turini
+            <code>typeof</code> yordamida
+            tekshirish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age;
+
+console.log(typeof age);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>undefined</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            <code>undefined</code> uchun
+            <code>typeof</code> natijasi
+            <code>"undefined"</code> bo‘ladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            null uchun typeof ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>null</code> bilan qiziq holat bor.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let user = null;
+
+console.log(typeof user);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>object</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu JavaScript'dagi tarixiy
+            xususiyatlardan biri.
+
+            <br><br>
+
+            Shuning uchun
+            <code>typeof null</code>
+            natijasi
+            <code>"object"</code> chiqadi.
+
+        </p>
+
+        <div class="mt-6 p-5 rounded-xl
+                    bg-yellow-400/10
+                    border border-yellow-400/20">
+
+            <p class="text-slate-300">
+
+                📌 Muhim:
+                <code>typeof null</code>
+                <b class="text-white">"object"</b>
+                qaytaradi.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            O‘zgaruvchini null qilish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            O‘zgaruvchida avval qiymat bo‘lishi,
+            keyinchalik esa uni
+            <code>null</code> qilish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let user = "Ali";
+
+console.log(user);
+
+user = null;
+
+console.log(user);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ali
+null</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            undefined'ni tekshirish
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let username;
+
+if (username === undefined) {
+    console.log("Username berilmagan");
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu yerda o‘zgaruvchining qiymati
+            <code>undefined</code> ekanligi
+            tekshirilmoqda.
+
+        </p>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            null'ni tekshirish
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let user = null;
+
+if (user === null) {
+    console.log("Foydalanuvchi yo‘q");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Foydalanuvchi yo‘q</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            === bilan tekshirish 🔎
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>===</code> qat'iy tenglikni
+            tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(null === null);
+
+console.log(undefined === undefined);
+
+console.log(null === undefined);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+true
+false</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Demak, <code>null</code> va
+            <code>undefined</code> bir xil emas.
+
+        </p>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy misol 👤
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchining telefoni
+            hali mavjud emas deb tasavvur qilamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let phone = null;
+
+if (phone === null) {
+    console.log(
+        "Telefon raqami mavjud emas."
+    );
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            undefined bilan amaliy misol
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let email;
+
+if (email === undefined) {
+    console.log(
+        "Email hali kiritilmagan."
+    );
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            null va undefined jadvali 📚
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Qiymat
+                        </th>
+
+                        <th class="p-4">
+                            Ma'nosi
+                        </th>
+
+                        <th class="p-4">
+                            Misol
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>undefined</code>
+                        </td>
+
+                        <td class="p-4">
+                            Qiymat berilmagan
+                        </td>
+
+                        <td class="p-4">
+                            <code>let age;</code>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>null</code>
+                        </td>
+
+                        <td class="p-4">
+                            Ataylab bo‘sh qiymat
+                        </td>
+
+                        <td class="p-4">
+                            <code>let age = null;</code>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarning natijasini
+            oldindan topishga harakat qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let a;
+
+console.log(a);
+
+let b = null;
+
+console.log(b);
+
+console.log(a === undefined);
+
+console.log(b === null);
+
+console.log(null === undefined);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ <code>username</code> nomli
+            o‘zgaruvchi yarating, lekin unga
+            qiymat bermang.
+
+            <br><br>
+
+            2️⃣ Console orqali uning qiymatini
+            chiqaring.
+
+            <br><br>
+
+            3️⃣ <code>email</code> o‘zgaruvchisiga
+            <code>null</code> qiymatini bering.
+
+            <br><br>
+
+            4️⃣ <code>typeof</code> yordamida
+            ikkala qiymatning turini tekshiring.
+
+            <br><br>
+
+            5️⃣ <code>if</code> yordamida
+            <code>username === undefined</code>
+            shartini tekshiring.
+
+            <br><br>
+
+            6️⃣ <code>if</code> yordamida
+            <code>email === null</code>
+            shartini tekshiring.
+
+            <br><br>
+
+            7️⃣ Quyidagi natijalarni toping:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(null === null);
+
+console.log(undefined === undefined);
+
+console.log(null === undefined);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ❓ <code>undefined</code> —
+                qiymat hali berilmagan.
+            </p>
+
+            <p>
+                ❌ <code>null</code> —
+                qiymat ataylab bo‘sh qilingan.
+            </p>
+
+            <p>
+                🔎 <code>typeof undefined</code>
+                → <code>"undefined"</code>
+            </p>
+
+            <p>
+                ⚠️ <code>typeof null</code>
+                → <code>"object"</code>
+            </p>
+
+            <p>
+                ✅ <code>null === null</code>
+                → <code>true</code>
+            </p>
+
+            <p>
+                ✅ <code>undefined === undefined</code>
+                → <code>true</code>
+            </p>
+
+            <p>
+                ❌ <code>null === undefined</code>
+                → <code>false</code>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ❓
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            10-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 10-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 9-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(9)) {
+
+        alert("Avval 9-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-9.html";
+
+        return;
+    }
+
+
+    // 10-darsni saqlash
+
+    if (!completedLessons.includes(10)) {
+
+        completedLessons.push(10);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 10-dars tugatildi! 11-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 10-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

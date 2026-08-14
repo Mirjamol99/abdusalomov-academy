@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 23-dars | break va continue</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+        <a href="index.html" class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400 hover:text-yellow-400 transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block px-5 py-2 rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400 font-bold">
+
+            🛑 23-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl font-extrabold mt-6">
+
+            break va continue
+
+        </h1>
+
+        <p class="text-slate-400 text-lg mt-5 leading-8">
+
+            Bugun JavaScript'dagi
+            <code>break</code> va
+            <code>continue</code> operatorlarini
+            o‘rganamiz.
+
+            <br><br>
+
+            Ikkalasi ham looplarning ishlashini
+            boshqarishda juda muhim.
+
+            <br><br>
+
+            <code>break</code> loopni
+            <b class="text-white">to‘liq to‘xtatadi</b>.
+
+            <br><br>
+
+            <code>continue</code> esa faqat
+            <b class="text-white">joriy aylanishni</b>
+            tashlab, keyingi aylanishga o‘tadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break nima? 🛑
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>break</code> loopni darhol
+            to‘xtatish uchun ishlatiladi.
+
+            <br><br>
+
+            Loop ichida <code>break</code>
+            ishlatilganda, loopdan chiqib ketiladi
+            va undan keyingi kod bajariladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i === 5) {
+        break;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>i</code> 5 ga teng bo‘lganda
+            <code>break</code> ishlaydi va loop
+            to‘xtaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break qanday ishlaydi? 🧠
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    console.log(i);
+
+    if (i === 3) {
+        break;
+    }
+
+}
+
+console.log("Loop tugadi");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+Loop tugadi</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>break</code> ishlaganidan keyin
+            loop davom etmaydi.
+
+            <br><br>
+
+            Lekin loopdan keyingi
+            <code>console.log()</code> bajariladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            while bilan break 🔄
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+while (i <= 10) {
+
+    if (i === 6) {
+        break;
+    }
+
+    console.log(i);
+
+    i++;
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            do while bilan break ♻️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    if (i === 4) {
+        break;
+    }
+
+    console.log(i);
+
+    i++;
+
+} while (i <= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            continue nima? ⏭️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>continue</code> loopni to‘liq
+            to‘xtatmaydi.
+
+            <br><br>
+
+            U faqat hozirgi aylanishni
+            tashlab ketadi va keyingi
+            aylanishga o‘tadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    if (i === 3) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+4
+5</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            3 ga kelganda
+            <code>continue</code> ishladi.
+
+            <br><br>
+
+            Shuning uchun 3 ekranga
+            chiqarilmadi.
+
+            <br><br>
+
+            Loop esa 4 va 5 bilan davom etdi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            continue qanday ishlaydi? 🧠
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    if (i === 2) {
+        continue;
+    }
+
+    console.log("Son:", i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Son: 1
+Son: 3
+Son: 4
+Son: 5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break va continue farqi 🔥
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-5 mt-6">
+
+            <div class="bg-red-500/10 border border-red-500/20
+                        rounded-2xl p-6">
+
+                <h3 class="text-2xl font-bold text-red-400 mb-4">
+                    🛑 break
+                </h3>
+
+                <p class="text-slate-400 leading-7">
+
+                    Loopni butunlay to‘xtatadi.
+
+                    <br><br>
+
+                    Keyingi aylanishlar
+                    bajarilmaydi.
+
+                </p>
+
+            </div>
+
+
+            <div class="bg-green-500/10 border border-green-500/20
+                        rounded-2xl p-6">
+
+                <h3 class="text-2xl font-bold text-green-400 mb-4">
+                    ⏭️ continue
+                </h3>
+
+                <p class="text-slate-400 leading-7">
+
+                    Faqat joriy aylanishni
+                    tashlab ketadi.
+
+                    <br><br>
+
+                    Loop keyingi aylanish bilan
+                    davom etadi.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break misoli 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1 dan 10 gacha sanaymiz,
+            lekin 7 ga yetganda to‘xtaymiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i === 7) {
+        break;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5
+6</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            continue misoli 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1 dan 10 gacha sonlarni chiqaramiz,
+            lekin 7 ni tashlab ketamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i === 7) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5
+6
+8
+9
+10</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Juft sonlarni chiqarish 🟢
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>continue</code> yordamida
+            toq sonlarni tashlab ketamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 !== 0) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>2
+4
+6
+8
+10</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Toq sonlarni chiqarish 🔵
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+3
+5
+7
+9</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            5 ga bo‘linadigan sonlar 🔢
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1 dan 30 gacha bo‘lgan
+            sonlardan faqat 5 ga
+            bo‘linadiganlarini chiqaramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 30; i++) {
+
+    if (i % 5 !== 0) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>5
+10
+15
+20
+25
+30</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break bilan qidirish 🔎
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, Array ichidan kerakli
+            sonni topganimizdan keyin
+            qidirishni to‘xtatishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [4, 8, 12, 20, 25];
+
+for (let i = 0; i < numbers.length; i++) {
+
+    if (numbers[i] === 12) {
+
+        console.log("Topildi!");
+
+        break;
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Topildi!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            continue bilan Array 📦
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array ichidagi ma'lum
+            qiymatlarni tashlab ketishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [1, 2, 3, 4, 5];
+
+for (let number of numbers) {
+
+    if (number === 3) {
+        continue;
+    }
+
+    console.log(number);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+4
+5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String bilan continue 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Stringdagi ayrim belgilarni
+            tashlab ketish ham mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let word = "JavaScript";
+
+for (let i = 0; i < word.length; i++) {
+
+    if (word[i] === "a") {
+        continue;
+    }
+
+    console.log(word[i]);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>J
+v
+S
+c
+r
+i
+p
+t</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            while + continue 🔄
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 0;
+
+while (i < 10) {
+
+    i++;
+
+    if (i === 5) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+6
+7
+8
+9
+10</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda <code>i++</code>
+            <code>continue</code>dan oldin
+            yozilgan.
+
+            <br><br>
+
+            Bu juda muhim: aks holda
+            <code>i</code> o‘zgarmay qolib,
+            cheksiz loop yuzaga kelishi mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            do while + continue ♻️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 0;
+
+do {
+
+    i++;
+
+    if (i === 3) {
+        continue;
+    }
+
+    console.log(i);
+
+} while (i < 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+4
+5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break + continue birga 🔥
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i === 3) {
+        continue;
+    }
+
+    if (i === 8) {
+        break;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+4
+5
+6
+7</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>3</code> — <code>continue</code>
+            sababli tashlab ketildi.
+
+            <br><br>
+
+            <code>8</code> — <code>break</code>
+            sababli loop to‘xtadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ichma-ich looplarda break 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar loop ichida yana boshqa
+            loop bo‘lsa, <code>break</code>
+            eng yaqin joylashgan loopni
+            to‘xtatadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        if (j === 2) {
+            break;
+        }
+
+        console.log(i, j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1 1
+2 1
+3 1</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ichma-ich looplarda continue
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 2; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+
+        if (j === 2) {
+            continue;
+        }
+
+        console.log(i, j);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1 1
+1 3
+2 1
+2 3</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break va return farqi ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>break</code> loopni
+            to‘xtatadi.
+
+            <br><br>
+
+            <code>return</code> esa funksiyadan
+            chiqadi va kerak bo‘lsa qiymat
+            qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function test() {
+
+    for (let i = 1; i <= 5; i++) {
+
+        if (i === 3) {
+            return;
+        }
+
+        console.log(i);
+
+    }
+
+}
+
+test();</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qachon break ishlatamiz? 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            🛑 Kerakli element topilganda
+            qidirishni to‘xtatish.
+
+            <br><br>
+
+            🛑 Ma'lum bir shartga
+            yetilganda loopdan chiqish.
+
+            <br><br>
+
+            🛑 Jarayonni majburan
+            to‘xtatish.
+
+            <br><br>
+
+            🛑 Keraksiz aylanishlarning
+            oldini olish.
+
+        </p>
+
+    </section>
+
+
+    <!-- 23 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qachon continue ishlatamiz? 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            ⏭️ Ayrim qiymatlarni tashlab
+            ketish kerak bo‘lganda.
+
+            <br><br>
+
+            ⏭️ Faqat kerakli qiymatlarni
+            qayta ishlash kerak bo‘lganda.
+
+            <br><br>
+
+            ⏭️ Ma'lum shartga mos
+            kelmaydigan elementlarni
+            o'tkazib yuborishda.
+
+        </p>
+
+    </section>
+
+
+    <!-- 24 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 🧑‍💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1 dan 50 gacha bo‘lgan sonlardan
+            faqat 3 ga bo‘linadiganlarini
+            chiqaramiz va 30 ga yetganda
+            to‘xtatamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 50; i++) {
+
+    if (i % 3 !== 0) {
+        continue;
+    }
+
+    if (i > 30) {
+        break;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>3
+6
+9
+12
+15
+18
+21
+24
+27
+30</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 25 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarning natijasini
+            o‘zingiz topishga harakat qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i === 6) {
+        break;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i === 6) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 15; i++) {
+
+    if (i % 3 !== 0) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            1 dan 20 gacha sanang.
+            13 ga yetganda <code>break</code>
+            yordamida to‘xtating.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            1 dan 20 gacha bo‘lgan sonlarni
+            chiqaring, lekin 10 ni
+            <code>continue</code> yordamida
+            tashlab keting.
+
+            <br><br>
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            1 dan 50 gacha faqat juft
+            sonlarni <code>continue</code>
+            yordamida chiqaring.
+
+            <br><br>
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            1 dan 100 gacha 7 ga
+            bo‘linadigan sonlarni chiqaring.
+            70 ga yetganda <code>break</code>
+            qiling.
+
+            <br><br>
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            Array ichidan 25 sonini
+            <code>break</code> yordamida toping.
+
+            <br><br>
+
+            <b class="text-white">6-vazifa:</b>
+
+            <br>
+
+            Array ichidagi manfiy sonlarni
+            <code>continue</code> yordamida
+            tashlab keting.
+
+            <br><br>
+
+            <b class="text-white">7-vazifa:</b>
+
+            <br>
+
+            1 dan 30 gacha sonlarni chiqaring.
+            5 ga bo‘linadigan sonlarni
+            tashlab keting.
+
+            <br><br>
+
+            <b class="text-white">8-vazifa:</b>
+
+            <br>
+
+            1 dan 100 gacha sanang.
+            50 ga yetganda <code>break</code>
+            bilan to‘xtating.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4 text-slate-300 leading-8">
+
+            <p>
+                🛑 <code>break</code> —
+                loopni butunlay to‘xtatadi.
+            </p>
+
+            <p>
+                ⏭️ <code>continue</code> —
+                faqat joriy aylanishni tashlab
+                ketadi.
+            </p>
+
+            <p>
+                🔄 <code>break</code> dan keyin
+                loopning keyingi aylanishlari
+                bajarilmaydi.
+            </p>
+
+            <p>
+                🔄 <code>continue</code> dan keyin
+                loop keyingi aylanishga o‘tadi.
+            </p>
+
+            <p>
+                📦 Ikkalasidan ham
+                <code>for</code>,
+                <code>while</code> va
+                <code>do while</code> bilan
+                foydalanish mumkin.
+            </p>
+
+            <p>
+                ⚠️ <code>while</code> yoki
+                <code>do while</code> ichida
+                <code>continue</code> ishlatilganda
+                loop o‘zgaruvchisini yangilashga
+                e'tibor bering.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🛑
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            23-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 23-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 22-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(22)) {
+
+        alert("Avval 22-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-22.html";
+
+        return;
+    }
+
+
+    // 23-darsni saqlash
+
+    if (!completedLessons.includes(23)) {
+
+        completedLessons.push(23);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 23-dars tugatildi! 24-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 23-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

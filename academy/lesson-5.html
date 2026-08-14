@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>5-Dars | HTML Linklar | Abdusalomov Academy</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- NAVBAR -->
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+
+            <a href="html-course.html" class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kursga qaytish
+
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+
+        <!-- TITLE -->
+
+        <div class="mb-10">
+
+            <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+                5-DARS
+
+            </span>
+
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+                HTML Linklar
+
+            </h1>
+
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+                Bugun <strong>&lt;a&gt;</strong> tegi orqali
+                havolalar yaratishni o'rganamiz.
+
+            </p>
+
+        </div>
+
+        <!-- 1. LINK NIMA? -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-link"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                1. Link nima?
+
+            </h2>
+
+
+            <p class="text-slate-300
+                  leading-8">
+
+                HTML'da boshqa sahifa yoki saytga o'tish
+                uchun <strong class="text-orange-400">&lt;a&gt;</strong>
+                tegi ishlatiladi.
+
+            </p>
+
+
+            <p class="text-slate-400
+                  mt-4
+                  leading-8">
+
+                Linkning manzili esa
+                <strong class="text-orange-400">href</strong>
+                atributi orqali beriladi.
+
+            </p>
+
+        </section>
+
+        <!-- 2. ASOSIY KOD -->
+
+        <section class="code-box">
+
+            <h2 class="lesson-heading">
+
+                Asosiy ko'rinishi
+
+            </h2>
+
+
+            <pre><code>&lt;a href="https://example.com"&gt;
+    Saytga o'tish
+&lt;/a&gt;</code></pre>
+
+        </section>
+
+        <!-- 3. TASHQI SAYT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                2. Boshqa saytga link
+
+            </h2>
+
+
+            <p class="text-slate-300
+                  leading-8">
+
+                Masalan, Google saytiga o'tish uchun:
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;a href="https://www.google.com"&gt;
+    Google
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6">
+
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="demo-link">
+
+                    Google'ga o'tish
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- 4. YANGI OYNA -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                3. Linkni yangi oynada ochish
+
+            </h2>
+
+
+            <p class="text-slate-300
+                  leading-8">
+
+                Linkni yangi tabda ochish uchun
+                <strong class="text-orange-400">
+                    target="_blank"
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;a
+    href="https://www.google.com"
+    target="_blank"
+&gt;
+    Google
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+        <!-- 5. O'ZIMIZNING SAHIFAMIZ -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                4. O'zimizning sahifamizga link
+
+            </h2>
+
+
+            <p class="text-slate-300
+                  leading-8">
+
+                Agar loyihamizdagi boshqa HTML sahifaga
+                o'tmoqchi bo'lsak, fayl nomini
+                <strong class="text-orange-400">
+                    href
+                </strong>
+                ichiga yozamiz.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;a href="about.html"&gt;
+    Men haqimda
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6">
+
+                <a href="about.html" class="demo-link">
+
+                    Men haqimda
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- 6. TELEFON -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                5. Telefon raqamiga link
+
+            </h2>
+
+
+            <p class="text-slate-300
+                  leading-8">
+
+                Telefon raqamiga bosilganda qo'ng'iroq
+                qilish imkonini berish uchun
+                <strong class="text-orange-400">
+                    tel:
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;a href="tel:+998901234567"&gt;
+    Bizga qo'ng'iroq qiling
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+        <!-- 7. EMAIL -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                6. Emailga link
+
+            </h2>
+
+
+            <p class="text-slate-300
+                  leading-8">
+
+                Email yuborish uchun
+                <strong class="text-orange-400">
+                    mailto:
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;a href="mailto:example@gmail.com"&gt;
+    Email yuborish
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+        <!-- 8. LINK TURLARI -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mb-8">
+
+                Linklarning asosiy turlari
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-5">
+
+
+                <div class="tag-card">
+
+                    <span>
+                        🌐 Tashqi link
+                    </span>
+
+                    <p>
+                        Boshqa saytga o'tish.
+                    </p>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <span>
+                        📄 Ichki link
+                    </span>
+
+                    <p>
+                        Loyihadagi boshqa sahifaga o'tish.
+                    </p>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <span>
+                        📞 Telefon
+                    </span>
+
+                    <p>
+                        Telefon raqamiga qo'ng'iroq qilish.
+                    </p>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <span>
+                        ✉️ Email
+                    </span>
+
+                    <p>
+                        Email yozish.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 9. MINI LOYIHA -->
+
+        <section class="lesson-box">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI LOYIHA
+
+            </p>
+
+
+            <h2 class="lesson-heading mt-3">
+
+                Oddiy menyu yaratamiz
+
+            </h2>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;a href="index.html"&gt;
+    Bosh sahifa
+&lt;/a&gt;
+
+&lt;a href="courses.html"&gt;
+    Kurslar
+&lt;/a&gt;
+
+&lt;a href="about.html"&gt;
+    Men haqimda
+&lt;/a&gt;
+
+&lt;a href="contact.html"&gt;
+    Bog'lanish
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+        <!-- MINI TEST -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI TEST
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+                Link manzilini qaysi atribut belgilaydi?
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    A) src
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    B) link
+
+                </button>
+
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    C) href
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) url
+
+                </button>
+
+            </div>
+
+
+            <p id="answerResult" class="mt-6
+                  font-semibold
+                  text-lg">
+            </p>
+
+        </section>
+
+        <!-- COMPLETE -->
+
+        <section class="mt-10">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full
+                       px-7 py-5
+                       rounded-2xl
+                       bg-orange-500
+                       hover:bg-orange-600
+                       font-bold
+                       text-lg
+                       transition">
+
+                Darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="border-t border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- STYLE -->
+
+    <style>
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+        }
+
+
+        .icon-box {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(249, 115, 22, .1);
+
+            color: #fb923c;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .lesson-heading {
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .code-box {
+
+            margin-top: 32px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box-inner {
+
+            margin-top: 24px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box pre,
+        .code-box-inner pre {
+
+            color: #4ade80;
+
+            line-height: 2;
+
+            font-size: 15px;
+
+        }
+
+
+        .demo-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: #f97316;
+
+            color: white;
+
+            padding: 15px 24px;
+
+            border-radius: 14px;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+        }
+
+
+        .demo-link:hover {
+
+            background: #ea580c;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .tag-card {
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            border-radius: 18px;
+
+            padding: 24px;
+
+            transition: .3s;
+
+        }
+
+
+        .tag-card:hover {
+
+            border-color: #f97316;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .tag-card span {
+
+            color: #fb923c;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+        }
+
+
+        .tag-card p {
+
+            color: #94a3b8;
+
+            margin-top: 10px;
+
+        }
+
+
+        .answer-btn {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            border: 1px solid #334155;
+
+            background: #020617;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            transition: .3s;
+
+        }
+
+
+        .answer-btn:hover {
+
+            border-color: #f97316;
+
+            color: #fb923c;
+
+            transform: translateY(-2px);
+
+        }
+    </style>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById("answerResult");
+
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! Link manzili href atributi orqali beriladi.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. To'g'ri javobni yana bir marta o'ylab ko'ring.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-red-400";
+
+            }
+
+        }
+
+        // DARSNI TUGATISH
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "htmlCompletedLessons"
+                    )
+                ) || [];
+
+
+            if (!completedLessons.includes(5)) {
+
+                completedLessons.push(5);
+
+            }
+
+
+            localStorage.setItem(
+                "htmlCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "🎉 5-dars tugatildi! 6-dars ochildi.";
+
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.innerHTML =
+                "✅ Tugatildi";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-orange-500",
+                "hover:bg-orange-600"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            setTimeout(() => {
+
+                window.location.href =
+                    "html-course.html";
+
+            }, 1500);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

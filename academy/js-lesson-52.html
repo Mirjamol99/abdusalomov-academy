@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 52-dars | DOM nima?</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+
+        .demo-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        🌐 52-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        DOM nima?
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugundan boshlab JavaScript'da
+        <strong class="text-white">
+            DOM
+        </strong>
+        bilan ishlashni boshlaymiz.
+
+        <br><br>
+
+        DOM yordamida JavaScript orqali
+        HTML elementlarini topish,
+        o‘zgartirish, qo‘shish va o‘chirish
+        mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🌐 DOM nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        DOM — <strong class="text-white">
+        Document Object Model
+        </strong>
+        degan so‘zlarning qisqartmasi.
+
+        <br><br>
+
+        Brauzer HTML sahifani o‘qib,
+        uni JavaScript bilan ishlash mumkin
+        bo‘lgan obyektlar daraxtiga aylantiradi.
+
+    </p>
+
+
+    <div class="info mt-6">
+
+        <strong class="text-white">
+            DOM = HTML sahifaning JavaScript
+            orqali boshqariladigan ko‘rinishi.
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🏗️ HTML → DOM
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Masalan, bizda quyidagi HTML bo‘lsin:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;body&gt;
+
+    &lt;h1&gt;Salom JavaScript&lt;/h1&gt;
+
+    &lt;p&gt;Men JavaScript o‘rganayapman&lt;/p&gt;
+
+&lt;/body&gt;</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Brauzer bu HTML'ni DOM daraxtiga
+        aylantiradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🌳 DOM daraxti
+
+    </h2>
+
+
+    <div class="demo-card">
+
+<pre class="text-green-400 leading-8"><code>document
+   │
+   └── html
+        │
+        ├── head
+        │
+        └── body
+             │
+             ├── h1
+             │
+             └── p</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Har bir HTML elementi DOM ichida
+        alohida node sifatida mavjud bo‘ladi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📄 document nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        JavaScript'da
+        <code>document</code>
+        — hozirgi HTML sahifani ifodalaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(document);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Console'da sahifaning
+        HTML tuzilmasini ko‘rishingiz mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 DOM bilan nima qilish mumkin?
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            🔎 HTML elementini topish
+
+        </div>
+
+
+        <div class="method-card">
+
+            ✏️ Matnni o‘zgartirish
+
+        </div>
+
+
+        <div class="method-card">
+
+            🎨 CSS stilini o‘zgartirish
+
+        </div>
+
+
+        <div class="method-card">
+
+            ➕ Yangi element qo‘shish
+
+        </div>
+
+
+        <div class="method-card">
+
+            ❌ Elementni o‘chirish
+
+        </div>
+
+
+        <div class="method-card">
+
+            🖱️ Event qo‘shish
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔎 HTML elementini topish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        DOM bilan ishlashning eng muhim
+        qismlaridan biri — elementni topish.
+
+    </p>
+
+
+    <div class="info mt-6">
+
+        Buni keyingi darslarda batafsil
+        o‘rganamiz.
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>document.getElementById("title");</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 DOM va JavaScript
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        JavaScript yordamida HTML elementini
+        topib, uning tarkibini o‘zgartirishimiz
+        mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.getElementById("title")
+    .textContent = "Salom!";</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Amaliy misol
+
+    </h2>
+
+
+    <div class="demo-card text-center">
+
+
+        <h2 id="demoTitle"
+            class="text-3xl
+                   font-extrabold
+                   text-yellow-400">
+
+            Eski matn
+
+        </h2>
+
+
+        <button
+            onclick="changeTitle()"
+            class="mt-6
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-7 py-4
+                   rounded-2xl
+                   font-bold">
+
+            ✏️ Matnni o‘zgartirish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeTitle() {
+
+    document.getElementById(
+        "demoTitle"
+    ).textContent =
+        "Yangi matn!";
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 DOM orqali matn o‘zgartirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.getElementById("title");
+
+title.textContent =
+    "JavaScript darsi";</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>textContent</code>
+        element ichidagi matnni
+        o‘zgartirish uchun ishlatiladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎨 DOM orqali style o‘zgartirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.getElementById("title");
+
+title.style.color = "red";</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        JavaScript orqali CSS property'larini
+        ham o‘zgartirish mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👀 DOM real hayotda
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+            🛒 Internet do‘kon
+        </div>
+
+
+        <div class="method-card">
+            🔐 Login form
+        </div>
+
+
+        <div class="method-card">
+            📝 Todo list
+        </div>
+
+
+        <div class="method-card">
+            🛍️ Shopping cart
+        </div>
+
+
+        <div class="method-card">
+            🌙 Dark mode
+        </div>
+
+
+        <div class="method-card">
+            📱 Responsive menu
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 DOM + Shopping Cart
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Masalan, internet do‘konda
+        foydalanuvchi "Savatga qo‘shish"
+        tugmasini bosganda DOM orqali
+        savatdagi mahsulotlar sonini
+        o‘zgartirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let cartCount = 0;
+
+function addToCart() {
+
+    cartCount++;
+
+    document.getElementById(
+        "cartCount"
+    ).textContent = cartCount;
+
+}</code></pre>
+
+    </div>
+
+
+    <div class="demo-card mt-6 text-center">
+
+
+        <p class="text-slate-400">
+
+            Savat:
+
+        </p>
+
+
+        <div id="cartCount"
+             class="text-5xl
+                    font-extrabold
+                    text-yellow-400
+                    mt-3">
+
+            0
+
+        </div>
+
+
+        <button
+            onclick="addToCart()"
+            class="mt-6
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-7 py-4
+                   rounded-2xl
+                   font-bold">
+
+            🛒 Savatga qo‘shish
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ DOM bilan ishlashda muhim tushuncha
+
+    </h2>
+
+
+    <div class="info">
+
+        JavaScript HTML'dan oldin ishlasa,
+        element hali mavjud bo‘lmasligi mumkin.
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Shuning uchun JavaScript faylini
+        ko‘pincha <code>&lt;body&gt;</code>
+        oxirida ulash qulay.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;body&gt;
+
+    ...
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 DOM bo‘yicha asosiy tushunchalar
+
+    </h2>
+
+
+    <div class="space-y-5">
+
+
+        <div class="method-card">
+
+            <code>document</code>
+
+            <p class="text-slate-400 mt-2">
+                HTML hujjat.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>element</code>
+
+            <p class="text-slate-400 mt-2">
+                HTML elementi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>node</code>
+
+            <p class="text-slate-400 mt-2">
+                DOM daraxtidagi tugun.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>textContent</code>
+
+            <p class="text-slate-400 mt-2">
+                Element matnini boshqarish.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>style</code>
+
+            <p class="text-slate-400 mt-2">
+                Element stilini boshqarish.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🌐
+            </b>
+
+            <br>
+
+            DOM nima ekanini o‘z so‘zingiz
+            bilan tushuntiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 📄
+            </b>
+
+            <br>
+
+            <code>document</code>
+            ni console'ga chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🔎
+            </b>
+
+            <br>
+
+            HTML'da <code>id="title"</code>
+            bo‘lgan <code>h1</code> yarating
+            va uni JavaScript orqali toping.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;h1 id="title"&gt;
+    Salom
+&lt;/h1&gt;</code></pre>
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa ✏️
+            </b>
+
+            <br>
+
+            JavaScript orqali
+            <code>h1</code> matnini
+            o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🎨
+            </b>
+
+            <br>
+
+            <code>h1</code> rangini JavaScript
+            orqali o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🛒
+            </b>
+
+            <br>
+
+            Tugma yarating. Tugma bosilganda
+            sahifadagi son <code>1</code> taga
+            oshsin.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🔥
+            </b>
+
+            <br>
+
+            Tugma bosilganda:
+
+            <br><br>
+
+            <code>
+                "Salom, JavaScript!"
+            </code>
+
+            matni chiqsin.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            🌐 <strong>DOM</strong>
+            → Document Object Model.
+        </p>
+
+
+        <p>
+            📄 <code>document</code>
+            → HTML sahifani ifodalaydi.
+        </p>
+
+
+        <p>
+            🌳 DOM
+            → HTML elementlarining daraxt ko‘rinishi.
+        </p>
+
+
+        <p>
+            🔎 JavaScript orqali
+            HTML elementlarini topish mumkin.
+        </p>
+
+
+        <p>
+            ✏️ Element matnini o‘zgartirish mumkin.
+        </p>
+
+
+        <p>
+            🎨 Element stilini o‘zgartirish mumkin.
+        </p>
+
+
+        <p>
+            ➕ Yangi elementlar qo‘shish mumkin.
+        </p>
+
+
+        <p>
+            ❌ Elementlarni o‘chirish mumkin.
+        </p>
+
+
+        <p>
+            🖱️ Elementlarga event qo‘shish mumkin.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT -->
+
+<section class="lesson-box">
+
+    <div class="text-6xl mb-5">
+        🔍
+    </div>
+
+
+    <h2 class="text-3xl
+               md:text-4xl
+               font-extrabold">
+
+        Keyingi dars
+
+    </h2>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-4
+              leading-8">
+
+        <strong class="text-yellow-400">
+            53-dars
+        </strong>
+        → DOM elementlarni tanlash:
+        <code>getElementById</code>,
+        <code>querySelector</code> va
+        boshqa selectorlar.
+
+    </p>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        🌐
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        52-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 52-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   DOM DEMO
+===================================== */
+
+function changeTitle() {
+
+    document.getElementById(
+        "demoTitle"
+    ).textContent =
+        "Yangi matn! 🎉";
+
+}
+
+
+
+/* =====================================
+   SHOPPING CART DEMO
+===================================== */
+
+let cartCount = 0;
+
+
+function addToCart() {
+
+    cartCount++;
+
+
+    document.getElementById(
+        "cartCount"
+    ).textContent = cartCount;
+
+}
+
+
+
+/* =====================================
+   LESSON COMPLETE
+===================================== */
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        51-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(51)) {
+
+        alert(
+            "Avval 51-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-51.html";
+
+        return;
+
+    }
+
+
+    /*
+        52-darsni saqlash
+    */
+
+    if (!completedLessons.includes(52)) {
+
+        completedLessons.push(52);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 52-dars tugatildi! 53-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 52-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

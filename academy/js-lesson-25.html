@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 25-dars | Function asoslari</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400 hover:text-yellow-400 transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ⚙️ 25-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Function asoslari
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Function — JavaScript'dagi eng muhim
+            tushunchalardan biridir.
+
+            <br><br>
+
+            Function yordamida ma'lum bir vazifani
+            bajaradigan kodni bir joyga yozib,
+            uni kerak bo‘lganda qayta-qayta
+            ishlatishimiz mumkin.
+
+            <br><br>
+
+            Bugun function yaratish,
+            uni chaqirish, parametrlar,
+            argumentlar va <code>return</code>
+            bilan ishlashni o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Function — ma'lum bir vazifani
+            bajarish uchun yozilgan kodlar
+            to‘plami.
+
+            <br><br>
+
+            Masalan, ekranga salom chiqaradigan
+            function yaratishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salom() {
+
+    console.log("Salom!");
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu kod functionni
+            <b class="text-white">yaratadi</b>,
+            lekin hali uni ishga tushirmaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Functionni chaqirish 📞
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Function ishlashi uchun uni
+            <b class="text-white">chaqirish</b>
+            kerak.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salom() {
+
+    console.log("Salom!");
+
+}
+
+salom();</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom!</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>salom();</code> — functionni
+            chaqirish hisoblanadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function nega kerak? 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Tasavvur qiling, bir xil kodni
+            10 marta ishlatishingiz kerak.
+
+            <br><br>
+
+            Function ishlatmasak, kodni
+            10 marta yozishga to‘g‘ri keladi.
+
+            <br><br>
+
+            Function bilan esa kodni
+            bir marta yozamiz va
+            kerakli joyda chaqiramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salom() {
+
+    console.log("Assalomu alaykum!");
+
+}
+
+salom();
+salom();
+salom();</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function sintaksisi 🧩
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function functionNomi() {
+
+    // kodlar
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda:
+
+            <br><br>
+
+            <code>function</code> —
+            function yaratish kalit so‘zi.
+
+            <br><br>
+
+            <code>functionNomi</code> —
+            functionning nomi.
+
+            <br><br>
+
+            <code>()</code> —
+            parametrlar yoziladigan joy.
+
+            <br><br>
+
+            <code>{ }</code> —
+            function ichidagi kodlar.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oddiy function misoli 💡
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function hello() {
+
+    console.log("Hello World!");
+
+}
+
+hello();</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Function nomini o‘zingiz
+            mazmunli qilib tanlashingiz mumkin.
+
+            <br><br>
+
+            Masalan:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salomBer() {
+    console.log("Salom!");
+}
+
+function xayr() {
+    console.log("Xayr!");
+}
+
+salomBer();
+xayr();</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametr nima? 📦
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Function tashqaridan ma'lumot
+            qabul qilishi mumkin.
+
+            <br><br>
+
+            Function qavslarining ichida
+            yozilgan o‘zgaruvchi
+            <b class="text-white">parametr</b>
+            deyiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salomBer(ism) {
+
+    console.log("Salom, " + ism);
+
+}
+
+salomBer("Ali");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom, Ali</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Argument nima? 🧠
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Functionni chaqirganda parametrga
+            berilgan haqiqiy qiymat
+            <b class="text-white">argument</b>
+            deyiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salomBer(ism) {
+
+    console.log("Salom, " + ism);
+
+}
+
+salomBer("Ali");</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu misolda:
+
+            <br><br>
+
+            <code>ism</code> —
+            parametr.
+
+            <br><br>
+
+            <code>"Ali"</code> —
+            argument.
+
+        </p>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta parametrlar 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function tanishtir(ism, yosh) {
+
+    console.log(
+        "Mening ismim " + ism
+    );
+
+    console.log(
+        "Men " + yosh + " yoshdaman"
+    );
+
+}
+
+tanishtir("Ali", 15);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Mening ismim Ali
+Men 15 yoshdaman</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Matematik function ➕
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function qoshish(a, b) {
+
+    console.log(a + b);
+
+}
+
+qoshish(10, 20);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>30</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu function ikkita sonni
+            qabul qilib, ularni qo‘shadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ayirish functioni ➖
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function ayirish(a, b) {
+
+    console.log(a - b);
+
+}
+
+ayirish(20, 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ko‘paytirish functioni ✖️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function kopaytirish(a, b) {
+
+    console.log(a * b);
+
+}
+
+kopaytirish(5, 4);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>20</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bo‘lish functioni ➗
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function bolish(a, b) {
+
+    console.log(a / b);
+
+}
+
+bolish(20, 4);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            return nima? ↩️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>return</code> function ichidagi
+            natijani tashqariga qaytaradi.
+
+            <br><br>
+
+            Bu functionning natijasini
+            keyinchalik boshqa joyda
+            ishlatish imkonini beradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function qoshish(a, b) {
+
+    return a + b;
+
+}
+
+let natija = qoshish(10, 20);
+
+console.log(natija);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>30</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            console.log va return farqi ⚖️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>console.log()</code>
+            natijani Console'ga chiqaradi.
+
+            <br><br>
+
+            <code>return</code> esa natijani
+            functiondan tashqariga qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function test1() {
+
+    console.log(10);
+
+}
+
+function test2() {
+
+    return 20;
+
+}
+
+test1();
+
+let result = test2();
+
+console.log(result);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            return functionni to‘xtatadi 🛑
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function test() {
+
+    console.log("Birinchi");
+
+    return;
+
+    console.log("Ikkinchi");
+
+}
+
+test();</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Birinchi</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>return</code> bajarilgandan
+            keyingi kod ishlamaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Functiondan qiymat qaytarish 🎯
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function kvadrat(son) {
+
+    return son * son;
+
+}
+
+let result = kvadrat(5);
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>25</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Natijani boshqa functionda ishlatish 🔗
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function qoshish(a, b) {
+
+    return a + b;
+
+}
+
+function kopaytirish(a, b) {
+
+    return a * b;
+
+}
+
+let result = kopaytirish(
+    qoshish(2, 3),
+    4
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>20</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Default parameter ⚙️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar argument berilmasa,
+            parametrga oldindan qiymat
+            berishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salom(ism = "Mehmon") {
+
+    console.log("Salom, " + ism);
+
+}
+
+salom();
+
+salom("Ali");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom, Mehmon
+Salom, Ali</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function va if sharti 🔀
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function tekshir(yosh) {
+
+    if (yosh >= 18) {
+
+        return "Kirish mumkin";
+
+    } else {
+
+        return "Kirish mumkin emas";
+
+    }
+
+}
+
+console.log(tekshir(20));
+console.log(tekshir(15));</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function va loop 🔁
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function sanash() {
+
+    for (let i = 1; i <= 5; i++) {
+
+        console.log(i);
+
+    }
+
+}
+
+sanash();</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function va Array 📦
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function arrayniChiqar(arr) {
+
+    for (let item of arr) {
+
+        console.log(item);
+
+    }
+
+}
+
+arrayniChiqar([
+    "Olma",
+    "Banan",
+    "Uzum"
+]);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Olma
+Banan
+Uzum</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function nomini to‘g‘ri tanlash 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Function nomi uning nima ish
+            qilishini tushuntirib turgani yaxshi.
+
+            <br><br>
+
+            Yaxshi:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function hisobla() {}
+
+function salomBer() {}
+
+function userniTop() {}
+
+function malumotniChiqar() {}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Tushunarsiz nomlardan qoching:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function abc() {}
+
+function x() {}
+
+function test123() {}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 23 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir function — bir vazifa 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Yaxshi kod yozishda function
+            imkon qadar bitta asosiy
+            vazifani bajarishi ma'qul.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function qoshish(a, b) {
+
+    return a + b;
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu function faqat ikkita sonni
+            qo‘shish bilan shug‘ullanadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 24 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: Kalkulyator 🧮
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function qoshish(a, b) {
+    return a + b;
+}
+
+function ayirish(a, b) {
+    return a - b;
+}
+
+function kopaytirish(a, b) {
+    return a * b;
+}
+
+function bolish(a, b) {
+    return a / b;
+}
+
+console.log(qoshish(10, 5));
+console.log(ayirish(10, 5));
+console.log(kopaytirish(10, 5));
+console.log(bolish(10, 5));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15
+5
+50
+2</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 25 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: Juft yoki toq 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function juftmi(son) {
+
+    if (son % 2 === 0) {
+
+        return "Juft son";
+
+    }
+
+    return "Toq son";
+
+}
+
+console.log(juftmi(10));
+console.log(juftmi(7));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Juft son
+Toq son</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 26 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: Eng katta son 🔎
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function kattaSon(a, b) {
+
+    if (a > b) {
+
+        return a;
+
+    }
+
+    return b;
+
+}
+
+console.log(kattaSon(20, 15));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>20</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 27 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Functionni ko‘p marta chaqirish 🔄
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function salom(ism) {
+
+    console.log("Salom, " + ism);
+
+}
+
+salom("Ali");
+salom("Vali");
+salom("Hasan");
+salom("Husan");</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bir marta yozilgan functionni
+            istalgancha marta chaqirish mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 28 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function va template literal 📝
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function tanishtir(ism, yosh) {
+
+    return `Mening ismim ${ism}.
+Men ${yosh} yoshdaman.`;
+
+}
+
+console.log(
+    tanishtir("Ali", 16)
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Mening ismim Ali.
+Men 16 yoshdaman.</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 29 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Functionda bir nechta return ⚡
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function baho(score) {
+
+    if (score >= 90) {
+        return "A";
+    }
+
+    if (score >= 80) {
+        return "B";
+    }
+
+    if (score >= 70) {
+        return "C";
+    }
+
+    return "F";
+
+}
+
+console.log(baho(95));
+console.log(baho(82));
+console.log(baho(65));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>A
+B
+F</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 30 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi asosiy tushunchalar 🧠
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ⚙️ <code>function</code> —
+                function yaratadi.
+            </p>
+
+            <p>
+                📞 <code>functionName()</code> —
+                functionni chaqiradi.
+            </p>
+
+            <p>
+                📦 Parametr —
+                function qabul qiladigan
+                o‘zgaruvchi.
+            </p>
+
+            <p>
+                🎯 Argument —
+                functionga beriladigan haqiqiy qiymat.
+            </p>
+
+            <p>
+                ↩️ <code>return</code> —
+                natijani functiondan qaytaradi.
+            </p>
+
+            <p>
+                🛑 <code>return</code> bajarilgandan
+                keyingi function kodi ishlamaydi.
+            </p>
+
+            <p>
+                🔄 Functionni bir necha marta
+                chaqirish mumkin.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            <code>salom()</code> nomli function
+            yarating va Console'ga
+            <b class="text-white">"Salom, JavaScript!"</b>
+            chiqaring.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            Ism qabul qiladigan function
+            yarating.
+
+            <br>
+
+            Masalan:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>salom("Mirjamol");</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Natija:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>Salom, Mirjamol!</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            Ikkita sonni qabul qilib,
+            ularning yig‘indisini
+            <code>return</code> qiladigan
+            function yarating.
+
+            <br><br>
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            Sonning kvadratini qaytaradigan
+            function yarating.
+
+            <br><br>
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            Son juft yoki toq ekanini
+            aniqlaydigan function yarating.
+
+            <br><br>
+
+            <b class="text-white">6-vazifa:</b>
+
+            <br>
+
+            Uchta son qabul qilib,
+            eng kattasini qaytaradigan
+            function yarating.
+
+            <br><br>
+
+            <b class="text-white">7-vazifa:</b>
+
+            <br>
+
+            Ism va yosh qabul qiladigan
+            function yarating va
+            template literal yordamida
+            ma'lumotni chiqaring.
+
+            <br><br>
+
+            <b class="text-white">8-vazifa:</b>
+
+            <br>
+
+            Array qabul qilib,
+            uning elementlarini
+            Console'ga chiqaradigan
+            function yarating.
+
+            <br><br>
+
+            <b class="text-white">9-vazifa:</b>
+
+            <br>
+
+            1 dan 10 gacha sonlarni
+            function yordamida chiqaring.
+
+            <br><br>
+
+            <b class="text-white">10-vazifa:</b>
+
+            <br>
+
+            Oddiy kalkulyator uchun
+            <code>qoshish()</code>,
+            <code>ayirish()</code>,
+            <code>kopaytirish()</code> va
+            <code>bolish()</code>
+            functionlarini yarating.
+
+        </p>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ⚙️
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            25-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 25-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 24-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(24)) {
+
+        alert("Avval 24-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-24.html";
+
+        return;
+    }
+
+
+    // 25-darsni saqlash
+
+    if (!completedLessons.includes(25)) {
+
+        completedLessons.push(25);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 25-dars tugatildi! 26-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 25-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+
+</html>

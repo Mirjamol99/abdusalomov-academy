@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 13-dars | Assignment operatorlar</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            📝 13-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Assignment operatorlar
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Assignment operatorlar o‘zgaruvchiga
+            qiymat berish yoki uning mavjud
+            qiymatini o‘zgartirish uchun ishlatiladi.
+
+            <br><br>
+
+            Eng asosiy operator:
+
+            <code>=</code>
+
+            <br><br>
+
+            Bundan tashqari
+            <code>+=</code>, <code>-=</code>,
+            <code>*=</code>, <code>/=</code> va
+            <code>%=</code> operatorlari ham mavjud.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Assignment operator nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Assignment so‘zi ingliz tilida
+            <b class="text-white">"qiymat berish"</b>
+            degan ma'noni anglatadi.
+
+            <br><br>
+
+            JavaScript'da
+            <code>=</code> operatori o‘ng
+            tomondagi qiymatni chap tomondagi
+            o‘zgaruvchiga beradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 16;</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu yerda <code>16</code> qiymati
+            <code>age</code> o‘zgaruvchisiga berildi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            = Oddiy assignment
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let name = "Ali";
+
+console.log(name);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ali</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Keyinchalik o‘zgaruvchiga yangi
+            qiymat berishimiz ham mumkin:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "Ali";
+
+name = "Vali";
+
+console.log(name);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Vali</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            += Qo‘shib qiymat berish ➕
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>+=</code> operatori mavjud
+            qiymatga yangi qiymatni qo‘shadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let score = 10;
+
+score += 5;
+
+console.log(score);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu kod aslida quyidagiga teng:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>score = score + 5;</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            -= Ayirib qiymat berish ➖
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>-=</code> operatori o‘zgaruvchining
+            qiymatidan berilgan sonni ayiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let balance = 20000;
+
+balance -= 5000;
+
+console.log(balance);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15000</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>balance = balance - 5000;</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            *= Ko‘paytirib qiymat berish ✖️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let number = 5;
+
+number *= 4;
+
+console.log(number);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>20</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>number = number * 4;</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            /= Bo‘lib qiymat berish ➗
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let number = 100;
+
+number /= 4;
+
+console.log(number);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>25</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>number = number / 4;</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            %= Qoldiqni saqlash
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>%=</code> operatori bo‘lishdan
+            hosil bo‘lgan qoldiqni o‘zgaruvchiga
+            saqlaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let number = 17;
+
+number %= 5;
+
+console.log(number);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>2</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Chunki:
+
+            <br><br>
+
+            <code>17 % 5 = 2</code>
+
+        </p>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            **= Darajaga oshirib assignment
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>**=</code> operatori qiymatni
+            berilgan darajaga oshirib,
+            natijani o‘sha o‘zgaruvchiga saqlaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let number = 2;
+
+number **= 3;
+
+console.log(number);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>8</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>number = number ** 3;</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Operatorlarni taqqoslash 📚
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Operator
+                        </th>
+
+                        <th class="p-4">
+                            Ma'nosi
+                        </th>
+
+                        <th class="p-4">
+                            Misol
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Qiymat berish
+                        </td>
+
+                        <td class="p-4">
+                            <code>x = 10</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>+=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Qo‘shish
+                        </td>
+
+                        <td class="p-4">
+                            <code>x += 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>-=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Ayirish
+                        </td>
+
+                        <td class="p-4">
+                            <code>x -= 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>*=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Ko‘paytirish
+                        </td>
+
+                        <td class="p-4">
+                            <code>x *= 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>/=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Bo‘lish
+                        </td>
+
+                        <td class="p-4">
+                            <code>x /= 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>%=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Qoldiq
+                        </td>
+
+                        <td class="p-4">
+                            <code>x %= 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>**=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Daraja
+                        </td>
+
+                        <td class="p-4">
+                            <code>x **= 2</code>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            += bilan String ishlatish 🔤
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Assignment operator faqat sonlar
+            bilan emas, String bilan ham
+            ishlashi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let message = "Salom";
+
+message += " Mirjamol";
+
+console.log(message);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom Mirjamol</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>message = message + " Mirjamol";</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta assignment ketma-ket
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let number = 10;
+
+number += 5;
+number *= 2;
+number -= 10;
+number /= 5;
+
+console.log(number);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bosqichma-bosqich:
+
+            <br><br>
+
+            <code>10 + 5 = 15</code>
+
+            <br>
+
+            <code>15 × 2 = 30</code>
+
+            <br>
+
+            <code>30 - 10 = 20</code>
+
+            <br>
+
+            <code>20 ÷ 5 = 4</code>
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>4</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 💰
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Balansimiz <code>50000</code> so‘m.
+            Unga pul qo‘shamiz va keyin xarajat
+            qilamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let balance = 50000;
+
+balance += 30000;
+
+console.log(`Balans: ${balance} so'm`);
+
+balance -= 15000;
+
+console.log(`Balans: ${balance} so'm`);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Balans: 80000 so'm
+Balans: 65000 so'm</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Assignment va const ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>const</code> bilan yaratilgan
+            o‘zgaruvchiga keyinchalik yangi
+            qiymat berib bo‘lmaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const age = 16;
+
+age = 17;</code></pre>
+
+        </div>
+
+        <p class="text-red-400 mt-5">
+
+            ❌ Bu xatolik beradi.
+
+        </p>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Chunki <code>const</code> qiymatini
+            qayta assignment qilish mumkin emas.
+
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            let bilan assignment
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>let</code> bilan yaratilgan
+            o‘zgaruvchining qiymatini o‘zgartirish
+            mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 16;
+
+age = 17;
+
+age += 1;
+
+console.log(age);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>18</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Natijalarni avval o‘zingiz toping.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let x = 10;
+
+x += 5;
+
+console.log(x);
+
+x *= 2;
+
+console.log(x);
+
+x -= 10;
+
+console.log(x);
+
+x /= 2;
+
+console.log(x);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ <code>let balance = 10000;</code>
+            yarating.
+
+            <br><br>
+
+            2️⃣ <code>+=</code> yordamida
+            5000 qo‘shing.
+
+            <br><br>
+
+            3️⃣ <code>-=</code> yordamida
+            2000 ayiring.
+
+            <br><br>
+
+            4️⃣ <code>*=</code> yordamida
+            2 ga ko‘paytiring.
+
+            <br><br>
+
+            5️⃣ <code>/=</code> yordamida
+            2 ga bo‘ling.
+
+            <br><br>
+
+            6️⃣ <code>%=</code> yordamida
+            3 ga bo‘lgandagi qoldiqni saqlang.
+
+            <br><br>
+
+            7️⃣ <code>**=</code> yordamida
+            biror sonni 2-darajaga oshiring.
+
+            <br><br>
+
+            8️⃣ String bilan
+            <code>+=</code> operatoridan
+            foydalanib, to‘liq gap yarating.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                📝 <code>=</code> —
+                qiymat beradi.
+            </p>
+
+            <p>
+                ➕ <code>+=</code> —
+                qo‘shadi.
+            </p>
+
+            <p>
+                ➖ <code>-=</code> —
+                ayiradi.
+            </p>
+
+            <p>
+                ✖️ <code>*=</code> —
+                ko‘paytiradi.
+            </p>
+
+            <p>
+                ➗ <code>/=</code> —
+                bo‘ladi.
+            </p>
+
+            <p>
+                🔢 <code>%=</code> —
+                qoldiqni saqlaydi.
+            </p>
+
+            <p>
+                🔥 <code>**=</code> —
+                darajaga oshiradi.
+            </p>
+
+            <p>
+                ⚠️ <code>const</code> bilan
+                yaratilgan o‘zgaruvchiga
+                qayta qiymat berib bo‘lmaydi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            📝
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            13-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 13-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 12-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(12)) {
+
+        alert("Avval 12-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-12.html";
+
+        return;
+    }
+
+
+    // 13-darsni saqlash
+
+    if (!completedLessons.includes(13)) {
+
+        completedLessons.push(13);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 13-dars tugatildi! 14-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 13-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

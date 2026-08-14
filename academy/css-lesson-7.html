@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 7-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="css-course.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-blue-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- MAIN -->
+
+<main class="max-w-5xl mx-auto
+            px-6 py-12">
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            7-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+            CSS Display 🧩
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5
+                  leading-8">
+
+            CSS'da elementlarning sahifada qanday
+            joylashishini boshqarish uchun
+            <b>display</b> property ishlatiladi.
+
+        </p>
+
+    </div>
+
+         <!-- 1. DISPLAY NIMA? -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+            <i class="fa-solid fa-layer-group"></i>
+        </div>
+
+        <h2 class="lesson-title">
+            1. `display` nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `display` HTML elementining sahifada
+            qanday ko'rinishda joylashishini belgilaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    display: block;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            📌 Eng ko'p ishlatiladigan `display`
+            qiymatlari:
+
+            <br><br>
+
+            `block`
+
+            <br>
+
+            `inline`
+
+            <br>
+
+            `inline-block`
+
+            <br>
+
+            `none`
+
+        </div>
+
+    </section>
+
+         <!-- 2. BLOCK -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            2. `display: block`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `block` element yangi qatordan boshlanadi
+            va mavjud kenglikni egallashga harakat qiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    display: block;
+}</code></pre>
+
+        </div>
+
+        <div class="display-demo">
+
+            <div class="block-item">
+                BLOCK 1
+            </div>
+
+            <div class="block-item">
+                BLOCK 2
+            </div>
+
+            <div class="block-item">
+                BLOCK 3
+            </div>
+
+        </div>
+
+        <div class="info-box">
+
+            💡 `div`, `p`, `h1`, `section`
+            kabi ko'plab elementlar odatda
+            block sifatida ishlaydi.
+
+        </div>
+
+    </section>
+
+         <!-- 3. INLINE -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            3. `display: inline`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `inline` element yangi qatorga tushmaydi.
+            U kerakli joyni egallaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.text {
+    display: inline;
+}</code></pre>
+
+        </div>
+
+        <div class="display-demo">
+
+            <span class="inline-item">
+                INLINE 1
+            </span>
+
+            <span class="inline-item">
+                INLINE 2
+            </span>
+
+            <span class="inline-item">
+                INLINE 3
+            </span>
+
+        </div>
+
+        <div class="info-box">
+
+            📌 `span` elementi odatda
+            inline sifatida ishlaydi.
+
+        </div>
+
+    </section>
+
+         <!-- 4. INLINE-BLOCK -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            4. `display: inline-block`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `inline-block` inline kabi bir qatorda
+            turadi, lekin unga width va height
+            berish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+}</code></pre>
+
+        </div>
+
+        <div class="display-demo">
+
+            <div class="inline-block-item">
+                BOX 1
+            </div>
+
+            <div class="inline-block-item">
+                BOX 2
+            </div>
+
+            <div class="inline-block-item">
+                BOX 3
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 5. NONE -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            5. `display: none`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `display: none` elementni sahifadan
+            butunlay olib tashlaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    display: none;
+}</code></pre>
+
+        </div>
+
+        <div class="none-demo">
+
+            <div class="visible-box">
+                Men ko'rinaman 👀
+            </div>
+
+            <div class="hidden-box">
+                Men ko'rinmayman ❌
+            </div>
+
+        </div>
+
+        <div class="info-box">
+
+            ⚠️ `display: none` berilgan element
+            sahifada joy ham egallamaydi.
+
+        </div>
+
+    </section>
+
+         <!-- 6. VISIBILITY -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            6. `visibility: hidden`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `visibility: hidden` elementni yashiradi,
+            lekin uning joyi saqlanib qoladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    visibility: hidden;
+}</code></pre>
+
+        </div>
+
+        <div class="visibility-demo">
+
+            <div>
+                BOX 1
+            </div>
+
+            <div class="invisible-box">
+                BOX 2
+            </div>
+
+            <div>
+                BOX 3
+            </div>
+
+        </div>
+
+        <div class="info-box">
+
+            🔥 Farq:
+
+            <br><br>
+
+            `display: none` → joy ham yo'qoladi.
+
+            <br>
+
+            `visibility: hidden` → element yashirinadi,
+            lekin joyi qoladi.
+
+        </div>
+
+    </section>
+
+         <!-- 7. AMALIY LOYIHA -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            7. Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Endi `inline-block` yordamida
+            kichik kurs kartalarini yaratamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>&lt;div class="course-card"&gt;
+    HTML
+&lt;/div&gt;
+
+&lt;div class="course-card"&gt;
+    CSS
+&lt;/div&gt;
+
+&lt;div class="course-card"&gt;
+    JavaScript
+&lt;/div&gt;</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>.course-card {
+    display: inline-block;
+    width: 200px;
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+}</code></pre>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="project-area">
+
+            <div class="course-card html-card">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML</span>
+            </div>
+
+            <div class="course-card css-card">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
+            </div>
+
+            <div class="course-card js-card">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- MINI TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+            MINI TEST 🧠
+        </span>
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold
+                   mt-4">
+
+            Elementni sahifadan butunlay
+            olib tashlash uchun qaysi
+            qiymat ishlatiladi?
+
+        </h2>
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) display: block
+
+            </button>
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                B) display: none
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) display: inline
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) display: flex
+
+            </button>
+
+        </div>
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+        </p>
+
+    </section>
+
+         <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8
+                    text-center">
+
+        <div class="text-5xl mb-5">
+            🎉
+        </div>
+
+        <h2 class="text-3xl
+                   md:text-4xl
+                   font-extrabold">
+
+            7-darsni tugatdingizmi?
+
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 8-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- COMPLETE BUTTON -->
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full
+                   bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5
+                   rounded-2xl
+                   font-bold
+                   text-lg
+                   transition">
+
+            7-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8
+               mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- CSS -->
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+
+.lesson-number {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(59,130,246,.1);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    color: #60a5fa;
+
+    font-weight: 700;
+
+}
+
+
+.lesson-box {
+
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+}
+
+
+.lesson-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.lesson-title {
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+
+.code-box {
+
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+
+}
+
+
+.code-box pre {
+
+    color: #4ade80;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+
+}
+
+
+.info-box {
+
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: rgba(59,130,246,.08);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    border-radius: 16px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+
+}
+
+
+/* DISPLAY DEMO */
+
+.display-demo {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+
+}
+
+
+.block-item {
+
+    display: block;
+
+    padding: 18px;
+
+    margin: 8px 0;
+
+    background: #2563eb;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+.inline-item {
+
+    display: inline;
+
+    padding: 10px;
+
+    background: #7c3aed;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+}
+
+
+.inline-block-item {
+
+    display: inline-block;
+
+    width: 140px;
+
+    height: 100px;
+
+    margin: 5px;
+
+    padding: 30px 10px;
+
+    background: #0891b2;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+/* NONE */
+
+.none-demo {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+
+}
+
+
+.visible-box,
+.hidden-box {
+
+    padding: 20px;
+
+    margin: 10px 0;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+.visible-box {
+
+    background: #16a34a;
+
+}
+
+
+.hidden-box {
+
+    display: none;
+
+    background: #dc2626;
+
+}
+
+
+/* VISIBILITY */
+
+.visibility-demo {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+
+}
+
+
+.visibility-demo div {
+
+    padding: 20px;
+
+    margin: 10px 0;
+
+    background: #2563eb;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+.invisible-box {
+
+    visibility: hidden;
+
+}
+
+
+/* PROJECT */
+
+.project-area {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: #020617;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+}
+
+
+.course-card {
+
+    display: inline-block;
+
+    width: 200px;
+
+    max-width: 100%;
+
+    padding: 30px 20px;
+
+    margin: 10px;
+
+    border-radius: 20px;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    transition: .3s;
+
+}
+
+
+.course-card i {
+
+    display: block;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.course-card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+
+.html-card {
+
+    background: rgba(249,115,22,.15);
+
+    border: 1px solid #f97316;
+
+    color: #fb923c;
+
+}
+
+
+.css-card {
+
+    background: rgba(59,130,246,.15);
+
+    border: 1px solid #3b82f6;
+
+    color: #60a5fa;
+
+}
+
+
+.js-card {
+
+    background: rgba(234,179,8,.15);
+
+    border: 1px solid #eab308;
+
+    color: #facc15;
+
+}
+
+
+/* ANSWERS */
+
+.answer-btn {
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+
+}
+
+
+.answer-btn:hover {
+
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+
+}
+
+
+@media (max-width: 640px) {
+
+    .lesson-box {
+
+        padding: 20px;
+
+    }
+
+    .inline-block-item {
+
+        width: 100%;
+
+        margin: 6px 0;
+
+    }
+
+    .course-card {
+
+        width: 100%;
+
+        margin: 8px 0;
+
+    }
+
+}
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById(
+            "answerResult"
+        );
+
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! display: none elementni sahifadan olib tashlaydi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. display: none javobini tanlang.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 7
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "cssCompletedLessons"
+            )
+        ) || [];
+
+
+    // 6-dars tugaganini tekshiramiz
+
+    if (!completedLessons.includes(6)) {
+
+        alert(
+            "Avval 6-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-6.html";
+
+        return;
+
+    }
+
+
+    // 7-darsni saqlaymiz
+
+    if (!completedLessons.includes(7)) {
+
+        completedLessons.push(7);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 7-dars tugatildi! 8-dars ochildi 🔓";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.innerHTML =
+        "✅ 7-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(
+        function() {
+
+            window.location.href =
+                "css-course.html";
+
+        },
+        1500
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

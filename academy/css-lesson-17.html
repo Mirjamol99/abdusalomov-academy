@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 17-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50 bg-slate-950/90
+               backdrop-blur-xl border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-4
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">Abdusalomov</span>
+            Academy
+
+        </a>
+
+        <a href="css-course.html"
+           class="text-slate-400 hover:text-blue-400
+                  flex items-center gap-2">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+            <i class="fa-brands fa-css3-alt"></i>
+            17-DARS
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            CSS Flexbox 📦
+
+        </h1>
+
+        <p class="text-slate-400 text-lg md:text-xl
+                  mt-5 leading-8">
+
+            Elementlarni bir qator yoki ustun bo'yicha
+            tartibli joylashtirish uchun Flexbox'dan
+            foydalanishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+            <i class="fa-solid fa-grip"></i>
+        </div>
+
+        <h2 class="lesson-title">
+            1. Flexbox nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Flexbox — elementlarni bir o'lchamli
+            tartibda joylashtirish uchun ishlatiladigan
+            CSS layout tizimi.
+
+            <br><br>
+
+            Flexbox bilan elementlarni gorizontal yoki
+            vertikal joylashtirish juda oson.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            2. `display: flex`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Flexbox ishlashi uchun parent elementga
+            `display: flex` beramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+}</code></pre>
+
+        </div>
+
+        <div class="flex-demo">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            3. `justify-content`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `justify-content` elementlarni asosiy
+            yo'nalish bo'yicha joylashtiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+    justify-content: center;
+}</code></pre>
+
+        </div>
+
+        <div class="justify-demo">
+
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+
+        </div>
+
+        <div class="info-box">
+
+            Asosiy qiymatlar:
+
+            <br><br>
+
+            `flex-start` → boshiga
+
+            <br>
+
+            `center` → markazga
+
+            <br>
+
+            `flex-end` → oxiriga
+
+            <br>
+
+            `space-between` → orasini teng ochadi
+
+            <br>
+
+            `space-around` → atrofini teng ochadi
+
+            <br>
+
+            `space-evenly` → bo'sh joylarni teng taqsimlaydi
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            4. `align-items`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `align-items` elementlarni ikkinchi
+            yo'nalish bo'yicha joylashtiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+    align-items: center;
+}</code></pre>
+
+        </div>
+
+        <div class="align-demo">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            5. `gap`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Elementlar orasidagi masofani
+            `gap` orqali belgilaymiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+    gap: 20px;
+}</code></pre>
+
+        </div>
+
+        <div class="gap-demo">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            6. `flex-direction`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Elementlarning yo'nalishini
+            `flex-direction` bilan o'zgartiramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+    flex-direction: column;
+}</code></pre>
+
+        </div>
+
+        <div class="direction-demo">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+        </div>
+
+        <div class="info-box">
+
+            `row` → gorizontal
+
+            <br>
+
+            `column` → vertikal
+
+            <br>
+
+            `row-reverse` → teskari gorizontal
+
+            <br>
+
+            `column-reverse` → teskari vertikal
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            7. `flex-wrap`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Elementlar sig'may qolganda yangi qatorga
+            o'tishi uchun `flex-wrap` ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+    flex-wrap: wrap;
+}</code></pre>
+
+        </div>
+
+        <div class="wrap-demo">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            8. `flex: 1`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `flex: 1` elementlarga mavjud bo'sh joyni
+            teng taqsimlashga yordam beradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.item {
+    flex: 1;
+}</code></pre>
+
+        </div>
+
+        <div class="flex-one-demo">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            9. Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Flexbox yordamida zamonaviy navigation
+            va kartalar qatorini yaratamiz.
+
+        </p>
+
+        <div class="project-card">
+
+            <div class="project-header">
+
+                <div class="project-logo">
+                    A
+                </div>
+
+                <div>
+                    <h3>
+                        Abdusalomov Academy
+                    </h3>
+
+                    <span>
+                        Frontend Course
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="project-links">
+
+                <a href="#">
+                    Bosh sahifa
+                </a>
+
+                <a href="#">
+                    Kurslar
+                </a>
+
+                <a href="#">
+                    Bog'lanish
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+            MINI TEST 🧠
+        </span>
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-4">
+
+            Flexbox'ni ishga tushirish uchun
+            qaysi kod ishlatiladi?
+
+        </h2>
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) position: flex
+
+            </button>
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                B) display: flex
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) flex: display
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) display: box
+
+            </button>
+
+        </div>
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+        </p>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl p-8 text-center">
+
+        <div class="text-5xl mb-5">
+            🎉
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            17-darsni tugatdingizmi?
+
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 18-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5 rounded-2xl
+                   font-bold text-lg
+                   transition">
+
+            17-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+            © 2026 Abdusalomov Academy
+        </p>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+.lesson-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(59,130,246,.1);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    color: #60a5fa;
+
+    font-weight: 700;
+}
+
+.lesson-box {
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+}
+
+.lesson-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.lesson-title {
+    font-size: 27px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.code-box {
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+}
+
+.code-box pre {
+    color: #4ade80;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+}
+
+.info-box {
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: rgba(59,130,246,.08);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    border-radius: 16px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+}
+
+
+/* FLEX DEMO */
+
+.flex-demo,
+.justify-demo,
+.gap-demo,
+.flex-one-demo {
+    margin-top: 30px;
+
+    display: flex;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+}
+
+.flex-demo div,
+.justify-demo div,
+.gap-demo div,
+.flex-one-demo div {
+    padding: 25px;
+
+    background: #2563eb;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-weight: 900;
+}
+
+
+/* JUSTIFY */
+
+.justify-demo {
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* ALIGN */
+
+.align-demo {
+    margin-top: 30px;
+
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    background: #020617;
+
+    border-radius: 18px;
+}
+
+.align-demo div {
+    padding: 25px 35px;
+
+    background: #7c3aed;
+
+    border-radius: 12px;
+
+    font-weight: 900;
+}
+
+
+/* GAP */
+
+.gap-demo {
+    gap: 30px;
+}
+
+
+/* DIRECTION */
+
+.direction-demo {
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+}
+
+.direction-demo div {
+    padding: 20px;
+
+    background: #2563eb;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-weight: 900;
+}
+
+
+/* WRAP */
+
+.wrap-demo {
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+}
+
+.wrap-demo div {
+    flex: 1 1 120px;
+
+    padding: 25px;
+
+    background: #2563eb;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-weight: 900;
+}
+
+
+/* FLEX 1 */
+
+.flex-one-demo {
+    gap: 15px;
+}
+
+.flex-one-demo div {
+    flex: 1;
+}
+
+
+/* PROJECT */
+
+.project-card {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #020617;
+
+    border: 1px solid #334155;
+
+    border-radius: 20px;
+}
+
+.project-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.project-logo {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #2563eb;
+
+    font-size: 25px;
+
+    font-weight: 900;
+}
+
+.project-header h3 {
+    font-size: 20px;
+
+    font-weight: 900;
+}
+
+.project-header span {
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+.project-links {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #1e293b;
+}
+
+.project-links a {
+    color: #94a3b8;
+
+    transition: .3s;
+}
+
+.project-links a:hover {
+    color: #60a5fa;
+}
+
+
+/* TEST */
+
+.answer-btn {
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+}
+
+.answer-btn:hover {
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 640px) {
+
+    .lesson-box {
+        padding: 20px;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .flex-demo,
+    .justify-demo,
+    .gap-demo,
+    .flex-one-demo {
+        gap: 10px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById("answerResult");
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! Flexbox display: flex orqali ishga tushiriladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. To'g'ri javob: display: flex.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 17
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("cssCompletedLessons")
+        ) || [];
+
+
+    // 16-dars tekshiriladi
+
+    if (!completedLessons.includes(16)) {
+
+        alert(
+            "Avval 16-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-16.html";
+
+        return;
+    }
+
+
+    // 17-darsni saqlash
+
+    if (!completedLessons.includes(17)) {
+
+        completedLessons.push(17);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 17-dars tugatildi! 18-dars ochildi 🔓";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.innerHTML =
+        "✅ 17-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "css-course.html";
+
+    }, 1500);
+
+}
+
+</script>
+
+</body>
+</html>

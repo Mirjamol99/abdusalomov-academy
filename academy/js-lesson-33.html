@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 33-dars | shift va unshift</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ↔️ 33-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            shift va unshift
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            32-darsda <code>push()</code> va
+            <code>pop()</code> yordamida
+            Array'ning oxiri bilan ishlashni
+            o‘rgandik.
+
+            <br><br>
+
+            Endi Array'ning <b>bosh qismi</b> bilan
+            ishlashni o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ↔️ shift va unshift nima?
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+            <div class="method-card">
+
+                <h3 class="text-2xl font-bold
+                           text-red-400">
+
+                    shift()
+
+                </h3>
+
+                <p class="text-slate-400 mt-4 leading-7">
+
+                    Array'ning <b>boshidagi</b>
+                    elementni o‘chiradi.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl font-bold
+                           text-green-400">
+
+                    unshift()
+
+                </h3>
+
+                <p class="text-slate-400 mt-4 leading-7">
+
+                    Array'ning <b>boshiga</b>
+                    yangi element qo‘shadi.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="info mt-6">
+
+            <b>push()</b> → oxiriga qo‘shadi
+
+            <br><br>
+
+            <b>pop()</b> → oxiridan o‘chiradi
+
+            <br><br>
+
+            <b>unshift()</b> → boshiga qo‘shadi
+
+            <br><br>
+
+            <b>shift()</b> → boshidan o‘chiradi
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➖ shift() nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>shift()</code> Array'dagi
+            <b>birinchi elementni o‘chiradi.</b>
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+mevalar.shift();
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔍 shift() qanday ishlaydi?
+        </h2>
+
+
+        <div class="method-card">
+
+            <p class="text-slate-400">
+                Dastlab:
+            </p>
+
+            <p class="text-xl mt-3">
+                ["Olma", "Banan", "Uzum"]
+            </p>
+
+
+            <p class="text-red-400
+                      text-3xl
+                      my-5">
+
+                ↓ shift()
+
+            </p>
+
+
+            <p class="text-slate-400">
+                Keyin:
+            </p>
+
+            <p class="text-xl mt-3">
+                ["Banan", "Uzum"]
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎁 shift() nima qaytaradi?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>shift()</code> o‘chirilgan
+            elementni qaytaradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+let deleted = mevalar.shift();
+
+console.log(deleted);
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>Olma
+
+[
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📏 shift() va length
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40
+];
+
+console.log(numbers.length);
+
+numbers.shift();
+
+console.log(numbers.length);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>4
+3</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Birinchi element o‘chirilgani uchun
+            Array uzunligi <b>1 taga kamaydi.</b>
+
+        </p>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ unshift() nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>unshift()</code> Array'ning
+            <b>boshiga yangi element qo‘shadi.</b>
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Banan",
+    "Uzum"
+];
+
+mevalar.unshift("Olma");
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔍 unshift() qanday ishlaydi?
+        </h2>
+
+
+        <div class="method-card">
+
+            <p class="text-slate-400">
+                Dastlab:
+            </p>
+
+            <p class="text-xl mt-3">
+                ["Banan", "Uzum"]
+            </p>
+
+
+            <p class="text-green-400
+                      text-3xl
+                      my-5">
+
+                ↓ unshift("Olma")
+
+            </p>
+
+
+            <p class="text-slate-400">
+                Keyin:
+            </p>
+
+            <p class="text-xl mt-3">
+                ["Olma", "Banan", "Uzum"]
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎯 unshift() nima qaytaradi?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>unshift()</code> qo‘shilgan
+            elementni emas, <b>yangi Array
+            uzunligini</b> qaytaradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Banan",
+    "Uzum"
+];
+
+let result =
+    mevalar.unshift("Olma");
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>3</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ Bir nechta element qo‘shish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>unshift()</code> orqali bir
+            vaqtning o‘zida bir nechta element
+            qo‘shish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    30,
+    40
+];
+
+numbers.unshift(
+    10,
+    20
+);
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    10,
+    20,
+    30,
+    40
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔄 shift va unshift birga
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    20,
+    30
+];
+
+numbers.unshift(10);
+
+console.log(numbers);
+
+numbers.shift();
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    10,
+    20,
+    30
+]
+
+[
+    20,
+    30
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 push/pop va shift/unshift
+        </h2>
+
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b
+                               border-slate-700">
+
+                        <th class="p-4">
+                            Metod
+                        </th>
+
+                        <th class="p-4">
+                            Vazifasi
+                        </th>
+
+                        <th class="p-4">
+                            Qismi
+                        </th>
+
+                        <th class="p-4">
+                            Qaytaradi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr class="border-b
+                               border-slate-800">
+
+                        <td class="p-4
+                                   text-green-400">
+                            push()
+                        </td>
+
+                        <td class="p-4">
+                            Qo‘shadi
+                        </td>
+
+                        <td class="p-4">
+                            Oxiri
+                        </td>
+
+                        <td class="p-4">
+                            length
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="border-b
+                               border-slate-800">
+
+                        <td class="p-4
+                                   text-red-400">
+                            pop()
+                        </td>
+
+                        <td class="p-4">
+                            O‘chiradi
+                        </td>
+
+                        <td class="p-4">
+                            Oxiri
+                        </td>
+
+                        <td class="p-4">
+                            O‘chirilgan element
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="border-b
+                               border-slate-800">
+
+                        <td class="p-4
+                                   text-green-400">
+                            unshift()
+                        </td>
+
+                        <td class="p-4">
+                            Qo‘shadi
+                        </td>
+
+                        <td class="p-4">
+                            Boshi
+                        </td>
+
+                        <td class="p-4">
+                            length
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="p-4
+                                   text-red-400">
+                            shift()
+                        </td>
+
+                        <td class="p-4">
+                            O‘chiradi
+                        </td>
+
+                        <td class="p-4">
+                            Boshi
+                        </td>
+
+                        <td class="p-4">
+                            O‘chirilgan element
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Real loyiha — navbat
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Tasavvur qiling, bizda mijozlar
+            navbati bor.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let queue = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+let firstPerson = queue.shift();
+
+console.log(
+    "Navbatdan chiqdi:",
+    firstPerson
+);
+
+console.log(
+    "Qolganlar:",
+    queue
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>Navbatdan chiqdi: Ali
+
+Qolganlar:
+[
+    "Vali",
+    "Hasan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🚶 Navbatga yangi odam qo‘shish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let queue = [
+    "Vali",
+    "Hasan"
+];
+
+queue.unshift("Ali");
+
+console.log(queue);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Ali",
+    "Vali",
+    "Hasan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛍️ Do‘kon misoli
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Noutbuk",
+    "Telefon"
+];
+
+products.unshift("Kompyuter");
+
+console.log(products);
+
+products.shift();
+
+console.log(products);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Kompyuter",
+    "Noutbuk",
+    "Telefon"
+]
+
+[
+    "Noutbuk",
+    "Telefon"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ Bo‘sh Array bilan shift()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Bo‘sh Array'da birinchi element
+            bo‘lmagani uchun <code>shift()</code>
+            <code>undefined</code> qaytaradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [];
+
+let result = numbers.shift();
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>undefined</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📏 Bo‘sh Array va unshift()
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [];
+
+let result =
+    numbers.unshift(100);
+
+console.log(numbers);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[100]
+
+1</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔁 Bir nechta shift()
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40
+];
+
+numbers.shift();
+
+numbers.shift();
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    30,
+    40
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔥 To‘rtta metodni birga ishlatish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Banan",
+    "Uzum"
+];
+
+fruits.push("Anor");
+
+fruits.unshift("Olma");
+
+fruits.pop();
+
+fruits.shift();
+
+console.log(fruits);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Bu yerda barcha to‘rtta Array
+            metodidan foydalandik.
+
+        </p>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 Yodlab olishning oson usuli
+        </h2>
+
+
+        <div class="info text-lg leading-9">
+
+            <p>
+                <b>UNSHIFT</b> →
+                <span class="text-green-400">
+                    boshiga qo‘shadi
+                </span>
+            </p>
+
+            <p>
+                <b>SHIFT</b> →
+                <span class="text-red-400">
+                    boshidan o‘chiradi
+                </span>
+            </p>
+
+            <hr class="border-slate-700 my-5">
+
+            <p>
+                <b>PUSH</b> →
+                <span class="text-green-400">
+                    oxiriga qo‘shadi
+                </span>
+            </p>
+
+            <p>
+                <b>POP</b> →
+                <span class="text-red-400">
+                    oxiridan o‘chiradi
+                </span>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+
+        <div class="space-y-6 text-slate-400 leading-8">
+
+            <p>
+                <b class="text-white">
+                    1-vazifa:
+                </b>
+
+                <br>
+
+                5 ta ismli Array yarating.
+                <code>shift()</code> bilan
+                birinchi ismni o‘chiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    2-vazifa:
+                </b>
+
+                <br>
+
+                Array boshiga yangi ismni
+                <code>unshift()</code> bilan qo‘shing.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    3-vazifa:
+                </b>
+
+                <br>
+
+                <code>shift()</code> orqali
+                o‘chirilgan ismni alohida
+                o‘zgaruvchiga saqlang.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    4-vazifa:
+                </b>
+
+                <br>
+
+                <code>unshift()</code> bilan
+                bir vaqtning o‘zida 3 ta son
+                qo‘shing.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    5-vazifa:
+                </b>
+
+                <br>
+
+                Quyidagi navbatdan birinchi
+                odamni chiqaring:
+
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let queue = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    6-vazifa:
+                </b>
+
+                <br>
+
+                Navbat boshiga
+                <b>"Sardor"</b>ni qo‘shing.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    7-vazifa:
+                </b>
+
+                <br>
+
+                <code>push()</code>,
+                <code>pop()</code>,
+                <code>shift()</code> va
+                <code>unshift()</code>ni
+                bitta Array'da ishlatib ko‘ring.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ➖ <code>shift()</code> —
+                Array boshidagi elementni o‘chiradi.
+            </p>
+
+
+            <p>
+                ➕ <code>unshift()</code> —
+                Array boshiga element qo‘shadi.
+            </p>
+
+
+            <p>
+                🎁 <code>shift()</code> —
+                o‘chirilgan elementni qaytaradi.
+            </p>
+
+
+            <p>
+                📏 <code>unshift()</code> —
+                yangi Array uzunligini qaytaradi.
+            </p>
+
+
+            <p>
+                🔄 <code>shift()</code> va
+                <code>unshift()</code>
+                Array'ning bosh qismi bilan ishlaydi.
+            </p>
+
+
+            <p>
+                🧠 <code>push/pop</code> —
+                <b>oxiri</b>.
+                <code>shift/unshift</code> —
+                <b>bosh qismi</b>.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ↔️
+        </div>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            33-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 33-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(32)) {
+
+        alert("Avval 32-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-32.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(33)) {
+
+        completedLessons.push(33);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 33-dars tugatildi! 34-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 33-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 6-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="css-course.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-blue-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- MAIN -->
+
+<main class="max-w-5xl mx-auto
+            px-6 py-12">
+
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            6-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+            CSS Box Model 📦
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5
+                  leading-8">
+
+            CSS'dagi eng muhim mavzulardan biri —
+            Box Model. Har bir HTML elementi
+            aslida qanday "quti" ekanligini
+            o'rganamiz.
+
+        </p>
+
+    </div>
+
+         <!-- 1. BOX MODEL -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+
+            <i class="fa-solid fa-box"></i>
+
+        </div>
+
+
+        <h2 class="lesson-title">
+
+            1. Box Model nima?
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            CSS Box Model har bir HTML elementining
+            o'lchami va atrofidagi bo'shliqlarni
+            boshqaradi.
+
+        </p>
+
+
+        <div class="box-model">
+
+            <div class="box-margin">
+
+                <span>MARGIN</span>
+
+                <div class="box-border">
+
+                    <span>BORDER</span>
+
+                    <div class="box-padding">
+
+                        <span>PADDING</span>
+
+                        <div class="box-content">
+
+                            CONTENT
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+            📦 Box Model 4 ta asosiy qismdan iborat:
+
+            <br><br>
+
+            <strong>1. Content</strong> — elementning
+            asosiy mazmuni.
+
+            <br>
+
+            <strong>2. Padding</strong> — content
+            bilan border orasidagi joy.
+
+            <br>
+
+            <strong>3. Border</strong> — element chegarasi.
+
+            <br>
+
+            <strong>4. Margin</strong> — elementning
+            tashqarisidagi bo'sh joy.
+
+        </div>
+
+    </section>
+
+         <!-- 2. WIDTH -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            2. `width`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `width` elementning kengligini
+            belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>.box {
+    width: 300px;
+}</code></pre>
+
+        </div>
+
+
+        <div class="width-demo">
+
+            width: 300px
+
+        </div>
+
+    </section>
+
+         <!-- 3. HEIGHT -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            3. `height`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `height` elementning balandligini
+            belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>.box {
+    height: 150px;
+}</code></pre>
+
+        </div>
+
+
+        <div class="height-demo">
+
+            height: 150px
+
+        </div>
+
+    </section>
+
+         <!-- 4. PADDING -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            4. `padding`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `padding` content bilan border
+            orasidagi ichki bo'shliq.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>.box {
+    padding: 30px;
+}</code></pre>
+
+        </div>
+
+
+        <div class="padding-demo">
+
+            <div>
+
+                Padding ichidagi content
+
+            </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡 Padding elementning ichki
+            bo'shlig'ini oshiradi.
+
+        </div>
+
+    </section>
+
+         <!-- 5. BORDER -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            5. `border`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `border` elementning chegarasini
+            yaratadi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>.box {
+    border: 2px solid #3b82f6;
+}</code></pre>
+
+        </div>
+
+
+        <div class="border-demo">
+
+            Border
+
+        </div>
+
+
+        <div class="info-box">
+
+            Border yozilish tartibi:
+
+            <br><br>
+
+            `border: qalinlik turi rang;`
+
+            <br><br>
+
+            Masalan:
+
+            <br>
+
+            `border: 2px solid blue;`
+
+        </div>
+
+    </section>
+
+         <!-- 6. MARGIN -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            6. `margin`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `margin` elementning tashqarisidagi
+            bo'sh joyni belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>.box {
+    margin: 30px;
+}</code></pre>
+
+        </div>
+
+
+        <div class="margin-demo">
+
+            <div class="margin-box">
+
+                BOX
+
+            </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+            📌 `padding` → ichkaridagi bo'sh joy.
+
+            <br>
+
+            📌 `margin` → tashqaridagi bo'sh joy.
+
+        </div>
+
+    </section>
+
+         <!-- 7. MARGIN AUTO -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            7. `margin: auto`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `margin: auto` elementni gorizontal
+            markazga joylashtirishda juda foydali.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>.box {
+    width: 300px;
+    margin: auto;
+}</code></pre>
+
+        </div>
+
+
+        <div class="auto-demo">
+
+            <div>
+
+                MEN MARKAZDAMAN 🎯
+
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 8. BOX-SIZING -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            8. `box-sizing`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `box-sizing` elementning umumiy
+            o'lchami qanday hisoblanishini belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>* {
+    box-sizing: border-box;
+}</code></pre>
+
+        </div>
+
+
+        <div class="info-box">
+
+            ⭐ Eng ko'p ishlatiladigan qiymat:
+
+            <br><br>
+
+            <code class="text-blue-400">
+                box-sizing: border-box;
+            </code>
+
+            <br><br>
+
+            Bu usulda `width` va `height`
+            ichiga padding va border ham hisoblanadi.
+
+        </div>
+
+    </section>
+
+         <!-- 9. AMALIY LOYIHA -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            9. Amaliy loyiha 💻
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Endi Box Model yordamida
+            zamonaviy card yaratamiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;div class="card"&gt;
+
+    &lt;h2&gt;
+        Abdusalomov Academy
+    &lt;/h2&gt;
+
+    &lt;p&gt;
+        CSS Box Model
+    &lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>.card {
+
+    width: 100%;
+
+    padding: 30px;
+
+    margin: 20px 0;
+
+    border: 2px solid #3b82f6;
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
+
+}</code></pre>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="project-card">
+
+            <div class="project-icon">
+
+                📦
+
+            </div>
+
+
+            <h3>
+
+                Abdusalomov Academy
+
+            </h3>
+
+
+            <p>
+
+                CSS Box Model 🚀
+
+            </p>
+
+        </div>
+
+    </section>
+
+         <!-- MINI TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+
+            MINI TEST 🧠
+
+        </span>
+
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold
+                   mt-4">
+
+            Elementning ichki bo'sh joyini
+            qaysi property belgilaydi?
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) margin
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B) border
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                C)  padding 
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) width
+
+            </button>
+
+        </div>
+
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+
+        </p>
+
+    </section>
+
+         <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8
+                    text-center">
+
+        <div class="text-5xl mb-5">
+
+            🎉
+
+        </div>
+
+
+        <h2 class="text-3xl
+                   md:text-4xl
+                   font-extrabold">
+
+            6-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 7-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- COMPLETE BUTTON -->
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full
+                   bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5
+                   rounded-2xl
+                   font-bold
+                   text-lg
+                   transition">
+
+            6-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+        </p>
+
+    </section>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8
+               mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- CSS -->
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+
+.lesson-number {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(59, 130, 246, .1);
+
+    border: 1px solid rgba(59, 130, 246, .2);
+
+    color: #60a5fa;
+
+    font-weight: 700;
+
+}
+
+
+.lesson-box {
+
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+}
+
+
+.lesson-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.lesson-title {
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+
+.code-box {
+
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+
+}
+
+
+.code-box pre {
+
+    color: #4ade80;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+
+}
+
+
+.info-box {
+
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: rgba(59,130,246,.08);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    border-radius: 16px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+
+}
+
+
+/* BOX MODEL */
+
+.box-model {
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #020617;
+
+    border-radius: 20px;
+
+    overflow: auto;
+
+}
+
+
+.box-margin {
+
+    min-width: 420px;
+
+    padding: 35px;
+
+    background: #451a03;
+
+    border: 3px dashed #f59e0b;
+
+    text-align: center;
+
+    color: #fbbf24;
+
+    font-weight: 800;
+
+}
+
+
+.box-border {
+
+    padding: 28px;
+
+    background: #172554;
+
+    border: 5px solid #3b82f6;
+
+    color: #60a5fa;
+
+}
+
+
+.box-padding {
+
+    padding: 25px;
+
+    background: #14532d;
+
+    border: 3px dashed #22c55e;
+
+    color: #4ade80;
+
+}
+
+
+.box-content {
+
+    padding: 30px;
+
+    background: #7f1d1d;
+
+    color: white;
+
+    border-radius: 10px;
+
+}
+
+
+/* WIDTH */
+
+.width-demo {
+
+    width: 300px;
+
+    max-width: 100%;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: #2563eb;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+/* HEIGHT */
+
+.height-demo {
+
+    height: 150px;
+
+    margin-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #7c3aed;
+
+    border-radius: 16px;
+
+    font-weight: 800;
+
+}
+
+
+/* PADDING */
+
+.padding-demo {
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    background: #1e293b;
+
+    border-radius: 18px;
+
+}
+
+
+.padding-demo div {
+
+    padding: 30px;
+
+    background: #2563eb;
+
+    border: 2px solid #60a5fa;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-weight: 700;
+
+}
+
+
+/* BORDER */
+
+.border-demo {
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    border: 3px solid #3b82f6;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    color: #60a5fa;
+
+    font-weight: 800;
+
+}
+
+
+/* MARGIN */
+
+.margin-demo {
+
+    margin-top: 25px;
+
+    padding: 10px;
+
+    background: #334155;
+
+    border-radius: 18px;
+
+}
+
+
+.margin-box {
+
+    margin: 40px;
+
+    padding: 30px;
+
+    background: #2563eb;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+/* AUTO */
+
+.auto-demo {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+
+}
+
+
+.auto-demo div {
+
+    width: 300px;
+
+    max-width: 100%;
+
+    margin: auto;
+
+    padding: 25px;
+
+    background: #2563eb;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+/* PROJECT */
+
+.project-card {
+
+    width: 100%;
+
+    padding: 30px;
+
+    margin-top: 25px;
+
+    border: 2px solid #3b82f6;
+
+    border-radius: 20px;
+
+    background: #020617;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+}
+
+
+.project-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.project-card h3 {
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    color: #60a5fa;
+
+}
+
+
+.project-card p {
+
+    margin-top: 10px;
+
+    color: #94a3b8;
+
+    font-size: 18px;
+
+}
+
+
+/* ANSWERS */
+
+.answer-btn {
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+
+}
+
+
+.answer-btn:hover {
+
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+
+}
+
+
+@media (max-width: 640px) {
+
+    .lesson-box {
+
+        padding: 20px;
+
+    }
+
+
+    .box-model {
+
+        padding: 15px;
+
+    }
+
+
+    .box-margin {
+
+        min-width: 330px;
+
+        padding: 25px;
+
+    }
+
+
+    .box-border {
+
+        padding: 20px;
+
+    }
+
+
+    .box-padding {
+
+        padding: 18px;
+
+    }
+
+}
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById(
+            "answerResult"
+        );
+
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! Elementning ichki bo'sh joyi padding deyiladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. Ichki bo'sh joy uchun padding ishlatiladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 6
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "cssCompletedLessons"
+            )
+        ) || [];
+
+
+    // 5-dars tugaganini tekshiramiz
+
+    if (!completedLessons.includes(5)) {
+
+        alert(
+            "Avval 5-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-5.html";
+
+        return;
+
+    }
+
+
+    // 6-darsni saqlaymiz
+
+    if (!completedLessons.includes(6)) {
+
+        completedLessons.push(6);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 6-dars tugatildi! 7-dars ochildi 🔓";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.innerHTML =
+        "✅ 6-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(
+        function() {
+
+            window.location.href =
+                "css-course.html";
+
+        },
+        1500
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

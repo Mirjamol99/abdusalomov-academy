@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 14-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90 backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-4
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">Abdusalomov</span>
+            Academy
+
+        </a>
+
+        <a href="css-course.html"
+           class="text-slate-400 hover:text-blue-400
+                  flex items-center gap-2">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+            <i class="fa-brands fa-css3-alt"></i>
+            14-DARS
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Border, Radius & Shadow 🎨
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5 leading-8">
+
+            Elementlarga chegara, yumaloq burchak
+            va soya berib, chiroyli dizayn yaratishni
+            o'rganamiz.
+
+        </p>
+
+    </div>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+            <i class="fa-regular fa-square"></i>
+        </div>
+
+        <h2 class="lesson-title">
+            1. `border`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `border` element atrofida chegara
+            yaratish uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    border: 2px solid blue;
+}</code></pre>
+
+        </div>
+
+        <div class="border-demo">
+            Border
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            2. Border turi
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Borderning turli xil ko'rinishlari mavjud.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>border: 2px solid blue;
+border: 2px dashed blue;
+border: 2px dotted blue;</code></pre>
+
+        </div>
+
+        <div class="border-types">
+
+            <div class="solid">
+                Solid
+            </div>
+
+            <div class="dashed">
+                Dashed
+            </div>
+
+            <div class="dotted">
+                Dotted
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            3. `border-width`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Border qalinligini belgilaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    border-width: 5px;
+}</code></pre>
+
+        </div>
+
+        <div class="width-demo">
+            5px Border
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            4. `border-color`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Border rangini o'zgartirish uchun
+            `border-color` ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    border-color: #3b82f6;
+}</code></pre>
+
+        </div>
+
+        <div class="color-border-demo">
+            Border Color
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            5. `border-radius`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Element burchaklarini yumaloq qilish
+            uchun `border-radius` ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    border-radius: 20px;
+}</code></pre>
+
+        </div>
+
+        <div class="radius-demo">
+            Border Radius
+        </div>
+
+        <div class="info-box">
+
+            💡 `border-radius: 50%` berilsa,
+            kvadrat elementni aylana qilish mumkin.
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            6. `border-radius: 50%`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Elementni aylana ko'rinishiga
+            keltirishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.circle {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+}</code></pre>
+
+        </div>
+
+        <div class="circle-demo">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            7. `box-shadow`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Elementga soya berish uchun
+            `box-shadow` ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, .4);
+}</code></pre>
+
+        </div>
+
+        <div class="shadow-demo">
+            Box Shadow
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            8. Shadow qiymatlari
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Shadow bir nechta qiymatdan tashkil
+            topishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>box-shadow:
+    0 10px 30px rgba(0, 0, 0, .4);</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            `0` → X yo'nalish
+
+            <br>
+
+            `10px` → Y yo'nalish
+
+            <br>
+
+            `30px` → blur
+
+            <br>
+
+            `rgba(...)` → soya rangi
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            9. `outline`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `outline` ham element atrofida
+            chiziq hosil qiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    outline: 3px solid blue;
+}</code></pre>
+
+        </div>
+
+        <div class="outline-demo">
+            Outline
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            10. Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Endi border, radius va shadow yordamida
+            zamonaviy kurs kartasi yaratamiz.
+
+        </p>
+
+        <div class="course-card">
+
+            <div class="course-icon">
+                <i class="fa-brands fa-css3-alt"></i>
+            </div>
+
+            <span>
+                CSS COURSE
+            </span>
+
+            <h3>
+                CSS Professional
+            </h3>
+
+            <p>
+                Zamonaviy CSS dizaynlarini
+                noldan o'rganing.
+            </p>
+
+            <button>
+                Boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+            MINI TEST 🧠
+        </span>
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-4">
+
+            Elementga soya berish uchun
+            qaysi CSS xususiyati ishlatiladi?
+
+        </h2>
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                A) box-shadow
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B) border-radius 
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) outline
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) border-color
+
+            </button>
+
+        </div>
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+        </p>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl p-8 text-center">
+
+        <div class="text-5xl mb-5">
+            🎉
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            14-darsni tugatdingizmi?
+
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 15-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5 rounded-2xl
+                   font-bold text-lg
+                   transition">
+
+            14-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+            © 2026 Abdusalomov Academy
+        </p>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+.lesson-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(59,130,246,.1);
+    border: 1px solid rgba(59,130,246,.2);
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+.lesson-box {
+    margin-top: 32px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 24px;
+    padding: 28px;
+}
+
+.lesson-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(59,130,246,.1);
+    color: #60a5fa;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.lesson-title {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.code-box {
+    margin-top: 24px;
+    padding: 22px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+.code-box pre {
+    color: #4ade80;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+
+/* BORDER */
+
+.border-demo,
+.width-demo,
+.color-border-demo,
+.radius-demo,
+.outline-demo {
+    margin-top: 25px;
+    padding: 35px;
+    background: #020617;
+    border-radius: 18px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.border-demo {
+    border: 2px solid #3b82f6;
+}
+
+.border-types {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.border-types div {
+    padding: 25px;
+    background: #020617;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.solid {
+    border: 3px solid #3b82f6;
+}
+
+.dashed {
+    border: 3px dashed #3b82f6;
+}
+
+.dotted {
+    border: 3px dotted #3b82f6;
+}
+
+.width-demo {
+    border: 5px solid #60a5fa;
+}
+
+.color-border-demo {
+    border: 3px solid #7c3aed;
+}
+
+.radius-demo {
+    border: 3px solid #3b82f6;
+    border-radius: 30px;
+}
+
+.circle-demo {
+    width: 120px;
+    height: 120px;
+    margin: 30px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    font-size: 40px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(37, 99, 235, .35);
+}
+
+.shadow-demo {
+    margin-top: 35px;
+    padding: 45px;
+    background: #1e293b;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 800;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, .5);
+}
+
+.outline-demo {
+    border-radius: 15px;
+    outline: 3px solid #3b82f6;
+    outline-offset: 6px;
+}
+
+
+/* COURSE CARD */
+
+.course-card {
+    max-width: 420px;
+    margin: 35px auto 0;
+
+    padding: 35px;
+
+    background: #020617;
+
+    border: 1px solid #334155;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, .4);
+
+    transition: .3s;
+}
+
+.course-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 25px 60px
+        rgba(37, 99, 235, .2);
+}
+
+.course-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    font-size: 38px;
+}
+
+.course-card span {
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.course-card h3 {
+    margin-top: 12px;
+
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.course-card p {
+    margin-top: 12px;
+
+    color: #94a3b8;
+
+    line-height: 1.7;
+}
+
+.course-card button {
+    margin-top: 25px;
+
+    padding: 13px 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.course-card button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* TEST */
+
+.answer-btn {
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+}
+
+.answer-btn:hover {
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 640px) {
+
+    .lesson-box {
+        padding: 20px;
+    }
+
+    .border-types {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById("answerResult");
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! Elementga soya berish uchun box-shadow ishlatiladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. To'g'ri javob: box-shadow.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 14
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("cssCompletedLessons")
+        ) || [];
+
+
+    // 13-dars tekshiriladi
+
+    if (!completedLessons.includes(13)) {
+
+        alert(
+            "Avval 13-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-13.html";
+
+        return;
+    }
+
+
+    // 14-darsni saqlash
+
+    if (!completedLessons.includes(14)) {
+
+        completedLessons.push(14);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 14-dars tugatildi! 15-dars ochildi 🔓";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.innerHTML =
+        "✅ 14-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "css-course.html";
+
+    }, 1500);
+
+}
+
+</script>
+
+</body>
+</html>

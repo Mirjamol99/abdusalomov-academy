@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 42-dars | some() va every()</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        ☑️ 42-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        some() va every()
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript Array'laridagi
+        <code>some()</code> va <code>every()</code>
+        metodlarini o‘rganamiz.
+
+        <br><br>
+
+        Bu metodlar Array ichidagi elementlarni
+        tekshirish uchun ishlatiladi va
+        <b>true</b> yoki <b>false</b> qaytaradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ☑️ some() nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>some()</code> Array ichida
+        berilgan shartga mos keladigan
+        <b>kamida bitta element</b> borligini
+        tekshiradi.
+
+        <br><br>
+
+        Agar hech bo‘lmaganda bitta element
+        shartni bajarsa, natija
+        <code>true</code> bo‘ladi.
+
+        <br><br>
+
+        Aks holda <code>false</code> qaytaradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [10, 20, 30, 40];
+
+let result = numbers.some(
+    number => number > 30
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Chunki Array ichida <code>30</code> dan
+        katta bo‘lgan son bor:
+
+        <br><br>
+
+        <code>40 > 30</code> → true
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 some() qanday ishlaydi?
+
+    </h2>
+
+
+    <div class="method-card">
+
+        <p class="text-yellow-400 text-xl">
+            [10, 20, 30, 40]
+        </p>
+
+        <p class="text-4xl text-center my-5">
+            ↓
+        </p>
+
+        <p class="text-slate-400">
+            Har bir element tekshiriladi
+        </p>
+
+        <p class="text-4xl text-center my-5">
+            ↓
+        </p>
+
+        <p class="text-green-400 text-3xl font-bold">
+            Bittasi mos kelsa → true
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ❌ some() false qaytarishi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [10, 20, 30];
+
+let result = numbers.some(
+    number => number > 50
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>false</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Chunki Array ichida
+        <code>50</code> dan katta
+        hech qanday son yo‘q.
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ☑️ every() nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>every()</code> Array ichidagi
+        <b>barcha elementlar</b> berilgan
+        shartni bajarayotganini tekshiradi.
+
+        <br><br>
+
+        Agar barcha elementlar shartni bajarsa,
+        <code>true</code> qaytaradi.
+
+        <br><br>
+
+        Agar hatto bitta element shartni
+        bajarmasa, <code>false</code> qaytaradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [10, 20, 30, 40];
+
+let result = numbers.every(
+    number => number > 5
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Barcha sonlar <code>5</code> dan katta:
+
+        <br><br>
+
+        10 > 5 ✅
+
+        <br>
+
+        20 > 5 ✅
+
+        <br>
+
+        30 > 5 ✅
+
+        <br>
+
+        40 > 5 ✅
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ❌ every() false qaytarishi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [10, 20, 3, 40];
+
+let result = numbers.every(
+    number => number > 5
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>false</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Chunki <code>3 > 5</code> noto‘g‘ri.
+
+        <br><br>
+
+        Bitta element shartni bajarmagani
+        uchun <code>every()</code>
+        <code>false</code> qaytaradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🆚 some() va every()
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-yellow-400">
+
+                some()
+
+            </h3>
+
+
+            <p class="text-slate-400 mt-5 leading-7">
+
+                Kamida <b>bitta</b> element
+                shartni bajarsa:
+
+            </p>
+
+
+            <p class="text-green-400
+                      text-2xl
+                      font-bold
+                      mt-5">
+
+                true
+
+            </p>
+
+        </div>
+
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-green-400">
+
+                every()
+
+            </h3>
+
+
+            <p class="text-slate-400 mt-5 leading-7">
+
+                <b>Barcha</b> elementlar
+                shartni bajarsa:
+
+            </p>
+
+
+            <p class="text-green-400
+                      text-2xl
+                      font-bold
+                      mt-5">
+
+                true
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        🧠 Yodda saqla:
+
+        <br><br>
+
+        <code>some()</code>
+        → kamida bittasi
+
+        <br><br>
+
+        <code>every()</code>
+        → hammasi
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Sonlar bilan some()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [5, 12, 18, 25];
+
+let result = numbers.some(
+    number => number % 2 === 0
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 mt-5">
+
+        Chunki Array ichida juft sonlar bor:
+
+        <code>12</code> va <code>18</code>.
+
+    </p>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Sonlar bilan every()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [2, 4, 6, 8];
+
+let result = numbers.every(
+    number => number % 2 === 0
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Barcha sonlar juft.
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👨‍🎓 Studentlar bilan some()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let students = [
+    {
+        name: "Ali",
+        age: 17
+    },
+    {
+        name: "Vali",
+        age: 20
+    },
+    {
+        name: "Hasan",
+        age: 16
+    }
+];
+
+let result = students.some(
+    student => student.age >= 18
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Ali → 17 ❌
+
+        <br>
+
+        Vali → 20 ✅
+
+        <br>
+
+        Hasan → 16 ❌
+
+        <br><br>
+
+        Kamida bitta student 18 yoshdan katta
+        bo‘lgani uchun natija <code>true</code>.
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👨‍🎓 Studentlar bilan every()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let students = [
+    {
+        name: "Ali",
+        age: 20
+    },
+    {
+        name: "Vali",
+        age: 21
+    },
+    {
+        name: "Hasan",
+        age: 19
+    }
+];
+
+let result = students.every(
+    student => student.age >= 18
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Barcha studentlar 18 yoshdan katta.
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Cart bilan some()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Masalan, savatchada
+        100 000 so‘mdan qimmat mahsulot
+        bor-yo‘qligini tekshiramiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let cart = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 120000
+    },
+
+    {
+        name: "Cola",
+        price: 15000
+    }
+
+];
+
+let result = cart.some(
+    product => product.price > 100000
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Burger narxi:
+
+        <code>120000</code>
+
+        <br><br>
+
+        Demak, 100 000 so‘mdan qimmat
+        mahsulot mavjud.
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Cart bilan every()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let cart = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 120000
+    },
+
+    {
+        name: "Cola",
+        price: 15000
+    }
+
+];
+
+let result = cart.every(
+    product => product.price > 10000
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Barcha mahsulotlar
+        10 000 so‘mdan qimmat.
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔐 Login tekshirish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>some()</code> yordamida
+        foydalanuvchilardan hech bo‘lmaganda
+        bittasi login qilganini tekshirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        isLogin: false
+    },
+
+    {
+        name: "Vali",
+        isLogin: true
+    },
+
+    {
+        name: "Hasan",
+        isLogin: false
+    }
+];
+
+let result = users.some(
+    user => user.isLogin === true
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔐 Hamma user login qilganmi?
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        isLogin: true
+    },
+
+    {
+        name: "Vali",
+        isLogin: true
+    },
+
+    {
+        name: "Hasan",
+        isLogin: true
+    }
+];
+
+let result = users.every(
+    user => user.isLogin === true
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🆚 some(), every(), filter()
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-3 gap-5">
+
+
+        <div class="method-card">
+
+            <h3 class="text-yellow-400
+                       text-xl
+                       font-bold">
+
+                some()
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+                Kamida bittasini tekshiradi.
+            </p>
+
+            <p class="text-green-400 mt-5">
+                true / false
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-green-400
+                       text-xl
+                       font-bold">
+
+                every()
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+                Hammasini tekshiradi.
+            </p>
+
+            <p class="text-green-400 mt-5">
+                true / false
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-blue-400
+                       text-xl
+                       font-bold">
+
+                filter()
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+                Mos elementlarni qaytaradi.
+            </p>
+
+            <p class="text-green-400 mt-5">
+                Array
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📚 Sintaksis
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>array.some(
+    element => shart
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>array.every(
+    element => shart
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Ikkala metod ham
+        <code>true</code> yoki
+        <code>false</code> qaytaradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Real loyiha misoli
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Masalan, internet-do‘konda
+        mahsulotlarning barchasi mavjudligini
+        tekshiramiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let products = [
+
+    {
+        name: "Pizza",
+        available: true
+    },
+
+    {
+        name: "Burger",
+        available: true
+    },
+
+    {
+        name: "Cola",
+        available: false
+    }
+
+];
+
+let allAvailable = products.every(
+    product => product.available
+);
+
+console.log(allAvailable);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>false</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Cola mavjud emas.
+
+        <br><br>
+
+        Shuning uchun barcha mahsulotlar
+        mavjud emas → <code>false</code>.
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa
+            </b>
+
+            <br>
+
+            Quyidagi Array ichida
+            10 dan katta son borligini
+            <code>some()</code> bilan tekshiring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    5, 8, 12, 3, 7
+];</code></pre>
+
+        </div>
+
+
+        <div>
+
+            Natija:
+
+            <code>true</code>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa
+            </b>
+
+            <br>
+
+            Barcha sonlar musbat ekanligini
+            <code>every()</code> yordamida tekshiring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10, 20, 30, 40
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa
+            </b>
+
+            <br>
+
+            Quyidagi studentlar orasida
+            18 yoshdan katta student borligini
+            <code>some()</code> bilan tekshiring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let students = [
+    {
+        name: "Ali",
+        age: 16
+    },
+
+    {
+        name: "Vali",
+        age: 19
+    },
+
+    {
+        name: "Hasan",
+        age: 17
+    }
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 🛒
+            </b>
+
+            <br>
+
+            Cart'dagi barcha mahsulotlar
+            10 000 so‘mdan qimmat ekanligini
+            <code>every()</code> bilan tekshiring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let cart = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 30000
+    },
+
+    {
+        name: "Cola",
+        price: 15000
+    }
+
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🔥
+            </b>
+
+            <br>
+
+            Userlardan kamida bittasi
+            login qilganligini
+            <code>some()</code> yordamida tekshiring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+
+    {
+        name: "Ali",
+        isLogin: false
+    },
+
+    {
+        name: "Vali",
+        isLogin: true
+    },
+
+    {
+        name: "Hasan",
+        isLogin: false
+    }
+
+];</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            ☑️ <code>some()</code>
+            → kamida bitta element shartni
+            bajarsa <code>true</code>.
+        </p>
+
+
+        <p>
+            ☑️ <code>every()</code>
+            → barcha elementlar shartni
+            bajarsa <code>true</code>.
+        </p>
+
+
+        <p>
+            🔍 Ikkalasi ham
+            <code>true</code> yoki
+            <code>false</code> qaytaradi.
+        </p>
+
+
+        <p>
+            🛒 Real loyihalarda mahsulot,
+            user, cart va boshqa Array'larni
+            tekshirishda juda foydali.
+        </p>
+
+
+        <p>
+            🧠 Yodda saqla:
+            <code>some()</code> → bittasi,
+            <code>every()</code> → hammasi.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        ☑️
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        42-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 42-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        41-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(41)) {
+
+        alert(
+            "Avval 41-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-41.html";
+
+        return;
+
+    }
+
+
+    /*
+        42-darsni saqlash
+    */
+
+    if (!completedLessons.includes(42)) {
+
+        completedLessons.push(42);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 42-dars tugatildi! 43-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 42-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

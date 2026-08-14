@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 13-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/90 backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto px-6 py-4
+                flex items-center justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">Abdusalomov</span>
+                Academy
+
+            </a>
+
+            <a href="css-course.html" class="text-slate-400 hover:text-blue-400
+                  flex items-center gap-2">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                CSS kursi
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+        <!-- HEADER -->
+
+        <div class="mb-10">
+
+            <span class="lesson-number">
+                <i class="fa-brands fa-css3-alt"></i>
+                13-DARS
+            </span>
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+                CSS Text & Fonts ✍️
+
+            </h1>
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5 leading-8">
+
+                Matnlarni chiroyli ko'rsatish,
+                shriftlarni o'zgartirish va
+                professional typography yaratishni
+                o'rganamiz.
+
+            </p>
+
+        </div>
+
+
+        <!-- 1 -->
+
+        <section class="lesson-box">
+
+            <div class="lesson-icon">
+                <i class="fa-solid fa-font"></i>
+            </div>
+
+            <h2 class="lesson-title">
+                1. `color`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Matn rangini o'zgartirish uchun
+                `color` ishlatiladi.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>h1 {
+    color: blue;
+}</code></pre>
+
+            </div>
+
+            <p class="demo-text color-text">
+                Bu CSS orqali rang berilgan matn.
+            </p>
+
+        </section>
+
+
+        <!-- 2 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                2. `font-size`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Matnning kattaligini belgilaydi.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>h1 {
+    font-size: 40px;
+}</code></pre>
+
+            </div>
+
+            <p class="demo-text size-text">
+                Katta matn
+            </p>
+
+        </section>
+
+
+        <!-- 3 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                3. `font-weight`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Matnning qalinligini boshqaradi.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>h1 {
+    font-weight: 700;
+}</code></pre>
+
+            </div>
+
+            <div class="weight-demo">
+
+                <p class="weight-400">
+                    font-weight: 400
+                </p>
+
+                <p class="weight-600">
+                    font-weight: 600
+                </p>
+
+                <p class="weight-800">
+                    font-weight: 800
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 4 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                4. `text-align`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Matnning gorizontal joylashuvini
+                belgilaydi.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>h1 {
+    text-align: center;
+}</code></pre>
+
+            </div>
+
+            <div class="align-demo">
+
+                <p>Chap tomonga</p>
+
+                <p>Markazga</p>
+
+                <p>O'ng tomonga</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 5 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                5. `text-decoration`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Matnga underline, overline yoki
+                boshqa bezaklar berish mumkin.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>a {
+    text-decoration: none;
+}
+
+.title {
+    text-decoration: underline;
+}</code></pre>
+
+            </div>
+
+            <div class="decoration-demo">
+
+                <p class="underline">
+                    Underline
+                </p>
+
+                <p class="line-through">
+                    Line Through
+                </p>
+
+                <p class="overline">
+                    Overline
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 6 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                6. `text-transform`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Harflarni katta yoki kichik
+                ko'rinishga o'zgartiradi.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>.title {
+    text-transform: uppercase;
+}</code></pre>
+
+            </div>
+
+            <div class="transform-demo">
+
+                <p class="uppercase">
+                    abdusalomov academy
+                </p>
+
+                <p class="lowercase">
+                    ABDUSALOMOV ACADEMY
+                </p>
+
+                <p class="capitalize">
+                    abdusalomov academy
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 7 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                7. `line-height`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Qatorlar orasidagi masofani
+                belgilaydi.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>p {
+    line-height: 1.8;
+}</code></pre>
+
+            </div>
+
+            <p class="line-demo">
+
+                CSS yordamida matnni o'qishga qulay
+                qilish mumkin. Line-height qiymatini
+                oshirish orqali qatorlar orasidagi
+                masofani kattalashtiramiz.
+
+            </p>
+
+        </section>
+
+
+        <!-- 8 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                8. `letter-spacing`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Harflar orasidagi masofani
+                boshqaradi.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>.title {
+    letter-spacing: 3px;
+}</code></pre>
+
+            </div>
+
+            <p class="spacing-demo">
+                ABDUSALOMOV ACADEMY
+            </p>
+
+        </section>
+
+
+        <!-- 9 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                9. `font-family`
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Matn uchun ishlatiladigan shriftni
+                belgilaydi.
+
+            </p>
+
+            <div class="code-box">
+
+                <pre><code>body {
+    font-family: Arial, sans-serif;
+}</code></pre>
+
+            </div>
+
+            <div class="font-demo">
+
+                <p class="arial">
+                    Arial Font
+                </p>
+
+                <p class="georgia">
+                    Georgia Font
+                </p>
+
+                <p class="monospace">
+                    Monospace Font
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 10 -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-title">
+                10. Amaliy loyiha 💻
+            </h2>
+
+            <p class="text-slate-400 leading-8">
+
+                Endi o'rgangan CSS text xususiyatlari
+                yordamida chiroyli hero section
+                yaratamiz.
+
+            </p>
+
+            <div class="hero-demo">
+
+                <span>
+                    ABDUSALOMOV ACADEMY
+                </span>
+
+                <h3>
+                    Dasturlashni
+                    <br>
+                    bugundan boshlang 🚀
+                </h3>
+
+                <p>
+                    HTML • CSS • JavaScript
+                </p>
+
+                <button>
+                    Boshlash
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TEST -->
+
+        <section class="lesson-box">
+
+            <span class="text-blue-400 font-bold">
+                MINI TEST 🧠
+            </span>
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-4">
+
+                Matnni markazga joylashtirish
+                uchun qaysi CSS xususiyat
+                ishlatiladi?
+
+            </h2>
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    A) font-size
+
+                </button>
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    B) font-weight
+
+                </button>
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    C) text-align
+
+                </button>
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) letter-spacing
+
+                </button>
+
+            </div>
+
+            <p id="answerResult" class="mt-6 font-bold text-lg">
+            </p>
+
+        </section>
+
+
+        <!-- COMPLETE -->
+
+        <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl p-8 text-center">
+
+            <div class="text-5xl mb-5">
+                🎉
+            </div>
+
+            <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+                13-darsni tugatdingizmi?
+
+            </h2>
+
+            <p class="text-slate-400 mt-4">
+
+                Tugatish tugmasini bosgandan
+                keyin 14-dars ochiladi.
+
+            </p>
+
+        </section>
+
+
+        <section class="mt-8">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5 rounded-2xl
+                   font-bold text-lg
+                   transition">
+
+                13-darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold mt-5">
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="border-t border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <p class="text-slate-500">
+                © 2026 Abdusalomov Academy
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .lesson-number {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(59, 130, 246, .1);
+            border: 1px solid rgba(59, 130, 246, .2);
+            color: #60a5fa;
+            font-weight: 700;
+        }
+
+        .lesson-box {
+            margin-top: 32px;
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 28px;
+        }
+
+        .lesson-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: rgba(59, 130, 246, .1);
+            color: #60a5fa;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .lesson-title {
+            font-size: 27px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .code-box {
+            margin-top: 24px;
+            padding: 22px;
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 18px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+
+        /* TEXT */
+
+        .demo-text {
+            margin-top: 25px;
+            padding: 25px;
+            background: #020617;
+            border-radius: 18px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .color-text {
+            color: #60a5fa;
+        }
+
+        .size-text {
+            font-size: 40px;
+        }
+
+        .weight-demo {
+            margin-top: 25px;
+            padding: 25px;
+            background: #020617;
+            border-radius: 18px;
+            line-height: 2;
+        }
+
+        .weight-400 {
+            font-weight: 400;
+        }
+
+        .weight-600 {
+            font-weight: 600;
+        }
+
+        .weight-800 {
+            font-weight: 800;
+        }
+
+        .align-demo {
+            margin-top: 25px;
+            padding: 25px;
+            background: #020617;
+            border-radius: 18px;
+        }
+
+        .align-demo p {
+            padding: 12px;
+            margin: 10px 0;
+            background: #1e293b;
+            border-radius: 10px;
+        }
+
+        .align-demo p:nth-child(1) {
+            text-align: left;
+        }
+
+        .align-demo p:nth-child(2) {
+            text-align: center;
+        }
+
+        .align-demo p:nth-child(3) {
+            text-align: right;
+        }
+
+        .decoration-demo,
+        .transform-demo,
+        .font-demo {
+            margin-top: 25px;
+            padding: 25px;
+            background: #020617;
+            border-radius: 18px;
+            line-height: 2.5;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .line-through {
+            text-decoration: line-through;
+        }
+
+        .overline {
+            text-decoration: overline;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .lowercase {
+            text-transform: lowercase;
+        }
+
+        .capitalize {
+            text-transform: capitalize;
+        }
+
+        .line-demo {
+            margin-top: 25px;
+            padding: 25px;
+            background: #020617;
+            border-radius: 18px;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .spacing-demo {
+            margin-top: 25px;
+            padding: 30px;
+            background: #020617;
+            border-radius: 18px;
+            text-align: center;
+            letter-spacing: 4px;
+            font-weight: 800;
+            color: #60a5fa;
+        }
+
+        .arial {
+            font-family: Arial, sans-serif;
+        }
+
+        .georgia {
+            font-family: Georgia, serif;
+        }
+
+        .monospace {
+            font-family: monospace;
+        }
+
+
+        /* HERO */
+
+        .hero-demo {
+            margin-top: 25px;
+            padding: 55px 30px;
+            border-radius: 25px;
+            text-align: center;
+
+            background:
+                linear-gradient(135deg,
+                    #1d4ed8,
+                    #7c3aed);
+        }
+
+        .hero-demo span {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .hero-demo h3 {
+            margin-top: 15px;
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1.15;
+        }
+
+        .hero-demo p {
+            margin-top: 15px;
+            color: #dbeafe;
+        }
+
+        .hero-demo button {
+            margin-top: 25px;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 12px;
+            background: white;
+            color: #1d4ed8;
+            font-weight: 800;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .hero-demo button:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* TEST */
+
+        .answer-btn {
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            background: #020617;
+            color: white;
+            font-weight: 700;
+            text-align: left;
+            transition: .3s;
+        }
+
+        .answer-btn:hover {
+            border-color: #3b82f6;
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+
+
+        @media (max-width: 640px) {
+
+            .lesson-box {
+                padding: 20px;
+            }
+
+            .size-text {
+                font-size: 30px;
+            }
+
+            .hero-demo h3 {
+                font-size: 29px;
+            }
+
+            .spacing-demo {
+                letter-spacing: 2px;
+                font-size: 14px;
+            }
+
+        }
+    </style>
+
+
+    <script>
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById("answerResult");
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! Matnni markazga joylashtirish uchun text-align: center ishlatiladi.";
+
+                result.className =
+                    "mt-6 font-bold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. To'g'ri javob: text-align.";
+
+                result.className =
+                    "mt-6 font-bold text-lg text-red-400";
+
+            }
+
+        }
+
+        // COMPLETE LESSON 13
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem("cssCompletedLessons")
+                ) || [];
+
+
+            // 12-dars tekshiriladi
+
+            if (!completedLessons.includes(12)) {
+
+                alert(
+                    "Avval 12-darsni tugating!"
+                );
+
+                window.location.href =
+                    "css-lesson-12.html";
+
+                return;
+            }
+
+
+            // 13-darsni saqlash
+
+            if (!completedLessons.includes(13)) {
+
+                completedLessons.push(13);
+
+            }
+
+
+            localStorage.setItem(
+                "cssCompletedLessons",
+                JSON.stringify(completedLessons)
+            );
+
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "✅ 13-dars tugatildi! 14-dars ochildi 🔓";
+
+
+            const button =
+                document.getElementById("completeBtn");
+
+
+            button.innerHTML =
+                "✅ 13-DARS TUGATILDI";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-blue-600",
+                "hover:bg-blue-700"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            setTimeout(function () {
+
+                window.location.href =
+                    "css-course.html";
+
+            }, 1500);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

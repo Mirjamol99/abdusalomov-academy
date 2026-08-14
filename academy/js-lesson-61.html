@@ -1,0 +1,2877 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        JavaScript 61-dars | Mini loyiha
+    </title>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background: #020617;
+        }
+
+
+        .glass {
+            background: rgba(15, 23, 42, 0.8);
+
+            border:
+                1px solid
+                rgba(51, 65, 85, 0.8);
+
+            backdrop-filter: blur(15px);
+        }
+
+
+        .task-done {
+            text-decoration: line-through;
+
+            opacity: 0.5;
+        }
+
+
+        .task-card {
+            transition: 0.2s;
+        }
+
+
+        .task-card:hover {
+            transform: translateY(-2px);
+        }
+
+    </style>
+
+</head>
+
+
+
+<body
+    class="
+        min-h-screen
+        text-white
+        bg-slate-950
+    "
+>
+
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header
+    class="
+        sticky
+        top-0
+        z-50
+        bg-slate-950/90
+        backdrop-blur-xl
+        border-b
+        border-slate-800
+    "
+>
+
+    <nav
+        class="
+            max-w-7xl
+            mx-auto
+            px-6
+            py-5
+            flex
+            items-center
+            justify-between
+        "
+    >
+
+        <a
+            href="index.html"
+            class="
+                text-2xl
+                font-extrabold
+            "
+        >
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a
+            href="js-course.html"
+            class="
+                text-slate-400
+                hover:text-yellow-400
+                transition
+            "
+        >
+
+            ← JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================
+     MAIN
+===================================== -->
+
+<main
+    class="
+        max-w-5xl
+        mx-auto
+        px-6
+        py-12
+    "
+>
+
+
+<!-- =====================================
+     TITLE
+===================================== -->
+
+<section>
+
+    <span
+        class="
+            inline-block
+            px-5
+            py-2
+            rounded-full
+            bg-yellow-400/10
+            border
+            border-yellow-400/20
+            text-yellow-400
+            font-bold
+        "
+    >
+
+        🚀 61-DARS
+
+    </span>
+
+
+    <h1
+        class="
+            text-4xl
+            md:text-6xl
+            font-extrabold
+            mt-6
+        "
+    >
+
+        Mini loyiha
+
+    </h1>
+
+
+    <p
+        class="
+            text-slate-400
+            text-lg
+            leading-8
+            mt-5
+        "
+    >
+
+        Bugun JavaScript'da haqiqiy
+        mini loyiha yaratamiz.
+
+        <br><br>
+
+        Biz
+        <strong class="text-yellow-400">
+            Todo List
+        </strong>
+        yaratamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================
+     WHAT WE BUILD
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-6
+        "
+    >
+
+        🎯 Loyiha qanday ishlaydi?
+
+    </h2>
+
+
+    <div
+        class="
+            grid
+            md:grid-cols-2
+            gap-5
+        "
+    >
+
+        <div
+            class="
+                bg-slate-950
+                rounded-2xl
+                p-6
+            "
+        >
+
+            ✍️
+
+            <h3
+                class="
+                    font-bold
+                    text-xl
+                    mt-3
+                "
+            >
+
+                Vazifa qo‘shish
+
+            </h3>
+
+
+            <p
+                class="
+                    text-slate-400
+                    mt-2
+                "
+            >
+
+                Input orqali yangi vazifa
+                kiritamiz.
+
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="
+                bg-slate-950
+                rounded-2xl
+                p-6
+            "
+        >
+
+            ✅
+
+            <h3
+                class="
+                    font-bold
+                    text-xl
+                    mt-3
+                "
+            >
+
+                Vazifani bajarish
+
+            </h3>
+
+
+            <p
+                class="
+                    text-slate-400
+                    mt-2
+                "
+            >
+
+                Vazifani bajarilgan deb
+                belgilaymiz.
+
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="
+                bg-slate-950
+                rounded-2xl
+                p-6
+            "
+        >
+
+            🗑️
+
+            <h3
+                class="
+                    font-bold
+                    text-xl
+                    mt-3
+                "
+            >
+
+                Vazifani o‘chirish
+
+            </h3>
+
+
+            <p
+                class="
+                    text-slate-400
+                    mt-2
+                "
+            >
+
+                Keraksiz vazifani o‘chiramiz.
+
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="
+                bg-slate-950
+                rounded-2xl
+                p-6
+            "
+        >
+
+            💾
+
+            <h3
+                class="
+                    font-bold
+                    text-xl
+                    mt-3
+                "
+            >
+
+                Saqlash
+
+            </h3>
+
+
+            <p
+                class="
+                    text-slate-400
+                    mt-2
+                "
+            >
+
+                Vazifalar LocalStorage'da
+                saqlanadi.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     TODO APP
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-6
+        md:p-8
+        mt-10
+    "
+>
+
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+        "
+    >
+
+        📝 Todo List
+
+    </h2>
+
+
+    <p
+        id="taskCount"
+        class="
+            text-slate-400
+            mt-2
+        "
+    >
+
+        0 ta vazifa
+
+    </p>
+
+
+
+    <!-- FORM -->
+
+    <form
+        id="todoForm"
+        class="
+            flex
+            flex-col
+            md:flex-row
+            gap-4
+            mt-8
+        "
+    >
+
+        <input
+            id="todoInput"
+            type="text"
+            placeholder="Yangi vazifa yozing..."
+            autocomplete="off"
+            class="
+                flex-1
+                bg-slate-950
+                border
+                border-slate-700
+                rounded-2xl
+                px-5
+                py-4
+                outline-none
+                focus:border-yellow-400
+                transition
+            "
+        >
+
+
+        <button
+            type="submit"
+            class="
+                bg-yellow-400
+                hover:bg-yellow-300
+                text-slate-950
+                font-extrabold
+                px-8
+                py-4
+                rounded-2xl
+                transition
+            "
+        >
+
+            ➕ Qo‘shish
+
+        </button>
+
+    </form>
+
+
+
+    <!-- FILTER BUTTONS -->
+
+    <div
+        class="
+            flex
+            flex-wrap
+            gap-3
+            mt-8
+        "
+    >
+
+        <button
+            class="
+                filter-btn
+                px-5
+                py-3
+                rounded-xl
+                bg-yellow-400
+                text-slate-950
+                font-bold
+            "
+            data-filter="all"
+        >
+
+            Barchasi
+
+        </button>
+
+
+        <button
+            class="
+                filter-btn
+                px-5
+                py-3
+                rounded-xl
+                bg-slate-800
+                text-slate-300
+                font-bold
+            "
+            data-filter="active"
+        >
+
+            Bajarilmagan
+
+        </button>
+
+
+        <button
+            class="
+                filter-btn
+                px-5
+                py-3
+                rounded-xl
+                bg-slate-800
+                text-slate-300
+                font-bold
+            "
+            data-filter="completed"
+        >
+
+            Bajarilgan
+
+        </button>
+
+    </div>
+
+
+
+    <!-- TASK LIST -->
+
+    <div
+        id="taskList"
+        class="
+            space-y-4
+            mt-8
+        "
+    >
+
+    </div>
+
+
+
+    <!-- CLEAR -->
+
+    <button
+        id="clearBtn"
+        class="
+            w-full
+            mt-8
+            bg-red-500
+            hover:bg-red-400
+            py-4
+            rounded-2xl
+            font-extrabold
+            transition
+        "
+    >
+
+        🗑️ Barcha vazifalarni o‘chirish
+
+    </button>
+
+</section>
+
+
+
+<!-- =====================================
+     1. ARRAY
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        📦 1. Array yaratamiz
+
+    </h2>
+
+
+    <p
+        class="
+            text-slate-400
+            leading-8
+        "
+    >
+
+        Bizning barcha vazifalarimiz
+        bitta Array ichida saqlanadi.
+
+    </p>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>let tasks = [];</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     2. OBJECT
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        📦 2. Task Object
+
+    </h2>
+
+
+    <p
+        class="
+            text-slate-400
+            leading-8
+        "
+    >
+
+        Har bir vazifa Object bo‘ladi.
+
+    </p>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>let task = {
+
+    id: Date.now(),
+
+    text: "JavaScript o‘rganish",
+
+    completed: false
+
+};</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     3. PUSH
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        ➕ 3. push()
+
+    </h2>
+
+
+    <p
+        class="
+            text-slate-400
+            leading-8
+        "
+    >
+
+        Yangi vazifani Array'ga
+        <code class="text-yellow-400">
+            push()
+        </code>
+        orqali qo‘shamiz.
+
+    </p>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>tasks.push(task);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     4. LOCAL STORAGE
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        💾 4. LocalStorage
+
+    </h2>
+
+
+    <p
+        class="
+            text-slate-400
+            leading-8
+        "
+    >
+
+        Vazifalar sahifa yangilanganda
+        yo‘qolmasligi uchun
+        LocalStorage'ga saqlaymiz.
+
+    </p>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>localStorage.setItem(
+    "tasks",
+    JSON.stringify(tasks)
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     5. LOAD
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        📤 5. Ma'lumotni olish
+
+    </h2>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>let tasks =
+    JSON.parse(
+        localStorage.getItem("tasks")
+    ) || [];</code></pre>
+
+    </div>
+
+
+    <div
+        class="
+            border-l-4
+            border-yellow-400
+            bg-slate-900
+            rounded-r-xl
+            p-5
+            mt-6
+            text-slate-300
+        "
+    >
+
+        🔥
+
+        <code>|| []</code>
+        juda muhim.
+
+        <br><br>
+
+        Agar LocalStorage'da
+        ma'lumot bo‘lmasa,
+        bo‘sh Array ishlatiladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     6. RENDER
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        🎨 6. Vazifalarni ekranga chiqarish
+
+    </h2>
+
+
+    <p
+        class="
+            text-slate-400
+            leading-8
+        "
+    >
+
+        Array ichidagi vazifalarni
+        HTML'ga chiqarish uchun
+        <code class="text-yellow-400">
+            forEach()
+        </code>
+        ishlatamiz.
+
+    </p>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>tasks.forEach(function(task) {
+
+    console.log(task.text);
+
+});</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     7. FILTER
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        🔎 7. filter()
+
+    </h2>
+
+
+    <p
+        class="
+            text-slate-400
+            leading-8
+        "
+    >
+
+        Faqat bajarilgan yoki
+        bajarilmagan vazifalarni
+        olish uchun
+        <code class="text-yellow-400">
+            filter()
+        </code>
+        ishlatamiz.
+
+    </p>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>let completed =
+    tasks.filter(function(task) {
+
+        return task.completed === true;
+
+    });</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     8. DELETE
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        🗑️ 8. Vazifani o‘chirish
+
+    </h2>
+
+
+    <p
+        class="
+            text-slate-400
+            leading-8
+        "
+    >
+
+        Kerakli vazifani
+        <code class="text-yellow-400">
+            filter()
+        </code>
+        orqali olib tashlaymiz.
+
+    </p>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>tasks =
+    tasks.filter(function(task) {
+
+        return task.id !== id;
+
+    });</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     9. COMPLETE
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        ✅ 9. Vazifani bajarilgan qilish
+
+    </h2>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            mt-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>task.completed =
+    !task.completed;</code></pre>
+
+    </div>
+
+
+    <p
+        class="
+            text-slate-400
+            mt-5
+        "
+    >
+
+        <code>!</code>
+        boolean qiymatni teskarisiga
+        o‘zgartiradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================
+     FULL JAVASCRIPT
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-5
+        "
+    >
+
+        ⚡ 10. To‘liq JavaScript
+
+    </h2>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-5
+            overflow-x-auto
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-7
+    "
+><code>let tasks =
+    JSON.parse(
+        localStorage.getItem("tasks")
+    ) || [];
+
+
+let currentFilter = "all";
+
+
+let todoForm =
+    document.querySelector("#todoForm");
+
+
+let todoInput =
+    document.querySelector("#todoInput");
+
+
+let taskList =
+    document.querySelector("#taskList");
+
+
+let taskCount =
+    document.querySelector("#taskCount");
+
+
+let clearBtn =
+    document.querySelector("#clearBtn");
+
+
+
+function saveTasks() {
+
+    localStorage.setItem(
+        "tasks",
+        JSON.stringify(tasks)
+    );
+
+}
+
+
+
+function renderTasks() {
+
+    taskList.innerHTML = "";
+
+
+    let filteredTasks = tasks;
+
+
+    if (currentFilter === "active") {
+
+        filteredTasks =
+            tasks.filter(function(task) {
+
+                return task.completed === false;
+
+            });
+
+    }
+
+
+    if (currentFilter === "completed") {
+
+        filteredTasks =
+            tasks.filter(function(task) {
+
+                return task.completed === true;
+
+            });
+
+    }
+
+
+    if (filteredTasks.length === 0) {
+
+        taskList.innerHTML = `
+            &lt;div
+                class="text-center
+                       text-slate-500
+                       py-10"&gt;
+
+                📭 Vazifalar topilmadi.
+
+            &lt;/div&gt;
+        `;
+
+    }
+
+
+    filteredTasks.forEach(
+        function(task) {
+
+
+            let div =
+                document.createElement("div");
+
+
+            div.className = `
+                task-card
+                bg-slate-950
+                border
+                border-slate-800
+                rounded-2xl
+                p-5
+                flex
+                items-center
+                gap-4
+            `;
+
+
+            div.innerHTML = `
+
+                &lt;button
+                    class="
+                        complete-btn
+                        w-10
+                        h-10
+                        rounded-full
+                        border
+                        border-slate-600
+                        flex
+                        items-center
+                        justify-center
+                    "
+                    data-id="${task.id}"
+                &gt;
+
+                    ${task.completed ? "✓" : ""}
+
+                &lt;/button&gt;
+
+
+                &lt;p
+                    class="
+                        task-text
+                        flex-1
+                        font-semibold
+                        ${task.completed
+                            ? "task-done"
+                            : ""}
+                    "
+                &gt;
+
+                    ${task.text}
+
+                &lt;/p&gt;
+
+
+                &lt;button
+                    class="
+                        delete-btn
+                        text-red-400
+                        hover:text-red-300
+                        px-3
+                        py-2
+                    "
+                    data-id="${task.id}"
+                &gt;
+
+                    🗑️
+
+                &lt;/button&gt;
+
+            `;
+
+
+            taskList.appendChild(div);
+
+        }
+    );
+
+
+    let activeCount =
+        tasks.filter(function(task) {
+
+            return task.completed === false;
+
+        }).length;
+
+
+    taskCount.textContent =
+        activeCount +
+        " ta bajarilmagan vazifa";
+
+}
+
+
+
+/* =====================================
+   ADD TASK
+===================================== */
+
+todoForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        let text =
+            todoInput.value.trim();
+
+
+        if (text === "") {
+
+            alert(
+                "Vazifa yozing!"
+            );
+
+            return;
+
+        }
+
+
+        let newTask = {
+
+            id: Date.now(),
+
+            text: text,
+
+            completed: false
+
+        };
+
+
+        tasks.push(newTask);
+
+
+        saveTasks();
+
+
+        todoInput.value = "";
+
+
+        renderTasks();
+
+    }
+);
+
+
+
+/* =====================================
+   COMPLETE + DELETE
+===================================== */
+
+taskList.addEventListener(
+    "click",
+    function(event) {
+
+
+        let completeButton =
+            event.target.closest(
+                ".complete-btn"
+            );
+
+
+        let deleteButton =
+            event.target.closest(
+                ".delete-btn"
+            );
+
+
+
+        if (completeButton) {
+
+            let id =
+                Number(
+                    completeButton.dataset.id
+                );
+
+
+            tasks =
+                tasks.map(
+                    function(task) {
+
+
+                        if (
+                            task.id === id
+                        ) {
+
+                            return {
+                                ...task,
+
+                                completed:
+                                    !task.completed
+                            };
+
+                        }
+
+
+                        return task;
+
+                    }
+                );
+
+
+            saveTasks();
+
+
+            renderTasks();
+
+        }
+
+
+
+        if (deleteButton) {
+
+            let id =
+                Number(
+                    deleteButton.dataset.id
+                );
+
+
+            tasks =
+                tasks.filter(
+                    function(task) {
+
+                        return task.id !== id;
+
+                    }
+                );
+
+
+            saveTasks();
+
+
+            renderTasks();
+
+        }
+
+    }
+);
+
+
+
+/* =====================================
+   FILTERS
+===================================== */
+
+let filterButtons =
+    document.querySelectorAll(
+        ".filter-btn"
+    );
+
+
+filterButtons.forEach(
+    function(button) {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+
+                currentFilter =
+                    button.dataset.filter;
+
+
+                filterButtons.forEach(
+                    function(btn) {
+
+                        btn.classList.remove(
+                            "bg-yellow-400",
+                            "text-slate-950"
+                        );
+
+                        btn.classList.add(
+                            "bg-slate-800",
+                            "text-slate-300"
+                        );
+
+                    }
+                );
+
+
+                button.classList.remove(
+                    "bg-slate-800",
+                    "text-slate-300"
+                );
+
+
+                button.classList.add(
+                    "bg-yellow-400",
+                    "text-slate-950"
+                );
+
+
+                renderTasks();
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =====================================
+   CLEAR ALL
+===================================== */
+
+clearBtn.addEventListener(
+    "click",
+    function() {
+
+
+        if (tasks.length === 0) {
+
+            return;
+
+        }
+
+
+        let answer =
+            confirm(
+                "Barcha vazifalar o‘chirilsinmi?"
+            );
+
+
+        if (!answer) {
+
+            return;
+
+        }
+
+
+        tasks = [];
+
+
+        saveTasks();
+
+
+        renderTasks();
+
+    }
+);
+
+
+
+/* =====================================
+   FIRST RENDER
+===================================== */
+
+renderTasks();</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PROJECT STRUCTURE
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-6
+        "
+    >
+
+        📁 Loyiha strukturasi
+
+    </h2>
+
+
+    <div
+        class="
+            bg-black
+            rounded-2xl
+            p-6
+        "
+    >
+
+<pre
+    class="
+        text-green-400
+        leading-8
+    "
+><code>javascript-course/
+│
+├── js-lesson-59.html
+│
+├── js-lesson-60.html
+│
+├── js-lesson-61.html
+│
+├── js-course.html
+│
+└── index.html</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     WHAT WE USED
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-6
+        "
+    >
+
+        🧠 Loyihada nimalardan foydalandik?
+
+    </h2>
+
+
+    <div
+        class="
+            grid
+            md:grid-cols-2
+            gap-4
+        "
+    >
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            📦 Array
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            🧱 Object
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            ➕ push()
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            🔎 filter()
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            🔁 map()
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            🔄 forEach()
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            🎯 querySelector()
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            🖱️ addEventListener()
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            💾 localStorage
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            🔄 JSON.stringify()
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            📤 JSON.parse()
+        </div>
+
+        <div class="bg-slate-950 rounded-xl p-5">
+            ⚡ if
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     HOMEWORK
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-6
+        "
+    >
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div
+        class="
+            space-y-7
+            text-slate-300
+            leading-8
+        "
+    >
+
+
+        <div>
+
+            <strong class="text-white">
+                1-vazifa 📝
+            </strong>
+
+            <br>
+
+            Todo List loyihasini o‘zingiz
+            qayta yozing.
+
+        </div>
+
+
+
+        <div>
+
+            <strong class="text-white">
+                2-vazifa 🎨
+            </strong>
+
+            <br>
+
+            Dizaynini o‘zgartiring.
+
+            <br>
+
+            O‘zingizga yoqqan ranglardan
+            foydalaning.
+
+        </div>
+
+
+
+        <div>
+
+            <strong class="text-white">
+                3-vazifa 🔥
+            </strong>
+
+            <br>
+
+            Har bir vazifaga
+            sana qo‘shing.
+
+            <br><br>
+
+<code>date: "2026-08-13"</code>
+
+        </div>
+
+
+
+        <div>
+
+            <strong class="text-white">
+                4-vazifa ⭐
+            </strong>
+
+            <br>
+
+            Vazifaga priority qo‘shing:
+
+            <br><br>
+
+            🔴 High
+
+            <br>
+
+            🟡 Medium
+
+            <br>
+
+            🟢 Low
+
+        </div>
+
+
+
+        <div>
+
+            <strong class="text-white">
+                5-vazifa 🔍
+            </strong>
+
+            <br>
+
+            Search input qo‘shing.
+
+            <br>
+
+            Foydalanuvchi vazifalarni
+            qidirishi mumkin bo‘lsin.
+
+        </div>
+
+
+
+        <div>
+
+            <strong class="text-white">
+                6-vazifa 🚀
+            </strong>
+
+            <br>
+
+            Todo List'ga
+            <strong class="text-yellow-400">
+                dark/light mode
+            </strong>
+            qo‘shing.
+
+        </div>
+
+
+
+        <div>
+
+            <strong class="text-white">
+                7-vazifa 💾
+            </strong>
+
+            <br>
+
+            Barcha ma'lumotlar
+            LocalStorage'da saqlansin.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     LESSON SUMMARY
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+    "
+>
+
+    <h2
+        class="
+            text-3xl
+            font-extrabold
+            mb-6
+        "
+    >
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div
+        class="
+            space-y-4
+            text-slate-300
+            leading-8
+        "
+    >
+
+        <p>
+            📦 Array → vazifalarni saqlaydi.
+        </p>
+
+
+        <p>
+            🧱 Object → har bir vazifa.
+        </p>
+
+
+        <p>
+            ➕ push() → yangi vazifa qo‘shadi.
+        </p>
+
+
+        <p>
+            🔎 filter() → kerakli vazifalarni ajratadi.
+        </p>
+
+
+        <p>
+            🔁 map() → vazifani yangilaydi.
+        </p>
+
+
+        <p>
+            🔄 forEach() → vazifalarni chiqaradi.
+        </p>
+
+
+        <p>
+            💾 LocalStorage → ma'lumotni saqlaydi.
+        </p>
+
+
+        <p>
+            🔄 JSON.stringify() →
+            Array/Object → String.
+        </p>
+
+
+        <p>
+            📤 JSON.parse() →
+            String → Array/Object.
+        </p>
+
+
+        <p>
+            🖱️ addEventListener() →
+            foydalanuvchi harakatlarini boshqaradi.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     NEXT LESSON
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+        text-center
+    "
+>
+
+    <div class="text-6xl mb-5">
+        🌐
+    </div>
+
+
+   
+
+
+    
+</section>
+
+
+
+<!-- =====================================
+     COMPLETE
+===================================== -->
+
+<section
+    class="
+        glass
+        rounded-3xl
+        p-8
+        mt-10
+        text-center
+    "
+>
+
+    <div class="text-6xl mb-5">
+        🚀
+    </div>
+
+
+    <h2
+        class="
+            text-3xl
+            md:text-4xl
+            font-extrabold
+        "
+    >
+
+        JAVA SCRIPT tugatdingizmi?
+
+    </h2>
+
+
+    <p
+        id="completeMessage"
+        class="
+            text-slate-400
+            mt-4
+        "
+    >
+
+        Loyihani ishlatib ko‘ring
+        va darsni tugating.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        class="
+            w-full
+            mt-7
+            bg-yellow-400
+            hover:bg-yellow-300
+            text-slate-950
+            py-5
+            rounded-2xl
+            font-extrabold
+            text-lg
+            transition
+        "
+    >
+
+        ✅ JAVA SCRIPT DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer
+    class="
+        border-t
+        border-slate-800
+        py-8
+        text-center
+    "
+>
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
+<script>
+
+
+/* =====================================
+   GET DATA
+===================================== */
+
+let tasks =
+    JSON.parse(
+        localStorage.getItem("tasks")
+    ) || [];
+
+
+
+let currentFilter = "all";
+
+
+
+/* =====================================
+   ELEMENTS
+===================================== */
+
+let todoForm =
+    document.querySelector(
+        "#todoForm"
+    );
+
+
+let todoInput =
+    document.querySelector(
+        "#todoInput"
+    );
+
+
+let taskList =
+    document.querySelector(
+        "#taskList"
+    );
+
+
+let taskCount =
+    document.querySelector(
+        "#taskCount"
+    );
+
+
+let clearBtn =
+    document.querySelector(
+        "#clearBtn"
+    );
+
+
+
+/* =====================================
+   SAVE
+===================================== */
+
+function saveTasks() {
+
+    localStorage.setItem(
+        "tasks",
+        JSON.stringify(tasks)
+    );
+
+}
+
+
+
+/* =====================================
+   RENDER
+===================================== */
+
+function renderTasks() {
+
+    taskList.innerHTML = "";
+
+
+    let filteredTasks = tasks;
+
+
+
+    /* ACTIVE */
+
+    if (
+        currentFilter === "active"
+    ) {
+
+        filteredTasks =
+            tasks.filter(
+                function(task) {
+
+                    return (
+                        task.completed === false
+                    );
+
+                }
+            );
+
+    }
+
+
+
+    /* COMPLETED */
+
+    if (
+        currentFilter === "completed"
+    ) {
+
+        filteredTasks =
+            tasks.filter(
+                function(task) {
+
+                    return (
+                        task.completed === true
+                    );
+
+                }
+            );
+
+    }
+
+
+
+    /* EMPTY */
+
+    if (
+        filteredTasks.length === 0
+    ) {
+
+        taskList.innerHTML = `
+
+            <div
+                class="
+                    text-center
+                    text-slate-500
+                    py-10
+                "
+            >
+
+                📭 Vazifalar topilmadi.
+
+            </div>
+
+        `;
+
+    }
+
+
+
+    /* TASKS */
+
+    filteredTasks.forEach(
+        function(task) {
+
+
+            let div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.className = `
+                task-card
+                bg-slate-950
+                border
+                border-slate-800
+                rounded-2xl
+                p-5
+                flex
+                items-center
+                gap-4
+            `;
+
+
+
+            div.innerHTML = `
+
+                <button
+
+                    class="
+                        complete-btn
+                        w-10
+                        h-10
+                        rounded-full
+                        border
+                        border-slate-600
+                        flex
+                        items-center
+                        justify-center
+                        shrink-0
+                    "
+
+                    data-id="${task.id}"
+
+                >
+
+                    ${
+                        task.completed
+                            ? "✓"
+                            : ""
+                    }
+
+                </button>
+
+
+
+                <p
+
+                    class="
+                        task-text
+                        flex-1
+                        font-semibold
+                        ${
+                            task.completed
+                                ? "task-done"
+                                : ""
+                        }
+                    "
+
+                >
+
+                    ${task.text}
+
+                </p>
+
+
+
+                <button
+
+                    class="
+                        delete-btn
+                        text-red-400
+                        hover:text-red-300
+                        px-3
+                        py-2
+                    "
+
+                    data-id="${task.id}"
+
+                >
+
+                    🗑️
+
+                </button>
+
+            `;
+
+
+            taskList.appendChild(div);
+
+        }
+    );
+
+
+
+    /* COUNT */
+
+    let activeCount =
+        tasks.filter(
+            function(task) {
+
+                return (
+                    task.completed === false
+                );
+
+            }
+        ).length;
+
+
+    taskCount.textContent =
+        activeCount +
+        " ta bajarilmagan vazifa";
+
+}
+
+
+
+/* =====================================
+   ADD
+===================================== */
+
+todoForm.addEventListener(
+    "submit",
+    function(event) {
+
+
+        event.preventDefault();
+
+
+        let text =
+            todoInput.value.trim();
+
+
+        if (text === "") {
+
+            alert(
+                "❌ Vazifa yozing!"
+            );
+
+            return;
+
+        }
+
+
+
+        let newTask = {
+
+            id: Date.now(),
+
+            text: text,
+
+            completed: false
+
+        };
+
+
+
+        tasks.push(
+            newTask
+        );
+
+
+
+        saveTasks();
+
+
+
+        todoInput.value = "";
+
+
+
+        renderTasks();
+
+    }
+);
+
+
+
+/* =====================================
+   CLICK
+===================================== */
+
+taskList.addEventListener(
+    "click",
+    function(event) {
+
+
+        let completeButton =
+            event.target.closest(
+                ".complete-btn"
+            );
+
+
+        let deleteButton =
+            event.target.closest(
+                ".delete-btn"
+            );
+
+
+
+        /* COMPLETE */
+
+        if (completeButton) {
+
+
+            let id =
+                Number(
+                    completeButton.dataset.id
+                );
+
+
+
+            tasks =
+                tasks.map(
+                    function(task) {
+
+
+                        if (
+                            task.id === id
+                        ) {
+
+                            return {
+
+                                ...task,
+
+                                completed:
+                                    !task.completed
+
+                            };
+
+                        }
+
+
+                        return task;
+
+                    }
+                );
+
+
+
+            saveTasks();
+
+
+            renderTasks();
+
+        }
+
+
+
+        /* DELETE */
+
+        if (deleteButton) {
+
+
+            let id =
+                Number(
+                    deleteButton.dataset.id
+                );
+
+
+
+            tasks =
+                tasks.filter(
+                    function(task) {
+
+                        return (
+                            task.id !== id
+                        );
+
+                    }
+                );
+
+
+
+            saveTasks();
+
+
+            renderTasks();
+
+        }
+
+    }
+);
+
+
+
+//    FILTER
+
+let filterButtons =
+    document.querySelectorAll(
+        ".filter-btn"
+    );
+
+
+filterButtons.forEach(
+    function(button) {
+
+
+        button.addEventListener(
+            "click",
+            function() {
+
+
+                currentFilter =
+                    button.dataset.filter;
+
+
+
+                filterButtons.forEach(
+                    function(btn) {
+
+                        btn.classList.remove(
+                            "bg-yellow-400",
+                            "text-slate-950"
+                        );
+
+
+                        btn.classList.add(
+                            "bg-slate-800",
+                            "text-slate-300"
+                        );
+
+                    }
+                );
+
+
+
+                button.classList.remove(
+                    "bg-slate-800",
+                    "text-slate-300"
+                );
+
+
+                button.classList.add(
+                    "bg-yellow-400",
+                    "text-slate-950"
+                );
+
+
+
+                renderTasks();
+
+            }
+        );
+
+    }
+);
+
+//    CLEAR ALL
+
+clearBtn.addEventListener(
+    "click",
+    function() {
+
+
+        if (
+            tasks.length === 0
+        ) {
+
+            return;
+
+        }
+
+
+
+        let answer =
+            confirm(
+                "Barcha vazifalar o‘chirilsinmi?"
+            );
+
+
+
+        if (!answer) {
+
+            return;
+
+        }
+
+
+
+        tasks = [];
+
+
+
+        saveTasks();
+
+
+
+        renderTasks();
+
+    }
+);
+
+//    COMPLETE LESSON
+
+let completeBtn =
+    document.querySelector(
+        "#completeBtn"
+    );
+
+
+completeBtn.addEventListener(
+    "click",
+    function() {
+
+
+        let completedLessons =
+            JSON.parse(
+                localStorage.getItem(
+                    "jsCompletedLessons"
+                )
+            ) || [];
+
+
+
+        if (
+            !completedLessons.includes(
+                61
+            )
+        ) {
+
+            completedLessons.push(
+                61
+            );
+
+        }
+
+
+
+        localStorage.setItem(
+            "jsCompletedLessons",
+            JSON.stringify(
+                completedLessons
+            )
+        );
+
+
+
+        document.querySelector(
+            "#completeMessage"
+        ).textContent =
+            "🎉 JAVA SCRIPT dars tugatildi!";
+
+
+
+        completeBtn.textContent =
+            "✅ JAVA SCRIPT DARS TUGATILDI";
+
+
+        completeBtn.disabled =
+            true;
+
+
+    }
+);
+
+//    START
+
+renderTasks();
+
+</script>
+
+
+</body>
+
+</html>

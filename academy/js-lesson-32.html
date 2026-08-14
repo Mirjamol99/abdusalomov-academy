@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 32-dars | push va pop</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ➕ 32-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            push va pop
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugungi darsda Array'ga element
+            qo‘shish va Array'dan element
+            o‘chirishni o‘rganamiz.
+
+            <br><br>
+
+            Buning uchun ikkita muhim metod:
+
+            <br><br>
+
+            ➕ <code>push()</code>
+
+            <br>
+
+            ➖ <code>pop()</code>
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ push() nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>push()</code> — Array'ning
+            <b>oxiriga yangi element qo‘shadi.</b>
+
+            <br><br>
+
+            Bu metod Array'ning o‘zini o‘zgartiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan"
+];
+
+mevalar.push("Uzum");
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔍 push() qanday ishlaydi?
+        </h2>
+
+        <div class="method-card">
+
+            <p class="text-slate-400">
+                Dastlab:
+            </p>
+
+            <p class="text-xl mt-3">
+                ["Olma", "Banan"]
+            </p>
+
+            <p class="text-yellow-400 text-3xl my-5">
+                ↓ push("Uzum")
+            </p>
+
+            <p class="text-slate-400">
+                Keyin:
+            </p>
+
+            <p class="text-xl mt-3">
+                ["Olma", "Banan", "Uzum"]
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ Bir nechta elementni push qilish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>push()</code> ichiga bir vaqtning
+            o‘zida bir nechta element berish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let sonlar = [1, 2, 3];
+
+sonlar.push(4, 5, 6);
+
+console.log(sonlar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📏 push() va length
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>push()</code> Array'ga element
+            qo‘shganda uning <code>length</code>
+            qiymati ham o‘zgaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan"
+];
+
+console.log(mevalar.length);
+
+mevalar.push("Uzum");
+
+console.log(mevalar.length);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>2
+3</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎯 push() nima qaytaradi?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Muhim jihat:
+
+            <br><br>
+
+            <code>push()</code> qo‘shilgan elementni
+            emas, <b>yangi Array uzunligini</b>
+            qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan"
+];
+
+let result = mevalar.push("Uzum");
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>3</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            <code>push()</code> dan keyingi
+            Array uzunligi → <b>3</b>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➖ pop() nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>pop()</code> — Array'ning
+            <b>oxirgi elementini o‘chiradi.</b>
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+mevalar.pop();
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔍 pop() qanday ishlaydi?
+        </h2>
+
+        <div class="method-card">
+
+            <p class="text-slate-400">
+                Dastlab:
+            </p>
+
+            <p class="text-xl mt-3">
+                ["Olma", "Banan", "Uzum"]
+            </p>
+
+            <p class="text-red-400 text-3xl my-5">
+                ↓ pop()
+            </p>
+
+            <p class="text-slate-400">
+                Keyin:
+            </p>
+
+            <p class="text-xl mt-3">
+                ["Olma", "Banan"]
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎁 pop() nima qaytaradi?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>pop()</code> o‘chirilgan
+            elementning o‘zini qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+let deleted = mevalar.pop();
+
+console.log(deleted);
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Uzum
+
+[
+    "Olma",
+    "Banan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📏 pop() va length
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let sonlar = [
+    10,
+    20,
+    30,
+    40
+];
+
+console.log(sonlar.length);
+
+sonlar.pop();
+
+console.log(sonlar.length);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>4
+3</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔥 push va pop birga
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan"
+];
+
+fruits.push("Uzum");
+
+console.log(fruits);
+
+fruits.pop();
+
+console.log(fruits);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum"
+]
+
+[
+    "Olma",
+    "Banan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔁 push va pop bilan loop
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [];
+
+numbers.push(10);
+numbers.push(20);
+numbers.push(30);
+
+for (let number of numbers) {
+
+    console.log(number);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>10
+20
+30</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📦 Bo‘sh Array'ga push()
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bo‘sh Array'ga ham bemalol
+            element qo‘shish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let users = [];
+
+users.push("Ali");
+
+users.push("Vali");
+
+users.push("Hasan");
+
+console.log(users);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Ali",
+    "Vali",
+    "Hasan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧹 Bir nechta pop()
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>pop()</code> har chaqirilganda
+            oxirgi elementni bittadan o‘chiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5
+];
+
+numbers.pop();
+
+numbers.pop();
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    1,
+    2,
+    3
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ Bo‘sh Array'da pop()
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar Array bo‘sh bo‘lsa,
+            <code>pop()</code> hech qanday
+            element topa olmaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [];
+
+let result = numbers.pop();
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>undefined</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 push va pop farqi
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Metod
+                        </th>
+
+                        <th class="p-4">
+                            Vazifasi
+                        </th>
+
+                        <th class="p-4">
+                            Qayerda?
+                        </th>
+
+                        <th class="p-4">
+                            Qaytaradi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-green-400">
+                            push()
+                        </td>
+
+                        <td class="p-4">
+                            Element qo‘shadi
+                        </td>
+
+                        <td class="p-4">
+                            Oxiriga
+                        </td>
+
+                        <td class="p-4">
+                            Yangi length
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4 text-red-400">
+                            pop()
+                        </td>
+
+                        <td class="p-4">
+                            Element o‘chiradi
+                        </td>
+
+                        <td class="p-4">
+                            Oxiridan
+                        </td>
+
+                        <td class="p-4">
+                            O‘chirilgan element
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Real loyiha — savatcha
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, internet do‘kondagi
+            savatchaga mahsulot qo‘shamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let cart = [];
+
+cart.push("Telefon");
+
+cart.push("Quloqchin");
+
+cart.push("Sichqoncha");
+
+console.log(cart);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Telefon",
+    "Quloqchin",
+    "Sichqoncha"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Savatchadan oxirgi mahsulotni o‘chirish
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let cart = [
+    "Telefon",
+    "Quloqchin",
+    "Sichqoncha"
+];
+
+let removedProduct = cart.pop();
+
+console.log(
+    "O‘chirildi:",
+    removedProduct
+);
+
+console.log(
+    "Savatcha:",
+    cart
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>O‘chirildi: Sichqoncha
+
+Savatcha:
+[
+    "Telefon",
+    "Quloqchin"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 push() bilan sonlar
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [];
+
+numbers.push(5);
+numbers.push(10);
+numbers.push(15);
+numbers.push(20);
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔄 push() va pop() ketma-ketligi
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [1, 2, 3];
+
+numbers.push(4);
+
+console.log(numbers);
+
+numbers.pop();
+
+console.log(numbers);
+
+numbers.push(5);
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[1, 2, 3, 4]
+
+[1, 2, 3]
+
+[1, 2, 3, 5]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            💡 Muhim eslatma
+        </h2>
+
+        <div class="info">
+
+            <p class="text-lg leading-8">
+
+                <code>push()</code> —
+                <b>oxiriga qo‘shadi</b>.
+
+                <br><br>
+
+                <code>pop()</code> —
+                <b>oxiridan o‘chiradi</b>.
+
+                <br><br>
+
+                Ikkalasi ham Array'ning
+                <b>oxiri</b> bilan ishlaydi.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <div class="space-y-6 text-slate-400 leading-8">
+
+            <p>
+                <b class="text-white">1-vazifa:</b>
+                <br>
+                Bo‘sh Array yarating va unga
+                5 ta ismni <code>push()</code>
+                yordamida qo‘shing.
+            </p>
+
+            <p>
+                <b class="text-white">2-vazifa:</b>
+                <br>
+                5 ta sonli Array yarating va
+                <code>pop()</code> yordamida
+                oxirgi sonni o‘chiring.
+            </p>
+
+            <p>
+                <b class="text-white">3-vazifa:</b>
+                <br>
+                <code>push()</code> nechta element
+                qo‘shganini <code>length</code>
+                orqali tekshiring.
+            </p>
+
+            <p>
+                <b class="text-white">4-vazifa:</b>
+                <br>
+                <code>pop()</code> orqali o‘chirilgan
+                elementni alohida o‘zgaruvchiga
+                saqlang va Console'ga chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">5-vazifa:</b>
+                <br>
+                Savatcha yarating:
+                <code>cart = []</code>.
+                Unga 4 ta mahsulot qo‘shing.
+            </p>
+
+            <p>
+                <b class="text-white">6-vazifa:</b>
+                <br>
+                Savatchadagi oxirgi mahsulotni
+                <code>pop()</code> bilan o‘chiring.
+            </p>
+
+            <p>
+                <b class="text-white">7-vazifa:</b>
+                <br>
+                <code>push()</code> va
+                <code>pop()</code>ni birgalikda
+                ishlatib ko‘ring.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+        <div class="space-y-4 text-slate-300 leading-8">
+
+            <p>
+                ➕ <code>push()</code> —
+                Array oxiriga element qo‘shadi.
+            </p>
+
+            <p>
+                ➖ <code>pop()</code> —
+                Array oxiridagi elementni o‘chiradi.
+            </p>
+
+            <p>
+                📏 <code>push()</code> —
+                yangi Array uzunligini qaytaradi.
+            </p>
+
+            <p>
+                🎁 <code>pop()</code> —
+                o‘chirilgan elementni qaytaradi.
+            </p>
+
+            <p>
+                🔄 Ikkala metod ham
+                Array'ning o‘zini o‘zgartiradi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ➕
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            32-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 32-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(31)) {
+
+        alert("Avval 31-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-31.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(32)) {
+
+        completedLessons.push(32);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 32-dars tugatildi! 33-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 32-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+
+</html>

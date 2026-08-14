@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 58-dars | Eventlar va addEventListener</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+
+        .demo-button {
+            transition: 0.2s;
+        }
+
+        .demo-button:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        🖱️ 58-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        Eventlar va addEventListener
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugun foydalanuvchi sahifada biror
+        harakat qilganda JavaScript qanday
+        javob berishini o‘rganamiz.
+
+        <br><br>
+
+        Asosiy mavzular:
+
+        <code>click</code>,
+        <code>addEventListener()</code>,
+        <code>input</code>,
+        <code>change</code>,
+        <code>submit</code>,
+        <code>keydown</code> va
+        <code>event</code> obyekti.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🖱️ Event nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Event — foydalanuvchining sahifadagi
+        harakati yoki brauzerda sodir bo‘ladigan
+        hodisa.
+
+    </p>
+
+
+    <div class="grid md:grid-cols-2 gap-6 mt-7">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                🖱️ click
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+                Element ustiga bosilganda ishlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                ⌨️ keydown
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+                Klaviaturadagi tugma bosilganda ishlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                📝 input
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+                Input qiymati o‘zgarganda ishlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                📋 submit
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+                Form yuborilganda ishlaydi.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ addEventListener()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>addEventListener()</code>
+        elementga event qo‘shish uchun ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>element.addEventListener(
+    "click",
+    function () {
+
+        console.log("Bosildi!");
+
+    }
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu yerda:
+
+        <br><br>
+
+        <code>"click"</code>
+        → event turi.
+
+        <br><br>
+
+        <code>function () { }</code>
+        → event sodir bo‘lganda bajariladigan kod.
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🖱️ click event
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Eng ko‘p ishlatiladigan eventlardan biri
+        <code>click</code> hisoblanadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let button =
+    document.querySelector("#btn");
+
+button.addEventListener(
+    "click",
+    function () {
+
+        console.log("Tugma bosildi!");
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Amaliy misol — click
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <button
+            id="clickBtn"
+            class="demo-button
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🖱️ Meni bosing
+
+        </button>
+
+
+        <p id="clickResult"
+           class="text-slate-400
+                  mt-6">
+
+            Hali bosilmadi.
+
+        </p>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let button =
+    document.querySelector("#clickBtn");
+
+let result =
+    document.querySelector("#clickResult");
+
+
+button.addEventListener(
+    "click",
+    function () {
+
+        result.textContent =
+            "🎉 Tugma bosildi!";
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Event bilan function
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Event sodir bo‘lganda alohida
+        functionni ham chaqirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function sayHello() {
+
+    console.log("Salom!");
+
+}
+
+
+let button =
+    document.querySelector("#btn");
+
+
+button.addEventListener(
+    "click",
+    sayHello
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ⚠️ Bu yerda:
+
+        <br><br>
+
+        To‘g‘ri:
+
+        <code>sayHello</code>
+
+        <br><br>
+
+        Noto‘g‘ri:
+
+        <code>sayHello()</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🖱️ mouseover
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sichqoncha element ustiga kelganda
+        <code>mouseover</code> ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>box.addEventListener(
+    "mouseover",
+    function () {
+
+        console.log(
+            "Sichqoncha keldi!"
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>mouseover</code>
+        → sichqoncha element ustiga kelganda.
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🖱️ mouseout
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sichqoncha elementdan chiqib ketganda
+        <code>mouseout</code> ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>box.addEventListener(
+    "mouseout",
+    function () {
+
+        console.log(
+            "Sichqoncha chiqdi!"
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⌨️ keydown
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Klaviaturadagi tugma bosilganda
+        <code>keydown</code> ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.addEventListener(
+    "keydown",
+    function () {
+
+        console.log(
+            "Klaviatura tugmasi bosildi!"
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        💡 Bu event butun sahifada
+        klaviatura bilan ishlash uchun
+        ham qo‘llanadi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔤 keydown va event.key
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Qaysi tugma bosilganini
+        <code>event.key</code>
+        orqali bilish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.addEventListener(
+    "keydown",
+    function (event) {
+
+        console.log(event.key);
+
+    }
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 mt-5">
+
+        Masalan, foydalanuvchi
+        <code>A</code> tugmasini bossa:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>A</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 input event
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Input ichidagi qiymat o‘zgargan
+        sari <code>input</code> event ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let input =
+    document.querySelector("#name");
+
+input.addEventListener(
+    "input",
+    function (event) {
+
+        console.log(
+            event.target.value
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Amaliy misol — input
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-8">
+
+
+        <input
+            id="nameInput"
+            type="text"
+            placeholder="Ismingizni yozing..."
+            class="w-full
+                   bg-slate-900
+                   border
+                   border-slate-700
+                   rounded-2xl
+                   px-5 py-4
+                   outline-none
+                   focus:border-yellow-400
+                   text-white">
+
+
+        <p id="nameResult"
+           class="text-slate-400
+                  mt-6">
+
+            Ismingiz shu yerda chiqadi.
+
+        </p>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let input =
+    document.querySelector("#nameInput");
+
+let result =
+    document.querySelector("#nameResult");
+
+
+input.addEventListener(
+    "input",
+    function (event) {
+
+        result.textContent =
+            event.target.value;
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📋 change event
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>change</code>
+        odatda input yoki select qiymati
+        o‘zgarganda ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let select =
+    document.querySelector("#city");
+
+select.addEventListener(
+    "change",
+    function (event) {
+
+        console.log(
+            event.target.value
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📋 Amaliy misol — select
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-8">
+
+
+        <select
+            id="city"
+            class="w-full
+                   bg-slate-900
+                   border
+                   border-slate-700
+                   rounded-2xl
+                   px-5 py-4
+                   text-white
+                   outline-none">
+
+            <option value="">
+                Shaharni tanlang
+            </option>
+
+            <option value="Qarshi">
+                Qarshi
+            </option>
+
+            <option value="Toshkent">
+                Toshkent
+            </option>
+
+            <option value="Samarqand">
+                Samarqand
+            </option>
+
+            <option value="Buxoro">
+                Buxoro
+            </option>
+
+        </select>
+
+
+        <p id="cityResult"
+           class="text-slate-400
+                  mt-6">
+
+            Shahar tanlanmagan.
+
+        </p>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let select =
+    document.querySelector("#city");
+
+let result =
+    document.querySelector("#cityResult");
+
+
+select.addEventListener(
+    "change",
+    function (event) {
+
+        result.textContent =
+            "Tanlangan shahar: " +
+            event.target.value;
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📤 submit event
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Form yuborilganda
+        <code>submit</code> event ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let form =
+    document.querySelector("#form");
+
+
+form.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+        console.log(
+            "Form yuborildi!"
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>event.preventDefault()</code>
+        brauzerning formani odatdagi
+        yuborish harakatini to‘xtatadi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Event object
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Event sodir bo‘lganda JavaScript
+        bizga event haqida ma'lumot beruvchi
+        object beradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>button.addEventListener(
+    "click",
+    function (event) {
+
+        console.log(event);
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 event.target
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>event.target</code>
+        event sodir bo‘lgan elementni
+        bildiradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>button.addEventListener(
+    "click",
+    function (event) {
+
+        console.log(
+            event.target
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        💡 Masalan, qaysi button bosilganini
+        <code>event.target</code>
+        orqali olish mumkin.
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Amaliy misol — event.target
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-8
+                text-center">
+
+
+        <button
+            class="targetBtn
+                   bg-yellow-400
+                   text-slate-950
+                   px-7 py-4
+                   rounded-2xl
+                   font-bold
+                   mr-2 mb-3">
+
+            1-button
+
+        </button>
+
+
+        <button
+            class="targetBtn
+                   bg-yellow-400
+                   text-slate-950
+                   px-7 py-4
+                   rounded-2xl
+                   font-bold
+                   mr-2 mb-3">
+
+            2-button
+
+        </button>
+
+
+        <button
+            class="targetBtn
+                   bg-yellow-400
+                   text-slate-950
+                   px-7 py-4
+                   rounded-2xl
+                   font-bold
+                   mb-3">
+
+            3-button
+
+        </button>
+
+
+        <p id="targetResult"
+           class="text-slate-400 mt-6">
+
+            Button tanlang.
+
+        </p>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let buttons =
+    document.querySelectorAll(
+        ".targetBtn"
+    );
+
+
+buttons.forEach(function(button) {
+
+    button.addEventListener(
+        "click",
+        function (event) {
+
+            document.querySelector(
+                "#targetResult"
+            ).textContent =
+                event.target.textContent;
+
+        }
+    );
+
+});</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🚫 removeEventListener()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Event listenerni olib tashlash uchun
+        <code>removeEventListener()</code>
+        ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function hello() {
+
+    console.log("Salom!");
+
+}
+
+
+button.addEventListener(
+    "click",
+    hello
+);
+
+
+button.removeEventListener(
+    "click",
+    hello
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ⚠️ Olib tashlash uchun
+        bir xil function reference
+        ishlatilishi kerak.
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Eng ko‘p ishlatiladigan eventlar
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-5">
+
+
+        <div class="method-card">
+            🖱️ <code>click</code>
+            <p class="text-slate-400 mt-2">
+                Element bosilganda.
+            </p>
+        </div>
+
+
+        <div class="method-card">
+            🖱️ <code>mouseover</code>
+            <p class="text-slate-400 mt-2">
+                Sichqoncha ustiga kelganda.
+            </p>
+        </div>
+
+
+        <div class="method-card">
+            🖱️ <code>mouseout</code>
+            <p class="text-slate-400 mt-2">
+                Sichqoncha chiqib ketganda.
+            </p>
+        </div>
+
+
+        <div class="method-card">
+            ⌨️ <code>keydown</code>
+            <p class="text-slate-400 mt-2">
+                Klaviatura bosilganda.
+            </p>
+        </div>
+
+
+        <div class="method-card">
+            📝 <code>input</code>
+            <p class="text-slate-400 mt-2">
+                Input qiymati o‘zgarganda.
+            </p>
+        </div>
+
+
+        <div class="method-card">
+            📋 <code>change</code>
+            <p class="text-slate-400 mt-2">
+                Qiymat o‘zgarganda.
+            </p>
+        </div>
+
+
+        <div class="method-card">
+            📤 <code>submit</code>
+            <p class="text-slate-400 mt-2">
+                Form yuborilganda.
+            </p>
+        </div>
+
+
+        <div class="method-card">
+            📄 <code>load</code>
+            <p class="text-slate-400 mt-2">
+                Sahifa yoki resurs yuklanganda.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Real loyiha — Add to Cart
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-8">
+
+
+        <div class="bg-slate-900
+                    border
+                    border-slate-700
+                    rounded-2xl
+                    p-6">
+
+
+            <h2 class="text-2xl font-bold">
+
+                🍕 Pizza
+
+            </h2>
+
+
+            <p class="text-slate-400 mt-2">
+
+                50 000 so‘m
+
+            </p>
+
+
+            <button
+                id="cartBtn"
+                class="mt-5
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       px-7 py-3
+                       rounded-xl
+                       font-bold">
+
+                🛒 Savatga qo‘shish
+
+            </button>
+
+
+            <p id="cartResult"
+               class="text-slate-400
+                      mt-5">
+
+                Savat bo‘sh.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let cartButton =
+    document.querySelector("#cartBtn");
+
+let cartResult =
+    document.querySelector("#cartResult");
+
+
+cartButton.addEventListener(
+    "click",
+    function () {
+
+        cartResult.textContent =
+            "✅ Pizza savatga qo‘shildi!";
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🖱️
+            </b>
+
+            <br>
+
+            Button yarating va
+            <code>addEventListener()</code>
+            yordamida <code>click</code>
+            event qo‘shing.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 📝
+            </b>
+
+            <br>
+
+            Input yarating.
+            Foydalanuvchi yozgan matnni
+            <code>input</code> event orqali
+            ekranga chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa ⌨️
+            </b>
+
+            <br>
+
+            <code>keydown</code> orqali
+            foydalanuvchi qaysi klaviatura
+            tugmasini bosganini ko‘rsating.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 📋
+            </b>
+
+            <br>
+
+            Select yarating va
+            <code>change</code> event orqali
+            tanlangan qiymatni chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 📤
+            </b>
+
+            <br>
+
+            Form yarating va
+            <code>submit</code> event orqali
+            formani boshqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🎯
+            </b>
+
+            <br>
+
+            <code>event.target</code>
+            yordamida qaysi button
+            bosilganini aniqlang.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🛒
+            </b>
+
+            <br>
+
+            "Add to Cart" tugmasi yarating.
+            Bosilganda:
+
+            <br><br>
+
+            <code>
+            "Mahsulot savatga qo‘shildi!"
+            </code>
+
+            degan xabar chiqsin.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                8-vazifa 🔥
+            </b>
+
+            <br>
+
+            Mini loyiha:
+
+            <br><br>
+
+            <strong class="text-white">
+                "Live Search"
+            </strong>
+
+            yarating.
+
+            <br><br>
+
+            Inputga yozilgan matn
+            ekranda darhol ko‘rinsin.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            🖱️ Event → foydalanuvchi yoki
+            brauzer sodir qiladigan hodisa.
+        </p>
+
+
+        <p>
+            ⚡ <code>addEventListener()</code>
+            → event qo‘shadi.
+        </p>
+
+
+        <p>
+            🖱️ <code>click</code>
+            → bosilganda ishlaydi.
+        </p>
+
+
+        <p>
+            ⌨️ <code>keydown</code>
+            → klaviatura bosilganda ishlaydi.
+        </p>
+
+
+        <p>
+            📝 <code>input</code>
+            → input qiymati o‘zgarganda ishlaydi.
+        </p>
+
+
+        <p>
+            📋 <code>change</code>
+            → qiymat o‘zgarganda ishlaydi.
+        </p>
+
+
+        <p>
+            📤 <code>submit</code>
+            → form yuborilganda ishlaydi.
+        </p>
+
+
+        <p>
+            🎯 <code>event.target</code>
+            → event sodir bo‘lgan elementni beradi.
+        </p>
+
+
+        <p>
+            🚫 <code>removeEventListener()</code>
+            → event listenerni olib tashlaydi.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT -->
+
+<section class="lesson-box">
+
+    <div class="text-6xl mb-5">
+        📝
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        Keyingi dars
+
+    </h2>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-4
+              leading-8">
+
+        <strong class="text-yellow-400">
+            59-dars
+        </strong>
+        → Formlar va inputlar bilan ishlash
+
+        <br><br>
+
+        Keyingi darsda form,
+        input qiymatlarini olish,
+        validatsiya va foydalanuvchi
+        ma'lumotlari bilan ishlashni
+        o‘rganamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        🖱️
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        58-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 58-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   CLICK EVENT
+===================================== */
+
+let clickBtn =
+    document.querySelector(
+        "#clickBtn"
+    );
+
+
+let clickResult =
+    document.querySelector(
+        "#clickResult"
+    );
+
+
+clickBtn.addEventListener(
+    "click",
+    function () {
+
+        clickResult.textContent =
+            "🎉 Tugma bosildi!";
+
+    }
+);
+
+
+
+/* =====================================
+   INPUT EVENT
+===================================== */
+
+let nameInput =
+    document.querySelector(
+        "#nameInput"
+    );
+
+
+let nameResult =
+    document.querySelector(
+        "#nameResult"
+    );
+
+
+nameInput.addEventListener(
+    "input",
+    function (event) {
+
+        if (event.target.value === "") {
+
+            nameResult.textContent =
+                "Ismingiz shu yerda chiqadi.";
+
+            return;
+
+        }
+
+
+        nameResult.textContent =
+            "Salom, " +
+            event.target.value +
+            "! 👋";
+
+    }
+);
+
+
+
+/* =====================================
+   CHANGE EVENT
+===================================== */
+
+let city =
+    document.querySelector(
+        "#city"
+    );
+
+
+let cityResult =
+    document.querySelector(
+        "#cityResult"
+    );
+
+
+city.addEventListener(
+    "change",
+    function (event) {
+
+        if (event.target.value === "") {
+
+            cityResult.textContent =
+                "Shahar tanlanmagan.";
+
+            return;
+
+        }
+
+
+        cityResult.textContent =
+            "Tanlangan shahar: " +
+            event.target.value;
+
+    }
+);
+
+
+
+/* =====================================
+   BUTTON TARGET
+===================================== */
+
+let targetButtons =
+    document.querySelectorAll(
+        ".targetBtn"
+    );
+
+
+let targetResult =
+    document.querySelector(
+        "#targetResult"
+    );
+
+
+targetButtons.forEach(
+    function (button) {
+
+        button.addEventListener(
+            "click",
+            function (event) {
+
+                targetResult.textContent =
+                    "Siz bosdingiz: " +
+                    event.target.textContent;
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =====================================
+   ADD TO CART
+===================================== */
+
+let cartButton =
+    document.querySelector(
+        "#cartBtn"
+    );
+
+
+let cartResult =
+    document.querySelector(
+        "#cartResult"
+    );
+
+
+cartButton.addEventListener(
+    "click",
+    function () {
+
+        cartResult.textContent =
+            "✅ Pizza savatga qo‘shildi!";
+
+        cartButton.textContent =
+            "✅ Savatga qo‘shildi";
+
+    }
+);
+
+
+
+/* =====================================
+   KEYDOWN
+===================================== */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        console.log(
+            "Bosilgan tugma:",
+            event.key
+        );
+
+    }
+);
+
+
+
+/* =====================================
+   COMPLETE LESSON
+===================================== */
+
+let completeBtn =
+    document.querySelector(
+        "#completeBtn"
+    );
+
+
+completeBtn.addEventListener(
+    "click",
+    function () {
+
+        let completedLessons =
+            JSON.parse(
+                localStorage.getItem(
+                    "jsCompletedLessons"
+                )
+            ) || [];
+
+
+        /*
+            57-dars tugagan bo‘lishi kerak
+        */
+
+        if (!completedLessons.includes(57)) {
+
+            alert(
+                "Avval 57-darsni tugating!"
+            );
+
+            window.location.href =
+                "js-lesson-57.html";
+
+            return;
+
+        }
+
+
+        /*
+            58-darsni saqlash
+        */
+
+        if (!completedLessons.includes(58)) {
+
+            completedLessons.push(58);
+
+        }
+
+
+        localStorage.setItem(
+            "jsCompletedLessons",
+            JSON.stringify(
+                completedLessons
+            )
+        );
+
+
+        document.querySelector(
+            "#message"
+        ).textContent =
+            "🎉 58-dars tugatildi! 59-dars ochildi.";
+
+
+        completeBtn.textContent =
+            "✅ 58-DARS TUGATILDI";
+
+
+        completeBtn.disabled = true;
+
+
+        completeBtn.classList.remove(
+            "bg-yellow-400",
+            "hover:bg-yellow-300"
+        );
+
+
+        completeBtn.classList.add(
+            "bg-green-600",
+            "text-white"
+        );
+
+
+        setTimeout(
+            function () {
+
+                window.location.href =
+                    "js-course.html";
+
+            },
+            1200
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

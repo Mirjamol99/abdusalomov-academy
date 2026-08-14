@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 60-dars | LocalStorage</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #020617;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+
+        .demo-input {
+            width: 100%;
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 14px;
+            padding: 14px 18px;
+            color: white;
+            outline: none;
+        }
+
+        .demo-input:focus {
+            border-color: #facc15;
+        }
+    </style>
+</head>
+
+
+<body class="text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-5
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        💾 60-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        LocalStorage
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugun JavaScript yordamida
+        ma'lumotlarni brauzerda saqlashni
+        o‘rganamiz.
+
+        <br><br>
+
+        LocalStorage yordamida foydalanuvchi
+        sahifani yopib ochsa ham ma'lumotlarni
+        saqlab qolish mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        💾 LocalStorage nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>localStorage</code> —
+        brauzerning ma'lumot saqlash
+        imkoniyatlaridan biri.
+
+        <br><br>
+
+        U orqali ma'lumotlarni
+        brauzerda saqlash mumkin.
+
+    </p>
+
+
+    <div class="info">
+
+        🔥 Masalan:
+
+        <br><br>
+
+        👤 Foydalanuvchi ismi
+
+        <br>
+
+        🛒 Savatchadagi mahsulotlar
+
+        <br>
+
+        ⚙️ Sozlamalar
+
+        <br>
+
+        🎨 Theme
+
+        <br>
+
+        📚 Kursdagi bajarilgan darslar
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📥 setItem()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        LocalStorage'ga ma'lumot
+        saqlash uchun
+        <code>setItem()</code>
+        ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>localStorage.setItem(
+    "name",
+    "Mirjamol"
+);</code></pre>
+
+    </div>
+
+
+    <div class="info">
+
+        Birinchi qiymat —
+        <strong>key</strong>.
+
+        <br><br>
+
+        Ikkinchi qiymat —
+        <strong>value</strong>.
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📤 getItem()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Saqlangan ma'lumotni olish uchun
+        <code>getItem()</code> ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let name =
+    localStorage.getItem("name");
+
+console.log(name);</code></pre>
+
+    </div>
+
+
+    <div class="info">
+
+        Natija:
+
+        <br><br>
+
+        <code>Mirjamol</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🗑️ removeItem()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Bitta ma'lumotni o‘chirish uchun
+        <code>removeItem()</code>
+        ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>localStorage.removeItem(
+    "name"
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 mt-5">
+
+        Endi <code>name</code>
+        mavjud bo‘lmaydi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧹 clear()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        LocalStorage'dagi barcha
+        ma'lumotlarni o‘chirish uchun
+        <code>clear()</code> ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>localStorage.clear();</code></pre>
+
+    </div>
+
+
+    <div class="info">
+
+        ⚠️ E'tibor!
+
+        <br><br>
+
+        <code>clear()</code>
+        barcha LocalStorage ma'lumotlarini
+        o‘chiradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 LocalStorage faqat string saqlaydi
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        LocalStorage ma'lumotlarni
+        asosan <strong>string</strong>
+        ko‘rinishida saqlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>localStorage.setItem(
+    "age",
+    15
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 mt-5">
+
+        Olib ko‘rsak:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let age =
+    localStorage.getItem("age");
+
+console.log(age);</code></pre>
+
+    </div>
+
+
+    <div class="info">
+
+        Agar son bilan hisoblash kerak bo‘lsa:
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let age =
+    Number(
+        localStorage.getItem("age")
+    );
+
+console.log(age + 1);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 JSON.stringify()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object yoki Array'ni
+        LocalStorage'ga saqlash uchun
+        <code>JSON.stringify()</code>
+        ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Mirjamol",
+    age: 15
+};
+
+let data =
+    JSON.stringify(user);
+
+console.log(data);</code></pre>
+
+    </div>
+
+
+    <div class="info">
+
+        <code>JSON.stringify()</code>
+
+        <br><br>
+
+        Object → String
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔁 JSON.parse()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        JSON stringni yana Object'ga
+        aylantirish uchun
+        <code>JSON.parse()</code>
+        ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let data =
+    '{"name":"Mirjamol","age":15}';
+
+let user =
+    JSON.parse(data);
+
+console.log(user.name);</code></pre>
+
+    </div>
+
+
+    <div class="info">
+
+        <code>JSON.parse()</code>
+
+        <br><br>
+
+        String → Object
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Object saqlash
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 20,
+    city: "Qarshi"
+};
+
+
+localStorage.setItem(
+    "user",
+    JSON.stringify(user)
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 mt-5">
+
+        Keyin olish:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let savedUser =
+    JSON.parse(
+        localStorage.getItem("user")
+    );
+
+
+console.log(savedUser.name);
+console.log(savedUser.age);
+console.log(savedUser.city);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📚 Array saqlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Array'ni ham LocalStorage'da
+        saqlash mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana",
+    "Orange"
+];
+
+
+localStorage.setItem(
+    "fruits",
+    JSON.stringify(fruits)
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 mt-5">
+
+        Olish:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let savedFruits =
+    JSON.parse(
+        localStorage.getItem("fruits")
+    );
+
+
+console.log(savedFruits);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Form + LocalStorage
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        59-darsda o‘rgangan
+        formamizni LocalStorage bilan
+        birlashtiramiz.
+
+    </p>
+
+
+    <div class="bg-black rounded-3xl p-8 mt-7">
+
+        <form id="nameForm"
+              class="space-y-5">
+
+
+            <input
+                id="nameInput"
+                type="text"
+                placeholder="Ismingizni kiriting..."
+                class="demo-input"
+                required>
+
+
+            <button
+                type="submit"
+                class="w-full
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-4
+                       rounded-xl
+                       font-extrabold">
+
+                💾 Saqlash
+
+            </button>
+
+        </form>
+
+
+        <p id="savedName"
+           class="text-slate-400 mt-6">
+
+            Ism hali saqlanmagan.
+
+        </p>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let form =
+    document.querySelector("#nameForm");
+
+
+form.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        let name =
+            document.querySelector(
+                "#nameInput"
+            ).value;
+
+
+        localStorage.setItem(
+            "name",
+            name
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Sahifa ochilganda ma'lumotni olish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        LocalStorage'ning eng katta
+        foydasi — sahifa qayta ochilganda
+        ma'lumotni yana olish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let savedName =
+    localStorage.getItem("name");
+
+
+if (savedName) {
+
+    console.log(
+        "Salom, " + savedName
+    );
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Cart bilan LocalStorage
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        E-commerce saytlarida
+        savatchani saqlash uchun
+        LocalStorage juda foydali.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let cart = [
+    {
+        id: 1,
+        name: "Pizza",
+        price: 50000
+    }
+];
+
+
+localStorage.setItem(
+    "cart",
+    JSON.stringify(cart)
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 mt-5">
+
+        Savatchani qayta olish:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let cart =
+    JSON.parse(
+        localStorage.getItem("cart")
+    ) || [];
+
+
+console.log(cart);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➕ LocalStorage'ga yangi item qo‘shish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let cart =
+    JSON.parse(
+        localStorage.getItem("cart")
+    ) || [];
+
+
+cart.push({
+    id: 2,
+    name: "Burger",
+    price: 30000
+});
+
+
+localStorage.setItem(
+    "cart",
+    JSON.stringify(cart)
+);</code></pre>
+
+    </div>
+
+
+    <div class="info">
+
+        🔥 Muhim:
+
+        <br><br>
+
+        Avval LocalStorage'dan
+        Array'ni olamiz.
+
+        <br><br>
+
+        Keyin <code>push()</code>
+        qilamiz.
+
+        <br><br>
+
+        Oxirida yana LocalStorage'ga
+        saqlaymiz.
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🗑️ Cart item o‘chirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>cart =
+    cart.filter(function(item) {
+
+        return item.id !== 2;
+
+    });
+
+
+localStorage.setItem(
+    "cart",
+    JSON.stringify(cart)
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎨 Theme saqlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Foydalanuvchi tanlagan theme'ni
+        ham LocalStorage'ga saqlash mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>localStorage.setItem(
+    "theme",
+    "dark"
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 mt-5">
+
+        Keyin:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let theme =
+    localStorage.getItem("theme");
+
+console.log(theme);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📚 Dars progressini saqlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Kurs saytimizda tugatilgan
+        darslarni LocalStorage'ga
+        saqlashimiz mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let completedLessons =
+    JSON.parse(
+        localStorage.getItem(
+            "completedLessons"
+        )
+    ) || [];
+
+
+completedLessons.push(60);
+
+
+localStorage.setItem(
+    "completedLessons",
+    JSON.stringify(
+        completedLessons
+    )
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 LocalStorage mavjudligini tekshirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let name =
+    localStorage.getItem("name");
+
+
+if (name !== null) {
+
+    console.log(
+        "Ma'lumot mavjud!"
+    );
+
+} else {
+
+    console.log(
+        "Ma'lumot topilmadi!"
+    );
+
+}</code></pre>
+
+    </div>
+
+
+    <div class="info">
+
+        Agar key mavjud bo‘lmasa,
+        <code>getItem()</code>
+        odatda <code>null</code>
+        qaytaradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 LocalStorage metodlari
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-5">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl
+                       font-bold
+                       text-yellow-400">
+
+                setItem()
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Ma'lumot saqlaydi.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl
+                       font-bold
+                       text-yellow-400">
+
+                getItem()
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Ma'lumotni oladi.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl
+                       font-bold
+                       text-yellow-400">
+
+                removeItem()
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Bitta ma'lumotni o‘chiradi.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl
+                       font-bold
+                       text-yellow-400">
+
+                clear()
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Barcha ma'lumotlarni o‘chiradi.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl
+                       font-bold
+                       text-yellow-400">
+
+                JSON.stringify()
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Object yoki Array'ni
+                JSON stringga aylantiradi.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl
+                       font-bold
+                       text-yellow-400">
+
+                JSON.parse()
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                JSON stringni
+                Object yoki Array'ga aylantiradi.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Mini loyiha — Name Saver
+
+    </h2>
+
+
+    <div class="bg-black rounded-3xl p-8">
+
+        <input
+            id="userName"
+            type="text"
+            placeholder="Ismingiz..."
+            class="demo-input">
+
+
+        <div class="grid md:grid-cols-2 gap-4 mt-5">
+
+
+            <button
+                id="saveBtn"
+                class="bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-4
+                       rounded-xl
+                       font-bold">
+
+                💾 Saqlash
+
+            </button>
+
+
+            <button
+                id="deleteBtn"
+                class="bg-red-500
+                       hover:bg-red-400
+                       py-4
+                       rounded-xl
+                       font-bold">
+
+                🗑️ O‘chirish
+
+            </button>
+
+        </div>
+
+
+        <p id="nameResult"
+           class="text-slate-400 mt-6">
+
+            Ma'lumot yo‘q.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 21 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        💡 To‘liq ishlash jarayoni
+
+    </h2>
+
+
+    <div class="space-y-5">
+
+
+        <div class="method-card">
+
+            1️⃣ Foydalanuvchi ma'lumot kiritadi.
+
+        </div>
+
+
+        <div class="method-card">
+
+            2️⃣ JavaScript input qiymatini oladi.
+
+        </div>
+
+
+        <div class="method-card">
+
+            3️⃣ Ma'lumot LocalStorage'ga saqlanadi.
+
+        </div>
+
+
+        <div class="method-card">
+
+            4️⃣ Sahifa yopiladi.
+
+        </div>
+
+
+        <div class="method-card">
+
+            5️⃣ Sahifa qayta ochiladi.
+
+        </div>
+
+
+        <div class="method-card">
+
+            6️⃣ JavaScript LocalStorage'dan
+            ma'lumotni qayta oladi.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 22 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ Muhim eslatma
+
+    </h2>
+
+
+    <div class="info">
+
+        LocalStorage katta hajmdagi ma'lumotlar
+        yoki maxfiy ma'lumotlarni saqlash uchun
+        mo‘ljallanmagan.
+
+        <br><br>
+
+        Masalan, foydalanuvchining
+        <strong>parolini</strong> oddiy
+        LocalStorage'da saqlash xavfsiz
+        yechim emas.
+
+    </div>
+
+</section>
+
+
+
+<!-- 23 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 💾
+            </b>
+
+            <br>
+
+            Ismni LocalStorage'ga saqlang.
+
+            <br><br>
+
+            Key:
+
+            <code>name</code>
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 📤
+            </b>
+
+            <br>
+
+            Saqlangan ismni
+            <code>getItem()</code>
+            orqali oling.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🗑️
+            </b>
+
+            <br>
+
+            <code>removeItem()</code>
+            yordamida ismni o‘chiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 📦
+            </b>
+
+            <br>
+
+            Quyidagi Object'ni LocalStorage'ga
+            saqlang:
+
+            <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18,
+    city: "Qarshi"
+};</code></pre>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 📚
+            </b>
+
+            <br>
+
+            5 ta ismni Array qilib
+            LocalStorage'ga saqlang.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🛒
+            </b>
+
+            <br>
+
+            Cart yarating va uni
+            LocalStorage'da saqlang.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🔥
+            </b>
+
+            <br>
+
+            59-darsdagi formani
+            LocalStorage bilan ulang.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                8-vazifa 🚀
+            </b>
+
+            <br>
+
+            Mini loyiha:
+
+            <br><br>
+
+            <strong class="text-white">
+                Todo List
+            </strong>
+
+            yarating.
+
+            <br><br>
+
+            Vazifa qo‘shish,
+            o‘chirish va sahifa qayta
+            ochilganda ham vazifalarni
+            saqlab qolish kerak.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            💾 <code>setItem()</code>
+            → ma'lumot saqlaydi.
+        </p>
+
+
+        <p>
+            📤 <code>getItem()</code>
+            → ma'lumotni oladi.
+        </p>
+
+
+        <p>
+            🗑️ <code>removeItem()</code>
+            → bitta ma'lumotni o‘chiradi.
+        </p>
+
+
+        <p>
+            🧹 <code>clear()</code>
+            → hamma ma'lumotni o‘chiradi.
+        </p>
+
+
+        <p>
+            🔄 <code>JSON.stringify()</code>
+            → Object/Array → String.
+        </p>
+
+
+        <p>
+            🔁 <code>JSON.parse()</code>
+            → String → Object/Array.
+        </p>
+
+
+        <p>
+            📦 Object va Array'larni
+            LocalStorage'da saqlash mumkin.
+        </p>
+
+
+        <p>
+            🔥 Form + LocalStorage
+            birgalikda juda ko‘p loyihalarda
+            ishlatiladi.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT LESSON -->
+
+<section class="lesson-box">
+
+    <div class="text-6xl mb-5">
+        📦
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        Keyingi dars
+
+    </h2>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-4
+              leading-8">
+
+        <strong class="text-yellow-400">
+            61-dars
+        </strong>
+        → JSON
+
+        <br><br>
+
+        Keyingi darsda JavaScript'da
+        JSON bilan ishlashni o‘rganamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        💾
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        60-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 60-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   1. FORM + LOCAL STORAGE
+===================================== */
+
+let nameForm =
+    document.querySelector(
+        "#nameForm"
+    );
+
+
+nameForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        let name =
+            document.querySelector(
+                "#nameInput"
+            ).value.trim();
+
+
+        if (name === "") {
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "name",
+            name
+        );
+
+
+        showSavedName();
+
+    }
+);
+
+
+
+/* =====================================
+   2. SHOW SAVED NAME
+===================================== */
+
+function showSavedName() {
+
+    let savedName =
+        localStorage.getItem(
+            "name"
+        );
+
+
+    let result =
+        document.querySelector(
+            "#savedName"
+        );
+
+
+    if (savedName) {
+
+        result.textContent =
+            "👋 Salom, " +
+            savedName +
+            "! Ma'lumot LocalStorage'da saqlangan.";
+
+    } else {
+
+        result.textContent =
+            "Ism hali saqlanmagan.";
+
+    }
+
+}
+
+
+showSavedName();
+
+
+
+/* =====================================
+   3. MINI PROJECT
+===================================== */
+
+let userName =
+    document.querySelector(
+        "#userName"
+    );
+
+
+let saveBtn =
+    document.querySelector(
+        "#saveBtn"
+    );
+
+
+let deleteBtn =
+    document.querySelector(
+        "#deleteBtn"
+    );
+
+
+let nameResult =
+    document.querySelector(
+        "#nameResult"
+    );
+
+
+
+saveBtn.addEventListener(
+    "click",
+    function() {
+
+        let name =
+            userName.value.trim();
+
+
+        if (name === "") {
+
+            nameResult.textContent =
+                "❌ Ismingizni kiriting!";
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "userName",
+            name
+        );
+
+
+        nameResult.textContent =
+            "✅ Saqlandi: " + name;
+
+    }
+);
+
+
+
+deleteBtn.addEventListener(
+    "click",
+    function() {
+
+        localStorage.removeItem(
+            "userName"
+        );
+
+
+        userName.value = "";
+
+
+        nameResult.textContent =
+            "🗑️ Ma'lumot o‘chirildi.";
+
+    }
+);
+
+
+
+/* =====================================
+   4. LOAD SAVED DATA
+===================================== */
+
+let savedUserName =
+    localStorage.getItem(
+        "userName"
+    );
+
+
+if (savedUserName) {
+
+    userName.value =
+        savedUserName;
+
+
+    nameResult.textContent =
+        "📦 Saqlangan ism: " +
+        savedUserName;
+
+}
+
+
+
+/* =====================================
+   5. COMPLETE LESSON
+===================================== */
+
+let completeBtn =
+    document.querySelector(
+        "#completeBtn"
+    );
+
+
+completeBtn.addEventListener(
+    "click",
+    function() {
+
+
+        let completedLessons =
+            JSON.parse(
+                localStorage.getItem(
+                    "jsCompletedLessons"
+                )
+            ) || [];
+
+
+        /*
+            59-dars tugaganini tekshiramiz
+        */
+
+        if (
+            !completedLessons.includes(59)
+        ) {
+
+            alert(
+                "Avval 59-darsni tugating!"
+            );
+
+
+            window.location.href =
+                "js-lesson-59.html";
+
+
+            return;
+
+        }
+
+
+        /*
+            60-darsni saqlaymiz
+        */
+
+        if (
+            !completedLessons.includes(60)
+        ) {
+
+            completedLessons.push(60);
+
+        }
+
+
+        localStorage.setItem(
+            "jsCompletedLessons",
+            JSON.stringify(
+                completedLessons
+            )
+        );
+
+
+        document.querySelector(
+            "#message"
+        ).textContent =
+            "🎉 60-dars tugatildi! 61-dars ochildi.";
+
+
+        completeBtn.textContent =
+            "✅ 60-DARS TUGATILDI";
+
+
+        completeBtn.disabled = true;
+
+
+        completeBtn.classList.remove(
+            "bg-yellow-400",
+            "hover:bg-yellow-300"
+        );
+
+
+        completeBtn.classList.add(
+            "bg-green-600",
+            "text-white"
+        );
+
+
+        setTimeout(
+            function() {
+
+                window.location.href =
+                    "js-course.html";
+
+            },
+            1200
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

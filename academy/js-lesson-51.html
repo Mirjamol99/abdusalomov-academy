@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 51-dars | Math Object</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        🧮 51-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        Math object
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript'dagi
+        <code>Math</code> object bilan
+        matematik hisob-kitoblarni
+        bajarishni o‘rganamiz.
+
+        <br><br>
+
+        Sonlarni yaxlitlash, tasodifiy son
+        yaratish, daraja, ildiz, maksimum,
+        minimum va boshqa matematik
+        amallarni ko‘rib chiqamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧮 Math object nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>Math</code> — JavaScript'da
+        matematik hisoblashlar uchun
+        tayyor property va methodlarni
+        beradigan object.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(Math);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Math'ni yaratish uchun
+        <code>new Math()</code> yozilmaydi.
+
+        <br><br>
+
+        To‘g‘ridan-to‘g‘ri:
+
+        <br><br>
+
+        <code>Math.method()</code>
+
+        ko‘rinishida ishlatiladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Math.round()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sonni eng yaqin butun songa
+        yaxlitlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(Math.round(4.4));
+
+console.log(Math.round(4.5));
+
+console.log(Math.round(4.8));</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>4
+5
+5</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⬇️ Math.floor()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sonni pastga qarab butun songa
+        yaxlitlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(Math.floor(4.9));
+
+console.log(Math.floor(4.1));</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>4
+4</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⬆️ Math.ceil()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sonni yuqoriga qarab butun songa
+        yaxlitlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(Math.ceil(4.1));
+
+console.log(Math.ceil(4.9));</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>5
+5</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔽 Math.trunc()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Kasr qismini olib tashlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(Math.trunc(5.9));
+
+console.log(Math.trunc(5.1));</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>5
+5</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➖ Math.abs()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sonning absolyut qiymatini
+        qaytaradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(Math.abs(-10));
+
+console.log(Math.abs(10));
+
+console.log(Math.abs(-25));</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10
+10
+25</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Math.max()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Berilgan sonlar ichidan eng
+        kattasini topadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let result = Math.max(
+    10,
+    50,
+    30,
+    90,
+    20
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>90</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Math.min()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Berilgan sonlar ichidan eng
+        kichigini topadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let result = Math.min(
+    10,
+    50,
+    30,
+    90,
+    20
+);
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        0️⃣ Math.pow()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sonni darajaga ko‘taradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(
+    Math.pow(2, 3)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>8</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Zamonaviy JavaScript'da
+        <code>**</code> operatoridan ham
+        foydalanish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(2 ** 3);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        √ Math.sqrt()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sonning kvadrat ildizini topadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(
+    Math.sqrt(25)
+);
+
+console.log(
+    Math.sqrt(81)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>5
+9</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎲 Math.random()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>0</code> dan
+        <code>1</code> gacha tasodifiy
+        son qaytaradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(
+    Math.random()
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Natija masalan:
+
+        <br><br>
+
+        <code>0.235671</code>
+
+        <br>
+
+        yoki
+
+        <br>
+
+        <code>0.874521</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 1 dan 10 gacha random son
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let number =
+    Math.floor(
+        Math.random() * 10
+    ) + 1;
+
+console.log(number);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu kod:
+
+        <br><br>
+
+        <code>1</code> dan
+        <code>10</code> gacha bo‘lgan
+        tasodifiy butun son beradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 1 dan 100 gacha random
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let number =
+    Math.floor(
+        Math.random() * 100
+    ) + 1;
+
+console.log(number);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Random son formulasi
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Istalgan oraliqda random butun son
+        olish uchun:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>Math.floor(
+    Math.random() * (max - min + 1)
+) + min;</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let min = 10;
+let max = 20;
+
+let number =
+    Math.floor(
+        Math.random() *
+        (max - min + 1)
+    ) + min;
+
+console.log(number);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📐 Math.PI
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>Math.PI</code> — π sonining
+        qiymatini beradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(Math.PI);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>3.141592653589793</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⭕ Doira yuzini hisoblash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Formula:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let radius = 5;
+
+let area =
+    Math.PI *
+    radius ** 2;
+
+console.log(area);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⭕ Doira uzunligi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let radius = 5;
+
+let length =
+    2 *
+    Math.PI *
+    radius;
+
+console.log(length);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Math.sign()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sonning musbat, manfiy yoki
+        nol ekanini aniqlashga yordam beradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(Math.sign(10));
+
+console.log(Math.sign(-10));
+
+console.log(Math.sign(0));</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>1
+-1
+0</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Math.cbrt()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sonning kub ildizini topadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(
+    Math.cbrt(27)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>3</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Math.hypot()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Berilgan sonlarning kvadratlari
+        yig‘indisidan kvadrat ildiz oladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(
+    Math.hypot(3, 4)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>5</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 21 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Math.log()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Natural logarifmni hisoblaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(
+    Math.log(1)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>0</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 22 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ Math.exp()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>e</code> sonining berilgan
+        darajasini hisoblaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>console.log(
+    Math.exp(1)
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 23 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📊 Math metodlari jadvali
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <code>Math.round()</code>
+
+            <p class="text-slate-400 mt-3">
+                Eng yaqin butun songa yaxlitlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.floor()</code>
+
+            <p class="text-slate-400 mt-3">
+                Pastga yaxlitlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.ceil()</code>
+
+            <p class="text-slate-400 mt-3">
+                Yuqoriga yaxlitlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.trunc()</code>
+
+            <p class="text-slate-400 mt-3">
+                Kasr qismini olib tashlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.abs()</code>
+
+            <p class="text-slate-400 mt-3">
+                Absolyut qiymat.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.max()</code>
+
+            <p class="text-slate-400 mt-3">
+                Eng katta son.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.min()</code>
+
+            <p class="text-slate-400 mt-3">
+                Eng kichik son.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.pow()</code>
+
+            <p class="text-slate-400 mt-3">
+                Darajaga ko‘taradi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.sqrt()</code>
+
+            <p class="text-slate-400 mt-3">
+                Kvadrat ildiz.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.random()</code>
+
+            <p class="text-slate-400 mt-3">
+                Tasodifiy son.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.PI</code>
+
+            <p class="text-slate-400 mt-3">
+                π qiymati.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.sign()</code>
+
+            <p class="text-slate-400 mt-3">
+                Son ishorasini aniqlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.cbrt()</code>
+
+            <p class="text-slate-400 mt-3">
+                Kub ildiz.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>Math.hypot()</code>
+
+            <p class="text-slate-400 mt-3">
+                Gipotenuza hisoblashda ishlatilishi mumkin.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 24 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎮 Real loyiha: Random Number Game
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Foydalanuvchiga 1 dan 10 gacha
+        random son chiqaramiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function generateNumber() {
+
+    let number =
+        Math.floor(
+            Math.random() * 10
+        ) + 1;
+
+
+    document.getElementById(
+        "randomNumber"
+    ).textContent = number;
+
+}</code></pre>
+
+    </div>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center
+                mt-6">
+
+
+        <div
+            id="randomNumber"
+            class="text-6xl
+                   font-extrabold
+                   text-yellow-400">
+
+            ?
+
+        </div>
+
+
+        <button
+            onclick="generateNumber()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🎲 Random son
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- 25 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Real loyiha: Random rang
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        JavaScript'da RGB qiymatlar
+        0 dan 255 gacha bo‘ladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let red =
+    Math.floor(
+        Math.random() * 256
+    );
+
+let green =
+    Math.floor(
+        Math.random() * 256
+    );
+
+let blue =
+    Math.floor(
+        Math.random() * 256
+    );
+
+
+let color =
+    `rgb(${red}, ${green}, ${blue})`;
+
+
+console.log(color);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 26 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Real loyihada Math
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Math object real loyihalarda juda
+        ko‘p ishlatiladi.
+
+    </p>
+
+
+    <div class="grid md:grid-cols-2 gap-6 mt-6">
+
+
+        <div class="method-card">
+            🎲 Random mahsulot ID
+        </div>
+
+
+        <div class="method-card">
+            💰 Narxni yaxlitlash
+        </div>
+
+
+        <div class="method-card">
+            📊 Statistik hisoblash
+        </div>
+
+
+        <div class="method-card">
+            🎮 O‘yinlarda random
+        </div>
+
+
+        <div class="method-card">
+            📐 Geometriya
+        </div>
+
+
+        <div class="method-card">
+            🎨 Random ranglar
+        </div>
+
+
+        <div class="method-card">
+            🔢 Pagination hisoblash
+        </div>
+
+
+        <div class="method-card">
+            📦 Mahsulot miqdorini hisoblash
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🔢
+            </b>
+
+            <br>
+
+            <code>4.7</code> sonini
+            <code>round</code>,
+            <code>floor</code>,
+            <code>ceil</code>,
+            <code>trunc</code>
+            bilan ishlating.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 🔢
+            </b>
+
+            <br>
+
+            <code>-25</code> sonining
+            absolyut qiymatini toping.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🎯
+            </b>
+
+            <br>
+
+            Quyidagi sonlarning eng kattasi
+            va eng kichigini toping:
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>15, 72, 8, 44, 91, 32</code></pre>
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa √
+            </b>
+
+            <br>
+
+            <code>144</code> sonining
+            kvadrat ildizini toping.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa ⚡
+            </b>
+
+            <br>
+
+            <code>2</code> ni
+            <code>10</code>-darajaga ko‘taring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🎲
+            </b>
+
+            <br>
+
+            1 dan 100 gacha random
+            butun son yarating.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🎯
+            </b>
+
+            <br>
+
+            50 dan 100 gacha random
+            son yarating.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                8-vazifa ⭕
+            </b>
+
+            <br>
+
+            Radiusi 10 bo‘lgan doiraning
+            yuzini hisoblang.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                9-vazifa 🎮
+            </b>
+
+            <br>
+
+            1 dan 10 gacha random son
+            chiqaradigan tugma yarating.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                10-vazifa 🔥
+            </b>
+
+            <br>
+
+            1 dan 100 gacha random son
+            chiqaring va agar son 50 dan katta
+            bo‘lsa <code>"Katta"</code>,
+            aks holda <code>"Kichik"</code>
+            deb chiqaring.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            🧮 <code>Math</code>
+            → matematik amallar uchun.
+        </p>
+
+
+        <p>
+            🔢 <code>Math.round()</code>
+            → eng yaqin butun son.
+        </p>
+
+
+        <p>
+            ⬇️ <code>Math.floor()</code>
+            → pastga yaxlitlash.
+        </p>
+
+
+        <p>
+            ⬆️ <code>Math.ceil()</code>
+            → yuqoriga yaxlitlash.
+        </p>
+
+
+        <p>
+            🔽 <code>Math.trunc()</code>
+            → kasr qismini olib tashlash.
+        </p>
+
+
+        <p>
+            ➖ <code>Math.abs()</code>
+            → absolyut qiymat.
+        </p>
+
+
+        <p>
+            📈 <code>Math.max()</code>
+            → eng katta son.
+        </p>
+
+
+        <p>
+            📉 <code>Math.min()</code>
+            → eng kichik son.
+        </p>
+
+
+        <p>
+            ⚡ <code>Math.pow()</code>
+            → daraja.
+        </p>
+
+
+        <p>
+            √ <code>Math.sqrt()</code>
+            → kvadrat ildiz.
+        </p>
+
+
+        <p>
+            🎲 <code>Math.random()</code>
+            → random son.
+        </p>
+
+
+        <p>
+            📐 <code>Math.PI</code>
+            → π qiymati.
+        </p>
+
+
+        <p>
+            🔢 <code>Math.sign()</code>
+            → son ishorasi.
+        </p>
+
+
+        <p>
+            🌱 <code>Math.cbrt()</code>
+            → kub ildiz.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        🧮
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        51-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 51-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   RANDOM NUMBER
+===================================== */
+
+function generateNumber() {
+
+    let number =
+        Math.floor(
+            Math.random() * 10
+        ) + 1;
+
+
+    document.getElementById(
+        "randomNumber"
+    ).textContent = number;
+
+}
+
+
+
+/* =====================================
+   LESSON COMPLETE
+===================================== */
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        50-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(50)) {
+
+        alert(
+            "Avval 50-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-50.html";
+
+        return;
+
+    }
+
+
+    /*
+        51-darsni saqlash
+    */
+
+    if (!completedLessons.includes(51)) {
+
+        completedLessons.push(51);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 51-dars tugatildi! 52-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 51-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

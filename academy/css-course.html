@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Kursi | Abdusalomov Academy</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- LOGIN TEKSHIRISH -->
+<script>
+
+    const currentUser =
+        JSON.parse(
+            localStorage.getItem("academyCurrentUser")
+        );
+
+    if (!currentUser) {
+
+        window.location.href = "login.html";
+
+    }
+
+</script>
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- BACKGROUND -->
+
+<div class="fixed top-20 left-10
+            w-72 h-72
+            bg-blue-600/10
+            rounded-full
+            blur-3xl
+            pointer-events-none">
+</div>
+
+<div class="fixed bottom-20 right-10
+            w-80 h-80
+            bg-purple-600/10
+            rounded-full
+            blur-3xl
+            pointer-events-none">
+</div>
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <!-- DESKTOP MENU -->
+
+        <div class="hidden md:flex
+                    items-center
+                    gap-8">
+
+            <a href="index.html"
+               class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+
+                Bosh sahifa
+
+            </a>
+
+            <a href="courses.html"
+               class="text-blue-400
+                      font-semibold">
+
+                Kurslar
+
+            </a>
+
+            <a href="about.html"
+               class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+
+                Men haqimda
+
+            </a>
+
+            <a href="contact.html"
+               class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+
+                Bog'lanish
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button id="menuBtn"
+                class="md:hidden
+                       text-2xl
+                       text-white">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+
+    <!-- MOBILE MENU -->
+
+    <div id="mobileMenu"
+         class="hidden
+                md:hidden
+                border-t
+                border-slate-800
+                bg-slate-950">
+
+        <a href="index.html"
+           class="block px-6 py-4
+                  hover:bg-slate-900">
+
+            🏠 Bosh sahifa
+
+        </a>
+
+        <a href="courses.html"
+           class="block px-6 py-4
+                  hover:bg-slate-900">
+
+            📚 Kurslar
+
+        </a>
+
+        <a href="about.html"
+           class="block px-6 py-4
+                  hover:bg-slate-900">
+
+            👨 Men haqimda
+
+        </a>
+
+        <a href="contact.html"
+           class="block px-6 py-4
+                  hover:bg-slate-900">
+
+            📞 Bog'lanish
+
+        </a>
+
+    </div>
+
+</header>
+
+     <!-- HERO -->
+
+<section class="max-w-7xl mx-auto
+                px-6
+                pt-16
+                pb-12">
+
+    <div class="max-w-4xl">
+
+        <span class="inline-flex
+                     items-center
+                     gap-2
+                     bg-blue-500/10
+                     border border-blue-500/20
+                     text-blue-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            CSS KURSI
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-7
+                   leading-tight">
+
+            CSS ni
+
+            <span class="text-transparent
+                         bg-clip-text
+                         bg-gradient-to-r
+                         from-blue-400
+                         to-cyan-300">
+
+                0 dan
+
+            </span>
+
+            o'rganing.
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-6
+                  max-w-3xl">
+
+            CSS yordamida web-saytlarni
+            chiroyli, zamonaviy va responsive
+            qilishni bosqichma-bosqich
+            o'rganing.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- PROGRESS -->
+
+    <div class="mt-10
+                max-w-2xl
+                bg-slate-900
+                border border-slate-800
+                rounded-2xl
+                p-5">
+
+        <div class="flex
+                    items-center
+                    justify-between
+                    mb-3">
+
+            <span class="font-semibold">
+
+                Kurs progressi
+
+            </span>
+
+
+            <span id="progressText"
+                  class="text-blue-400
+                         font-bold">
+
+                0 / 20
+
+            </span>
+
+        </div>
+
+
+        <div class="h-3
+                    bg-slate-800
+                    rounded-full
+                    overflow-hidden">
+
+            <div id="progressBar"
+                 class="h-full
+                        bg-gradient-to-r
+                        from-blue-500
+                        to-cyan-400
+                        transition-all
+                        duration-500"
+                 style="width: 0%">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+     <!-- LESSONS -->
+
+<main class="max-w-7xl mx-auto
+            px-6
+            pb-20">
+
+
+    <div class="text-center mb-12">
+
+        <h2 class="text-3xl md:text-5xl
+                   font-extrabold">
+
+            CSS darslari 🎨
+
+        </h2>
+
+
+        <p class="text-slate-400 mt-4">
+
+            Darslarni ketma-ket tugating
+            va keyingi darslarni oching.
+
+        </p>
+
+    </div>
+
+
+    <div id="lessonsGrid"
+         class="grid sm:grid-cols-2
+                lg:grid-cols-3
+                gap-6">
+
+    </div>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- STYLE -->
+
+<style>
+
+.lesson-card {
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    transition: .3s;
+
+}
+
+
+.lesson-card:hover:not(.locked) {
+
+    transform: translateY(-5px);
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 15px 40px
+        rgba(37, 99, 235, .12);
+
+}
+
+
+.lesson-number {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(59,130,246,.12);
+
+    color: #60a5fa;
+
+    font-weight: 800;
+
+    font-size: 18px;
+
+}
+
+
+.lesson-card.locked {
+
+    opacity: .55;
+
+}
+
+
+.lesson-card.completed {
+
+    border-color:
+        rgba(34,197,94,.4);
+
+}
+
+
+.lesson-card.completed
+.lesson-number {
+
+    background:
+        rgba(34,197,94,.12);
+
+    color: #4ade80;
+
+}
+
+
+.start-btn {
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+.start-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.lock-btn {
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #1e293b;
+
+    color: #64748b;
+
+    font-weight: 700;
+
+    cursor: not-allowed;
+
+}
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+// 20 TA CSS DARS
+
+const lessons = [
+
+    {
+        number: 1,
+        title: "CSS nima?",
+        description:
+            "CSS nima ekanini va nima uchun ishlatilishini o'rganamiz."
+    },
+
+    {
+        number: 2,
+        title: "CSS ulash usullari",
+        description:
+            "Inline, Internal va External CSS bilan ishlashni o'rganamiz."
+    },
+
+    {
+        number: 3,
+        title: "CSS Selectors",
+        description:
+            "CSS selectorlar yordamida HTML elementlarni tanlaymiz."
+    },
+
+    {
+        number: 4,
+        title: "Colors",
+        description:
+            "CSS yordamida ranglar bilan ishlashni o'rganamiz."
+    },
+
+    {
+        number: 5,
+        title: "Background",
+        description:
+            "Background rang, rasm va boshqa xususiyatlarni o'rganamiz."
+    },
+
+    {
+        number: 6,
+        title: "Text",
+        description:
+            "Matnni CSS orqali bezashni o'rganamiz."
+    },
+
+    {
+        number: 7,
+        title: "Font",
+        description:
+            "Font va shrift xususiyatlari bilan ishlaymiz."
+    },
+
+    {
+        number: 8,
+        title: "Border",
+        description:
+            "Elementlarga border va chegara berishni o'rganamiz."
+    },
+
+    {
+        number: 9,
+        title: "Margin",
+        description:
+            "Elementlarning tashqi masofasini boshqaramiz."
+    },
+
+    {
+        number: 10,
+        title: "Padding",
+        description:
+            "Element ichidagi masofani boshqarishni o'rganamiz."
+    },
+
+    {
+        number: 11,
+        title: "Width & Height",
+        description:
+            "Elementlarning kengligi va balandligini o'rganamiz."
+    },
+
+    {
+        number: 12,
+        title: "Box Model",
+        description:
+            "CSS Box Model qanday ishlashini o'rganamiz."
+    },
+
+    {
+        number: 13,
+        title: "Display",
+        description:
+            "block, inline va inline-block bilan ishlaymiz."
+    },
+
+    {
+        number: 14,
+        title: "Position",
+        description:
+            "Elementlarni sahifada joylashtirishni o'rganamiz."
+    },
+
+    {
+        number: 15,
+        title: "Flexbox",
+        description:
+            "Flexbox yordamida zamonaviy layout yaratamiz."
+    },
+
+    {
+        number: 16,
+        title: "CSS Grid",
+        description:
+            "Grid yordamida murakkab layoutlar yaratamiz."
+    },
+
+    {
+        number: 17,
+        title: "Hover & Transition",
+        description:
+            "Hover effekt va silliq transition yaratamiz."
+    },
+
+    {
+        number: 18,
+        title: "Transform & Animation",
+        description:
+            "Transform va CSS animation bilan ishlaymiz."
+    },
+
+    {
+        number: 19,
+        title: "Responsive Design",
+        description:
+            "Saytni telefon, planshet va kompyuterga moslashtiramiz."
+    },
+
+    {
+        number: 20,
+        title: "Mini loyiha 🚀",
+        description:
+            "O'rgangan CSS bilimlarimiz bilan zamonaviy web-sahifa yaratamiz."
+    }
+
+];
+
+// LOCAL STORAGE
+
+let completedLessons =
+    JSON.parse(
+        localStorage.getItem(
+            "cssCompletedLessons"
+        )
+    ) || [];
+
+// LESSONLARNI CHIQARISH
+
+function renderLessons() {
+
+    const grid =
+        document.getElementById(
+            "lessonsGrid"
+        );
+
+    grid.innerHTML = "";
+
+
+    lessons.forEach(
+        lesson => {
+
+            const number =
+                lesson.number;
+
+
+            const completed =
+                completedLessons.includes(
+                    number
+                );
+
+
+            const unlocked =
+                number === 1 ||
+                completedLessons.includes(
+                    number - 1
+                );
+
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "lesson-card " +
+                (!unlocked
+                    ? "locked "
+                    : "") +
+                (completed
+                    ? "completed"
+                    : "");
+
+            // QULFLANGAN
+
+            if (!unlocked) {
+
+                card.innerHTML = `
+
+                    <div class="flex
+                                items-center
+                                justify-between">
+
+                        <div class="lesson-number">
+
+                            ${number}
+
+                        </div>
+
+                        <i class="fa-solid
+                                  fa-lock
+                                  text-slate-600
+                                  text-xl">
+                        </i>
+
+                    </div>
+
+
+                    <h3 class="text-xl
+                               font-bold
+                               mt-5">
+
+                        ${number}.
+                        ${lesson.title}
+
+                    </h3>
+
+
+                    <p class="text-slate-500
+                              mt-3
+                              leading-7">
+
+                        ${lesson.description}
+
+                    </p>
+
+
+                    <div class="lock-btn">
+
+                        🔒 Oldingi darsni tugating
+
+                    </div>
+
+                `;
+
+            }
+
+            // TUGALLANGAN
+
+            else if (completed) {
+
+                card.innerHTML = `
+
+                    <div class="flex
+                                items-center
+                                justify-between">
+
+                        <div class="lesson-number">
+
+                            <i class="fa-solid
+                                      fa-check">
+                            </i>
+
+                        </div>
+
+
+                        <span class="text-green-400
+                                     text-sm
+                                     font-bold">
+
+                            TUGALLANGAN
+
+                        </span>
+
+                    </div>
+
+
+                    <h3 class="text-xl
+                               font-bold
+                               mt-5">
+
+                        ${number}.
+                        ${lesson.title}
+
+                    </h3>
+
+
+                    <p class="text-slate-400
+                              mt-3
+                              leading-7">
+
+                        ${lesson.description}
+
+                    </p>
+
+
+                    <a href="css-lesson-${number}.html"
+                       class="start-btn
+                              bg-green-600
+                              hover:bg-green-700">
+
+                        Qayta ko'rish →
+
+                    </a>
+
+                `;
+
+            }
+
+            // OCHIQ
+
+            else {
+
+                card.innerHTML = `
+
+                    <div class="flex
+                                items-center
+                                justify-between">
+
+                        <div class="lesson-number">
+
+                            ${number}
+
+                        </div>
+
+
+                        <i class="fa-solid
+                                  fa-lock-open
+                                  text-blue-400">
+                        </i>
+
+                    </div>
+
+
+                    <h3 class="text-xl
+                               font-bold
+                               mt-5">
+
+                        ${number}.
+                        ${lesson.title}
+
+                    </h3>
+
+
+                    <p class="text-slate-400
+                              mt-3
+                              leading-7">
+
+                        ${lesson.description}
+
+                    </p>
+
+
+                    <a href="css-lesson-${number}.html"
+                       class="start-btn">
+
+                        Darsni boshlash →
+
+                    </a>
+
+                `;
+
+            }
+
+
+            grid.appendChild(card);
+
+        }
+    );
+
+
+    updateProgress();
+
+}
+
+// PROGRESS
+
+function updateProgress() {
+
+    const completed =
+        completedLessons.length;
+
+
+    const percent =
+        Math.round(
+            (completed / 20) * 100
+        );
+
+
+    document.getElementById(
+        "progressText"
+    ).textContent =
+        `${completed} / 20`;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        `${percent}%`;
+
+}
+
+// MOBILE MENU
+
+const menuBtn =
+    document.getElementById(
+        "menuBtn"
+    );
+
+
+const mobileMenu =
+    document.getElementById(
+        "mobileMenu"
+    );
+
+
+menuBtn.addEventListener(
+    "click",
+    () => {
+
+        mobileMenu.classList.toggle(
+            "hidden"
+        );
+
+    }
+);
+
+
+const mobileLinks =
+    mobileMenu.querySelectorAll(
+        "a"
+    );
+
+
+mobileLinks.forEach(
+    link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                mobileMenu.classList.add(
+                    "hidden"
+                );
+
+            }
+        );
+
+    }
+);
+
+// START
+
+renderLessons();
+
+</script>
+
+
+</body>
+
+</html>

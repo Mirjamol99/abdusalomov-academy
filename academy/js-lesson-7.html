@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 7-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔤 07-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            String bilan ishlash
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bu darsda JavaScript'da matnlar bilan
+            ishlashni, String yaratishni,
+            birlashtirishni va String metodlaridan
+            foydalanishni o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String nima? 🔤
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>String</code> — JavaScript'da
+            matnlarni saqlash uchun ishlatiladigan
+            ma'lumot turi.
+
+            <br><br>
+
+            Masalan, ism, familiya, shahar,
+            telefon raqami yoki oddiy gap
+            String bo‘lishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let firstName = "Mirjamol";
+
+let lastName = "Abdusalomov";
+
+let city = "Toshkent";
+
+console.log(firstName);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String yaratish usullari
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript'da String'ni uch xil
+            yozishimiz mumkin:
+
+            <br><br>
+
+            1️⃣ Qo‘shtirnoq <code>" "</code>
+
+            <br>
+
+            2️⃣ Birtirnoq <code>' '</code>
+
+            <br>
+
+            3️⃣ Backtick <code>` `</code>
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name1 = "Ali";
+
+let name2 = 'Vali';
+
+let name3 = `Hasan`;</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Stringlarni birlashtirish +
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ikki yoki undan ortiq String'ni
+            <code>+</code> operatori yordamida
+            birlashtirish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let firstName = "Mirjamol";
+let lastName = "Abdusalomov";
+
+let fullName = firstName + " " + lastName;
+
+console.log(fullName);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>Mirjamol Abdusalomov</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String + Number 🔢
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            String bilan Number'ni
+            <code>+</code> orqali birlashtirsak,
+            JavaScript ularni matn sifatida
+            birlashtiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 15;
+
+console.log("Mening yoshim: " + age);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>Mening yoshim: 15</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Template Literal 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Template Literal backtick
+            <code>` `</code> yordamida yoziladi.
+
+            <br><br>
+
+            O‘zgaruvchini matn ichiga joylashtirish
+            uchun <code>${}</code> ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "Mirjamol";
+let age = 15;
+
+console.log(`Mening ismim ${name}.`);
+console.log(`Men ${age} yoshdaman.`);</code></pre>
+
+        </div>
+
+        <div class="mt-6 p-5 rounded-xl
+                    bg-green-400/10
+                    border border-green-400/20">
+
+            <p class="text-slate-300">
+
+                📌 Template Literal katta matnlarni
+                yozishda va o‘zgaruvchilarni
+                qo‘shishda juda qulay.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String uzunligi — length 📏
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>.length</code> String ichidagi
+            belgilar sonini aniqlaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "JavaScript";
+
+console.log(name.length);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>10</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Katta harflarga o‘tkazish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>toUpperCase()</code> String'dagi
+            barcha harflarni katta harfga
+            aylantiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let text = "javascript";
+
+console.log(text.toUpperCase());</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>JAVASCRIPT</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Kichik harflarga o‘tkazish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>toLowerCase()</code> barcha
+            harflarni kichik harfga aylantiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let text = "JAVASCRIPT";
+
+console.log(text.toLowerCase());</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>javascript</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Belgini olish — charAt()
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>charAt()</code> String ichidagi
+            ma'lum indeksdagi belgini qaytaradi.
+
+            <br><br>
+
+            JavaScript'da indeks
+            <b class="text-white">0</b> dan boshlanadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let word = "Salom";
+
+console.log(word.charAt(0));
+
+console.log(word.charAt(1));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>S
+a</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            includes() 🔎
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>includes()</code> String ichida
+            ma'lum matn bor yoki yo‘qligini
+            tekshiradi.
+
+            <br><br>
+
+            Natija <code>true</code> yoki
+            <code>false</code> bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let text = "Men JavaScript o‘rganayapman";
+
+console.log(text.includes("JavaScript"));
+
+console.log(text.includes("Python"));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            startsWith()
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>startsWith()</code> String
+            ma'lum matn bilan boshlanishini
+            tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let text = "JavaScript";
+
+console.log(text.startsWith("Java"));
+
+console.log(text.startsWith("Python"));</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            endsWith()
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>endsWith()</code> String
+            ma'lum matn bilan tugashini
+            tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let file = "lesson.html";
+
+console.log(file.endsWith(".html"));
+
+console.log(file.endsWith(".css"));</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            trim() ✂️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>trim()</code> String boshidagi
+            va oxiridagi ortiqcha bo‘sh joylarni
+            olib tashlaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let username = "   Mirjamol   ";
+
+console.log(username.trim());</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natijada boshidagi va oxiridagi
+            bo‘sh joylar olib tashlanadi.
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            slice() ✂️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>slice()</code> String'ning
+            ma'lum qismini ajratib olish
+            uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let text = "JavaScript";
+
+console.log(text.slice(0, 4));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Java</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            replace() 🔄
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>replace()</code> String ichidagi
+            ma'lum bir qismni boshqa qiymatga
+            almashtirish uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let text = "Men HTML o‘rganayapman";
+
+let result = text.replace(
+    "HTML",
+    "JavaScript"
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Men JavaScript o‘rganayapman</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String metodlari jadvali 📚
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Metod
+                        </th>
+
+                        <th class="p-4">
+                            Vazifasi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>.length</code>
+                        </td>
+
+                        <td class="p-4">
+                            Uzunligini topadi
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>toUpperCase()</code>
+                        </td>
+
+                        <td class="p-4">
+                            Katta harflarga o‘tkazadi
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>toLowerCase()</code>
+                        </td>
+
+                        <td class="p-4">
+                            Kichik harflarga o‘tkazadi
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>charAt()</code>
+                        </td>
+
+                        <td class="p-4">
+                            Belgini oladi
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>includes()</code>
+                        </td>
+
+                        <td class="p-4">
+                            Matn mavjudligini tekshiradi
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>startsWith()</code>
+                        </td>
+
+                        <td class="p-4">
+                            Boshlanishini tekshiradi
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>endsWith()</code>
+                        </td>
+
+                        <td class="p-4">
+                            Tugashini tekshiradi
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>trim()</code>
+                        </td>
+
+                        <td class="p-4">
+                            Ortiqcha bo‘sh joyni olib tashlaydi
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>slice()</code>
+                        </td>
+
+                        <td class="p-4">
+                            String qismini ajratadi
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>replace()</code>
+                        </td>
+
+                        <td class="p-4">
+                            Matnni almashtiradi
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchining ismi va familiyasini
+            birlashtirib, ekranga chiqaramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let firstName = "Mirjamol";
+let lastName = "Abdusalomov";
+let age = 15;
+
+let fullName = `${firstName} ${lastName}`;
+
+console.log(`Ism: ${fullName}`);
+console.log(`Yosh: ${age}`);
+console.log(`Ism uzunligi: ${fullName.length}`);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ <code>firstName</code> va
+            <code>lastName</code> o‘zgaruvchilarini
+            yarating.
+
+            <br><br>
+
+            2️⃣ Ularni birlashtirib,
+            <code>fullName</code> yarating.
+
+            <br><br>
+
+            3️⃣ Ismni
+            <code>toUpperCase()</code> bilan
+            katta harfga o‘tkazing.
+
+            <br><br>
+
+            4️⃣ Familiyani
+            <code>toLowerCase()</code> bilan
+            kichik harfga o‘tkazing.
+
+            <br><br>
+
+            5️⃣ <code>fullName.length</code>
+            orqali ism-familiya uzunligini toping.
+
+            <br><br>
+
+            6️⃣ <code>includes()</code> orqali
+            fullName ichida ismingiz borligini
+            tekshiring.
+
+            <br><br>
+
+            7️⃣ Natijalarni
+            <code>console.log()</code> orqali
+            chiqaring.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔤 <code>String</code> — matn.
+            </p>
+
+            <p>
+                🔗 <code>+</code> — String'larni
+                birlashtiradi.
+            </p>
+
+            <p>
+                📏 <code>.length</code> —
+                uzunlikni topadi.
+            </p>
+
+            <p>
+                🔠 <code>toUpperCase()</code> —
+                katta harf.
+            </p>
+
+            <p>
+                🔡 <code>toLowerCase()</code> —
+                kichik harf.
+            </p>
+
+            <p>
+                🔎 <code>includes()</code> —
+                matnni qidiradi.
+            </p>
+
+            <p>
+                ✂️ <code>slice()</code> —
+                String qismini oladi.
+            </p>
+
+            <p>
+                🔄 <code>replace()</code> —
+                matnni almashtiradi.
+            </p>
+
+            <p>
+                🔥 <code>`${}`</code> —
+                Template Literal ichida
+                o‘zgaruvchini qo‘shadi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔤
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            7-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 7-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    // 6-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(6)) {
+
+        alert(
+            "Avval 6-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-6.html";
+
+        return;
+
+    }
+
+
+    // 7-darsni saqlash
+
+    if (!completedLessons.includes(7)) {
+
+        completedLessons.push(7);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 7-dars tugatildi! 8-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 7-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

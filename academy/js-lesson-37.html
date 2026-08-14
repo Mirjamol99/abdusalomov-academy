@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 37-dars | forEach()</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔁 37-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            forEach()
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            36-darsda <code>includes()</code> va
+            <code>indexOf()</code> yordamida
+            Array ichidan ma'lumot qidirishni
+            o‘rgandik.
+
+            <br><br>
+
+            Bugun esa Array ichidagi
+            <b>har bir element bilan ishlash</b>ni
+            o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔁 forEach() nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>forEach()</code> — Array ichidagi
+            har bir element uchun berilgan
+            funksiyani bir martadan bajaradi.
+
+            <br><br>
+
+            Masalan, Array'da 5 ta element bo‘lsa,
+            <code>forEach()</code> funksiyani
+            5 marta ishga tushiradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+fruits.forEach(function(fruit) {
+
+    console.log(fruit);
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>Olma
+Banan
+Uzum</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧩 forEach() sintaksisi
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>array.forEach(function(element) {
+
+    // kod
+
+});</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400
+                  mt-5
+                  leading-8">
+
+            Bu yerda <code>element</code> —
+            Array'dagi hozirgi element.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let names = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+names.forEach(function(name) {
+
+    console.log(name);
+
+});</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 forEach() va index
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>forEach()</code> callback funksiyasiga
+            ikkinchi parametr orqali elementning
+            <b>indexi</b> ham keladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+fruits.forEach(function(fruit, index) {
+
+    console.log(index, fruit);
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>0 "Olma"
+1 "Banan"
+2 "Uzum"</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📌 Element va index
+        </h2>
+
+
+        <div class="method-card">
+
+            <p class="text-xl">
+                0 → Olma
+            </p>
+
+            <p class="text-xl mt-3">
+                1 → Banan
+            </p>
+
+            <p class="text-xl mt-3">
+                2 → Uzum
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>fruits.forEach(function(fruit, index) {
+
+    console.log(
+        "Index:",
+        index
+    );
+
+    console.log(
+        "Meva:",
+        fruit
+    );
+
+});</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚡ Arrow Function bilan forEach()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Biz 28-darsda Arrow Function'ni
+            o‘rgangan edik.
+
+            <br><br>
+
+            <code>forEach()</code> bilan Arrow Function
+            juda qulay ishlaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+fruits.forEach((fruit) => {
+
+    console.log(fruit);
+
+});</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ✨ Qisqa yozilishi
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+fruits.forEach(fruit =>
+    console.log(fruit)
+);</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400
+                  mt-5
+                  leading-8">
+
+            Agar callback ichida faqat bitta
+            amal bo‘lsa, uni yanada qisqa
+            yozish mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 Sonlar bilan ishlash
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40
+];
+
+numbers.forEach(function(number) {
+
+    console.log(number);
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>10
+20
+30
+40</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ Har bir songa amal bajarish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, har bir sonni 2 ga
+            ko‘paytirishimiz mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30
+];
+
+numbers.forEach(function(number) {
+
+    console.log(number * 2);
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>20
+40
+60</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ Yig‘indini hisoblash
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>forEach()</code> yordamida
+            Array elementlarini qo‘shib chiqish
+            ham mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40
+];
+
+let sum = 0;
+
+numbers.forEach(function(number) {
+
+    sum += number;
+
+});
+
+console.log(sum);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>100</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 Faqat juft sonlarni chiqarish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+];
+
+numbers.forEach(function(number) {
+
+    if (number % 2 === 0) {
+
+        console.log(number);
+
+    }
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>2
+4
+6</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            👨‍🎓 Ismlar bilan ishlash
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let students = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];
+
+students.forEach(function(student) {
+
+    console.log(
+        "O‘quvchi:",
+        student
+    );
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>O‘quvchi: Ali
+O‘quvchi: Vali
+O‘quvchi: Hasan
+O‘quvchi: Husan</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 Index bilan amaliy misol
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let students = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+students.forEach(
+    function(student, index) {
+
+        console.log(
+            `${index + 1}. ${student}`
+        );
+
+    }
+);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>1. Ali
+2. Vali
+3. Hasan</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda <code>index</code> 0 dan
+            boshlangani uchun ekranga chiroyli
+            raqam chiqarish maqsadida
+            <code>index + 1</code> ishlatdik.
+
+        </p>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Real loyiha — mahsulotlar
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, internet-do‘kondagi
+            mahsulotlarni konsolga chiqaramiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin",
+    "Sichqoncha"
+];
+
+products.forEach(function(product) {
+
+    console.log(
+        "Mahsulot:",
+        product
+    );
+
+});</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            💰 Mahsulot narxlari
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let prices = [
+    1000000,
+    2500000,
+    500000,
+    150000
+];
+
+prices.forEach(function(price) {
+
+    console.log(
+        price + " so‘m"
+    );
+
+});</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧮 Narxga chegirma hisoblash
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let prices = [
+    100000,
+    200000,
+    300000
+];
+
+prices.forEach(function(price) {
+
+    let discountPrice =
+        price * 0.9;
+
+    console.log(
+        discountPrice
+    );
+
+});</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400
+                  mt-5
+                  leading-8">
+
+            Bu misolda har bir mahsulot
+            narxidan 10% chegirma hisoblanmoqda.
+
+        </p>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🖥️ forEach() va DOM
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Keyingi darslarda DOM bilan ishlaganimizda
+            <code>forEach()</code> juda ko‘p kerak
+            bo‘ladi.
+
+            <br><br>
+
+            Masalan, Array'dagi barcha mahsulotlarni
+            HTML ichiga chiqarishimiz mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin"
+];
+
+let list =
+    document.getElementById("list");
+
+products.forEach(function(product) {
+
+    list.innerHTML +=
+        `<li>${product}</li>`;
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;ul id="list"&gt;&lt;/ul&gt;</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Natijada Array'dagi har bir mahsulot
+            HTML ro‘yxatiga qo‘shiladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔁 for loop va forEach()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Ikkalasi ham Array elementlarini
+            birma-bir ko‘rib chiqish uchun
+            ishlatilishi mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+for (
+    let i = 0;
+    i &lt; fruits.length;
+    i++
+) {
+
+    console.log(fruits[i]);
+
+}</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+            Xuddi shu ishni <code>forEach()</code>
+            bilan qisqaroq yozish mumkin:
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>fruits.forEach(function(fruit) {
+
+    console.log(fruit);
+
+});</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ forEach() nima qilmaydi?
+        </h2>
+
+
+        <div class="info text-lg leading-9">
+
+            <p>
+                <code>forEach()</code> yangi Array
+                yaratish uchun asosiy metod emas.
+            </p>
+
+            <p class="mt-3">
+                Yangi Array olish uchun keyingi
+                darslarda <code>map()</code>ni
+                o‘rganamiz.
+            </p>
+
+            <p class="mt-3">
+                <code>forEach()</code>ning asosiy
+                vazifasi — har bir element ustida
+                amal bajarish.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 Muhim qoida
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [10, 20, 30];
+
+numbers.forEach(function(number, index) {
+
+    console.log(number);
+    console.log(index);
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="info mt-6 text-lg leading-9">
+
+            <p>
+                <code>number</code> →
+                hozirgi element
+            </p>
+
+            <p>
+                <code>index</code> →
+                hozirgi elementning indexi
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔥 Eng ko‘p ishlatiladigan ko‘rinish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+users.forEach((user, index) => {
+
+    console.log(
+        `${index + 1}. ${user}`
+    );
+
+});</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>1. Ali
+2. Vali
+3. Hasan</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧩 Array ichidagi Object'lar
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Keyinchalik Array ichida Object'lar
+            bilan ham ishlaymiz.
+
+            <br><br>
+
+            <code>forEach()</code> bunda ham juda
+            qulay.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        age: 18
+    },
+    {
+        name: "Vali",
+        age: 19
+    },
+    {
+        name: "Hasan",
+        age: 17
+    }
+];
+
+users.forEach(function(user) {
+
+    console.log(
+        user.name,
+        user.age
+    );
+
+});</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8">
+
+            <p>
+                <b class="text-white">
+                    1-vazifa:
+                </b>
+
+                <br>
+
+                Quyidagi Array'dagi barcha
+                ismlarni <code>forEach()</code>
+                yordamida Console'ga chiqaring.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let names = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    2-vazifa:
+                </b>
+
+                <br>
+
+                Har bir ism bilan birga uning
+                indexini chiqaring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    3-vazifa:
+                </b>
+
+                <br>
+
+                Quyidagi sonlarning har birini
+                2 ga ko‘paytirib Console'ga chiqaring.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    5,
+    10,
+    15,
+    20
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    4-vazifa:
+                </b>
+
+                <br>
+
+                Array ichidagi juft sonlarni
+                Console'ga chiqaring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    5-vazifa:
+                </b>
+
+                <br>
+
+                Barcha sonlarning yig‘indisini
+                <code>forEach()</code> yordamida
+                hisoblang.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    6-vazifa:
+                </b>
+
+                <br>
+
+                Ismlarni quyidagi ko‘rinishda
+                chiqaring:
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>1. Ali
+2. Vali
+3. Hasan
+4. Husan</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    7-vazifa:
+                </b>
+
+                <br>
+
+                Array ichidagi Object'larning
+                <code>name</code> va
+                <code>age</code> qiymatlarini
+                <code>forEach()</code> yordamida
+                chiqaring.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔁 <code>forEach()</code> —
+                Array'ning har bir elementi
+                ustida amal bajaradi.
+            </p>
+
+            <p>
+                📦 Birinchi parametr —
+                element.
+            </p>
+
+            <p>
+                🔢 Ikkinchi parametr —
+                index.
+            </p>
+
+            <p>
+                ⚡ Arrow Function bilan juda
+                qulay ishlaydi.
+            </p>
+
+            <p>
+                🖥️ DOM bilan ishlaganda
+                juda ko‘p qo‘llanadi.
+            </p>
+
+            <p>
+                🧠 <code>forEach()</code>ni
+                "har bir element uchun bajar"
+                deb eslab qoling.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔁
+        </div>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            37-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 37-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(36)) {
+
+        alert("Avval 36-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-36.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(37)) {
+
+        completedLessons.push(37);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 37-dars tugatildi! 38-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 37-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

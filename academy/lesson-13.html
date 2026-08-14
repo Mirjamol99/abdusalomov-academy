@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>13-Dars | Textarea | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+
+            <a href="html-course.html" class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kursga qaytish
+
+            </a>
+
+        </nav>
+
+    </header>
+
+     <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+
+        <!-- TITLE -->
+
+        <div class="mb-10">
+
+            <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+                13-DARS
+
+            </span>
+
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+                Textarea
+
+            </h1>
+
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+                Foydalanuvchidan uzun matn, izoh,
+                fikr yoki xabar olishni o'rganamiz.
+
+            </p>
+
+        </div>
+
+         <!-- 1. TEXTAREA -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-align-left"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                1. &lt;textarea&gt; nima?
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;textarea&gt;
+                </strong>
+                foydalanuvchidan bir nechta qator
+                matn olish uchun ishlatiladi.
+
+            </p>
+
+
+            <p class="text-slate-400 mt-4 leading-8">
+
+                Masalan: izoh, fikr-mulohaza,
+                xabar yoki savol yozish.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;textarea&gt;&lt;/textarea&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6">
+
+                <textarea class="textarea-style" placeholder="Bu yerga yozing..."></textarea>
+
+            </div>
+
+        </section>
+
+         <!-- 2. ROWS -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                2. rows atributi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    rows
+                </strong>
+                textarea balandligini, ya'ni
+                nechta qator ko'rinishini belgilaydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;textarea rows="5"&gt;&lt;/textarea&gt;</code></pre>
+
+            </div>
+
+
+            <textarea rows="5" class="textarea-style mt-6" placeholder="5 qatorli textarea..."></textarea>
+
+        </section>
+
+         <!-- 3. COLS -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                3. cols atributi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    cols
+                </strong>
+                textarea kengligini belgilash
+                uchun ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;textarea
+    rows="5"
+    cols="30"&gt;
+&lt;/textarea&gt;</code></pre>
+
+            </div>
+
+
+            <p class="text-slate-400 mt-5">
+
+                Hozirgi zamonaviy saytlarda kenglikni
+                ko'pincha CSS orqali berish tavsiya qilinadi.
+
+            </p>
+
+        </section>
+
+         <!-- 4. PLACEHOLDER -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                4. placeholder
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    placeholder
+                </strong>
+                foydalanuvchiga textarea ichida
+                qanday ma'lumot yozish kerakligini
+                ko'rsatadi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;textarea
+    placeholder="Fikringizni yozing..."&gt;
+&lt;/textarea&gt;</code></pre>
+
+            </div>
+
+
+            <textarea class="textarea-style mt-6" placeholder="Fikringizni yozing..."></textarea>
+
+        </section>
+
+         <!-- 5. REQUIRED -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                5. required
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    required
+                </strong>
+                textarea bo'sh qoldirilsa,
+                form yuborilmasligini ta'minlaydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;textarea
+    required&gt;
+&lt;/textarea&gt;</code></pre>
+
+            </div>
+
+
+            <textarea class="textarea-style mt-6" placeholder="Bu maydonni to'ldirish shart..." required></textarea>
+
+        </section>
+
+         <!-- 6. DISABLED -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                6. disabled
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    disabled
+                </strong>
+                textarea bilan ishlashni vaqtincha
+                taqiqlaydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;textarea disabled&gt;
+
+Bu maydon ishlamaydi.
+
+&lt;/textarea&gt;</code></pre>
+
+            </div>
+
+
+            <textarea class="textarea-style mt-6" disabled>Bu maydon hozircha yopiq.</textarea>
+
+        </section>
+
+         <!-- 7. NAME -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                7. name atributi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Form yuborilganda textarea ma'lumotini
+                serverga yuborish uchun
+                <strong class="text-orange-400">
+                    name
+                </strong>
+                atributidan foydalaniladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;textarea
+    name="message"
+    placeholder="Xabar yozing..."&gt;
+&lt;/textarea&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- 8. LIVE COUNTER -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Amaliy misol 🚀
+
+            </h2>
+
+
+            <p class="text-slate-400 mb-5">
+
+                Quyidagi maydonga yozing.
+                Belgilar soni avtomatik hisoblanadi.
+
+            </p>
+
+
+            <textarea id="message" maxlength="300" class="textarea-style"
+                placeholder="Xabaringizni yozing..."></textarea>
+
+
+            <div class="flex justify-between
+                    mt-3
+                    text-sm
+                    text-slate-500">
+
+                <span>
+                    Maksimal: 300 ta belgi
+                </span>
+
+                <span id="counter">
+                    0 / 300
+                </span>
+
+            </div>
+
+        </section>
+
+         <!-- 9. MINI PROJECT -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI LOYIHA 🚀
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3 mb-8">
+
+                Bog'lanish formasi
+
+            </h2>
+
+
+            <form id="contactForm">
+
+
+                <label class="form-title">
+
+                    Ismingiz:
+
+                </label>
+
+
+                <input type="text" id="userName" class="input-style" placeholder="Ismingizni kiriting" required>
+
+
+                <label class="form-title mt-6">
+
+                    Xabaringiz:
+
+                </label>
+
+
+                <textarea id="userMessage" name="message" class="textarea-style" placeholder="Xabaringizni yozing..."
+                    required></textarea>
+
+
+                <button type="submit" class="submit-style w-full mt-8">
+
+                    <i class="fa-solid fa-paper-plane mr-2"></i>
+
+                    Xabar yuborish
+
+                </button>
+
+
+            </form>
+
+
+            <p id="contactResult" class="text-center
+                  mt-6
+                  font-semibold">
+
+            </p>
+
+        </section>
+
+         <!-- 10. MINI TEST -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI TEST 🧠
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+                Uzun matn yozish uchun qaysi
+                HTML tegi ishlatiladi?
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    A) &lt;textarea&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    B) &lt;input&gt; 
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    C) &lt;select&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) &lt;button&gt;
+
+                </button>
+
+            </div>
+
+
+            <p id="answerResult" class="mt-6
+                  font-semibold
+                  text-lg">
+
+            </p>
+
+        </section>
+
+         <!-- COMPLETE -->
+
+        <section class="mt-10">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full
+                   px-7 py-5
+                   rounded-2xl
+                   bg-orange-500
+                   hover:bg-orange-600
+                   font-bold
+                   text-lg
+                   transition">
+
+                Darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+            </p>
+
+        </section>
+
+    </main>
+
+     <!-- FOOTER -->
+
+    <footer class="border-t
+               border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy
+
+            </p>
+
+        </div>
+
+    </footer>
+
+     <!-- STYLE -->
+
+    <style>
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+        }
+
+
+        .icon-box {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(249, 115, 22, .1);
+
+            color: #fb923c;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .lesson-heading {
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .code-box-inner {
+
+            margin-top: 24px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box-inner pre {
+
+            color: #4ade80;
+
+            line-height: 2;
+
+            font-size: 15px;
+
+        }
+
+
+        .form-title {
+
+            display: block;
+
+            color: #cbd5e1;
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .input-style,
+        .textarea-style {
+
+            width: 100%;
+
+            padding: 15px 18px;
+
+            border-radius: 14px;
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            color: white;
+
+            outline: none;
+
+            transition: .3s;
+
+        }
+
+
+        .textarea-style {
+
+            min-height: 150px;
+
+            resize: vertical;
+
+            line-height: 1.7;
+
+        }
+
+
+        .input-style:focus,
+        .textarea-style:focus {
+
+            border-color: #f97316;
+
+            box-shadow:
+                0 0 0 3px rgba(249, 115, 22, .12);
+
+        }
+
+
+        .input-style::placeholder,
+        .textarea-style::placeholder {
+
+            color: #64748b;
+
+        }
+
+
+        .submit-style {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 16px 24px;
+
+            border-radius: 14px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+            cursor: pointer;
+
+        }
+
+
+        .submit-style:hover {
+
+            background: #1d4ed8;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .answer-btn {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            border: 1px solid #334155;
+
+            background: #020617;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            transition: .3s;
+
+        }
+
+
+        .answer-btn:hover {
+
+            border-color: #f97316;
+
+            color: #fb923c;
+
+            transform: translateY(-2px);
+
+        }
+    </style>
+
+     <!-- JAVASCRIPT -->
+
+    <script>
+
+        // TEXTAREA CHARACTER COUNTER
+
+        const message =
+            document.getElementById("message");
+
+        const counter =
+            document.getElementById("counter");
+
+
+        message.addEventListener(
+            "input",
+            function () {
+
+                counter.textContent =
+                    `${message.value.length} / 300`;
+
+            }
+        );
+
+        // CONTACT FORM
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+
+        contactForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "userName"
+                    ).value.trim();
+
+
+                const userMessage =
+                    document.getElementById(
+                        "userMessage"
+                    ).value.trim();
+
+
+                const result =
+                    document.getElementById(
+                        "contactResult"
+                    );
+
+
+                if (userMessage.length < 5) {
+
+                    result.textContent =
+                        "⚠️ Xabar kamida 5 ta belgidan iborat bo'lsin.";
+
+                    result.className =
+                        "text-center mt-6 font-semibold text-yellow-400";
+
+                    return;
+
+                }
+
+
+                result.textContent =
+                    `✅ Rahmat, ${name}! Xabaringiz qabul qilindi.`;
+
+
+                result.className =
+                    "text-center mt-6 font-semibold text-green-400";
+
+            }
+        );
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById(
+                    "answerResult"
+                );
+
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! Uzun matn uchun <textarea> ishlatiladi.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-red-400";
+
+            }
+
+        }
+
+        // COMPLETE LESSON
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "htmlCompletedLessons"
+                    )
+                ) || [];
+
+
+            // 13-darsni qo‘shamiz
+
+            if (!completedLessons.includes(13)) {
+
+                completedLessons.push(13);
+
+            }
+
+
+            // Saqlaymiz
+
+            localStorage.setItem(
+                "htmlCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            // Xabar
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "🎉 13-dars tugatildi! 14-dars ochildi 🔓";
+
+
+            // Tugma
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.innerHTML =
+                "✅ 13-dars tugatildi";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-orange-500",
+                "hover:bg-orange-600"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            // Kurs sahifasiga qaytish
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "html-course.html";
+
+                },
+                1500
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

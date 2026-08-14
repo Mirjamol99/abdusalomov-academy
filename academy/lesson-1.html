@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>1-dars: HTML nima? | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body class="bg-slate-950 text-white">
+
+     <!-- NAVBAR -->
+
+    <header class="border-b border-slate-800
+               bg-slate-950/90
+               backdrop-blur-lg
+               sticky top-0 z-50">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+
+            <!-- DESKTOP MENU -->
+
+            <div class="hidden md:flex
+                    items-center
+                    gap-8">
+
+                <a href="index.html" class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+                    Bosh sahifa
+                </a>
+
+                <a href="courses.html" class="text-blue-400
+                      font-semibold">
+                    Kurslar
+                </a>
+
+                <a href="about.html" class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+                    Men haqimda
+                </a>
+
+                <a href="contact.html" class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+                    Bog'lanish
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button id="menuBtn" class="md:hidden
+                       text-white
+                       text-3xl">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+
+        <div id="mobileMenu" class="hidden md:hidden
+                border-t border-slate-800
+                bg-slate-950">
+
+            <a href="index.html" class="block px-6 py-4
+                  hover:bg-slate-900">
+                🏠 Bosh sahifa
+            </a>
+
+            <a href="courses.html" class="block px-6 py-4
+                  hover:bg-slate-900">
+                📚 Kurslar
+            </a>
+
+            <a href="about.html" class="block px-6 py-4
+                  hover:bg-slate-900">
+                👨‍💻 Men haqimda
+            </a>
+
+            <a href="contact.html" class="block px-6 py-4
+                  hover:bg-slate-900">
+                📞 Bog'lanish
+            </a>
+
+        </div>
+
+    </header>
+
+     <!-- LESSON HEADER -->
+
+    <section class="border-b border-slate-800">
+
+        <div class="max-w-5xl
+                mx-auto
+                px-6
+                py-10">
+
+            <!-- BACK -->
+
+            <a href="html-course.html" class="inline-flex
+                  items-center
+                  gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                HTML kursiga qaytish
+
+            </a>
+
+
+            <!-- LESSON INFO -->
+
+            <div class="flex
+                    items-center
+                    gap-4
+                    mt-8">
+
+                <div class="w-14 h-14
+                        rounded-2xl
+                        bg-orange-500/10
+                        text-orange-400
+                        flex
+                        items-center
+                        justify-center
+                        text-2xl">
+
+                    <i class="fa-brands fa-html5"></i>
+
+                </div>
+
+
+                <div>
+
+                    <p class="text-orange-400
+                          text-sm
+                          font-semibold">
+
+                        HTML KURSI
+
+                    </p>
+
+                    <p class="text-slate-500
+                          text-sm">
+
+                        1-dars / 10
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <h1 class="text-4xl
+                   md:text-6xl
+                   font-extrabold
+                   mt-8">
+
+                HTML nima?
+
+            </h1>
+
+
+            <p class="text-slate-400
+                  text-lg
+                  mt-5">
+
+                Web dasturlashga ilk qadam.
+
+            </p>
+
+        </div>
+
+    </section>
+
+     <!-- LESSON CONTENT -->
+
+    <main class="max-w-5xl
+             mx-auto
+             px-6
+             py-14">
+
+         <!-- INTRO -->
+
+        <article class="bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <span class="text-orange-400
+                     font-semibold">
+
+                01. HTML haqida
+
+            </span>
+
+
+            <h2 class="text-3xl
+                   md:text-4xl
+                   font-bold
+                   mt-4">
+
+                HTML nima?
+
+            </h2>
+
+
+            <p class="text-slate-400
+                  text-lg
+                  leading-8
+                  mt-6">
+
+                HTML — web sahifalarning tuzilishini
+                yaratish uchun ishlatiladigan belgilash
+                tilidir.
+
+            </p>
+
+
+            <p class="text-slate-400
+                  text-lg
+                  leading-8
+                  mt-5">
+
+                Masalan, web sahifada sarlavha,
+                matn, rasm, havola va boshqa
+                elementlar bo'lishi mumkin.
+
+                HTML shu elementlarning sahifadagi
+                tuzilishini belgilaydi.
+
+            </p>
+
+        </article>
+
+         <!-- HTML EXAMPLE -->
+
+        <article class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <span class="text-blue-400
+                     font-semibold">
+
+                02. Birinchi kodimiz
+
+            </span>
+
+
+            <h2 class="text-3xl
+                   font-bold
+                   mt-4">
+
+                Eng oddiy HTML sahifa
+
+            </h2>
+
+
+            <p class="text-slate-400
+                  leading-7
+                  mt-5">
+
+                HTML faylida oddiy sarlavha
+                yaratib ko'ramiz:
+
+            </p>
+
+
+            <!-- CODE -->
+
+            <div class="relative
+                    mt-6">
+
+                <div class="flex
+                        items-center
+                        justify-between
+                        bg-slate-800
+                        px-5 py-3
+                        rounded-t-2xl">
+
+                    <span class="text-slate-400
+                             text-sm">
+
+                        HTML
+
+                    </span>
+
+
+                    <button id="copyBtn" class="text-slate-400
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-regular fa-copy"></i>
+                        Nusxalash
+
+                    </button>
+
+                </div>
+
+
+                <pre class="bg-black
+                        text-green-400
+                        p-6
+                        rounded-b-2xl
+                        overflow-x-auto"><code id="codeText">&lt;h1&gt;Salom dunyo!&lt;/h1&gt;</code></pre>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div class="mt-8">
+
+                <p class="text-slate-400
+                      text-sm
+                      mb-3">
+
+                    Natija:
+
+                </p>
+
+
+                <div class="bg-slate-950
+                        border border-slate-800
+                        rounded-2xl
+                        p-6">
+
+                    <h1 class="text-3xl
+                           font-bold">
+
+                        Salom dunyo!
+
+                    </h1>
+
+                </div>
+
+            </div>
+
+        </article>
+
+         <!-- TAG -->
+
+        <article class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <span class="text-purple-400
+                     font-semibold">
+
+                03. Teg tushunchasi
+
+            </span>
+
+
+            <h2 class="text-3xl
+                   font-bold
+                   mt-4">
+
+                HTML tegi nima?
+
+            </h2>
+
+
+            <p class="text-slate-400
+                  leading-8
+                  mt-5">
+
+                HTML elementlari ko'pincha teglar
+                yordamida yoziladi.
+
+                Masalan:
+
+            </p>
+
+
+            <div class="bg-black
+                    rounded-2xl
+                    p-6
+                    mt-5">
+
+                <code class="text-green-400">
+
+                &lt;h1&gt;Salom dunyo!&lt;/h1&gt;
+
+            </code>
+
+            </div>
+
+
+            <div class="grid
+                    md:grid-cols-3
+                    gap-4
+                    mt-6">
+
+
+                <div class="bg-slate-950
+                        border border-slate-800
+                        rounded-xl
+                        p-5">
+
+                    <p class="text-orange-400
+                          font-bold">
+
+                        &lt;h1&gt;
+
+                    </p>
+
+                    <p class="text-slate-500
+                          text-sm
+                          mt-2">
+
+                        Ochuvchi teg
+
+                    </p>
+
+                </div>
+
+
+                <div class="bg-slate-950
+                        border border-slate-800
+                        rounded-xl
+                        p-5">
+
+                    <p class="text-white
+                          font-bold">
+
+                        Salom dunyo!
+
+                    </p>
+
+                    <p class="text-slate-500
+                          text-sm
+                          mt-2">
+
+                        Kontent
+
+                    </p>
+
+                </div>
+
+
+                <div class="bg-slate-950
+                        border border-slate-800
+                        rounded-xl
+                        p-5">
+
+                    <p class="text-orange-400
+                          font-bold">
+
+                        &lt;/h1&gt;
+
+                    </p>
+
+                    <p class="text-slate-500
+                          text-sm
+                          mt-2">
+
+                        Yopuvchi teg
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+         <!-- IMPORTANT -->
+
+        <article class="mt-8
+                    bg-blue-500/10
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <div class="flex
+                    gap-5">
+
+                <div class="text-3xl">
+                    💡
+                </div>
+
+
+                <div>
+
+                    <h2 class="text-2xl
+                           font-bold">
+
+                        Esda saqlang
+
+                    </h2>
+
+
+                    <p class="text-slate-400
+                          leading-7
+                          mt-3">
+
+                        HTML web sahifaning tuzilishini
+                        yaratadi. Keyingi darslarda
+                        HTML teglarini birma-bir
+                        o'rganamiz.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+         <!-- HOMEWORK -->
+
+        <article class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <span class="text-green-400
+                     font-semibold">
+
+                📝 AMALIY TOPSHIRIQ
+
+            </span>
+
+
+            <h2 class="text-3xl
+                   font-bold
+                   mt-4">
+
+                O'zingiz yozib ko'ring
+
+            </h2>
+
+
+            <p class="text-slate-400
+                  leading-7
+                  mt-5">
+
+                O'zingiz haqingizda bitta sarlavha
+                yarating.
+
+                Masalan:
+
+            </p>
+
+
+            <div class="bg-black
+                    rounded-2xl
+                    p-6
+                    mt-5">
+
+                <code class="text-green-400">
+
+                &lt;h1&gt;Men dasturchiman&lt;/h1&gt;
+
+            </code>
+
+            </div>
+
+
+            <p class="text-slate-500
+                  mt-5">
+
+                Keyin brauzerda natijani ko'ring.
+
+            </p>
+
+        </article>
+
+         <!-- COMPLETE LESSON -->
+
+        <div class="mt-10
+                bg-slate-900
+                border border-slate-800
+                rounded-3xl
+                p-7 md:p-10
+                text-center">
+
+            <div class="text-4xl">
+                🎯
+            </div>
+
+
+            <h2 class="text-3xl
+                   font-bold
+                   mt-4">
+
+                Darsni tugatdingizmi?
+
+            </h2>
+
+
+            <p class="text-slate-500
+                  mt-3">
+
+                Tugmani bosganingizdan so'ng
+                progress saqlanadi.
+
+            </p>
+
+
+            <button id="completeBtn" class="mt-7
+                       bg-green-600
+                       hover:bg-green-700
+                       px-8 py-4
+                       rounded-xl
+                       font-semibold
+                       transition">
+
+                ✓ Darsni tugatdim
+
+            </button>
+
+
+            <p id="completedMessage" class="hidden
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+                🎉 1-dars muvaffaqiyatli tugatildi!
+
+            </p>
+
+        </div>
+
+         <!-- NAVIGATION -->
+
+        <div class="grid
+                sm:grid-cols-2
+                gap-4
+                mt-8">
+
+
+            <!-- PREVIOUS -->
+
+            <a href="html-course.html" class="border border-slate-800
+                  hover:border-slate-600
+                  bg-slate-900
+                  rounded-2xl
+                  p-5
+                  transition">
+
+                <p class="text-slate-500
+                      text-sm">
+
+                    ← Orqaga
+
+                </p>
+
+                <p class="font-semibold
+                      mt-2">
+
+                    HTML kursi
+
+                </p>
+
+            </a>
+
+
+            <!-- NEXT -->
+
+            <a href="#" id="nextLesson" class="border border-slate-800
+                  bg-slate-900
+                  rounded-2xl
+                  p-5
+                  text-right
+                  opacity-50
+                  cursor-not-allowed">
+
+                <p class="text-slate-500
+                      text-sm">
+
+                    Keyingi dars →
+
+                </p>
+
+                <p class="font-semibold
+                      mt-2">
+
+                    HTML strukturasi
+
+                </p>
+
+            </a>
+
+        </div>
+
+    </main>
+
+     <!-- FOOTER -->
+
+    <footer class="border-t
+               border-slate-800
+               py-8">
+
+        <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy.
+                Barcha huquqlar himoyalangan.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+     <!-- JAVASCRIPT -->
+
+    <script>
+
+        // MOBILE MENU
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        if (menuBtn && mobileMenu) {
+
+            menuBtn.addEventListener("click", () => {
+
+                mobileMenu.classList.toggle("hidden");
+
+            });
+
+
+            const mobileLinks =
+                mobileMenu.querySelectorAll("a");
+
+
+            mobileLinks.forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    mobileMenu.classList.add("hidden");
+
+                });
+
+            });
+
+        }
+
+        // COPY CODE
+
+        const copyBtn =
+            document.getElementById("copyBtn");
+
+        const codeText =
+            document.getElementById("codeText");
+
+
+        if (copyBtn && codeText) {
+
+            copyBtn.addEventListener("click", async () => {
+
+                const text =
+                    codeText.textContent;
+
+                try {
+
+                    await navigator.clipboard.writeText(text);
+
+                    copyBtn.innerHTML =
+                        '<i class="fa-solid fa-check"></i> Nusxalandi!';
+
+                    setTimeout(() => {
+
+                        copyBtn.innerHTML =
+                            '<i class="fa-regular fa-copy"></i> Nusxalash';
+
+                    }, 2000);
+
+                } catch (error) {
+
+                    console.log("Kod nusxalanmadi.");
+
+                }
+
+            });
+
+        }
+
+        // LESSON COMPLETE
+
+        const completeBtn =
+            document.getElementById("completeBtn");
+
+        const completedMessage =
+            document.getElementById("completedMessage");
+
+        const nextLesson =
+            document.getElementById("nextLesson");
+
+
+        let completedLessons =
+            JSON.parse(
+                localStorage.getItem("htmlCompletedLessons")
+            ) || [];
+
+
+        // Agar dars oldin tugatilgan bo'lsa
+
+        if (completedLessons.includes(1)) {
+
+            completeBtn.textContent =
+                "✓ Dars tugatilgan";
+
+            completeBtn.classList.remove(
+                "bg-green-600",
+                "hover:bg-green-700"
+            );
+
+            completeBtn.classList.add(
+                "bg-slate-700"
+            );
+
+            completedMessage.classList.remove("hidden");
+
+            // Keyingi darsni ochamiz
+            nextLesson.classList.remove(
+                "opacity-50",
+                "cursor-not-allowed"
+            );
+
+            nextLesson.classList.add(
+                "hover:border-orange-500"
+            );
+
+            nextLesson.href =
+                "lesson-2.html";
+
+        }
+
+
+        // Tugatish tugmasi
+
+        if (completeBtn) {
+
+            completeBtn.addEventListener("click", () => {
+
+                if (!completedLessons.includes(1)) {
+
+                    completedLessons.push(1);
+
+                    localStorage.setItem(
+                        "htmlCompletedLessons",
+                        JSON.stringify(completedLessons)
+                    );
+
+                }
+
+
+                completeBtn.textContent =
+                    "✓ Dars tugatilgan";
+
+                completeBtn.classList.remove(
+                    "bg-green-600",
+                    "hover:bg-green-700"
+                );
+
+                completeBtn.classList.add(
+                    "bg-slate-700"
+                );
+
+
+                completedMessage.classList.remove(
+                    "hidden"
+                );
+
+
+                // Keyingi darsni ochish
+
+                nextLesson.classList.remove(
+                    "opacity-50",
+                    "cursor-not-allowed"
+                );
+
+                nextLesson.classList.add(
+                    "hover:border-orange-500"
+                );
+
+                nextLesson.href =
+                    "lesson-2.html";
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

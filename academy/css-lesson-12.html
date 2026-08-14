@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 12-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90 backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-4
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">Abdusalomov</span>
+            Academy
+
+        </a>
+
+        <a href="css-course.html"
+           class="text-slate-400 hover:text-blue-400
+                  flex items-center gap-2">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+
+            <i class="fa-brands fa-css3-alt"></i>
+            12-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            CSS Background 🎨
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5 leading-8">
+
+            Elementlarga rang, rasm, gradient va
+            chiroyli background berishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+            <i class="fa-solid fa-palette"></i>
+        </div>
+
+        <h2 class="lesson-title">
+            1. `background-color`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Elementning orqa fon rangini
+            `background-color` yordamida
+            o'zgartiramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    background-color: blue;
+}</code></pre>
+
+        </div>
+
+        <div class="color-demo">
+            Background Color
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            2. `background-image`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Background sifatida rasm qo'yish
+            uchun `background-image` ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    background-image:
+        url("image.jpg");
+}</code></pre>
+
+        </div>
+
+        <div class="image-demo">
+            Background Image
+        </div>
+
+        <div class="info-box">
+
+            💡 Rasmni CSS orqali ham,
+            HTML'dagi `<img>` orqali ham
+            ishlatish mumkin.
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            3. `background-size`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Background rasmining o'lchamini
+            boshqaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    background-size: cover;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            Eng ko'p ishlatiladigan qiymatlar:
+
+            <br><br>
+
+            `cover` → butun joyni qoplaydi
+
+            <br>
+
+            `contain` → rasmni to'liq ko'rsatadi
+
+            <br>
+
+            `auto` → asl o'lcham
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            4. `background-position`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Background rasmining joylashuvini
+            belgilaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    background-position: center;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            Misollar:
+
+            <br><br>
+
+            `center`
+
+            <br>
+
+            `top`
+
+            <br>
+
+            `bottom`
+
+            <br>
+
+            `left`
+
+            <br>
+
+            `right`
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            5. `background-repeat`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Background rasmining takrorlanishini
+            boshqaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    background-repeat: no-repeat;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            `no-repeat` → rasm takrorlanmaydi
+
+            <br>
+
+            `repeat` → takrorlanadi
+
+            <br>
+
+            `repeat-x` → gorizontal takrorlanadi
+
+            <br>
+
+            `repeat-y` → vertikal takrorlanadi
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            6. Linear Gradient 🌈
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Gradient yordamida bir rangdan
+            ikkinchi rangga chiroyli o'tish
+            hosil qilamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    background:
+        linear-gradient(
+            90deg,
+            blue,
+            purple
+        );
+}</code></pre>
+
+        </div>
+
+        <div class="linear-demo">
+            Linear Gradient
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            7. Radial Gradient 🟣
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Radial gradient markazdan tashqariga
+            qarab tarqaladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    background:
+        radial-gradient(
+            circle,
+            blue,
+            purple
+        );
+}</code></pre>
+
+        </div>
+
+        <div class="radial-demo">
+            Radial Gradient
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            8. Background Overlay
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Rasm ustiga rang yoki gradient
+            qo'yib, matnni yaxshi ko'rinadigan
+            qilish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.hero {
+    background:
+        linear-gradient(
+            rgba(0,0,0,.6),
+            rgba(0,0,0,.6)
+        ),
+        url("image.jpg");
+
+    background-size: cover;
+}</code></pre>
+
+        </div>
+
+        <div class="overlay-demo">
+
+            <h3>
+                Abdusalomov Academy
+            </h3>
+
+            <p>
+                Frontend Development
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            9. Background shorthand
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bir nechta background xususiyatlarini
+            qisqa yozish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    background:
+        #2563eb
+        url("image.jpg")
+        center / cover
+        no-repeat;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            🔥 Shorthand kodni qisqartirishga
+            yordam beradi.
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            10. Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Gradient yordamida zamonaviy
+            Academy bannerini yaratamiz.
+
+        </p>
+
+        <div class="academy-banner">
+
+            <div>
+
+                <span>
+                    ABDUSALOMOV ACADEMY
+                </span>
+
+                <h3>
+                    Frontend dasturlashni
+                    o'rganing 🚀
+                </h3>
+
+                <p>
+                    HTML • CSS • JavaScript
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+            MINI TEST 🧠
+        </span>
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-4">
+
+            Gradient yaratish uchun
+            qaysi xususiyat ishlatiladi?
+
+        </h2>
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) background-size
+
+            </button>
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                B) linear-gradient()
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) background-repeat
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) background-position
+
+            </button>
+
+        </div>
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+        </p>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl p-8 text-center">
+
+        <div class="text-5xl mb-5">
+            🎉
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            12-darsni tugatdingizmi?
+
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 13-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5 rounded-2xl
+                   font-bold text-lg
+                   transition">
+
+            12-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+            © 2026 Abdusalomov Academy
+        </p>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+.lesson-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(59,130,246,.1);
+    border: 1px solid rgba(59,130,246,.2);
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+.lesson-box {
+    margin-top: 32px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 24px;
+    padding: 28px;
+}
+
+.lesson-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(59,130,246,.1);
+    color: #60a5fa;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.lesson-title {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.code-box {
+    margin-top: 24px;
+    padding: 22px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+.code-box pre {
+    color: #4ade80;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.info-box {
+    margin-top: 22px;
+    padding: 18px;
+    background: rgba(59,130,246,.08);
+    border: 1px solid rgba(59,130,246,.2);
+    border-radius: 16px;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+
+/* DEMOS */
+
+.color-demo {
+    margin-top: 25px;
+    padding: 50px;
+    background-color: #2563eb;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.image-demo {
+    margin-top: 25px;
+    padding: 70px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 800;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    background-size: cover;
+    background-position: center;
+}
+
+.linear-demo {
+    margin-top: 25px;
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.radial-demo {
+    margin-top: 25px;
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle,
+            #38bdf8,
+            #7c3aed
+        );
+
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.overlay-demo {
+    margin-top: 25px;
+    padding: 70px 25px;
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            rgba(2,6,23,.75),
+            rgba(30,41,59,.75)
+        ),
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+}
+
+.overlay-demo h3 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.overlay-demo p {
+    margin-top: 10px;
+    color: #cbd5e1;
+}
+
+.academy-banner {
+    margin-top: 25px;
+    padding: 60px 35px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #1d4ed8,
+            #7c3aed,
+            #0891b2
+        );
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.3);
+}
+
+.academy-banner span {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.academy-banner h3 {
+    margin-top: 15px;
+    max-width: 600px;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.academy-banner p {
+    margin-top: 15px;
+    color: #dbeafe;
+}
+
+
+/* TEST */
+
+.answer-btn {
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    background: #020617;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    transition: .3s;
+}
+
+.answer-btn:hover {
+    border-color: #3b82f6;
+    color: #60a5fa;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 640px) {
+
+    .lesson-box {
+        padding: 20px;
+    }
+
+    .academy-banner {
+        padding: 40px 25px;
+    }
+
+    .academy-banner h3 {
+        font-size: 27px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById("answerResult");
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! Gradient uchun linear-gradient() ishlatiladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. To'g'ri javob: linear-gradient().";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 12
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("cssCompletedLessons")
+        ) || [];
+
+
+    // 11-darsni tekshirish
+
+    if (!completedLessons.includes(11)) {
+
+        alert(
+            "Avval 11-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-11.html";
+
+        return;
+    }
+
+
+    // 12-darsni saqlash
+
+    if (!completedLessons.includes(12)) {
+
+        completedLessons.push(12);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 12-dars tugatildi! 13-dars ochildi 🔓";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.innerHTML =
+        "✅ 12-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "css-course.html";
+
+    }, 1500);
+
+}
+
+</script>
+
+</body>
+</html>

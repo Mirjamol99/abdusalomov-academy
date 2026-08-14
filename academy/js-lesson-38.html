@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 38-dars | map()</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🗺️ 38-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            map()
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            <code>map()</code> — Array'dagi har bir
+            elementni qayta ishlab, natijada
+            <b>yangi Array</b> yaratadigan metod.
+
+            <br><br>
+
+            Eng muhim jihati:
+
+            <br><br>
+
+            <span class="text-yellow-400 font-bold">
+                map() → yangi Array qaytaradi.
+            </span>
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🗺️ map() nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>map()</code> Array ichidagi har bir
+            elementni bittadan olib, callback
+            funksiyani bajaradi.
+
+            <br><br>
+
+            Callback'dan qaytgan qiymatlarning
+            barchasi yangi Array ichiga yig‘iladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4
+];
+
+let result = numbers.map(function(number) {
+
+    return number * 2;
+
+});
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[2, 4, 6, 8]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔄 map() qanday ishlaydi?
+        </h2>
+
+
+        <div class="method-card">
+
+            <p class="text-xl">
+                Boshlang‘ich Array:
+            </p>
+
+            <p class="text-yellow-400
+                      text-2xl
+                      mt-3">
+
+                [1, 2, 3, 4]
+
+            </p>
+
+
+            <p class="text-4xl text-center my-6">
+                ↓
+            </p>
+
+
+            <p class="text-xl">
+                Har bir elementga:
+            </p>
+
+            <p class="text-yellow-400
+                      text-2xl
+                      mt-3">
+
+                × 2
+
+            </p>
+
+
+            <p class="text-4xl text-center my-6">
+                ↓
+            </p>
+
+
+            <p class="text-xl">
+                Yangi Array:
+            </p>
+
+            <p class="text-green-400
+                      text-2xl
+                      mt-3">
+
+                [2, 4, 6, 8]
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📌 map() sintaksisi
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let newArray = array.map(function(element) {
+
+    return yangiQiymat;
+
+});</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400
+                  mt-5
+                  leading-8">
+
+            Bu yerda <code>return</code> juda muhim.
+
+            <br><br>
+
+            Chunki <code>map()</code> har bir
+            callback'dan qaytgan qiymatni
+            yangi Array'ga qo‘shadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 Sonlarni 2 ga ko‘paytirish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    5,
+    10,
+    15,
+    20
+];
+
+let doubled = numbers.map(function(number) {
+
+    return number * 2;
+
+});
+
+console.log(doubled);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[10, 20, 30, 40]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚡ Arrow Function bilan map()
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4
+];
+
+let result = numbers.map(
+    (number) => number * 2
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[2, 4, 6, 8]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔤 String bilan map()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Stringlardan iborat Array'dagi
+            elementlarni ham o‘zgartirish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let names = [
+    "ali",
+    "vali",
+    "hasan"
+];
+
+let upperNames = names.map(
+    (name) => name.toUpperCase()
+);
+
+console.log(upperNames);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "ALI",
+    "VALI",
+    "HASAN"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 map() va index
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>map()</code> callback'iga ham
+            <code>forEach()</code> kabi ikkinchi
+            parametr orqali <code>index</code> keladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+let result = fruits.map(
+    (fruit, index) => {
+
+        return `${index}: ${fruit}`;
+
+    }
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "0: Olma",
+    "1: Banan",
+    "2: Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 map() va forEach() farqi
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl
+                           font-bold
+                           text-yellow-400">
+
+                    forEach()
+
+                </h3>
+
+
+                <p class="text-slate-400
+                          mt-4
+                          leading-8">
+
+                    Asosan har bir element
+                    ustida amal bajaradi.
+
+                    <br><br>
+
+                    Odatda yangi Array
+                    qaytarish uchun ishlatilmaydi.
+
+                </p>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl
+                           font-bold
+                           text-green-400">
+
+                    map()
+
+                </h3>
+
+
+                <p class="text-slate-400
+                          mt-4
+                          leading-8">
+
+                    Har bir elementni o‘zgartirib,
+                    <b>yangi Array</b> qaytaradi.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="info mt-6">
+
+            💡 Esda tuting:
+
+            <br><br>
+
+            <code>forEach()</code> → bajaradi
+
+            <br>
+
+            <code>map()</code> → o‘zgartirib,
+            yangi Array yaratadi
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            💰 Narxlarni o‘zgartirish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, mahsulotlarning narxiga
+            10% qo‘shmoqchimiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let prices = [
+    100000,
+    200000,
+    300000
+];
+
+let newPrices = prices.map(
+    (price) => price * 1.1
+);
+
+console.log(newPrices);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    110000,
+    220000,
+    330000
+]</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Muhim: eski <code>prices</code>
+            Array o‘zgarmaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧊 Original Array o‘zgarmaydi
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30
+];
+
+let result = numbers.map(
+    (number) => number * 2
+);
+
+console.log(numbers);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[10, 20, 30]
+
+[20, 40, 60]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            👨‍🎓 Ismlar bilan ishlash
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let students = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+let messages = students.map(
+    (student) =>
+        `Salom, ${student}!`
+);
+
+console.log(messages);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Salom, Ali!",
+    "Salom, Vali!",
+    "Salom, Hasan!"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 Sonlarni Stringga aylantirish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30
+];
+
+let prices = numbers.map(
+    (number) => number + " so‘m"
+);
+
+console.log(prices);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "10 so‘m",
+    "20 so‘m",
+    "30 so‘m"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧩 Object bilan map()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Real loyihalarda <code>map()</code>
+            ko‘pincha Object'lardan iborat
+            Array bilan ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        age: 18
+    },
+    {
+        name: "Vali",
+        age: 19
+    },
+    {
+        name: "Hasan",
+        age: 17
+    }
+];
+
+let names = users.map(
+    (user) => user.name
+);
+
+console.log(names);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Ali",
+    "Vali",
+    "Hasan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎯 Object'dan yangi ma'lumot yaratish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        age: 18
+    },
+    {
+        name: "Vali",
+        age: 19
+    }
+];
+
+let result = users.map(
+    (user) => {
+
+        return {
+            name: user.name,
+            age: user.age,
+            student: true
+        };
+
+    }
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu usul orqali mavjud ma'lumotlardan
+            kerakli yangi Object yaratish mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Real loyiha — mahsulotlar
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    {
+        name: "Telefon",
+        price: 3000000
+    },
+    {
+        name: "Noutbuk",
+        price: 7000000
+    },
+    {
+        name: "Quloqchin",
+        price: 500000
+    }
+];
+
+let productNames = products.map(
+    (product) => product.name
+);
+
+console.log(productNames);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            💵 Mahsulot narxlariga chegirma
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    {
+        name: "Telefon",
+        price: 3000000
+    },
+    {
+        name: "Noutbuk",
+        price: 7000000
+    }
+];
+
+let discountedProducts =
+    products.map((product) => {
+
+        return {
+            name: product.name,
+            price: product.price * 0.9
+        };
+
+    });
+
+console.log(discountedProducts);</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda har bir mahsulotga
+            10% chegirma berilib, yangi
+            Array hosil qilinmoqda.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🌐 API ma'lumotlari bilan map()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Keyinchalik API bilan ishlaganimizda
+            serverdan kelgan Object'lar ichidan
+            kerakli ma'lumotlarni ajratib olish
+            uchun <code>map()</code> juda kerak bo‘ladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    {
+        id: 1,
+        name: "Ali"
+    },
+    {
+        id: 2,
+        name: "Vali"
+    },
+    {
+        id: 3,
+        name: "Hasan"
+    }
+];
+
+let userNames = users.map(
+    user => user.name
+);
+
+console.log(userNames);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🖥️ map() va DOM
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>map()</code> orqali HTML uchun
+            kerakli ma'lumotlarni tayyorlash
+            mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin"
+];
+
+let html = products.map(
+    product =>
+        `<li>${product}</li>`
+);
+
+console.log(html);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "&lt;li&gt;Telefon&lt;/li&gt;",
+    "&lt;li&gt;Noutbuk&lt;/li&gt;",
+    "&lt;li&gt;Quloqchin&lt;/li&gt;"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔗 map() natijasini join() bilan birlashtirish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            `map()` yangi Array qaytargani uchun
+            keyinchalik boshqa Array metodlari
+            bilan birga ishlatish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+let html = fruits.map(
+    fruit => `<li>${fruit}</li>`
+);
+
+let result = html.join("");
+
+console.log(result);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ returnni unutmaslik
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Agar `{ }` ishlatsangiz,
+            qiymatni <code>return</code> qilish
+            kerak.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [1, 2, 3];
+
+let result = numbers.map((number) => {
+
+    return number * 2;
+
+});
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="info mt-6">
+
+            ⚠️ Agar <code>return</code> yozilmasa,
+            callback'dan qiymat qaytmaydi va
+            natijada <code>undefined</code> qiymatlar
+            hosil bo‘lishi mumkin.
+
+        </div>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ✨ returnni qisqartirish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Arrow Function'da qavs ishlatilmasa,
+            <code>return</code> avtomatik bo‘ladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [1, 2, 3];
+
+let result = numbers.map(
+    number => number * 2
+);</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Bu quyidagiga teng:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let result = numbers.map(
+    number => {
+
+        return number * 2;
+
+    }
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚖️ map() va forEach()ni taqqoslash
+        </h2>
+
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Xususiyat
+                        </th>
+
+                        <th class="p-4">
+                            forEach()
+                        </th>
+
+                        <th class="p-4">
+                            map()
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            Har bir element
+                        </td>
+
+                        <td class="p-4">
+                            ✅
+                        </td>
+
+                        <td class="p-4">
+                            ✅
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            Yangi Array
+                        </td>
+
+                        <td class="p-4">
+                            ❌
+                        </td>
+
+                        <td class="p-4">
+                            ✅
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="p-4">
+                            return qiymati
+                        </td>
+
+                        <td class="p-4">
+                            Asosiy maqsad emas
+                        </td>
+
+                        <td class="p-4">
+                            Muhim
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 23 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 Eng muhim misol
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30
+];
+
+let newNumbers = numbers.map(
+    number => number + 5
+);
+
+console.log(numbers);
+
+console.log(newNumbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[10, 20, 30]
+
+[15, 25, 35]</code></pre>
+
+        </div>
+
+
+        <div class="info mt-6">
+
+            🎯 Esda tuting:
+
+            <br><br>
+
+            <code>map()</code> eski Array'ni
+            o‘zgartirmasdan, uning asosida
+            <b>yangi Array</b> yaratadi.
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8">
+
+            <p>
+                <b class="text-white">
+                    1-vazifa:
+                </b>
+
+                <br>
+
+                Quyidagi sonlarning har birini
+                2 ga ko‘paytirib yangi Array yarating.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    5,
+    10,
+    15,
+    20
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    2-vazifa:
+                </b>
+
+                <br>
+
+                Quyidagi ismlarning hammasini
+                katta harflarga aylantiring.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let names = [
+    "ali",
+    "vali",
+    "hasan"
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    3-vazifa:
+                </b>
+
+                <br>
+
+                Har bir narxga 20% qo‘shib,
+                yangi Array yarating.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let prices = [
+    100000,
+    200000,
+    300000
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    4-vazifa:
+                </b>
+
+                <br>
+
+                Object'lardan faqat
+                <code>name</code> qiymatlarini
+                ajratib oling.
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let users = [
+    {
+        name: "Ali",
+        age: 18
+    },
+    {
+        name: "Vali",
+        age: 19
+    },
+    {
+        name: "Hasan",
+        age: 17
+    }
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    5-vazifa:
+                </b>
+
+                <br>
+
+                Har bir mahsulotni quyidagi
+                ko‘rinishga o'tkazing:
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>Telefon - 3000000 so‘m
+Noutbuk - 7000000 so‘m</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    6-vazifa:
+                </b>
+
+                <br>
+
+                <code>map()</code> va
+                <code>join()</code> yordamida
+                mahsulotlar uchun HTML
+                <code>&lt;li&gt;</code> elementlarini
+                yarating.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    7-vazifa:
+                </b>
+
+                <br>
+
+                <code>forEach()</code> va
+                <code>map()</code> o‘rtasidagi
+                farqni o‘z misolingiz bilan
+                ko‘rsating.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🗺️ <code>map()</code> —
+                Array'dagi har bir element
+                ustida amal bajaradi.
+            </p>
+
+            <p>
+                🔄 Har bir elementdan qaytgan
+                qiymat yangi Array'ga tushadi.
+            </p>
+
+            <p>
+                🆕 <code>map()</code>
+                <b>yangi Array qaytaradi.</b>
+            </p>
+
+            <p>
+                📦 Original Array odatda
+                o‘zgarmaydi.
+            </p>
+
+            <p>
+                🔢 Callback'da
+                <code>element</code> va
+                <code>index</code>dan foydalanish
+                mumkin.
+            </p>
+
+            <p>
+                🧩 Object'lar bilan ishlashda
+                juda foydali.
+            </p>
+
+            <p>
+                ⚠️ `{ }` ishlatilgan Arrow Function'da
+                <code>return</code>ni unutmaslik kerak.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🗺️
+        </div>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            38-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 38-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(37)) {
+
+        alert("Avval 37-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-37.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(38)) {
+
+        completedLessons.push(38);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 38-dars tugatildi! 39-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 38-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

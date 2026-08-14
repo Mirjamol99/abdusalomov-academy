@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 31-dars | Array index va length</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .index-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔢 31-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Array index va length
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugungi darsda Array ichidagi
+            elementlarning <b>index</b> raqami va
+            Array uzunligini ko‘rsatuvchi
+            <code>length</code> xususiyatini
+            batafsil o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 Index nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b>Index</b> — Array ichidagi elementning
+            tartib raqami.
+
+            <br><br>
+
+            JavaScript'da indexlar
+            <b>0 dan boshlanadi.</b>
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];</code></pre>
+
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+
+            <div class="index-card">
+                <div class="text-yellow-400 text-2xl font-bold">
+                    0
+                </div>
+                <p class="mt-2">Olma</p>
+            </div>
+
+            <div class="index-card">
+                <div class="text-yellow-400 text-2xl font-bold">
+                    1
+                </div>
+                <p class="mt-2">Banan</p>
+            </div>
+
+            <div class="index-card">
+                <div class="text-yellow-400 text-2xl font-bold">
+                    2
+                </div>
+                <p class="mt-2">Uzum</p>
+            </div>
+
+            <div class="index-card">
+                <div class="text-yellow-400 text-2xl font-bold">
+                    3
+                </div>
+                <p class="mt-2">Anor</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📌 Nega index 0 dan boshlanadi?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript'da Array elementlari
+            birinchi elementdan boshlab
+            <code>0</code>, keyin <code>1</code>,
+            <code>2</code>, <code>3</code>...
+            tarzida indekslanadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let ism = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+console.log(ism[0]);
+console.log(ism[1]);
+console.log(ism[2]);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ali
+Vali
+Hasan</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            ⚠️ Birinchi elementni olish uchun
+            <code>[1]</code> emas,
+            <code>[0]</code> yoziladi.
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎯 Index orqali elementni olish
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let ranglar = [
+    "Qizil",
+    "Yashil",
+    "Ko‘k"
+];
+
+console.log(ranglar[0]);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Natija:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>Qizil</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ✏️ Index orqali elementni o‘zgartirish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Index orqali Array'dagi mavjud
+            elementning qiymatini o‘zgartirish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+mevalar[1] = "Anor";
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Anor",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Chunki <code>1</code>-indexdagi
+            qiymat <b>Banan</b> edi.
+
+            <br><br>
+
+            Uni <b>Anor</b>ga almashtirdik.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📏 length nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>length</code> — Array ichidagi
+            elementlar sonini bildiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+console.log(mevalar.length);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>4</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 length va index farqi
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bu ikkisini adashtirmaslik juda muhim.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let sonlar = [
+    10,
+    20,
+    30,
+    40
+];
+
+console.log(sonlar.length);
+
+console.log(sonlar[3]);</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            <p>
+                <code>sonlar.length</code>
+                → <b>4</b> — elementlar soni
+            </p>
+
+            <br>
+
+            <p>
+                <code>sonlar[3]</code>
+                → <b>40</b> — 3-indexdagi element
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎯 Oxirgi elementni olish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array uzunligi 4 bo‘lsa,
+            oxirgi index 3 bo‘ladi.
+
+            <br><br>
+
+            Shuning uchun oxirgi elementni:
+
+            <br><br>
+
+            <code>length - 1</code>
+
+            <br><br>
+
+            orqali topamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+console.log(
+    mevalar[mevalar.length - 1]
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Anor</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 Nima uchun length - 1?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, Array'da 5 ta element bo‘lsin:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let sonlar = [
+    10, 20, 30, 40, 50
+];</code></pre>
+
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-6">
+
+            <div class="index-card">
+                <b class="text-yellow-400">0</b>
+                <p>10</p>
+            </div>
+
+            <div class="index-card">
+                <b class="text-yellow-400">1</b>
+                <p>20</p>
+            </div>
+
+            <div class="index-card">
+                <b class="text-yellow-400">2</b>
+                <p>30</p>
+            </div>
+
+            <div class="index-card">
+                <b class="text-yellow-400">3</b>
+                <p>40</p>
+            </div>
+
+            <div class="index-card">
+                <b class="text-yellow-400">4</b>
+                <p>50</p>
+            </div>
+
+        </div>
+
+        <div class="info mt-6">
+
+            <code>sonlar.length</code> → 5
+
+            <br><br>
+
+            <code>sonlar.length - 1</code> → 4
+
+            <br><br>
+
+            Demak oxirgi index → <b>4</b>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ❌ Mavjud bo‘lmagan index
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar Array'da mavjud bo‘lmagan
+            indexga murojaat qilsak,
+            JavaScript <code>undefined</code>
+            qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(mevalar[10]);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>undefined</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            Array'da faqat 0, 1, 2 indekslar mavjud.
+            10-index mavjud emas.
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📭 Bo‘sh Array va length
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [];
+
+console.log(mevalar.length);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>0</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bo‘sh Array'da element yo‘q,
+            shuning uchun uning uzunligi
+            <code>0</code> bo‘ladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ length orqali element qo‘shish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>length</code> orqali
+            Array oxiriga yangi element
+            joylashtirish ham mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan"
+];
+
+mevalar[mevalar.length] = "Uzum";
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            💡 Lekin amaliyotda element qo‘shish
+            uchun <code>push()</code> ishlatish
+            qulayroq.
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔄 length va for loop
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>length</code> Array bilan loop
+            ishlatishda juda ko‘p qo‘llanadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+for (
+    let i = 0;
+    i < mevalar.length;
+    i++
+) {
+
+    console.log(mevalar[i]);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Olma
+Banan
+Uzum
+Anor</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧮 Index bilan hisoblash
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let sonlar = [
+    10,
+    20,
+    30,
+    40
+];
+
+console.log(sonlar[0] + sonlar[1]);
+
+console.log(sonlar[2] * 2);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>30
+60</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Index orqali Array'dagi
+            kerakli qiymatni olib,
+            matematik amallarda ishlatish mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📝 String Array bilan ishlash
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let ismlar = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];
+
+console.log("Birinchi:", ismlar[0]);
+
+console.log("Ikkinchi:", ismlar[1]);
+
+console.log("Oxirgi:",
+    ismlar[ismlar.length - 1]
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧑‍💻 Real loyiha misoli
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, internet do‘kondagi
+            mahsulotlar Array'da saqlansin:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "iPhone",
+    "Samsung",
+    "Xiaomi",
+    "Redmi"
+];
+
+console.log(
+    "Mahsulotlar soni:",
+    products.length
+);
+
+console.log(
+    "Birinchi mahsulot:",
+    products[0]
+);
+
+console.log(
+    "Oxirgi mahsulot:",
+    products[products.length - 1]
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ Eng ko‘p qilinadigan xato
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let ismlar = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+console.log(ismlar[3]);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu yerda <code>3</code>-index mavjud emas.
+
+            <br><br>
+
+            Chunki indexlar:
+
+            <br>
+
+            0 → Ali
+
+            <br>
+
+            1 → Vali
+
+            <br>
+
+            2 → Hasan
+
+        </p>
+
+        <div class="info mt-5">
+
+            <b>length = 3</b>, lekin oxirgi index
+            <b>2</b>.
+
+            <br><br>
+
+            Shuning uchun:
+
+            <br>
+
+            <code>lastIndex = length - 1</code>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎯 Muhim formula
+        </h2>
+
+        <div class="info text-center">
+
+            <p class="text-2xl font-bold">
+                Oxirgi index = length - 1
+            </p>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+];
+
+let lastIndex = numbers.length - 1;
+
+console.log(lastIndex);
+
+console.log(numbers[lastIndex]);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>5
+60</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 Array index va length farqi
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Tushuncha
+                        </th>
+
+                        <th class="p-4">
+                            Vazifasi
+                        </th>
+
+                        <th class="p-4">
+                            Misol
+                        </th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            Index
+                        </td>
+
+                        <td class="p-4">
+                            Element joylashuvi
+                        </td>
+
+                        <td class="p-4">
+                            <code>arr[2]</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            length
+                        </td>
+
+                        <td class="p-4">
+                            Elementlar soni
+                        </td>
+
+                        <td class="p-4">
+                            <code>arr.length</code>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4 text-yellow-400">
+                            last index
+                        </td>
+
+                        <td class="p-4">
+                            Oxirgi element joylashuvi
+                        </td>
+
+                        <td class="p-4">
+                            <code>arr.length - 1</code>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <div class="space-y-6 text-slate-400 leading-8">
+
+            <p>
+                <b class="text-white">1-vazifa:</b>
+                <br>
+                5 ta ismni Array ichiga yozing.
+                Birinchi ismni Console'ga chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">2-vazifa:</b>
+                <br>
+                5 ta ismli Array'ning
+                <code>length</code> qiymatini chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">3-vazifa:</b>
+                <br>
+                Array'dagi oxirgi elementni
+                <code>length - 1</code> yordamida oling.
+            </p>
+
+            <p>
+                <b class="text-white">4-vazifa:</b>
+                <br>
+                Array'dagi 2-indexdagi elementni
+                boshqa qiymatga o‘zgartiring.
+            </p>
+
+            <p>
+                <b class="text-white">5-vazifa:</b>
+                <br>
+                6 ta sonli Array yarating.
+                Eng oxirgi elementni index orqali toping.
+            </p>
+
+            <p>
+                <b class="text-white">6-vazifa:</b>
+                <br>
+                <code>for</code> loop yordamida
+                Array'dagi barcha elementlarni chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">7-vazifa:</b>
+                <br>
+                Array'da mavjud bo‘lmagan indexga
+                murojaat qilib ko‘ring.
+                Natija nima bo‘lishini kuzating.
+            </p>
+
+            <p>
+                <b class="text-white">8-vazifa:</b>
+                <br>
+                Quyidagi Array'da birinchi,
+                ikkinchi va oxirgi elementni chiqaring:
+            </p>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let students = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan",
+    "Sardor"
+];</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+        <div class="space-y-4 text-slate-300 leading-8">
+
+            <p>
+                🔢 Array indexlari <b>0 dan boshlanadi.</b>
+            </p>
+
+            <p>
+                📥 <code>array[0]</code> —
+                birinchi element.
+            </p>
+
+            <p>
+                📏 <code>array.length</code> —
+                elementlar soni.
+            </p>
+
+            <p>
+                🎯 <code>array.length - 1</code> —
+                oxirgi index.
+            </p>
+
+            <p>
+                ✏️ Index orqali elementni
+                o‘zgartirish mumkin.
+            </p>
+
+            <p>
+                ❌ Mavjud bo‘lmagan index
+                odatda <code>undefined</code>
+                qaytaradi.
+            </p>
+
+            <p>
+                🔄 <code>length</code>
+                <code>for</code> loop bilan juda
+                ko‘p ishlatiladi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔢
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            31-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 31-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(30)) {
+
+        alert("Avval 30-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-30.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(31)) {
+
+        completedLessons.push(31);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 31-dars tugatildi! 32-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 31-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+
+</html>

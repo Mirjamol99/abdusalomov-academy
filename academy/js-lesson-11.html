@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 11-dars | typeof operatori</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400 hover:text-yellow-400 transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔍 11-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            typeof operatori
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            <code>typeof</code> JavaScript'da
+            qiymat yoki o‘zgaruvchining
+            ma'lumot turini aniqlash uchun
+            ishlatiladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            typeof nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>typeof</code> — operator.
+            U berilgan qiymatning turini
+            String ko‘rinishida qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(typeof "Salom");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>string</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Demak, <code>"Salom"</code>
+            qiymatining turi
+            <code>string</code>.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Number turini aniqlash 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 15;
+
+console.log(typeof age);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>number</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Chunki <code>15</code> JavaScript'da
+            <code>Number</code> turiga kiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String turini aniqlash 🔤
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let name = "Mirjamol";
+
+console.log(typeof name);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>string</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean turini aniqlash ✅
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isStudent = true;
+
+console.log(typeof isStudent);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>boolean</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            undefined turini aniqlash ❓
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let username;
+
+console.log(typeof username);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>undefined</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            null bilan typeof ⚠️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let user = null;
+
+console.log(typeof user);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>object</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Eslab qoling:
+
+            <br><br>
+
+            <code>typeof null</code>
+            natijasi
+            <code>"object"</code>.
+
+            <br><br>
+
+            Bu JavaScript'dagi tarixiy
+            xususiyatlardan biridir.
+
+        </p>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            typeof operatorini o‘zgaruvchi bilan
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let city = "Toshkent";
+
+console.log(typeof city);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>typeof city</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            degani <code>city</code> ichidagi
+            qiymatning turini tekshirish.
+
+        </p>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            typeof va matematik amal 🧮
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>typeof</code> expression
+            natijasining turini ham aniqlay oladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(typeof (10 + 5));
+
+console.log(typeof (20 * 2));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>number
+number</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            typeof va String + Number
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let result = "10" + 5;
+
+console.log(result);
+
+console.log(typeof result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>105
+string</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda <code>"10"</code> String
+            bo‘lgani sababli <code>+</code>
+            operatori qiymatlarni matn sifatida
+            birlashtirdi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            typeof va Number + Number
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let result = 10 + 5;
+
+console.log(result);
+
+console.log(typeof result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15
+number</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta qiymatni tekshirish
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let name = "Ali";
+let age = 17;
+let isStudent = true;
+let email;
+
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof isStudent);
+console.log(typeof email);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>string
+number
+boolean
+undefined</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            typeof natijasi nima uchun String?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>typeof</code>ning o‘zi
+            qiymat turini aniqlaydi va
+            natijani String sifatida qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(typeof 25);
+
+console.log(
+    typeof (typeof 25)
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>number
+string</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Birinchi <code>typeof</code>
+            <code>25</code>ning turini
+            <code>"number"</code> deb qaytaradi.
+
+            <br><br>
+
+            <code>"number"</code> esa String,
+            shuning uchun ikkinchi
+            <code>typeof</code> natijasi
+            <code>"string"</code> bo‘ladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            typeof jadvali 📚
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Qiymat
+                        </th>
+
+                        <th class="p-4">
+                            typeof natijasi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            <code>"Salom"</code>
+                        </td>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>"string"</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            <code>25</code>
+                        </td>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>"number"</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            <code>true</code>
+                        </td>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>"boolean"</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            <code>undefined</code>
+                        </td>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>"undefined"</code>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4">
+                            <code>null</code>
+                        </td>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>"object"</code>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bir nechta ma'lumot yaratib,
+            ularning turlarini aniqlaymiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let firstName = "Mirjamol";
+let age = 15;
+let isStudent = true;
+let phone = null;
+let email;
+
+console.log("firstName:", typeof firstName);
+console.log("age:", typeof age);
+console.log("isStudent:", typeof isStudent);
+console.log("phone:", typeof phone);
+console.log("email:", typeof email);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Avval natijalarni o‘zingiz topishga
+            harakat qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(typeof 100);
+
+console.log(typeof "100");
+
+console.log(typeof true);
+
+console.log(typeof false);
+
+console.log(typeof undefined);
+
+console.log(typeof null);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ Quyidagi o‘zgaruvchilarni
+            yarating:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "Ali";
+let age = 16;
+let isStudent = true;
+let money = null;
+let phone;</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            2️⃣ Har bir o‘zgaruvchining
+            turini <code>typeof</code> bilan
+            Console'ga chiqaring.
+
+            <br><br>
+
+            3️⃣ Quyidagilarning natijasini
+            toping:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(typeof "JavaScript");
+
+console.log(typeof 2026);
+
+console.log(typeof false);
+
+console.log(typeof null);
+
+console.log(typeof undefined);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            4️⃣ Quyidagi kod nima chiqarishini
+            tushuntiring:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let result = "5" + 5;
+
+console.log(result);
+console.log(typeof result);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔍 <code>typeof</code> —
+                qiymat turini aniqlaydi.
+            </p>
+
+            <p>
+                🔤 String → <code>"string"</code>
+            </p>
+
+            <p>
+                🔢 Number → <code>"number"</code>
+            </p>
+
+            <p>
+                ✅ Boolean → <code>"boolean"</code>
+            </p>
+
+            <p>
+                ❓ Undefined → <code>"undefined"</code>
+            </p>
+
+            <p>
+                ⚠️ Null → <code>"object"</code>
+            </p>
+
+            <p>
+                📌 <code>typeof</code> natijasining
+                o‘zi String bo‘ladi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔍
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            11-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 11-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 10-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(10)) {
+
+        alert("Avval 10-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-10.html";
+
+        return;
+    }
+
+
+    // 11-darsni saqlash
+
+    if (!completedLessons.includes(11)) {
+
+        completedLessons.push(11);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 11-dars tugatildi! 12-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 11-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

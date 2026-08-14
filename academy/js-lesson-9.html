@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 9-dars | Boolean</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ✅ 09-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Boolean
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Boolean — JavaScript'dagi eng muhim
+            ma'lumot turlaridan biri.
+            U biror narsa rost yoki yolg‘on
+            ekanligini ifodalash uchun ishlatiladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Boolean faqat ikkita qiymatga ega:
+
+            <br><br>
+
+            🟢 <code>true</code> — rost
+
+            <br>
+
+            🔴 <code>false</code> — yolg‘on
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isStudent = true;
+
+let isAdmin = false;
+
+console.log(isStudent);
+console.log(isAdmin);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean o‘zgaruvchisi
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Boolean qiymatlarni odatda
+            <code>is</code>, <code>has</code>
+            yoki <code>can</code> bilan boshlanadigan
+            o‘zgaruvchilarda ko‘p uchratamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = true;
+
+let isOnline = false;
+
+let hasMoney = true;
+
+let canDrive = false;</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bunday nomlar o‘zgaruvchining
+            Boolean ekanligini tushunishni
+            osonlashtiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            true va false qanday ishlaydi?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, foydalanuvchi tizimga
+            kirgan bo‘lsa:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = true;
+
+console.log(isLogin);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Agar foydalanuvchi tizimga
+            kirmagan bo‘lsa:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = false;
+
+console.log(isLogin);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean va taqqoslash 🔎
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Taqqoslash natijasi ham
+            Boolean bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 > 5);
+
+console.log(10 < 5);
+
+console.log(10 === 10);
+
+console.log(10 === 20);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false
+true
+false</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Demak, taqqoslash natijasida
+            JavaScript bizga
+            <code>true</code> yoki
+            <code>false</code> qaytaradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            > Katta
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>></code> operatori chap tarafdagi
+            qiymat o‘ng tarafdagidan katta
+            ekanligini tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(15 > 10);
+
+console.log(5 > 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            < Kichik
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code><</code> operatori chap tarafdagi
+            qiymat o‘ng tarafdagidan kichik
+            ekanligini tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(5 < 10);
+
+console.log(15 < 10);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            >= Katta yoki teng
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 >= 10);
+
+console.log(15 >= 10);
+
+console.log(5 >= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            <= Kichik yoki teng
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 <= 10);
+
+console.log(5 <= 10);
+
+console.log(15 <= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            === Tenglik
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>===</code> ikki qiymat tengligini
+            tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 === 10);
+
+console.log(10 === 20);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            !== Teng emas
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>!==</code> ikki qiymat teng emasligini
+            tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 !== 20);
+
+console.log(10 !== 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean bilan if ishlatish 🚦
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Boolean qiymatlar
+            <code>if</code> shartlarida juda
+            ko‘p ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = true;
+
+if (isLogin) {
+    console.log("Xush kelibsiz!");
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            <code>isLogin</code> qiymati
+            <code>true</code> bo‘lgani uchun
+            xabar chiqadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if va false
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = false;
+
+if (isLogin) {
+    console.log("Xush kelibsiz!");
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu safar shart
+            <code>false</code> bo‘lgani uchun
+            <code>if</code> ichidagi kod
+            bajarilmaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if / else bilan Boolean
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = false;
+
+if (isLogin) {
+    console.log("Xush kelibsiz!");
+} else {
+    console.log("Iltimos, tizimga kiring.");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Iltimos, tizimga kiring.</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy misol 👨‍🎓
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchi talaba ekanligini
+            Boolean orqali saqlashimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isStudent = true;
+
+if (isStudent) {
+    console.log("Siz talabasisiz.");
+} else {
+    console.log("Siz talaba emassiz.");
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy misol 💰
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let balance = 50000;
+
+let hasMoney = balance > 0;
+
+console.log(hasMoney);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Chunki <code>50000 > 0</code>
+            natijasi <code>true</code>.
+
+        </p>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean operatorlari 📚
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Operator
+                        </th>
+
+                        <th class="p-4">
+                            Vazifasi
+                        </th>
+
+                        <th class="p-4">
+                            Misol
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>></code>
+                        </td>
+
+                        <td class="p-4">
+                            Katta
+                        </td>
+
+                        <td class="p-4">
+                            <code>10 > 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code><</code>
+                        </td>
+
+                        <td class="p-4">
+                            Kichik
+                        </td>
+
+                        <td class="p-4">
+                            <code>5 < 10</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>>=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Katta yoki teng
+                        </td>
+
+                        <td class="p-4">
+                            <code>10 >= 10</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code><=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Kichik yoki teng
+                        </td>
+
+                        <td class="p-4">
+                            <code>5 <= 10</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>===</code>
+                        </td>
+
+                        <td class="p-4">
+                            Teng
+                        </td>
+
+                        <td class="p-4">
+                            <code>10 === 10</code>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>!==</code>
+                        </td>
+
+                        <td class="p-4">
+                            Teng emas
+                        </td>
+
+                        <td class="p-4">
+                            <code>10 !== 5</code>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarni yozing va
+            Console'dagi natijani topishga
+            harakat qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(20 > 10);
+
+console.log(7 === 7);
+
+console.log(15 < 5);
+
+console.log(10 !== 20);
+
+console.log(5 >= 5);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ <code>isLogin</code> nomli
+            Boolean o‘zgaruvchi yarating.
+
+            <br><br>
+
+            2️⃣ <code>isStudent</code> nomli
+            Boolean o‘zgaruvchi yarating.
+
+            <br><br>
+
+            3️⃣ <code>hasMoney</code> nomli
+            Boolean o‘zgaruvchi yarating.
+
+            <br><br>
+
+            4️⃣ Quyidagi taqqoslashlarning
+            natijasini Console'ga chiqaring:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>25 > 10
+15 < 5
+20 === 20
+10 !== 5
+50 >= 50
+7 <= 3</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            5️⃣ <code>if / else</code> yordamida
+            <code>isLogin</code> qiymatini tekshiring.
+
+            <br><br>
+
+            Agar <code>true</code> bo‘lsa:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>"Xush kelibsiz!"</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Agar <code>false</code> bo‘lsa:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>"Iltimos, tizimga kiring."</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ✅ <code>true</code> — rost.
+            </p>
+
+            <p>
+                ❌ <code>false</code> — yolg‘on.
+            </p>
+
+            <p>
+                🔎 Taqqoslash operatorlari
+                Boolean natija qaytaradi.
+            </p>
+
+            <p>
+                🚦 Boolean qiymatlar
+                <code>if / else</code> bilan
+                juda ko‘p ishlatiladi.
+            </p>
+
+            <p>
+                💻 Keyingi darslarda Boolean
+                operatorlari yordamida
+                murakkabroq shartlar tuzamiz.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ✅
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            9-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 9-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 8-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(8)) {
+
+        alert("Avval 8-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-8.html";
+
+        return;
+    }
+
+
+    // 9-darsni saqlash
+
+    if (!completedLessons.includes(9)) {
+
+        completedLessons.push(9);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 9-dars tugatildi! 10-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 9-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

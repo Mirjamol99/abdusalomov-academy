@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 1-dars | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+    
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="css-course.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-blue-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- MAIN -->
+
+<main class="max-w-5xl mx-auto
+            px-6 py-12">
+
+         <!-- LESSON HEADER -->
+
+    <div class="mb-10">
+
+        <span class="inline-flex
+                     items-center gap-2
+                     bg-blue-500/10
+                     border border-blue-500/20
+                     text-blue-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            1-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+            CSS nima? 🎨
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5
+                  leading-8">
+
+            CSS yordamida HTML sahifamizni
+            chiroyli va zamonaviy ko'rinishga
+            keltiramiz.
+
+        </p>
+
+    </div>
+
+         <!-- 1. CSS NIMA? -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+        </div>
+
+
+        <h2 class="lesson-title">
+
+            1. CSS nima?
+
+        </h2>
+
+
+        <p class="text-slate-300
+                  leading-8">
+
+            <strong class="text-blue-400">
+                CSS
+            </strong>
+            — Cascading Style Sheets
+            so'zlarining qisqartmasi.
+
+        </p>
+
+
+        <p class="text-slate-400
+                  leading-8
+                  mt-4">
+
+            CSS HTML elementlarining
+            ko'rinishini o'zgartirish uchun
+            ishlatiladi.
+
+        </p>
+
+
+        <div class="info-box">
+
+            💡 Oddiy qilib aytganda:
+
+            <br><br>
+
+            <strong class="text-white">
+                HTML
+            </strong>
+            — saytning tuzilishi.
+
+            <br>
+
+            <strong class="text-blue-400">
+                CSS
+            </strong>
+            — saytning ko'rinishi.
+
+        </div>
+
+    </section>
+
+         <!-- 2. HTML VS CSS -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            2. HTML va CSS farqi
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-5 mt-6">
+
+
+            <!-- HTML -->
+
+            <div class="compare-card">
+
+                <div class="text-4xl mb-4">
+
+                    🧱
+
+                </div>
+
+
+                <h3 class="text-2xl
+                           font-bold">
+
+                    HTML
+
+                </h3>
+
+
+                <p class="text-slate-400
+                          mt-3
+                          leading-7">
+
+                    Sahifaning tuzilishini
+                    yaratadi.
+
+                </p>
+
+
+                <div class="code-small">
+
+<pre><code>&lt;h1&gt;
+    Salom!
+&lt;/h1&gt;</code></pre>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CSS -->
+
+            <div class="compare-card">
+
+                <div class="text-4xl mb-4">
+
+                    🎨
+
+                </div>
+
+
+                <h3 class="text-2xl
+                           font-bold">
+
+                    CSS
+
+                </h3>
+
+
+                <p class="text-slate-400
+                          mt-3
+                          leading-7">
+
+                    Sahifaning ko'rinishini
+                    bezaydi.
+
+                </p>
+
+
+                <div class="code-small">
+
+<pre><code>h1 {
+    color: blue;
+}</code></pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 3. FIRST CSS -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            3. Birinchi CSS kodimiz 🚀
+
+        </h2>
+
+
+        <p class="text-slate-400
+                  leading-8">
+
+            HTML elementiga CSS yordamida
+            rang berib ko'ramiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;h1&gt;Abdusalomov Academy&lt;/h1&gt;
+
+&lt;style&gt;
+
+    h1 {
+        color: blue;
+    }
+
+&lt;/style&gt;</code></pre>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡
+
+            <strong>
+                color
+            </strong>
+
+            xususiyati matn rangini
+            o'zgartiradi.
+
+        </div>
+
+    </section>
+
+         <!-- 4. CSS PROPERTY -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            4. CSS property nima?
+
+        </h2>
+
+
+        <p class="text-slate-400
+                  leading-8">
+
+            CSS'da elementning xususiyatini
+            o'zgartirish uchun property
+            ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>h1 {
+
+    color: blue;
+
+    font-size: 40px;
+
+}</code></pre>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-6">
+
+
+            <div class="type-card">
+
+                <code class="text-blue-400">
+                    color
+                </code>
+
+                <p class="text-slate-400 mt-2">
+
+                    Matn rangini o'zgartiradi.
+
+                </p>
+
+            </div>
+
+
+            <div class="type-card">
+
+                <code class="text-blue-400">
+                    font-size
+                </code>
+
+                <p class="text-slate-400 mt-2">
+
+                    Matn o'lchamini o'zgartiradi.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 5. SELECTOR -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            5. CSS selector
+
+        </h2>
+
+
+        <p class="text-slate-400
+                  leading-8">
+
+            Selector CSS qaysi HTML elementga
+            ta'sir qilishini belgilaydi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>p {
+
+    color: red;
+
+}</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400
+                  leading-8
+                  mt-5">
+
+            Bu yerda
+            <strong class="text-blue-400">
+                p
+            </strong>
+            — selector.
+
+        </p>
+
+    </section>
+
+         <!-- 6. AMALIY MISOL -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            6. Amaliy misol 💻
+
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;h1&gt;Abdusalomov Academy&lt;/h1&gt;
+
+&lt;p&gt;
+    CSS o'rganishni boshladik!
+&lt;/p&gt;
+
+&lt;style&gt;
+
+    h1 {
+        color: #3b82f6;
+        font-size: 40px;
+    }
+
+    p {
+        color: #94a3b8;
+        font-size: 20px;
+    }
+
+&lt;/style&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6
+                    p-6
+                    bg-slate-950
+                    border border-slate-800
+                    rounded-2xl">
+
+            <h3 class="text-4xl
+                       font-extrabold
+                       text-blue-500">
+
+                Abdusalomov Academy
+
+            </h3>
+
+
+            <p class="text-slate-400
+                      text-xl
+                      mt-3">
+
+                CSS o'rganishni boshladik!
+
+            </p>
+
+        </div>
+
+    </section>
+
+         <!-- 7. MINI TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400
+                     font-bold">
+
+            MINI TEST 🧠
+
+        </span>
+
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold
+                   mt-4">
+
+            CSS nimaga xizmat qiladi?
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) Ma'lumotlar bazasini yaratadi
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                B) Saytning ko'rinishini bezaydi
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) Faqat JavaScript yozadi
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) Internetni tezlashtiradi
+
+            </button>
+
+        </div>
+
+
+        <p id="answerResult"
+           class="mt-6
+                  font-bold
+                  text-lg">
+
+        </p>
+
+    </section>
+
+         <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8
+                    text-center">
+
+        <div class="text-5xl mb-5">
+
+            🎉
+
+        </div>
+
+
+        <h2 class="text-3xl
+                   md:text-4xl
+                   font-extrabold">
+
+            1-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p class="text-slate-400
+                  mt-4">
+
+            Tugatish tugmasini bosganingizdan
+            keyin 2-dars avtomatik ochiladi.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- COMPLETE BUTTON -->
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full
+                   bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5
+                   rounded-2xl
+                   font-bold
+                   text-lg
+                   transition">
+
+            1-darsni tugatish
+
+            <i class="fa-solid
+                      fa-check
+                      ml-2">
+            </i>
+
+        </button>
+
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+        </p>
+
+    </section>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8
+               mt-10">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- STYLE -->
+
+<style>
+
+.lesson-box {
+
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+}
+
+
+.lesson-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.lesson-title {
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+
+.code-box {
+
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+
+}
+
+
+.code-box pre {
+
+    color: #4ade80;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+
+}
+
+
+.code-small {
+
+    margin-top: 18px;
+
+    padding: 16px;
+
+    background: #020617;
+
+    border-radius: 14px;
+
+    overflow-x: auto;
+
+}
+
+
+.code-small pre {
+
+    color: #4ade80;
+
+    line-height: 1.8;
+
+}
+
+
+.info-box {
+
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: rgba(59,130,246,.08);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    border-radius: 16px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+
+}
+
+
+.compare-card {
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+}
+
+
+.type-card {
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+}
+
+
+.answer-btn {
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+
+}
+
+
+.answer-btn:hover {
+
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+
+}
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById(
+            "answerResult"
+        );
+
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! CSS saytning ko'rinishini bezash uchun ishlatiladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "cssCompletedLessons"
+            )
+        ) || [];
+
+
+    // 1-darsni qo‘shish
+
+    if (!completedLessons.includes(1)) {
+
+        completedLessons.push(1);
+
+    }
+
+
+    // Saqlash
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    // Xabar
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 1-dars tugatildi! 2-dars ochildi 🔓";
+
+
+    // Tugmani o‘zgartirish
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.innerHTML =
+        "✅ 1-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    // Kurs sahifasiga qaytish
+
+    setTimeout(
+        function() {
+
+            window.location.href =
+                "css-course.html";
+
+        },
+        1500
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

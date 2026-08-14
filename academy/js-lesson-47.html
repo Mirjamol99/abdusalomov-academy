@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 47-dars | Destructuring</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        📤 47-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        Destructuring
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript'dagi
+        <code>Destructuring</code> bilan tanishamiz.
+
+        <br><br>
+
+        Destructuring yordamida Array va Object
+        ichidagi qiymatlarni tez va qulay tarzda
+        alohida o‘zgaruvchilarga ajratib olish mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Destructuring nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Destructuring — Array yoki Object ichidagi
+        ma'lumotlarni alohida o‘zgaruvchilarga
+        ajratib olish usuli.
+
+        <br><br>
+
+        Oddiy usulda Array'dan qiymat olish:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana",
+    "Mango"
+];
+
+let first = fruits[0];
+let second = fruits[1];
+let third = fruits[2];
+
+console.log(first);
+console.log(second);
+console.log(third);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Destructuring bilan esa ancha qisqa:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana",
+    "Mango"
+];
+
+let [first, second, third] = fruits;
+
+console.log(first);
+console.log(second);
+console.log(third);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Array Destructuring
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Array destructuring'da qiymatlar
+        o‘z navbatidagi index bo‘yicha
+        o‘zgaruvchilarga biriktiriladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [10, 20, 30];
+
+let [a, b, c] = numbers;
+
+console.log(a);
+console.log(b);
+console.log(c);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10
+20
+30</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>a</code> → 1-element
+
+        <br>
+
+        <code>b</code> → 2-element
+
+        <br>
+
+        <code>c</code> → 3-element
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Kerakli qiymatni olish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar Array'dagi faqat ayrim qiymat
+        kerak bo‘lsa, qolgan joyni bo‘sh
+        qoldirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30
+];
+
+let [, second, third] = numbers;
+
+console.log(second);
+console.log(third);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>20
+30</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Birinchi elementni olish kerak emasligi
+        uchun birinchi joy bo‘sh qoldirildi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Rest operator bilan Array Destructuring
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>...</code> yordamida qolgan
+        elementlarni bitta Array ichida
+        yig‘ib olish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40,
+    50
+];
+
+let [first, second, ...rest] = numbers;
+
+console.log(first);
+console.log(second);
+console.log(rest);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10
+20
+
+[30, 40, 50]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Array qiymatlarini almashtirish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Destructuring yordamida ikkita
+        o‘zgaruvchining qiymatini juda oson
+        almashtirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let a = 10;
+let b = 20;
+
+[a, b] = [b, a];
+
+console.log(a);
+console.log(b);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>20
+10</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu usul JavaScript'da juda ko‘p
+        ishlatiladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Default qiymat
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar Array'da kerakli qiymat bo‘lmasa,
+        default qiymat berish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [10];
+
+let [a, b = 20] = numbers;
+
+console.log(a);
+console.log(b);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10
+20</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Object Destructuring
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Endi Object bilan ishlaymiz.
+
+        <br><br>
+
+        Masalan:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Oddiy usul:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let name = user.name;
+let age = user.age;
+let city = user.city;
+
+console.log(name);
+console.log(age);
+console.log(city);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ Object Destructuring bilan
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};
+
+let {
+    name,
+    age,
+    city
+} = user;
+
+console.log(name);
+console.log(age);
+console.log(city);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+18
+Andijon</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔑 Object'da property nomi muhim
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object destructuring'da o‘zgaruvchi
+        nomi Object'dagi key bilan mos keladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+let {
+    name,
+    age
+} = user;
+
+console.log(name);
+console.log(age);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✏️ Boshqa nom berish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object'dagi property'ni boshqa
+        o‘zgaruvchi nomi bilan olish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+let {
+    name: userName,
+    age: userAge
+} = user;
+
+console.log(userName);
+console.log(userAge);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+18</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>name: userName</code>
+
+        <br><br>
+
+        Bu:
+
+        <br>
+
+        Object'dagi <code>name</code> qiymatini
+
+        <br>
+
+        <code>userName</code> o‘zgaruvchisiga
+        beradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Object'da default qiymat
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali"
+
+};
+
+let {
+    name,
+    age = 18
+} = user;
+
+console.log(name);
+console.log(age);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+18</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Object + Array
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichida Array bo‘lsa,
+        destructuring yordamida uni ham
+        ajratib olish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let student = {
+
+    name: "Ali",
+
+    subjects: [
+        "Math",
+        "English",
+        "JavaScript"
+    ]
+
+};
+
+let {
+    name,
+    subjects
+} = student;
+
+console.log(name);
+console.log(subjects);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 Nested Object Destructuring
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichida boshqa Object bo‘lsa,
+        nested destructuring ishlatish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    address: {
+
+        city: "Andijon",
+
+        street: "Navoi"
+
+    }
+
+};
+
+let {
+    name,
+    address: {
+        city,
+        street
+    }
+} = user;
+
+console.log(name);
+console.log(city);
+console.log(street);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+Andijon
+Navoi</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📤 Function parametrida Destructuring
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Destructuring function parametrlarida
+        ham juda ko‘p ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+function showUser({ name, age }) {
+
+    console.log(name);
+    console.log(age);
+
+}
+
+showUser(user);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+18</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Real loyiha: Product
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let product = {
+
+    name: "Pizza",
+
+    price: 50000,
+
+    category: "Pizza",
+
+    available: true
+
+};
+
+let {
+    name,
+    price,
+    category,
+    available
+} = product;
+
+console.log(name);
+console.log(price);
+console.log(category);
+console.log(available);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Product function
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let product = {
+
+    name: "Pizza",
+
+    price: 50000,
+
+    category: "Pizza"
+
+};
+
+function showProduct({
+    name,
+    price,
+    category
+}) {
+
+    console.log(
+        "Mahsulot: " + name
+    );
+
+    console.log(
+        "Narx: " + price
+    );
+
+    console.log(
+        "Kategoriya: " + category
+    );
+
+}
+
+showProduct(product);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Array va Object birga
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let users = [
+
+    {
+        name: "Ali",
+        age: 18
+    },
+
+    {
+        name: "Vali",
+        age: 20
+    }
+
+];
+
+let [
+    firstUser,
+    secondUser
+] = users;
+
+console.log(firstUser.name);
+console.log(secondUser.name);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+Vali</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Array Object Destructuring
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Array ichidagi Object'ni bir vaqtning
+        o‘zida destructuring qilish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let users = [
+
+    {
+        name: "Ali",
+        age: 18
+    },
+
+    {
+        name: "Vali",
+        age: 20
+    }
+
+];
+
+let [
+    { name: firstName },
+    { name: secondName }
+] = users;
+
+console.log(firstName);
+console.log(secondName);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+Vali</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Destructuring qayerda ishlatiladi?
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold
+                       text-yellow-400">
+
+                Array
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+
+                Array elementlarini
+                ajratib olish.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold
+                       text-green-400">
+
+                Object
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+
+                Object property'larini
+                ajratib olish.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold
+                       text-blue-400">
+
+                Function
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+
+                Function parametrlarida
+                ishlatish.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold
+                       text-purple-400">
+
+                Real loyihalar
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+
+                API va ma'lumotlar bilan
+                ishlashda juda foydali.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 To‘liq amaliy misol
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    id: 1,
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon",
+
+    skills: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ],
+
+    address: {
+
+        street: "Navoi",
+
+        house: 15
+
+    }
+
+};
+
+
+let {
+    id,
+    name,
+    age,
+    city,
+    skills,
+    address: {
+        street,
+        house
+    }
+} = user;
+
+
+console.log(id);
+console.log(name);
+console.log(age);
+console.log(city);
+console.log(skills);
+console.log(street);
+console.log(house);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu misolda biz bitta Object ichidan
+        oddiy property, Array va nested
+        Object qiymatlarini bir vaqtning
+        o‘zida ajratib oldik.
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🔢
+            </b>
+
+            <br>
+
+            Quyidagi Array'dan destructuring
+            yordamida qiymatlarni oling:
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 👤
+            </b>
+
+            <br>
+
+            User Object'dan
+            <code>name</code>,
+            <code>age</code> va
+            <code>city</code>ni destructuring
+            qiling.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 📦
+            </b>
+
+            <br>
+
+            Object property'lariga yangi
+            o‘zgaruvchi nomi bering.
+
+            <br><br>
+
+            Masalan:
+
+            <br>
+
+            <code>name → userName</code>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 🛒
+            </b>
+
+            <br>
+
+            Product Object'ni destructuring qiling.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let product = {
+
+    name: "Pizza",
+
+    price: 50000,
+
+    category: "Pizza",
+
+    available: true
+
+};</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🧩
+            </b>
+
+            <br>
+
+            Nested Object'dan
+            <code>city</code>ni destructuring
+            yordamida oling.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    address: {
+
+        city: "Andijon",
+
+        street: "Navoi"
+
+    }
+
+};</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🔄
+            </b>
+
+            <br>
+
+            Ikki o‘zgaruvchining qiymatini
+            destructuring yordamida almashtiring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let a = 100;
+let b = 200;</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🔥
+            </b>
+
+            <br>
+
+            Function parametrida Object
+            destructuring ishlating.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            📤 <b>Destructuring</b>
+            → Array yoki Object ichidagi
+            qiymatlarni ajratib olish.
+        </p>
+
+
+        <p>
+            🔢 Array destructuring:
+            <code>let [a, b] = arr</code>
+        </p>
+
+
+        <p>
+            📦 Object destructuring:
+            <code>let { name, age } = user</code>
+        </p>
+
+
+        <p>
+            🎯 Kerakli elementni olish uchun
+            Array'da joyni bo‘sh qoldirish mumkin.
+        </p>
+
+
+        <p>
+            🔄 <code>[a, b] = [b, a]</code>
+            orqali qiymatlarni almashtirish mumkin.
+        </p>
+
+
+        <p>
+            🧩 Object property'ga boshqa nom
+            berish mumkin.
+        </p>
+
+
+        <p>
+            ⚙️ Function parametrlarida
+            destructuring ishlatish mumkin.
+        </p>
+
+
+        <p>
+            🔥 Nested Object va Array bilan
+            ham destructuring ishlaydi.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        📤
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        47-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 47-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        46-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(46)) {
+
+        alert(
+            "Avval 46-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-46.html";
+
+        return;
+
+    }
+
+
+    /*
+        47-darsni saqlash
+    */
+
+    if (!completedLessons.includes(47)) {
+
+        completedLessons.push(47);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 47-dars tugatildi! 48-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 47-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

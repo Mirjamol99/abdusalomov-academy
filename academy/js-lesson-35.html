@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 35-dars | concat</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔗 35-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            concat()
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            34-darsda <code>slice()</code> va
+            <code>splice()</code> yordamida
+            Array ichidagi elementlar bilan
+            ishlashni o‘rgandik.
+
+            <br><br>
+
+            Bugun esa bir nechta Array'ni
+            <b>bitta Array'ga birlashtirish</b>ni
+            o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔗 concat() nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>concat()</code> — bir nechta
+            Array'ni birlashtirib,
+            <b>yangi Array</b> qaytaradigan metod.
+
+            <br><br>
+
+            Eng muhim jihati:
+
+            <br><br>
+
+            <span class="text-green-400 font-bold">
+                concat() original Array'larni o‘zgartirmaydi.
+            </span>
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits1 = [
+    "Olma",
+    "Banan"
+];
+
+let fruits2 = [
+    "Uzum",
+    "Anor"
+];
+
+let fruits = fruits1.concat(fruits2);
+
+console.log(fruits);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧩 concat() sintaksisi
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>array1.concat(array2);</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400
+                  mt-5
+                  leading-8">
+
+            Bu yerda:
+
+            <br><br>
+
+            <code>array1</code> — asosiy Array
+
+            <br>
+
+            <code>array2</code> — qo‘shiladigan Array
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let a = [1, 2];
+
+let b = [3, 4];
+
+let result = a.concat(b);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[1, 2, 3, 4]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ Bir nechta Array'ni birlashtirish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>concat()</code> faqat ikkita
+            emas, bir nechta Array'ni ham
+            birlashtira oladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let a = [1, 2];
+
+let b = [3, 4];
+
+let c = [5, 6];
+
+let result = a.concat(b, c);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📚 Uchta Array bilan ishlash
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let frontend = [
+    "HTML",
+    "CSS"
+];
+
+let javascript = [
+    "JavaScript",
+    "DOM"
+];
+
+let backend = [
+    "Node.js",
+    "Express"
+];
+
+let courses =
+    frontend.concat(
+        javascript,
+        backend
+    );
+
+console.log(courses);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "DOM",
+    "Node.js",
+    "Express"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔒 Original Array o‘zgarmaydi
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>concat()</code> yangi Array
+            yaratadi.
+
+            <br><br>
+
+            Eski Array'lar esa o‘z holicha qoladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let first = [
+    "Ali",
+    "Vali"
+];
+
+let second = [
+    "Hasan",
+    "Husan"
+];
+
+let all = first.concat(second);
+
+console.log(all);
+
+console.log(first);
+
+console.log(second);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>all:
+
+[
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+]
+
+first:
+
+[
+    "Ali",
+    "Vali"
+]
+
+second:
+
+[
+    "Hasan",
+    "Husan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ concat() bilan oddiy qiymat qo‘shish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>concat()</code>ga faqat Array
+            emas, oddiy qiymatlarni ham berish
+            mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20
+];
+
+let result = numbers.concat(30);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    10,
+    20,
+    30
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ Bir nechta qiymat qo‘shish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20
+];
+
+let result = numbers.concat(
+    30,
+    40,
+    50
+);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    10,
+    20,
+    30,
+    40,
+    50
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 concat() va push() farqi
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl
+                           font-bold
+                           text-green-400">
+
+                    concat()
+
+                </h3>
+
+                <p class="text-slate-400
+                          mt-4
+                          leading-8">
+
+                    Yangi Array qaytaradi.
+
+                    <br><br>
+
+                    Original Array
+                    <b>o‘zgarmaydi.</b>
+
+                </p>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl
+                           font-bold
+                           text-yellow-400">
+
+                    push()
+
+                </h3>
+
+                <p class="text-slate-400
+                          mt-4
+                          leading-8">
+
+                    Original Array'ga
+                    element qo‘shadi.
+
+                    <br><br>
+
+                    Original Array
+                    <b>o‘zgaradi.</b>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚖️ concat va push taqqoslash
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let a = [1, 2];
+
+let b = [3, 4];
+
+let result = a.concat(b);
+
+console.log(result);
+
+console.log(a);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>result:
+
+[1, 2, 3, 4]
+
+a:
+
+[1, 2]</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400
+                  mt-6
+                  leading-8">
+
+            Endi <code>push()</code> bilan:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let a = [1, 2];
+
+let b = [3, 4];
+
+a.push(...b);
+
+console.log(a);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[1, 2, 3, 4]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📦 concat() bilan Array qo‘shish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let users1 = [
+    "Ali",
+    "Vali"
+];
+
+let users2 = [
+    "Hasan",
+    "Husan"
+];
+
+let users3 = [
+    "Sardor",
+    "Jasur"
+];
+
+let users = users1.concat(
+    users2,
+    users3
+);
+
+console.log(users);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan",
+    "Sardor",
+    "Jasur"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Real loyiha — mahsulotlar
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Tasavvur qiling, bizda ikkita
+            kategoriyadagi mahsulotlar bor.
+
+            Ularni bitta ro‘yxatga birlashtiramiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let phones = [
+    "iPhone",
+    "Samsung"
+];
+
+let laptops = [
+    "MacBook",
+    "Lenovo"
+];
+
+let products =
+    phones.concat(laptops);
+
+console.log(products);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "iPhone",
+    "Samsung",
+    "MacBook",
+    "Lenovo"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            👨‍🎓 Real loyiha — o‘quvchilar
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let group1 = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+let group2 = [
+    "Husan",
+    "Sardor",
+    "Jasur"
+];
+
+let students =
+    group1.concat(group2);
+
+console.log(students);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan",
+    "Sardor",
+    "Jasur"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔗 concat() va slice()
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Bu ikki metodni birga ham ishlatish
+            mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+let firstPart =
+    fruits.slice(0, 2);
+
+let secondPart =
+    fruits.slice(2);
+
+let result =
+    firstPart.concat(secondPart);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+]</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Bu yerda <code>slice()</code> qismlarni
+            oldi, <code>concat()</code> esa ularni
+            yana birlashtirdi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 concat() va length
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let a = [
+    10,
+    20,
+    30
+];
+
+let b = [
+    40,
+    50
+];
+
+let result = a.concat(b);
+
+console.log(result.length);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📋 concat() bilan nusxa olish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Bo‘sh Array bilan ham
+            <code>concat()</code> ishlatish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let original = [
+    1,
+    2,
+    3
+];
+
+let copy = [].concat(original);
+
+console.log(copy);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[1, 2, 3]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 concat() eslab qolish
+        </h2>
+
+
+        <div class="info text-lg leading-9">
+
+            <p>
+                🔗 <code>concat()</code> =
+                <b>birlashtirish</b>
+            </p>
+
+            <p>
+                📦 Yangi Array qaytaradi.
+            </p>
+
+            <p>
+                🔒 Original Array'lar
+                o‘zgarmaydi.
+            </p>
+
+            <p>
+                ➕ Bir nechta Array'ni
+                birlashtirish mumkin.
+            </p>
+
+            <p>
+                ➕ Oddiy qiymatlarni ham
+                qo‘shish mumkin.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ Muhim
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>concat()</code> bilan ishlaganda
+            natijani o‘zgaruvchiga saqlash
+            qulay:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let a = [1, 2];
+
+let b = [3, 4];
+
+let result = a.concat(b);</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Chunki <code>concat()</code> yangi
+            Array yaratadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8">
+
+            <p>
+                <b class="text-white">
+                    1-vazifa:
+                </b>
+
+                <br>
+
+                Ikkita sonli Array yarating va
+                <code>concat()</code> bilan
+                birlashtiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    2-vazifa:
+                </b>
+
+                <br>
+
+                3 ta Array'ni bitta Array'ga
+                birlashtiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    3-vazifa:
+                </b>
+
+                <br>
+
+                Ismlar yozilgan ikkita Array'ni
+                birlashtiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    4-vazifa:
+                </b>
+
+                <br>
+
+                Array'ga <code>concat()</code>
+                yordamida 3 ta yangi son qo‘shing.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    5-vazifa:
+                </b>
+
+                <br>
+
+                <code>concat()</code> ishlatilgandan
+                keyin original Array o‘zgargan yoki
+                o‘zgarmaganini <code>console.log()</code>
+                orqali tekshiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    6-vazifa:
+                </b>
+
+                <br>
+
+                <code>slice()</code> va
+                <code>concat()</code>ni birga
+                ishlatib ko‘ring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    7-vazifa:
+                </b>
+
+                <br>
+
+                Quyidagi ikki guruhni birlashtiring:
+
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let group1 = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+let group2 = [
+    "Husan",
+    "Sardor",
+    "Jasur"
+];</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔗 <code>concat()</code> —
+                Array'larni birlashtiradi.
+            </p>
+
+            <p>
+                🆕 Natijada yangi Array hosil bo‘ladi.
+            </p>
+
+            <p>
+                🔒 Original Array'lar
+                o‘zgarmaydi.
+            </p>
+
+            <p>
+                ➕ Bir nechta Array'ni
+                birlashtirish mumkin.
+            </p>
+
+            <p>
+                📦 Oddiy qiymatlarni ham
+                qo‘shish mumkin.
+            </p>
+
+            <p>
+                🧠 <code>concat()</code> —
+                "birlashtir" deb eslab qoling.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔗
+        </div>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            35-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 35-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(34)) {
+
+        alert("Avval 34-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-34.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(35)) {
+
+        completedLessons.push(35);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 35-dars tugatildi! 36-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 35-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

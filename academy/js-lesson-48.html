@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 48-dars | Spread Operator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        📋 48-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        Spread Operator
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript'dagi
+        <code>Spread Operator</code> bilan
+        ishlashni o‘rganamiz.
+
+        <br><br>
+
+        Spread operator <code>...</code>
+        yordamida Array va Object ichidagi
+        qiymatlarni yoyish, nusxalash va
+        birlashtirish mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📋 Spread Operator nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Spread operator —
+        <code>...</code>
+        uchta nuqta bilan yoziladi.
+
+        <br><br>
+
+        U Array yoki Object ichidagi
+        qiymatlarni "yoyib" beradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [10, 20, 30];
+
+console.log(...numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10 20 30</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>...</code>
+        → Spread operator
+
+        <br><br>
+
+        U Array'ni alohida qiymatlarga
+        yoyib beradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Array'ni yoyish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana",
+    "Mango"
+];
+
+console.log(...fruits);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Apple Banana Mango</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➕ Array'larni birlashtirish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Spread operator yordamida
+        ikkita yoki undan ko‘p Array'ni
+        birlashtirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let first = [1, 2, 3];
+
+let second = [4, 5, 6];
+
+let result = [
+    ...first,
+    ...second
+];
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Array orasiga qo‘shish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [1, 2, 5, 6];
+
+let result = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+];
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Spread bilan yanada qulay:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let first = [1, 2];
+
+let second = [5, 6];
+
+let result = [
+    ...first,
+    3,
+    4,
+    ...second
+];
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📑 Array nusxalash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Spread operator yordamida
+        Array'ning yangi nusxasini
+        yaratish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana",
+    "Mango"
+];
+
+let copy = [
+    ...fruits
+];
+
+console.log(copy);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>copy</code> — yangi Array.
+
+        <br><br>
+
+        Bu usul asl Array'ni o‘zgartirmasdan
+        yangi Array yaratishda foydali.
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ Spread va push()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Bir Array'ni boshqa Array'ga
+        qo‘shish uchun Spread'dan foydalanish
+        mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana"
+];
+
+let newFruits = [
+    ...fruits,
+    "Mango",
+    "Orange"
+];
+
+console.log(newFruits);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Apple",
+    "Banana",
+    "Mango",
+    "Orange"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Object Spread
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Spread operator Object bilan ham
+        ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+let copy = {
+    ...user
+};
+
+console.log(copy);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➕ Object'larni birlashtirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let userInfo = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+let address = {
+
+    city: "Andijon",
+
+    street: "Navoi"
+
+};
+
+let user = {
+
+    ...userInfo,
+    ...address
+
+};
+
+console.log(user);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18,
+    city: "Andijon",
+    street: "Navoi"
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✏️ Object'ga yangi property qo‘shish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+let newUser = {
+
+    ...user,
+
+    city: "Andijon"
+
+};
+
+console.log(newUser);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18,
+    city: "Andijon"
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Object property'ni yangilash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Bir xil key ikki marta yozilsa,
+        keyinroq yozilgan qiymat ustun
+        keladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+let updatedUser = {
+
+    ...user,
+
+    age: 20
+
+};
+
+console.log(updatedUser);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 20
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Spread va Destructuring farqi
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold
+                       text-yellow-400">
+
+                Destructuring
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+
+                Qiymatlarni ajratib oladi.
+
+            </p>
+
+
+            <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18
+};
+
+let {
+    name,
+    age
+} = user;</code></pre>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold
+                       text-green-400">
+
+                Spread
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+
+                Qiymatlarni yoyadi yoki
+                nusxalaydi.
+
+            </p>
+
+
+            <div class="code-box">
+
+<pre><code>let copy = {
+    ...user
+};</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Spread va Math.max()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Array ichidagi eng katta sonni
+        topishda Spread juda qulay.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    50,
+    20,
+    90,
+    30
+];
+
+let max = Math.max(...numbers);
+
+console.log(max);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>90</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔽 Spread va Math.min()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    50,
+    20,
+    90,
+    30
+];
+
+let min = Math.min(...numbers);
+
+console.log(min);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📋 Function argumentlarida Spread
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Array ichidagi qiymatlarni function'ga
+        alohida argument sifatida yuborish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function sum(a, b, c) {
+
+    return a + b + c;
+
+}
+
+let numbers = [10, 20, 30];
+
+console.log(
+    sum(...numbers)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>60</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Real loyiha: Cart
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Oldingi darslarda Array va Object
+        bilan ishlaganimizni Spread bilan
+        birlashtiramiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let cart = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 30000
+    }
+
+];
+
+let newProduct = {
+
+    name: "Cola",
+
+    price: 10000
+
+};
+
+let newCart = [
+
+    ...cart,
+
+    newProduct
+
+];
+
+console.log(newCart);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Cart'ni yangilash
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let cart = [
+
+    {
+        id: 1,
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        id: 2,
+        name: "Burger",
+        price: 30000
+    }
+
+];
+
+
+let newProduct = {
+
+    id: 3,
+
+    name: "Cola",
+
+    price: 10000
+
+};
+
+
+cart = [
+
+    ...cart,
+
+    newProduct
+
+];
+
+
+console.log(cart);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Object va Array birga
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    skills: [
+        "HTML",
+        "CSS"
+    ]
+
+};
+
+
+let updatedUser = {
+
+    ...user,
+
+    skills: [
+
+        ...user.skills,
+
+        "JavaScript"
+
+    ]
+
+};
+
+
+console.log(updatedUser);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18,
+    skills: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ]
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ Spread bilan Array'ni oldiga qo‘shish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let oldItems = [
+    "Banana",
+    "Mango"
+];
+
+let newItems = [
+    "Apple",
+    ...oldItems
+];
+
+console.log(newItems);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Apple",
+    "Banana",
+    "Mango"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📌 Spread operatorning asosiy ishlatilishi
+
+    </h2>
+
+
+    <div class="space-y-5">
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                ...array
+            </code>
+
+            <p class="text-slate-400 mt-3">
+
+                Array elementlarini yoyish.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                [...array]
+            </code>
+
+            <p class="text-slate-400 mt-3">
+
+                Array nusxasini yaratish.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                {...object}
+            </code>
+
+            <p class="text-slate-400 mt-3">
+
+                Object nusxasini yaratish.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                {...obj, newProperty}
+            </code>
+
+            <p class="text-slate-400 mt-3">
+
+                Object'ga yangi property qo‘shish.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                Math.max(...numbers)
+            </code>
+
+            <p class="text-slate-400 mt-3">
+
+                Array'dagi eng katta qiymatni topish.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 To‘liq amaliy misol
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    id: 1,
+
+    name: "Ali",
+
+    age: 18,
+
+    skills: [
+        "HTML",
+        "CSS"
+    ]
+
+};
+
+
+let newUser = {
+
+    ...user,
+
+    age: 19,
+
+    city: "Andijon",
+
+    skills: [
+
+        ...user.skills,
+
+        "JavaScript"
+
+    ]
+
+};
+
+
+console.log(newUser);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu misolda:
+
+        <br><br>
+
+        <code>...user</code>
+        → Object nusxalandi.
+
+        <br><br>
+
+        <code>age: 19</code>
+        → age yangilandi.
+
+        <br><br>
+
+        <code>city: "Andijon"</code>
+        → yangi property qo‘shildi.
+
+        <br><br>
+
+        <code>...user.skills</code>
+        → eski skills saqlandi.
+
+        <br><br>
+
+        <code>"JavaScript"</code>
+        → yangi skill qo‘shildi.
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🔢
+            </b>
+
+            <br>
+
+            Ikkita Array'ni Spread yordamida
+            birlashtiring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let a = [1, 2, 3];
+
+let b = [4, 5, 6];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 📑
+            </b>
+
+            <br>
+
+            Array'ning yangi nusxasini
+            Spread yordamida yarating.
+
+        </div>
+
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana",
+    "Mango"
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 📦
+            </b>
+
+            <br>
+
+            Ikki Object'ni birlashtiring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let userInfo = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+
+let address = {
+
+    city: "Andijon"
+
+};</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa ✏️
+            </b>
+
+            <br>
+
+            Object'ning <code>age</code>
+            property'sini Spread yordamida
+            yangilang.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa ➕
+            </b>
+
+            <br>
+
+            Object'ga yangi
+            <code>city</code> property'sini
+            qo‘shing.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🧮
+            </b>
+
+            <br>
+
+            Array'dagi eng katta va eng kichik
+            sonni Spread yordamida toping.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    15,
+    90,
+    25,
+    70,
+    10
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🛒
+            </b>
+
+            <br>
+
+            Cart'ga yangi product qo‘shing.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let cart = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 30000
+    }
+
+];
+
+let product = {
+
+    name: "Cola",
+
+    price: 10000
+
+};</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                8-vazifa 🔥
+            </b>
+
+            <br>
+
+            User Object'dagi
+            <code>skills</code> Array'iga
+            yangi <code>JavaScript</code>
+            skillini qo‘shing.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            📋 <b>Spread operator</b>
+            → <code>...</code>
+            bilan yoziladi.
+        </p>
+
+
+        <p>
+            🔢 Array elementlarini yoyish:
+            <code>...array</code>
+        </p>
+
+
+        <p>
+            📑 Array nusxalash:
+            <code>[...array]</code>
+        </p>
+
+
+        <p>
+            ➕ Array'larni birlashtirish:
+            <code>[...a, ...b]</code>
+        </p>
+
+
+        <p>
+            📦 Object nusxalash:
+            <code>{...object}</code>
+        </p>
+
+
+        <p>
+            ✏️ Object property'larini
+            yangilash va qo‘shish mumkin.
+        </p>
+
+
+        <p>
+            🧮 Spread yordamida
+            <code>Math.max()</code> va
+            <code>Math.min()</code>
+            bilan Array qiymatlarini ishlatish mumkin.
+        </p>
+
+
+        <p>
+            🔥 Spread real loyihalarda
+            cart, user, product va API
+            ma'lumotlari bilan ishlashda
+            juda ko‘p qo‘llanadi.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        📋
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        48-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 48-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        47-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(47)) {
+
+        alert(
+            "Avval 47-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-47.html";
+
+        return;
+
+    }
+
+
+    /*
+        48-darsni saqlash
+    */
+
+    if (!completedLessons.includes(48)) {
+
+        completedLessons.push(48);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 48-dars tugatildi! 49-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 48-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

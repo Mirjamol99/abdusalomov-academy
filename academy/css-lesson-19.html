@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 19-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50 bg-slate-950/90
+               backdrop-blur-xl border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-4
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">Abdusalomov</span>
+            Academy
+
+        </a>
+
+        <a href="css-course.html"
+           class="text-slate-400 hover:text-blue-400
+                  flex items-center gap-2">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+            <i class="fa-brands fa-css3-alt"></i>
+            19-DARS
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            CSS Responsive Design 📱💻
+
+        </h1>
+
+        <p class="text-slate-400 text-lg md:text-xl
+                  mt-5 leading-8">
+
+            Saytni telefon, planshet va kompyuter
+            ekranlariga moslashtirishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+            <i class="fa-solid fa-mobile-screen"></i>
+        </div>
+
+        <h2 class="lesson-title">
+            1. Responsive Design nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Responsive Design — saytning turli
+            ekran o'lchamlarida chiroyli va qulay
+            ko'rinishini ta'minlash.
+
+            <br><br>
+
+            Masalan:
+
+            <br><br>
+
+            📱 Telefon
+
+            <br>
+
+            📲 Planshet
+
+            <br>
+
+            💻 Noutbuk
+
+            <br>
+
+            🖥️ Kompyuter
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            2. Viewport
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Responsive saytlar uchun HTML'da
+            viewport meta tegi juda muhim.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>&lt;meta
+    name="viewport"
+    content="width=device-width,
+    initial-scale=1.0"
+&gt;</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            💡 Bu kod sahifaning qurilma ekraniga
+            mos ravishda ishlashiga yordam beradi.
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            3. `@media`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `@media` orqali ekran o'lchamiga qarab
+            turli CSS qoidalarini yozish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>@media (max-width: 768px) {
+
+    .box {
+        font-size: 18px;
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            📱 Ekran kengligi 768px yoki undan
+            kichik bo'lsa, ichidagi CSS ishlaydi.
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            4. `max-width`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `max-width` belgilangan o'lchamdan
+            kichik yoki teng ekranlarda CSS
+            qoidalarini qo'llash uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>@media (max-width: 600px) {
+
+    .title {
+        font-size: 28px;
+    }
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            5. `min-width`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `min-width` esa ma'lum o'lchamdan
+            katta ekranlarda CSS qo'llash uchun
+            ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>@media (min-width: 768px) {
+
+    .box {
+        padding: 40px;
+    }
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            6. Responsive Grid
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Grid yordamida desktopda 3 ta card,
+            telefonda esa 1 ta card chiqarish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+@media (max-width: 700px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="responsive-grid">
+
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            7. Responsive Flexbox
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Flexbox yordamida ham mobil ekran
+            uchun layoutni o'zgartirish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.menu {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+
+    .menu {
+        flex-direction: column;
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="responsive-flex">
+
+            <div>Bosh sahifa</div>
+            <div>Kurslar</div>
+            <div>Bog'lanish</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            8. Responsive Font
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Mobil qurilmalarda katta sarlavhalarni
+            kichraytirish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.title {
+    font-size: 50px;
+}
+
+@media (max-width: 600px) {
+
+    .title {
+        font-size: 32px;
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="responsive-title">
+            Responsive Title
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            9. Responsive Image
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Rasm ekran chegarasidan chiqib ketmasligi
+            uchun ko'pincha `max-width: 100%`
+            ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>img {
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+
+        </div>
+
+        <div class="image-demo">
+
+            <i class="fa-solid fa-image"></i>
+
+            <span>
+                Responsive Image
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            10. Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Responsive kurs kartalarini yaratamiz.
+            Kompyuterda ular yonma-yon,
+            telefonda esa pastma-past chiqadi.
+
+        </p>
+
+        <div class="course-grid">
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+
+                <h3>HTML</h3>
+
+                <p>
+                    Web sahifa tuzishni o'rganing.
+                </p>
+
+                <button>
+                    Boshlash
+                </button>
+
+            </div>
+
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+
+                <h3>CSS</h3>
+
+                <p>
+                    Saytlarni chiroyli bezang.
+                </p>
+
+                <button>
+                    Davom etish
+                </button>
+
+            </div>
+
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Saytga interaktivlik qo'shing.
+                </p>
+
+                <button>
+                    Tez orada
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+            MINI TEST 🧠
+        </span>
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-4">
+
+            Responsive dizayn uchun
+            qaysi CSS qoidasi ishlatiladi?
+
+        </h2>
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) @font
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B) @responsive
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) @media
+
+            </button>
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                D) @screen-size
+
+            </button>
+
+        </div>
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+        </p>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl p-8 text-center">
+
+        <div class="text-5xl mb-5">
+            🎉
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            19-darsni tugatdingizmi?
+
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 20-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5 rounded-2xl
+                   font-bold text-lg
+                   transition">
+
+            19-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+            © 2026 Abdusalomov Academy
+        </p>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+.lesson-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(59,130,246,.1);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    color: #60a5fa;
+
+    font-weight: 700;
+}
+
+.lesson-box {
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+}
+
+.lesson-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.lesson-title {
+    font-size: 27px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.code-box {
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+}
+
+.code-box pre {
+    color: #4ade80;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+}
+
+.info-box {
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: rgba(59,130,246,.08);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    border-radius: 16px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+}
+
+
+/* RESPONSIVE GRID */
+
+.responsive-grid {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+}
+
+.responsive-grid div {
+    padding: 30px;
+
+    background: #2563eb;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-weight: 900;
+}
+
+
+/* RESPONSIVE FLEX */
+
+.responsive-flex {
+    margin-top: 30px;
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+}
+
+.responsive-flex div {
+    flex: 1;
+
+    padding: 25px;
+
+    background: #7c3aed;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    font-weight: 900;
+}
+
+
+/* TITLE */
+
+.responsive-title {
+    margin-top: 30px;
+
+    font-size: 50px;
+
+    font-weight: 900;
+
+    text-align: center;
+
+    color: #60a5fa;
+}
+
+
+/* IMAGE */
+
+.image-demo {
+    margin-top: 30px;
+
+    width: 100%;
+
+    min-height: 200px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    background: #020617;
+
+    border-radius: 20px;
+
+    border: 1px solid #334155;
+
+    color: #60a5fa;
+
+    font-size: 50px;
+}
+
+.image-demo span {
+    font-size: 18px;
+
+    color: #94a3b8;
+
+    font-weight: 700;
+}
+
+
+/* COURSE */
+
+.course-grid {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.course-card {
+    padding: 25px;
+
+    background: #020617;
+
+    border: 1px solid #334155;
+
+    border-radius: 20px;
+
+    transition: .3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #3b82f6;
+}
+
+.course-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.course-card h3 {
+    font-size: 23px;
+
+    font-weight: 900;
+}
+
+.course-card p {
+    margin-top: 8px;
+
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+.course-card button {
+    margin-top: 20px;
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* TEST */
+
+.answer-btn {
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+}
+
+.answer-btn:hover {
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .lesson-box {
+        padding: 20px;
+    }
+
+    .responsive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .responsive-flex {
+        flex-direction: column;
+    }
+
+    .responsive-title {
+        font-size: 32px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 400px) {
+
+    .responsive-title {
+        font-size: 27px;
+    }
+
+    .lesson-title {
+        font-size: 23px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById("answerResult");
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! Responsive dizayn uchun @media ishlatiladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. To'g'ri javob: @media.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 19
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("cssCompletedLessons")
+        ) || [];
+
+
+    // 18-dars tekshiriladi
+
+    if (!completedLessons.includes(18)) {
+
+        alert(
+            "Avval 18-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-18.html";
+
+        return;
+    }
+
+
+    // 19-darsni saqlash
+
+    if (!completedLessons.includes(19)) {
+
+        completedLessons.push(19);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 19-dars tugatildi! 20-dars ochildi 🔓";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.innerHTML =
+        "✅ 19-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "css-course.html";
+
+    }, 1500);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>15-Dars | Select | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+
+            <a href="html-course.html" class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kursga qaytish
+
+            </a>
+
+        </nav>
+
+    </header>
+
+     <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+
+        <!-- TITLE -->
+
+        <div class="mb-10">
+
+            <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+                15-DARS
+
+            </span>
+
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+                Select va Option
+
+            </h1>
+
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+                HTML'da dropdown menyu yaratish
+                va foydalanuvchiga variant tanlatishni
+                o'rganamiz.
+
+            </p>
+
+        </div>
+
+         <!-- 1. SELECT -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-list"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                1. &lt;select&gt; nima?
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;select&gt;
+                </strong>
+                foydalanuvchiga bir nechta variant
+                ichidan bittasini tanlash imkonini beradi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;select&gt;
+
+    &lt;option&gt;HTML&lt;/option&gt;
+
+    &lt;option&gt;CSS&lt;/option&gt;
+
+    &lt;option&gt;JavaScript&lt;/option&gt;
+
+&lt;/select&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6">
+
+                <select class="select-style">
+
+                    <option>HTML</option>
+
+                    <option>CSS</option>
+
+                    <option>JavaScript</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+         <!-- 2. OPTION -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                2. &lt;option&gt;
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;option&gt;
+                </strong>
+                select ichidagi har bir tanlovni
+                bildiradi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;select&gt;
+
+    &lt;option&gt;Frontend&lt;/option&gt;
+
+    &lt;option&gt;Backend&lt;/option&gt;
+
+    &lt;option&gt;Fullstack&lt;/option&gt;
+
+&lt;/select&gt;</code></pre>
+
+            </div>
+
+
+            <select class="select-style mt-6">
+
+                <option>Frontend</option>
+
+                <option>Backend</option>
+
+                <option>Fullstack</option>
+
+            </select>
+
+        </section>
+
+         <!-- 3. VALUE -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                3. value atributi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    value
+                </strong>
+                tanlangan optionning qiymatini
+                belgilaydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;select name="course"&gt;
+
+    &lt;option value="html"&gt;
+        HTML
+    &lt;/option&gt;
+
+    &lt;option value="css"&gt;
+        CSS
+    &lt;/option&gt;
+
+    &lt;option value="javascript"&gt;
+        JavaScript
+    &lt;/option&gt;
+
+&lt;/select&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- 4. SELECTED -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                4. selected
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    selected
+                </strong>
+                sahifa ochilganda qaysi option
+                oldindan tanlangan bo'lishini belgilaydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;select&gt;
+
+    &lt;option&gt;HTML&lt;/option&gt;
+
+    &lt;option selected&gt;
+        CSS
+    &lt;/option&gt;
+
+    &lt;option&gt;JavaScript&lt;/option&gt;
+
+&lt;/select&gt;</code></pre>
+
+            </div>
+
+
+            <select class="select-style mt-6">
+
+                <option>HTML</option>
+
+                <option selected>CSS</option>
+
+                <option>JavaScript</option>
+
+            </select>
+
+        </section>
+
+         <!-- 5. DISABLED -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                5. disabled
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    disabled
+                </strong>
+                variantni tanlashni taqiqlaydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;option disabled&gt;
+    Kursni tanlang
+&lt;/option&gt;</code></pre>
+
+            </div>
+
+
+            <select class="select-style mt-6">
+
+                <option disabled selected>
+                    Kursni tanlang
+                </option>
+
+                <option>HTML</option>
+
+                <option>CSS</option>
+
+                <option>JavaScript</option>
+
+            </select>
+
+        </section>
+
+         <!-- 6. OPTGROUP -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                6. &lt;optgroup&gt;
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;optgroup&gt;
+                </strong>
+                optionlarni guruhlarga ajratish
+                uchun ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;select&gt;
+
+    &lt;optgroup label="Frontend"&gt;
+
+        &lt;option&gt;HTML&lt;/option&gt;
+
+        &lt;option&gt;CSS&lt;/option&gt;
+
+        &lt;option&gt;JavaScript&lt;/option&gt;
+
+    &lt;/optgroup&gt;
+
+
+    &lt;optgroup label="Backend"&gt;
+
+        &lt;option&gt;Node.js&lt;/option&gt;
+
+        &lt;option&gt;Python&lt;/option&gt;
+
+    &lt;/optgroup&gt;
+
+&lt;/select&gt;</code></pre>
+
+            </div>
+
+
+            <select class="select-style mt-6">
+
+                <optgroup label="Frontend">
+
+                    <option>HTML</option>
+
+                    <option>CSS</option>
+
+                    <option>JavaScript</option>
+
+                </optgroup>
+
+
+                <optgroup label="Backend">
+
+                    <option>Node.js</option>
+
+                    <option>Python</option>
+
+                </optgroup>
+
+            </select>
+
+        </section>
+
+         <!-- 7. NAME -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                7. name atributi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Form yuborilganda select qiymatini
+                serverga yuborish uchun
+                <strong class="text-orange-400">
+                    name
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;select name="course"&gt;
+
+    &lt;option value="html"&gt;
+        HTML
+    &lt;/option&gt;
+
+&lt;/select&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- 8. AMALIY MISOL -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Amaliy misol 🚀
+
+            </h2>
+
+
+            <p class="text-slate-400 mb-6">
+
+                O'rganmoqchi bo'lgan kursingizni tanlang.
+
+            </p>
+
+
+            <label class="form-title">
+
+                Kursni tanlang:
+
+            </label>
+
+
+            <select id="courseSelect" class="select-style">
+
+                <option value="">
+                    — Kursni tanlang —
+                </option>
+
+                <option value="HTML">
+                    HTML
+                </option>
+
+                <option value="CSS">
+                    CSS
+                </option>
+
+                <option value="JavaScript">
+                    JavaScript
+                </option>
+
+                <option value="Tailwind CSS">
+                    Tailwind CSS
+                </option>
+
+            </select>
+
+
+            <button onclick="showCourse()" class="submit-style mt-5">
+
+                <i class="fa-solid fa-check mr-2"></i>
+
+                Tanlash
+
+            </button>
+
+
+            <p id="courseResult" class="text-green-400
+                  font-semibold
+                  mt-5">
+
+            </p>
+
+        </section>
+
+         <!-- 9. MINI PROJECT -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI LOYIHA 🚀
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3 mb-8">
+
+                Kurs tanlash formasi
+
+            </h2>
+
+
+            <form id="courseForm">
+
+
+                <label class="form-title">
+
+                    Ismingiz:
+
+                </label>
+
+
+                <input type="text" id="userName" class="input-style" placeholder="Ismingizni kiriting" required>
+
+
+                <label class="form-title mt-6">
+
+                    Kurs:
+
+                </label>
+
+
+                <select id="userCourse" class="select-style" required>
+
+                    <option value="">
+                        Kursni tanlang
+                    </option>
+
+                    <option value="HTML">
+                        HTML
+                    </option>
+
+                    <option value="CSS">
+                        CSS
+                    </option>
+
+                    <option value="JavaScript">
+                        JavaScript
+                    </option>
+
+                </select>
+
+
+                <button type="submit" class="submit-style w-full mt-8">
+
+                    <i class="fa-solid fa-rocket mr-2"></i>
+
+                    Kursni boshlash
+
+                </button>
+
+
+            </form>
+
+
+            <p id="formResult" class="text-center
+                  mt-6
+                  font-semibold">
+
+            </p>
+
+        </section>
+
+         <!-- 10. MINI TEST -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI TEST 🧠
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+                Dropdown menyu yaratish uchun
+                qaysi teg ishlatiladi?
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    A) &lt;input&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    B) &lt;textarea&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    C) &lt;select&gt; 
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) &lt;menu&gt;
+
+                </button>
+
+            </div>
+
+
+            <p id="answerResult" class="mt-6
+                  font-semibold
+                  text-lg">
+
+            </p>
+
+        </section>
+
+         <!-- COMPLETE -->
+
+        <section class="mt-10">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full
+                   px-7 py-5
+                   rounded-2xl
+                   bg-orange-500
+                   hover:bg-orange-600
+                   font-bold
+                   text-lg
+                   transition">
+
+                Darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+            </p>
+
+        </section>
+
+    </main>
+
+     <!-- FOOTER -->
+
+    <footer class="border-t
+               border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy
+
+            </p>
+
+        </div>
+
+    </footer>
+
+     <!-- STYLE -->
+
+    <style>
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+        }
+
+
+        .icon-box {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(249, 115, 22, .1);
+
+            color: #fb923c;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .lesson-heading {
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .code-box-inner {
+
+            margin-top: 24px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box-inner pre {
+
+            color: #4ade80;
+
+            line-height: 2;
+
+            font-size: 15px;
+
+        }
+
+
+        .form-title {
+
+            display: block;
+
+            color: #cbd5e1;
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .input-style,
+        .select-style {
+
+            width: 100%;
+
+            padding: 15px 18px;
+
+            border-radius: 14px;
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            color: white;
+
+            outline: none;
+
+            transition: .3s;
+
+        }
+
+
+        .select-style {
+
+            cursor: pointer;
+
+        }
+
+
+        .input-style:focus,
+        .select-style:focus {
+
+            border-color: #f97316;
+
+            box-shadow:
+                0 0 0 3px rgba(249, 115, 22, .12);
+
+        }
+
+
+        .input-style::placeholder {
+
+            color: #64748b;
+
+        }
+
+
+        .submit-style {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 15px 24px;
+
+            border-radius: 14px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+            cursor: pointer;
+
+        }
+
+
+        .submit-style:hover {
+
+            background: #1d4ed8;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .answer-btn {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            border: 1px solid #334155;
+
+            background: #020617;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            transition: .3s;
+
+        }
+
+
+        .answer-btn:hover {
+
+            border-color: #f97316;
+
+            color: #fb923c;
+
+            transform: translateY(-2px);
+
+        }
+    </style>
+
+     <!-- JAVASCRIPT -->
+
+    <script>
+
+        // SELECT AMALIY MISOL
+
+        function showCourse() {
+
+            const select =
+                document.getElementById(
+                    "courseSelect"
+                );
+
+            const result =
+                document.getElementById(
+                    "courseResult"
+                );
+
+
+            if (select.value === "") {
+
+                result.textContent =
+                    "⚠️ Avval kursni tanlang.";
+
+                result.className =
+                    "text-yellow-400 font-semibold mt-5";
+
+                return;
+
+            }
+
+
+            result.textContent =
+                `✅ Siz ${select.value} kursini tanladingiz!`;
+
+            result.className =
+                "text-green-400 font-semibold mt-5";
+
+        }
+
+        // COURSE FORM
+
+        const courseForm =
+            document.getElementById(
+                "courseForm"
+            );
+
+
+        courseForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "userName"
+                    ).value.trim();
+
+
+                const course =
+                    document.getElementById(
+                        "userCourse"
+                    ).value;
+
+
+                const result =
+                    document.getElementById(
+                        "formResult"
+                    );
+
+
+                if (!course) {
+
+                    result.textContent =
+                        "⚠️ Kursni tanlang.";
+
+                    result.className =
+                        "text-center mt-6 font-semibold text-yellow-400";
+
+                    return;
+
+                }
+
+
+                result.textContent =
+                    `🎉 ${name}, ${course} kursini boshlashingiz mumkin!`;
+
+                result.className =
+                    "text-center mt-6 font-semibold text-green-400";
+
+            }
+        );
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById(
+                    "answerResult"
+                );
+
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! Dropdown menyu uchun <select> ishlatiladi.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-red-400";
+
+            }
+
+        }
+
+        // COMPLETE LESSON
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "htmlCompletedLessons"
+                    )
+                ) || [];
+
+
+            // 15-darsni qo‘shamiz
+
+            if (!completedLessons.includes(15)) {
+
+                completedLessons.push(15);
+
+            }
+
+
+            // Saqlaymiz
+
+            localStorage.setItem(
+                "htmlCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            // Xabar
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "🎉 15-dars tugatildi! 16-dars ochildi 🔓";
+
+
+            // Tugma
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.innerHTML =
+                "✅ 15-dars tugatildi";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-orange-500",
+                "hover:bg-orange-600"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            // Kurs sahifasiga qaytish
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "html-course.html";
+
+                },
+                1500
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

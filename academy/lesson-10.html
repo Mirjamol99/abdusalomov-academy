@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>10-Dars | HTML Form | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="html-course.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Kursga qaytish
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <div class="mb-10">
+
+        <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+            10-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+            HTML Form va Inputlar
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+            Bugun foydalanuvchidan ma'lumot olish
+            uchun HTML formalar yaratishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+         <!-- 1. FORM -->
+
+    <section class="lesson-box">
+
+        <div class="icon-box">
+
+            <i class="fa-solid fa-rectangle-list"></i>
+
+        </div>
+
+
+        <h2 class="lesson-heading">
+
+            1. &lt;form&gt; nima?
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            <strong class="text-orange-400">
+                &lt;form&gt;
+            </strong>
+            foydalanuvchidan ma'lumot olish uchun
+            forma yaratadi.
+
+        </p>
+
+
+        <p class="text-slate-400 mt-4 leading-8">
+
+            Masalan: ism, email, parol va boshqa
+            ma'lumotlarni kiritish mumkin.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;form&gt;
+
+    ...
+
+&lt;/form&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- 2. INPUT -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            2. &lt;input&gt; nima?
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            <strong class="text-orange-400">
+                &lt;input&gt;
+            </strong>
+            foydalanuvchi ma'lumot kiritadigan
+            maydon yaratadi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;input type="text"&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- 3. TEXT -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            3. type="text"
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            Matn kiritish uchun ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;input type="text"
+       placeholder="Ismingizni kiriting"&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6">
+
+            <input
+                type="text"
+                placeholder="Ismingizni kiriting"
+                class="input-style">
+
+        </div>
+
+    </section>
+
+         <!-- 4. EMAIL -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            4. type="email"
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            Email manzil kiritish uchun ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;input type="email"
+       placeholder="Emailingiz"&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6">
+
+            <input
+                type="email"
+                placeholder="example@gmail.com"
+                class="input-style">
+
+        </div>
+
+    </section>
+
+         <!-- 5. PASSWORD -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            5. type="password"
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            Parol kiritish uchun ishlatiladi.
+            Kiritilgan belgilar yashiriladi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;input type="password"
+       placeholder="Parol"&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6">
+
+            <input
+                type="password"
+                placeholder="Parolingiz"
+                class="input-style">
+
+        </div>
+
+    </section>
+
+         <!-- 6. NUMBER -->
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            6. type="number"
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            Raqam kiritish uchun ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;input type="number"
+       placeholder="Yoshingiz"&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6">
+
+            <input
+                type="number"
+                placeholder="Yoshingiz"
+                class="input-style">
+
+        </div>
+
+    </section>
+
+         <!-- 7. LABEL -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            7. &lt;label&gt;
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            <strong class="text-orange-400">
+                &lt;label&gt;
+            </strong>
+            input uchun tushuntiruvchi nom beradi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;label&gt;Ismingiz&lt;/label&gt;
+
+&lt;input type="text"&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- 8. PLACEHOLDER -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            8. placeholder
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            <strong class="text-orange-400">
+                placeholder
+            </strong>
+            input ichida foydalanuvchiga
+            ko'rsatma beradi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;input
+    type="text"
+    placeholder="Ismingizni kiriting"&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- 9. SUBMIT -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-heading">
+
+            9. type="submit"
+
+        </h2>
+
+
+        <p class="text-slate-300 leading-8">
+
+            Formadagi ma'lumotlarni yuborish
+            uchun ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;input type="submit"
+       value="Yuborish"&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6">
+
+            <input
+                type="submit"
+                value="Yuborish"
+                class="submit-style">
+
+        </div>
+
+    </section>
+
+
+
+         <!-- 10. TO'LIQ FORM -->
+
+    <section class="lesson-box">
+
+        <p class="text-orange-400
+                  font-semibold">
+
+            MINI LOYIHA 🚀
+
+        </p>
+
+
+        <h2 class="lesson-heading mt-3">
+
+            Ro'yxatdan o'tish formasi
+
+        </h2>
+
+
+        <div class="code-box-inner">
+
+<pre><code>&lt;form&gt;
+
+    &lt;label&gt;Ism&lt;/label&gt;
+
+    &lt;input
+        type="text"
+        placeholder="Ismingiz"&gt;
+
+
+    &lt;label&gt;Email&lt;/label&gt;
+
+    &lt;input
+        type="email"
+        placeholder="Emailingiz"&gt;
+
+
+    &lt;label&gt;Parol&lt;/label&gt;
+
+    &lt;input
+        type="password"
+        placeholder="Parolingiz"&gt;
+
+
+    &lt;input
+        type="submit"
+        value="Ro'yxatdan o'tish"&gt;
+
+&lt;/form&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- FORM DEMO -->
+
+    <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mb-8">
+
+            Formani sinab ko'ring 👇
+
+        </h2>
+
+
+        <form id="academyForm"
+              class="space-y-6">
+
+
+            <div>
+
+                <label class="form-label">
+                    Ismingiz
+                </label>
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Ismingizni kiriting"
+                    class="input-style"
+                    required>
+
+            </div>
+
+
+            <div>
+
+                <label class="form-label">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="example@gmail.com"
+                    class="input-style"
+                    required>
+
+            </div>
+
+
+            <div>
+
+                <label class="form-label">
+                    Yoshingiz
+                </label>
+
+                <input
+                    id="age"
+                    type="number"
+                    placeholder="Yoshingizni kiriting"
+                    class="input-style"
+                    min="1"
+                    required>
+
+            </div>
+
+
+            <div>
+
+                <label class="form-label">
+                    Parol
+                </label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Parol kiriting"
+                    class="input-style"
+                    required>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-style w-full">
+
+                <i class="fa-solid fa-paper-plane mr-2"></i>
+
+                Ro'yxatdan o'tish
+
+            </button>
+
+
+        </form>
+
+
+        <p id="formResult"
+           class="mt-6
+                  text-center
+                  font-semibold">
+        </p>
+
+    </section>
+
+         <!-- ESLAB QOLAMIZ -->
+
+    <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mb-8">
+
+            Eslab qolamiz 🧠
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+
+            <div class="tag-card">
+
+                <span>
+                    &lt;form&gt;
+                </span>
+
+                <p>
+                    Forma yaratadi.
+                </p>
+
+            </div>
+
+
+            <div class="tag-card">
+
+                <span>
+                    &lt;input&gt;
+                </span>
+
+                <p>
+                    Ma'lumot kiritish maydoni.
+                </p>
+
+            </div>
+
+
+            <div class="tag-card">
+
+                <span>
+                    type="email"
+                </span>
+
+                <p>
+                    Email kiritish.
+                </p>
+
+            </div>
+
+
+            <div class="tag-card">
+
+                <span>
+                    type="password"
+                </span>
+
+                <p>
+                    Parol kiritish.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- MINI TEST -->
+
+    <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+        <p class="text-orange-400
+                  font-semibold">
+
+            MINI TEST
+
+        </p>
+
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+            Email kiritish uchun qaysi
+            type ishlatiladi?
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) type="text"
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B)  type="password"
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) type="number"
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                D) type="email"
+
+            </button>
+
+        </div>
+
+
+        <p id="answerResult"
+           class="mt-6
+                  font-semibold
+                  text-lg">
+        </p>
+
+    </section>
+
+         <!-- COMPLETE -->
+
+    <section class="mt-10">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full
+                   px-7 py-5
+                   rounded-2xl
+                   bg-orange-500
+                   hover:bg-orange-600
+                   font-bold
+                   text-lg
+                   transition">
+
+            Darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- STYLE -->
+
+<style>
+
+.lesson-box {
+
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+}
+
+
+.icon-box {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(249,115,22,.1);
+
+    color: #fb923c;
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.lesson-heading {
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+
+.code-box-inner {
+
+    margin-top: 24px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    overflow-x: auto;
+
+}
+
+
+.code-box-inner pre {
+
+    color: #4ade80;
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+
+.form-label {
+
+    display: block;
+
+    color: #cbd5e1;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+
+.input-style {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background: #020617;
+
+    border: 1px solid #334155;
+
+    color: white;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+
+.input-style:focus {
+
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 0 3px rgba(59,130,246,.15);
+
+}
+
+
+.input-style::placeholder {
+
+    color: #64748b;
+
+}
+
+
+.submit-style {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 16px 24px;
+
+    border-radius: 14px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+
+.submit-style:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+}
+
+
+.tag-card {
+
+    background: #020617;
+
+    border: 1px solid #334155;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    transition: .3s;
+
+}
+
+
+.tag-card:hover {
+
+    border-color: #f97316;
+
+    transform: translateY(-3px);
+
+}
+
+
+.tag-card span {
+
+    color: #fb923c;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+
+.tag-card p {
+
+    color: #94a3b8;
+
+    margin-top: 10px;
+
+}
+
+
+.answer-btn {
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+
+}
+
+
+.answer-btn:hover {
+
+    border-color: #f97316;
+
+    color: #fb923c;
+
+    transform: translateY(-2px);
+
+}
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+// FORM
+
+const academyForm =
+    document.getElementById("academyForm");
+
+academyForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const result =
+        document.getElementById("formResult");
+
+    result.textContent =
+        "🎉 Xush kelibsiz, " + name + "! Forma muvaffaqiyatli yuborildi.";
+
+    result.className =
+        "mt-6 text-center font-semibold text-lg text-green-400";
+
+});
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById("answerResult");
+
+
+    if (correct) {
+
+        result.textContent =
+            '✅ To‘g‘ri! Email uchun type="email" ishlatiladi.';
+
+        result.className =
+            "mt-6 font-semibold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+        result.className =
+            "mt-6 font-semibold text-lg text-red-400";
+
+    }
+
+}
+
+// DARSNI TUGATISH
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "htmlCompletedLessons"
+            )
+        ) || [];
+
+
+    if (!completedLessons.includes(10)) {
+
+        completedLessons.push(10);
+
+    }
+
+
+    localStorage.setItem(
+        "htmlCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "🎉 10-dars tugatildi! 11-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.innerHTML =
+        "✅ Tugatildi";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-orange-500",
+        "hover:bg-orange-600"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "html-course.html";
+
+    }, 1500);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

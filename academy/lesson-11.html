@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>11-Dars | Checkbox va Radio | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+
+            <a href="html-course.html" class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kursga qaytish
+
+            </a>
+
+        </nav>
+
+    </header>
+
+     <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+
+        <!-- TITLE -->
+
+        <div class="mb-10">
+
+            <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+                11-DARS
+
+            </span>
+
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+                Checkbox va Radio
+
+            </h1>
+
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+                Bugun foydalanuvchiga bir nechta variantni
+                belgilash va bitta variantni tanlashni o'rganamiz.
+
+            </p>
+
+        </div>
+
+         <!-- 1. CHECKBOX -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-square-check"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                1. Checkbox nima?
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    checkbox
+                </strong>
+                foydalanuvchiga bir yoki bir nechta
+                variantni belgilash imkonini beradi.
+
+            </p>
+
+
+            <p class="text-slate-400 mt-4 leading-8">
+
+                Masalan, foydalanuvchi bir nechta
+                dasturlash tilini tanlashi mumkin.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input type="checkbox"&gt;
+HTML
+
+&lt;input type="checkbox"&gt;
+CSS</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- 2. CHECKBOX DEMO -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Checkbox misoli 👇
+
+            </h2>
+
+
+            <div class="space-y-4">
+
+
+                <label class="choice-card">
+
+                    <input type="checkbox" class="custom-checkbox" value="HTML">
+
+                    <span>
+                        HTML
+                    </span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input type="checkbox" class="custom-checkbox" value="CSS">
+
+                    <span>
+                        CSS
+                    </span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input type="checkbox" class="custom-checkbox" value="JavaScript">
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+         <!-- 3. CHECKED -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                2. checked
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Agar checkbox sahifa ochilganda oldindan
+                belgilangan bo'lishini xohlasak,
+                <strong class="text-orange-400">
+                    checked
+                </strong>
+                atributidan foydalanamiz.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input
+    type="checkbox"
+    checked&gt;
+
+HTML</code></pre>
+
+            </div>
+
+
+            <label class="choice-card mt-6">
+
+                <input type="checkbox" class="custom-checkbox" checked>
+
+                <span>
+                    Bu checkbox oldindan belgilangan ✅
+                </span>
+
+            </label>
+
+        </section>
+
+         <!-- 4. RADIO -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-circle-dot"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                3. Radio nima?
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    radio
+                </strong>
+                foydalanuvchiga bir nechta variant
+                ichidan odatda faqat bittasini
+                tanlash imkonini beradi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input
+    type="radio"
+    name="gender"&gt;
+
+Erkak
+
+
+&lt;input
+    type="radio"
+    name="gender"&gt;
+
+Ayol</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- 5. RADIO DEMO -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Radio misoli 👇
+
+            </h2>
+
+
+            <p class="text-slate-400 mb-6">
+
+                Quyidagi variantlardan bittasini tanlang:
+
+            </p>
+
+
+            <div class="space-y-4">
+
+
+                <label class="choice-card">
+
+                    <input type="radio" name="level" value="Boshlang'ich" class="custom-radio">
+
+                    <span>
+                        Boshlang'ich
+                    </span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input type="radio" name="level" value="O'rta" class="custom-radio">
+
+                    <span>
+                        O'rta
+                    </span>
+
+                </label>
+
+
+                <label class="choice-card">
+
+                    <input type="radio" name="level" value="Yuqori" class="custom-radio">
+
+                    <span>
+                        Yuqori
+                    </span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+         <!-- 6. NAME -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                4. name atributi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Radio inputlarda bir guruh variantni
+                birlashtirish uchun
+                <strong class="text-orange-400">
+                    name
+                </strong>
+                bir xil bo'lishi kerak.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input
+    type="radio"
+    name="language"&gt;
+
+HTML
+
+
+&lt;input
+    type="radio"
+    name="language"&gt;
+
+CSS
+
+
+&lt;input
+    type="radio"
+    name="language"&gt;
+
+JavaScript</code></pre>
+
+            </div>
+
+
+            <p class="text-slate-400 mt-5">
+
+                `name="language"` bir xil bo'lgani uchun
+                ulardan bittasini tanlash mumkin.
+
+            </p>
+
+        </section>
+
+         <!-- 7. CHECKBOX VS RADIO -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mb-8">
+
+                Checkbox va Radio farqi 🧠
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+
+                <div class="tag-card">
+
+                    <div class="text-orange-400
+                            text-3xl mb-4">
+
+                        ☑️
+
+                    </div>
+
+
+                    <span>
+                        Checkbox
+                    </span>
+
+
+                    <p>
+                        Bir nechta variantni tanlash mumkin.
+                    </p>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <div class="text-orange-400
+                            text-3xl mb-4">
+
+                        🔘
+
+                    </div>
+
+
+                    <span>
+                        Radio
+                    </span>
+
+
+                    <p>
+                        Bir guruhdan bitta variant tanlanadi.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+         <!-- 8. MINI PROJECT -->
+
+        <section class="lesson-box">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI LOYIHA 🚀
+
+            </p>
+
+
+            <h2 class="lesson-heading mt-3">
+
+                Kurs tanlash formasi
+
+            </h2>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;form&gt;
+
+    &lt;p&gt;
+        Qaysi kurslarga qiziqasiz?
+    &lt;/p&gt;
+
+    &lt;label&gt;
+
+        &lt;input
+            type="checkbox"
+            name="course"
+            value="HTML"&gt;
+
+        HTML
+
+    &lt;/label&gt;
+
+
+    &lt;label&gt;
+
+        &lt;input
+            type="checkbox"
+            name="course"
+            value="CSS"&gt;
+
+        CSS
+
+    &lt;/label&gt;
+
+
+    &lt;p&gt;
+        Darajangiz:
+    &lt;/p&gt;
+
+    &lt;label&gt;
+
+        &lt;input
+            type="radio"
+            name="level"
+            value="beginner"&gt;
+
+        Boshlang'ich
+
+    &lt;/label&gt;
+
+
+    &lt;label&gt;
+
+        &lt;input
+            type="radio"
+            name="level"
+            value="middle"&gt;
+
+        O'rta
+
+    &lt;/label&gt;
+
+&lt;/form&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- INTERACTIVE FORM -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mb-8">
+
+                O'zingiz sinab ko'ring 👇
+
+            </h2>
+
+
+            <form id="courseForm">
+
+
+                <!-- CHECKBOX -->
+
+                <div>
+
+                    <p class="form-title">
+                        Qaysi kurslarga qiziqasiz?
+                    </p>
+
+
+                    <div class="space-y-3">
+
+
+                        <label class="choice-card">
+
+                            <input type="checkbox" name="course" value="HTML" class="custom-checkbox">
+
+                            <span>
+                                HTML
+                            </span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input type="checkbox" name="course" value="CSS" class="custom-checkbox">
+
+                            <span>
+                                CSS
+                            </span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input type="checkbox" name="course" value="JavaScript" class="custom-checkbox">
+
+                            <span>
+                                JavaScript
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RADIO -->
+
+                <div class="mt-8">
+
+                    <p class="form-title">
+                        Darajangiz:
+                    </p>
+
+
+                    <div class="space-y-3">
+
+
+                        <label class="choice-card">
+
+                            <input type="radio" name="level" value="Boshlang'ich" class="custom-radio" required>
+
+                            <span>
+                                Boshlang'ich
+                            </span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input type="radio" name="level" value="O'rta" class="custom-radio">
+
+                            <span>
+                                O'rta
+                            </span>
+
+                        </label>
+
+
+                        <label class="choice-card">
+
+                            <input type="radio" name="level" value="Yuqori" class="custom-radio">
+
+                            <span>
+                                Yuqori
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="submit-style w-full mt-8">
+
+                    <i class="fa-solid fa-check mr-2"></i>
+
+                    Tanlovni tekshirish
+
+                </button>
+
+
+            </form>
+
+
+            <p id="formResult" class="text-center
+                  mt-6
+                  font-semibold">
+            </p>
+
+        </section>
+
+         <!-- MINI TEST -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI TEST 🧠
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+                Bir nechta variantni tanlash uchun
+                qaysi input ishlatiladi?
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    A) radio
+
+                </button>
+
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    B) checkbox
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    C) password
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) number
+
+                </button>
+
+            </div>
+
+
+            <p id="answerResult" class="mt-6
+                  font-semibold
+                  text-lg">
+            </p>
+
+        </section>
+
+         <!-- COMPLETE -->
+
+        <section class="mt-10">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full
+                   px-7 py-5
+                   rounded-2xl
+                   bg-orange-500
+                   hover:bg-orange-600
+                   font-bold
+                   text-lg
+                   transition">
+
+                Darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+            </p>
+
+        </section>
+
+    </main>
+
+     <!-- FOOTER -->
+
+    <footer class="border-t
+               border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy
+
+            </p>
+
+        </div>
+
+    </footer>
+
+     <!-- STYLE -->
+
+    <style>
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+        }
+
+
+        .icon-box {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(249, 115, 22, .1);
+
+            color: #fb923c;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .lesson-heading {
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .code-box-inner {
+
+            margin-top: 24px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box-inner pre {
+
+            color: #4ade80;
+
+            line-height: 2;
+
+            font-size: 15px;
+
+        }
+
+
+        .choice-card {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            padding: 16px;
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            border-radius: 14px;
+
+            color: #cbd5e1;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+        .choice-card:hover {
+
+            border-color: #f97316;
+
+            color: white;
+
+            transform: translateX(3px);
+
+        }
+
+
+        .custom-checkbox,
+        .custom-radio {
+
+            width: 20px;
+
+            height: 20px;
+
+            accent-color: #f97316;
+
+            cursor: pointer;
+
+        }
+
+
+        .form-title {
+
+            font-size: 18px;
+
+            font-weight: 800;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .tag-card {
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            border-radius: 18px;
+
+            padding: 24px;
+
+            transition: .3s;
+
+        }
+
+
+        .tag-card:hover {
+
+            border-color: #f97316;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .tag-card span {
+
+            color: #fb923c;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+        }
+
+
+        .tag-card p {
+
+            color: #94a3b8;
+
+            margin-top: 10px;
+
+        }
+
+
+        .answer-btn {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            border: 1px solid #334155;
+
+            background: #020617;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            transition: .3s;
+
+        }
+
+
+        .answer-btn:hover {
+
+            border-color: #f97316;
+
+            color: #fb923c;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .submit-style {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 16px 24px;
+
+            border-radius: 14px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+            cursor: pointer;
+
+        }
+
+
+        .submit-style:hover {
+
+            background: #1d4ed8;
+
+            transform: translateY(-2px);
+
+        }
+    </style>
+
+
+
+     <!-- JAVASCRIPT -->
+
+    <script>
+
+        // FORM
+
+        const courseForm =
+            document.getElementById("courseForm");
+
+
+        courseForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const courses =
+                    document.querySelectorAll(
+                        'input[name="course"]:checked'
+                    );
+
+
+                const level =
+                    document.querySelector(
+                        'input[name="level"]:checked'
+                    );
+
+
+                const result =
+                    document.getElementById(
+                        "formResult"
+                    );
+
+
+                if (courses.length === 0) {
+
+                    result.textContent =
+                        "⚠️ Hech bo'lmaganda bitta kursni tanlang.";
+
+                    result.className =
+                        "text-center mt-6 font-semibold text-lg text-yellow-400";
+
+                    return;
+
+                }
+
+
+                const selectedCourses =
+                    [...courses]
+                        .map(item => item.value)
+                        .join(", ");
+
+
+                result.textContent =
+                    `✅ Tanlovingiz: ${selectedCourses}. Daraja: ${level.value}.`;
+
+
+                result.className =
+                    "text-center mt-6 font-semibold text-lg text-green-400";
+
+            }
+        );
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById(
+                    "answerResult"
+                );
+
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! Bir nechta variant uchun checkbox ishlatiladi.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-red-400";
+
+            }
+
+        }
+
+        // COMPLETE LESSON
+
+        function completeLesson() {
+
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "htmlCompletedLessons"
+                    )
+                ) || [];
+
+
+            // 11 ni qo‘shamiz
+
+            if (!completedLessons.includes(11)) {
+
+                completedLessons.push(11);
+
+            }
+
+
+            // Saqlash
+
+            localStorage.setItem(
+                "htmlCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            // Xabar
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "🎉 11-dars tugatildi! 12-dars ochildi 🔓";
+
+
+            // Tugma
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.innerHTML =
+                "✅ 11-dars tugatildi";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-orange-500",
+                "hover:bg-orange-600"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            // Kurs sahifasiga qaytish
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "html-course.html";
+
+                },
+                1500
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

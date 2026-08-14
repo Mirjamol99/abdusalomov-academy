@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 56-dars | DOM text va HTML</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        📝 56-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        DOM text va HTML
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugun DOM orqali HTML elementlarining
+        ichidagi matnni va HTML kodini
+        JavaScript yordamida o‘zgartirishni
+        o‘rganamiz.
+
+        <br><br>
+
+        Asosiy mavzular:
+
+        <code>textContent</code>,
+        <code>innerHTML</code> va
+        <code>innerText</code>.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 DOM text nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        HTML elementining ichidagi yozuvni
+        JavaScript orqali o‘zgartirishimiz mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;h1 id="title"&gt;
+    Salom!
+&lt;/h1&gt;</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        JavaScript:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.querySelector("#title");
+
+title.textContent =
+    "Salom JavaScript!";</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✏️ textContent
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>textContent</code>
+        element ichidagi barcha matnni
+        olish yoki o‘zgartirish uchun ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.querySelector("#title");
+
+console.log(title.textContent);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Matnni o‘zgartirish:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>title.textContent =
+    "Yangi sarlavha";</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ⭐ <code>textContent</code>
+        oddiy matn bilan ishlash uchun
+        juda qulay.
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🌐 innerHTML
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>innerHTML</code>
+        element ichidagi HTML kodini
+        olish yoki o‘zgartirish imkonini beradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let box =
+    document.querySelector("#box");
+
+box.innerHTML =
+    "&lt;h2&gt;Salom!&lt;/h2&gt;";</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Muhim farq:
+
+        <br><br>
+
+        <code>textContent</code>
+        → HTML kodini oddiy matn sifatida ko‘rsatadi.
+
+        <br><br>
+
+        <code>innerHTML</code>
+        → HTML teglarini haqiqiy HTML sifatida
+        yaratadi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🆚 textContent va innerHTML
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                textContent
+            </h3>
+
+
+            <div class="code-box">
+
+<pre><code>element.textContent =
+    "&lt;b&gt;Salom&lt;/b&gt;";</code></pre>
+
+            </div>
+
+
+            <p class="text-slate-400 mt-4">
+
+                Natija:
+
+                <br>
+
+                <code>&lt;b&gt;Salom&lt;/b&gt;</code>
+
+                <br><br>
+
+                Teg ishlamaydi, matn sifatida
+                ko‘rsatiladi.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                innerHTML
+            </h3>
+
+
+            <div class="code-box">
+
+<pre><code>element.innerHTML =
+    "&lt;b&gt;Salom&lt;/b&gt;";</code></pre>
+
+            </div>
+
+
+            <p class="text-slate-400 mt-4">
+
+                Natija:
+
+                <br><br>
+
+                <strong>
+                    Salom
+                </strong>
+
+                <br><br>
+
+                Teg HTML sifatida ishlaydi.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👀 innerText
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>innerText</code>
+        elementda foydalanuvchiga
+        ko‘rinadigan matn bilan ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let text =
+    document.querySelector("#text");
+
+console.log(text.innerText);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Uni o‘zgartirish ham mumkin:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>text.innerText =
+    "Yangi matn";</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Amaliy misol — textContent
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <h2 id="textDemo"
+            class="text-3xl
+                   font-extrabold
+                   text-yellow-400">
+
+            Eski matn
+
+        </h2>
+
+
+        <button
+            onclick="changeText()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            ✏️ Matnni o‘zgartirish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeText() {
+
+    let text =
+        document.querySelector(
+            "#textDemo"
+        );
+
+    text.textContent =
+        "Matn o‘zgardi! 🎉";
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🌐 Amaliy misol — innerHTML
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <div id="htmlDemo"
+             class="text-xl
+                    text-slate-400">
+
+            Bu yerda HTML paydo bo‘ladi.
+
+        </div>
+
+
+        <button
+            onclick="addHTML()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🌐 HTML qo‘shish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function addHTML() {
+
+    let box =
+        document.querySelector(
+            "#htmlDemo"
+        );
+
+    box.innerHTML =
+        "&lt;h2&gt;Salom JavaScript! 🔥&lt;/h2&gt;";
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Bir nechta HTML element qo‘shish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let box =
+    document.querySelector("#box");
+
+box.innerHTML = `
+    &lt;h2&gt;JavaScript&lt;/h2&gt;
+    &lt;p&gt;DOM bilan ishlayapmiz!&lt;/p&gt;
+    &lt;button&gt;Bosish&lt;/button&gt;
+`;</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        💡 Template literal
+        yordamida bir nechta HTML elementni
+        qulay yozish mumkin.
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 innerHTML bilan karta yaratish
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-8">
+
+        <div id="cardDemo"></div>
+
+
+        <button
+            onclick="createCard()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            📦 Card yaratish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function createCard() {
+
+    let box =
+        document.querySelector(
+            "#cardDemo"
+        );
+
+    box.innerHTML = `
+        &lt;div class="bg-slate-900 p-6 rounded-2xl"&gt;
+            &lt;h2&gt;🍕 Pizza&lt;/h2&gt;
+            &lt;p&gt;50 000 so‘m&lt;/p&gt;
+        &lt;/div&gt;
+    `;
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Real loyiha misoli
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Masalan, online do‘konda mahsulot
+        kartasini JavaScript orqali yaratishimiz mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let products = [
+    {
+        name: "Pizza",
+        price: 50000
+    },
+    {
+        name: "Burger",
+        price: 35000
+    }
+];
+
+
+let container =
+    document.querySelector(
+        "#products"
+    );
+
+
+products.forEach(function(product) {
+
+    container.innerHTML += `
+        &lt;div class="card"&gt;
+            &lt;h2&gt;${product.name}&lt;/h2&gt;
+            &lt;p&gt;${product.price} so‘m&lt;/p&gt;
+        &lt;/div&gt;
+    `;
+
+});</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ⭐ Bu usul real saytlarning
+        mahsulotlar, kartalar va ro‘yxatlarini
+        yaratishda juda ko‘p ishlatiladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➕ innerHTML +=
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>+=</code> mavjud HTML'ni o‘chirmasdan
+        unga yangi HTML qo‘shish uchun ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let box =
+    document.querySelector("#box");
+
+box.innerHTML +=
+    "&lt;p&gt;Yangi element&lt;/p&gt;";</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>=</code>
+        → mavjud HTML'ni almashtiradi.
+
+        <br><br>
+
+        <code>+=</code>
+        → mavjud HTML'ga qo‘shadi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ innerHTML bilan ehtiyot bo‘lish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>innerHTML</code> orqali tashqi
+        yoki ishonchsiz ma'lumotlarni HTML sifatida
+        qo‘yishda ehtiyot bo‘lish kerak.
+
+    </p>
+
+
+    <div class="info mt-6">
+
+        🔐 Foydalanuvchidan kelgan
+        noma'lum ma'lumotni to‘g‘ridan-to‘g‘ri
+        <code>innerHTML</code> ga qo‘yish
+        xavfsizlik muammolariga olib kelishi mumkin.
+
+        <br><br>
+
+        Oddiy matn uchun
+        <code>textContent</code>
+        ko‘pincha xavfsizroq tanlovdir.
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🆚 Uchalasining farqi
+
+    </h2>
+
+
+    <div class="grid gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                textContent
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+                Barcha matnni olish yoki
+                oddiy matn sifatida o‘zgartirish.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                innerText
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+                Ko‘rinadigan matn bilan ishlash.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                innerHTML
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+                Element ichidagi HTML kodini
+                olish yoki yaratish.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Muhim kodlar
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>// Oddiy matn
+
+element.textContent =
+    "Salom";
+
+
+// Ko‘rinadigan matn
+
+element.innerText =
+    "Salom";
+
+
+// HTML
+
+element.innerHTML =
+    "&lt;b&gt;Salom&lt;/b&gt;";</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa ✏️
+            </b>
+
+            <br>
+
+            <code>h1</code> yarating va
+            <code>textContent</code> yordamida
+            uning matnini o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 🌐
+            </b>
+
+            <br>
+
+            <code>div</code> yarating va
+            <code>innerHTML</code> yordamida
+            uning ichiga <code>h2</code> va
+            <code>p</code> qo‘shing.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🔄
+            </b>
+
+            <br>
+
+            Tugma bosilganda
+            <code>textContent</code> yordamida
+            matnni almashtiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 📦
+            </b>
+
+            <br>
+
+            <code>innerHTML</code> orqali
+            mahsulot kartasi yarating.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🛒
+            </b>
+
+            <br>
+
+            3 ta mahsulotdan iborat
+            array yarating va
+            <code>innerHTML +=</code>
+            yordamida ularni sahifaga chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🎨
+            </b>
+
+            <br>
+
+            <code>innerHTML</code> orqali
+            rangli HTML card yarating.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🔥
+            </b>
+
+            <br>
+
+            <code>textContent</code>,
+            <code>innerText</code> va
+            <code>innerHTML</code>
+            o‘rtasidagi farqni amalda
+            ko‘rsatadigan mini loyiha yarating.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            📝 <code>textContent</code>
+            → elementdagi matn bilan ishlaydi.
+        </p>
+
+
+        <p>
+            👀 <code>innerText</code>
+            → ko‘rinadigan matn bilan ishlaydi.
+        </p>
+
+
+        <p>
+            🌐 <code>innerHTML</code>
+            → HTML kodini o‘zgartirishga imkon beradi.
+        </p>
+
+
+        <p>
+            ➕ <code>innerHTML +=</code>
+            → mavjud HTML'ga yangi HTML qo‘shadi.
+        </p>
+
+
+        <p>
+            🔐 Ishonchsiz foydalanuvchi ma'lumotlarini
+            <code>innerHTML</code> orqali chiqarishda
+            ehtiyot bo‘lish kerak.
+        </p>
+
+
+        <p>
+            ⭐ DOM'da elementni topish:
+            <code>querySelector()</code>,
+            <code>querySelectorAll()</code>.
+        </p>
+
+
+        <p>
+            ⭐ Topilgan elementning ichini
+            <code>textContent</code> yoki
+            <code>innerHTML</code> orqali
+            boshqarish mumkin.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT -->
+
+<section class="lesson-box">
+
+    <div class="text-6xl mb-5">
+        🎨
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        Keyingi dars
+
+    </h2>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-4
+              leading-8">
+
+        <strong class="text-yellow-400">
+            57-dars
+        </strong>
+        → DOM style va class bilan ishlash
+
+        <br><br>
+
+        Keyingi darsda JavaScript yordamida
+        elementlarning CSS style va
+        class'larini boshqarishni o‘rganamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        📝
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        56-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 56-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   TEXT CONTENT
+===================================== */
+
+function changeText() {
+
+    let text =
+        document.querySelector(
+            "#textDemo"
+        );
+
+
+    text.textContent =
+        "Matn o‘zgardi! 🎉";
+
+}
+
+
+
+/* =====================================
+   INNER HTML
+===================================== */
+
+function addHTML() {
+
+    let box =
+        document.querySelector(
+            "#htmlDemo"
+        );
+
+
+    box.innerHTML =
+        "<h2>Salom JavaScript! 🔥</h2>";
+
+}
+
+
+
+/* =====================================
+   CREATE CARD
+===================================== */
+
+function createCard() {
+
+    let box =
+        document.querySelector(
+            "#cardDemo"
+        );
+
+
+    box.innerHTML = `
+        <div class="bg-slate-900 p-6 rounded-2xl border border-slate-700">
+
+            <h2 class="text-3xl font-bold text-yellow-400">
+                🍕 Pizza
+            </h2>
+
+            <p class="text-slate-400 mt-3">
+                Mazali pizza
+            </p>
+
+            <p class="text-white font-bold mt-4">
+                50 000 so‘m
+            </p>
+
+        </div>
+    `;
+
+}
+
+
+
+/* =====================================
+   LESSON COMPLETE
+===================================== */
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        55-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(55)) {
+
+        alert(
+            "Avval 55-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-55.html";
+
+        return;
+
+    }
+
+
+    /*
+        56-darsni saqlash
+    */
+
+    if (!completedLessons.includes(56)) {
+
+        completedLessons.push(56);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.querySelector(
+        "#message"
+    ).textContent =
+        "🎉 56-dars tugatildi! 57-dars ochildi.";
+
+
+    const button =
+        document.querySelector(
+            "#completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 56-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

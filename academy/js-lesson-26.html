@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 26-dars | Function parametr va argumentlari</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            📥 26-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Function parametr va argumentlari
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Function faqat o‘zining ichidagi
+            ma'lumotlar bilan ishlamaydi.
+
+            <br><br>
+
+            Biz functionga tashqaridan
+            ma'lumot berishimiz mumkin.
+
+            <br><br>
+
+            Buning uchun
+            <b class="text-white">parametr</b>
+            va
+            <b class="text-white">argument</b>
+            tushunchalaridan foydalanamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametr nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Function yaratilayotganda qavs ichida
+            yoziladigan o‘zgaruvchi
+            <b class="text-white">parametr</b>
+            deyiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salom(ism) {
+
+    console.log("Salom, " + ism);
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda <code>ism</code> —
+            parametr.
+
+            <br><br>
+
+            U functionga keyinchalik beriladigan
+            qiymatni qabul qiladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Argument nima? 📥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Function chaqirilganda qavs ichida
+            beriladigan haqiqiy qiymat
+            <b class="text-white">argument</b>
+            deyiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salom(ism) {
+
+    console.log("Salom, " + ism);
+
+}
+
+salom("Mirjamol");</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda:
+
+            <br><br>
+
+            <code>ism</code> → parametr
+
+            <br>
+
+            <code>"Mirjamol"</code> → argument
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametr va argument farqi ⚖️
+        </h2>
+
+        <div class="info">
+
+            <p>
+                📦 <b>Parametr</b> — function
+                yaratilganda yoziladi.
+            </p>
+
+            <br>
+
+            <p>
+                📥 <b>Argument</b> — function
+                chaqirilganda beriladi.
+            </p>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>function salom(ism) {
+    //      ↑
+    //   parametr
+
+    console.log(ism);
+}
+
+salom("Ali");
+//     ↑
+//  argument</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bitta parametr 🔹
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function yoshniChiqar(yosh) {
+
+    console.log("Yosh:", yosh);
+
+}
+
+yoshniChiqar(16);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Yosh: 16</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ikkita parametr 🔹🔹
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function tanishtir(ism, yosh) {
+
+    console.log("Ism:", ism);
+    console.log("Yosh:", yosh);
+
+}
+
+tanishtir("Ali", 16);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ism: Ali
+Yosh: 16</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uchta parametr 🔹🔹🔹
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function userInfo(ism, yosh, shahar) {
+
+    console.log("Ism:", ism);
+    console.log("Yosh:", yosh);
+    console.log("Shahar:", shahar);
+
+}
+
+userInfo("Ali", 16, "Qarshi");</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametrlar tartibi muhim ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Argumentlar parametrlar tartibida
+            joylashadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function info(ism, yosh) {
+
+    console.log(ism);
+    console.log(yosh);
+
+}
+
+info("Ali", 15);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Birinchi argument
+            birinchi parametrga,
+            ikkinchi argument esa
+            ikkinchi parametrga tushadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Noto‘g‘ri tartib bersak nima bo‘ladi? 🤔
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function info(ism, yosh) {
+
+    console.log("Ism:", ism);
+    console.log("Yosh:", yosh);
+
+}
+
+info(16, "Ali");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ism: 16
+Yosh: Ali</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            JavaScript argumentlarni avtomatik
+            ravishda "to‘g‘rilab" bermaydi.
+
+            <br><br>
+
+            Shuning uchun parametrlar tartibiga
+            e'tibor berish kerak.
+
+        </p>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Sonlar bilan ishlash 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function qoshish(a, b) {
+
+    console.log(a + b);
+
+}
+
+qoshish(10, 20);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>30</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>a</code> va <code>b</code> —
+            parametrlar.
+
+            <br>
+
+            <code>10</code> va <code>20</code> —
+            argumentlar.
+
+        </p>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ayirish, ko‘paytirish va bo‘lish ➗
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function ayirish(a, b) {
+    console.log(a - b);
+}
+
+function kopaytirish(a, b) {
+    console.log(a * b);
+}
+
+function bolish(a, b) {
+    console.log(a / b);
+}
+
+ayirish(20, 5);
+kopaytirish(4, 5);
+bolish(20, 4);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15
+20
+5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Argument sifatida o‘zgaruvchi 📦
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Argument sifatida faqat
+            to‘g‘ridan-to‘g‘ri qiymat emas,
+            o‘zgaruvchini ham berish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let ism = "Ali";
+let yosh = 16;
+
+function info(ism, yosh) {
+
+    console.log(ism);
+    console.log(yosh);
+
+}
+
+info(ism, yosh);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Expressionni argument sifatida berish 🧠
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function natija(son) {
+
+    console.log(son);
+
+}
+
+natija(10 + 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            JavaScript avval
+            <code>10 + 5</code> ni hisoblaydi,
+            keyin natijani functionga beradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Function natijasini argument qilish 🔗
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function qoshish(a, b) {
+
+    return a + b;
+
+}
+
+function kopaytirish(a, b) {
+
+    return a * b;
+
+}
+
+let natija = kopaytirish(
+    qoshish(2, 3),
+    4
+);
+
+console.log(natija);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>20</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Avval <code>qoshish(2, 3)</code>
+            ishlaydi va <code>5</code> qaytaradi.
+
+            <br><br>
+
+            Keyin <code>kopaytirish(5, 4)</code>
+            ishlaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Default parameter ⚙️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar argument berilmasa,
+            parametrga oldindan qiymat
+            berishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function salom(ism = "Mehmon") {
+
+    console.log("Salom, " + ism);
+
+}
+
+salom();
+salom("Ali");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom, Mehmon
+Salom, Ali</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir parametr berib, boshqasini bermasak 📥
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function info(ism, yosh) {
+
+    console.log(ism);
+    console.log(yosh);
+
+}
+
+info("Ali");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ali
+undefined</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>yosh</code> uchun argument
+            berilmagani sababli uning qiymati
+            <code>undefined</code> bo‘ladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ko‘p argument berish ⚠️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function salom(ism) {
+
+    console.log("Salom, " + ism);
+
+}
+
+salom("Ali", 16, "Qarshi");</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu holatda functionda faqat
+            <code>ism</code> parametri bor.
+
+            <br><br>
+
+            Ortiqcha argumentlar oddiy
+            parametrlar bilan bog‘lanmaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametr sifatida Array 📦
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function arrayniChiqar(arr) {
+
+    for (let item of arr) {
+
+        console.log(item);
+
+    }
+
+}
+
+let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+arrayniChiqar(mevalar);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametr sifatida Object 🧩
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function userInfo(user) {
+
+    console.log(user.name);
+    console.log(user.age);
+
+}
+
+let user = {
+    name: "Ali",
+    age: 16
+};
+
+userInfo(user);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ali
+16</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String parametr bilan ishlash 📝
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function kattaHarf(matn) {
+
+    console.log(matn.toUpperCase());
+
+}
+
+kattaHarf("javascript");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>JAVASCRIPT</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Boolean parametr bilan ishlash ✅
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function loginTekshir(isLogin) {
+
+    if (isLogin) {
+
+        console.log("Xush kelibsiz!");
+
+    } else {
+
+        console.log("Iltimos, tizimga kiring.");
+
+    }
+
+}
+
+loginTekshir(true);
+loginTekshir(false);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametr va return 🔄
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Parametr orqali ma'lumotni
+            function ichiga olib kiramiz.
+
+            <br><br>
+
+            <code>return</code> orqali natijani
+            functiondan tashqariga chiqaramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function kvadrat(son) {
+
+    return son * son;
+
+}
+
+let natija = kvadrat(6);
+
+console.log(natija);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>36</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir xil functionni turli qiymatlar bilan ishlatish 🔥
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function kvadrat(son) {
+
+    return son * son;
+
+}
+
+console.log(kvadrat(2));
+console.log(kvadrat(5));
+console.log(kvadrat(10));
+console.log(kvadrat(20));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>4
+25
+100
+400</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Functionning eng katta afzalliklaridan
+            biri — bir xil kodni qayta yozmasdan,
+            turli qiymatlar bilan ishlatishdir.
+
+        </p>
+
+    </section>
+
+
+    <!-- 23 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: Kalkulyator 🧮
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function qoshish(a, b) {
+    return a + b;
+}
+
+function ayirish(a, b) {
+    return a - b;
+}
+
+function kopaytirish(a, b) {
+    return a * b;
+}
+
+function bolish(a, b) {
+    return a / b;
+}
+
+console.log(qoshish(15, 5));
+console.log(ayirish(15, 5));
+console.log(kopaytirish(15, 5));
+console.log(bolish(15, 5));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>20
+10
+75
+3</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 24 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: Student ma'lumotlari 🎓
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function studentInfo(ism, yosh, ball) {
+
+    console.log(`Ism: ${ism}`);
+    console.log(`Yosh: ${yosh}`);
+    console.log(`Ball: ${ball}`);
+
+}
+
+studentInfo(
+    "Mirjamol",
+    16,
+    95
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 25 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha: Juft yoki toq 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>function juftmi(son) {
+
+    if (son % 2 === 0) {
+
+        return "Juft son";
+
+    }
+
+    return "Toq son";
+
+}
+
+console.log(juftmi(10));
+console.log(juftmi(7));</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Juft son
+Toq son</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 26 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Parametrlar bilan ishlash qoidalari 📌
+        </h2>
+
+        <div class="space-y-5 text-slate-300 leading-8">
+
+            <p>
+                1️⃣ Parametr function yaratilganda
+                qavs ichida yoziladi.
+            </p>
+
+            <p>
+                2️⃣ Argument function chaqirilganda
+                beriladi.
+            </p>
+
+            <p>
+                3️⃣ Argumentlar parametrlar
+                tartibida joylashadi.
+            </p>
+
+            <p>
+                4️⃣ Argument berilmasa,
+                parametr qiymati
+                <code>undefined</code>
+                bo‘lishi mumkin.
+            </p>
+
+            <p>
+                5️⃣ Default parameter yordamida
+                parametrga boshlang‘ich qiymat
+                berish mumkin.
+            </p>
+
+            <p>
+                6️⃣ Parametr sifatida
+                String, Number, Boolean,
+                Array, Object va boshqa
+                qiymatlarni berish mumkin.
+            </p>
+
+            <p>
+                7️⃣ Function natijasini
+                <code>return</code> orqali
+                qaytarish mumkin.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <div class="space-y-5 text-slate-400 leading-8">
+
+            <p>
+                <b class="text-white">1-vazifa:</b>
+                <br>
+                Ism qabul qiladigan
+                <code>salom()</code>
+                function yarating.
+            </p>
+
+            <p>
+                <b class="text-white">2-vazifa:</b>
+                <br>
+                Ism va yosh qabul qiladigan
+                function yarating.
+            </p>
+
+            <p>
+                <b class="text-white">3-vazifa:</b>
+                <br>
+                Uchta son qabul qilib,
+                ularning yig‘indisini
+                <code>return</code> qiling.
+            </p>
+
+            <p>
+                <b class="text-white">4-vazifa:</b>
+                <br>
+                Son qabul qilib,
+                uning kvadratini qaytaring.
+            </p>
+
+            <p>
+                <b class="text-white">5-vazifa:</b>
+                <br>
+                Sonning juft yoki toq
+                ekanini aniqlang.
+            </p>
+
+            <p>
+                <b class="text-white">6-vazifa:</b>
+                <br>
+                Array qabul qiladigan function
+                yarating va barcha elementlarni
+                Console'ga chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">7-vazifa:</b>
+                <br>
+                Object qabul qiladigan function
+                yarating va uning
+                <code>name</code>,
+                <code>age</code> qiymatlarini
+                chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">8-vazifa:</b>
+                <br>
+                Default parameter ishlatib,
+                argument berilmaganda
+                <b>"Mehmon"</b> chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">9-vazifa:</b>
+                <br>
+                Ikki son qabul qiladigan
+                kalkulyator functionlari
+                yarating.
+            </p>
+
+            <p>
+                <b class="text-white">10-vazifa:</b>
+                <br>
+                Ism, yosh va ball qabul qiladigan
+                student function yarating va
+                ma'lumotlarni chiroyli qilib
+                Console'ga chiqaring.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+        <div class="space-y-4 text-slate-300 leading-8">
+
+            <p>
+                📥 <b>Parametr</b> —
+                function qabul qiladigan
+                o‘zgaruvchi.
+            </p>
+
+            <p>
+                🎯 <b>Argument</b> —
+                functionga beriladigan
+                haqiqiy qiymat.
+            </p>
+
+            <p>
+                🔢 Bir nechta parametr ishlatish
+                mumkin.
+            </p>
+
+            <p>
+                📦 Argument sifatida
+                o‘zgaruvchi, Array yoki Object
+                berish mumkin.
+            </p>
+
+            <p>
+                ⚙️ Default parameter
+                argument berilmaganda
+                boshlang‘ich qiymat beradi.
+            </p>
+
+            <p>
+                ↩️ <code>return</code>
+                orqali natijani qaytarish mumkin.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            📥
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            26-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 26-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 25-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(25)) {
+
+        alert("Avval 25-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-25.html";
+
+        return;
+    }
+
+
+    // 26-darsni saqlash
+
+    if (!completedLessons.includes(26)) {
+
+        completedLessons.push(26);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 26-dars tugatildi! 27-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 26-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+
+</html>

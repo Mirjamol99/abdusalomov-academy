@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 49-dars | Rest Operator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        📦 49-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        Rest Operator
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript'dagi
+        <code>Rest Operator</code> bilan
+        ishlashni o‘rganamiz.
+
+        <br><br>
+
+        Rest operator ham
+        <code>...</code> uchta nuqta bilan
+        yoziladi.
+
+        U bir nechta qiymatlarni bitta
+        Array yoki Object ichida yig‘ib olish
+        uchun ishlatiladi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Rest Operator nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Rest operator —
+        <code>...</code> yordamida
+        qolgan qiymatlarni bitta o‘zgaruvchiga
+        yig‘ib olish imkonini beradi.
+
+        <br><br>
+
+        Masalan:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function numbers(a, b, ...rest) {
+
+    console.log(a);
+    console.log(b);
+    console.log(rest);
+
+}
+
+numbers(10, 20, 30, 40, 50);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10
+20
+[30, 40, 50]</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>a</code> → 10
+
+        <br>
+
+        <code>b</code> → 20
+
+        <br>
+
+        <code>rest</code> → qolgan qiymatlar
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Function'da Rest
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Rest operatorning eng ko‘p ishlatiladigan
+        joylaridan biri — function parametrlaridir.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function sum(...numbers) {
+
+    console.log(numbers);
+
+}
+
+sum(10, 20, 30, 40);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[10, 20, 30, 40]</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Barcha argumentlar
+        <code>numbers</code> nomli Array ichiga
+        yig‘ildi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➕ Rest bilan yig‘indi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function sum(...numbers) {
+
+    let total = 0;
+
+    for (let number of numbers) {
+
+        total += number;
+
+    }
+
+    return total;
+
+}
+
+
+console.log(
+    sum(10, 20, 30)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>60</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Istalgan miqdorda argument
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Rest yordamida function'ga
+        nechta argument yuborilishini oldindan
+        bilish shart emas.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function showNumbers(...numbers) {
+
+    console.log(numbers);
+
+}
+
+
+showNumbers(1, 2);
+
+showNumbers(1, 2, 3, 4);
+
+showNumbers(
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Oddiy parametr + Rest
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Rest oddiy parametrlar bilan
+        birga ishlashi mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function showUser(name, age, ...skills) {
+
+    console.log(name);
+
+    console.log(age);
+
+    console.log(skills);
+
+}
+
+
+showUser(
+    "Ali",
+    18,
+    "HTML",
+    "CSS",
+    "JavaScript"
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+
+18
+
+[
+    "HTML",
+    "CSS",
+    "JavaScript"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ Rest oxirida bo‘lishi kerak
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Rest parameter function parametrlarida
+        oxirgi o‘rinda turishi kerak.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>// TO‘G‘RI
+
+function test(a, b, ...rest) {
+
+    console.log(a, b, rest);
+
+}</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>// NOTO‘G‘RI
+
+function test(...rest, a) {
+
+    console.log(rest, a);
+
+}</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Rest'dan keyin boshqa parameter
+        yozib bo‘lmaydi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📋 Rest va Array Destructuring
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        47-darsdagi Destructuring bilan
+        Rest birga ishlashi mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40,
+    50
+];
+
+let [
+    first,
+    second,
+    ...rest
+] = numbers;
+
+console.log(first);
+console.log(second);
+console.log(rest);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10
+20
+[30, 40, 50]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Rest bilan Array'ning qolgan qismi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana",
+    "Mango",
+    "Orange"
+];
+
+
+let [
+    first,
+    ...others
+] = fruits;
+
+
+console.log(first);
+
+console.log(others);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Apple
+
+[
+    "Banana",
+    "Mango",
+    "Orange"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Object'da Rest
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Rest Object destructuring bilan ham
+        ishlaydi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon",
+
+    job: "Developer"
+
+};
+
+
+let {
+    name,
+    ...other
+} = user;
+
+
+console.log(name);
+
+console.log(other);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+
+{
+    age: 18,
+    city: "Andijon",
+    job: "Developer"
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔑 Object'da qolgan property'lar
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let product = {
+
+    name: "Pizza",
+
+    price: 50000,
+
+    category: "Pizza",
+
+    available: true
+
+};
+
+
+let {
+    name,
+    price,
+    ...details
+} = product;
+
+
+console.log(name);
+
+console.log(price);
+
+console.log(details);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Pizza
+
+50000
+
+{
+    category: "Pizza",
+    available: true
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Spread va Rest farqi
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold
+                       text-green-400">
+
+                Spread
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+
+                Qiymatlarni yoyadi.
+
+            </p>
+
+
+            <div class="code-box">
+
+<pre><code>let a = [1, 2];
+
+let b = [
+    ...a,
+    3,
+    4
+];</code></pre>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold
+                       text-yellow-400">
+
+                Rest
+
+            </h3>
+
+            <p class="text-slate-400 mt-4">
+
+                Qiymatlarni yig‘adi.
+
+            </p>
+
+
+            <div class="code-box">
+
+<pre><code>function test(
+    ...numbers
+) {
+
+    console.log(numbers);
+
+}</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Esda tuting:
+
+        <br><br>
+
+        📤 <b>Spread</b> → yoyadi
+
+        <br>
+
+        📦 <b>Rest</b> → yig‘adi
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➕ Rest bilan Sum Function
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function sum(...numbers) {
+
+    let result = 0;
+
+    numbers.forEach(function(number) {
+
+        result += number;
+
+    });
+
+    return result;
+
+}
+
+
+console.log(
+    sum(5, 10, 15, 20)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>50</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Rest bilan o‘rtacha qiymat
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function average(...numbers) {
+
+    let total = 0;
+
+
+    for (let number of numbers) {
+
+        total += number;
+
+    }
+
+
+    return total / numbers.length;
+
+}
+
+
+console.log(
+    average(10, 20, 30)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>20</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 Rest + Math.max()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function getMax(...numbers) {
+
+    return Math.max(...numbers);
+
+}
+
+
+console.log(
+    getMax(10, 50, 30, 90, 20)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>90</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Bu yerda ikkita
+        <code>...</code> turli vazifani bajaryapti:
+
+        <br><br>
+
+        <code>...numbers</code>
+        → Rest
+
+        <br>
+
+        <code>...numbers</code>
+        → Spread
+
+    </p>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Real loyiha: Cart
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function calculateTotal(...products) {
+
+    let total = 0;
+
+
+    for (let product of products) {
+
+        total += product.price;
+
+    }
+
+
+    return total;
+
+}
+
+
+let pizza = {
+
+    name: "Pizza",
+
+    price: 50000
+
+};
+
+
+let burger = {
+
+    name: "Burger",
+
+    price: 30000
+
+};
+
+
+let cola = {
+
+    name: "Cola",
+
+    price: 10000
+
+};
+
+
+console.log(
+    calculateTotal(
+        pizza,
+        burger,
+        cola
+    )
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>90000</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👤 Real loyiha: User Skills
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function createUser(
+    name,
+    age,
+    ...skills
+) {
+
+    return {
+
+        name: name,
+
+        age: age,
+
+        skills: skills
+
+    };
+
+}
+
+
+let user = createUser(
+
+    "Ali",
+
+    18,
+
+    "HTML",
+
+    "CSS",
+
+    "JavaScript"
+
+);
+
+
+console.log(user);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18,
+    skills: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ]
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Rest bilan parametrlarni ajratish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function show(
+    first,
+    second,
+    ...others
+) {
+
+    console.log(
+        "Birinchi:",
+        first
+    );
+
+    console.log(
+        "Ikkinchi:",
+        second
+    );
+
+    console.log(
+        "Qolgan:",
+        others
+    );
+
+}
+
+
+show(
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Birinchi: A
+
+Ikkinchi: B
+
+Qolgan:
+["C", "D", "E"]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Object Rest + Spread
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Rest va Spread bir loyihada
+        birga ishlatilishi mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon",
+
+    job: "Developer"
+
+};
+
+
+let {
+    name,
+    ...otherData
+} = user;
+
+
+let newUser = {
+
+    ...otherData,
+
+    name: "Vali"
+
+};
+
+
+console.log(newUser);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 Rest operator qayerlarda ishlatiladi?
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold">
+
+                Function
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Istalgan miqdordagi argumentlarni
+                olish uchun.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold">
+
+                Array
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Qolgan elementlarni yig‘ish uchun.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold">
+
+                Object
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Qolgan property'larni yig‘ish uchun.
+
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold">
+
+                Real loyihalar
+
+            </h3>
+
+            <p class="text-slate-400 mt-3">
+
+                Cart, User, Product va API
+                ma'lumotlarida.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 To‘liq amaliy misol
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function createProduct(
+    name,
+    price,
+    ...categories
+) {
+
+    return {
+
+        name,
+
+        price,
+
+        categories
+
+    };
+
+}
+
+
+let product = createProduct(
+
+    "Pizza",
+
+    50000,
+
+    "Fast Food",
+
+    "Pizza",
+
+    "Food"
+
+);
+
+
+console.log(product);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Pizza",
+    price: 50000,
+    categories: [
+        "Fast Food",
+        "Pizza",
+        "Food"
+    ]
+}</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu misolda:
+
+        <br><br>
+
+        <code>name</code>
+        → mahsulot nomi.
+
+        <br>
+
+        <code>price</code>
+        → mahsulot narxi.
+
+        <br>
+
+        <code>...categories</code>
+        → qolgan barcha argumentlarni
+        Array ichiga yig‘di.
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🔢
+            </b>
+
+            <br>
+
+            Rest yordamida barcha sonlarni
+            qabul qiladigan function yarating.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>sum(10, 20, 30, 40);</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa ➕
+            </b>
+
+            <br>
+
+            Rest yordamida sonlarning
+            yig‘indisini hisoblang.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🧮
+            </b>
+
+            <br>
+
+            Rest yordamida sonlarning
+            o‘rtacha qiymatini toping.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 👤
+            </b>
+
+            <br>
+
+            Function quyidagicha ishlasin:
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>createUser(
+    "Ali",
+    18,
+    "HTML",
+    "CSS",
+    "JavaScript"
+);</code></pre>
+
+        </div>
+
+
+        <p>
+
+            Natijada Object qaytarsin:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18,
+    skills: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ]
+}</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 📦
+            </b>
+
+            <br>
+
+            Object destructuring'da Rest
+            yordamida qolgan property'larni
+            alohida Object'ga oling.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon",
+
+    job: "Developer",
+
+    phone: "+998901234567"
+
+};</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🔍
+            </b>
+
+            <br>
+
+            Rest yordamida eng katta sonni
+            topadigan function yarating.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🛒
+            </b>
+
+            <br>
+
+            Bir nechta product qabul qiladigan
+            va ularning umumiy narxini
+            hisoblaydigan function yarating.
+
+        </div>
+
+
+
+        <div class="code-box">
+
+<pre><code>calculateTotal(
+    pizza,
+    burger,
+    cola
+);</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                8-vazifa 🔥
+            </b>
+
+            <br>
+
+            Rest va Spread'ni bitta loyihada
+            birga ishlating.
+
+            <br><br>
+
+            Masalan:
+
+            <br>
+
+            Rest bilan mahsulotlarni qabul qiling,
+            Spread bilan yangi Cart yarating.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            📦 <b>Rest operator</b>
+            → <code>...</code>
+            yordamida yoziladi.
+        </p>
+
+
+        <p>
+            🔢 Rest bir nechta qiymatlarni
+            bitta Array ichiga yig‘adi.
+        </p>
+
+
+        <p>
+            ⚙️ Function parametrlarida
+            juda ko‘p ishlatiladi.
+        </p>
+
+
+        <p>
+            📋 Array destructuring'da
+            qolgan elementlarni olish mumkin.
+        </p>
+
+
+        <p>
+            📦 Object destructuring'da
+            qolgan property'larni olish mumkin.
+        </p>
+
+
+        <p>
+            ⚠️ Function parametrlarida
+            Rest oxirgi o‘rinda bo‘lishi kerak.
+        </p>
+
+
+        <p>
+            📤 <b>Spread</b> → yoyadi.
+        </p>
+
+
+        <p>
+            📥 <b>Rest</b> → yig‘adi.
+        </p>
+
+
+        <p>
+            🔥 Rest va Spread bir-biriga
+            o‘xshash ko‘rinsa ham,
+            vazifalari boshqa.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        📦
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        49-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 49-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        48-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(48)) {
+
+        alert(
+            "Avval 48-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-48.html";
+
+        return;
+
+    }
+
+
+    /*
+        49-darsni saqlash
+    */
+
+    if (!completedLessons.includes(49)) {
+
+        completedLessons.push(49);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 49-dars tugatildi! 50-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 49-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

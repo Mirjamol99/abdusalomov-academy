@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 30-dars | Array asoslari</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400 hover:text-yellow-400 transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            📚 30-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Array asoslari
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            <code>Array</code> — bir nechta qiymatlarni
+            bitta o‘zgaruvchi ichida saqlashga yordam
+            beradigan ma'lumotlar strukturasi.
+
+            <br><br>
+
+            Masalan, 5 ta meva uchun 5 ta alohida
+            o‘zgaruvchi yaratish o‘rniga bitta
+            Array ishlatishimiz mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array ichida bir nechta qiymatlarni
+            tartib bilan saqlash mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda <code>mevalar</code>
+            nomli Array yaratildi.
+
+            <br><br>
+
+            Unda 4 ta element bor.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array yaratish 📦
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array odatda kvadrat qavslar
+            <code>[ ]</code> yordamida yaratiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let sonlar = [10, 20, 30, 40, 50];
+
+let ismlar = [
+    "Ali",
+    "Vali",
+    "Hasan"
+];
+
+let aralash = [
+    "Ali",
+    16,
+    true
+];</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            Array ichida bir xil turdagi yoki
+            turli turdagi qiymatlar bo‘lishi mumkin.
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array Index 🔢
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array'dagi har bir elementning
+            o‘z <b>index</b> raqami bor.
+
+            <br><br>
+
+            Muhim:
+
+            <br>
+
+            JavaScript'da index <b>0</b> dan boshlanadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",    // index 0
+    "Banan",   // index 1
+    "Uzum",    // index 2
+    "Anor"     // index 3
+];</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            <p>
+                0 → Olma
+            </p>
+
+            <p>
+                1 → Banan
+            </p>
+
+            <p>
+                2 → Uzum
+            </p>
+
+            <p>
+                3 → Anor
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Elementga murojaat qilish 🔍
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(mevalar[0]);
+
+console.log(mevalar[1]);
+
+console.log(mevalar[2]);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Olma
+Banan
+Uzum</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Masalan:
+
+            <br><br>
+
+            <code>mevalar[0]</code>
+            → birinchi element.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oxirgi elementni olish 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array'ning oxirgi elementini
+            <code>length - 1</code> orqali olish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+console.log(
+    mevalar[mevalar.length - 1]
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Anor</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            length 📏
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>length</code> Array ichida
+            nechta element borligini ko‘rsatadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+console.log(mevalar.length);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>4</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array elementini o‘zgartirish ✏️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+mevalar[1] = "Anor";
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Anor",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            <code>mevalar[1]</code>
+            oldin <b>Banan</b> edi,
+            endi <b>Anor</b> bo‘ldi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array'ga yangi element qo‘shish ➕
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array oxiriga element qo‘shish uchun
+            <code>push()</code> metodidan foydalanamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan"
+];
+
+mevalar.push("Uzum");
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array oxiridan o‘chirish ➖
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Oxirgi elementni o‘chirish uchun
+            <code>pop()</code> ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+mevalar.pop();
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array boshiga qo‘shish ⬅️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array boshiga element qo‘shish uchun
+            <code>unshift()</code> ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Banan",
+    "Uzum"
+];
+
+mevalar.unshift("Olma");
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array boshidan o‘chirish ⬆️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Birinchi elementni o‘chirish uchun
+            <code>shift()</code> ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+mevalar.shift();
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array ichida String va Number 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let data = [
+    "Ali",
+    16,
+    "Toshkent",
+    95
+];
+
+console.log(data[0]);
+console.log(data[1]);
+console.log(data[2]);
+console.log(data[3]);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Array ichida turli xil qiymatlarni
+            saqlash mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Empty Array 📭
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bo‘sh Array ham yaratish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [];
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Keyin unga elementlar qo‘shish mumkin:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [];
+
+mevalar.push("Olma");
+mevalar.push("Banan");
+mevalar.push("Uzum");
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array va for loop 🔁
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array elementlarini loop yordamida
+            birma-bir chiqarish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+for (let i = 0; i < mevalar.length; i++) {
+
+    console.log(mevalar[i]);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Olma
+Banan
+Uzum</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array va for...of 🔄
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array elementlarini olishning qulay
+            usullaridan biri — <code>for...of</code>.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+for (let meva of mevalar) {
+
+    console.log(meva);
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array ichida Array 🪆
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Array ichida boshqa Array ham
+            bo‘lishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let sonlar = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+
+console.log(sonlar[0]);
+console.log(sonlar[0][1]);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[1, 2, 3]
+2</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array'dagi indexni aniqlash 🔎
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Keyingi darslarda Array metodlarini
+            batafsil o‘rganamiz.
+
+            <br><br>
+
+            Masalan, <code>indexOf()</code>
+            elementning indexini topishga yordam beradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(
+    mevalar.indexOf("Banan")
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array ichida qiymat borligini tekshirish ✅
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>includes()</code>
+            Array ichida qiymat bor-yo‘qligini
+            tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+console.log(
+    mevalar.includes("Olma")
+);
+
+console.log(
+    mevalar.includes("Anor")
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array'dan qiymat olish 📥
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const students = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];
+
+let firstStudent = students[0];
+
+console.log(firstStudent);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ali</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            const bilan Array ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>const</code> bilan yaratilgan
+            Array'ning elementlarini o‘zgartirish
+            mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>const mevalar = [
+    "Olma",
+    "Banan"
+];
+
+mevalar[0] = "Uzum";
+
+mevalar.push("Anor");
+
+console.log(mevalar);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>[
+    "Uzum",
+    "Banan",
+    "Anor"
+]</code></pre>
+
+        </div>
+
+        <div class="info mt-5">
+
+            <p>
+                ❗ Lekin <code>const</code> bilan
+                yaratilgan o‘zgaruvchiga butunlay
+                yangi Array biriktirish mumkin emas.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array'ni boshqa Array'ga nusxalash 📋
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let mevalar = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+let yangiMevalar = [
+    ...mevalar
+];
+
+console.log(yangiMevalar);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            <code>...</code> — spread operator.
+            Uni keyingi darslarda batafsil o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array bilan amaliy misol 🎓
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>const students = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];
+
+console.log("O‘quvchilar soni:",
+    students.length
+);
+
+console.log("Birinchi o‘quvchi:",
+    students[0]
+);
+
+console.log("Oxirgi o‘quvchi:",
+    students[students.length - 1]
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 23 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array bilan amaliy loyiha 🛒
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Mahsulotlar ro‘yxatini yaratamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin",
+    "Sichqoncha"
+];
+
+products.push("Klaviatura");
+
+console.log(products);
+
+console.log(
+    "Mahsulotlar soni:",
+    products.length
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 24 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array bilan amaliy loyiha 🎮
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let games = [
+    "Minecraft",
+    "FIFA",
+    "GTA"
+];
+
+for (let game of games) {
+
+    console.log(
+        "O‘yin:",
+        game
+    );
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 25 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Eng muhim Array metodlari 📌
+        </h2>
+
+        <div class="info">
+
+            <p class="text-lg leading-9">
+
+                ➕ <code>push()</code> —
+                oxiriga qo‘shadi.
+
+                <br><br>
+
+                ➖ <code>pop()</code> —
+                oxiridan o‘chiradi.
+
+                <br><br>
+
+                ⬅️ <code>unshift()</code> —
+                boshiga qo‘shadi.
+
+                <br><br>
+
+                ⬆️ <code>shift()</code> —
+                boshidan o‘chiradi.
+
+                <br><br>
+
+                🔎 <code>indexOf()</code> —
+                indexni topadi.
+
+                <br><br>
+
+                ✅ <code>includes()</code> —
+                qiymat borligini tekshiradi.
+
+                <br><br>
+
+                📏 <code>length</code> —
+                elementlar sonini beradi.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <div class="space-y-6 text-slate-400 leading-8">
+
+            <p>
+                <b class="text-white">1-vazifa:</b>
+                <br>
+                5 ta meva nomidan iborat Array yarating.
+            </p>
+
+            <p>
+                <b class="text-white">2-vazifa:</b>
+                <br>
+                Array'dagi birinchi va oxirgi
+                elementni Console'ga chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">3-vazifa:</b>
+                <br>
+                Array uzunligini
+                <code>length</code> orqali toping.
+            </p>
+
+            <p>
+                <b class="text-white">4-vazifa:</b>
+                <br>
+                <code>push()</code> yordamida
+                Array'ga yangi element qo‘shing.
+            </p>
+
+            <p>
+                <b class="text-white">5-vazifa:</b>
+                <br>
+                <code>pop()</code> yordamida
+                oxirgi elementni o‘chiring.
+            </p>
+
+            <p>
+                <b class="text-white">6-vazifa:</b>
+                <br>
+                <code>unshift()</code> yordamida
+                Array boshiga element qo‘shing.
+            </p>
+
+            <p>
+                <b class="text-white">7-vazifa:</b>
+                <br>
+                <code>shift()</code> yordamida
+                birinchi elementni o‘chiring.
+            </p>
+
+            <p>
+                <b class="text-white">8-vazifa:</b>
+                <br>
+                Array elementlarini
+                <code>for</code> loop yordamida
+                birma-bir chiqaring.
+            </p>
+
+            <p>
+                <b class="text-white">9-vazifa:</b>
+                <br>
+                <code>includes()</code> yordamida
+                Array ichida ma'lum bir qiymat
+                borligini tekshiring.
+            </p>
+
+            <p>
+                <b class="text-white">10-vazifa:</b>
+                <br>
+                5 ta o‘quvchidan iborat Array yarating.
+                Ularning sonini, birinchi va oxirgi
+                o‘quvchini Console'ga chiqaring.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+        <div class="space-y-4 text-slate-300 leading-8">
+
+            <p>
+                📚 <code>Array</code> —
+                bir nechta qiymatlarni saqlaydi.
+            </p>
+
+            <p>
+                🔢 Index <b>0</b> dan boshlanadi.
+            </p>
+
+            <p>
+                📏 <code>length</code> —
+                Array uzunligini beradi.
+            </p>
+
+            <p>
+                ➕ <code>push()</code> —
+                oxiriga qo‘shadi.
+            </p>
+
+            <p>
+                ➖ <code>pop()</code> —
+                oxiridan o‘chiradi.
+            </p>
+
+            <p>
+                ⬅️ <code>unshift()</code> —
+                boshiga qo‘shadi.
+            </p>
+
+            <p>
+                ⬆️ <code>shift()</code> —
+                boshidan o‘chiradi.
+            </p>
+
+            <p>
+                🔎 <code>indexOf()</code> —
+                element indexini topadi.
+            </p>
+
+            <p>
+                ✅ <code>includes()</code> —
+                element mavjudligini tekshiradi.
+            </p>
+
+            <p>
+                🔁 Array'ni loop bilan
+                aylanib chiqish mumkin.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            📚
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            30-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 30-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(29)) {
+
+        alert("Avval 29-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-29.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(30)) {
+
+        completedLessons.push(30);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 30-dars tugatildi! 31-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 30-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+
+</html>

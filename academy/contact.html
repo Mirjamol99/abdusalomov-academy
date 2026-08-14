@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bog'lanish | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body class="bg-slate-950 text-white">
+
+
+     <!-- NAVBAR -->
+
+<header class="border-b border-slate-800
+               bg-slate-950/90
+               backdrop-blur-lg
+               sticky top-0 z-50">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <!-- Logo -->
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <!-- Desktop Menu -->
+
+        <div class="hidden md:flex
+                    items-center
+                    gap-8">
+
+            <a href="index.html"
+               class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+
+                Bosh sahifa
+
+            </a>
+
+
+            <a href="courses.html"
+               class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+
+                Kurslar
+
+            </a>
+
+
+            <a href="about.html"
+               class="text-slate-300
+                      hover:text-blue-400
+                      transition">
+
+                Men haqimda
+
+            </a>
+
+
+            <a href="contact.html"
+               class="text-blue-400
+                      font-semibold">
+
+                Bog'lanish
+
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Button -->
+
+        <button id="menuBtn"
+                class="md:hidden
+                       text-white
+                       text-3xl
+                       focus:outline-none">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+
+    <!-- Mobile Menu -->
+
+    <div id="mobileMenu"
+         class="hidden md:hidden
+                border-t border-slate-800
+                bg-slate-950">
+
+        <a href="index.html"
+           class="block px-6 py-4
+                  hover:bg-slate-900">
+
+            🏠 Bosh sahifa
+
+        </a>
+
+
+        <a href="courses.html"
+           class="block px-6 py-4
+                  hover:bg-slate-900">
+
+            📚 Kurslar
+
+        </a>
+
+
+        <a href="about.html"
+           class="block px-6 py-4
+                  hover:bg-slate-900">
+
+            👨‍💻 Men haqimda
+
+        </a>
+
+
+        <a href="contact.html"
+           class="block px-6 py-4
+                  bg-blue-500/10
+                  text-blue-400">
+
+            📞 Bog'lanish
+
+        </a>
+
+    </div>
+
+</header>
+
+     <!-- HERO -->
+
+<section class="relative overflow-hidden">
+
+    <!-- Background Glow -->
+
+    <div class="absolute
+                top-10 left-10
+                w-72 h-72
+                bg-blue-600/20
+                rounded-full
+                blur-3xl">
+    </div>
+
+
+    <div class="absolute
+                bottom-10 right-10
+                w-80 h-80
+                bg-purple-600/20
+                rounded-full
+                blur-3xl">
+    </div>
+
+
+    <div class="relative
+                max-w-7xl
+                mx-auto
+                px-6
+                py-20">
+
+
+        <!-- Title -->
+
+        <div class="text-center
+                    max-w-3xl
+                    mx-auto">
+
+            <span class="inline-block
+                         bg-blue-500/10
+                         border border-blue-500/20
+                         text-blue-400
+                         px-4 py-2
+                         rounded-full
+                         text-sm
+                         font-semibold">
+
+                📞 BOG'LANISH
+
+            </span>
+
+
+            <h1 class="text-5xl
+                       md:text-6xl
+                       font-extrabold
+                       mt-6">
+
+                Men bilan
+                <span class="text-transparent
+                             bg-clip-text
+                             bg-gradient-to-r
+                             from-blue-400
+                             to-cyan-300">
+
+                    bog'laning
+
+                </span>
+
+            </h1>
+
+
+            <p class="text-slate-400
+                      text-lg
+                      leading-8
+                      mt-6">
+
+                Savolingiz, taklifingiz yoki
+                hamkorlik bo'yicha murojaatingiz
+                bo'lsa, men bilan bog'lanishingiz mumkin.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+     <!-- CONTACT SECTION -->
+
+<section class="pb-20">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-6">
+
+        <div class="grid
+                    lg:grid-cols-2
+                    gap-8">
+
+                 <!-- CONTACT INFO -->
+
+            <div class="bg-slate-900
+                        border border-slate-800
+                        rounded-3xl
+                        p-7 md:p-10">
+
+                <h2 class="text-3xl
+                           font-bold">
+
+                    Bog'lanish ma'lumotlari
+
+                </h2>
+
+
+                <p class="text-slate-400
+                          leading-7
+                          mt-4">
+
+                    Quyidagi ijtimoiy tarmoqlar
+                    orqali bog'lanishingiz mumkin.
+
+                </p>
+
+
+                <!-- Telegram -->
+
+                <a href="https://t.me/mirjamol_abdusalomov"
+                   class="flex
+                          items-center
+                          gap-5
+                          mt-8
+                          p-5
+                          rounded-2xl
+                          bg-slate-950
+                          border border-slate-800
+                          hover:border-blue-500
+                          transition">
+
+                    <div class="w-12 h-12
+                                rounded-xl
+                                bg-blue-500/10
+                                text-blue-400
+                                flex
+                                items-center
+                                justify-center
+                                text-xl">
+
+                        <i class="fa-brands fa-telegram"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="font-semibold">
+                            Telegram
+                        </p>
+
+                        <p class="text-slate-500
+                                  text-sm">
+
+                            Telegram orqali yozing
+
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- Instagram -->
+
+                <a href="https://www.instagram.com/mirjamol_abdusalomov?igsh=MTgxZjM5OXB1YzM2NQ=="
+                   class="flex
+                          items-center
+                          gap-5
+                          mt-4
+                          p-5
+                          rounded-2xl
+                          bg-slate-950
+                          border border-slate-800
+                          hover:border-pink-500
+                          transition">
+
+                    <div class="w-12 h-12
+                                rounded-xl
+                                bg-pink-500/10
+                                text-pink-400
+                                flex
+                                items-center
+                                justify-center
+                                text-xl">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="font-semibold">
+                            Instagram
+                        </p>
+
+                        <p class="text-slate-500
+                                  text-sm">
+
+                            Yangiliklarni kuzating
+
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- YouTube -->
+
+                <a href="https://www.youtube.com/@abdusalomov.o"
+                   class="flex
+                          items-center
+                          gap-5
+                          mt-4
+                          p-5
+                          rounded-2xl
+                          bg-slate-950
+                          border border-slate-800
+                          hover:border-red-500
+                          transition">
+
+                    <div class="w-12 h-12
+                                rounded-xl
+                                bg-red-500/10
+                                text-red-400
+                                flex
+                                items-center
+                                justify-center
+                                text-xl">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="font-semibold">
+                            YouTube
+                        </p>
+
+                        <p class="text-slate-500
+                                  text-sm">
+
+                            Video darslarni ko'ring
+
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- Email -->
+
+                <div class="flex
+                            items-center
+                            gap-5
+                            mt-4
+                            p-5
+                            rounded-2xl
+                            bg-slate-950
+                            border border-slate-800">
+
+                    <div class="w-12 h-12
+                                rounded-xl
+                                bg-green-500/10
+                                text-green-400
+                                flex
+                                items-center
+                                justify-center
+                                text-xl">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="font-semibold">
+                            Email
+                        </p>
+
+                        <p class="text-slate-500
+                                  text-sm">
+
+                            abdusalomovmirjamol99@gmail.com
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+                 <!-- CONTACT FORM -->
+            <div class="bg-slate-900
+                        border border-slate-800
+                        rounded-3xl
+                        p-7 md:p-10">
+
+                <h2 class="text-3xl
+                           font-bold">
+
+                    Xabar yuborish
+
+                </h2>
+
+
+                <p class="text-slate-400
+                          mt-4">
+
+                    Formani to'ldirib,
+                    xabaringizni yuboring.
+
+                </p>
+
+
+                <form id="contactForm"
+                      class="mt-8">
+
+
+                    <!-- Name -->
+
+                    <div>
+
+                        <label class="block
+                                      text-sm
+                                      font-medium
+                                      mb-2">
+
+                            Ismingiz
+
+                        </label>
+
+
+                        <input type="text"
+                               id="name"
+                               placeholder="Ismingizni kiriting"
+                               required
+                               class="w-full
+                                      bg-slate-950
+                                      border border-slate-800
+                                      rounded-xl
+                                      px-5 py-4
+                                      outline-none
+                                      focus:border-blue-500
+                                      transition">
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="mt-5">
+
+                        <label class="block
+                                      text-sm
+                                      font-medium
+                                      mb-2">
+
+                            Email
+
+                        </label>
+
+
+                        <input type="email"
+                               id="email"
+                               placeholder="example@gmail.com"
+                               required
+                               class="w-full
+                                      bg-slate-950
+                                      border border-slate-800
+                                      rounded-xl
+                                      px-5 py-4
+                                      outline-none
+                                      focus:border-blue-500
+                                      transition">
+
+                    </div>
+
+
+
+                    <!-- Message -->
+
+                    <div class="mt-5">
+
+                        <label class="block
+                                      text-sm
+                                      font-medium
+                                      mb-2">
+
+                            Xabar
+
+                        </label>
+
+
+                        <textarea id="message"
+                                  rows="6"
+                                  placeholder="Xabaringizni yozing..."
+                                  required
+                                  class="w-full
+                                         bg-slate-950
+                                         border border-slate-800
+                                         rounded-xl
+                                         px-5 py-4
+                                         outline-none
+                                         resize-none
+                                         focus:border-blue-500
+                                         transition"></textarea>
+
+                    </div>
+
+
+
+                    <!-- Button -->
+
+                    <button type="submit"
+                            class="w-full
+                                   mt-6
+                                   bg-blue-600
+                                   hover:bg-blue-700
+                                   hover:scale-[1.01]
+                                   px-6 py-4
+                                   rounded-xl
+                                   font-semibold
+                                   transition">
+
+                        <i class="fa-solid fa-paper-plane mr-2"></i>
+
+                        Xabar yuborish
+
+                    </button>
+
+
+                    <!-- Success -->
+
+                    <p id="successMessage"
+                       class="hidden
+                              text-green-400
+                              text-center
+                              mt-5">
+
+                        ✅ Xabaringiz tayyor!
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+     <!-- CTA -->
+
+<section class="pb-20">
+
+    <div class="max-w-5xl
+                mx-auto
+                px-6">
+
+        <div class="bg-gradient-to-r
+                    from-blue-600/20
+                    to-purple-600/20
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8 md:p-12
+                    text-center">
+
+            <h2 class="text-3xl
+                       md:text-4xl
+                       font-extrabold">
+
+                Dasturlashni boshlashga tayyormisiz? 🚀
+
+            </h2>
+
+
+            <p class="text-slate-400
+                      mt-4">
+
+                Kurslarimizni ko'rib chiqing
+                va o'rganishni bugundan boshlang.
+
+            </p>
+
+
+            <a href="courses.html"
+               class="inline-block
+                      mt-7
+                      bg-blue-600
+                      hover:bg-blue-700
+                      px-8 py-4
+                      rounded-xl
+                      font-semibold
+                      transition">
+
+                Kurslarni ko'rish →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy.
+            Barcha huquqlar himoyalangan.
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+if (menuBtn && mobileMenu) {
+
+    menuBtn.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("hidden");
+
+    });
+
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+
+    mobileLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.add("hidden");
+
+        });
+
+    });
+
+}
+
+// CONTACT FORM
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const successMessage =
+    document.getElementById("successMessage");
+
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const message =
+            document.getElementById("message").value;
+
+
+        try {
+
+            const response = await fetch(
+                "http://localhost:3000/send-message",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        message: message
+                    })
+                }
+            );
+
+
+            const data = await response.json();
+
+
+            if (data.success) {
+
+                successMessage.textContent =
+                    "✅ Xabaringiz yuborildi!";
+
+                successMessage.classList.remove("hidden");
+
+                contactForm.reset();
+
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            successMessage.textContent =
+                "❌ Xatolik yuz berdi.";
+
+            successMessage.classList.remove("hidden");
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>

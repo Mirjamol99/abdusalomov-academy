@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 10-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90 backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-4
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="css-course.html"
+           class="text-slate-400 hover:text-blue-400
+                  transition flex items-center gap-2">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            10-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            CSS Grid 🧱
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5 leading-8">
+
+            CSS Grid yordamida elementlarni
+            qator va ustunlar bo'yicha tartibli
+            joylashtirishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+
+    <!-- ================= 1 ================= -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+            <i class="fa-solid fa-table-cells"></i>
+        </div>
+
+        <h2 class="lesson-title">
+            1. CSS Grid nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            CSS Grid — web sahifadagi elementlarni
+            qator va ustunlar yordamida joylashtirish
+            uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: grid;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            📌 Flexbox asosan bir yo'nalishda,
+            Grid esa qator va ustunlar bilan
+            ishlashda juda qulay.
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 2 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            2. `display: grid`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Grid ishlashi uchun ota elementga
+            `display: grid` beriladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: grid;
+}</code></pre>
+
+        </div>
+
+        <div class="grid-demo simple-grid">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 3 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            3. `grid-template-columns`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ustunlar sonini va o'lchamini
+            belgilash uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+}</code></pre>
+
+        </div>
+
+        <div class="grid-demo three-columns">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+        </div>
+
+        <div class="info-box">
+
+            `1fr` — mavjud joyning bir ulushi.
+
+            <br><br>
+
+            `repeat(3, 1fr)` →
+            3 ta teng ustun.
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 4 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            4. `grid-template-rows`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Grid qatorlarining o'lchamini
+            belgilash uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: grid;
+
+    grid-template-rows:
+        100px 100px;
+}</code></pre>
+
+        </div>
+
+        <div class="grid-demo rows-demo">
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 5 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            5. `gap`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Grid elementlari orasidagi masofani
+            `gap` yordamida belgilaymiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: grid;
+    gap: 20px;
+}</code></pre>
+
+        </div>
+
+        <div class="grid-demo gap-grid">
+
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JS</div>
+            <div>React</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 6 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            6. `grid-column`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Elementni bir nechta ustun bo'ylab
+            cho'zish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    grid-column: span 2;
+}</code></pre>
+
+        </div>
+
+        <div class="grid-demo column-demo">
+
+            <div class="big-box">
+                1 — 2 ustun
+            </div>
+
+            <div>
+                2
+            </div>
+
+            <div>
+                3
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 7 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            7. `grid-row`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Elementni bir nechta qator bo'ylab
+            cho'zish uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    grid-row: span 2;
+}</code></pre>
+
+        </div>
+
+        <div class="grid-demo row-demo">
+
+            <div class="tall-box">
+                1
+            </div>
+
+            <div>
+                2
+            </div>
+
+            <div>
+                3
+            </div>
+
+            <div>
+                4
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 8 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            8. `minmax()`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `minmax()` yordamida ustunlarning
+            minimal va maksimal o'lchamini
+            belgilash mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(150px, 1fr));
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            📱 Bu responsive dizaynlarda juda
+            foydali.
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 9 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            9. Responsive Grid 📱
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `auto-fit` va `minmax()` yordamida
+            ekran o'lchamiga mos Grid yaratish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(200px, 1fr)
+        );
+
+    gap: 20px;
+}</code></pre>
+
+        </div>
+
+        <div class="responsive-grid">
+
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>React</div>
+            <div>Git</div>
+            <div>Tailwind</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 10 ================= -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            10. Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Endi Grid yordamida chiroyli
+            kurs kartalarini yaratamiz.
+
+        </p>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-html5"></i>
+
+                <h3>
+                    HTML
+                </h3>
+
+                <p>
+                    Web sahifa yaratish
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-css3-alt"></i>
+
+                <h3>
+                    CSS
+                </h3>
+
+                <p>
+                    Web dizayn
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-js"></i>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+                    Interaktiv sayt
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <i class="fa-brands fa-react"></i>
+
+                <h3>
+                    React
+                </h3>
+
+                <p>
+                    Zamonaviy frontend
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TEST ================= -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+            MINI TEST 🧠
+        </span>
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-4">
+
+            CSS Grid'ni yoqish uchun
+            qaysi kod ishlatiladi?
+
+        </h2>
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                A) display: grid
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B) display: flex
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) position: grid
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) grid: display
+
+            </button>
+
+        </div>
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+        </p>
+
+    </section>
+
+
+    <!-- ================= COMPLETE ================= -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8 text-center">
+
+        <div class="text-5xl mb-5">
+            🎉
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            10-darsni tugatdingizmi?
+
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 11-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5
+                   rounded-2xl
+                   font-bold text-lg
+                   transition">
+
+            10-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="border-t border-slate-800
+               py-8 mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+
+.lesson-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(59,130,246,.1);
+    border: 1px solid rgba(59,130,246,.2);
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+
+.lesson-box {
+    margin-top: 32px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 24px;
+    padding: 28px;
+}
+
+
+.lesson-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(59,130,246,.1);
+    color: #60a5fa;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+.lesson-title {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+
+.code-box {
+    margin-top: 24px;
+    padding: 22px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+
+.code-box pre {
+    color: #4ade80;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+
+.info-box {
+    margin-top: 22px;
+    padding: 18px;
+    background: rgba(59,130,246,.08);
+    border: 1px solid rgba(59,130,246,.2);
+    border-radius: 16px;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+
+/* GRID */
+
+.grid-demo {
+    display: grid;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 20px;
+    background: #020617;
+    border-radius: 18px;
+}
+
+
+.grid-demo div {
+    padding: 25px;
+    background: #2563eb;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+.simple-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.rows-demo {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 100px;
+}
+
+
+.gap-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+.column-demo {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.big-box {
+    grid-column: span 2;
+}
+
+
+.row-demo {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.tall-box {
+    grid-row: span 2;
+}
+
+
+.responsive-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(160px, 1fr)
+        );
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+}
+
+
+.responsive-grid div {
+    padding: 25px;
+    background: #2563eb;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+/* PROJECT */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+
+.project-card {
+    padding: 35px 20px;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: .3s;
+}
+
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+}
+
+
+.project-card i {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+.project-card h3 {
+    font-size: 23px;
+    font-weight: 800;
+    color: #60a5fa;
+}
+
+
+.project-card p {
+    margin-top: 8px;
+    color: #94a3b8;
+}
+
+
+/* TEST */
+
+.answer-btn {
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+}
+
+
+.answer-btn:hover {
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 640px) {
+
+    .lesson-box {
+        padding: 20px;
+    }
+
+    .simple-grid,
+    .three-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .column-demo {
+        grid-template-columns: 1fr;
+    }
+
+    .big-box {
+        grid-column: span 1;
+    }
+
+    .row-demo {
+        grid-template-columns: 1fr;
+    }
+
+    .tall-box {
+        grid-row: span 1;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById("answerResult");
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! CSS Grid'ni display: grid orqali yoqamiz.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. To'g'ri javob: display: grid.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 10
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("cssCompletedLessons")
+        ) || [];
+
+
+    // 9-dars tekshiriladi
+
+    if (!completedLessons.includes(9)) {
+
+        alert(
+            "Avval 9-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-9.html";
+
+        return;
+    }
+
+
+    // 10-dars saqlanadi
+
+    if (!completedLessons.includes(10)) {
+
+        completedLessons.push(10);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 10-dars tugatildi! 11-dars ochildi 🔓";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.innerHTML =
+        "✅ 10-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "css-course.html";
+
+    }, 1500);
+
+}
+
+</script>
+
+</body>
+</html>

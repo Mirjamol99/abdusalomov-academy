@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Kursi | Abdusalomov Academy</title>
+
+    <!-- LOGIN TEKSHIRISH -->
+<script>
+
+    const currentUser =
+        JSON.parse(
+            localStorage.getItem("academyCurrentUser")
+        );
+
+    if (!currentUser) {
+
+        window.location.href = "login.html";
+
+    }
+
+</script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        body {
+            background: #020617;
+        }
+
+        .lesson-card {
+            transition: all .25s ease;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            border-color: #facc15;
+        }
+
+        .locked {
+            opacity: .55;
+        }
+    </style>
+</head>
+
+
+<body class="text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90 backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-5
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="index.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-house"></i>
+
+            Bosh sahifa
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- MAIN -->
+
+<main class="max-w-7xl mx-auto px-6 py-12">
+
+
+    <!-- HERO -->
+
+    <section class="text-center mb-14">
+
+        <div class="inline-flex
+                    items-center gap-2
+                    px-5 py-2
+                    rounded-full
+                    bg-yellow-400/10
+                    border border-yellow-400/20
+                    text-yellow-400
+                    font-bold">
+
+            <i class="fa-brands fa-js"></i>
+
+            JAVASCRIPT COURSE
+
+        </div>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            JavaScript
+
+            <span class="text-yellow-400">
+                60 ta dars
+            </span>
+
+            🚀
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  max-w-2xl
+                  mx-auto mt-5">
+
+            JavaScript'ni 0 dan boshlab
+            DOM va amaliy loyihalargacha
+            bosqichma-bosqich o'rganing.
+
+        </p>
+
+
+
+        <!-- PROGRESS -->
+
+        <div class="max-w-xl mx-auto mt-10">
+
+            <div class="flex justify-between
+                        text-sm mb-3">
+
+                <span class="text-slate-400">
+                    Kurs progressi
+                </span>
+
+                <span id="progressText"
+                      class="text-yellow-400 font-bold">
+
+                    0 / 60
+
+                </span>
+
+            </div>
+
+
+            <div class="h-3
+                        bg-slate-800
+                        rounded-full
+                        overflow-hidden">
+
+                <div id="progressBar"
+                     class="h-full
+                            bg-yellow-400
+                            transition-all duration-500"
+                     style="width: 0%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LESSONS -->
+
+    <section>
+
+        <div id="lessons"
+             class="grid
+                    sm:grid-cols-2
+                    lg:grid-cols-3
+                    gap-5">
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               mt-16 py-10">
+
+    <div class="max-w-7xl
+                mx-auto px-6
+                text-center">
+
+        <h2 class="text-xl font-bold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+            Academy
+
+        </h2>
+
+
+        <p class="text-slate-500 mt-3">
+
+            JavaScript — 60 ta dars
+
+        </p>
+
+
+        <p class="text-slate-600 mt-5 text-sm">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+//    60 TA JAVASCRIPT DARS
+
+const lessons = [
+
+    {
+        title: "JavaScriptga kirish",
+        icon: "🚀"
+    },
+
+    {
+        title: "JavaScriptni HTMLga ulash",
+        icon: "🔗"
+    },
+
+    {
+        title: "Console bilan ishlash",
+        icon: "🖥️"
+    },
+
+    {
+        title: "O'zgaruvchilar: let, const, var",
+        icon: "📦"
+    },
+
+    {
+        title: "Ma'lumot turlari",
+        icon: "🗂️"
+    },
+
+    {
+        title: "Number va matematik amallar",
+        icon: "🔢"
+    },
+
+    {
+        title: "String bilan ishlash",
+        icon: "🔤"
+    },
+
+    {
+        title: "Template Literals",
+        icon: "📝"
+    },
+
+    {
+        title: "Boolean",
+        icon: "✅"
+    },
+
+    {
+        title: "null va undefined",
+        icon: "❓"
+    },
+
+    {
+        title: "typeof operatori",
+        icon: "🔍"
+    },
+
+    {
+        title: "Arithmetic operatorlar",
+        icon: "➗"
+    },
+
+    {
+        title: "Assignment operatorlar",
+        icon: "📝"
+    },
+
+    {
+        title: "Comparison operatorlar",
+        icon: "⚖️"
+    },
+
+    {
+        title: "Logical operatorlar",
+        icon: "🧠"
+    },
+
+    {
+        title: "if sharti",
+        icon: "❓"
+    },
+
+    {
+        title: "else va else if",
+        icon: "🔀"
+    },
+
+    {
+        title: "Ternary operator",
+        icon: "⚡"
+    },
+
+    {
+        title: "switch operatori",
+        icon: "🔄"
+    },
+
+    {
+        title: "for loop",
+        icon: "🔁"
+    },
+
+    {
+        title: "while loop",
+        icon: "🔄"
+    },
+
+    {
+        title: "do while loop",
+        icon: "♻️"
+    },
+
+    {
+        title: "break va continue",
+        icon: "🛑"
+    },
+
+    {
+        title: "Nested loop",
+        icon: "🔁"
+    },
+
+    {
+        title: "Function asoslari",
+        icon: "⚙️"
+    },
+
+    {
+        title: "Function parametr va argumentlari",
+        icon: "📥"
+    },
+
+    {
+        title: "return",
+        icon: "↩️"
+    },
+
+    {
+        title: "Arrow Function",
+        icon: "➡️"
+    },
+
+    {
+        title: "Scope",
+        icon: "🎯"
+    },
+
+    {
+        title: "Array asoslari",
+        icon: "📚"
+    },
+
+    {
+        title: "Array index va length",
+        icon: "🔢"
+    },
+
+    {
+        title: "push va pop",
+        icon: "➕"
+    },
+
+    {
+        title: "shift va unshift",
+        icon: "↔️"
+    },
+
+    {
+        title: "slice va splice",
+        icon: "✂️"
+    },
+
+    {
+        title: "concat",
+        icon: "🔗"
+    },
+
+    {
+        title: "includes va indexOf",
+        icon: "🔎"
+    },
+
+    {
+        title: "forEach",
+        icon: "🔁"
+    },
+
+    {
+        title: "map",
+        icon: "🗺️"
+    },
+
+    {
+        title: "filter",
+        icon: "🔎"
+    },
+
+    {
+        title: "find va findIndex",
+        icon: "🎯"
+    },
+
+    {
+        title: "reduce",
+        icon: "➗"
+    },
+
+    {
+        title: "some va every",
+        icon: "☑️"
+    },
+
+    {
+        title: "sort",
+        icon: "📊"
+    },
+
+    {
+        title: "reverse",
+        icon: "🔄"
+    },
+
+    {
+        title: "Object asoslari",
+        icon: "📦"
+    },
+
+    {
+        title: "Object property va methodlari",
+        icon: "⚙️"
+    },
+
+    {
+        title: "Destructuring",
+        icon: "📤"
+    },
+
+    {
+        title: "Spread operator",
+        icon: "📋"
+    },
+
+    {
+        title: "Rest operator",
+        icon: "📦"
+    },
+
+    {
+        title: "Date va vaqt",
+        icon: "📅"
+    },
+
+    {
+        title: "Math object",
+        icon: "🧮"
+    },
+
+    {
+        title: "DOM nima?",
+        icon: "🌐"
+    },
+
+    {
+        title: "getElementById",
+        icon: "🎯"
+    },
+
+    {
+        title: "querySelector",
+        icon: "🔍"
+    },
+
+    {
+        title: "querySelectorAll",
+        icon: "🔎"
+    },
+
+    {
+        title: "DOM text va HTML",
+        icon: "📝"
+    },
+
+    {
+        title: "DOM style va class",
+        icon: "🎨"
+    },
+
+    {
+        title: "Eventlar va addEventListener",
+        icon: "🖱️"
+    },
+
+    {
+        title: "Formalar va inputlar",
+        icon: "📋"
+    },
+
+    {
+        title: "LocalStorage",
+        icon: "💾"
+    },
+
+    {
+        title: "Mini loyiha",
+        icon: "🚀"
+    }
+
+];
+
+//    COMPLETED LESSONS
+
+let completedLessons =
+    JSON.parse(
+        localStorage.getItem(
+            "jsCompletedLessons"
+        )
+    ) || [];
+
+//    LESSONLARNI CHIQARISH
+
+function renderLessons() {
+
+    const container =
+        document.getElementById("lessons");
+
+
+    container.innerHTML = "";
+
+
+    lessons.forEach((lesson, index) => {
+
+        const number = index + 1;
+
+
+        const completed =
+            completedLessons.includes(number);
+
+
+        const unlocked =
+            number === 1 ||
+            completedLessons.includes(number - 1);
+
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            `lesson-card
+             bg-slate-900
+             border border-slate-800
+             rounded-2xl
+             p-6
+             ${!unlocked ? "locked" : ""}`;
+
+
+        let button;
+
+
+        if (unlocked) {
+
+            button = `
+
+                <a href="js-lesson-${number}.html"
+
+                   class="block
+                          text-center
+                          bg-yellow-400
+                          hover:bg-yellow-300
+                          text-slate-950
+                          font-extrabold
+                          py-3
+                          rounded-xl
+                          transition">
+
+                    ${
+                        completed
+                        ? "🔄 Darsni qayta ochish"
+                        : "▶️ Darsni boshlash"
+                    }
+
+                </a>
+
+            `;
+
+        } else {
+
+            button = `
+
+                <button disabled
+
+                    class="w-full
+                           bg-slate-800
+                           text-slate-500
+                           font-bold
+                           py-3
+                           rounded-xl">
+
+                    🔒 Avvalgi darsni tugating
+
+                </button>
+
+            `;
+
+        }
+
+
+        card.innerHTML = `
+
+            <div class="flex
+                        items-center
+                        justify-between
+                        mb-5">
+
+                <span class="text-yellow-400
+                             font-extrabold">
+
+                    ${String(number).padStart(2, "0")}-DARS
+
+                </span>
+
+
+                <span class="text-2xl">
+
+                    ${
+                        completed
+                        ? "✅"
+                        : unlocked
+                        ? "🔓"
+                        : "🔒"
+                    }
+
+                </span>
+
+            </div>
+
+
+            <div class="text-4xl mb-4">
+
+                ${lesson.icon}
+
+            </div>
+
+
+            <h2 class="text-xl
+                       font-extrabold
+                       min-h-[56px]">
+
+                ${lesson.title}
+
+            </h2>
+
+
+            <p class="text-slate-500
+                      text-sm
+                      mt-3
+                      mb-6">
+
+                JavaScript ${number}-dars
+
+            </p>
+
+
+            ${button}
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+
+    updateProgress();
+
+}
+
+//    PROGRESS
+
+function updateProgress() {
+
+    const count =
+        completedLessons.filter(
+            number =>
+                number >= 1 &&
+                number <= 60
+        ).length;
+
+
+    const percent =
+        (count / 60) * 100;
+
+
+    document.getElementById(
+        "progressText"
+    ).textContent =
+        `${count} / 60`;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        `${percent}%`;
+
+}
+
+//    START
+
+renderLessons();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>19-Dars | HTML Form | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+
+            <a href="html-course.html" class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kursga qaytish
+
+            </a>
+
+        </nav>
+
+    </header>
+
+     <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+
+        <!-- TITLE -->
+
+        <div class="mb-10">
+
+            <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+                19-DARS
+
+            </span>
+
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+                HTML Form 📝
+
+            </h1>
+
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+                Foydalanuvchidan ism, email,
+                parol va boshqa ma'lumotlarni
+                olish uchun formalar yaratishni o'rganamiz.
+
+            </p>
+
+        </div>
+
+         <!-- 1. FORM -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                1. &lt;form&gt; nima?
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;form&gt;
+                </strong>
+                foydalanuvchidan ma'lumot olish
+                uchun ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;form&gt;
+
+    &lt;input type="text"&gt;
+
+    &lt;button&gt;
+        Yuborish
+    &lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- 2. INPUT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                2. &lt;input&gt; tegi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;input&gt;
+                </strong>
+                foydalanuvchi ma'lumot kiritadigan
+                maydon yaratadi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input type="text"&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6">
+
+                <input type="text" placeholder="Ismingizni kiriting..." class="demo-input">
+
+            </div>
+
+        </section>
+
+         <!-- 3. TYPE -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                3. input type
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    type
+                </strong>
+                input qanday ma'lumot qabul qilishini
+                belgilaydi.
+
+            </p>
+
+
+            <div class="grid md:grid-cols-2 gap-4 mt-6">
+
+
+                <div class="type-card">
+
+                    <code class="text-orange-400">
+                    type="text"
+                </code>
+
+                    <p>
+                        Oddiy matn
+                    </p>
+
+                </div>
+
+
+                <div class="type-card">
+
+                    <code class="text-orange-400">
+                    type="email"
+                </code>
+
+                    <p>
+                        Email manzil
+                    </p>
+
+                </div>
+
+
+                <div class="type-card">
+
+                    <code class="text-orange-400">
+                    type="password"
+                </code>
+
+                    <p>
+                        Parol
+                    </p>
+
+                </div>
+
+
+                <div class="type-card">
+
+                    <code class="text-orange-400">
+                    type="number"
+                </code>
+
+                    <p>
+                        Raqam
+                    </p>
+
+                </div>
+
+
+                <div class="type-card">
+
+                    <code class="text-orange-400">
+                    type="date"
+                </code>
+
+                    <p>
+                        Sana
+                    </p>
+
+                </div>
+
+
+                <div class="type-card">
+
+                    <code class="text-orange-400">
+                    type="tel"
+                </code>
+
+                    <p>
+                        Telefon raqami
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+         <!-- 4. LABEL -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                4. &lt;label&gt;
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;label&gt;
+                </strong>
+                input nima uchun ishlatilishini
+                tushuntiruvchi yozuvdir.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;label for="name"&gt;
+    Ismingiz
+&lt;/label&gt;
+
+&lt;input
+    type="text"
+    id="name"&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6">
+
+                <label for="demoName" class="block mb-2 font-semibold">
+
+                    Ismingiz:
+
+                </label>
+
+
+                <input id="demoName" type="text" class="demo-input" placeholder="Ismingiz">
+
+            </div>
+
+        </section>
+
+         <!-- 5. PLACEHOLDER -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                5. placeholder
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    placeholder
+                </strong>
+                input ichida foydalanuvchiga
+                ko'rsatma beradi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input
+    type="text"
+    placeholder="Ismingizni kiriting"&gt;</code></pre>
+
+            </div>
+
+
+            <input type="text" placeholder="Ismingizni kiriting..." class="demo-input mt-6">
+
+        </section>
+
+         <!-- 6. REQUIRED -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                6. required
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    required
+                </strong>
+                inputni majburiy maydonga aylantiradi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input
+    type="text"
+    required&gt;</code></pre>
+
+            </div>
+
+
+            <p class="text-green-400 mt-5">
+
+                💡 required bo'lsa, foydalanuvchi
+                maydonni to'ldirmasdan formani
+                yubora olmaydi.
+
+            </p>
+
+        </section>
+
+         <!-- 7. TEXTAREA -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                7. &lt;textarea&gt;
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Katta hajmdagi matn yozish uchun
+                <strong class="text-orange-400">
+                    &lt;textarea&gt;
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;textarea
+    placeholder="Xabaringiz..."&gt;
+&lt;/textarea&gt;</code></pre>
+
+            </div>
+
+
+            <textarea rows="5" placeholder="Xabaringizni yozing..." class="demo-input mt-6 resize-none"></textarea>
+
+        </section>
+
+         <!-- 8. SELECT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                8. &lt;select&gt;
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Tanlash ro'yxatini yaratish uchun
+                <strong class="text-orange-400">
+                    &lt;select&gt;
+                </strong>
+                va
+                <strong class="text-orange-400">
+                    &lt;option&gt;
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;select&gt;
+
+    &lt;option&gt;
+        HTML
+    &lt;/option&gt;
+
+    &lt;option&gt;
+        CSS
+    &lt;/option&gt;
+
+    &lt;option&gt;
+        JavaScript
+    &lt;/option&gt;
+
+&lt;/select&gt;</code></pre>
+
+            </div>
+
+
+            <select class="demo-input mt-6">
+
+                <option>HTML</option>
+
+                <option>CSS</option>
+
+                <option>JavaScript</option>
+
+            </select>
+
+        </section>
+
+         <!-- 9. CHECKBOX -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                9. Checkbox ☑️
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Bir nechta variantni tanlash uchun
+                <strong class="text-orange-400">
+                    checkbox
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input
+    type="checkbox"&gt;
+
+HTML
+
+&lt;input
+    type="checkbox"&gt;
+
+CSS</code></pre>
+
+            </div>
+
+
+            <div class="mt-6 space-y-4">
+
+                <label class="flex items-center gap-3">
+
+                    <input type="checkbox" class="w-5 h-5">
+
+                    HTML
+
+                </label>
+
+
+                <label class="flex items-center gap-3">
+
+                    <input type="checkbox" class="w-5 h-5">
+
+                    CSS
+
+                </label>
+
+
+                <label class="flex items-center gap-3">
+
+                    <input type="checkbox" class="w-5 h-5">
+
+                    JavaScript
+
+                </label>
+
+            </div>
+
+        </section>
+
+         <!-- 10. RADIO -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                10. Radio button 🔘
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Faqat bitta variant tanlash kerak bo'lsa,
+                <strong class="text-orange-400">
+                    radio
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;input
+    type="radio"
+    name="level"&gt;
+
+Boshlang'ich
+
+&lt;input
+    type="radio"
+    name="level"&gt;
+
+O'rta</code></pre>
+
+            </div>
+
+
+            <div class="mt-6 space-y-4">
+
+                <label class="flex items-center gap-3">
+
+                    <input type="radio" name="level" class="w-5 h-5">
+
+                    Boshlang'ich
+
+                </label>
+
+
+                <label class="flex items-center gap-3">
+
+                    <input type="radio" name="level" class="w-5 h-5">
+
+                    O'rta
+
+                </label>
+
+
+                <label class="flex items-center gap-3">
+
+                    <input type="radio" name="level" class="w-5 h-5">
+
+                    Yuqori
+
+                </label>
+
+            </div>
+
+        </section>
+
+         <!-- 11. BUTTON -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                11. &lt;button&gt;
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Formani yuborish yoki boshqa
+                amalni bajarish uchun
+                <strong class="text-orange-400">
+                    &lt;button&gt;
+                </strong>
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;button type="submit"&gt;
+
+    Yuborish
+
+&lt;/button&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- 12. FULL FORM -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI LOYIHA 🚀
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3 mb-8">
+
+                Abdusalomov Academy
+                Ro'yxatdan o'tish
+
+            </h2>
+
+
+            <form id="academyForm" class="space-y-6">
+
+
+                <!-- NAME -->
+
+                <div>
+
+                    <label for="name" class="block mb-2 font-semibold">
+
+                        Ism
+
+                    </label>
+
+
+                    <input id="name" type="text" placeholder="Ismingizni kiriting" required class="demo-input">
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div>
+
+                    <label for="email" class="block mb-2 font-semibold">
+
+                        Email
+
+                    </label>
+
+
+                    <input id="email" type="email" placeholder="example@gmail.com" required class="demo-input">
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div>
+
+                    <label for="password" class="block mb-2 font-semibold">
+
+                        Parol
+
+                    </label>
+
+
+                    <input id="password" type="password" placeholder="Parol kiriting" required class="demo-input">
+
+                </div>
+
+
+                <!-- COURSE -->
+
+                <div>
+
+                    <label for="course" class="block mb-2 font-semibold">
+
+                        Kurs
+
+                    </label>
+
+
+                    <select id="course" class="demo-input">
+
+                        <option>HTML</option>
+
+                        <option>CSS</option>
+
+                        <option>JavaScript</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div>
+
+                    <label for="message" class="block mb-2 font-semibold">
+
+                        Xabar
+
+                    </label>
+
+
+                    <textarea id="message" rows="5" placeholder="Xabaringiz..."
+                        class="demo-input resize-none"></textarea>
+
+                </div>
+
+
+                <!-- CHECKBOX -->
+
+                <label class="flex items-center gap-3">
+
+                    <input id="agree" type="checkbox" required class="w-5 h-5">
+
+                    Shartlarga roziman
+
+                </label>
+
+
+                <!-- BUTTON -->
+
+                <button type="submit" class="w-full
+                       bg-orange-500
+                       hover:bg-orange-600
+                       px-6 py-4
+                       rounded-xl
+                       font-bold
+                       transition">
+
+                    Ro'yxatdan o'tish
+
+                    <i class="fa-solid fa-arrow-right ml-2"></i>
+
+                </button>
+
+
+            </form>
+
+
+            <p id="formMessage" class="text-center
+                  font-semibold
+                  mt-6">
+
+            </p>
+
+        </section>
+
+         <!-- MINI TEST -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI TEST 🧠
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+                Foydalanuvchidan email olish uchun
+                qaysi input type ishlatiladi?
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    A) type="text"
+
+                </button>
+
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    B) type="email"
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    C) type="image"
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) type="table"
+
+                </button>
+
+            </div>
+
+
+            <p id="answerResult" class="mt-6
+                  font-semibold
+                  text-lg">
+
+            </p>
+
+        </section>
+
+         <!-- COMPLETE -->
+
+        <section class="mt-10">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full
+                   px-7 py-5
+                   rounded-2xl
+                   bg-orange-500
+                   hover:bg-orange-600
+                   font-bold
+                   text-lg
+                   transition">
+
+                Darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+            </p>
+
+        </section>
+
+    </main>
+
+     <!-- FOOTER -->
+
+    <footer class="border-t
+               border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy
+
+            </p>
+
+        </div>
+
+    </footer>
+
+     <!-- STYLE -->
+
+    <style>
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+        }
+
+
+        .icon-box {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(249, 115, 22, .1);
+
+            color: #fb923c;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .lesson-heading {
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .code-box-inner {
+
+            margin-top: 24px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box-inner pre {
+
+            color: #4ade80;
+
+            line-height: 2;
+
+            font-size: 15px;
+
+        }
+
+
+        .demo-input {
+
+            width: 100%;
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            color: white;
+
+            border-radius: 14px;
+
+            padding: 15px 17px;
+
+            outline: none;
+
+            transition: .3s;
+
+        }
+
+
+        .demo-input:focus {
+
+            border-color: #f97316;
+
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, .1);
+
+        }
+
+
+        .type-card {
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 20px;
+
+        }
+
+
+        .type-card p {
+
+            color: #94a3b8;
+
+            margin-top: 8px;
+
+        }
+
+
+        .answer-btn {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            border: 1px solid #334155;
+
+            background: #020617;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            transition: .3s;
+
+        }
+
+
+        .answer-btn:hover {
+
+            border-color: #f97316;
+
+            color: #fb923c;
+
+            transform: translateY(-2px);
+
+        }
+    </style>
+
+     <!-- JAVASCRIPT -->
+
+    <script>
+
+        // FORM
+
+        const academyForm =
+            document.getElementById(
+                "academyForm"
+            );
+
+
+        academyForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "name"
+                    ).value;
+
+
+                const message =
+                    document.getElementById(
+                        "formMessage"
+                    );
+
+
+                message.textContent =
+                    "✅ Rahmat, " +
+                    name +
+                    "! Forma muvaffaqiyatli yuborildi.";
+
+
+                message.className =
+                    "text-center font-semibold mt-6 text-green-400";
+
+
+                academyForm.reset();
+
+            }
+        );
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById(
+                    "answerResult"
+                );
+
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! Email uchun type=\"email\" ishlatiladi.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-red-400";
+
+            }
+
+        }
+
+        // COMPLETE LESSON
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "htmlCompletedLessons"
+                    )
+                ) || [];
+
+
+            // 19-darsni qo‘shamiz
+
+            if (!completedLessons.includes(19)) {
+
+                completedLessons.push(19);
+
+            }
+
+
+            // Saqlaymiz
+
+            localStorage.setItem(
+                "htmlCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "🎉 19-dars tugatildi! 20-dars ochildi 🔓";
+
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.innerHTML =
+                "✅ 19-dars tugatildi";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-orange-500",
+                "hover:bg-orange-600"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "html-course.html";
+
+                },
+                1500
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 55-dars | querySelectorAll</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        🔎 55-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        querySelectorAll
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugun JavaScript yordamida bir xil
+        selectorga ega bo‘lgan
+        <strong class="text-white">
+            barcha HTML elementlarni
+        </strong>
+        topishni o‘rganamiz.
+
+        <br><br>
+
+        <code>querySelectorAll()</code>
+        — DOM'dagi bir nechta element bilan
+        ishlash uchun juda muhim metod.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔎 querySelectorAll nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>querySelectorAll()</code>
+        CSS selector bo‘yicha mos keladigan
+        <strong class="text-white">
+            barcha elementlarni
+        </strong>
+        topadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.querySelectorAll(".text");</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Agar sahifada 5 ta
+        <code>.text</code> class mavjud bo‘lsa,
+        <code>querySelectorAll()</code>
+        shu 5 ta elementning barchasini oladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🆚 querySelector va querySelectorAll
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                querySelector()
+            </h3>
+
+            <p class="text-slate-400 mt-4 leading-7">
+
+                Birinchi mos keladigan
+                elementni oladi.
+
+            </p>
+
+            <div class="code-box">
+
+<pre><code>document.querySelector(
+    ".item"
+);</code></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                querySelectorAll()
+            </h3>
+
+            <p class="text-slate-400 mt-4 leading-7">
+
+                Barcha mos keladigan
+                elementlarni oladi.
+
+            </p>
+
+            <div class="code-box">
+
+<pre><code>document.querySelectorAll(
+    ".item"
+);</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Bir nechta element
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;p class="text"&gt;Birinchi&lt;/p&gt;
+
+&lt;p class="text"&gt;Ikkinchi&lt;/p&gt;
+
+&lt;p class="text"&gt;Uchinchi&lt;/p&gt;</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Endi JavaScript:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let texts =
+    document.querySelectorAll(".text");
+
+console.log(texts);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Natijada uchta
+        <code>.text</code> elementning
+        barchasi olinadi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 length bilan elementlar sonini bilish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>querySelectorAll()</code>
+        natijasida nechta element topilganini
+        <code>length</code> orqali bilish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let items =
+    document.querySelectorAll(".item");
+
+console.log(items.length);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Masalan, 5 ta element bo‘lsa:
+
+        <br><br>
+
+        <code>items.length</code>
+        → <strong class="text-white">5</strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Index orqali element olish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Elementlar index orqali ham
+        olinadi.
+
+        <br><br>
+
+        Index <strong class="text-white">0</strong>
+        dan boshlanadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let items =
+    document.querySelectorAll(".item");
+
+console.log(items[0]);
+
+console.log(items[1]);
+
+console.log(items[2]);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>items[0]</code>
+        → birinchi element
+
+        <br>
+
+        <code>items[1]</code>
+        → ikkinchi element
+
+        <br>
+
+        <code>items[2]</code>
+        → uchinchi element
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔁 for loop bilan ishlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Barcha elementlarni o‘zgartirish
+        uchun loop ishlatish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let items =
+    document.querySelectorAll(".item");
+
+for (let i = 0; i &lt; items.length; i++) {
+
+    items[i].style.color = "orange";
+
+}</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Loop barcha elementlarni
+        bittadan ko‘rib chiqadi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔁 forEach bilan ishlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>querySelectorAll()</code>
+        natijasi bilan
+        <code>forEach()</code> ham ishlatish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let items =
+    document.querySelectorAll(".item");
+
+items.forEach(function(item) {
+
+    item.style.color = "orange";
+
+});</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu usul bir nechta element bilan
+        ishlashda juda qulay.
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎨 Amaliy misol: barcha rangni o‘zgartirish
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10">
+
+        <p class="colorItem text-2xl font-bold mb-4">
+            Birinchi matn
+        </p>
+
+        <p class="colorItem text-2xl font-bold mb-4">
+            Ikkinchi matn
+        </p>
+
+        <p class="colorItem text-2xl font-bold">
+            Uchinchi matn
+        </p>
+
+
+        <button
+            onclick="changeAllColors()"
+            class="mt-8
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🎨 Barchasini o‘zgartirish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeAllColors() {
+
+    let items =
+        document.querySelectorAll(
+            ".colorItem"
+        );
+
+    items.forEach(function(item) {
+
+        item.style.color = "orange";
+
+    });
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✏️ Barcha matnlarni o‘zgartirish
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10">
+
+        <p class="changeItem text-xl mb-4">
+            Eski matn 1
+        </p>
+
+        <p class="changeItem text-xl mb-4">
+            Eski matn 2
+        </p>
+
+        <p class="changeItem text-xl">
+            Eski matn 3
+        </p>
+
+
+        <button
+            onclick="changeAllTexts()"
+            class="mt-8
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            ✏️ Matnlarni o‘zgartirish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeAllTexts() {
+
+    let items =
+        document.querySelectorAll(
+            ".changeItem"
+        );
+
+    items.forEach(function(item, index) {
+
+        item.textContent =
+            "Yangi matn " + (index + 1);
+
+    });
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Shopping Cart misoli
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10">
+
+        <div class="cartItem
+                    flex
+                    justify-between
+                    items-center
+                    bg-slate-900
+                    p-5
+                    rounded-2xl
+                    mb-4">
+
+            <span>
+                🍕 Pizza
+            </span>
+
+            <span class="price">
+                50 000 so‘m
+            </span>
+
+        </div>
+
+
+        <div class="cartItem
+                    flex
+                    justify-between
+                    items-center
+                    bg-slate-900
+                    p-5
+                    rounded-2xl
+                    mb-4">
+
+            <span>
+                🍔 Burger
+            </span>
+
+            <span class="price">
+                35 000 so‘m
+            </span>
+
+        </div>
+
+
+        <div class="cartItem
+                    flex
+                    justify-between
+                    items-center
+                    bg-slate-900
+                    p-5
+                    rounded-2xl">
+
+            <span>
+                🥤 Cola
+            </span>
+
+            <span class="price">
+                12 000 so‘m
+            </span>
+
+        </div>
+
+
+        <button
+            onclick="highlightCartItems()"
+            class="mt-8
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🛒 Mahsulotlarni ajratish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function highlightCartItems() {
+
+    let items =
+        document.querySelectorAll(
+            ".cartItem"
+        );
+
+    items.forEach(function(item) {
+
+        item.style.border =
+            "2px solid orange";
+
+    });
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Faqat kerakli elementlarni tanlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        CSS selectorlardan foydalangan holda
+        aniq elementlarni tanlash mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.querySelectorAll(
+    ".card"
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>document.querySelectorAll(
+    "p"
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>document.querySelectorAll(
+    "#products .card"
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🏷️ ID, class va tag bilan
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                ID
+            </h3>
+
+            <div class="code-box">
+
+<pre><code>#title</code></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                Class
+            </h3>
+
+            <div class="code-box">
+
+<pre><code>.title</code></pre>
+
+            </div>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <h3 class="text-xl font-bold text-yellow-400">
+                Tag
+            </h3>
+
+            <div class="code-box">
+
+<pre><code>p</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ❌ Element topilmasa
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar selector bo‘yicha hech qanday
+        element topilmasa, bo‘sh
+        <code>NodeList</code> qaytadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let items =
+    document.querySelectorAll(
+        ".notFound"
+    );
+
+console.log(items);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>querySelector()</code>
+        → <code>null</code>
+
+        <br><br>
+
+        <code>querySelectorAll()</code>
+        → bo‘sh <code>NodeList</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 NodeList nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>querySelectorAll()</code>
+        natijasi odatda
+        <code>NodeList</code> bo‘ladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let items =
+    document.querySelectorAll(".item");
+
+console.log(items);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        NodeList ichida topilgan
+        elementlar saqlanadi.
+
+        <br><br>
+
+        U bilan:
+
+        <br><br>
+
+        <code>length</code>
+
+        <br>
+
+        <code>index</code>
+
+        <br>
+
+        <code>forEach()</code>
+
+        <br><br>
+
+        kabi usullar orqali ishlash mumkin.
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 To‘liq amaliy misol
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;p class="item"&gt;HTML&lt;/p&gt;
+
+&lt;p class="item"&gt;CSS&lt;/p&gt;
+
+&lt;p class="item"&gt;JavaScript&lt;/p&gt;
+
+
+&lt;script&gt;
+
+let items =
+    document.querySelectorAll(".item");
+
+
+items.forEach(function(item) {
+
+    item.style.color = "orange";
+
+});
+
+
+&lt;/script&gt;</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Natijada uchala elementning
+        rangi o‘zgaradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🔎
+            </b>
+
+            <br>
+
+            5 ta <code>.item</code> class'li
+            element yarating va
+            <code>querySelectorAll()</code>
+            bilan barchasini toping.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 🔢
+            </b>
+
+            <br>
+
+            <code>length</code>
+            yordamida nechta element
+            borligini Console'ga chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🔁
+            </b>
+
+            <br>
+
+            <code>forEach()</code>
+            yordamida barcha elementlarning
+            rangini o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa ✏️
+            </b>
+
+            <br>
+
+            Barcha elementlarning
+            matnini JavaScript orqali
+            o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🎨
+            </b>
+
+            <br>
+
+            Barcha elementlarga
+            <code>fontSize</code> va
+            <code>color</code> bering.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🛒
+            </b>
+
+            <br>
+
+            3 ta mahsulot kartasi yarating.
+            <code>querySelectorAll()</code>
+            yordamida barcha kartalarni
+            tanlang.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🔥
+            </b>
+
+            <br>
+
+            5 ta mahsulot bo‘lsin.
+            Tugma bosilganda barcha
+            mahsulot kartalariga border
+            qo‘shilsin.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            🔎 <code>querySelectorAll()</code>
+            → barcha mos elementlarni topadi.
+        </p>
+
+
+        <p>
+            📦 Natija odatda
+            <code>NodeList</code> bo‘ladi.
+        </p>
+
+
+        <p>
+            🔢 <code>length</code>
+            → elementlar sonini beradi.
+        </p>
+
+
+        <p>
+            🎯 <code>[0]</code>,
+            <code>[1]</code>,
+            <code>[2]</code>
+            → index orqali element tanlanadi.
+        </p>
+
+
+        <p>
+            🔁 <code>for</code> va
+            <code>forEach()</code>
+            → barcha elementlar bilan ishlashga yordam beradi.
+        </p>
+
+
+        <p>
+            ❌ Hech narsa topilmasa
+            → bo‘sh <code>NodeList</code>.
+        </p>
+
+
+        <p>
+            ⭐ <code>querySelector()</code>
+            → birinchi element.
+        </p>
+
+
+        <p>
+            ⭐ <code>querySelectorAll()</code>
+            → barcha mos elementlar.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT -->
+
+<section class="lesson-box">
+
+    <div class="text-6xl mb-5">
+        ✏️
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        Keyingi dars
+
+    </h2>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-4
+              leading-8">
+
+        <strong class="text-yellow-400">
+            56-dars
+        </strong>
+        → <code>textContent</code> va
+        <code>innerHTML</code>
+
+        <br><br>
+
+        Keyingi darsda HTML elementining
+        ichidagi matn va HTML kodini
+        JavaScript orqali o‘zgartirishni
+        o‘rganamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        🔎
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        55-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 55-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   CHANGE ALL COLORS
+===================================== */
+
+function changeAllColors() {
+
+    let items =
+        document.querySelectorAll(
+            ".colorItem"
+        );
+
+
+    items.forEach(function(item) {
+
+        item.style.color = "orange";
+
+    });
+
+}
+
+
+
+/* =====================================
+   CHANGE ALL TEXTS
+===================================== */
+
+function changeAllTexts() {
+
+    let items =
+        document.querySelectorAll(
+            ".changeItem"
+        );
+
+
+    items.forEach(function(item, index) {
+
+        item.textContent =
+            "Yangi matn " + (index + 1);
+
+    });
+
+}
+
+
+
+/* =====================================
+   SHOPPING CART ITEMS
+===================================== */
+
+function highlightCartItems() {
+
+    let items =
+        document.querySelectorAll(
+            ".cartItem"
+        );
+
+
+    items.forEach(function(item) {
+
+        item.style.border =
+            "2px solid orange";
+
+    });
+
+}
+
+
+
+/* =====================================
+   LESSON COMPLETE
+===================================== */
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        54-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(54)) {
+
+        alert(
+            "Avval 54-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-54.html";
+
+        return;
+
+    }
+
+
+    /*
+        55-darsni saqlash
+    */
+
+    if (!completedLessons.includes(55)) {
+
+        completedLessons.push(55);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.querySelector(
+        "#message"
+    ).textContent =
+        "🎉 55-dars tugatildi! 56-dars ochildi.";
+
+
+    const button =
+        document.querySelector(
+            "#completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 55-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

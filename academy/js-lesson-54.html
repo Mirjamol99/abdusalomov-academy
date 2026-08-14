@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 54-dars | querySelector</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        🔍 54-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        querySelector
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugun JavaScript yordamida HTML
+        elementlarini CSS selectorlar orqali
+        topishni o‘rganamiz.
+
+        <br><br>
+
+        <code>querySelector()</code> —
+        DOM bilan ishlashdagi eng kerakli
+        metodlardan biri.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 querySelector nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>querySelector()</code>
+        CSS selector yordamida HTML ichidan
+        birinchi mos keladigan elementni topadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.querySelector("h1");</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>querySelector()</code>
+        ichiga CSS selector yoziladi.
+
+        <br><br>
+
+        Masalan:
+
+        <br>
+
+        <code>h1</code>
+
+        <br>
+
+        <code>.title</code>
+
+        <br>
+
+        <code>#title</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🆚 getElementById va querySelector
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Oldingi darsda
+        <code>getElementById()</code>
+        bilan ishlagan edik.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.getElementById("title");</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Xuddi shu elementni
+        <code>querySelector()</code>
+        bilan ham topish mumkin:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.querySelector("#title");</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ⚠️ <code>querySelector()</code> da
+        <code>id</code> uchun
+        <code>#</code> belgisi yoziladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🏷️ ID selector
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar HTML elementida
+        <code>id</code> bo‘lsa,
+        <code>#</code> bilan tanlaymiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;h1 id="title"&gt;
+    Salom JavaScript
+&lt;/h1&gt;</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.querySelector("#title");
+
+console.log(title);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔵 Class selector
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar elementda
+        <code>class</code> bo‘lsa,
+        <code>.</code> belgisi ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;p class="text"&gt;
+    Salom
+&lt;/p&gt;</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let text =
+    document.querySelector(".text");
+
+console.log(text);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🏷️ Tag selector
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        HTML tegini to‘g‘ridan-to‘g‘ri
+        yozish ham mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.querySelector("h1");
+
+console.log(title);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Bu sahifadagi birinchi
+        <code>h1</code> elementni topadi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✏️ Matnni o‘zgartirish
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <h2 id="demoTitle"
+            class="text-3xl
+                   font-extrabold
+                   text-yellow-400">
+
+            Eski matn
+
+        </h2>
+
+
+        <button
+            onclick="changeText()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            ✏️ O‘zgartirish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeText() {
+
+    let title =
+        document.querySelector("#demoTitle");
+
+    title.textContent =
+        "Yangi matn! 🎉";
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎨 CSS style o‘zgartirish
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <p id="styleText"
+           class="text-2xl font-bold">
+
+            Mening stilim o‘zgaradi
+
+        </p>
+
+
+        <button
+            onclick="changeStyle()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🎨 Style o‘zgartirish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeStyle() {
+
+    let text =
+        document.querySelector("#styleText");
+
+    text.style.color = "orange";
+
+    text.style.fontSize = "40px";
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Class orqali element tanlash
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <p class="lessonText
+                  text-2xl
+                  font-bold">
+
+            Class orqali topilgan element
+
+        </p>
+
+
+        <button
+            onclick="changeClassText()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🔍 Elementni topish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeClassText() {
+
+    let text =
+        document.querySelector(".lessonText");
+
+    text.textContent =
+        "Element topildi! ✅";
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 Murakkab selector
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        CSS selectorlar bir nechta
+        qismdan iborat bo‘lishi mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.querySelector(
+    "div .title"
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Bu <code>div</code> ichidagi
+        <code>title</code> class'li elementni
+        qidiradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🖱️ Button selector
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Tugmani ham selector orqali topish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let button =
+    document.querySelector("button");
+
+console.log(button);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ⚠️ Agar sahifada bir nechta
+        <code>button</code> bo‘lsa,
+        <code>querySelector()</code>
+        faqat birinchi mos kelgan
+        tugmani qaytaradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Birinchi elementni oladi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;p class="text"&gt;1-element&lt;/p&gt;
+
+&lt;p class="text"&gt;2-element&lt;/p&gt;
+
+&lt;p class="text"&gt;3-element&lt;/p&gt;</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let text =
+    document.querySelector(".text");
+
+console.log(text);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Natijada faqat
+        <strong class="text-white">
+            birinchi
+        </strong>
+        <code>.text</code> elementi olinadi.
+
+        <br><br>
+
+        Barcha elementlarni olishni esa
+        keyingi darsda o‘rganamiz.
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ❌ Element topilmasa
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar selector bo‘yicha element
+        topilmasa, <code>null</code>
+        qaytadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let element =
+    document.querySelector(
+        ".notFound"
+    );
+
+console.log(element);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>null</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Shopping Cart misoli
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <p class="text-slate-400">
+            🛒 Savatdagi mahsulotlar
+        </p>
+
+
+        <div class="cartNumber
+                    text-6xl
+                    font-extrabold
+                    text-yellow-400
+                    mt-4">
+
+            0
+
+        </div>
+
+
+        <button
+            onclick="addCart()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🛒 Savatga qo‘shish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let cart = 0;
+
+function addCart() {
+
+    cart++;
+
+    document.querySelector(
+        ".cartNumber"
+    ).textContent = cart;
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 CSS selectorlarni eslab qoling
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+
+        <div class="method-card">
+
+            <code>#title</code>
+
+            <p class="text-slate-400 mt-3">
+                ID selector
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>.title</code>
+
+            <p class="text-slate-400 mt-3">
+                Class selector
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code>h1</code>
+
+            <p class="text-slate-400 mt-3">
+                Tag selector
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📌 querySelector sintaksisi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>document.querySelector("selector");</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <strong class="text-white">
+            Misollar:
+        </strong>
+
+        <br><br>
+
+        <code>
+            document.querySelector("#title");
+        </code>
+
+        <br><br>
+
+        <code>
+            document.querySelector(".text");
+        </code>
+
+        <br><br>
+
+        <code>
+            document.querySelector("h1");
+        </code>
+
+        <br><br>
+
+        <code>
+            document.querySelector("button");
+        </code>
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🔍
+            </b>
+
+            <br>
+
+            <code>id="title"</code>
+            bo‘lgan <code>h1</code> yarating
+            va uni <code>querySelector()</code>
+            bilan toping.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 🏷️
+            </b>
+
+            <br>
+
+            <code>class="text"</code>
+            bo‘lgan <code>p</code> yarating
+            va uni selector orqali toping.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa ✏️
+            </b>
+
+            <br>
+
+            <code>querySelector()</code>
+            yordamida <code>h1</code>
+            matnini o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 🎨
+            </b>
+
+            <br>
+
+            Tugma bosilganda
+            <code>.text</code> elementining
+            rangini o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🔢
+            </b>
+
+            <br>
+
+            <code>.counter</code>
+            class'li element yarating.
+            Tugma bosilganda sonni
+            bittaga oshiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🛒
+            </b>
+
+            <br>
+
+            Savatga mahsulot qo‘shadigan
+            counter yarating va uni
+            <code>querySelector()</code>
+            yordamida boshqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🔥
+            </b>
+
+            <br>
+
+            Quyidagi selectorlarning
+            har biridan foydalanib ko‘ring:
+
+            <br><br>
+
+            <code>#title</code>
+
+            <br>
+
+            <code>.text</code>
+
+            <br>
+
+            <code>button</code>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            🔍 <code>querySelector()</code>
+            → CSS selector orqali element topadi.
+        </p>
+
+
+        <p>
+            🏷️ <code>#title</code>
+            → ID selector.
+        </p>
+
+
+        <p>
+            🔵 <code>.title</code>
+            → class selector.
+        </p>
+
+
+        <p>
+            📄 <code>h1</code>
+            → tag selector.
+        </p>
+
+
+        <p>
+            🎯 <code>querySelector()</code>
+            → faqat birinchi mos elementni qaytaradi.
+        </p>
+
+
+        <p>
+            ❌ Element topilmasa
+            → <code>null</code>.
+        </p>
+
+
+        <p>
+            ✏️ Topilgan elementning
+            <code>textContent</code>,
+            <code>style</code> va boshqa
+            xususiyatlarini o‘zgartirish mumkin.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT -->
+
+<section class="lesson-box">
+
+    <div class="text-6xl mb-5">
+        🔎
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        Keyingi dars
+
+    </h2>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-4
+              leading-8">
+
+        <strong class="text-yellow-400">
+            55-dars
+        </strong>
+        → <code>querySelectorAll()</code>
+
+        <br><br>
+
+        Keyingi darsda bir xil selector
+        bo‘yicha <strong class="text-white">
+        barcha elementlarni
+        </strong> qanday tanlashni o‘rganamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        🔍
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        54-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 54-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   CHANGE TEXT
+===================================== */
+
+function changeText() {
+
+    let title =
+        document.querySelector(
+            "#demoTitle"
+        );
+
+
+    title.textContent =
+        "Yangi matn! 🎉";
+
+}
+
+
+
+/* =====================================
+   CHANGE STYLE
+===================================== */
+
+function changeStyle() {
+
+    let text =
+        document.querySelector(
+            "#styleText"
+        );
+
+
+    text.style.color = "orange";
+
+    text.style.fontSize = "40px";
+
+}
+
+
+
+/* =====================================
+   CLASS SELECTOR
+===================================== */
+
+function changeClassText() {
+
+    let text =
+        document.querySelector(
+            ".lessonText"
+        );
+
+
+    text.textContent =
+        "Element topildi! ✅";
+
+}
+
+
+
+/* =====================================
+   SHOPPING CART
+===================================== */
+
+let cart = 0;
+
+
+function addCart() {
+
+    cart++;
+
+
+    document.querySelector(
+        ".cartNumber"
+    ).textContent = cart;
+
+}
+
+
+
+/* =====================================
+   LESSON COMPLETE
+===================================== */
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        53-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(53)) {
+
+        alert(
+            "Avval 53-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-53.html";
+
+        return;
+
+    }
+
+
+    /*
+        54-darsni saqlash
+    */
+
+    if (!completedLessons.includes(54)) {
+
+        completedLessons.push(54);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.querySelector(
+        "#message"
+    ).textContent =
+        "🎉 54-dars tugatildi! 55-dars ochildi.";
+
+
+    const button =
+        document.querySelector(
+            "#completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 54-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

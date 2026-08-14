@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 6-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🧮 6-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Number va matematik amallar
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugun JavaScript'da sonlar bilan
+            ishlashni va asosiy matematik
+            amallarni bajarishni o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Number nima? 🔢
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript'da sonlar
+            <code>Number</code> ma'lumot turiga
+            kiradi.
+
+            <br><br>
+
+            Butun sonlar va kasr sonlar bilan
+            ishlashimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 15;
+
+let score = 95;
+
+let price = 19.99;
+
+console.log(age);
+console.log(score);
+console.log(price);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qo‘shish +
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ikki yoki undan ortiq sonni
+            qo‘shish uchun <code>+</code>
+            operatoridan foydalanamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let a = 10;
+let b = 5;
+
+console.log(a + b);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>15</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ayirish -
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bir sondan ikkinchi sonni ayirish
+            uchun <code>-</code> operatori
+            ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let a = 20;
+let b = 7;
+
+console.log(a - b);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>13</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ko‘paytirish *
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ko‘paytirish uchun
+            <code>*</code> belgisi ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let a = 6;
+let b = 4;
+
+console.log(a * b);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>24</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bo‘lish /
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bo‘lish uchun
+            <code>/</code> operatoridan
+            foydalanamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let a = 20;
+let b = 5;
+
+console.log(a / b);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>4</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qoldiq olish %
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>%</code> operatori bo‘lishdan
+            qolgan qoldiqni beradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 % 3);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            10 ni 3 ga bo‘lsak, qoldiq 1 bo‘ladi.
+        </p>
+
+        <div class="code-box">
+
+<pre><code>1</code></pre>
+
+        </div>
+
+        <div class="mt-6 p-5 rounded-xl
+                    bg-yellow-400/10
+                    border border-yellow-400/20">
+
+            <p class="text-slate-300">
+
+                📌 `%` — foiz emas.
+                JavaScript'da bu operator
+                <b class="text-white">qoldiq</b>
+                olish uchun ishlatiladi.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Darajaga ko‘tarish **
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>**</code> operatori sonni
+            darajaga ko‘tarish uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(2 ** 3);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu:
+
+            <br><br>
+
+            <code>2 × 2 × 2 = 8</code>
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>8</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qavslar va amallar tartibi
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Matematikadagi kabi JavaScript'da
+            ham qavs ichidagi amal birinchi
+            bajariladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 + 5 * 2);
+
+console.log((10 + 5) * 2);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Birinchi misolda avval
+            ko‘paytirish bajariladi:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>20</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Ikkinchi misolda qavs birinchi:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>30</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Manfiy sonlar
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript manfiy sonlar bilan ham
+            ishlay oladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let temperature = -5;
+
+console.log(temperature);
+
+console.log(-10 + 4);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Kasr sonlar
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Kasr sonlar nuqta orqali yoziladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let price = 19.99;
+
+let height = 1.75;
+
+console.log(price);
+console.log(height);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Matematik amallarni aralashtirish 🧮
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let a = 10;
+let b = 5;
+let c = 2;
+
+let result = a + b * c;
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Avval <code>5 * 2</code> bajariladi:
+
+            <br><br>
+
+            <code>10 + 10 = 20</code>
+
+        </p>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Math obyektiga kirish 📐
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript'da matematik hisob-kitoblar
+            uchun <code>Math</code> obyektidan
+            ham foydalanish mumkin.
+
+            <br><br>
+
+            Hozircha ikkita foydali metod bilan
+            tanishamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(Math.round(4.6));
+
+console.log(Math.floor(4.9));</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            <code>Math.round()</code> — sonni
+            eng yaqin butun songa yaxlitlaydi.
+
+            <br><br>
+
+            <code>Math.floor()</code> — sonni
+            pastki butun songa tushiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy misol 💻
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let price = 50000;
+let quantity = 3;
+
+let total = price * quantity;
+
+console.log("Jami:", total);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Natija:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>Jami: 150000</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Yana bir amaliy misol 💰
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Faraz qilamiz, mahsulot narxi
+            20 000 so‘m va 4 ta mahsulot
+            sotib olindi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let price = 20000;
+let quantity = 4;
+
+let total = price * quantity;
+
+console.log(total);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Natija:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>80000</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Muhim operatorlar 📚
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Operator
+                        </th>
+
+                        <th class="p-4">
+                            Amal
+                        </th>
+
+                        <th class="p-4">
+                            Misol
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+                        <td class="p-4 text-yellow-400">
+                            +
+                        </td>
+                        <td class="p-4">
+                            Qo‘shish
+                        </td>
+                        <td class="p-4">
+                            <code>10 + 5</code>
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+                        <td class="p-4 text-yellow-400">
+                            -
+                        </td>
+                        <td class="p-4">
+                            Ayirish
+                        </td>
+                        <td class="p-4">
+                            <code>10 - 5</code>
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+                        <td class="p-4 text-yellow-400">
+                            *
+                        </td>
+                        <td class="p-4">
+                            Ko‘paytirish
+                        </td>
+                        <td class="p-4">
+                            <code>10 * 5</code>
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+                        <td class="p-4 text-yellow-400">
+                            /
+                        </td>
+                        <td class="p-4">
+                            Bo‘lish
+                        </td>
+                        <td class="p-4">
+                            <code>10 / 5</code>
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+                        <td class="p-4 text-yellow-400">
+                            %
+                        </td>
+                        <td class="p-4">
+                            Qoldiq
+                        </td>
+                        <td class="p-4">
+                            <code>10 % 3</code>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-4 text-yellow-400">
+                            **
+                        </td>
+                        <td class="p-4">
+                            Daraja
+                        </td>
+                        <td class="p-4">
+                            <code>2 ** 3</code>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarni yozib,
+            natijalarini Console'da tekshiring:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(25 + 15);
+
+console.log(50 - 17);
+
+console.log(8 * 7);
+
+console.log(100 / 4);
+
+console.log(17 % 5);
+
+console.log(3 ** 3);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ <code>price = 15000</code> va
+            <code>quantity = 5</code> yarating.
+            Jami narxni hisoblang.
+
+            <br><br>
+
+            2️⃣ <code>1000</code> ni
+            <code>7</code> ga bo‘lgandagi
+            qoldiqni toping.
+
+            <br><br>
+
+            3️⃣ <code>5</code> ning
+            <code>3</code>-darajasini toping.
+
+            <br><br>
+
+            4️⃣ Quyidagini hisoblang:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>(20 + 10) * 2 - 5</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            5️⃣ Barcha javoblarni
+            <code>console.log()</code>
+            orqali chiqaring.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔢 <code>Number</code> —
+                sonlar bilan ishlash uchun.
+            </p>
+
+            <p>
+                ➕ <code>+</code> —
+                qo‘shish.
+            </p>
+
+            <p>
+                ➖ <code>-</code> —
+                ayirish.
+            </p>
+
+            <p>
+                ✖️ <code>*</code> —
+                ko‘paytirish.
+            </p>
+
+            <p>
+                ➗ <code>/</code> —
+                bo‘lish.
+            </p>
+
+            <p>
+                ♻️ <code>%</code> —
+                qoldiq.
+            </p>
+
+            <p>
+                🔥 <code>**</code> —
+                darajaga ko‘tarish.
+            </p>
+
+            <p>
+                📐 <code>Math</code> —
+                matematik yordamchi obyekt.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🧮
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            6-darsni tugatdingizmi?
+
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 6-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    // 5-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(5)) {
+
+        alert(
+            "Avval 5-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-5.html";
+
+        return;
+
+    }
+
+
+    // 6-darsni saqlash
+
+    if (!completedLessons.includes(6)) {
+
+        completedLessons.push(6);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 6-dars tugatildi! 7-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 6-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

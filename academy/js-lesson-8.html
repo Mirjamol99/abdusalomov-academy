@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 8-dars | Template Literals</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400 hover:text-yellow-400 transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            📝 08-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Template Literals
+
+        </h1>
+
+        <p class="text-slate-400 text-lg mt-5 leading-8">
+
+            Template Literals JavaScript'da
+            matnlar bilan ishlashni ancha
+            qulaylashtiradi.
+
+            Bu darsda backtick, <code>${}</code>,
+            bir nechta qatorli matn va
+            expression'larni o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Template Literal nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Template Literal — JavaScript'da
+            String yozishning qulay usullaridan biri.
+
+            <br><br>
+
+            Oddiy String'da:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "Mirjamol";
+
+console.log("Salom " + name);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-6">
+
+            Template Literal yordamida esa
+            kod ancha tushunarli bo‘ladi:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "Mirjamol";
+
+console.log(`Salom ${name}`);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Backtick ` ` belgisi
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Template Literal oddiy
+            <code>" "</code> yoki
+            <code>' '</code> bilan emas,
+            <b class="text-white">backtick</b>
+            belgisi bilan yoziladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let text = `Salom, JavaScript!`;
+
+console.log(text);</code></pre>
+
+        </div>
+
+        <div class="mt-6 p-5 rounded-xl
+                    bg-yellow-400/10
+                    border border-yellow-400/20">
+
+            <p class="text-slate-300">
+
+                📌 Backtick belgisi:
+                <code>`</code>
+
+                <br><br>
+
+                Ko‘pincha klaviaturada
+                <b class="text-white">Esc</b>
+                tugmasi ostida joylashadi.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ${} nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Template Literal ichida
+            o‘zgaruvchini chiqarish uchun:
+
+            <br><br>
+
+            <code>${o'zgaruvchi}</code>
+
+            <br><br>
+
+            ko‘rinishidan foydalanamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "Ali";
+let age = 16;
+
+console.log(`Ism: ${name}`);
+console.log(`Yosh: ${age}`);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ism: Ali
+Yosh: 16</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta o‘zgaruvchi 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bitta Template Literal ichida
+            bir nechta o‘zgaruvchidan
+            foydalanish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let firstName = "Mirjamol";
+let lastName = "Abdusalomov";
+let age = 15;
+
+console.log(
+    `Mening ismim ${firstName} ${lastName}.
+Men ${age} yoshdaman.`
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String va Number bilan ishlash
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Template Literal ichida
+            String, Number va boshqa qiymatlarni
+            birga ishlatish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let product = "Telefon";
+let price = 2500000;
+let quantity = 2;
+
+console.log(
+    `Mahsulot: ${product}
+Narxi: ${price} so'm
+Soni: ${quantity} ta`
+);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Expression ishlatish 🧮
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>${}</code> ichida faqat
+            o‘zgaruvchi emas, matematik
+            expression ham yozish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let a = 10;
+let b = 5;
+
+console.log(`Natija: ${a + b}`);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Natija:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>Natija: 15</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ko‘paytirish bilan
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let price = 20000;
+let quantity = 3;
+
+console.log(
+    `Jami narx: ${price * quantity} so'm`
+);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Jami narx: 60000 so'm</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Funksiya natijasini chiqarish
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Template Literal ichida funksiya
+            chaqirish ham mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>function getName() {
+    return "Mirjamol";
+}
+
+console.log(`Salom, ${getName()}!`);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom, Mirjamol!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta qatorli String
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Template Literal'ning katta
+            afzalliklaridan biri — bir nechta
+            qatorli matn yozish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let text = `
+Salom!
+
+Men JavaScript
+o‘rganayapman.
+
+Abdusalomov Academy
+`;
+
+console.log(text);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            HTML bilan ishlash 🌐
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Template Literal yordamida HTML
+            kodlarini JavaScript ichida
+            yaratish ham mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "Mirjamol";
+let age = 15;
+
+let card = `
+    &lt;div&gt;
+        &lt;h2&gt;${name}&lt;/h2&gt;
+        &lt;p&gt;Yosh: ${age}&lt;/p&gt;
+    &lt;/div&gt;
+`;
+
+console.log(card);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oddiy String va Template Literal
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Oddiy String
+                        </th>
+
+                        <th class="p-4">
+                            Template Literal
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            <code>"Salom"</code>
+                        </td>
+
+                        <td class="p-4">
+                            <code>`Salom`</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4">
+                            <code>"Salom " + name</code>
+                        </td>
+
+                        <td class="p-4">
+                            <code>`Salom ${name}`</code>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4">
+                            Ko‘p qator uchun noqulay
+                        </td>
+
+                        <td class="p-4">
+                            Ko‘p qatorni oson yozish mumkin
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchi haqida kichik
+            ma'lumot tayyorlaymiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let firstName = "Mirjamol";
+let lastName = "Abdusalomov";
+let age = 15;
+let profession = "Front-End Developer";
+
+let info = `
+👤 Ism: ${firstName} ${lastName}
+🎂 Yosh: ${age}
+💻 Kasb: ${profession}
+`;
+
+console.log(info);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi ma'lumotlardan foydalanib
+            Template Literal yarating:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let name = "Ali";
+let age = 17;
+let city = "Toshkent";
+let course = "JavaScript";</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Console'da quyidagiga o‘xshash
+            ma'lumot chiqaring:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>Ism: Ali
+Yosh: 17
+Shahar: Toshkent
+Kurs: JavaScript</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ <code>firstName</code>,
+            <code>lastName</code>,
+            <code>age</code> va
+            <code>city</code> o‘zgaruvchilarini
+            yarating.
+
+            <br><br>
+
+            2️⃣ Template Literal yordamida
+            barcha ma'lumotlarni bitta
+            <code>console.log()</code> ichida
+            chiqaring.
+
+            <br><br>
+
+            3️⃣ Ikki son yarating va
+            <code>${}</code> ichida ularning
+            yig‘indisini hisoblang.
+
+            <br><br>
+
+            4️⃣ Mahsulot nomi, narxi va sonini
+            yozib, jami narxni Template Literal
+            orqali chiqaring.
+
+            <br><br>
+
+            5️⃣ Kamida 3 qatorli Template Literal
+            yarating.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                📝 Template Literal
+                <code>` `</code> bilan yoziladi.
+            </p>
+
+            <p>
+                🔥 O‘zgaruvchi qo‘shish:
+                <code>${variable}</code>
+            </p>
+
+            <p>
+                🧮 <code>${}</code> ichida
+                expression yozish mumkin.
+            </p>
+
+            <p>
+                📄 Bir nechta qatorli matn
+                yozish mumkin.
+            </p>
+
+            <p>
+                🌐 HTML kodlarini ham
+                Template Literal yordamida
+                yaratish mumkin.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            📝
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            8-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 8-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 7-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(7)) {
+
+        alert("Avval 7-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-7.html";
+
+        return;
+    }
+
+
+    // 8-darsni saqlash
+
+    if (!completedLessons.includes(8)) {
+
+        completedLessons.push(8);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 8-dars tugatildi! 9-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 8-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 2-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="border-b border-slate-800
+               bg-slate-950/90
+               backdrop-blur-xl">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex justify-between items-center">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ⚡ 2-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            JavaScriptni HTMLga ulash
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugun JavaScript kodini HTML
+            sahifamizga qanday ulashni
+            o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            JavaScript nima uchun HTMLga ulanadi? 🤔
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            HTML saytning tuzilishini yaratadi.
+
+            <br><br>
+
+            CSS saytning ko‘rinishini yaratadi.
+
+            <br><br>
+
+            JavaScript esa saytga
+            <b class="text-white">
+                harakat va interaktivlik
+            </b>
+            beradi.
+
+            <br><br>
+
+            Shuning uchun JavaScript
+            HTML sahifaga ulanishi kerak.
+
+        </p>
+
+
+        <div class="mt-6
+                    p-5
+                    rounded-xl
+                    bg-yellow-400/10
+                    border border-yellow-400/20">
+
+            <p class="text-slate-300">
+
+                HTML + CSS + JavaScript
+
+                <br><br>
+
+                🧱 HTML → Tuzilish
+
+                <br>
+
+                🎨 CSS → Dizayn
+
+                <br>
+
+                ⚡ JavaScript → Harakat
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            1-usul: Inline JavaScript
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript kodini to‘g‘ridan-to‘g‘ri
+            HTML elementining ichiga yozishimiz
+            mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;button onclick="alert('Salom!')"&gt;
+    Bosish
+&lt;/button&gt;</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Tugmani bosganimizda
+            JavaScript ishlaydi.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            2-usul: &lt;script&gt; tegi
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript kodini
+            <code>&lt;script&gt;</code>
+            tegi ichida yozishimiz mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Salom JavaScript&lt;/h1&gt;
+
+    &lt;script&gt;
+
+        alert("Salom!");
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6
+                    p-5
+                    rounded-xl
+                    bg-green-400/10
+                    border border-green-400/20">
+
+            <p class="text-slate-300">
+
+                ✅ Brauzer sahifani ochganda
+                JavaScript kodi ishlaydi.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            3-usul: Tashqi JavaScript fayli ⭐
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Eng yaxshi usullardan biri —
+            JavaScript kodini alohida
+            <code>.js</code> faylga yozish.
+
+        </p>
+
+
+        <p class="text-slate-400 mt-5">
+
+            Masalan:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>index.html
+
+script.js</code></pre>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HTML -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            HTML fayl
+
+        </h2>
+
+
+        <p class="text-slate-400">
+
+            <code>index.html</code> ichida:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="uz"&gt;
+
+&lt;head&gt;
+
+    &lt;title&gt;Mening saytim&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Salom!&lt;/h1&gt;
+
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- JS -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            JavaScript fayl
+
+        </h2>
+
+
+        <p class="text-slate-400">
+
+            <code>script.js</code> ichida:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>alert("JavaScript ishladi!");</code></pre>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SRC -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            src nima?
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>src</code> — JavaScript faylining
+            manzilini ko‘rsatadi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6
+                    p-5
+                    rounded-xl
+                    bg-yellow-400/10
+                    border border-yellow-400/20">
+
+            <p class="text-slate-300">
+
+                📌 Agar fayl HTML bilan bir xil
+                papkada bo‘lsa:
+
+                <br><br>
+
+                <code>src="script.js"</code>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOLDER -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            Papka ichidagi JS fayl
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Agar JavaScript fayli alohida
+            papkada bo‘lsa, uning yo‘lini
+            ko‘rsatamiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>project/
+
+    index.html
+
+    js/
+
+        script.js</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            HTML'da:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;script src="js/script.js"&gt;&lt;/script&gt;</code></pre>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SCRIPT JOYLASHUVI -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            &lt;script&gt; qayerga yoziladi?
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Odatda tashqi JavaScript faylini
+            <code>&lt;/body&gt;</code> dan oldin
+            ulash juda qulay.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;body&gt;
+
+    &lt;h1&gt;Salom&lt;/h1&gt;
+
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;</code></pre>
+
+        </div>
+
+
+        <div class="mt-6
+                    p-5
+                    rounded-xl
+                    bg-green-400/10
+                    border border-green-400/20">
+
+            <p class="text-slate-300">
+
+                ✅ HTML elementlari yuklangandan
+                keyin JavaScript ishlashi
+                qulay bo‘ladi.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- AMALIY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            Amaliy loyiha 💻
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            2 ta fayl yarating:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>index.html
+script.js</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-6">
+
+            <b class="text-white">
+                index.html
+            </b>
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;h1&gt;Mening birinchi JavaScript saytim&lt;/h1&gt;
+
+&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-6">
+
+            <b class="text-white">
+                script.js
+            </b>
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>console.log("JavaScript muvaffaqiyatli ulandi!");</code></pre>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MUHIM -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            Muhim eslab qoling 📚
+
+        </h2>
+
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔹 <code>&lt;script&gt;</code>
+                JavaScript yozish uchun ishlatiladi.
+            </p>
+
+            <p>
+                🔹 <code>src</code> tashqi JS
+                faylining manzilini bildiradi.
+            </p>
+
+            <p>
+                🔹 <code>.js</code> — JavaScript
+                faylining kengaytmasi.
+            </p>
+
+            <p>
+                🔹 Tashqi JS faylni
+                <code>script.js</code> kabi
+                ulash mumkin.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+
+            Uyga vazifa 📝
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ <code>index.html</code>
+            fayl yarating.
+
+            <br><br>
+
+            2️⃣ <code>script.js</code>
+            fayl yarating.
+
+            <br><br>
+
+            3️⃣ JavaScript faylini
+            HTML'ga ulang.
+
+            <br><br>
+
+            4️⃣ JavaScript'da:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>console.log("Salom, JavaScript!");</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            yozing va Console'da natijani
+            ko‘ring.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ⚡
+        </div>
+
+
+        <h2 class="text-3xl
+                   md:text-4xl
+                   font-extrabold">
+
+            2-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 2-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8
+               text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    if (!completedLessons.includes(1)) {
+
+        alert(
+            "Avval 1-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-1.html";
+
+        return;
+
+    }
+
+
+    if (!completedLessons.includes(2)) {
+
+        completedLessons.push(2);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 2-dars tugatildi! 3-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 2-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

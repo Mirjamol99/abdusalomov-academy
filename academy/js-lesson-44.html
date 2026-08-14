@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 44-dars | reverse()</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        🔄 44-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        reverse()
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript Array'laridagi
+        <code>reverse()</code> metodini o‘rganamiz.
+
+        <br><br>
+
+        <code>reverse()</code> Array ichidagi
+        elementlarning tartibini teskari
+        o‘zgartiradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 reverse() nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>reverse()</code> Array elementlarini
+        oxiridan boshiga qarab joylashtiradi.
+
+        <br><br>
+
+        Masalan:
+
+        <br><br>
+
+        <code>[1, 2, 3, 4, 5]</code>
+
+        →
+
+        <code>[5, 4, 3, 2, 1]</code>
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5
+];
+
+numbers.reverse();
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    5,
+    4,
+    3,
+    2,
+    1
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 reverse() qanday ishlaydi?
+
+    </h2>
+
+
+    <div class="method-card">
+
+        <p class="text-yellow-400 text-xl">
+            [10, 20, 30, 40]
+        </p>
+
+        <p class="text-4xl text-center my-5">
+            ↓
+        </p>
+
+        <p class="text-slate-400">
+            reverse()
+        </p>
+
+        <p class="text-4xl text-center my-5">
+            ↓
+        </p>
+
+        <p class="text-green-400 text-2xl font-bold">
+            [40, 30, 20, 10]
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Sonlar bilan reverse()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40
+];
+
+numbers.reverse();
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    40,
+    30,
+    20,
+    10
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔤 Stringlar bilan reverse()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let names = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Zafar"
+];
+
+names.reverse();
+
+console.log(names);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Zafar",
+    "Hasan",
+    "Vali",
+    "Ali"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ reverse() original Array'ni o‘zgartiradi
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Muhim!
+
+        <br><br>
+
+        <code>reverse()</code> yangi Array
+        yaratmaydi.
+
+        <br><br>
+
+        U original Array'ning o‘zini
+        o‘zgartiradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3
+];
+
+numbers.reverse();
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    3,
+    2,
+    1
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛡️ Original Array'ni saqlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar original Array o‘zgarmasligini
+        xohlasak, avval nusxa olishimiz mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4
+];
+
+let reversedNumbers =
+    [...numbers].reverse();
+
+console.log(numbers);
+
+console.log(reversedNumbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>numbers:
+[1, 2, 3, 4]
+
+reversedNumbers:
+[4, 3, 2, 1]</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>[...numbers]</code>
+        → Array'ning nusxasini yaratadi.
+
+        <br><br>
+
+        Keyin <code>reverse()</code> shu
+        nusxani o‘zgartiradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔗 slice() + reverse()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Array'ni nusxalashning yana bir usuli
+        <code>slice()</code> metodidir.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5
+];
+
+let reversed =
+    numbers.slice().reverse();
+
+console.log(reversed);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    5,
+    4,
+    3,
+    2,
+    1
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📊 sort() + reverse()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>sort()</code> va
+        <code>reverse()</code> birgalikda
+        juda foydali bo‘lishi mumkin.
+
+        <br><br>
+
+        Masalan, sonlarni kattadan kichikka
+        tartiblash.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    50,
+    20,
+    40,
+    30
+];
+
+numbers.sort(
+    (a, b) => a - b
+);
+
+numbers.reverse();
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    50,
+    40,
+    30,
+    20,
+    10
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ sort((a,b) => b-a) bilan
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Yuqoridagi ishni bitta
+        <code>sort()</code> bilan ham
+        bajarish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    50,
+    20,
+    40,
+    30
+];
+
+numbers.sort(
+    (a, b) => b - a
+);
+
+console.log(numbers);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    50,
+    40,
+    30,
+    20,
+    10
+]</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        🧠
+
+        <br><br>
+
+        <code>sort((a,b) => b-a)</code>
+        → sonlarni kattadan kichikka
+        tartiblaydi.
+
+        <br><br>
+
+        <code>sort() + reverse()</code>
+        → avval kichikdan kattaga,
+        keyin teskari qiladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🪄 reverse() va string
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>reverse()</code> to‘g‘ridan-to‘g‘ri
+        String'da ishlamaydi.
+
+        <br><br>
+
+        Chunki <code>reverse()</code> Array
+        metodi hisoblanadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let word = "JavaScript";
+
+let result =
+    word.split("")
+         .reverse()
+         .join("");
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>tpircSavaJ</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu yerda:
+
+        <br><br>
+
+        <code>split("")</code>
+        → String'ni Array'ga aylantiradi.
+
+        <br><br>
+
+        <code>reverse()</code>
+        → Array'ni teskari qiladi.
+
+        <br><br>
+
+        <code>join("")</code>
+        → Array'ni yana String'ga aylantiradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👨‍🎓 Studentlar Array'i
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let students = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];
+
+students.reverse();
+
+console.log(students);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Husan",
+    "Hasan",
+    "Vali",
+    "Ali"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Cart bilan reverse()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Masalan, mahsulotlarni teskari
+        ko‘rsatishimiz mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let cart = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 30000
+    },
+
+    {
+        name: "Cola",
+        price: 15000
+    }
+
+];
+
+cart.reverse();
+
+console.log(cart);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Natija:
+
+        <br><br>
+
+        Cola
+
+        <br>
+
+        Burger
+
+        <br>
+
+        Pizza
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🕐 Oxirgi elementni birinchi qilish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let messages = [
+    "Salom",
+    "Qalaysan?",
+    "Yaxshiman",
+    "Rahmat"
+];
+
+messages.reverse();
+
+console.log(messages);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Rahmat",
+    "Yaxshiman",
+    "Qalaysan?",
+    "Salom"
+]</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Masalan, yangi xabarlarni
+        birinchi ko‘rsatish uchun
+        shunga o‘xshash usul ishlatilishi mumkin.
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🆚 sort() va reverse()
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-yellow-400">
+
+                sort()
+
+            </h3>
+
+            <p class="text-slate-400 mt-5">
+
+                Elementlarni ma'lum tartibga
+                soladi.
+
+            </p>
+
+
+            <div class="code-box">
+
+<pre><code>numbers.sort(
+    (a, b) => a - b
+);</code></pre>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-green-400">
+
+                reverse()
+
+            </h3>
+
+            <p class="text-slate-400 mt-5">
+
+                Mavjud tartibni teskari qiladi.
+
+            </p>
+
+
+            <div class="code-box">
+
+<pre><code>numbers.reverse();</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 sort() + reverse() misoli
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let scores = [
+    70,
+    95,
+    50,
+    85,
+    100
+];
+
+scores.sort(
+    (a, b) => a - b
+);
+
+console.log(scores);
+
+scores.reverse();
+
+console.log(scores);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>sort():
+
+[50, 70, 85, 95, 100]
+
+
+reverse():
+
+[100, 95, 85, 70, 50]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ Muhim eslatma
+
+    </h2>
+
+
+    <div class="info">
+
+        <code>reverse()</code> original Array'ni
+        o‘zgartiradi.
+
+        <br><br>
+
+        Agar original Array kerak bo‘lsa:
+
+        <br><br>
+
+        <code>[...array].reverse()</code>
+
+        <br><br>
+
+        yoki:
+
+        <br><br>
+
+        <code>array.slice().reverse()</code>
+
+        <br><br>
+
+        ishlatish mumkin.
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Real loyiha misoli
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Saytda postlar yoki xabarlarni
+        eng yangi elementdan boshlab
+        ko‘rsatish uchun Array tartibini
+        teskari qilish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let posts = [
+
+    {
+        title: "1-post"
+    },
+
+    {
+        title: "2-post"
+    },
+
+    {
+        title: "3-post"
+    },
+
+    {
+        title: "4-post"
+    }
+
+];
+
+let latestPosts =
+    [...posts].reverse();
+
+console.log(latestPosts);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>4-post
+3-post
+2-post
+1-post</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa
+            </b>
+
+            <br>
+
+            Quyidagi sonlarni
+            <code>reverse()</code> yordamida
+            teskari qiling.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40,
+    50
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa
+            </b>
+
+            <br>
+
+            Ismlarni teskari tartibda
+            chiqaring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let names = [
+    "Ali",
+    "Vali",
+    "Hasan",
+    "Husan"
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa
+            </b>
+
+            <br>
+
+            Original Array'ni o‘zgartirmagan
+            holda teskari Array yarating.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    1,
+    2,
+    3,
+    4,
+    5
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 🛒
+            </b>
+
+            <br>
+
+            Cart'dagi mahsulotlarni
+            teskari tartibda chiqaring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let cart = [
+
+    {
+        name: "Pizza",
+        price: 50000
+    },
+
+    {
+        name: "Burger",
+        price: 35000
+    },
+
+    {
+        name: "Cola",
+        price: 12000
+    }
+
+];</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🔥
+            </b>
+
+            <br>
+
+            Stringni teskari qilib chiqaring.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let word = "JavaScript";</code></pre>
+
+        </div>
+
+
+        <p>
+            💡 Ishlatish mumkin:
+
+            <br><br>
+
+            <code>split()</code> →
+
+            <code>reverse()</code> →
+
+            <code>join()</code>
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            🔄 <code>reverse()</code>
+            Array tartibini teskari qiladi.
+        </p>
+
+
+        <p>
+            ⚠️ <code>reverse()</code>
+            original Array'ni o‘zgartiradi.
+        </p>
+
+
+        <p>
+            🛡️ Original Array'ni saqlash uchun:
+            <code>[...array].reverse()</code>
+        </p>
+
+
+        <p>
+            🔗 <code>slice().reverse()</code>
+            ham Array nusxasini teskari qilish
+            uchun ishlatilishi mumkin.
+        </p>
+
+
+        <p>
+            📊 <code>sort()</code> bilan birga
+            ishlatish mumkin.
+        </p>
+
+
+        <p>
+            🔤 Stringni teskari qilish uchun:
+            <code>split()</code> →
+            <code>reverse()</code> →
+            <code>join()</code>
+        </p>
+
+
+        <p>
+            🧠 Yodda saqla:
+
+            <br><br>
+
+            <code>sort()</code> → tartiblaydi
+
+            <br>
+
+            <code>reverse()</code> → teskari qiladi
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        🔄
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        44-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 44-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        43-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(43)) {
+
+        alert(
+            "Avval 43-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-43.html";
+
+        return;
+
+    }
+
+
+    /*
+        44-darsni saqlash
+    */
+
+    if (!completedLessons.includes(44)) {
+
+        completedLessons.push(44);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 44-dars tugatildi! 45-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 44-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

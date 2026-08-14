@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>17-Dars | iframe va video | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- NAVBAR -->
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+
+            <a href="html-course.html" class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kursga qaytish
+
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+
+        <!-- TITLE -->
+
+        <div class="mb-10">
+
+            <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+                17-DARS
+
+            </span>
+
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+                iframe va video 🎬
+
+            </h1>
+
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+                HTML sahifaga YouTube video,
+                xarita va boshqa tashqi kontentlarni
+                joylashni o'rganamiz.
+
+            </p>
+
+        </div>
+
+        <!-- 1. IFRAME -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-window-maximize"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                1. &lt;iframe&gt; nima?
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;iframe&gt;
+                </strong>
+                boshqa sahifa yoki tashqi kontentni
+                o'z sahifamiz ichida ko'rsatish uchun
+                ishlatiladi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;iframe
+    src="https://example.com"&gt;
+&lt;/iframe&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+        <!-- 2. WIDTH HEIGHT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                2. width va height
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    width
+                </strong>
+                kenglikni,
+
+                <strong class="text-orange-400">
+                    height
+                </strong>
+                esa balandlikni belgilaydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;iframe
+    src="https://example.com"
+    width="600"
+    height="400"&gt;
+&lt;/iframe&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6
+                    rounded-2xl
+                    overflow-hidden
+                    border border-slate-700">
+
+                <iframe src="https://example.com" width="100%" height="300" title="Example website">
+                </iframe>
+
+            </div>
+
+        </section>
+
+        <!-- 3. YOUTUBE -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                3. YouTube videosini joylash
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                YouTube videosini saytingizga qo'shish
+                uchun YouTube'dagi
+                <strong class="text-orange-400">
+                    Share → Embed
+                </strong>
+                orqali berilgan iframe kodidan
+                foydalanish mumkin.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;iframe
+    width="560"
+    height="315"
+    src="VIDEO_LINK"
+    title="YouTube video"&gt;
+&lt;/iframe&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6
+                    bg-slate-950
+                    border border-slate-800
+                    rounded-2xl
+                    p-6">
+
+                <div class="flex items-center gap-4">
+
+                    <div class="w-14 h-14
+                            rounded-xl
+                            bg-red-500/10
+                            flex items-center
+                            justify-center
+                            text-red-500
+                            text-2xl">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 class="font-bold text-lg">
+
+                            YouTube Embed
+
+                        </h3>
+
+                        <p class="text-slate-400">
+
+                            Video joylash uchun iframe ishlatiladi.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 4. VIDEO -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                4. &lt;video&gt; tegi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Agar video fayl sizning kompyuteringizda
+                yoki loyihangizda bo'lsa,
+                <strong class="text-orange-400">
+                    &lt;video&gt;
+                </strong>
+                tegidan foydalanishingiz mumkin.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;video controls&gt;
+
+    &lt;source
+        src="video.mp4"
+        type="video/mp4"&gt;
+
+&lt;/video&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6">
+
+                <div class="bg-slate-950
+                        border border-slate-800
+                        rounded-2xl
+                        p-6">
+
+                    <p class="text-slate-400">
+
+                        🎥 Video fayl bo'lsa:
+
+                    </p>
+
+                    <code class="text-green-400 block mt-3">
+
+                    video.mp4
+
+                </code>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 5. CONTROLS -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                5. controls
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    controls
+                </strong>
+                atributi videoga play, pause,
+                ovoz va boshqa boshqaruv tugmalarini
+                qo'shadi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;video controls&gt;
+
+    &lt;source
+        src="video.mp4"
+        type="video/mp4"&gt;
+
+&lt;/video&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+        <!-- 6. AUTOPLAY -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                6. autoplay
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    autoplay
+                </strong>
+                video yuklanganda uni avtomatik
+                boshlashni so'raydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;video
+    controls
+    autoplay
+    muted&gt;
+
+    &lt;source
+        src="video.mp4"
+        type="video/mp4"&gt;
+
+&lt;/video&gt;</code></pre>
+
+            </div>
+
+
+            <p class="text-slate-500 mt-5">
+
+                💡 Ko'plab brauzerlarda autoplay
+                ovoz bilan avtomatik ishlamasligi mumkin.
+
+            </p>
+
+        </section>
+
+        <!-- 7. POSTER -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                7. poster
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    poster
+                </strong>
+                video boshlanishidan oldin
+                ko'rsatiladigan rasmni belgilaydi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;video
+    controls
+    poster="thumbnail.jpg"&gt;
+
+    &lt;source
+        src="video.mp4"
+        type="video/mp4"&gt;
+
+&lt;/video&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+        <!-- 8. IFRAME VS VIDEO -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                8. iframe va video farqi
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2 gap-5 mt-6">
+
+
+                <div class="comparison-card">
+
+                    <div class="text-blue-400 text-3xl mb-4">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+
+                    <h3 class="font-bold text-xl">
+
+                        iframe
+
+                    </h3>
+
+
+                    <p class="text-slate-400 mt-3 leading-7">
+
+                        Tashqi sayt, YouTube yoki
+                        boshqa embed kontentni
+                        joylash uchun.
+
+                    </p>
+
+                </div>
+
+
+                <div class="comparison-card">
+
+                    <div class="text-purple-400 text-3xl mb-4">
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </div>
+
+
+                    <h3 class="font-bold text-xl">
+
+                        video
+
+                    </h3>
+
+
+                    <p class="text-slate-400 mt-3 leading-7">
+
+                        O'z loyihangizdagi video
+                        fayllarni ko'rsatish uchun.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 9. MINI PROJECT -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI LOYIHA 🚀
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3 mb-6">
+
+                Video dars sahifasi
+
+            </h2>
+
+
+            <p class="text-slate-400 mb-8">
+
+                Quyidagi kod orqali o'z video
+                darsingizni sahifaga joylashingiz mumkin.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;section&gt;
+
+    &lt;h2&gt;HTML 17-dars&lt;/h2&gt;
+
+    &lt;iframe
+        src="VIDEO_LINK"
+        width="100%"
+        height="400"
+        title="HTML dars"&gt;
+    &lt;/iframe&gt;
+
+&lt;/section&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-8
+                    rounded-2xl
+                    border border-slate-800
+                    bg-slate-950
+                    p-6">
+
+                <h3 class="font-bold text-xl">
+
+                    🎓 Abdusalomov Academy
+
+                </h3>
+
+
+                <p class="text-slate-400 mt-2">
+
+                    HTML — 17-dars
+
+                </p>
+
+
+                <div class="mt-5
+                        aspect-video
+                        rounded-xl
+                        bg-slate-900
+                        border border-slate-800
+                        flex items-center
+                        justify-center">
+
+                    <div class="text-center">
+
+                        
+
+                        <video controls class="w-full rounded-2xl">
+                            <source src="./assets/videos/21-video.mp4" type="video/mp4">
+                        </video>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 10. MINI TEST -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+                MINI TEST 🧠
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+                YouTube videosini boshqa sahifaga
+                joylash uchun ko'pincha qaysi teg
+                ishlatiladi?
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    A) &lt;iframe&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    B) &lt;img&gt; 
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    C) &lt;table&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) &lt;label&gt;
+
+                </button>
+
+            </div>
+
+
+            <p id="answerResult" class="mt-6
+                  font-semibold
+                  text-lg">
+
+            </p>
+
+        </section>
+
+        <!-- COMPLETE -->
+
+        <section class="mt-10">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full
+                   px-7 py-5
+                   rounded-2xl
+                   bg-orange-500
+                   hover:bg-orange-600
+                   font-bold
+                   text-lg
+                   transition">
+
+                Darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="border-t
+               border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- STYLE -->
+
+    <style>
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+        }
+
+
+        .icon-box {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(249, 115, 22, .1);
+
+            color: #fb923c;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .lesson-heading {
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .code-box-inner {
+
+            margin-top: 24px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box-inner pre {
+
+            color: #4ade80;
+
+            line-height: 2;
+
+            font-size: 15px;
+
+        }
+
+
+        .comparison-card {
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 20px;
+
+            padding: 24px;
+
+        }
+
+
+        .answer-btn {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            border: 1px solid #334155;
+
+            background: #020617;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            transition: .3s;
+
+        }
+
+
+        .answer-btn:hover {
+
+            border-color: #f97316;
+
+            color: #fb923c;
+
+            transform: translateY(-2px);
+
+        }
+    </style>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById(
+                    "answerResult"
+                );
+
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! YouTube videosini joylashda iframe ishlatiladi.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-red-400";
+
+            }
+
+        }
+
+        // COMPLETE LESSON
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "htmlCompletedLessons"
+                    )
+                ) || [];
+
+
+            // 17-darsni qo‘shamiz
+
+            if (!completedLessons.includes(17)) {
+
+                completedLessons.push(17);
+
+            }
+
+
+            // Saqlaymiz
+
+            localStorage.setItem(
+                "htmlCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            // Xabar
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "🎉 17-dars tugatildi! 18-dars ochildi 🔓";
+
+
+            // Tugma
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.innerHTML =
+                "✅ 17-dars tugatildi";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-orange-500",
+                "hover:bg-orange-600"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            // Kurs sahifasiga qaytish
+
+            setTimeout(
+                function () {
+
+                    window.location.href =
+                        "html-course.html";
+
+                },
+                1500
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>7-Dars | HTML Ro'yxatlar | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+
+            <a href="html-course.html" class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kursga qaytish
+
+            </a>
+
+        </nav>
+
+    </header>
+
+     <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+
+        <!-- TITLE -->
+
+        <div class="mb-10">
+
+            <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+                7-DARS
+
+            </span>
+
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+                HTML'da ro'yxatlar
+
+            </h1>
+
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+                Bugun HTML'da tartibli va tartibsiz
+                ro'yxatlar yaratishni o'rganamiz.
+
+            </p>
+
+        </div>
+
+         <!-- 1. UL -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-list"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                1. &lt;ul&gt; — Tartibsiz ro'yxat
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;ul&gt;
+                </strong>
+                tegi tartibsiz ro'yxat yaratish uchun ishlatiladi.
+
+            </p>
+
+
+            <p class="text-slate-400 mt-4 leading-8">
+
+                Bunday ro'yxatda elementlar odatda
+                nuqta bilan ko'rsatiladi.
+
+            </p>
+
+        </section>
+
+         <!-- UL CODE -->
+
+        <section class="code-box">
+
+            <h2 class="lesson-heading">
+
+                Kod:
+
+            </h2>
+
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        </section>
+
+         <!-- UL RESULT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Natija:
+
+            </h2>
+
+
+            <div class="bg-slate-950
+                    border border-slate-800
+                    rounded-2xl
+                    p-6">
+
+                <ul class="list-disc list-inside
+                       space-y-3
+                       text-slate-300">
+
+                    <li>HTML</li>
+
+                    <li>CSS</li>
+
+                    <li>JavaScript</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+         <!-- 2. LI -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                2. &lt;li&gt; — Ro'yxat elementi
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;li&gt;
+                </strong>
+                tegi ro'yxat ichidagi har bir elementni
+                bildiradi.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;ul&gt;
+
+    &lt;li&gt;Birinchi element&lt;/li&gt;
+
+    &lt;li&gt;Ikkinchi element&lt;/li&gt;
+
+    &lt;li&gt;Uchinchi element&lt;/li&gt;
+
+&lt;/ul&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- 3. OL -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-list-ol"></i>
+
+            </div>
+
+
+            <h2 class="lesson-heading">
+
+                3. &lt;ol&gt; — Tartibli ro'yxat
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;ol&gt;
+                </strong>
+                tegi raqamlangan ro'yxat yaratish uchun
+                ishlatiladi.
+
+            </p>
+
+
+            <p class="text-slate-400 mt-4">
+
+                Elementlar avtomatik ravishda
+                1, 2, 3... ko'rinishida chiqadi.
+
+            </p>
+
+        </section>
+
+         <!-- OL CODE -->
+
+        <section class="code-box">
+
+            <h2 class="lesson-heading">
+
+                Kod:
+
+            </h2>
+
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;HTML o'rganish&lt;/li&gt;
+    &lt;li&gt;CSS o'rganish&lt;/li&gt;
+    &lt;li&gt;JavaScript o'rganish&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        </section>
+
+         <!-- OL RESULT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Natija:
+
+            </h2>
+
+
+            <div class="bg-slate-950
+                    border border-slate-800
+                    rounded-2xl
+                    p-6">
+
+                <ol class="list-decimal list-inside
+                       space-y-3
+                       text-slate-300">
+
+                    <li>HTML o'rganish</li>
+
+                    <li>CSS o'rganish</li>
+
+                    <li>JavaScript o'rganish</li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+         <!-- 4. FARQI -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mb-8">
+
+                &lt;ul&gt; va &lt;ol&gt; farqi
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+
+                <div class="tag-card">
+
+                    <span>
+                        &lt;ul&gt;
+                    </span>
+
+                    <p>
+                        Tartibsiz ro'yxat.
+                    </p>
+
+                    <div class="mt-5
+                            text-slate-300">
+
+                        • HTML<br>
+                        • CSS<br>
+                        • JavaScript
+
+                    </div>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <span>
+                        &lt;ol&gt;
+                    </span>
+
+                    <p>
+                        Tartibli, raqamlangan ro'yxat.
+                    </p>
+
+                    <div class="mt-5
+                            text-slate-300">
+
+                        1. HTML<br>
+                        2. CSS<br>
+                        3. JavaScript
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+         <!-- 5. NESTED LIST -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                4. Ichma-ich ro'yxat
+
+            </h2>
+
+
+            <p class="text-slate-300 leading-8">
+
+                Ro'yxat ichida yana boshqa ro'yxat
+                yaratish ham mumkin.
+
+            </p>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;ul&gt;
+
+    &lt;li&gt;
+        Frontend
+
+        &lt;ul&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/li&gt;
+
+&lt;/ul&gt;</code></pre>
+
+            </div>
+
+
+            <div class="mt-6
+                    bg-slate-950
+                    border border-slate-800
+                    rounded-2xl
+                    p-6">
+
+                <ul class="list-disc list-inside
+                       text-slate-300">
+
+                    <li>
+                        Frontend
+
+                        <ul class="list-circle
+                               ml-7 mt-3
+                               space-y-2">
+
+                            <li>HTML</li>
+
+                            <li>CSS</li>
+
+                            <li>JavaScript</li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+         <!-- 6. AMALIY MISOL -->
+
+        <section class="lesson-box">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                AMALIY MISOL 🚀
+
+            </p>
+
+
+            <h2 class="lesson-heading mt-3">
+
+                Dasturlash kurslari ro'yxati
+
+            </h2>
+
+
+            <div class="code-box-inner">
+
+                <pre><code>&lt;h2&gt;Bizning kurslar&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;O'rganish tartibi&lt;/h2&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+         <!-- ESLAB QOLAMIZ -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mb-8">
+
+                Eslab qolamiz 🧠
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-3 gap-5">
+
+
+                <div class="tag-card">
+
+                    <span>
+                        &lt;ul&gt;
+                    </span>
+
+                    <p>
+                        Tartibsiz ro'yxat.
+                    </p>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <span>
+                        &lt;ol&gt;
+                    </span>
+
+                    <p>
+                        Tartibli ro'yxat.
+                    </p>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <span>
+                        &lt;li&gt;
+                    </span>
+
+                    <p>
+                        Ro'yxat elementi.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+         <!-- MINI TEST -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI TEST
+
+            </p>
+
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+                Raqamlangan ro'yxat uchun
+                qaysi teg ishlatiladi?
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    A) &lt;ol&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    B) &lt;ul&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    C) &lt;li&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) &lt;list&gt;
+
+                </button>
+
+            </div>
+
+
+            <p id="answerResult" class="mt-6
+                  font-semibold
+                  text-lg">
+            </p>
+
+        </section>
+
+         <!-- COMPLETE -->
+
+        <section class="mt-10">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full
+                       px-7 py-5
+                       rounded-2xl
+                       bg-orange-500
+                       hover:bg-orange-600
+                       font-bold
+                       text-lg
+                       transition">
+
+                Darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+            </p>
+
+        </section>
+
+    </main>
+
+     <!-- FOOTER -->
+
+    <footer class="border-t border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy
+
+            </p>
+
+        </div>
+
+    </footer>
+
+     <!-- STYLE -->
+
+    <style>
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+        }
+
+
+        .icon-box {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(249, 115, 22, .1);
+
+            color: #fb923c;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .lesson-heading {
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .code-box {
+
+            margin-top: 32px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box-inner {
+
+            margin-top: 24px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            padding: 22px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box pre,
+        .code-box-inner pre {
+
+            color: #4ade80;
+
+            line-height: 2;
+
+            font-size: 15px;
+
+        }
+
+
+        .tag-card {
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            border-radius: 18px;
+
+            padding: 24px;
+
+            transition: .3s;
+
+        }
+
+
+        .tag-card:hover {
+
+            border-color: #f97316;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .tag-card span {
+
+            color: #fb923c;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+        }
+
+
+        .tag-card p {
+
+            color: #94a3b8;
+
+            margin-top: 10px;
+
+        }
+
+
+        .answer-btn {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            border: 1px solid #334155;
+
+            background: #020617;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            transition: .3s;
+
+        }
+
+
+        .answer-btn:hover {
+
+            border-color: #f97316;
+
+            color: #fb923c;
+
+            transform: translateY(-2px);
+
+        }
+    </style>
+
+     <!-- JAVASCRIPT -->
+
+    <script>
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById("answerResult");
+
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! Raqamlangan ro'yxat uchun <ol> ishlatiladi.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-red-400";
+
+            }
+
+        }
+
+        // DARSNI TUGATISH
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "htmlCompletedLessons"
+                    )
+                ) || [];
+
+
+            if (!completedLessons.includes(7)) {
+
+                completedLessons.push(7);
+
+            }
+
+
+            localStorage.setItem(
+                "htmlCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "🎉 7-dars tugatildi! 8-dars ochildi.";
+
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.innerHTML =
+                "✅ Tugatildi";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-orange-500",
+                "hover:bg-orange-600"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            setTimeout(() => {
+
+                window.location.href =
+                    "html-course.html";
+
+            }, 1500);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 8-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="css-course.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-blue-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            8-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            CSS Position 📍
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5 leading-8">
+
+            CSS'dagi <b>position</b> property
+            yordamida elementlarni sahifada
+            aniq joylashtirishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+         <!-- 1. POSITION NIMA? -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <h2 class="lesson-title">
+            1. `position` nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `position` elementning sahifadagi
+            joylashish usulini boshqaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    position: relative;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            📌 Asosiy qiymatlar:
+
+            <br><br>
+
+            `static`
+
+            <br>
+
+            `relative`
+
+            <br>
+
+            `absolute`
+
+            <br>
+
+            `fixed`
+
+            <br>
+
+            `sticky`
+
+        </div>
+
+    </section>
+
+         <!-- 2. STATIC -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            2. `position: static`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `static` — elementning odatiy
+            joylashish holati.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    position: static;
+}</code></pre>
+
+        </div>
+
+        <div class="position-demo">
+
+            <div class="static-box">
+                STATIC
+            </div>
+
+        </div>
+
+        <div class="info-box">
+
+            💡 Ko'pchilik HTML elementlar
+            default holatda `static` bo'ladi.
+
+        </div>
+
+    </section>
+
+         <!-- 3. RELATIVE -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            3. `position: relative`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `relative` elementni o'zining
+            odatiy joyiga nisbatan siljitish
+            imkonini beradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    position: relative;
+    left: 30px;
+    top: 10px;
+}</code></pre>
+
+        </div>
+
+        <div class="position-demo relative-demo">
+
+            <div class="relative-box">
+                RELATIVE
+            </div>
+
+        </div>
+
+        <div class="info-box">
+
+            📌 `relative` ishlatilganda elementning
+            asl joyi saqlanib qoladi.
+
+        </div>
+
+    </section>
+
+         <!-- 4. TOP RIGHT BOTTOM LEFT -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            4. `top`, `right`, `bottom`, `left`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Position bilan birga elementni
+            yuqoriga, pastga, o'ngga yoki
+            chapga siljitish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    position: relative;
+
+    top: 20px;
+    left: 30px;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            ⬆️ `top` — yuqoridan masofa
+
+            <br>
+
+            ➡️ `right` — o'ngdan masofa
+
+            <br>
+
+            ⬇️ `bottom` — pastdan masofa
+
+            <br>
+
+            ⬅️ `left` — chapdan masofa
+
+        </div>
+
+    </section>
+
+         <!-- 5. ABSOLUTE -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            5. `position: absolute`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `absolute` elementni odatiy oqimdan
+            chiqaradi va joylashtirish uchun
+            yaqin positionlangan ota elementga
+            tayanadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+}</code></pre>
+
+        </div>
+
+        <div class="absolute-demo">
+
+            <div class="absolute-card">
+
+                <span>
+                    Yangi
+                </span>
+
+                <h3>
+                    Kurs Card
+                </h3>
+
+                <p>
+                    Absolute element
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="info-box">
+
+            ⭐ Ko'p ishlatiladigan usul:
+
+            <br><br>
+
+            Ota elementga:
+
+            <br>
+
+            `position: relative`
+
+            <br><br>
+
+            Ichki elementga:
+
+            <br>
+
+            `position: absolute`
+
+        </div>
+
+    </section>
+
+         <!-- 6. FIXED -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            6. `position: fixed`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `fixed` elementni brauzer oynasiga
+            nisbatan bir joyda ushlab turadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.button {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+}</code></pre>
+
+        </div>
+
+        <div class="info-box">
+
+            📌 Masalan, saytlarning pastki
+            burchagidagi yordam yoki yuqoriga
+            qaytish tugmalari `fixed` bo'lishi mumkin.
+
+        </div>
+
+    </section>
+
+         <!-- 7. STICKY -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            7. `position: sticky`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `sticky` element scroll vaqtida
+            ma'lum chegaraga yetganda
+            yopishib turadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.menu {
+    position: sticky;
+    top: 0;
+}</code></pre>
+
+        </div>
+
+        <div class="sticky-demo">
+
+            <div class="sticky-title">
+
+                STICKY MENU 📌
+
+            </div>
+
+            <p>
+                Bu element sticky sifatida
+                ishlatilishi mumkin.
+            </p>
+
+            <p>
+                Scroll qilganda yuqoriga
+                yopishib qoladi.
+            </p>
+
+        </div>
+
+    </section>
+
+         <!-- 8. Z-INDEX -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            8. `z-index`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `z-index` ustma-ust turgan elementlardan
+            qaysi biri yuqorida ko'rinishini belgilaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    position: absolute;
+    z-index: 10;
+}</code></pre>
+
+        </div>
+
+        <div class="zindex-demo">
+
+            <div class="z-box z-one">
+                1
+            </div>
+
+            <div class="z-box z-two">
+                2
+            </div>
+
+            <div class="z-box z-three">
+                3
+            </div>
+
+        </div>
+
+        <div class="info-box">
+
+            🔥 `z-index` qiymati katta bo'lgan
+            element odatda yuqoriroq qatlamda
+            ko'rinadi.
+
+        </div>
+
+    </section>
+
+         <!-- 9. AMALIY LOYIHA -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            9. Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Endi `relative` va `absolute`
+            yordamida chiroyli profil card
+            yaratamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.profile {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+}</code></pre>
+
+        </div>
+
+        <div class="profile-demo">
+
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+                    👨‍💻
+                </div>
+
+                <span class="profile-badge">
+                    ONLINE
+                </span>
+
+                <h3>
+                    Abdusalomov Academy
+                </h3>
+
+                <p>
+                    Frontend Developer
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- MINI TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+            MINI TEST 🧠
+        </span>
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-4">
+
+            Elementni brauzer oynasiga
+            nisbatan bir joyda ushlab turish
+            uchun qaysi `position` ishlatiladi?
+
+        </h2>
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) relative
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B) inline
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) static
+
+            </button>
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                D) fixed
+
+            </button>
+
+        </div>
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+        </p>
+
+    </section>
+
+         <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8
+                    text-center">
+
+        <div class="text-5xl mb-5">
+            🎉
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            8-darsni tugatdingizmi?
+
+        </h2>
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 9-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- COMPLETE BUTTON -->
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full
+                   bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5
+                   rounded-2xl
+                   font-bold
+                   text-lg
+                   transition">
+
+            8-darsni tugatish
+
+            <i class="fa-solid fa-check ml-2"></i>
+
+        </button>
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8
+               mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+            © 2026 Abdusalomov Academy
+        </p>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+.lesson-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(59,130,246,.1);
+    border: 1px solid rgba(59,130,246,.2);
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+.lesson-box {
+    margin-top: 32px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 24px;
+    padding: 28px;
+}
+
+.lesson-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(59,130,246,.1);
+    color: #60a5fa;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.lesson-title {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.code-box {
+    margin-top: 24px;
+    padding: 22px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+.code-box pre {
+    color: #4ade80;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.info-box {
+    margin-top: 22px;
+    padding: 18px;
+    background: rgba(59,130,246,.08);
+    border: 1px solid rgba(59,130,246,.2);
+    border-radius: 16px;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+
+/* POSITION DEMO */
+
+.position-demo {
+    margin-top: 25px;
+    padding: 25px;
+    background: #020617;
+    border-radius: 18px;
+}
+
+.static-box {
+    padding: 25px;
+    background: #2563eb;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.relative-demo {
+    min-height: 150px;
+}
+
+.relative-box {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    width: 220px;
+    max-width: 100%;
+    padding: 25px;
+    background: #7c3aed;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+/* ABSOLUTE */
+
+.absolute-demo {
+    position: relative;
+    min-height: 260px;
+    margin-top: 25px;
+    padding: 25px;
+    background: #020617;
+    border-radius: 18px;
+}
+
+.absolute-card {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 260px;
+    max-width: calc(100% - 50px);
+    padding: 30px;
+    background: #1d4ed8;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.absolute-card span {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #22c55e;
+    color: white;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.absolute-card h3 {
+    font-size: 23px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.absolute-card p {
+    color: #bfdbfe;
+    margin-top: 8px;
+}
+
+
+/* STICKY */
+
+.sticky-demo {
+    margin-top: 25px;
+    min-height: 300px;
+    padding: 20px;
+    background: #020617;
+    border-radius: 18px;
+}
+
+.sticky-title {
+    position: sticky;
+    top: 70px;
+    z-index: 5;
+    padding: 18px;
+    background: #2563eb;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.sticky-demo p {
+    padding: 35px 10px;
+    color: #94a3b8;
+}
+
+
+/* Z-INDEX */
+
+.zindex-demo {
+    position: relative;
+    height: 250px;
+    margin-top: 25px;
+    background: #020617;
+    border-radius: 18px;
+}
+
+.z-box {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.z-one {
+    top: 30px;
+    left: 30px;
+    background: #2563eb;
+    z-index: 1;
+}
+
+.z-two {
+    top: 70px;
+    left: 90px;
+    background: #7c3aed;
+    z-index: 2;
+}
+
+.z-three {
+    top: 110px;
+    left: 150px;
+    background: #0891b2;
+    z-index: 3;
+}
+
+
+/* PROFILE */
+
+.profile-demo {
+    margin-top: 25px;
+    padding: 30px;
+    background: #020617;
+    border-radius: 20px;
+}
+
+.profile-card {
+    position: relative;
+    width: 340px;
+    max-width: 100%;
+    margin: auto;
+    padding: 35px 25px;
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.profile-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 6px 10px;
+    background: #16a34a;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.profile-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.profile-card p {
+    margin-top: 8px;
+    color: #94a3b8;
+}
+
+
+/* ANSWERS */
+
+.answer-btn {
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    background: #020617;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    transition: .3s;
+}
+
+.answer-btn:hover {
+    border-color: #3b82f6;
+    color: #60a5fa;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+
+    .lesson-box {
+        padding: 20px;
+    }
+
+    .absolute-card {
+        left: 25px;
+        right: 25px;
+        width: auto;
+        max-width: none;
+    }
+
+    .z-box {
+        width: 85px;
+        height: 85px;
+    }
+
+    .z-two {
+        left: 60px;
+    }
+
+    .z-three {
+        left: 100px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById("answerResult");
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! position: fixed elementni brauzer oynasiga nisbatan joylashtiradi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. To'g'ri javob: position: fixed.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 8
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("cssCompletedLessons")
+        ) || [];
+
+
+    // 7-dars tugaganini tekshiramiz
+
+    if (!completedLessons.includes(7)) {
+
+        alert(
+            "Avval 7-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-7.html";
+
+        return;
+    }
+
+
+    // 8-darsni saqlaymiz
+
+    if (!completedLessons.includes(8)) {
+
+        completedLessons.push(8);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 8-dars tugatildi! 9-dars ochildi 🔓";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.innerHTML =
+        "✅ 8-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "css-course.html";
+
+    }, 1500);
+
+}
+
+</script>
+
+</body>
+</html>

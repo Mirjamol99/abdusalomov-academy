@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 20-dars | for loop</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔁 20-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            for loop
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugun JavaScript'dagi eng muhim
+            takrorlash operatorlaridan biri —
+            <code>for loop</code> bilan ishlashni
+            o‘rganamiz.
+
+            <br><br>
+
+            <code>for</code> bir xil kodni
+            bir necha marta avtomatik bajarish
+            imkonini beradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Loop nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b>Loop</b> — kodni bir necha marta
+            takrorlash uchun ishlatiladi.
+
+            <br><br>
+
+            Masalan, <code>"Salom"</code> so‘zini
+            5 marta chiqarish kerak bo‘lsa,
+            <code>console.log()</code> ni 5 marta
+            yozish shart emas.
+
+            <br><br>
+
+            Buning uchun <code>for</code> loopdan
+            foydalanamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            for loop sintaksisi 📚
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (boshlanish; shart; o‘zgarish) {
+
+    // takrorlanadigan kod
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>for</code> ichida 3 ta asosiy
+            qism mavjud:
+
+            <br><br>
+
+            <b class="text-white">1. Boshlanish</b>
+
+            <br>
+
+            Loop qayerdan boshlanishini belgilaydi.
+
+            <br><br>
+
+            <b class="text-white">2. Shart</b>
+
+            <br>
+
+            Loop qachongacha ishlashini belgilaydi.
+
+            <br><br>
+
+            <b class="text-white">3. O‘zgarish</b>
+
+            <br>
+
+            Har bir aylanishdan keyin
+            qiymatni o‘zgartiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Eng oddiy for loop
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu loop <code>1</code> dan boshlanib,
+            <code>5</code> gacha ishlaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            i o‘zgaruvchisi nima? 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 0; i < 5; i++) {
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>0
+1
+2
+3
+4</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>i</code> — loop davomida
+            o‘zgarib boradigan o‘zgaruvchi.
+
+            <br><br>
+
+            Ko‘pincha looplarda
+            <code>i</code> nomi ishlatiladi.
+
+            <br><br>
+
+            <code>i</code> o‘rniga boshqa nom ham
+            yozish mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            i++ nima? ➕
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>i++</code> — <code>i</code> qiymatini
+            1 taga oshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+i++;
+
+console.log(i);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>2</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Demak:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>i++</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            quyidagiga o‘xshash:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>i = i + 1;</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            1 dan 10 gacha chiqarish 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            10 dan 1 gacha chiqarish 🔄
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Buning uchun <code>i--</code>
+            ishlatamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 10; i >= 1; i--) {
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>10
+9
+8
+7
+6
+5
+4
+3
+2
+1</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Juft sonlarni chiqarish 🟢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 2; i <= 10; i += 2) {
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>2
+4
+6
+8
+10</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>i += 2</code> har safar
+            <code>i</code> qiymatini 2 taga oshiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Toq sonlarni chiqarish 🔵
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i += 2) {
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+3
+5
+7
+9</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            So‘zni bir necha marta chiqarish 📝
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    console.log("Salom!");
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Salom!
+Salom!
+Salom!
+Salom!
+Salom!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Sonlar yig‘indisini topish ➕
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let sum = 0;
+
+for (let i = 1; i <= 5; i++) {
+
+    sum = sum + i;
+
+}
+
+console.log(sum);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Hisoblanishi:
+
+            <br><br>
+
+            <code>0 + 1 + 2 + 3 + 4 + 5 = 15</code>
+
+        </p>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ko‘paytirish jadvali ✖️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let number = 5;
+
+for (let i = 1; i <= 10; i++) {
+
+    console.log(number * i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>5
+10
+15
+20
+25
+30
+35
+40
+45
+50</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            To‘liq ko‘paytirish jadvali
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let number = 5;
+
+for (let i = 1; i <= 10; i++) {
+
+    console.log(
+        number + " x " + i + " = " + number * i
+    );
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+...
+5 x 10 = 50</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            for loop va if 🔀
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Loop ichida <code>if</code> shartidan
+            ham foydalanish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+
+        console.log(i);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>2
+4
+6
+8
+10</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            3 ga bo‘linadigan sonlar
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 20; i++) {
+
+    if (i % 3 === 0) {
+
+        console.log(i);
+
+    }
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>3
+6
+9
+12
+15
+18</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break bilan loopni to‘xtatish 🛑
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>break</code> loopni darhol
+            to‘xtatadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 10; i++) {
+
+    if (i === 5) {
+        break;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            continue bilan davom ettirish 🔁
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>continue</code> joriy aylanishni
+            tashlab, keyingi aylanishga o‘tadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    if (i === 3) {
+        continue;
+    }
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+4
+5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array bilan for loop 📦
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Keyingi darslarda arrayni chuqurroq
+            o‘rganamiz.
+
+            Hozir esa loop orqali array
+            elementlarini ko‘rib chiqamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+for (let i = 0; i < fruits.length; i++) {
+
+    console.log(fruits[i]);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Olma
+Banan
+Uzum</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            for loop qanday ishlaydi? 🧠
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>for (let i = 1; i <= 3; i++) {
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <b class="text-white">1-qadam:</b>
+            <code>i = 1</code>
+
+            <br><br>
+
+            <b class="text-white">2-qadam:</b>
+            <code>1 <= 3</code> → true
+
+            <br><br>
+
+            <b class="text-white">3-qadam:</b>
+            <code>console.log(1)</code>
+
+            <br><br>
+
+            <b class="text-white">4-qadam:</b>
+            <code>i++</code> → 2
+
+            <br><br>
+
+            Keyin xuddi shu jarayon
+            <code>2</code> va <code>3</code> uchun
+            takrorlanadi.
+
+            <br><br>
+
+            <code>4 <= 3</code> → false bo‘lganda
+            loop to‘xtaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            <code>for</code> yordamida
+            1 dan 20 gacha sonlarni chiqaring.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            1 dan 20 gacha bo‘lgan juft sonlarni
+            chiqaring.
+
+            <br><br>
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            1 dan 20 gacha bo‘lgan toq sonlarni
+            chiqaring.
+
+            <br><br>
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            1 dan 10 gacha bo‘lgan sonlarning
+            yig‘indisini toping.
+
+            <br><br>
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            7 sonining ko‘paytirish jadvalini
+            <code>for</code> yordamida chiqaring.
+
+            <br><br>
+
+            <b class="text-white">6-vazifa:</b>
+
+            <br>
+
+            1 dan 20 gacha faqat 3 ga
+            bo‘linadigan sonlarni chiqaring.
+
+            <br><br>
+
+            <b class="text-white">7-vazifa:</b>
+
+            <br>
+
+            <code>break</code> yordamida
+            1 dan 10 gacha bo‘lgan sonlarni
+            5 ga kelganda to‘xtating.
+
+            <br><br>
+
+            <b class="text-white">8-vazifa:</b>
+
+            <br>
+
+            <code>continue</code> yordamida
+            1 dan 10 gacha bo‘lgan sonlardan
+            5 ni tashlab keting.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔁 <code>for</code> — kodni
+                takrorlash uchun ishlatiladi.
+            </p>
+
+            <p>
+                🚀 <code>i++</code> —
+                qiymatni 1 taga oshiradi.
+            </p>
+
+            <p>
+                🔽 <code>i--</code> —
+                qiymatni 1 taga kamaytiradi.
+            </p>
+
+            <p>
+                🛑 <code>break</code> —
+                loopni to‘xtatadi.
+            </p>
+
+            <p>
+                ⏭️ <code>continue</code> —
+                joriy aylanishni tashlab ketadi.
+            </p>
+
+            <p>
+                🧠 <code>for</code> JavaScript'dagi
+                eng ko‘p ishlatiladigan looplardan biri.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔁
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            20-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 20-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 19-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(19)) {
+
+        alert("Avval 19-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-19.html";
+
+        return;
+    }
+
+
+    // 20-darsni saqlash
+
+    if (!completedLessons.includes(20)) {
+
+        completedLessons.push(20);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 20-dars tugatildi! 21-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 20-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

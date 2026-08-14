@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 4-dars | Abdusalomov Academy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+     <!-- NAVBAR -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="css-course.html"
+           class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-blue-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+     <!-- MAIN -->
+
+<main class="max-w-5xl mx-auto
+            px-6 py-12">
+
+         <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="inline-flex
+                     items-center gap-2
+                     bg-blue-500/10
+                     border border-blue-500/20
+                     text-blue-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            4-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+            CSS Colors 🎨
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5
+                  leading-8">
+
+            CSS yordamida matn va elementlarga
+            turli xil ranglar berishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+         <!-- 1. COLOR -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+
+            <i class="fa-solid fa-palette"></i>
+
+        </div>
+
+
+        <h2 class="lesson-title">
+
+            1. `color` xususiyati
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <strong class="text-blue-400">
+                color
+            </strong>
+            CSS xususiyati matn rangini
+            o'zgartirish uchun ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>h1 {
+    color: blue;
+}
+
+p {
+    color: red;
+}</code></pre>
+
+        </div>
+
+
+        <div class="demo-box">
+
+            <h3 class="demo-blue">
+
+                Ko'k rangdagi matn
+
+            </h3>
+
+
+            <p class="demo-red">
+
+                Qizil rangdagi matn
+
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡 `color` — matn rangini
+            o'zgartiradi.
+
+        </div>
+
+    </section>
+
+         <!-- 2. BACKGROUND-COLOR -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            2. `background-color`
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Elementning orqa fon rangini
+            o'zgartirish uchun
+            <strong class="text-blue-400">
+                background-color
+            </strong>
+            ishlatiladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>div {
+    background-color: blue;
+}</code></pre>
+
+        </div>
+
+
+        <div class="demo-background">
+
+            <h3 class="text-2xl font-bold">
+
+                Background Color
+
+            </h3>
+
+
+            <p class="mt-2">
+
+                Bu elementning foni rangli.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            📌 `color` — matn rangi.
+
+            <br>
+
+            📌 `background-color` — fon rangi.
+
+        </div>
+
+    </section>
+
+         <!-- 3. COLOR NAMES -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            3. Rang nomlari
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            CSS'da ranglarni oddiy nomlari
+            bilan ham yozish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>color: red;
+
+color: blue;
+
+color: green;
+
+color: yellow;
+
+color: purple;
+
+color: orange;</code></pre>
+
+        </div>
+
+
+        <div class="grid grid-cols-2
+                    md:grid-cols-3
+                    gap-4 mt-6">
+
+
+            <div class="color-card red-card">
+                RED
+            </div>
+
+
+            <div class="color-card blue-card">
+                BLUE
+            </div>
+
+
+            <div class="color-card green-card">
+                GREEN
+            </div>
+
+
+            <div class="color-card yellow-card">
+                YELLOW
+            </div>
+
+
+            <div class="color-card purple-card">
+                PURPLE
+            </div>
+
+
+            <div class="color-card orange-card">
+                ORANGE
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 4. HEX -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            4. HEX ranglar
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            HEX ranglar
+            <strong class="text-blue-400">
+                #
+            </strong>
+            belgisi bilan boshlanadi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>h1 {
+    color: #3b82f6;
+}
+
+p {
+    color: #94a3b8;
+}
+
+body {
+    background-color: #020617;
+}</code></pre>
+
+        </div>
+
+
+        <div class="info-box">
+
+            💡 Masalan:
+
+            <br><br>
+
+            <code class="text-blue-400">
+                #ff0000
+            </code>
+            → qizil
+
+            <br>
+
+            <code class="text-blue-400">
+                #00ff00
+            </code>
+            → yashil
+
+            <br>
+
+            <code class="text-blue-400">
+                #0000ff
+            </code>
+            → ko'k
+
+        </div>
+
+
+        <div class="hex-demo">
+
+            <div>
+                #3b82f6
+            </div>
+
+            <div>
+                #22c55e
+            </div>
+
+            <div>
+                #ef4444
+            </div>
+
+        </div>
+
+    </section>
+
+         <!-- 5. RGB -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            5. RGB ranglar
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            RGB uchta qiymatdan foydalanadi:
+
+        </p>
+
+
+        <div class="grid md:grid-cols-3
+                    gap-4 mt-6">
+
+
+            <div class="rgb-card">
+
+                <strong>
+                    R
+                </strong>
+
+                <p class="text-slate-400 mt-2">
+
+                    Red — qizil
+
+                </p>
+
+            </div>
+
+
+            <div class="rgb-card">
+
+                <strong>
+                    G
+                </strong>
+
+                <p class="text-slate-400 mt-2">
+
+                    Green — yashil
+
+                </p>
+
+            </div>
+
+
+            <div class="rgb-card">
+
+                <strong>
+                    B
+                </strong>
+
+                <p class="text-slate-400 mt-2">
+
+                    Blue — ko'k
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>color: rgb(255, 0, 0);
+
+color: rgb(0, 255, 0);
+
+color: rgb(0, 0, 255);</code></pre>
+
+        </div>
+
+    </section>
+
+         <!-- 6. RGBA -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            6. RGBA
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            RGBA RGB ga qo'shimcha ravishda
+            <strong class="text-blue-400">
+                alpha
+            </strong>
+            qiymatidan foydalanadi.
+
+        </p>
+
+
+        <p class="text-slate-400
+                  mt-4
+                  leading-8">
+
+            Alpha elementning shaffoflik
+            darajasini bildiradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>background-color:
+rgba(59, 130, 246, 0.5);</code></pre>
+
+        </div>
+
+
+        <div class="rgba-demo">
+
+            <div class="rgba-layer">
+
+                RGBA
+
+            </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+            📌 `1` — to'liq ko'rinadi.
+
+            <br>
+
+            📌 `0` — to'liq shaffof.
+
+            <br>
+
+            📌 `0.5` — yarim shaffof.
+
+        </div>
+
+    </section>
+
+         <!-- 7. AMALIY LOYIHA -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+
+            7. Amaliy loyiha 💻
+
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Endi ranglardan foydalanib
+            zamonaviy card yaratamiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>&lt;div class="card"&gt;
+
+    &lt;h2&gt;
+        Abdusalomov Academy
+    &lt;/h2&gt;
+
+    &lt;p&gt;
+        CSS Colors
+    &lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>.card {
+
+    background-color: #0f172a;
+
+    border: 1px solid #3b82f6;
+
+}
+
+.card h2 {
+
+    color: #3b82f6;
+
+}
+
+.card p {
+
+    color: #94a3b8;
+
+}</code></pre>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="project-card">
+
+            <div class="project-icon">
+
+                🎨
+
+            </div>
+
+
+            <h3 class="text-2xl
+                       font-extrabold
+                       text-blue-400">
+
+                Abdusalomov Academy
+
+            </h3>
+
+
+            <p class="text-slate-400 mt-3">
+
+                CSS Colors 🚀
+
+            </p>
+
+        </div>
+
+    </section>
+
+         <!-- MINI TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400
+                     font-bold">
+
+            MINI TEST 🧠
+
+        </span>
+
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold
+                   mt-4">
+
+            Matn rangini o'zgartirish uchun
+            qaysi property ishlatiladi?
+
+        </h2>
+
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) background-color
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                B) font-color
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) text-color
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                D) color
+
+            </button>
+
+        </div>
+
+
+        <p id="answerResult"
+           class="mt-6
+                  font-bold
+                  text-lg">
+
+        </p>
+
+    </section>
+
+         <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl
+                    p-8
+                    text-center">
+
+        <div class="text-5xl mb-5">
+
+            🎉
+
+        </div>
+
+
+        <h2 class="text-3xl
+                   md:text-4xl
+                   font-extrabold">
+
+            4-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosgandan
+            keyin 5-dars ochiladi.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- COMPLETE BUTTON -->
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full
+                   bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5
+                   rounded-2xl
+                   font-bold
+                   text-lg
+                   transition">
+
+            4-darsni tugatish
+
+            <i class="fa-solid
+                      fa-check
+                      ml-2">
+            </i>
+
+        </button>
+
+
+        <p id="completeMessage"
+           class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+
+        </p>
+
+    </section>
+
+</main>
+
+     <!-- FOOTER -->
+
+<footer class="border-t
+               border-slate-800
+               py-8
+               mt-10">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-6
+                text-center">
+
+        <p class="text-slate-500">
+
+            © 2026 Abdusalomov Academy
+
+        </p>
+
+    </div>
+
+</footer>
+
+     <!-- STYLE -->
+
+<style>
+
+.lesson-box {
+
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+}
+
+
+.lesson-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.lesson-title {
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+
+.code-box {
+
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+
+}
+
+
+.code-box pre {
+
+    color: #4ade80;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+
+}
+
+
+.info-box {
+
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: rgba(59,130,246,.08);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    border-radius: 16px;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+
+}
+
+
+.demo-box {
+
+    margin-top: 24px;
+
+    padding: 25px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+}
+
+
+.demo-blue {
+
+    color: #3b82f6;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+}
+
+
+.demo-red {
+
+    color: #ef4444;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-top: 12px;
+
+}
+
+
+.demo-background {
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    background-color: #2563eb;
+
+    border-radius: 20px;
+
+}
+
+
+.color-card {
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+.red-card {
+
+    background: #ef4444;
+
+}
+
+
+.blue-card {
+
+    background: #3b82f6;
+
+}
+
+
+.green-card {
+
+    background: #22c55e;
+
+}
+
+
+.yellow-card {
+
+    background: #eab308;
+
+    color: #020617;
+
+}
+
+
+.purple-card {
+
+    background: #a855f7;
+
+}
+
+
+.orange-card {
+
+    background: #f97316;
+
+}
+
+
+.hex-demo {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.hex-demo div {
+
+    padding: 30px 10px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+.hex-demo div:nth-child(1) {
+
+    background: #3b82f6;
+
+}
+
+
+.hex-demo div:nth-child(2) {
+
+    background: #22c55e;
+
+}
+
+
+.hex-demo div:nth-child(3) {
+
+    background: #ef4444;
+
+}
+
+
+.rgb-card {
+
+    padding: 25px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    font-size: 25px;
+
+}
+
+
+.rgb-card strong {
+
+    color: #60a5fa;
+
+}
+
+
+.rgba-demo {
+
+    margin-top: 25px;
+
+    padding: 35px;
+
+    background: linear-gradient(
+        135deg,
+        #172554,
+        #581c87
+    );
+
+    border-radius: 20px;
+
+}
+
+
+.rgba-layer {
+
+    padding: 35px;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    background-color:
+        rgba(59, 130, 246, 0.5);
+
+    border-radius: 18px;
+
+}
+
+
+.project-card {
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    background-color: #020617;
+
+    border: 1px solid #3b82f6;
+
+    border-radius: 22px;
+
+}
+
+
+.project-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.answer-btn {
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+
+}
+
+
+.answer-btn:hover {
+
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+
+}
+
+
+@media (max-width: 640px) {
+
+    .hex-demo {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+</style>
+
+     <!-- JAVASCRIPT -->
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById(
+            "answerResult"
+        );
+
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! Matn rangini color property o'zgartiradi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE LESSON 4
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "cssCompletedLessons"
+            )
+        ) || [];
+
+
+    // 3-dars tugaganini tekshiramiz
+
+    if (!completedLessons.includes(3)) {
+
+        alert(
+            "Avval 3-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-3.html";
+
+        return;
+
+    }
+
+
+    // 4-darsni qo‘shamiz
+
+    if (!completedLessons.includes(4)) {
+
+        completedLessons.push(4);
+
+    }
+
+
+    // Saqlaymiz
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(
+            completedLessons
+        )
+    );
+
+
+    // Xabar
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "✅ 4-dars tugatildi! 5-dars ochildi 🔓";
+
+
+    // Button
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.innerHTML =
+        "✅ 4-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    // Kurs sahifasiga qaytish
+
+    setTimeout(
+        function() {
+
+            window.location.href =
+                "css-course.html";
+
+        },
+        1500
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

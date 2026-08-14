@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 45-dars | Object asoslari</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        📦 45-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        Object asoslari
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript'dagi
+        <code>Object</code> tushunchasi bilan
+        tanishamiz.
+
+        <br><br>
+
+        Object yordamida bir nechta ma'lumotlarni
+        bitta o‘zgaruvchi ichida tartibli
+        saqlash mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Object nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object — ma'lumotlarni
+        <b class="text-white">
+            key : value
+        </b>
+        ko‘rinishida saqlaydigan
+        JavaScript ma'lumot tuzilmasidir.
+
+        <br><br>
+
+        Masalan, bir odam haqida:
+
+        <br><br>
+
+        ismi, yoshi, shahri va kasbi kabi
+        ma'lumotlarni bitta Object ichida
+        saqlashimiz mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18,
+    city: "Andijon"
+};
+
+console.log(user);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔑 Key va Value
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichidagi har bir ma'lumot
+        <code>key</code> va <code>value</code>
+        dan tashkil topadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18
+};</code></pre>
+
+    </div>
+
+
+    <div class="method-card mt-6">
+
+        <p class="text-yellow-400 text-xl">
+            name: "Ali"
+        </p>
+
+        <p class="text-slate-400 mt-3">
+            name → key
+        </p>
+
+        <p class="text-slate-400">
+            "Ali" → value
+        </p>
+
+        <hr class="border-slate-700 my-5">
+
+        <p class="text-yellow-400 text-xl">
+            age: 18
+        </p>
+
+        <p class="text-slate-400 mt-3">
+            age → key
+        </p>
+
+        <p class="text-slate-400">
+            18 → value
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✍️ Object yaratish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object yaratish uchun
+        <code>{ }</code>
+        figurali qavslardan foydalanamiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let car = {
+    brand: "BMW",
+    model: "M5",
+    year: 2024
+};
+
+console.log(car);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Object ichidagi property'lar
+        vergul <code>,</code> bilan ajratiladi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 Object property'ni olish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichidagi qiymatni olishning
+        eng oddiy usuli — nuqta
+        <code>.</code> orqali murojaat qilish.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18,
+    city: "Andijon"
+};
+
+console.log(user.name);
+console.log(user.age);
+console.log(user.city);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+18
+Andijon</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 Bracket notation
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object property'lariga
+        <code>[]</code> orqali ham murojaat
+        qilish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18
+};
+
+console.log(user["name"]);
+console.log(user["age"]);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Ikkalasi ham ishlaydi:
+
+        <br><br>
+
+        <code>user.name</code>
+
+        <br>
+
+        <code>user["name"]</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✏️ Object qiymatini o‘zgartirish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichidagi mavjud qiymatni
+        key orqali o‘zgartirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18
+};
+
+user.age = 19;
+
+console.log(user);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 19
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➕ Object'ga yangi property qo‘shish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18
+};
+
+user.city = "Andijon";
+
+console.log(user);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18,
+    city: "Andijon"
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ❌ Property o‘chirish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichidagi property'ni
+        <code>delete</code> yordamida
+        o‘chirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18,
+    city: "Andijon"
+};
+
+delete user.city;
+
+console.log(user);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Object ichida Number
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let student = {
+    name: "Ali",
+    age: 18,
+    score: 95
+};
+
+console.log(student.score);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔤 Object ichida String
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let product = {
+    name: "Pizza",
+    category: "Fast Food",
+    city: "Andijon"
+};
+
+console.log(product.name);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✅ Object ichida Boolean
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    isOnline: true,
+    isStudent: false
+};
+
+console.log(user.isOnline);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Object property qiymati
+        <code>true</code> yoki
+        <code>false</code> bo‘lishi mumkin.
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Object ichida Array
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichida Array ham saqlash mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let student = {
+    name: "Ali",
+
+    subjects: [
+        "Math",
+        "English",
+        "History"
+    ]
+};
+
+console.log(student.subjects);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Math",
+    "English",
+    "History"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Array ichida Object
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Bu usul real loyihalarda juda ko‘p
+        ishlatiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let users = [
+
+    {
+        name: "Ali",
+        age: 18
+    },
+
+    {
+        name: "Vali",
+        age: 20
+    },
+
+    {
+        name: "Hasan",
+        age: 19
+    }
+
+];
+
+console.log(users);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu — <b>Objectlar Array'i</b>.
+
+        <br><br>
+
+        Keyingi darslarda bunday
+        ma'lumotlar bilan juda ko‘p
+        ishlaymiz.
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Array ichidagi Object'ga murojaat
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let users = [
+
+    {
+        name: "Ali",
+        age: 18
+    },
+
+    {
+        name: "Vali",
+        age: 20
+    }
+
+];
+
+console.log(users[0].name);
+console.log(users[1].age);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+20</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Real loyiha: Product Object
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let product = {
+
+    id: 1,
+
+    name: "Pizza",
+
+    price: 50000,
+
+    category: "Pizza",
+
+    available: true
+
+};
+
+console.log(product.name);
+console.log(product.price);
+console.log(product.available);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        E-commerce saytlarida mahsulotlar
+        ko‘pincha shunga o‘xshash Object
+        ko‘rinishida saqlanadi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👤 Real loyiha: User Object
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    id: 1,
+
+    name: "Mirjamol",
+
+    age: 16,
+
+    username: "abdusalomov.o",
+
+    isOnline: true
+
+};
+
+console.log(user.name);
+console.log(user.username);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Object ichida Function
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichida function ham saqlash mumkin.
+
+        <br><br>
+
+        Object ichidagi function
+        keyinchalik <b>method</b> deb ataladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    sayHello: function() {
+        console.log("Salom!");
+    }
+
+};
+
+user.sayHello();</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ Shorthand property
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar variable nomi va Object key
+        bir xil bo‘lsa, qisqaroq yozish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let name = "Ali";
+let age = 18;
+
+let user = {
+    name,
+    age
+};
+
+console.log(user);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Object qiymatini o‘zgartirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let product = {
+    name: "Pizza",
+    price: 40000
+};
+
+product.price = 50000;
+
+console.log(product.price);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>50000</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 Nested Object
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichida yana boshqa Object
+        bo‘lishi mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    address: {
+
+        city: "Andijon",
+
+        street: "Navoi"
+
+    }
+
+};
+
+console.log(
+    user.address.city
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Andijon</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 21 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Object va Array farqi
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-yellow-400">
+
+                Array
+
+            </h3>
+
+            <p class="text-slate-400 mt-5">
+
+                Tartibli ma'lumotlar
+                uchun ishlatiladi.
+
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let fruits = [
+    "Apple",
+    "Banana",
+    "Mango"
+];</code></pre>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-green-400">
+
+                Object
+
+            </h3>
+
+            <p class="text-slate-400 mt-5">
+
+                Key-value ko‘rinishidagi
+                ma'lumotlar uchun ishlatiladi.
+
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let user = {
+    name: "Ali",
+    age: 18
+};</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 22 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 Amaliy loyiha
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Keling, bitta to‘liq student
+        Object yaratamiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let student = {
+
+    id: 1,
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon",
+
+    score: 95,
+
+    isStudent: true,
+
+    subjects: [
+        "Math",
+        "English",
+        "JavaScript"
+    ],
+
+    address: {
+
+        street: "Navoi",
+
+        house: 15
+
+    }
+
+};
+
+console.log(student.name);
+
+console.log(student.score);
+
+console.log(
+    student.subjects[0]
+);
+
+console.log(
+    student.address.city
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu misolda biz:
+
+        <br><br>
+
+        ✅ String
+
+        <br>
+
+        ✅ Number
+
+        <br>
+
+        ✅ Boolean
+
+        <br>
+
+        ✅ Array
+
+        <br>
+
+        ✅ Object
+
+        <br>
+
+        barchasini bir Object ichida ishlatdik.
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 👤
+            </b>
+
+            <br>
+
+            O‘zingiz haqingizda Object yarating.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "...",
+
+    age: ...,
+
+    city: "...",
+
+    isStudent: true
+
+};</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 🚗
+            </b>
+
+            <br>
+
+            Mashina haqida Object yarating.
+
+            <br><br>
+
+            Unda:
+
+            <br>
+
+            brand
+
+            <br>
+
+            model
+
+            <br>
+
+            year
+
+            <br>
+
+            color
+
+            <br>
+
+            price
+
+            <br>
+
+            property'lari bo‘lsin.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🛒
+            </b>
+
+            <br>
+
+            Mahsulot Object yarating.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let product = {
+
+    name: "...",
+
+    price: ...,
+
+    category: "...",
+
+    available: true
+
+};</code></pre>
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 📚
+            </b>
+
+            <br>
+
+            Student Object yarating.
+
+            <br><br>
+
+            Object ichida
+            <code>subjects</code> nomli
+            Array bo‘lsin.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🔥
+            </b>
+
+            <br>
+
+            Object ichida Object yarating.
+
+            <br><br>
+
+            Masalan:
+
+            <code>address</code> ichida
+            <code>city</code> va
+            <code>street</code> bo‘lsin.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 💪
+            </b>
+
+            <br>
+
+            Objectdagi property qiymatini
+            o‘zgartiring, yangi property
+            qo‘shing va bitta property'ni
+            <code>delete</code> bilan o‘chiring.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            📦 <code>Object</code>
+            ma'lumotlarni key-value ko‘rinishida
+            saqlaydi.
+        </p>
+
+
+        <p>
+            🔑 Object property:
+            <code>key: value</code>
+        </p>
+
+
+        <p>
+            🔍 Property olish:
+            <code>user.name</code>
+        </p>
+
+
+        <p>
+            🧩 Bracket notation:
+            <code>user["name"]</code>
+        </p>
+
+
+        <p>
+            ✏️ Qiymatni o‘zgartirish:
+            <code>user.age = 20</code>
+        </p>
+
+
+        <p>
+            ➕ Yangi property:
+            <code>user.city = "Andijon"</code>
+        </p>
+
+
+        <p>
+            ❌ O‘chirish:
+            <code>delete user.city</code>
+        </p>
+
+
+        <p>
+            📦 Object ichida Array bo‘lishi mumkin.
+        </p>
+
+
+        <p>
+            🧩 Object ichida Object bo‘lishi mumkin.
+        </p>
+
+
+        <p>
+            🔥 Array ichida Object ham bo‘lishi mumkin.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        📦
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        45-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 45-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        44-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(44)) {
+
+        alert(
+            "Avval 44-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-44.html";
+
+        return;
+
+    }
+
+
+    /*
+        45-darsni saqlash
+    */
+
+    if (!completedLessons.includes(45)) {
+
+        completedLessons.push(45);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 45-dars tugatildi! 46-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 45-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

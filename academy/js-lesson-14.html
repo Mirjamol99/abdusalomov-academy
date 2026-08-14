@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 14-dars | Comparison operatorlar</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ⚖️ 14-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Comparison operatorlar
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Comparison operatorlar JavaScript'da
+            ikki qiymatni bir-biri bilan
+            taqqoslash uchun ishlatiladi.
+
+            <br><br>
+
+            Taqqoslash natijasi odatda
+            <code>true</code> yoki
+            <code>false</code> bo‘ladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Comparison operator nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Comparison — ingliz tilida
+            <b class="text-white">"taqqoslash"</b>
+            degan ma'noni anglatadi.
+
+            <br><br>
+
+            Masalan, 10 soni 5 dan kattami?
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 > 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Chunki 10 haqiqatan ham 5 dan katta.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Comparison operatorlar jadvali 📚
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Operator
+                        </th>
+
+                        <th class="p-4">
+                            Ma'nosi
+                        </th>
+
+                        <th class="p-4">
+                            Misol
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>&gt;</code>
+                        </td>
+
+                        <td class="p-4">
+                            Katta
+                        </td>
+
+                        <td class="p-4">
+                            <code>10 &gt; 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>&lt;</code>
+                        </td>
+
+                        <td class="p-4">
+                            Kichik
+                        </td>
+
+                        <td class="p-4">
+                            <code>5 &lt; 10</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>&gt;=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Katta yoki teng
+                        </td>
+
+                        <td class="p-4">
+                            <code>10 &gt;= 10</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>&lt;=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Kichik yoki teng
+                        </td>
+
+                        <td class="p-4">
+                            <code>5 &lt;= 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>==</code>
+                        </td>
+
+                        <td class="p-4">
+                            Teng
+                        </td>
+
+                        <td class="p-4">
+                            <code>5 == "5"</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>===</code>
+                        </td>
+
+                        <td class="p-4">
+                            Qat'iy teng
+                        </td>
+
+                        <td class="p-4">
+                            <code>5 === 5</code>
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>!=</code>
+                        </td>
+
+                        <td class="p-4">
+                            Teng emas
+                        </td>
+
+                        <td class="p-4">
+                            <code>5 != 3</code>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>!==</code>
+                        </td>
+
+                        <td class="p-4">
+                            Qat'iy teng emas
+                        </td>
+
+                        <td class="p-4">
+                            <code>5 !== "5"</code>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            &gt; Katta operatori
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Birinchi qiymat ikkinchi qiymatdan
+            katta bo‘lsa, <code>true</code>
+            qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 > 5);
+console.log(3 > 8);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            &lt; Kichik operatori
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>console.log(5 < 10);
+console.log(20 < 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            &gt;= Katta yoki teng
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Qiymat ikkinchi qiymatdan katta
+            <b class="text-white">yoki teng</b>
+            bo‘lsa <code>true</code> bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 >= 10);
+console.log(15 >= 10);
+console.log(5 >= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            &lt;= Kichik yoki teng
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>console.log(5 <= 5);
+console.log(3 <= 5);
+console.log(10 <= 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            == Tenglik operatori
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>==</code> qiymatlarni taqqoslaydi.
+            JavaScript kerak bo‘lsa, qiymat
+            turlarini avtomatik o‘zgartirishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(5 == 5);
+
+console.log(5 == "5");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Ikkinchi misolda biri Number,
+            ikkinchisi String bo‘lsa ham,
+            <code>==</code> faqat qiymatni
+            teng deb hisoblaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            === Qat'iy tenglik 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>===</code> qiymat bilan birga
+            <b class="text-white">ma'lumot turini ham</b>
+            tekshiradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(5 === 5);
+
+console.log(5 === "5");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>5</code> — Number.
+
+            <br>
+
+            <code>"5"</code> — String.
+
+            <br><br>
+
+            Qiymat bir xil ko‘rinsa ham,
+            ularning turlari har xil.
+
+        </p>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            == va === farqi ⚠️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 == "10");
+// true
+
+console.log(10 === "10");
+// false</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Zamonaviy JavaScript dasturlashda
+            ko‘pincha <code>===</code> ishlatish
+            tavsiya qilinadi, chunki u qiymat
+            turini ham tekshiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            != Teng emas
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>!=</code> ikki qiymat teng
+            bo‘lmaganda <code>true</code>
+            qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(10 != 5);
+
+console.log(10 != 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            !== Qat'iy teng emas
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>!==</code> qiymat yoki uning
+            turi farq qilsa <code>true</code>
+            qaytaradi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(5 !== 5);
+
+console.log(5 !== "5");
+
+console.log(5 !== 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>false
+true
+true</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            O‘zgaruvchilar bilan ishlash
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 16;
+
+console.log(age >= 18);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>false</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Chunki <code>16</code> soni
+            <code>18</code> dan katta yoki teng emas.
+
+        </p>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy misol 🎓
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            O‘quvchining yoshini tekshiramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 17;
+
+let canEnter = age >= 16;
+
+console.log(canEnter);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Chunki 17 soni 16 dan katta.
+
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Stringlarni taqqoslash 🔤
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            String qiymatlarni ham
+            taqqoslash mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log("Ali" === "Ali");
+
+console.log("Ali" === "Vali");</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Natija true yoki false
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Comparison operatorlarning eng
+            muhim jihati — natija
+            <code>Boolean</code> bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let a = 20;
+let b = 10;
+
+let result = a > b;
+
+console.log(result);
+console.log(typeof result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+boolean</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu keyingi darslarda
+            <b class="text-white">if / else</b>
+            shartlarida juda ko‘p ishlatiladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 💰
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchining balansini tekshiramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let balance = 25000;
+let price = 20000;
+
+let enoughMoney = balance >= price;
+
+console.log(enoughMoney);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Balans mahsulot narxidan katta yoki
+            teng bo‘lgani uchun natija
+            <code>true</code> chiqadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta taqqoslash 🧮
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 17;
+
+console.log(age >= 13);
+console.log(age >= 18);
+console.log(age < 20);
+console.log(age === 17);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+false
+true
+true</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarning natijasini
+            avval o‘zingiz toping.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(15 > 10);
+
+console.log(7 < 3);
+
+console.log(10 >= 10);
+
+console.log(4 <= 2);
+
+console.log(5 == "5");
+
+console.log(5 === "5");
+
+console.log(8 != 3);
+
+console.log(8 !== "8");</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1️⃣ <code>let age = 16;</code>
+            yarating va 18 yosh bilan
+            taqqoslang.
+
+            <br><br>
+
+            2️⃣ Ikki son yarating va qaysi biri
+            katta ekanligini comparison
+            operator yordamida tekshiring.
+
+            <br><br>
+
+            3️⃣ <code>&gt;=</code> yordamida
+            o‘quvchi 16 yoshga yetganini tekshiring.
+
+            <br><br>
+
+            4️⃣ <code>==</code> va
+            <code>===</code> orasidagi farqni
+            kod orqali ko‘rsating.
+
+            <br><br>
+
+            5️⃣ <code>!=</code> yordamida
+            ikki son teng emasligini tekshiring.
+
+            <br><br>
+
+            6️⃣ <code>!==</code> yordamida
+            Number va String qiymatlarni
+            taqqoslang.
+
+            <br><br>
+
+            7️⃣ Balans va mahsulot narxini
+            taqqoslab, pul yetarliligini
+            aniqlang.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ⚖️ <code>&gt;</code> — katta
+            </p>
+
+            <p>
+                ⚖️ <code>&lt;</code> — kichik
+            </p>
+
+            <p>
+                ⚖️ <code>&gt;=</code> —
+                katta yoki teng
+            </p>
+
+            <p>
+                ⚖️ <code>&lt;=</code> —
+                kichik yoki teng
+            </p>
+
+            <p>
+                🟰 <code>==</code> —
+                qiymat bo‘yicha teng
+            </p>
+
+            <p>
+                🔒 <code>===</code> —
+                qiymat va tur bo‘yicha teng
+            </p>
+
+            <p>
+                ❌ <code>!=</code> —
+                teng emas
+            </p>
+
+            <p>
+                🔒 <code>!==</code> —
+                qiymat yoki turi teng emas
+            </p>
+
+            <p>
+                💡 Comparison operatorlar
+                natijada <code>true</code> yoki
+                <code>false</code> qaytaradi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ⚖️
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            14-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 14-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 13-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(13)) {
+
+        alert("Avval 13-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-13.html";
+
+        return;
+    }
+
+
+    // 14-darsni saqlash
+
+    if (!completedLessons.includes(14)) {
+
+        completedLessons.push(14);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 14-dars tugatildi! 15-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 14-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

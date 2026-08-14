@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 22-dars | do while loop</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ♻️ 22-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            do while loop
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugun JavaScript'dagi
+            <code>do while</code> loop bilan
+            ishlashni o‘rganamiz.
+
+            <br><br>
+
+            <code>do while</code> loopning
+            eng muhim xususiyati —
+            shartni tekshirishdan oldin
+            kodni <b class="text-white">kamida bir marta</b>
+            bajarishidir.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            do while nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>do while</code> ham
+            <code>while</code> kabi loop hisoblanadi.
+
+            <br><br>
+
+            Lekin ular orasida muhim farq bor.
+
+            <br><br>
+
+            <code>while</code> avval shartni
+            tekshiradi, keyin kodni bajaradi.
+
+            <br><br>
+
+            <code>do while</code> esa avval
+            kodni bajaradi, keyin shartni
+            tekshiradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Sintaksisi 📚
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>do {
+
+    // bajariladigan kod
+
+} while (shart);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>do</code> — bajariladigan
+            kod blokini boshlaydi.
+
+            <br><br>
+
+            <code>while</code> — kod bajarilgandan
+            keyin shartni tekshiradi.
+
+            <br><br>
+
+            E'tibor bering:
+            <code>do while</code> oxirida
+            <code>;</code> yoziladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Eng oddiy misol
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    console.log(i);
+
+    i++;
+
+} while (i <= 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Avval <code>console.log(i)</code>
+            bajariladi.
+
+            <br><br>
+
+            Keyin <code>i++</code> ishlaydi.
+
+            <br><br>
+
+            Shundan keyin
+            <code>i <= 5</code> tekshiriladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Eng muhim farq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi misolga qarang:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 10;
+
+while (i < 5) {
+
+    console.log(i);
+
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Bu kod hech narsa chiqarmaydi,
+            chunki <code>10 < 5</code> noto‘g‘ri.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 10;
+
+do {
+
+    console.log(i);
+
+} while (i < 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>10</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda shart boshidanoq
+            <code>false</code> bo‘lsa ham,
+            kod bir marta bajarildi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            while va do while farqi 🔍
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>// while
+
+let number = 10;
+
+while (number < 5) {
+
+    console.log("Hello");
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>// do while
+
+let number = 10;
+
+do {
+
+    console.log("Hello");
+
+} while (number < 5);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>while</code> natijasi:
+
+            <br>
+
+            Hech narsa chiqmaydi.
+
+            <br><br>
+
+            <code>do while</code> natijasi:
+
+            <br>
+
+            <code>Hello</code>
+
+            <br><br>
+
+            Sababi <code>do while</code>
+            kodni kamida bir marta bajaradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            1 dan 5 gacha 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    console.log(i);
+
+    i++;
+
+} while (i <= 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3
+4
+5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            5 dan 1 gacha 🔄
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 5;
+
+do {
+
+    console.log(i);
+
+    i--;
+
+} while (i >= 1);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>5
+4
+3
+2
+1</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Juft sonlar 🟢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 2;
+
+do {
+
+    console.log(i);
+
+    i += 2;
+
+} while (i <= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>2
+4
+6
+8
+10</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Toq sonlar 🔵
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    console.log(i);
+
+    i += 2;
+
+} while (i <= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+3
+5
+7
+9</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            do while va if 🔀
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>do while</code> ichida
+            <code>if</code> shartidan ham
+            foydalanish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    if (i % 2 === 0) {
+
+        console.log(i);
+
+    }
+
+    i++;
+
+} while (i <= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>2
+4
+6
+8
+10</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Yig‘indini hisoblash ➕
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+let sum = 0;
+
+do {
+
+    sum = sum + i;
+
+    i++;
+
+} while (i <= 5);
+
+console.log(sum);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>15</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Ko‘paytirish jadvali ✖️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+let number = 7;
+
+do {
+
+    console.log(
+        number + " x " + i + " = " + number * i
+    );
+
+    i++;
+
+} while (i <= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+...
+7 x 10 = 70</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break bilan do while 🛑
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>break</code> yordamida
+            <code>do while</code> loopni
+            muddatidan oldin to‘xtatish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    if (i === 4) {
+        break;
+    }
+
+    console.log(i);
+
+    i++;
+
+} while (i <= 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+3</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            continue bilan do while ⏭️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>continue</code> joriy
+            aylanishni tashlab ketadi.
+
+            <br><br>
+
+            <code>do while</code> bilan
+            ishlaganda o‘zgaruvchini
+            shunday joylashtirish kerakki,
+            loop cheksiz bo‘lib qolmasin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 0;
+
+do {
+
+    i++;
+
+    if (i === 3) {
+        continue;
+    }
+
+    console.log(i);
+
+} while (i < 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>1
+2
+4
+5</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String bilan do while 📝
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let word = "Hello";
+let i = 0;
+
+do {
+
+    console.log(word[i]);
+
+    i++;
+
+} while (i < word.length);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>H
+e
+l
+l
+o</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Array bilan do while 📦
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+let i = 0;
+
+do {
+
+    console.log(fruits[i]);
+
+    i++;
+
+} while (i < fruits.length);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Olma
+Banan
+Uzum</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Shart boshidanoq false bo‘lsa ⚠️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 20;
+
+do {
+
+    console.log("Kod bajarildi");
+
+} while (i < 10);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Kod bajarildi</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>20 < 10</code> — false.
+
+            <br><br>
+
+            Lekin <code>do</code> qismi avval
+            bajarilgani uchun xabar bir marta
+            chiqadi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Cheksiz loopdan ehtiyot bo‘ling ⚠️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    console.log(i);
+
+} while (i <= 5);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda <code>i</code> o‘zgarmayapti.
+
+            <br><br>
+
+            Shuning uchun
+            <code>i <= 5</code> doim
+            <code>true</code> bo‘lib qoladi.
+
+            <br><br>
+
+            To‘g‘ri variant:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    console.log(i);
+
+    i++;
+
+} while (i <= 5);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            while va do while farqi 🔍
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>// while
+
+let number = 10;
+
+while (number < 5) {
+
+    console.log(number);
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>// do while
+
+let number = 10;
+
+do {
+
+    console.log(number);
+
+} while (number < 5);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <b class="text-white">while:</b>
+
+            <br>
+
+            Avval shart → keyin kod.
+
+            <br><br>
+
+            <b class="text-white">do while:</b>
+
+            <br>
+
+            Avval kod → keyin shart.
+
+            <br><br>
+
+            Shu sababli <code>do while</code>
+            kamida bir marta ishlaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qachon do while ishlatamiz? 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>do while</code> quyidagi
+            holatlarda foydali:
+
+            <br><br>
+
+            ✅ Kod kamida bir marta bajarilishi
+            kerak bo‘lsa.
+
+            <br><br>
+
+            ✅ Foydalanuvchiga avval biror
+            amal ko‘rsatib, keyin shartni
+            tekshirish kerak bo‘lsa.
+
+            <br><br>
+
+            ✅ Menyu yoki takroriy amalni
+            kamida bir marta bajarish kerak bo‘lsa.
+
+            <br><br>
+
+            Masalan, foydalanuvchiga menyuni
+            bir marta ko‘rsatish va keyin
+            davom etish yoki chiqishni tekshirish.
+
+        </p>
+
+    </section>
+
+
+    <!-- 21 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy misol — menyu 📋
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let choice = 1;
+
+do {
+
+    console.log("1. Kurslar");
+    console.log("2. Darslar");
+    console.log("3. Chiqish");
+
+    choice++;
+
+} while (choice <= 3);</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda menyu birinchi marta
+            albatta ko‘rsatiladi.
+
+            <br><br>
+
+            Keyin <code>choice <= 3</code>
+            sharti tekshiriladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 22 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarning natijasini
+            oldindan topishga harakat qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 5;
+
+do {
+
+    console.log(i);
+
+    i++;
+
+} while (i < 5);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    console.log(i);
+
+    i += 2;
+
+} while (i <= 7);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let number = 10;
+
+do {
+
+    console.log("Salom");
+
+} while (number < 5);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 23 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 🧑‍💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            1 dan 20 gacha bo‘lgan
+            4 ga bo‘linadigan sonlarni
+            <code>do while</code> yordamida
+            chiqaramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let i = 1;
+
+do {
+
+    if (i % 4 === 0) {
+
+        console.log(i);
+
+    }
+
+    i++;
+
+} while (i <= 20);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>4
+8
+12
+16
+20</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            <code>do while</code> yordamida
+            1 dan 10 gacha sonlarni chiqaring.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            10 dan 1 gacha teskari sanang.
+
+            <br><br>
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            1 dan 20 gacha faqat juft
+            sonlarni chiqaring.
+
+            <br><br>
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            1 dan 20 gacha faqat toq
+            sonlarni chiqaring.
+
+            <br><br>
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            1 dan 10 gacha bo‘lgan sonlar
+            yig‘indisini toping.
+
+            <br><br>
+
+            <b class="text-white">6-vazifa:</b>
+
+            <br>
+
+            9 sonining ko‘paytirish jadvalini
+            <code>do while</code> yordamida
+            chiqaring.
+
+            <br><br>
+
+            <b class="text-white">7-vazifa:</b>
+
+            <br>
+
+            1 dan 50 gacha 5 ga bo‘linadigan
+            sonlarni chiqaring.
+
+            <br><br>
+
+            <b class="text-white">8-vazifa:</b>
+
+            <br>
+
+            Shart boshidanoq false bo‘ladigan
+            <code>do while</code> yarating va
+            kod kamida bir marta bajarilishini
+            kuzating.
+
+            <br><br>
+
+            <b class="text-white">9-vazifa:</b>
+
+            <br>
+
+            <code>break</code> yordamida
+            1 dan 10 gacha sanashni
+            6 ga kelganda to‘xtating.
+
+            <br><br>
+
+            <b class="text-white">10-vazifa:</b>
+
+            <br>
+
+            <code>continue</code> yordamida
+            1 dan 10 gacha bo‘lgan sonlardan
+            5 ni tashlab keting.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ♻️ <code>do while</code> —
+                loopning yana bir turi.
+            </p>
+
+            <p>
+                🚀 Avval kod bajariladi,
+                keyin shart tekshiriladi.
+            </p>
+
+            <p>
+                🔥 Shart false bo‘lsa ham,
+                kod kamida bir marta bajariladi.
+            </p>
+
+            <p>
+                🛑 <code>break</code> —
+                loopni to‘xtatadi.
+            </p>
+
+            <p>
+                ⏭️ <code>continue</code> —
+                joriy aylanishni tashlab ketadi.
+            </p>
+
+            <p>
+                ⚠️ O‘zgaruvchini yangilashni
+                unutmaslik kerak, aks holda
+                cheksiz loop yuzaga kelishi mumkin.
+            </p>
+
+            <p>
+                🧠 <code>while</code> —
+                avval shart, keyin kod.
+            </p>
+
+            <p>
+                🧠 <code>do while</code> —
+                avval kod, keyin shart.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ♻️
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            22-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 22-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 21-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(21)) {
+
+        alert("Avval 21-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-21.html";
+
+        return;
+    }
+
+
+    // 22-darsni saqlash
+
+    if (!completedLessons.includes(22)) {
+
+        completedLessons.push(22);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 22-dars tugatildi! 23-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 22-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

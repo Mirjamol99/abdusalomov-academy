@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 15-dars | Logical operatorlar</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🧠 15-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            Logical operatorlar
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Logical operatorlar JavaScript'da
+            bir nechta shartni birlashtirish,
+            tekshirish va natijani teskari
+            qilish uchun ishlatiladi.
+
+            <br><br>
+
+            JavaScript'da 3 ta asosiy logical
+            operator mavjud:
+
+            <br><br>
+
+            <code>&&</code> — AND — VA
+
+            <br>
+
+            <code>||</code> — OR — YOKI
+
+            <br>
+
+            <code>!</code> — NOT — EMAS
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Logical operator nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Logical operatorlar odatda
+            <code>true</code> va
+            <code>false</code> qiymatlar bilan
+            ishlaydi.
+
+            <br><br>
+
+            Masalan:
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 18;
+
+console.log(age >= 18);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Endi ikkita shartni bir vaqtning
+            o‘zida tekshirishimiz kerak bo‘lsa,
+            logical operatorlardan foydalanamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Logical operatorlar jadvali 📚
+        </h2>
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b border-slate-700">
+
+                        <th class="p-4">
+                            Operator
+                        </th>
+
+                        <th class="p-4">
+                            Nomi
+                        </th>
+
+                        <th class="p-4">
+                            Ma'nosi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>&&</code>
+                        </td>
+
+                        <td class="p-4">
+                            AND
+                        </td>
+
+                        <td class="p-4">
+                            VA
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b border-slate-800">
+
+                        <td class="p-4 text-yellow-400">
+                            <code>||</code>
+                        </td>
+
+                        <td class="p-4">
+                            OR
+                        </td>
+
+                        <td class="p-4">
+                            YOKI
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="p-4 text-yellow-400">
+                            <code>!</code>
+                        </td>
+
+                        <td class="p-4">
+                            NOT
+                        </td>
+
+                        <td class="p-4">
+                            EMAS
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            && — AND operator 🧠
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>&&</code> operatori
+            <b class="text-white">VA</b> degan
+            ma'noni anglatadi.
+
+            <br><br>
+
+            Barcha shartlar <code>true</code>
+            bo‘lsagina natija <code>true</code>
+            bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(true && true);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Ikkala tomon ham <code>true</code>.
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            && operatorida false
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar hech bo‘lmaganda bitta shart
+            <code>false</code> bo‘lsa,
+            natija <code>false</code> bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(true && false);
+
+console.log(false && true);
+
+console.log(false && false);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>false
+false
+false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            && bilan real misol 🎓
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchi kamida 16 yoshda
+            <b>va</b> kursga ro‘yxatdan o‘tgan
+            bo‘lishi kerak.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 17;
+let registered = true;
+
+console.log(age >= 16 && registered);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Chunki:
+
+            <br><br>
+
+            <code>age >= 16</code> → `true`
+
+            <br>
+
+            <code>registered</code> → `true`
+
+            <br><br>
+
+            Demak:
+
+            <br>
+
+            <code>true && true</code> → `true`
+
+        </p>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            || — OR operator 🔀
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>||</code> operatori
+            <b class="text-white">YOKI</b> degan
+            ma'noni anglatadi.
+
+            <br><br>
+
+            Kamida bitta shart
+            <code>true</code> bo‘lsa,
+            natija <code>true</code> bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(true || false);
+
+console.log(false || true);
+
+console.log(true || true);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+true
+true</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            || operatorida false
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Faqat barcha shartlar
+            <code>false</code> bo‘lsa,
+            natija <code>false</code> bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(false || false);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>false</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            || bilan real misol 🎮
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchi 18 yoshdan katta
+            <b>yoki</b> maxsus ruxsatga ega
+            bo‘lishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 16;
+let permission = true;
+
+console.log(age >= 18 || permission);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Birinchi shart `false`, lekin
+            ikkinchi shart `true`.
+
+        </p>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ! — NOT operator 🔄
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>!</code> operatori natijani
+            teskarisiga o‘zgartiradi.
+
+            <br><br>
+
+            <code>true</code> → <code>false</code>
+
+            <br>
+
+            <code>false</code> → <code>true</code>
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(!true);
+
+console.log(!false);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>false
+true</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ! bilan o‘zgaruvchi
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = true;
+
+console.log(!isLogin);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>false</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Chunki <code>isLogin</code> qiymati
+            <code>true</code> edi.
+
+            <br><br>
+
+            <code>!true</code> → <code>false</code>
+
+        </p>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            &&, || va ! birgalikda 🔥
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 20;
+let balance = 50000;
+let blocked = false;
+
+let access =
+    age >= 18 &&
+    balance >= 30000 &&
+    !blocked;
+
+console.log(access);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Tekshiramiz:
+
+            <br><br>
+
+            <code>age >= 18</code> → `true`
+
+            <br>
+
+            <code>balance >= 30000</code> → `true`
+
+            <br>
+
+            <code>!blocked</code> → `true`
+
+            <br><br>
+
+            Natija:
+
+            <br>
+
+            <code>true && true && true</code>
+
+            → <code>true</code>
+
+        </p>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Login tizimi 🔐
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Login va parol to‘g‘ri bo‘lsa,
+            natija <code>true</code> bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let username = "admin";
+let password = "1234";
+
+let correctUsername =
+    username === "admin";
+
+let correctPassword =
+    password === "1234";
+
+let login =
+    correctUsername &&
+    correctPassword;
+
+console.log(login);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Balansni tekshirish 💰
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let balance = 50000;
+let price = 30000;
+
+let canBuy =
+    balance >= price &&
+    price > 0;
+
+console.log(canBuy);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Balans narxdan katta va mahsulot
+            narxi 0 dan katta.
+
+            <br><br>
+
+            Shuning uchun xarid qilish mumkin.
+
+        </p>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta shartni birlashtirish
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 17;
+let hasTicket = true;
+let hasPermission = false;
+
+let result =
+    age >= 18 ||
+    (age >= 16 &&
+     hasTicket &&
+     hasPermission);
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>false</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda qavs ichidagi shartlar
+            birgalikda tekshiriladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qavsdan foydalanish 📌
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Murakkab shartlarda qavs ishlatish
+            kodni tushunarli qiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 17;
+let hasTicket = true;
+
+let result =
+    age >= 18 ||
+    (age >= 16 && hasTicket);
+
+console.log(result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Logical operatorlar va Boolean
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Logical operatorlar Boolean qiymatlar
+            bilan juda ko‘p ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isStudent = true;
+let isLogin = true;
+
+let result = isStudent && isLogin;
+
+console.log(result);
+console.log(typeof result);</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>true
+boolean</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Avval natijalarni o‘zingiz toping,
+            keyin Console'da tekshiring.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>console.log(true && true);
+
+console.log(true && false);
+
+console.log(false && false);
+
+console.log(true || false);
+
+console.log(false || false);
+
+console.log(!true);
+
+console.log(!false);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Yana bir mashq 🧠
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 17;
+let money = 25000;
+let hasTicket = true;
+
+console.log(
+    age >= 16 &&
+    money >= 20000
+);
+
+console.log(
+    age >= 18 ||
+    hasTicket
+);
+
+console.log(!hasTicket);</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            <code>age = 18</code> va
+            <code>hasID = true</code> yarating.
+
+            <br>
+
+            <code>&&</code> yordamida ikkala shartni
+            tekshiring.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            <code>age = 15</code> yarating.
+
+            <br>
+
+            <code>||</code> yordamida yoshni
+            tekshiring.
+
+            <br><br>
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            <code>isLogin = false</code> yarating
+            va <code>!</code> yordamida teskarisini
+            chiqaring.
+
+            <br><br>
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            Balans va mahsulot narxini
+            <code>&&</code> yordamida tekshiring.
+
+            <br><br>
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            Login va parolni
+            <code>===</code> hamda
+            <code>&&</code> yordamida tekshiring.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🧠 <code>&&</code> —
+                VA — barcha shartlar true bo‘lishi kerak.
+            </p>
+
+            <p>
+                🔀 <code>||</code> —
+                YOKI — kamida bitta shart true bo‘lsa yetarli.
+            </p>
+
+            <p>
+                🔄 <code>!</code> —
+                EMAS — natijani teskarisiga o‘giradi.
+            </p>
+
+            <p>
+                💡 Logical operatorlar
+                comparison operatorlar bilan
+                birga juda ko‘p ishlatiladi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🧠
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            15-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 15-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 14-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(14)) {
+
+        alert("Avval 14-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-14.html";
+
+        return;
+    }
+
+
+    // 15-darsni saqlash
+
+    if (!completedLessons.includes(15)) {
+
+        completedLessons.push(15);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 15-dars tugatildi! 16-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 15-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

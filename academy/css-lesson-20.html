@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS 20-dars | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<header class="sticky top-0 z-50 bg-slate-950/90
+               backdrop-blur-xl border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-4
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl md:text-3xl font-extrabold">
+
+            <span class="text-blue-500">Abdusalomov</span>
+            Academy
+
+        </a>
+
+        <a href="css-course.html"
+           class="text-slate-400 hover:text-blue-400
+                  flex items-center gap-2">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            CSS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- HEADER -->
+
+    <div class="mb-10">
+
+        <span class="lesson-number">
+            <i class="fa-brands fa-css3-alt"></i>
+            20-DARS
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            CSS Animations & Transitions ✨
+
+        </h1>
+
+        <p class="text-slate-400 text-lg md:text-xl
+                  mt-5 leading-8">
+
+            Sayt elementlariga chiroyli harakat,
+            animatsiya va yumshoq o'tish effektlarini
+            qo'shishni o'rganamiz.
+
+        </p>
+
+    </div>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <div class="lesson-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+
+        <h2 class="lesson-title">
+            1. CSS Transition nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `transition` elementdagi o'zgarishlarni
+            birdaniga emas, silliq tarzda amalga
+            oshirish uchun ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.button {
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}</code></pre>
+
+        </div>
+
+        <div class="transition-demo">
+            Hover qiling 👆
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            2. `transform`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `transform` yordamida elementni
+            kattalashtirish, kichraytirish, aylantirish
+            yoki siljitish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box:hover {
+    transform: scale(1.1);
+}</code></pre>
+
+        </div>
+
+        <div class="transform-demo">
+            Hover qiling
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            3. `translate`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `translate` elementni X yoki Y
+            yo'nalishida siljitadi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box:hover {
+    transform: translateY(-10px);
+}</code></pre>
+
+        </div>
+
+        <div class="translate-demo">
+            Tepaga ko'tarilaman 🚀
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            4. `rotate`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `rotate()` elementni aylantirish uchun
+            ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box:hover {
+    transform: rotate(10deg);
+}</code></pre>
+
+        </div>
+
+        <div class="rotate-demo">
+            🔄
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            5. `@keyframes`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            `@keyframes` yordamida o'zimizning
+            CSS animatsiyamizni yaratamiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>@keyframes move {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            6. `animation`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Yaratilgan `@keyframes` animatsiyasini
+            elementga `animation` orqali beramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    animation:
+        move 2s infinite alternate;
+}</code></pre>
+
+        </div>
+
+        <div class="animation-area">
+
+            <div class="animated-box">
+                🚀
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            7. `animation-duration`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Animatsiyaning qancha vaqt davom etishini
+            `animation-duration` bilan belgilaymiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    animation-duration: 2s;
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            8. `animation-iteration-count`
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Animatsiya necha marta takrorlanishini
+            belgilaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>.box {
+    animation-iteration-count: infinite;
+}</code></pre>
+
+        </div>
+
+        <div class="pulse-demo">
+            ❤️
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="lesson-title">
+            9. Amaliy loyiha 💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Endi transition va animation yordamida
+            zamonaviy kurs kartasini yaratamiz.
+
+        </p>
+
+        <div class="final-card">
+
+            <div class="final-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>
+                Frontend Developer
+            </h3>
+
+            <p>
+                HTML + CSS kursini o'rganing
+                va web dasturlashni boshlang.
+            </p>
+
+            <button>
+                Kursni boshlash
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEST -->
+
+    <section class="lesson-box">
+
+        <span class="text-blue-400 font-bold">
+            YAKUNIY MINI TEST 🧠
+        </span>
+
+        <h2 class="text-2xl md:text-3xl
+                   font-bold mt-4">
+
+            CSS animatsiyasini yaratishda
+            qaysi qoida ishlatiladi?
+
+        </h2>
+
+        <div class="grid md:grid-cols-2
+                    gap-4 mt-7">
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                A) @motion
+
+            </button>
+
+            <button
+                onclick="checkAnswer(true)"
+                class="answer-btn">
+
+                B) @keyframes
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                C) @animation
+
+            </button>
+
+            <button
+                onclick="checkAnswer(false)"
+                class="answer-btn">
+
+                D) @move
+
+            </button>
+
+        </div>
+
+        <p id="answerResult"
+           class="mt-6 font-bold text-lg">
+        </p>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="mt-10
+                    bg-gradient-to-r
+                    from-blue-600/20
+                    to-cyan-500/10
+                    border border-blue-500/20
+                    rounded-3xl p-8 text-center">
+
+        <div class="text-6xl mb-5">
+            🏆
+        </div>
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            CSS KURSINI YAKUNLADINGIZ! 🎉
+
+        </h2>
+
+        <p class="text-slate-400 mt-4 leading-7">
+
+            20 ta darsni muvaffaqiyatli tugatdingiz.
+            Endi CSS bo'yicha asosiy bilimlarga egasiz.
+
+        </p>
+
+    </section>
+
+
+    <section class="mt-8">
+
+        <button
+            id="completeBtn"
+            onclick="completeLesson()"
+            class="w-full bg-blue-600
+                   hover:bg-blue-700
+                   px-7 py-5 rounded-2xl
+                   font-bold text-lg
+                   transition">
+
+            🏆 CSS KURSINI YAKUNLASH
+
+        </button>
+
+        <p id="completeMessage"
+           class="text-center text-green-400
+                  font-semibold mt-5">
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <p class="text-slate-500">
+            © 2026 Abdusalomov Academy
+        </p>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+.lesson-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(59,130,246,.1);
+
+    border: 1px solid rgba(59,130,246,.2);
+
+    color: #60a5fa;
+
+    font-weight: 700;
+}
+
+.lesson-box {
+    margin-top: 32px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 24px;
+
+    padding: 28px;
+}
+
+.lesson-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.lesson-title {
+    font-size: 27px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.code-box {
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+}
+
+.code-box pre {
+    color: #4ade80;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+}
+
+
+/* TRANSITION */
+
+.transition-demo {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #2563eb;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    font-weight: 900;
+
+    transition: .3s;
+}
+
+.transition-demo:hover {
+    transform: scale(1.05);
+
+    background: #7c3aed;
+}
+
+
+/* TRANSFORM */
+
+.transform-demo {
+    width: 180px;
+    height: 100px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+
+    border-radius: 18px;
+
+    font-weight: 900;
+
+    transition: .4s;
+}
+
+.transform-demo:hover {
+    transform: scale(1.15);
+}
+
+
+/* TRANSLATE */
+
+.translate-demo {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    width: 250px;
+
+    background: #7c3aed;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    font-weight: 900;
+
+    transition: .5s;
+}
+
+.translate-demo:hover {
+    transform: translateY(-15px);
+}
+
+
+/* ROTATE */
+
+.rotate-demo {
+    width: 100px;
+    height: 100px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+    font-size: 35px;
+
+    transition: .5s;
+}
+
+.rotate-demo:hover {
+    transform: rotate(360deg);
+}
+
+
+/* ANIMATION */
+
+.animation-area {
+    margin-top: 30px;
+
+    height: 130px;
+
+    padding: 20px;
+
+    background: #020617;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+.animated-box {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+
+    animation:
+        moveBox 2s infinite alternate ease-in-out;
+}
+
+@keyframes moveBox {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(400px);
+    }
+
+}
+
+
+/* PULSE */
+
+.pulse-demo {
+    width: 90px;
+    height: 90px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e11d48;
+
+    border-radius: 50%;
+
+    font-size: 35px;
+
+    animation:
+        pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* FINAL CARD */
+
+.final-card {
+    margin-top: 30px;
+
+    padding: 35px;
+
+    max-width: 430px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #020617;
+
+    border: 1px solid #334155;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    transition: .4s;
+}
+
+.final-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 20px 50px rgba(37,99,235,.2);
+}
+
+.final-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: rgba(59,130,246,.1);
+
+    color: #60a5fa;
+
+    font-size: 30px;
+}
+
+.final-card h3 {
+    font-size: 26px;
+
+    font-weight: 900;
+}
+
+.final-card p {
+    margin-top: 12px;
+
+    color: #94a3b8;
+
+    line-height: 1.7;
+}
+
+.final-card button {
+    margin-top: 25px;
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.final-card button:hover {
+    transform: scale(1.03);
+
+    background: #1d4ed8;
+}
+
+
+/* TEST */
+
+.answer-btn {
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #334155;
+
+    background: #020617;
+
+    color: white;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    transition: .3s;
+}
+
+.answer-btn:hover {
+    border-color: #3b82f6;
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .lesson-box {
+        padding: 20px;
+    }
+
+    .animated-box {
+        animation: none;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+// MINI TEST
+
+function checkAnswer(correct) {
+
+    const result =
+        document.getElementById("answerResult");
+
+    if (correct) {
+
+        result.textContent =
+            "✅ To'g'ri! CSS animatsiyasi @keyframes orqali yaratiladi.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-green-400";
+
+    } else {
+
+        result.textContent =
+            "❌ Noto'g'ri. To'g'ri javob: @keyframes.";
+
+        result.className =
+            "mt-6 font-bold text-lg text-red-400";
+
+    }
+
+}
+
+// COMPLETE CSS COURSE
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("cssCompletedLessons")
+        ) || [];
+
+
+    // 19-dars tekshiriladi
+
+    if (!completedLessons.includes(19)) {
+
+        alert(
+            "Avval 19-darsni tugating!"
+        );
+
+        window.location.href =
+            "css-lesson-19.html";
+
+        return;
+    }
+
+
+    // 20-darsni saqlash
+
+    if (!completedLessons.includes(20)) {
+
+        completedLessons.push(20);
+
+    }
+
+
+    localStorage.setItem(
+        "cssCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "completeMessage"
+    ).textContent =
+        "🏆 Tabriklaymiz! CSS kursini to‘liq tugatdingiz!";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.innerHTML =
+        "🏆 CSS KURSI TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-blue-600",
+        "hover:bg-blue-700"
+    );
+
+
+    button.classList.add(
+        "bg-green-600"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "css-course.html";
+
+    }, 2000);
+
+}
+
+</script>
+
+</body>
+</html>

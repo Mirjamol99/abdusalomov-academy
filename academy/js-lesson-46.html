@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 46-dars | Object property va methodlari</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        ⚙️ 46-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        Object property va methodlari
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda Object ichidagi
+        <code>property</code> va
+        <code>method</code> tushunchalarini
+        chuqurroq o‘rganamiz.
+
+        <br><br>
+
+        Shuningdek,
+        <code>Object.keys()</code>,
+        <code>Object.values()</code> va
+        <code>Object.entries()</code>
+        metodlari bilan tanishamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📦 Property nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichida saqlanadigan
+        <b class="text-white">
+            key-value
+        </b>
+        ma'lumot property deyiladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu Object'da 3 ta property bor:
+
+        <br><br>
+
+        <code>name</code>
+
+        <br>
+
+        <code>age</code>
+
+        <br>
+
+        <code>city</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 Property'ni olish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Property qiymatini nuqta
+        <code>.</code> orqali olish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+console.log(user.name);
+
+console.log(user.age);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ali
+18</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 Bracket notation
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Property'ni <code>[]</code> orqali
+        ham olish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+console.log(user["name"]);
+
+console.log(user["age"]);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Quyidagi ikkala yozuv ham bir xil:
+
+        <br><br>
+
+        <code>user.name</code>
+
+        <br>
+
+        <code>user["name"]</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✏️ Property'ni o‘zgartirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+user.age = 20;
+
+console.log(user.age);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>20</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ➕ Property qo‘shish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+user.city = "Andijon";
+
+console.log(user);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>{
+    name: "Ali",
+    age: 18,
+    city: "Andijon"
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ❌ Property o‘chirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};
+
+delete user.city;
+
+console.log(user);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚙️ Method nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object ichida saqlangan
+        <b class="text-white">
+            function
+        </b>
+        method deyiladi.
+
+        <br><br>
+
+        Ya'ni:
+
+        <br><br>
+
+        <code>property</code> → ma'lumot
+
+        <br>
+
+        <code>method</code> → amal bajaruvchi function
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    sayHello: function() {
+
+        console.log("Salom!");
+
+    }
+
+};
+
+user.sayHello();</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Salom!</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ Methodni qisqa yozish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object methodini zamonaviy JavaScript'da
+        qisqa ko‘rinishda yozish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    sayHello() {
+
+        console.log("Salom!");
+
+    }
+
+};
+
+user.sayHello();</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu:
+
+        <br><br>
+
+        <code>sayHello: function() {}</code>
+
+        <br><br>
+
+        bilan bir xil ma'noga ega.
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👤 Method va this
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Object methodi ichida
+        <code>this</code>
+        orqali shu Object'ning
+        property'lariga murojaat qilish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    sayHello() {
+
+        console.log(
+            "Salom, " + this.name
+        );
+
+    }
+
+};
+
+user.sayHello();</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Salom, Ali</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>this.name</code>
+
+        →
+
+        <code>user.name</code>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 this bilan age
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    info() {
+
+        console.log(
+            "Ism: " + this.name
+        );
+
+        console.log(
+            "Yosh: " + this.age
+        );
+
+    }
+
+};
+
+user.info();</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ism: Ali
+Yosh: 18</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔑 Object.keys()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>Object.keys()</code>
+        Object ichidagi barcha
+        key'larni Array ko‘rinishida qaytaradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};
+
+let keys = Object.keys(user);
+
+console.log(keys);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "name",
+    "age",
+    "city"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        💎 Object.values()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>Object.values()</code>
+        Object ichidagi barcha
+        value'larni Array ko‘rinishida
+        qaytaradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};
+
+let values = Object.values(user);
+
+console.log(values);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    "Ali",
+    18,
+    "Andijon"
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔗 Object.entries()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>Object.entries()</code>
+        key va value'larni juftlik
+        ko‘rinishida Array qilib beradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};
+
+console.log(
+    Object.entries(user)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>[
+    ["name", "Ali"],
+    ["age", 18]
+]</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 Object.keys() bilan loop
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};
+
+let keys = Object.keys(user);
+
+keys.forEach(function(key) {
+
+    console.log(
+        key,
+        user[key]
+    );
+
+});</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>name Ali
+age 18
+city Andijon</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔁 Object.values() bilan loop
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};
+
+Object.values(user).forEach(
+    function(value) {
+
+        console.log(value);
+
+    }
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔗 Object.entries() bilan loop
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    city: "Andijon"
+
+};
+
+Object.entries(user).forEach(
+    function(entry) {
+
+        console.log(
+            entry[0],
+            entry[1]
+        );
+
+    }
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>entry[0]</code>
+        → key
+
+        <br><br>
+
+        <code>entry[1]</code>
+        → value
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Product Object
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let product = {
+
+    name: "Pizza",
+
+    price: 50000,
+
+    category: "Pizza",
+
+    available: true,
+
+    showInfo() {
+
+        console.log(
+            "Mahsulot: " +
+            this.name
+        );
+
+        console.log(
+            "Narx: " +
+            this.price
+        );
+
+    }
+
+};
+
+product.showInfo();</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Mahsulot: Pizza
+Narx: 50000</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        👤 User Object methodi
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18,
+
+    isOnline: true,
+
+    login() {
+
+        this.isOnline = true;
+
+        console.log(
+            this.name +
+            " tizimga kirdi."
+        );
+
+    },
+
+    logout() {
+
+        this.isOnline = false;
+
+        console.log(
+            this.name +
+            " tizimdan chiqdi."
+        );
+
+    }
+
+};
+
+user.login();
+
+user.logout();</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 Property va Method farqi
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-yellow-400">
+
+                Property
+
+            </h3>
+
+            <p class="text-slate-400 mt-5">
+
+                Ma'lumot saqlaydi.
+
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    age: 18
+
+};</code></pre>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="method-card">
+
+            <h3 class="text-2xl
+                       font-bold
+                       text-green-400">
+
+                Method
+
+            </h3>
+
+            <p class="text-slate-400 mt-5">
+
+                Amal bajaradi.
+
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let user = {
+
+    sayHello() {
+
+        console.log(
+            "Salom!"
+        );
+
+    }
+
+};</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 To‘liq amaliy misol
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let student = {
+
+    name: "Ali",
+
+    age: 18,
+
+    score: 95,
+
+    isStudent: true,
+
+    subjects: [
+        "Math",
+        "English",
+        "JavaScript"
+    ],
+
+    getInfo() {
+
+        console.log(
+            "Ism: " + this.name
+        );
+
+        console.log(
+            "Yosh: " + this.age
+        );
+
+        console.log(
+            "Ball: " + this.score
+        );
+
+    },
+
+    isPassed() {
+
+        return this.score >= 60;
+
+    }
+
+};
+
+
+student.getInfo();
+
+console.log(
+    student.isPassed()
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>Ism: Ali
+Yosh: 18
+Ball: 95
+
+true</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 21 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Muhim Object metodlari
+
+    </h2>
+
+
+    <div class="space-y-5">
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                Object.keys(object)
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Barcha key'larni Array qilib beradi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                Object.values(object)
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Barcha value'larni Array qilib beradi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                Object.entries(object)
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Key va value'larni juftlik qilib beradi.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 👤
+            </b>
+
+            <br>
+
+            User Object yarating.
+
+            <br><br>
+
+            Unda:
+
+            <br>
+
+            <code>name</code>
+
+            <br>
+
+            <code>age</code>
+
+            <br>
+
+            <code>city</code>
+
+            <br>
+
+            <code>isOnline</code>
+
+            <br>
+
+            property'lari bo‘lsin.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa ⚙️
+            </b>
+
+            <br>
+
+            User Object ichida
+            <code>sayHello()</code>
+            methodini yarating.
+
+            <br><br>
+
+            Method:
+
+            <br>
+
+            <code>Salom, Ali!</code>
+
+            <br>
+
+            kabi natija chiqarsin.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🔍
+            </b>
+
+            <br>
+
+            <code>Object.keys()</code>
+            yordamida barcha key'larni
+            console'ga chiqaring.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 💎
+            </b>
+
+            <br>
+
+            <code>Object.values()</code>
+            yordamida barcha value'larni
+            console'ga chiqaring.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🔗
+            </b>
+
+            <br>
+
+            <code>Object.entries()</code>
+            yordamida key va value'larni
+            console'ga chiqaring.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🛒
+            </b>
+
+            <br>
+
+            Product Object yarating.
+
+            <br><br>
+
+            Unda:
+
+            <br>
+
+            <code>name</code>
+
+            <br>
+
+            <code>price</code>
+
+            <br>
+
+            <code>category</code>
+
+            <br>
+
+            <code>available</code>
+
+            <br>
+
+            va
+
+            <br>
+
+            <code>showInfo()</code>
+
+            <br>
+
+            bo‘lsin.
+
+        </div>
+
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa 🔥
+            </b>
+
+            <br>
+
+            Object methodi ichida
+            <code>this</code> ishlating.
+
+            <br><br>
+
+            Masalan:
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let user = {
+
+    name: "Ali",
+
+    sayHello() {
+
+        console.log(
+            "Salom, " + this.name
+        );
+
+    }
+
+};</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            📦 <code>property</code>
+            → Object ichidagi ma'lumot.
+        </p>
+
+
+        <p>
+            ⚙️ <code>method</code>
+            → Object ichidagi function.
+        </p>
+
+
+        <p>
+            🔍 <code>Object.keys()</code>
+            → key'larni qaytaradi.
+        </p>
+
+
+        <p>
+            💎 <code>Object.values()</code>
+            → value'larni qaytaradi.
+        </p>
+
+
+        <p>
+            🔗 <code>Object.entries()</code>
+            → key va value juftliklarini qaytaradi.
+        </p>
+
+
+        <p>
+            🧠 <code>this</code>
+            → method ichida Object'ning
+            o‘ziga murojaat qilishga yordam beradi.
+        </p>
+
+
+        <p>
+            🔥 Objectlar real loyihalarda
+            user, product, cart, post va
+            boshqa ma'lumotlarni saqlashda
+            juda ko‘p ishlatiladi.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        ⚙️
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        46-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 46-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        45-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(45)) {
+
+        alert(
+            "Avval 45-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-45.html";
+
+        return;
+
+    }
+
+
+    /*
+        46-darsni saqlash
+    */
+
+    if (!completedLessons.includes(46)) {
+
+        completedLessons.push(46);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 46-dars tugatildi! 47-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 46-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

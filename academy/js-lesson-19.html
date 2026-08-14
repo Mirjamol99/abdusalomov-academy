@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 19-dars | switch operatori</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            🔄 19-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            switch operatori
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            Bugun JavaScript'dagi
+            <code>switch</code> operatorini
+            o‘rganamiz.
+
+            <br><br>
+
+            <code>switch</code> biror qiymatni
+            bir nechta variant bilan solishtirish
+            uchun ishlatiladi.
+
+            <br><br>
+
+            U ko‘p variantli
+            <code>if / else if / else</code>
+            shartlarini yozishda juda qulay.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            switch nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>switch</code> berilgan qiymatni
+            turli <code>case</code> qiymatlari
+            bilan taqqoslaydi.
+
+            <br><br>
+
+            Qaysi <code>case</code> mos kelsa,
+            shu qismdagi kod bajariladi.
+
+            <br><br>
+
+            Agar hech qaysi <code>case</code>
+            mos kelmasa, <code>default</code>
+            bajariladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            switch sintaksisi 📚
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>switch (qiymat) {
+
+    case qiymat1:
+        // kod
+        break;
+
+    case qiymat2:
+        // kod
+        break;
+
+    default:
+        // kod
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu yerda:
+
+            <br><br>
+
+            <code>switch</code> — tekshiriladigan
+            qiymat.
+
+            <br>
+
+            <code>case</code> — mumkin bo‘lgan
+            variant.
+
+            <br>
+
+            <code>break</code> — switch'dan
+            chiqish.
+
+            <br>
+
+            <code>default</code> — hech bir
+            case mos kelmaganda ishlaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oddiy switch misoli
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let day = 1;
+
+switch (day) {
+
+    case 1:
+        console.log("Dushanba");
+        break;
+
+    case 2:
+        console.log("Seshanba");
+        break;
+
+    case 3:
+        console.log("Chorshanba");
+        break;
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Dushanba</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            case qanday ishlaydi? 🔍
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let color = "red";
+
+switch (color) {
+
+    case "red":
+        console.log("Qizil");
+        break;
+
+    case "blue":
+        console.log("Ko‘k");
+        break;
+
+    case "green":
+        console.log("Yashil");
+        break;
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Qizil</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>color</code> qiymati
+            <code>"red"</code>.
+
+            <br><br>
+
+            JavaScript <code>case "red"</code>
+            bilan mosligini topadi va uning
+            ichidagi kodni bajaradi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break nima uchun kerak? 🛑
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>break</code> switch'dan
+            chiqish uchun ishlatiladi.
+
+            <br><br>
+
+            Odatda har bir <code>case</code>
+            oxirida <code>break</code> yoziladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let number = 2;
+
+switch (number) {
+
+    case 1:
+        console.log("Bir");
+        break;
+
+    case 2:
+        console.log("Ikki");
+        break;
+
+    case 3:
+        console.log("Uch");
+        break;
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Ikki</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            break bo‘lmasa nima bo‘ladi? ⚠️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Agar <code>break</code> yozilmasa,
+            JavaScript keyingi <code>case</code>
+            qismlarini ham bajarishi mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let number = 1;
+
+switch (number) {
+
+    case 1:
+        console.log("Bir");
+
+    case 2:
+        console.log("Ikki");
+
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Bir
+Ikki</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Shuning uchun oddiy
+            <code>switch</code> ishlatganda
+            <code>break</code>ni unutmaslik kerak.
+
+        </p>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            default nima? ❓
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>default</code> hech bir
+            <code>case</code> mos kelmaganda
+            ishlaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let day = 8;
+
+switch (day) {
+
+    case 1:
+        console.log("Dushanba");
+        break;
+
+    case 2:
+        console.log("Seshanba");
+        break;
+
+    default:
+        console.log("Bunday kun yo‘q");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Bunday kun yo‘q</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Haftaning kunlari 📅
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let day = 5;
+
+switch (day) {
+
+    case 1:
+        console.log("Dushanba");
+        break;
+
+    case 2:
+        console.log("Seshanba");
+        break;
+
+    case 3:
+        console.log("Chorshanba");
+        break;
+
+    case 4:
+        console.log("Payshanba");
+        break;
+
+    case 5:
+        console.log("Juma");
+        break;
+
+    case 6:
+        console.log("Shanba");
+        break;
+
+    case 7:
+        console.log("Yakshanba");
+        break;
+
+    default:
+        console.log("Noto‘g‘ri kun");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Juma</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            String bilan switch 📝
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let username = "admin";
+
+switch (username) {
+
+    case "admin":
+        console.log("Admin panel");
+        break;
+
+    case "user":
+        console.log("User panel");
+        break;
+
+    default:
+        console.log("Foydalanuvchi topilmadi");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Admin panel</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Calculator misoli 🧮
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let operator = "+";
+
+switch (operator) {
+
+    case "+":
+        console.log("Qo‘shish");
+        break;
+
+    case "-":
+        console.log("Ayirish");
+        break;
+
+    case "*":
+        console.log("Ko‘paytirish");
+        break;
+
+    case "/":
+        console.log("Bo‘lish");
+        break;
+
+    default:
+        console.log("Noto‘g‘ri operator");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Qo‘shish</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bir nechta case bir xil natija 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Ba'zida bir nechta qiymat uchun
+            bir xil kod bajarilishi kerak bo‘ladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let day = 6;
+
+switch (day) {
+
+    case 6:
+    case 7:
+        console.log("Dam olish kuni");
+        break;
+
+    default:
+        console.log("Ish kuni");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Dam olish kuni</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oylarni tekshirish 📆
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let month = 2;
+
+switch (month) {
+
+    case 1:
+        console.log("Yanvar");
+        break;
+
+    case 2:
+        console.log("Fevral");
+        break;
+
+    case 3:
+        console.log("Mart");
+        break;
+
+    default:
+        console.log("Boshqa oy");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Fevral</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            switch va number 🔢
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let score = 3;
+
+switch (score) {
+
+    case 5:
+        console.log("A'lo");
+        break;
+
+    case 4:
+        console.log("Yaxshi");
+        break;
+
+    case 3:
+        console.log("Qoniqarli");
+        break;
+
+    case 2:
+        console.log("Qoniqarsiz");
+        break;
+
+    default:
+        console.log("Noto‘g‘ri baho");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Qoniqarli</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            switch va === ⚖️
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>switch</code> qiymatlarni
+            qat'iy taqqoslash orqali tekshiradi.
+
+            <br><br>
+
+            Shuning uchun qiymatning turi ham
+            muhim.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let value = "1";
+
+switch (value) {
+
+    case 1:
+        console.log("Number");
+        break;
+
+    case "1":
+        console.log("String");
+        break;
+
+    default:
+        console.log("Topilmadi");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>String</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            switch va if / else 🔄
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, bir xil vazifani
+            <code>if / else if</code> bilan
+            ham yozish mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let day = 2;
+
+if (day === 1) {
+    console.log("Dushanba");
+} else if (day === 2) {
+    console.log("Seshanba");
+} else if (day === 3) {
+    console.log("Chorshanba");
+} else {
+    console.log("Noma'lum");
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+            Buni <code>switch</code> bilan:
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let day = 2;
+
+switch (day) {
+
+    case 1:
+        console.log("Dushanba");
+        break;
+
+    case 2:
+        console.log("Seshanba");
+        break;
+
+    case 3:
+        console.log("Chorshanba");
+        break;
+
+    default:
+        console.log("Noma'lum");
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Qachon switch ishlatamiz? 🎯
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>switch</code> ayniqsa:
+
+            <br><br>
+
+            ✅ Bitta qiymatni ko‘p variant
+            bilan solishtirganda
+
+            <br>
+
+            ✅ Kun, oy, menyu kabi variantlarda
+
+            <br>
+
+            ✅ Kodni tartibli yozish kerak
+            bo‘lganda
+
+            <br><br>
+
+            juda qulay.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            switch ichida bir nechta amal
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let role = "admin";
+
+switch (role) {
+
+    case "admin":
+
+        console.log("Admin panel");
+        console.log("Barcha huquqlar mavjud");
+
+        break;
+
+    case "user":
+
+        console.log("User panel");
+        console.log("Oddiy huquqlar");
+
+        break;
+
+    default:
+
+        console.log("Noma'lum rol");
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarning natijasini
+            oldindan topishga harakat qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let number = 2;
+
+switch (number) {
+
+    case 1:
+        console.log("A");
+        break;
+
+    case 2:
+        console.log("B");
+        break;
+
+    default:
+        console.log("C");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let color = "blue";
+
+switch (color) {
+
+    case "red":
+        console.log("Qizil");
+        break;
+
+    case "blue":
+        console.log("Ko‘k");
+        break;
+
+    default:
+        console.log("Noma'lum");
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 🧑‍💻
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchining roliga qarab
+            turli xabar chiqaramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let role = "user";
+
+switch (role) {
+
+    case "admin":
+        console.log("Admin panelga xush kelibsiz!");
+        break;
+
+    case "teacher":
+        console.log("O‘qituvchi paneliga xush kelibsiz!");
+        break;
+
+    case "user":
+        console.log("Foydalanuvchi paneliga xush kelibsiz!");
+        break;
+
+    default:
+        console.log("Rol aniqlanmadi");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Foydalanuvchi paneliga xush kelibsiz!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            <code>day</code> o‘zgaruvchisini yarating.
+            1 dan 7 gacha bo‘lgan son orqali
+            hafta kunini <code>switch</code>
+            yordamida aniqlang.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            <code>month</code> yarating.
+            1, 2, 3 qiymatlariga mos ravishda
+            oy nomlarini chiqaring.
+
+            <br><br>
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            <code>operator</code> yarating.
+            <code>+</code>, <code>-</code>,
+            <code>*</code>, <code>/</code>
+            operatorlarini <code>switch</code>
+            yordamida tekshiring.
+
+            <br><br>
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            <code>role</code> yarating.
+            <code>admin</code>,
+            <code>teacher</code>,
+            <code>user</code>
+            rollarini aniqlang.
+
+            <br><br>
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            <code>score</code> yarating.
+            1 dan 5 gacha bo‘lgan baholar uchun
+            tegishli xabar chiqaring.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                🔄 <code>switch</code> —
+                bitta qiymatni bir nechta
+                variant bilan solishtiradi.
+            </p>
+
+            <p>
+                🎯 <code>case</code> —
+                mumkin bo‘lgan variant.
+            </p>
+
+            <p>
+                🛑 <code>break</code> —
+                switch'dan chiqadi.
+            </p>
+
+            <p>
+                ❓ <code>default</code> —
+                hech bir case mos kelmaganda ishlaydi.
+            </p>
+
+            <p>
+                🧠 <code>switch</code> qiymatlarni
+                qat'iy taqqoslaydi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            🔄
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            19-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 19-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 18-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(18)) {
+
+        alert("Avval 18-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-18.html";
+
+        return;
+    }
+
+
+    // 19-darsni saqlash
+
+    if (!completedLessons.includes(19)) {
+
+        completedLessons.push(19);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 19-dars tugatildi! 20-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 19-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

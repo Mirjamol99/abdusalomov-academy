@@ -1,0 +1,2226 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 50-dars | Date va vaqt</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        📅 50-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        Date va vaqt
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugungi darsda JavaScript'da
+        sana va vaqt bilan ishlashni
+        o‘rganamiz.
+
+        <br><br>
+
+        JavaScript'da sana va vaqt bilan
+        ishlash uchun <code>Date</code>
+        obyektidan foydalaniladi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📅 Date nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>Date</code> — JavaScript'da
+        sana va vaqtni saqlash va ular bilan
+        ishlash uchun ishlatiladigan obyekt.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+console.log(now);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>new Date()</code>
+        → hozirgi sana va vaqtni beradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⏰ Hozirgi vaqtni olish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+console.log(now);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Natija taxminan quyidagicha
+        ko‘rinishi mumkin:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>Mon Aug 10 2026 15:30:00 GMT+0500</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📆 Yilni olish — getFullYear()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let year = now.getFullYear();
+
+console.log(year);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>2026</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        <code>getFullYear()</code>
+        → yilni qaytaradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📅 Oy — getMonth()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let month = now.getMonth();
+
+console.log(month);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ⚠️ Muhim!
+
+        <br><br>
+
+        JavaScript'da oylar
+        <b>0 dan boshlanadi</b>.
+
+        <br><br>
+
+        Yanvar → 0
+
+        <br>
+
+        Fevral → 1
+
+        <br>
+
+        Mart → 2
+
+        <br>
+
+        ...
+
+        <br>
+
+        Dekabr → 11
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📆 To‘g‘ri oy nomini chiqarish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let month = now.getMonth() + 1;
+
+console.log(month);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        <code>+ 1</code> qilish orqali
+        odatdagi oy raqamini olamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📅 Kun — getDate()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let day = now.getDate();
+
+console.log(day);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        <code>getDate()</code>
+        → oyning nechanchi kuni ekanini
+        qaytaradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🗓️ Hafta kuni — getDay()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let day = now.getDay();
+
+console.log(day);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>getDay()</code> hafta kunini
+        0–6 oralig‘ida qaytaradi.
+
+        <br><br>
+
+        Yakshanba → 0
+
+        <br>
+
+        Dushanba → 1
+
+        <br>
+
+        Seshanba → 2
+
+        <br>
+
+        Chorshanba → 3
+
+        <br>
+
+        Payshanba → 4
+
+        <br>
+
+        Juma → 5
+
+        <br>
+
+        Shanba → 6
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⏰ Soat — getHours()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let hours = now.getHours();
+
+console.log(hours);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        <code>getHours()</code>
+        → soatni qaytaradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⏱️ Daqiqa — getMinutes()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let minutes = now.getMinutes();
+
+console.log(minutes);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⏱️ Sekund — getSeconds()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let seconds = now.getSeconds();
+
+console.log(seconds);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚡ Millisekund — getMilliseconds()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let milliseconds =
+    now.getMilliseconds();
+
+console.log(milliseconds);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Millisekund — sekundning
+        mingdan bir qismi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Date'dan barcha ma'lumotlarni olish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+console.log(
+    "Yil:",
+    now.getFullYear()
+);
+
+console.log(
+    "Oy:",
+    now.getMonth() + 1
+);
+
+console.log(
+    "Kun:",
+    now.getDate()
+);
+
+console.log(
+    "Soat:",
+    now.getHours()
+);
+
+console.log(
+    "Daqiqa:",
+    now.getMinutes()
+);
+
+console.log(
+    "Sekund:",
+    now.getSeconds()
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📅 Belgilangan sana yaratish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let date = new Date(
+    2026,
+    7,
+    10
+);
+
+console.log(date);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu yerda:
+
+        <br><br>
+
+        <code>2026</code> → yil
+
+        <br>
+
+        <code>7</code> → avgust
+        (oy 0 dan boshlangani uchun)
+
+        <br>
+
+        <code>10</code> → kun
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🕐 Sana va vaqtni birga berish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let date = new Date(
+    2026,
+    7,
+    10,
+    15,
+    30,
+    45
+);
+
+console.log(date);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Tartibi:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>new Date(
+    year,
+    month,
+    day,
+    hours,
+    minutes,
+    seconds
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 15 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔤 String orqali Date
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let date = new Date(
+    "2026-08-10"
+);
+
+console.log(date);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Sana String ko‘rinishida ham
+        berilishi mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 16 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🌍 toLocaleDateString()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Sanani foydalanuvchiga qulay
+        formatda chiqarish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+console.log(
+    now.toLocaleDateString()
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10/08/2026</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 17 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🕐 toLocaleTimeString()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+console.log(
+    now.toLocaleTimeString()
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Bu method vaqtni
+        foydalanuvchiga qulay formatda
+        chiqaradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 18 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📅 toLocaleString()
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+console.log(
+    now.toLocaleString()
+);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Sana va vaqtni birga chiqaradi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 19 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🇺🇿 O‘zbekiston formatida sana
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let result =
+    now.toLocaleDateString(
+        "uz-UZ"
+    );
+
+console.log(result);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>10.08.2026</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 20 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🇺🇿 O‘zbekiston formatida vaqt
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let result =
+    now.toLocaleTimeString(
+        "uz-UZ"
+    );
+
+console.log(result);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 21 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📊 Date'larni solishtirish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let date1 = new Date(
+    "2026-08-10"
+);
+
+let date2 = new Date(
+    "2026-08-15"
+);
+
+
+console.log(
+    date1 < date2
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>true</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Date obyektlarini
+        <code>&lt;</code>,
+        <code>&gt;</code>,
+        <code>===</code>
+        kabi operatorlar bilan
+        taqqoslash mumkin.
+
+    </p>
+
+</section>
+
+
+
+<!-- 22 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⏳ getTime()
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>getTime()</code>
+        sana uchun millisekunddagi qiymatni
+        qaytaradi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let now = new Date();
+
+let time = now.getTime();
+
+console.log(time);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu qiymat yordamida Date'larni
+        hisoblash va solishtirish juda qulay.
+
+    </div>
+
+</section>
+
+
+
+<!-- 23 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⏱️ Ikki sana orasidagi farq
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let date1 = new Date(
+    "2026-08-10"
+);
+
+let date2 = new Date(
+    "2026-08-15"
+);
+
+
+let difference =
+    date2 - date1;
+
+
+console.log(difference);</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Natija millisekundlarda bo‘ladi.
+
+    </p>
+
+</section>
+
+
+
+<!-- 24 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📆 Kunlar farqini hisoblash
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let date1 = new Date(
+    "2026-08-10"
+);
+
+let date2 = new Date(
+    "2026-08-15"
+);
+
+
+let difference =
+    date2 - date1;
+
+
+let days =
+    difference /
+    (1000 * 60 * 60 * 24);
+
+
+console.log(days);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>5</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 25 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎂 Yoshni hisoblash
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let birthYear = 2008;
+
+let currentYear =
+    new Date().getFullYear();
+
+
+let age =
+    currentYear - birthYear;
+
+
+console.log(age);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu oddiy yosh hisoblash usuli.
+
+        <br><br>
+
+        Tug‘ilgan kunning oy va kuni ham
+        hisobga olinadigan aniq formula
+        keyingi amaliyotlarda ko‘rib chiqilishi
+        mumkin.
+
+    </div>
+
+</section>
+
+
+
+<!-- 26 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🕐 Digital Clock
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Endi Date yordamida oddiy
+        elektron soat yaratamiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function showTime() {
+
+    let now = new Date();
+
+    let hours =
+        now.getHours();
+
+    let minutes =
+        now.getMinutes();
+
+    let seconds =
+        now.getSeconds();
+
+
+    console.log(
+        hours + ":" +
+        minutes + ":" +
+        seconds
+    );
+
+}
+
+
+showTime();</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 27 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔥 00 format qilish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function formatTime(value) {
+
+    return String(value)
+        .padStart(2, "0");
+
+}
+
+
+console.log(
+    formatTime(5)
+);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>05</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 28 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⏰ To‘liq Digital Clock
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>function showTime() {
+
+    let now = new Date();
+
+
+    let hours =
+        String(
+            now.getHours()
+        ).padStart(2, "0");
+
+
+    let minutes =
+        String(
+            now.getMinutes()
+        ).padStart(2, "0");
+
+
+    let seconds =
+        String(
+            now.getSeconds()
+        ).padStart(2, "0");
+
+
+    console.log(
+        hours + ":" +
+        minutes + ":" +
+        seconds
+    );
+
+}
+
+
+showTime();</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 29 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔄 setInterval() bilan soat
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Soatni har sekund yangilash uchun
+        <code>setInterval()</code> ishlatamiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>function showTime() {
+
+    let now = new Date();
+
+    console.log(
+        now.toLocaleTimeString(
+            "uz-UZ"
+        )
+    );
+
+}
+
+
+showTime();
+
+
+setInterval(
+    showTime,
+    1000
+);</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        <code>1000</code> millisekund
+        = <b>1 sekund</b>.
+
+    </div>
+
+</section>
+
+
+
+<!-- 30 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📅 Bugungi sanani chiqarish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let today = new Date();
+
+console.log(
+    today.toLocaleDateString(
+        "uz-UZ"
+    )
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 31 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Muhim Date methodlar
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                new Date()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Hozirgi sana va vaqt.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                getFullYear()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Yilni oladi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                getMonth()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Oyni oladi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                getDate()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Oyning kunini oladi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                getDay()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Hafta kunini oladi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                getHours()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Soatni oladi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                getMinutes()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Daqiqani oladi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                getSeconds()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Sekundni oladi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                getTime()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Millisekunddagi vaqt.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                toLocaleDateString()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Sanani formatlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                toLocaleTimeString()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Vaqtni formatlaydi.
+            </p>
+
+        </div>
+
+
+        <div class="method-card">
+
+            <code class="text-xl">
+                toLocaleString()
+            </code>
+
+            <p class="text-slate-400 mt-3">
+                Sana va vaqtni formatlaydi.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 32 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🕐 Real loyiha: Live Clock
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center
+                mt-6">
+
+        <div
+            id="clock"
+            class="text-5xl md:text-7xl
+                   font-extrabold
+                   text-yellow-400">
+
+            00:00:00
+
+        </div>
+
+
+        <div
+            id="date"
+            class="text-slate-400
+                   text-xl
+                   mt-5">
+
+            00.00.0000
+
+        </div>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function updateClock() {
+
+    let now = new Date();
+
+
+    let hours =
+        String(
+            now.getHours()
+        ).padStart(2, "0");
+
+
+    let minutes =
+        String(
+            now.getMinutes()
+        ).padStart(2, "0");
+
+
+    let seconds =
+        String(
+            now.getSeconds()
+        ).padStart(2, "0");
+
+
+    document.getElementById(
+        "clock"
+    ).textContent =
+        hours + ":" +
+        minutes + ":" +
+        seconds;
+
+
+    document.getElementById(
+        "date"
+    ).textContent =
+        now.toLocaleDateString(
+            "uz-UZ"
+        );
+
+}
+
+
+updateClock();
+
+
+setInterval(
+    updateClock,
+    1000
+);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 33 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Real loyihalarda Date qayerda kerak?
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+
+            📅 Buyurtma sanasi
+
+        </div>
+
+
+        <div class="method-card">
+
+            🛒 Cart yaratilgan vaqt
+
+        </div>
+
+
+        <div class="method-card">
+
+            👤 User ro‘yxatdan o‘tgan sana
+
+        </div>
+
+
+        <div class="method-card">
+
+            💬 Xabar yuborilgan vaqt
+
+        </div>
+
+
+        <div class="method-card">
+
+            ⏳ Countdown
+
+        </div>
+
+
+        <div class="method-card">
+
+            ⏰ Digital Clock
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 📅
+            </b>
+
+            <br>
+
+            Hozirgi yilni Console'ga
+            chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa 📆
+            </b>
+
+            <br>
+
+            Hozirgi oy va kunni chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa ⏰
+            </b>
+
+            <br>
+
+            Hozirgi soat, daqiqa va sekundni
+            chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 🇺🇿
+            </b>
+
+            <br>
+
+            Bugungi sanani
+            <code>uz-UZ</code> formatida
+            chiqaring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 📊
+            </b>
+
+            <br>
+
+            Ikkita sana yarating va ular
+            orasidagi kunlar farqini toping.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let date1 = new Date(
+    "2026-08-10"
+);
+
+let date2 = new Date(
+    "2026-08-20"
+);</code></pre>
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🎂
+            </b>
+
+            <br>
+
+            Tug‘ilgan yilni berib,
+            taxminiy yoshni hisoblang.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                7-vazifa ⏰
+            </b>
+
+            <br>
+
+            Ekranda ishlaydigan
+            Digital Clock yarating.
+
+            <br><br>
+
+            Soat har sekundda yangilanib tursin.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                8-vazifa 🔥
+            </b>
+
+            <br>
+
+            Digital Clock ostida bugungi
+            sanani ham ko‘rsating.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                9-vazifa 🛒
+            </b>
+
+            <br>
+
+            Product Object yarating va unga
+            <code>createdAt</code> property'siga
+            hozirgi vaqtni yozing.
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let product = {
+
+    name: "Pizza",
+
+    price: 50000,
+
+    createdAt: new Date()
+
+};
+
+console.log(product);</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            📅 <b>Date</b> — sana va vaqt
+            bilan ishlash uchun ishlatiladi.
+        </p>
+
+
+        <p>
+            ⏰ <code>new Date()</code>
+            → hozirgi sana va vaqt.
+        </p>
+
+
+        <p>
+            📆 <code>getFullYear()</code>
+            → yil.
+        </p>
+
+
+        <p>
+            📅 <code>getMonth()</code>
+            → oy, 0 dan boshlanadi.
+        </p>
+
+
+        <p>
+            📆 <code>getDate()</code>
+            → oyning kuni.
+        </p>
+
+
+        <p>
+            🗓️ <code>getDay()</code>
+            → hafta kuni.
+        </p>
+
+
+        <p>
+            ⏰ <code>getHours()</code>
+            → soat.
+        </p>
+
+
+        <p>
+            ⏱️ <code>getMinutes()</code>
+            → daqiqa.
+        </p>
+
+
+        <p>
+            ⏱️ <code>getSeconds()</code>
+            → sekund.
+        </p>
+
+
+        <p>
+            🌍 <code>toLocaleDateString()</code>
+            → sanani formatlaydi.
+        </p>
+
+
+        <p>
+            🕐 <code>toLocaleTimeString()</code>
+            → vaqtni formatlaydi.
+        </p>
+
+
+        <p>
+            ⚡ <code>getTime()</code>
+            → vaqtni millisekundlarda beradi.
+        </p>
+
+
+        <p>
+            🔄 <code>setInterval()</code>
+            bilan real vaqt soatini yaratish mumkin.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        📅
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        50-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 50-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   LIVE CLOCK
+===================================== */
+
+function updateClock() {
+
+    let now = new Date();
+
+
+    let hours =
+        String(
+            now.getHours()
+        ).padStart(2, "0");
+
+
+    let minutes =
+        String(
+            now.getMinutes()
+        ).padStart(2, "0");
+
+
+    let seconds =
+        String(
+            now.getSeconds()
+        ).padStart(2, "0");
+
+
+    let clock =
+        document.getElementById(
+            "clock"
+        );
+
+
+    let date =
+        document.getElementById(
+            "date"
+        );
+
+
+    if (clock) {
+
+        clock.textContent =
+            hours + ":" +
+            minutes + ":" +
+            seconds;
+
+    }
+
+
+    if (date) {
+
+        date.textContent =
+            now.toLocaleDateString(
+                "uz-UZ"
+            );
+
+    }
+
+}
+
+
+updateClock();
+
+
+setInterval(
+    updateClock,
+    1000
+);
+
+
+
+/* =====================================
+   LESSON COMPLETE
+===================================== */
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        49-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(49)) {
+
+        alert(
+            "Avval 49-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-49.html";
+
+        return;
+
+    }
+
+
+    /*
+        50-darsni saqlash
+    */
+
+    if (!completedLessons.includes(50)) {
+
+        completedLessons.push(50);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 50-dars tugatildi! 51-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 50-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

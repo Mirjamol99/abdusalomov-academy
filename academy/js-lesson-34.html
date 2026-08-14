@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 34-dars | slice va splice</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+</header>
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ✂️ 34-DARS
+
+        </span>
+
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            slice va splice
+
+        </h1>
+
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            33-darsda <code>shift()</code> va
+            <code>unshift()</code> orqali Array
+            boshidan elementlar bilan ishlashni
+            o‘rgandik.
+
+            <br><br>
+
+            Bugun esa Array ichidagi kerakli
+            qismlarni olish va elementlarni
+            o‘zgartirishni o‘rganamiz.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ✂️ slice() nima?
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>slice()</code> — Array'dan
+            ma'lum bir qismini ajratib olib,
+            <b>yangi Array</b> qaytaradi.
+
+            <br><br>
+
+            Eng muhim jihati:
+
+            <br><br>
+
+            <span class="text-green-400 font-bold">
+                slice() original Array'ni o‘zgartirmaydi.
+            </span>
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+let result = fruits.slice(1, 3);
+
+console.log(result);
+
+console.log(fruits);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Banan",
+    "Uzum"
+]
+
+[
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 slice(start, end)
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>slice()</code> ikkita asosiy
+            parametr qabul qiladi:
+
+            <br><br>
+
+            <b>start</b> → qayerdan boshlash
+
+            <br>
+
+            <b>end</b> → qayergacha olish
+
+            <br><br>
+
+            ⚠️ <code>end</code> indexdagi element
+            <b>olinmaydi</b>.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40,
+    50
+];
+
+let result = numbers.slice(1, 4);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    20,
+    30,
+    40
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 Index bilan tushunamiz
+        </h2>
+
+
+        <div class="method-card">
+
+            <p class="text-xl">
+                0 → "Olma"
+            </p>
+
+            <p class="text-xl mt-2">
+                1 → "Banan"
+            </p>
+
+            <p class="text-xl mt-2">
+                2 → "Uzum"
+            </p>
+
+            <p class="text-xl mt-2">
+                3 → "Anor"
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>fruits.slice(1, 3);</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            1-indexdan boshlaydi:
+
+            <br>
+
+            <b>Banan</b> ✅
+
+            <br>
+
+            2-indexni oladi:
+
+            <br>
+
+            <b>Uzum</b> ✅
+
+            <br><br>
+
+            3-indexdagi <b>Anor</b> olinmaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            📌 slice() faqat start bilan
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Agar faqat bitta qiymat berilsa,
+            o‘sha indexdan Array oxirigacha
+            elementlarni oladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+let result = fruits.slice(2);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Uzum",
+    "Anor"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔄 slice() va manfiy index
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>slice()</code>da manfiy index
+            ham ishlatish mumkin.
+
+            <br><br>
+
+            <code>-1</code> → oxirgi element
+
+            <br>
+
+            <code>-2</code> → oxiridan ikkinchi element
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+let result = fruits.slice(-2);
+
+console.log(result);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Uzum",
+    "Anor"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔧 splice() nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>splice()</code> Array ichidagi
+            elementlarni:
+
+            <br><br>
+
+            ❌ o‘chirishi
+
+            <br>
+
+            ➕ qo‘shishi
+
+            <br>
+
+            🔄 almashtirishi mumkin.
+
+            <br><br>
+
+            Eng muhim jihati:
+
+            <br><br>
+
+            <span class="text-red-400 font-bold">
+                splice() original Array'ni o‘zgartiradi.
+            </span>
+
+        </p>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ❌ splice() bilan o‘chirish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Sintaksis:
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>array.splice(start, deleteCount);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+fruits.splice(1, 1);
+
+console.log(fruits);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Uzum",
+    "Anor"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔢 deleteCount nima?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>deleteCount</code> nechta
+            element o‘chirilishini bildiradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40,
+    50
+];
+
+numbers.splice(1, 2);
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    10,
+    40,
+    50
+]</code></pre>
+
+        </div>
+
+
+        <p class="text-slate-400 mt-5">
+
+            1-indexdan boshlab 2 ta element:
+
+            <br>
+
+            <b>20</b> ❌
+
+            <br>
+
+            <b>30</b> ❌
+
+        </p>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ splice() bilan qo‘shish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Agar <code>deleteCount</code>
+            <b>0</b> bo‘lsa, element o‘chirilmaydi.
+
+            Yangi elementlar esa shu indexga
+            qo‘shiladi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Uzum"
+];
+
+fruits.splice(
+    1,
+    0,
+    "Banan"
+);
+
+console.log(fruits);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Banan",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ➕ Bir nechta element qo‘shish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    40
+];
+
+numbers.splice(
+    1,
+    0,
+    20,
+    30
+);
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    10,
+    20,
+    30,
+    40
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔄 splice() bilan almashtirish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Avval elementni o‘chiramiz,
+            keyin uning o‘rniga yangi element
+            qo‘yamiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum"
+];
+
+fruits.splice(
+    1,
+    1,
+    "Anor"
+);
+
+console.log(fruits);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Olma",
+    "Anor",
+    "Uzum"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔄 Bir nechta elementni almashtirish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30,
+    40
+];
+
+numbers.splice(
+    1,
+    2,
+    200,
+    300
+);
+
+console.log(numbers);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    10,
+    200,
+    300,
+    40
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🎁 splice() nima qaytaradi?
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>splice()</code> o‘chirilgan
+            elementlarni <b>yangi Array</b>
+            sifatida qaytaradi.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor"
+];
+
+let deleted = fruits.splice(
+    1,
+    2
+);
+
+console.log(deleted);
+
+console.log(fruits);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Banan",
+    "Uzum"
+]
+
+[
+    "Olma",
+    "Anor"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚖️ slice va splice farqi
+        </h2>
+
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full text-left">
+
+                <thead>
+
+                    <tr class="border-b
+                               border-slate-700">
+
+                        <th class="p-4">
+                            Metod
+                        </th>
+
+                        <th class="p-4">
+                            Vazifasi
+                        </th>
+
+                        <th class="p-4">
+                            Original Array
+                        </th>
+
+                        <th class="p-4">
+                            Qaytaradi
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr class="border-b
+                               border-slate-800">
+
+                        <td class="p-4
+                                   text-green-400
+                                   font-bold">
+
+                            slice()
+
+                        </td>
+
+                        <td class="p-4">
+                            Qismidan nusxa oladi
+                        </td>
+
+                        <td class="p-4">
+                            O‘zgarmaydi
+                        </td>
+
+                        <td class="p-4">
+                            Yangi Array
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="p-4
+                                   text-red-400
+                                   font-bold">
+
+                            splice()
+
+                        </td>
+
+                        <td class="p-4">
+                            Qo‘shadi/o‘chiradi/almashtiradi
+                        </td>
+
+                        <td class="p-4">
+                            O‘zgaradi
+                        </td>
+
+                        <td class="p-4">
+                            O‘chirilganlar Array'i
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🧠 Eng muhim farq
+        </h2>
+
+
+        <div class="grid md:grid-cols-2 gap-5">
+
+            <div class="method-card">
+
+                <h3 class="text-2xl
+                           font-bold
+                           text-green-400">
+
+                    slice()
+
+                </h3>
+
+                <p class="text-slate-400
+                          mt-4
+                          leading-8">
+
+                    "Menga Array'dan
+                    bir qismini ber."
+
+                    <br><br>
+
+                    Original Array
+                    <b>o‘zgarmaydi.</b>
+
+                </p>
+
+            </div>
+
+
+            <div class="method-card">
+
+                <h3 class="text-2xl
+                           font-bold
+                           text-red-400">
+
+                    splice()
+
+                </h3>
+
+                <p class="text-slate-400
+                          mt-4
+                          leading-8">
+
+                    "Array ichidagi
+                    elementlarni o‘zgartir."
+
+                    <br><br>
+
+                    Original Array
+                    <b>o‘zgaradi.</b>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🛒 Real loyiha — mahsulotni o‘chirish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Masalan, do‘konda mahsulotlar
+            ro‘yxati bor va biz bitta mahsulotni
+            o‘chirmoqchimiz.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin",
+    "Sichqoncha"
+];
+
+products.splice(2, 1);
+
+console.log(products);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Telefon",
+    "Noutbuk",
+    "Sichqoncha"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ✏️ Real loyiha — mahsulotni almashtirish
+        </h2>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Quloqchin"
+];
+
+products.splice(
+    1,
+    1,
+    "Planshet"
+);
+
+console.log(products);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Telefon",
+    "Planshet",
+    "Quloqchin"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ✂️ Real loyiha — mahsulotlarni olish
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            <code>slice()</code> yordamida
+            mahsulotlarning bir qismini olishimiz
+            mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let products = [
+    "Telefon",
+    "Noutbuk",
+    "Planshet",
+    "Quloqchin",
+    "Sichqoncha"
+];
+
+let selected =
+    products.slice(1, 4);
+
+console.log(selected);
+
+console.log(products);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    "Noutbuk",
+    "Planshet",
+    "Quloqchin"
+]
+
+Original:
+
+[
+    "Telefon",
+    "Noutbuk",
+    "Planshet",
+    "Quloqchin",
+    "Sichqoncha"
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            🔥 slice() bilan Array nusxasi
+        </h2>
+
+
+        <p class="text-slate-400 leading-8">
+
+            Array'ning nusxasini olish uchun
+            <code>slice()</code>ni parametrsiz
+            ham ishlatish mumkin.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>let numbers = [
+    10,
+    20,
+    30
+];
+
+let copy = numbers.slice();
+
+console.log(copy);</code></pre>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>[
+    10,
+    20,
+    30
+]</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 20 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            ⚠️ Eslab qoling
+        </h2>
+
+
+        <div class="info text-lg leading-9">
+
+            <p>
+                ✂️ <code>slice()</code> →
+                <b>nusxa oladi</b>
+            </p>
+
+            <p>
+                🔧 <code>splice()</code> →
+                <b>Array'ni o‘zgartiradi</b>
+            </p>
+
+            <hr class="border-slate-700 my-5">
+
+            <p>
+                <code>slice(1, 4)</code> →
+                1 dan boshlaydi, 4 ni olmaydi.
+            </p>
+
+            <p>
+                <code>splice(1, 2)</code> →
+                1-indexdan boshlab 2 ta elementni
+                o‘chiradi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOMEWORK -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8">
+
+            <p>
+                <b class="text-white">
+                    1-vazifa:
+                </b>
+
+                <br>
+
+                Quyidagi Array'dan
+                <code>slice()</code> yordamida
+                2-, 3- va 4-elementlarni oling:
+
+            </p>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre><code>let fruits = [
+    "Olma",
+    "Banan",
+    "Uzum",
+    "Anor",
+    "Shaftoli"
+];</code></pre>
+
+        </div>
+
+
+        <div class="space-y-6
+                    text-slate-400
+                    leading-8
+                    mt-6">
+
+            <p>
+                <b class="text-white">
+                    2-vazifa:
+                </b>
+
+                <br>
+
+                <code>splice()</code> yordamida
+                Array'dan "Banan"ni o‘chiring.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    3-vazifa:
+                </b>
+
+                <br>
+
+                "Uzum" o‘rniga
+                "Anor"ni qo‘ying.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    4-vazifa:
+                </b>
+
+                <br>
+
+                Array boshiga emas, 2-indexga
+                yangi element qo‘shing.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    5-vazifa:
+                </b>
+
+                <br>
+
+                <code>splice()</code> bilan
+                2 ta elementni o‘chiring va
+                o‘chirilgan elementlarni
+                alohida o‘zgaruvchiga saqlang.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    6-vazifa:
+                </b>
+
+                <br>
+
+                <code>slice()</code> yordamida
+                Array'ning oxirgi 2 ta elementini
+                oling.
+            </p>
+
+
+            <p>
+                <b class="text-white">
+                    7-vazifa:
+                </b>
+
+                <br>
+
+                <code>slice()</code> va
+                <code>splice()</code> farqini
+                o‘zingiz kod bilan ko‘rsating.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi dars xulosasi 🎯
+        </h2>
+
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ✂️ <code>slice()</code> —
+                Array'dan qism olib beradi.
+            </p>
+
+            <p>
+                🔒 <code>slice()</code> —
+                original Array'ni o‘zgartirmaydi.
+            </p>
+
+            <p>
+                🔧 <code>splice()</code> —
+                elementlarni o‘chiradi, qo‘shadi
+                yoki almashtiradi.
+            </p>
+
+            <p>
+                ⚠️ <code>splice()</code> —
+                original Array'ni o‘zgartiradi.
+            </p>
+
+            <p>
+                🎁 <code>slice()</code> —
+                yangi Array qaytaradi.
+            </p>
+
+            <p>
+                🗑️ <code>splice()</code> —
+                o‘chirilgan elementlarni Array
+                ko‘rinishida qaytaradi.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ✂️
+        </div>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-extrabold">
+
+            34-darsni tugatdingizmi?
+
+        </h2>
+
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 34-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    if (!completedLessons.includes(33)) {
+
+        alert("Avval 33-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-33.html";
+
+        return;
+    }
+
+
+    if (!completedLessons.includes(34)) {
+
+        completedLessons.push(34);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 34-dars tugatildi! 35-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 34-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>

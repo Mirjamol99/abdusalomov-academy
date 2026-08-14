@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 16-dars | if sharti</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+        }
+
+        code {
+            color: #facc15;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- TITLE -->
+
+    <section>
+
+        <span class="inline-block
+                     px-5 py-2
+                     rounded-full
+                     bg-yellow-400/10
+                     border border-yellow-400/20
+                     text-yellow-400
+                     font-bold">
+
+            ❓ 16-DARS
+
+        </span>
+
+        <h1 class="text-4xl md:text-6xl
+                   font-extrabold mt-6">
+
+            if sharti
+
+        </h1>
+
+        <p class="text-slate-400
+                  text-lg
+                  mt-5
+                  leading-8">
+
+            <code>if</code> JavaScript'dagi eng muhim
+            shart operatorlaridan biridir.
+
+            <br><br>
+
+            U ma'lum bir shartni tekshiradi.
+            Agar shart <code>true</code> bo‘lsa,
+            uning ichidagi kod bajariladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 1 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if nima? 🤔
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>if</code> ingliz tilida
+            <b class="text-white">"agar"</b>
+            degan ma'noni anglatadi.
+
+            <br><br>
+
+            Dasturlashda esa:
+
+            <br><br>
+
+            <b class="text-white">
+                Agar shart to‘g‘ri bo‘lsa,
+                ushbu kodni bajar.
+            </b>
+
+        </p>
+
+    </section>
+
+
+    <!-- 2 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if sintaksisi 📚
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>if (shart) {
+    // bajariladigan kod
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            <code>if</code> dan keyin qavs
+            <code>()</code> ichida shart yoziladi.
+
+            <br><br>
+
+            Shart <code>true</code> bo‘lsa,
+            jingalak qavs <code>{ }</code>
+            ichidagi kod bajariladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 3 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Oddiy if misoli
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 18;
+
+if (age >= 18) {
+    console.log("Siz voyaga yetgansiz");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Siz voyaga yetgansiz</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Chunki:
+
+            <br><br>
+
+            <code>18 >= 18</code> → <code>true</code>
+
+            <br><br>
+
+            Shuning uchun <code>if</code> ichidagi
+            kod bajariladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 4 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Agar shart false bo‘lsa ❌
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 15;
+
+if (age >= 18) {
+    console.log("Siz voyaga yetgansiz");
+}</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5 leading-8">
+
+            Bu safar:
+
+            <br><br>
+
+            <code>15 >= 18</code> → <code>false</code>
+
+            <br><br>
+
+            Shuning uchun <code>if</code> ichidagi
+            kod bajarilmaydi.
+
+            <br><br>
+
+            Console'da hech narsa chiqmaydi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 5 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Comparison operator bilan if ⚖️
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let number = 10;
+
+if (number > 5) {
+    console.log("10 soni 5 dan katta");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>10 soni 5 dan katta</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            == bilan if
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let password = 1234;
+
+if (password == 1234) {
+    console.log("Parol to‘g‘ri");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Parol to‘g‘ri</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 7 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            === bilan if 🔒
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Amaliy dasturlashda ko‘pincha
+            qat'iy tenglik operatori
+            <code>===</code> ishlatiladi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let username = "admin";
+
+if (username === "admin") {
+    console.log("Xush kelibsiz!");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Xush kelibsiz!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 8 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if va Boolean 🧠
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>if</code> Boolean qiymatlar bilan
+            ham ishlaydi.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = true;
+
+if (isLogin) {
+    console.log("Siz tizimga kirdingiz");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Siz tizimga kirdingiz</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 9 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if va ! operatori
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = false;
+
+if (!isLogin) {
+    console.log("Iltimos, tizimga kiring");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Iltimos, tizimga kiring</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Chunki:
+
+            <br><br>
+
+            <code>!false</code> → <code>true</code>
+
+        </p>
+
+    </section>
+
+
+    <!-- 10 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            && bilan if 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Bir nechta shartni birlashtirish
+            uchun <code>&&</code> ishlatishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 20;
+let hasTicket = true;
+
+if (age >= 18 && hasTicket) {
+    console.log("Kirish mumkin");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Kirish mumkin</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            || bilan if
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let age = 16;
+let permission = true;
+
+if (age >= 18 || permission) {
+    console.log("Kirish mumkin");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Kirish mumkin</code></pre>
+
+        </div>
+
+        <p class="text-slate-400 mt-5">
+
+            Chunki shartlardan kamida bittasi
+            <code>true</code>.
+
+        </p>
+
+    </section>
+
+
+    <!-- 12 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Balansni tekshirish 💰
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let balance = 50000;
+let price = 30000;
+
+if (balance >= price) {
+    console.log("Xarid qilish mumkin");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Xarid qilish mumkin</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 13 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if bilan bir nechta kod
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <code>{ }</code> ichiga bir nechta
+            kod yozishimiz mumkin.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 20;
+
+if (age >= 18) {
+
+    console.log("Yosh mos");
+
+    console.log("Kirish mumkin");
+
+    console.log("Xush kelibsiz!");
+
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 14 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if ichida o‘zgaruvchi
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let score = 90;
+
+if (score >= 70) {
+    console.log("Imtihondan o'tdingiz");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Imtihondan o'tdingiz</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 15 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if va comparison operatorlar
+        </h2>
+
+        <div class="code-box">
+
+<pre><code>let temperature = 30;
+
+if (temperature > 25) {
+    console.log("Havo issiq");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Havo issiq</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 16 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            if qanday ishlaydi? 🔍
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            JavaScript quyidagi tartibda ishlaydi:
+
+            <br><br>
+
+            <b class="text-white">1.</b>
+            Shartni tekshiradi.
+
+            <br>
+
+            <b class="text-white">2.</b>
+            Natija <code>true</code> yoki
+            <code>false</code> bo‘ladi.
+
+            <br>
+
+            <b class="text-white">3.</b>
+            Agar <code>true</code> bo‘lsa,
+            kod bajariladi.
+
+            <br>
+
+            <b class="text-white">4.</b>
+            Agar <code>false</code> bo‘lsa,
+            kod o'tkazib yuboriladi.
+
+        </p>
+
+    </section>
+
+
+    <!-- 17 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy mashq 🔥
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Quyidagi kodlarni ishga tushirishdan
+            oldin natijani taxmin qiling.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let age = 20;
+
+if (age >= 18) {
+    console.log("1");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let number = 3;
+
+if (number > 5) {
+    console.log("2");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>let isStudent = true;
+
+if (isStudent) {
+    console.log("3");
+}</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 18 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Amaliy loyiha 🔐
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            Foydalanuvchining login qilganini
+            tekshiramiz.
+
+        </p>
+
+        <div class="code-box">
+
+<pre><code>let isLogin = true;
+
+if (isLogin) {
+    console.log("Profilga xush kelibsiz!");
+}</code></pre>
+
+        </div>
+
+        <div class="code-box">
+
+<pre><code>Profilga xush kelibsiz!</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <!-- 19 -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Uyga vazifa 📝
+        </h2>
+
+        <p class="text-slate-400 leading-8">
+
+            <b class="text-white">1-vazifa:</b>
+
+            <br>
+
+            <code>age</code> o‘zgaruvchisini yarating.
+            Agar yosh 18 yoki undan katta bo‘lsa,
+            <code>"Kirish mumkin"</code> chiqaring.
+
+            <br><br>
+
+            <b class="text-white">2-vazifa:</b>
+
+            <br>
+
+            <code>number</code> yarating.
+            Agar son 10 dan katta bo‘lsa,
+            xabar chiqaring.
+
+            <br><br>
+
+            <b class="text-white">3-vazifa:</b>
+
+            <br>
+
+            <code>isLogin = true</code> yarating.
+            Agar foydalanuvchi login qilgan bo‘lsa,
+            <code>"Xush kelibsiz!"</code> chiqaring.
+
+            <br><br>
+
+            <b class="text-white">4-vazifa:</b>
+
+            <br>
+
+            <code>balance</code> va
+            <code>price</code> yarating.
+            Agar balans mahsulot narxidan katta
+            yoki teng bo‘lsa,
+            <code>"Xarid qilish mumkin"</code>
+            chiqaring.
+
+            <br><br>
+
+            <b class="text-white">5-vazifa:</b>
+
+            <br>
+
+            <code>age</code> va
+            <code>hasTicket</code> yordamida
+            <code>&&</code> bilan shart yarating.
+
+        </p>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="lesson-box">
+
+        <h2 class="text-3xl font-extrabold mb-5">
+            Bugungi darsni eslab qoling 🎯
+        </h2>
+
+        <div class="space-y-4
+                    text-slate-300
+                    leading-8">
+
+            <p>
+                ❓ <code>if</code> —
+                shartni tekshiradi.
+            </p>
+
+            <p>
+                ✅ <code>true</code> bo‘lsa,
+                ichidagi kod bajariladi.
+            </p>
+
+            <p>
+                ❌ <code>false</code> bo‘lsa,
+                ichidagi kod bajarilmaydi.
+            </p>
+
+            <p>
+                ⚖️ <code>if</code> comparison
+                operatorlar bilan ishlaydi.
+            </p>
+
+            <p>
+                🧠 <code>&&</code>,
+                <code>||</code> va
+                <code>!</code> bilan murakkab
+                shartlar yaratish mumkin.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLETE -->
+
+    <section class="lesson-box text-center">
+
+        <div class="text-6xl mb-5">
+            ❓
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold">
+            16-darsni tugatdingizmi?
+        </h2>
+
+        <p id="message"
+           class="text-slate-400 mt-4">
+
+            Tugatish tugmasini bosing.
+
+        </p>
+
+        <button id="completeBtn"
+                onclick="completeLesson()"
+                class="w-full mt-7
+                       bg-yellow-400
+                       hover:bg-yellow-300
+                       text-slate-950
+                       py-5
+                       rounded-2xl
+                       font-extrabold
+                       text-lg
+                       transition">
+
+            ✅ 16-DARSNI TUGATISH
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-500">
+        © 2026 Abdusalomov Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+
+    // 15-dars tugatilganini tekshirish
+
+    if (!completedLessons.includes(15)) {
+
+        alert("Avval 15-darsni tugating!");
+
+        window.location.href =
+            "js-lesson-15.html";
+
+        return;
+    }
+
+
+    // 16-darsni saqlash
+
+    if (!completedLessons.includes(16)) {
+
+        completedLessons.push(16);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById("message").textContent =
+        "🎉 16-dars tugatildi! 17-dars ochildi.";
+
+
+    const button =
+        document.getElementById("completeBtn");
+
+
+    button.textContent =
+        "✅ 16-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(() => {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>4-Dars | Matnlar | Abdusalomov Academy</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+    <!-- NAVBAR -->
+
+    <header class="sticky top-0 z-50
+               bg-slate-950/95
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+        <nav class="max-w-7xl mx-auto
+                px-6 py-4
+                flex items-center
+                justify-between">
+
+            <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
+
+                <span class="text-blue-500">
+                    Abdusalomov
+                </span>
+
+                Academy
+
+            </a>
+
+            <a href="html-course.html" class="flex items-center gap-2
+                  text-slate-400
+                  hover:text-orange-400
+                  transition">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Kursga qaytish
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+
+        <!-- TITLE -->
+
+        <div class="mb-10">
+
+            <span class="inline-block
+                     bg-orange-500/10
+                     border border-orange-500/20
+                     text-orange-400
+                     px-4 py-2
+                     rounded-full
+                     font-semibold">
+
+                4-DARS
+
+            </span>
+
+            <h1 class="text-4xl md:text-6xl
+                   font-extrabold
+                   mt-6">
+
+                HTML'da matnlar
+
+            </h1>
+
+            <p class="text-slate-400
+                  text-lg md:text-xl
+                  mt-5">
+
+                Bugun <strong>p</strong>, <strong>br</strong>
+                va <strong>hr</strong> teglarini o'rganamiz.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- P TAG -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-paragraph"></i>
+
+            </div>
+
+            <h2 class="lesson-heading">
+
+                1. &lt;p&gt; — Paragraph
+
+            </h2>
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;p&gt;
+                </strong>
+                tegi oddiy matn yoki paragraf yozish uchun ishlatiladi.
+
+            </p>
+
+            <p class="text-slate-400 mt-4 leading-8">
+
+                Har bir yangi <strong>p</strong> elementi odatda
+                yangi paragraf sifatida ko'rinadi.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- P CODE -->
+
+        <section class="code-box">
+
+            <h2 class="lesson-heading">
+
+                Kod:
+
+            </h2>
+
+            <pre><code>&lt;p&gt;Salom, Abdusalomov Academy!&lt;/p&gt;
+
+&lt;p&gt;Men HTML o'rganayapman.&lt;/p&gt;</code></pre>
+
+        </section>
+
+
+
+        <!-- P RESULT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Natija:
+
+            </h2>
+
+            <div class="bg-slate-950
+                    rounded-2xl
+                    p-6
+                    border border-slate-800">
+
+                <p>
+                    Salom, Abdusalomov Academy!
+                </p>
+
+                <p class="mt-5">
+                    Men HTML o'rganayapman.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BR -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-arrow-turn-down"></i>
+
+            </div>
+
+            <h2 class="lesson-heading">
+
+                2. &lt;br&gt; — Yangi qator
+
+            </h2>
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;br&gt;
+                </strong>
+                tegi matnni yangi qatorga tushirish uchun ishlatiladi.
+
+            </p>
+
+            <p class="text-slate-400 mt-4 leading-8">
+
+                Masalan, ism va familiyani alohida qatorga
+                chiqarishimiz mumkin.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- BR CODE -->
+
+        <section class="code-box">
+
+            <h2 class="lesson-heading">
+
+                Kod:
+
+            </h2>
+
+            <pre><code>&lt;p&gt;
+Men Mirjamolman.&lt;br&gt;
+Men HTML o'rganayapman.
+&lt;/p&gt;</code></pre>
+
+        </section>
+
+
+
+        <!-- BR RESULT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Natija:
+
+            </h2>
+
+            <div class="bg-slate-950
+                    rounded-2xl
+                    p-6
+                    border border-slate-800">
+
+                <p>
+
+                    Men Mirjamolman.
+                    <br>
+                    Men HTML o'rganayapman.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- HR -->
+
+        <section class="lesson-box">
+
+            <div class="icon-box">
+
+                <i class="fa-solid fa-minus"></i>
+
+            </div>
+
+            <h2 class="lesson-heading">
+
+                3. &lt;hr&gt; — Ajratuvchi chiziq
+
+            </h2>
+
+            <p class="text-slate-300 leading-8">
+
+                <strong class="text-orange-400">
+                    &lt;hr&gt;
+                </strong>
+                tegi sahifadagi bo'limlarni ajratish uchun
+                gorizontal chiziq hosil qiladi.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- HR CODE -->
+
+        <section class="code-box">
+
+            <h2 class="lesson-heading">
+
+                Kod:
+
+            </h2>
+
+            <pre><code>&lt;p&gt;HTML haqida&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;CSS haqida&lt;/p&gt;</code></pre>
+
+        </section>
+
+
+
+        <!-- HR RESULT -->
+
+        <section class="lesson-box">
+
+            <h2 class="lesson-heading">
+
+                Natija:
+
+            </h2>
+
+            <div class="bg-slate-950
+                    rounded-2xl
+                    p-6
+                    border border-slate-800">
+
+                <p>
+                    HTML haqida
+                </p>
+
+                <hr class="my-6 border-slate-600">
+
+                <p>
+                    CSS haqida
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- COMPARISON -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mb-8">
+
+                Qisqacha eslab qolamiz
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-3 gap-5">
+
+
+                <div class="tag-card">
+
+                    <span>&lt;p&gt;</span>
+
+                    <p>
+                        Paragraf yaratadi
+                    </p>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <span>&lt;br&gt;</span>
+
+                    <p>
+                        Yangi qatorga o'tkazadi
+                    </p>
+
+                </div>
+
+
+                <div class="tag-card">
+
+                    <span>&lt;hr&gt;</span>
+
+                    <p>
+                        Ajratuvchi chiziq chiqaradi
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MINI TEST -->
+
+        <section class="mt-8
+                    bg-slate-900
+                    border border-slate-800
+                    rounded-3xl
+                    p-7 md:p-10">
+
+            <p class="text-orange-400
+                  font-semibold">
+
+                MINI TEST
+
+            </p>
+
+            <h2 class="text-2xl md:text-3xl
+                   font-bold mt-3">
+
+                Yangi qatorga o'tkazish uchun
+                qaysi teg ishlatiladi?
+
+            </h2>
+
+
+            <div class="grid md:grid-cols-2
+                    gap-4 mt-8">
+
+                <button onclick="checkAnswer(true)" class="answer-btn">
+
+                    A) &lt;br&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    B) &lt;p&gt; 
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    C) &lt;hr&gt;
+
+                </button>
+
+
+                <button onclick="checkAnswer(false)" class="answer-btn">
+
+                    D) &lt;h1&gt;
+
+                </button>
+
+            </div>
+
+
+            <p id="answerResult" class="mt-6 font-semibold text-lg">
+            </p>
+
+        </section>
+
+
+
+        <!-- COMPLETE -->
+
+        <section class="mt-10">
+
+            <button id="completeBtn" onclick="completeLesson()" class="w-full
+                       px-7 py-5
+                       rounded-2xl
+                       bg-orange-500
+                       hover:bg-orange-600
+                       font-bold
+                       text-lg
+                       transition">
+
+                Darsni tugatish
+
+                <i class="fa-solid fa-check ml-2"></i>
+
+            </button>
+
+
+            <p id="completeMessage" class="text-center
+                  text-green-400
+                  font-semibold
+                  mt-5">
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="border-t border-slate-800
+               py-8 mt-10">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <p class="text-slate-500">
+
+                © 2026 Abdusalomov Academy
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <style>
+        .lesson-box {
+
+            margin-top: 32px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+        }
+
+
+        .icon-box {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(249, 115, 22, .1);
+
+            color: #fb923c;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .lesson-heading {
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .code-box {
+
+            margin-top: 32px;
+
+            background: #020617;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 24px;
+
+            padding: 28px;
+
+            overflow-x: auto;
+
+        }
+
+
+        .code-box pre {
+
+            color: #4ade80;
+
+            line-height: 2;
+
+            font-size: 15px;
+
+        }
+
+
+        .tag-card {
+
+            background: #020617;
+
+            border: 1px solid #334155;
+
+            border-radius: 18px;
+
+            padding: 24px;
+
+            transition: .3s;
+
+        }
+
+
+        .tag-card:hover {
+
+            border-color: #f97316;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .tag-card span {
+
+            color: #fb923c;
+
+            font-size: 24px;
+
+            font-weight: 800;
+
+        }
+
+
+        .tag-card p {
+
+            color: #94a3b8;
+
+            margin-top: 10px;
+
+        }
+
+
+        .answer-btn {
+
+            padding: 18px;
+
+            border-radius: 16px;
+
+            border: 1px solid #334155;
+
+            background: #020617;
+
+            color: white;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            transition: .3s;
+
+        }
+
+
+        .answer-btn:hover {
+
+            border-color: #f97316;
+
+            color: #fb923c;
+
+            transform: translateY(-2px);
+
+        }
+    </style>
+
+
+
+    <script>
+
+        // MINI TEST
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById("answerResult");
+
+
+            if (correct) {
+
+                result.textContent =
+                    "✅ To'g'ri! <br> tegi yangi qatorga o'tkazadi.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-green-400";
+
+            } else {
+
+                result.textContent =
+                    "❌ Noto'g'ri. Yana bir marta urinib ko'ring.";
+
+                result.className =
+                    "mt-6 font-semibold text-lg text-red-400";
+
+            }
+
+        }
+
+        // DARSNI TUGATISH
+
+        function completeLesson() {
+
+            let completedLessons =
+                JSON.parse(
+                    localStorage.getItem(
+                        "htmlCompletedLessons"
+                    )
+                ) || [];
+
+
+            if (!completedLessons.includes(4)) {
+
+                completedLessons.push(4);
+
+            }
+
+
+            localStorage.setItem(
+                "htmlCompletedLessons",
+                JSON.stringify(
+                    completedLessons
+                )
+            );
+
+
+            document.getElementById(
+                "completeMessage"
+            ).textContent =
+                "🎉 4-dars tugatildi! 5-dars ochildi.";
+
+
+            const button =
+                document.getElementById(
+                    "completeBtn"
+                );
+
+
+            button.innerHTML =
+                "✅ Tugatildi";
+
+
+            button.disabled = true;
+
+
+            button.classList.remove(
+                "bg-orange-500",
+                "hover:bg-orange-600"
+            );
+
+
+            button.classList.add(
+                "bg-green-600"
+            );
+
+
+            setTimeout(() => {
+
+                window.location.href =
+                    "html-course.html";
+
+            }, 1500);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

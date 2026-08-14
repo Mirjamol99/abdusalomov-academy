@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript 53-dars | getElementById</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .lesson-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 28px;
+        }
+
+        .code-box {
+            background: #020617;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 22px;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            color: #4ade80;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        code {
+            color: #facc15;
+        }
+
+        .info {
+            border-left: 4px solid #facc15;
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .method-card {
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-slate-950/90
+               backdrop-blur-xl
+               border-b border-slate-800">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+        <a href="index.html"
+           class="text-2xl font-extrabold">
+
+            <span class="text-yellow-400">
+                Abdusalomov
+            </span>
+
+            Academy
+
+        </a>
+
+
+        <a href="js-course.html"
+           class="text-slate-400
+                  hover:text-yellow-400
+                  transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            JS kursi
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="max-w-5xl mx-auto px-6 py-12">
+
+
+<!-- TITLE -->
+
+<section>
+
+    <span class="inline-block
+                 px-5 py-2
+                 rounded-full
+                 bg-yellow-400/10
+                 border border-yellow-400/20
+                 text-yellow-400
+                 font-bold">
+
+        🎯 53-DARS
+
+    </span>
+
+
+    <h1 class="text-4xl md:text-6xl
+               font-extrabold mt-6">
+
+        getElementById
+
+    </h1>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-5
+              leading-8">
+
+        Bugun DOM'dagi HTML elementlarini
+        <strong class="text-white">
+            id
+        </strong>
+        orqali topishni o‘rganamiz.
+
+        <br><br>
+
+        <code>getElementById()</code> —
+        DOM bilan ishlashda eng muhim
+        selectorlardan biridir.
+
+    </p>
+
+</section>
+
+
+
+<!-- 1 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 getElementById nima?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        <code>getElementById()</code>
+        HTML ichidagi
+        <code>id</code> qiymati orqali
+        bitta elementni topadi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>document.getElementById("title");</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        Bu yerda:
+
+        <br><br>
+
+        <code>document</code>
+        → HTML hujjat
+
+        <br>
+
+        <code>getElementById()</code>
+        → id orqali element qidiradi
+
+        <br>
+
+        <code>"title"</code>
+        → qidirilayotgan id
+
+    </div>
+
+</section>
+
+
+
+<!-- 2 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🏷️ HTML'da id berish
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Avval HTML elementiga
+        <code>id</code> beramiz.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;h1 id="title"&gt;
+    Salom JavaScript
+&lt;/h1&gt;</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Keyin JavaScript orqali shu
+        elementni topamiz:
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.getElementById("title");
+
+console.log(title);</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 3 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔍 Elementni topish
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.getElementById("title");</code></pre>
+
+    </div>
+
+
+    <p class="text-slate-400 leading-8 mt-6">
+
+        Endi <code>title</code> o‘zgaruvchisi
+        HTML'dagi <code>h1</code> elementni
+        saqlaydi.
+
+    </p>
+
+
+    <div class="info mt-6">
+
+        <strong class="text-white">
+            Muhim:
+        </strong>
+
+        <br><br>
+
+        <code>getElementById()</code>
+        odatda bitta elementni qaytaradi.
+
+    </div>
+
+</section>
+
+
+
+<!-- 4 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ✏️ textContent bilan ishlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Elementni topganimizdan keyin
+        uning matnini o‘zgartirishimiz mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.getElementById("title");
+
+title.textContent =
+    "JavaScript darsi";</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 5 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎨 style bilan ishlash
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Topilgan elementning CSS
+        style'larini ham o‘zgartirish mumkin.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let title =
+    document.getElementById("title");
+
+title.style.color = "red";
+
+title.style.fontSize = "50px";</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 6 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🖱️ Tugma orqali elementni o‘zgartirish
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <h2 id="demoTitle"
+            class="text-3xl
+                   font-extrabold
+                   text-yellow-400">
+
+            Eski sarlavha
+
+        </h2>
+
+
+        <button
+            onclick="changeTitle()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            ✏️ O‘zgartirish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeTitle() {
+
+    let title =
+        document.getElementById(
+            "demoTitle"
+        );
+
+    title.textContent =
+        "Yangi sarlavha! 🎉";
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 7 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎨 Tugma orqali rang o‘zgartirish
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <p id="colorText"
+           class="text-3xl font-bold">
+
+            Mening rangim o‘zgaradi
+
+        </p>
+
+
+        <button
+            onclick="changeColor()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🎨 Rangni o‘zgartirish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>function changeColor() {
+
+    let text =
+        document.getElementById(
+            "colorText"
+        );
+
+    text.style.color = "orange";
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 8 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🔢 Sonni o‘zgartirish
+
+    </h2>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center">
+
+
+        <div id="number"
+             class="text-6xl
+                    font-extrabold
+                    text-yellow-400">
+
+            0
+
+        </div>
+
+
+        <button
+            onclick="increaseNumber()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            ➕
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let count = 0;
+
+function increaseNumber() {
+
+    count++;
+
+    document.getElementById(
+        "number"
+    ).textContent = count;
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 9 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🛒 Shopping Cart misoli
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Internet do‘konlarda
+        <code>getElementById()</code>
+        orqali savatdagi mahsulotlar
+        sonini ko‘rsatish mumkin.
+
+    </p>
+
+
+    <div class="bg-black
+                rounded-3xl
+                p-10
+                text-center
+                mt-6">
+
+
+        <p class="text-slate-400">
+            🛒 Savatdagi mahsulotlar
+        </p>
+
+
+        <div id="cartCount"
+             class="text-6xl
+                    font-extrabold
+                    text-yellow-400
+                    mt-4">
+
+            0
+
+        </div>
+
+
+        <button
+            onclick="addProduct()"
+            class="mt-7
+                   bg-yellow-400
+                   hover:bg-yellow-300
+                   text-slate-950
+                   px-8 py-4
+                   rounded-2xl
+                   font-extrabold">
+
+            🛒 Savatga qo‘shish
+
+        </button>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>let cartCount = 0;
+
+function addProduct() {
+
+    cartCount++;
+
+    document.getElementById(
+        "cartCount"
+    ).textContent = cartCount;
+
+}</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 10 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ❗ ID nomi aynan bir xil bo‘lishi kerak
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        HTML'dagi <code>id</code> va
+        JavaScript'dagi id bir xil bo‘lishi kerak.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;h1 id="title"&gt;
+    Salom
+&lt;/h1&gt;</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>document.getElementById("title");</code></pre>
+
+    </div>
+
+
+    <div class="info mt-6">
+
+        ❌ Masalan:
+
+        <br><br>
+
+        HTML:
+
+        <code>id="title"</code>
+
+        <br>
+
+        JavaScript:
+
+        <code>getElementById("Title")</code>
+
+        <br><br>
+
+        Bu bir xil emas.
+
+    </div>
+
+</section>
+
+
+
+<!-- 11 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        ⚠️ ID topilmasa nima bo‘ladi?
+
+    </h2>
+
+
+    <p class="text-slate-400 leading-8">
+
+        Agar berilgan id bilan element
+        mavjud bo‘lmasa, natija
+        <code>null</code> bo‘ladi.
+
+    </p>
+
+
+    <div class="code-box">
+
+<pre><code>let element =
+    document.getElementById(
+        "notFound"
+    );
+
+console.log(element);</code></pre>
+
+    </div>
+
+
+    <div class="code-box">
+
+<pre><code>null</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 12 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧠 Nega getElementById muhim?
+
+    </h2>
+
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+
+        <div class="method-card">
+            🔎 Element topish
+        </div>
+
+
+        <div class="method-card">
+            ✏️ Matn o‘zgartirish
+        </div>
+
+
+        <div class="method-card">
+            🎨 Rang o‘zgartirish
+        </div>
+
+
+        <div class="method-card">
+            🔢 Sonni o‘zgartirish
+        </div>
+
+
+        <div class="method-card">
+            🛒 Savatni boshqarish
+        </div>
+
+
+        <div class="method-card">
+            🎮 O‘yin yaratish
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- 13 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🧩 To‘liq amaliy misol
+
+    </h2>
+
+
+    <div class="code-box">
+
+<pre><code>&lt;h1 id="title"&gt;
+    Salom
+&lt;/h1&gt;
+
+&lt;button onclick="changeText()"&gt;
+    O‘zgartirish
+&lt;/button&gt;
+
+
+&lt;script&gt;
+
+function changeText() {
+
+    let title =
+        document.getElementById("title");
+
+    title.textContent =
+        "JavaScript juda qiziq!";
+
+}
+
+&lt;/script&gt;</code></pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- 14 -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📌 Muhim qoida
+
+    </h2>
+
+
+    <div class="info">
+
+        <code>getElementById()</code>
+        <br><br>
+
+        → faqat <code>id</code> orqali
+        element qidiradi.
+
+        <br><br>
+
+        → ID qiymati odatda sahifada
+        yagona bo‘lishi kerak.
+
+        <br><br>
+
+        → Element topilmasa
+        <code>null</code> qaytadi.
+
+    </div>
+
+</section>
+
+
+
+<!-- HOMEWORK -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        📝 Uyga vazifa
+
+    </h2>
+
+
+    <div class="space-y-8
+                text-slate-400
+                leading-8">
+
+
+        <div>
+
+            <b class="text-white">
+                1-vazifa 🎯
+            </b>
+
+            <br>
+
+            <code>id="title"</code>
+            bo‘lgan <code>h1</code> yarating
+            va JavaScript orqali uni toping.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                2-vazifa ✏️
+            </b>
+
+            <br>
+
+            <code>h1</code> matnini
+            JavaScript orqali o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                3-vazifa 🎨
+            </b>
+
+            <br>
+
+            Tugma bosilganda
+            <code>h1</code> rangini o‘zgartiring.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                4-vazifa 🔢
+            </b>
+
+            <br>
+
+            Ekranda <code>0</code> tursin.
+            Tugma bosilganda son
+            bittaga oshsin.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                5-vazifa 🛒
+            </b>
+
+            <br>
+
+            "Savatga qo‘shish" tugmasi yarating.
+            Har bosilganda savatdagi son
+            bittaga oshsin.
+
+        </div>
+
+
+        <div>
+
+            <b class="text-white">
+                6-vazifa 🔥
+            </b>
+
+            <br>
+
+            Uchta alohida element yarating:
+
+            <br><br>
+
+            <code>title</code>
+
+            <br>
+
+            <code>text</code>
+
+            <br>
+
+            <code>number</code>
+
+            <br><br>
+
+            JavaScript orqali uchalasini
+            o‘zgartiring.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SUMMARY -->
+
+<section class="lesson-box">
+
+    <h2 class="text-3xl font-extrabold mb-5">
+
+        🎯 Dars xulosasi
+
+    </h2>
+
+
+    <div class="space-y-5
+                text-slate-300
+                leading-8">
+
+
+        <p>
+            🎯 <code>getElementById()</code>
+            → id orqali element topadi.
+        </p>
+
+
+        <p>
+            🔎 <code>document</code>
+            → HTML hujjat.
+        </p>
+
+
+        <p>
+            🏷️ <code>id</code>
+            → elementning identifikatori.
+        </p>
+
+
+        <p>
+            ✏️ <code>textContent</code>
+            → matnni o‘zgartiradi.
+        </p>
+
+
+        <p>
+            🎨 <code>style</code>
+            → CSS stilini o‘zgartiradi.
+        </p>
+
+
+        <p>
+            ❌ Element topilmasa
+            → <code>null</code>.
+        </p>
+
+
+        <p>
+            🛒 DOM orqali real loyihalardagi
+            savat, counter va boshqa
+            interfeyslarni boshqarish mumkin.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- NEXT -->
+
+<section class="lesson-box">
+
+    <div class="text-6xl mb-5">
+        🎯
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        Keyingi dars
+
+    </h2>
+
+
+    <p class="text-slate-400
+              text-lg
+              mt-4
+              leading-8">
+
+        <strong class="text-yellow-400">
+            54-dars
+        </strong>
+        → <code>querySelector()</code>
+
+        <br><br>
+
+        Keyingi darsda CSS selectorlar
+        yordamida HTML elementlarini
+        tanlashni o‘rganamiz.
+
+    </p>
+
+</section>
+
+
+
+<!-- COMPLETE -->
+
+<section class="lesson-box text-center">
+
+    <div class="text-6xl mb-5">
+        🎯
+    </div>
+
+
+    <h2 class="text-3xl md:text-4xl
+               font-extrabold">
+
+        53-darsni tugatdingizmi?
+
+    </h2>
+
+
+    <p id="message"
+       class="text-slate-400 mt-4">
+
+        Tugatish tugmasini bosing.
+
+    </p>
+
+
+    <button
+        id="completeBtn"
+        onclick="completeLesson()"
+        class="w-full mt-7
+               bg-yellow-400
+               hover:bg-yellow-300
+               text-slate-950
+               py-5
+               rounded-2xl
+               font-extrabold
+               text-lg
+               transition">
+
+        ✅ 53-DARSNI TUGATISH
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-800
+               py-8 text-center">
+
+    <p class="text-slate-500">
+
+        © 2026 Abdusalomov Academy
+
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================
+   CHANGE TITLE
+===================================== */
+
+function changeTitle() {
+
+    let title =
+        document.getElementById(
+            "demoTitle"
+        );
+
+
+    title.textContent =
+        "Yangi sarlavha! 🎉";
+
+}
+
+
+
+/* =====================================
+   CHANGE COLOR
+===================================== */
+
+function changeColor() {
+
+    let text =
+        document.getElementById(
+            "colorText"
+        );
+
+
+    text.style.color = "orange";
+
+}
+
+
+
+/* =====================================
+   COUNTER
+===================================== */
+
+let count = 0;
+
+
+function increaseNumber() {
+
+    count++;
+
+
+    document.getElementById(
+        "number"
+    ).textContent = count;
+
+}
+
+
+
+/* =====================================
+   SHOPPING CART
+===================================== */
+
+let cartCount = 0;
+
+
+function addProduct() {
+
+    cartCount++;
+
+
+    document.getElementById(
+        "cartCount"
+    ).textContent = cartCount;
+
+}
+
+
+
+/* =====================================
+   LESSON COMPLETE
+===================================== */
+
+function completeLesson() {
+
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem(
+                "jsCompletedLessons"
+            )
+        ) || [];
+
+
+    /*
+        52-dars tugagan bo‘lishi kerak
+    */
+
+    if (!completedLessons.includes(52)) {
+
+        alert(
+            "Avval 52-darsni tugating!"
+        );
+
+        window.location.href =
+            "js-lesson-52.html";
+
+        return;
+
+    }
+
+
+    /*
+        53-darsni saqlash
+    */
+
+    if (!completedLessons.includes(53)) {
+
+        completedLessons.push(53);
+
+    }
+
+
+    localStorage.setItem(
+        "jsCompletedLessons",
+        JSON.stringify(completedLessons)
+    );
+
+
+    document.getElementById(
+        "message"
+    ).textContent =
+        "🎉 53-dars tugatildi! 54-dars ochildi.";
+
+
+    const button =
+        document.getElementById(
+            "completeBtn"
+        );
+
+
+    button.textContent =
+        "✅ 53-DARS TUGATILDI";
+
+
+    button.disabled = true;
+
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
+
+
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+
+    setTimeout(function() {
+
+        window.location.href =
+            "js-course.html";
+
+    }, 1200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>
