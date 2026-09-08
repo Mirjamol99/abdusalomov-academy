@@ -423,7 +423,7 @@
 
 
 
-                <!-- Email -->
+                <!-- Telefon raqami -->
 
                 <div class="flex
                             items-center
@@ -525,7 +525,7 @@
 
 
 
-                    <!-- Email -->
+                    <!-- Telefon raqami -->
 
                     <div class="mt-5">
 
@@ -534,14 +534,14 @@
                                       font-medium
                                       mb-2">
 
-                            Email
+                            Telefon raqami
 
                         </label>
 
 
-                        <input type="email"
-                               id="email"
-                               placeholder="example@gmail.com"
+                        <input type="tel"
+                               id="phone"
+                               placeholder="+998 90 123 45 67"
                                required
                                class="w-full
                                       bg-slate-950
@@ -760,8 +760,8 @@ if (contactForm) {
         const name =
             document.getElementById("name").value;
 
-        const email =
-            document.getElementById("email").value;
+        const phone =
+            document.getElementById("phone").value;
 
         const message =
             document.getElementById("message").value;
@@ -780,7 +780,7 @@ if (contactForm) {
 
                     body: JSON.stringify({
                         name: name,
-                        email: email,
+                        phone: phone,
                         message: message
                     })
                 }

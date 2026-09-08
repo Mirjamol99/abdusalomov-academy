@@ -13,7 +13,6 @@ const PORT = process.env.PORT || 3000;
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHAT_ID = process.env.CHAT_ID;
 
-// Server tekshirish
 app.get("/", (req, res) => {
     res.json({
         success: true,
@@ -21,21 +20,23 @@ app.get("/", (req, res) => {
     });
 });
 
-// Telegramga xabar yuborish
 app.post("/send-message", async (req, res) => {
 
-    const { name, email, message } = req.body;
+    console.log("KELGAN DATA:", req.body);
 
-    console.log("Yangi xabar:");
+    const name = req.body.name || "Noma'lum";
+    const phone = req.body.phone || req.body.tel || req.body.email || "Telefon kiritilmagan";
+    const message = req.body.message || "Xabar kiritilmagan";
+
     console.log("Ism:", name);
-    console.log("Email:", email);
+    console.log("Telefon:", phone);
     console.log("Xabar:", message);
 
     const text = `
 📩 Abdusalomov Academy — yangi xabar!
 
 👤 Ism: ${name}
-📧 Email: ${email}
+📞 Telefon: ${phone}
 
 💬 Xabar:
 ${message}
@@ -61,14 +62,15 @@ ${message}
 
         const data = await response.json();
 
-        if (!data.ok) {
+        console.log("Telegram javobi:", data);
 
-            console.log("Telegram xatosi:", data);
+        if (!data.ok) {
 
             return res.status(500).json({
                 success: false,
                 message: "Telegramga yuborilmadi"
             });
+
         }
 
         res.json({
@@ -78,12 +80,13 @@ ${message}
 
     } catch (error) {
 
-        console.error("Telegram ulanish xatosi:", error);
+        console.error("XATOLIK:", error);
 
         res.status(500).json({
             success: false,
             message: "Telegramga ulanishda xatolik"
         });
+
     }
 });
 
