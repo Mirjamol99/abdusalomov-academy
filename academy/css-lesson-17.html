@@ -24,13 +24,13 @@
         <a href="index.html"
            class="text-2xl md:text-3xl font-extrabold">
 
-            <span class="text-blue-500">Abdusalomov</span>
+            <span class="text-cyan-400">Abdusalomov</span>
             Academy
 
         </a>
 
         <a href="css-course.html"
-           class="text-slate-400 hover:text-blue-400
+           class="text-slate-400 hover:text-cyan-400
                   flex items-center gap-2">
 
             <i class="fa-solid fa-arrow-left"></i>
@@ -464,7 +464,7 @@
 
     <section class="lesson-box">
 
-        <span class="text-blue-400 font-bold">
+        <span class="text-cyan-400 font-bold">
             MINI TEST 🧠
         </span>
 
@@ -524,9 +524,9 @@
 
     <section class="mt-10
                     bg-gradient-to-r
-                    from-blue-600/20
+                    from-cyan-600/20
                     to-cyan-500/10
-                    border border-blue-500/20
+                    border border-cyan-500/20
                     rounded-3xl p-8 text-center">
 
         <div class="text-5xl mb-5">
@@ -555,8 +555,8 @@
         <button
             id="completeBtn"
             onclick="completeLesson()"
-            class="w-full bg-blue-600
-                   hover:bg-blue-700
+            class="w-full bg-cyan-600
+                   hover:bg-cyan-500
                    px-7 py-5 rounded-2xl
                    font-bold text-lg
                    transition">
@@ -569,7 +569,7 @@
 
         <p id="completeMessage"
            class="text-center
-                  text-green-400
+                  text-emerald-400
                   font-semibold mt-5">
         </p>
 
@@ -611,7 +611,7 @@
 
     border: 1px solid rgba(59,130,246,.2);
 
-    color: #60a5fa;
+    color: #67e8f9;
 
     font-weight: 700;
 }
@@ -640,7 +640,7 @@
 
     background: rgba(59,130,246,.1);
 
-    color: #60a5fa;
+    color: #67e8f9;
 
     font-size: 25px;
 
@@ -716,7 +716,7 @@
 .flex-one-demo div {
     padding: 25px;
 
-    background: #2563eb;
+    background: #0e7490;
 
     border-radius: 12px;
 
@@ -758,7 +758,7 @@
 .align-demo div {
     padding: 25px 35px;
 
-    background: #7c3aed;
+    background: #0f766e;
 
     border-radius: 12px;
 
@@ -794,7 +794,7 @@
 .direction-demo div {
     padding: 20px;
 
-    background: #2563eb;
+    background: #0e7490;
 
     border-radius: 12px;
 
@@ -827,7 +827,7 @@
 
     padding: 25px;
 
-    background: #2563eb;
+    background: #0e7490;
 
     border-radius: 12px;
 
@@ -881,7 +881,7 @@
 
     border-radius: 15px;
 
-    background: #2563eb;
+    background: #0e7490;
 
     font-size: 25px;
 
@@ -921,7 +921,7 @@
 }
 
 .project-links a:hover {
-    color: #60a5fa;
+    color: #67e8f9;
 }
 
 
@@ -946,9 +946,9 @@
 }
 
 .answer-btn:hover {
-    border-color: #3b82f6;
+    border-color: #22d3ee;
 
-    color: #60a5fa;
+    color: #67e8f9;
 
     transform: translateY(-2px);
 }
@@ -973,6 +973,159 @@
 
 }
 
+
+/* Modern Abdusalomov Academy teal/cyan refresh */
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(6,182,212,.10), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(20,184,166,.08), transparent 30%),
+    #020617;
+}
+
+.lesson-number {
+  box-shadow: 0 10px 30px rgba(6,182,212,.08);
+}
+
+.lesson-box {
+  background: rgba(15,23,42,.78);
+  border-color: rgba(51,65,85,.75);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  transition: .3s ease;
+}
+
+.lesson-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34,211,238,.35);
+}
+
+.lesson-icon {
+  box-shadow: inset 0 0 24px rgba(6,182,212,.08);
+}
+
+.code-box {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 12px 40px rgba(0,0,0,.18);
+}
+
+.info-box {
+  background: rgba(6,182,212,.07);
+  border-color: rgba(34,211,238,.22);
+}
+
+.flex-demo,
+.justify-demo,
+.gap-demo,
+.flex-one-demo,
+.align-demo,
+.direction-demo,
+.wrap-demo,
+.project-card {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 14px 40px rgba(0,0,0,.18);
+}
+
+.flex-demo div,
+.justify-demo div,
+.gap-demo div,
+.flex-one-demo div,
+.direction-demo div,
+.wrap-demo div {
+  box-shadow: 0 10px 28px rgba(6,182,212,.12);
+  transition: .25s ease;
+}
+
+.flex-demo div:hover,
+.justify-demo div:hover,
+.gap-demo div:hover,
+.flex-one-demo div:hover,
+.direction-demo div:hover,
+.wrap-demo div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(6,182,212,.18);
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -50% 15% auto;
+  height: 190px;
+  background: radial-gradient(circle, rgba(34,211,238,.13), transparent 68%);
+  pointer-events: none;
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(34,211,238,.45);
+}
+
+.project-logo {
+  box-shadow: 0 16px 38px rgba(6,182,212,.18);
+}
+
+.project-links a:hover {
+  color: #67e8f9;
+}
+
+.answer-btn {
+  cursor: pointer;
+}
+
+.answer-btn:hover {
+  border-color: rgba(34,211,238,.65);
+  color: #67e8f9;
+  transform: translateY(-2px);
+}
+
+#completeBtn {
+  box-shadow: 0 12px 32px rgba(6,182,212,.18);
+}
+
+#completeBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(6,182,212,.28);
+}
+
+@media (max-width: 640px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lesson-box {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .lesson-title {
+    font-size: 22px;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .flex-demo,
+  .justify-demo,
+  .gap-demo,
+  .flex-one-demo {
+    gap: 10px;
+  }
+}
+
 </style>
 
 
@@ -991,7 +1144,7 @@ function checkAnswer(correct) {
             "✅ To'g'ri! Flexbox display: flex orqali ishga tushiriladi.";
 
         result.className =
-            "mt-6 font-bold text-lg text-green-400";
+            "mt-6 font-bold text-lg text-emerald-400";
 
     } else {
 
@@ -1063,13 +1216,13 @@ function completeLesson() {
 
 
     button.classList.remove(
-        "bg-blue-600",
-        "hover:bg-blue-700"
+        "bg-cyan-600",
+        "hover:bg-cyan-500"
     );
 
 
     button.classList.add(
-        "bg-green-600"
+        "bg-emerald-600"
     );
 
 

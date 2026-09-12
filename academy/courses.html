@@ -12,8 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -38,535 +37,309 @@
 </head>
 
 
-<body class="bg-slate-950 text-white">
+<body class="bg-slate-950 text-white overflow-x-hidden">
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-0 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+    </div>
 
 
-<!-- NAVBAR -->
 
-<header class="border-b border-slate-800
-               bg-slate-950/90
-               backdrop-blur-lg
-               sticky top-0 z-50">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-xl">
+        <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
 
-    <nav class="max-w-7xl mx-auto
-                px-6 py-4
-                flex items-center
-                justify-between">
-
-
-        <!-- Logo -->
-
-        <a href="index.html"
-           class="text-2xl md:text-3xl font-extrabold">
-
-            <span class="text-blue-500">
-                Abdusalomov
-            </span>
-
-            Academy
-
-        </a>
-
-
-        <!-- Desktop Menu -->
-
-        <div class="hidden md:flex
-                    items-center
-                    gap-8">
-
-            <a href="index.html"
-               class="text-slate-300
-                      hover:text-blue-400
-                      transition">
-
-                Bosh sahifa
-
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-teal-500 text-slate-950 flex items-center justify-center
+                        shadow-lg shadow-teal-500/20 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-code text-lg"></i>
+                </div>
+                <div>
+                    <div class="text-lg font-extrabold tracking-tight">
+                        <span class="text-teal-400">Abdusalomov</span> Academy
+                    </div>
+                    <div class="text-[11px] uppercase tracking-[.2em] text-slate-500">
+                        Learn. Code. Create.
+                    </div>
+                </div>
             </a>
 
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-teal-400 transition">Bosh sahifa</a>
+                <a href="courses.html" class="text-teal-400 font-semibold">Kurslar</a>
+                <a href="about.html" class="hover:text-teal-400 transition">Men haqimda</a>
+                <a href="contact.html" class="hover:text-teal-400 transition">Bog'lanish</a>
+            </div>
 
-            <a href="courses.html"
-               class="text-blue-400 font-semibold">
+            <button id="menuBtn" class="lg:hidden w-10 h-10 rounded-xl border border-slate-800
+                                     hover:bg-slate-900 transition text-lg" aria-label="Menyu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
 
-                Kurslar
-
-            </a>
-
-
-            <a href="about.html"
-               class="text-slate-300
-                      hover:text-blue-400
-                      transition">
-
-                Men haqimda
-
-            </a>
-
-
-            <a href="contact.html"
-               class="text-slate-300
-                      hover:text-blue-400
-                      transition">
-
-                Bog'lanish
-
-            </a>
-
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800 bg-slate-950">
+            <div class="px-5 py-4 space-y-1">
+                <a href="index.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900">
+                    <i class="fa-solid fa-house w-6"></i>Bosh sahifa
+                </a>
+                <a href="courses.html" class="block px-4 py-3 rounded-xl bg-slate-900 text-teal-400">
+                    <i class="fa-solid fa-book w-6"></i>Kurslar
+                </a>
+                <a href="about.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900">
+                    <i class="fa-solid fa-user w-6"></i>Men haqimda
+                </a>
+                <a href="contact.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900">
+                    <i class="fa-solid fa-paper-plane w-6"></i>Bog'lanish
+                </a>
+            </div>
         </div>
+    </header>
 
+    <!-- HERO -->
+    <section class="relative overflow-hidden border-b border-slate-900">
+        <div class="absolute -top-24 -left-24 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
 
-        <!-- Mobile Button -->
-
-        <button id="menuBtn"
-                class="md:hidden text-white text-3xl">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-    </nav>
-
-
-    <!-- Mobile Menu -->
-
-    <div id="mobileMenu"
-         class="hidden md:hidden
-                border-t border-slate-800
-                bg-slate-950">
-
-        <a href="index.html"
-           class="block px-6 py-4 hover:bg-slate-900">
-
-            🏠 Bosh sahifa
-
-        </a>
-
-
-        <a href="courses.html"
-           class="block px-6 py-4
-                  bg-blue-500/10
-                  text-blue-400">
-
-            📚 Kurslar
-
-        </a>
-
-
-        <a href="about.html"
-           class="block px-6 py-4 hover:bg-slate-900">
-
-            👨‍💻 Men haqimda
-
-        </a>
-
-
-        <a href="contact.html"
-           class="block px-6 py-4 hover:bg-slate-900">
-
-            📞 Bog'lanish
-
-        </a>
-
-    </div>
-
-</header>
-
-
-
-<!-- HERO -->
-
-<section class="relative overflow-hidden">
-
-    <div class="absolute
-                top-10 left-10
-                w-72 h-72
-                bg-blue-600/20
-                rounded-full
-                blur-3xl">
-    </div>
-
-
-    <div class="absolute
-                bottom-10 right-10
-                w-80 h-80
-                bg-purple-600/20
-                rounded-full
-                blur-3xl">
-    </div>
-
-
-    <div class="relative
-                max-w-7xl mx-auto
-                px-6 py-20">
-
-        <div class="text-center">
-
-            <span class="inline-block
-                         bg-blue-500/10
-                         border border-blue-500/20
-                         text-blue-400
-                         px-4 py-2
-                         rounded-full
-                         text-sm
-                         font-semibold">
-
-                🚀 ABDUSALOMOV ACADEMY
-
-            </span>
-
-
-            <h1 class="text-5xl
-                       md:text-7xl
-                       font-extrabold
-                       mt-7">
-
-                Kurslar
-
-            </h1>
-
-
-            <p class="text-slate-400
-                      text-lg
-                      md:text-xl
-                      max-w-2xl
-                      mx-auto
-                      mt-6">
-
-                Frontend dasturlashni
-                bosqichma-bosqich,
-                0 dan o'rganing.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- COURSES -->
-
-<section class="pb-24">
-
-    <div class="max-w-7xl mx-auto px-6">
-
-        <div class="grid
-                    md:grid-cols-3
-                    gap-8">
-
-
-            <!-- HTML -->
-
-            <div class="group
-                        bg-slate-900
-                        border border-slate-800
-                        rounded-3xl
-                        p-8
-                        hover:-translate-y-2
-                        hover:border-orange-500/50
-                        transition
-                        duration-300">
-
-                <div class="w-16 h-16
-                            rounded-2xl
-                            bg-orange-500/10
-                            text-orange-400
-                            flex
-                            items-center
-                            justify-center
-                            text-3xl">
-
-                    <i class="fa-brands fa-html5"></i>
-
+        <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-28">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full
+                        border border-teal-500/20 bg-teal-500/10 text-teal-300 text-sm font-semibold">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Abdusalomov Academy
                 </div>
 
+                <h1 class="mt-7 text-5xl md:text-7xl font-black tracking-tight leading-[1.02]">
+                    Bilimingizni
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r
+                             from-teal-300 via-cyan-400 to-teal-500">
+                        kodga aylantiring.
+                    </span>
+                </h1>
 
-                <h2 class="text-3xl
-                           font-bold
-                           mt-7">
-
-                    HTML
-
-                </h2>
-
-
-                <p class="text-slate-400
-                          leading-7
-                          mt-4">
-
-                    Web sahifaning asosiy
-                    tuzilishini 0 dan
-                    o'rganing.
-
+                <p class="mt-6 max-w-2xl text-lg md:text-xl text-slate-400 leading-8">
+                    Frontend dasturlashni 0 dan boshlab amaliy darslar orqali o'rganing.
+                    O'zingizga mos kursni tanlang va boshlang.
                 </p>
+            </div>
+        </div>
+    </section>
 
+    <!-- COURSES -->
+    <section class="py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
-                <!-- Progress -->
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-12">
+                <div>
+                    <p class="text-sm font-bold tracking-[.2em] text-teal-400 uppercase">O'quv yo'nalishlari</p>
+                    <h2 class="mt-3 text-4xl md:text-5xl font-black">Kurslar</h2>
+                    <p class="mt-4 text-slate-400 max-w-2xl">
+                        Har bir kurs bosqichma-bosqich tuzilgan. O'rganing, amaliyot qiling va o'z loyihangizni
+                        yarating.
+                    </p>
+                </div>
+                <div class="text-sm text-slate-500">3 ta frontend kurs</div>
+            </div>
 
-                <div class="mt-7">
+            <div class="grid md:grid-cols-3 gap-6">
 
-                    <div class="flex
-                                justify-between
-                                text-sm
-                                mb-2">
+                <!-- HTML -->
+                <article class="group relative overflow-hidden rounded-3xl border border-slate-800
+                            bg-slate-900/70 p-7 hover:-translate-y-1 hover:border-orange-400/40
+                            transition duration-300">
+                    <div class="absolute -right-16 -top-16 w-40 h-40 bg-orange-500/5 rounded-full blur-3xl"></div>
 
-                        <span class="text-slate-400">
-
-                            Boshlang'ich
-
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <div class="h-full
-                                    w-0
-                                    bg-orange-500
-                                    rounded-full">
+                    <div class="relative">
+                        <div class="flex items-center justify-between">
+                            <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-400
+                                    flex items-center justify-center text-3xl">
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-orange-500/10 text-orange-300">
+                                BOSHLANG'ICH
+                            </span>
                         </div>
 
+                        <h2 class="mt-7 text-3xl font-black">HTML</h2>
+                        <p class="mt-4 text-slate-400 leading-7 min-h-[84px]">
+                            Web sahifaning asosiy tuzilishini 0 dan o'rganing va mustahkam poydevor yarating.
+                        </p>
+
+                        <div class="mt-7">
+                            <div class="flex justify-between text-xs text-slate-500 mb-2">
+                                <span>Progress</span>
+                                <span>0%</span>
+                            </div>
+                            <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                                <div class="h-full w-0 bg-orange-400 rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <a href="html-course.html" class="mt-8 flex items-center justify-center gap-2 w-full py-3.5 rounded-xl
+                              bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold transition">
+                            Kursni boshlash
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
+                </article>
 
-                </div>
+                <!-- CSS -->
+                <article class="group relative overflow-hidden rounded-3xl border border-slate-800
+                            bg-slate-900/70 p-7 hover:-translate-y-1 hover:border-blue-400/40
+                            transition duration-300">
+                    <div class="absolute -right-16 -top-16 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl"></div>
 
+                    <div class="relative">
+                        <div class="flex items-center justify-between">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-400
+                                    flex items-center justify-center text-3xl">
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-500/10 text-blue-300">
+                                BOSHLANG'ICH
+                            </span>
+                        </div>
 
-                <a href="html-course.html"
-                   class="block
-                          text-center
-                          mt-8
-                          bg-orange-500
-                          hover:bg-orange-600
-                          text-white
-                          py-4
-                          rounded-xl
-                          font-semibold
-                          transition">
+                        <h2 class="mt-7 text-3xl font-black">CSS</h2>
+                        <p class="mt-4 text-slate-400 leading-7 min-h-[84px]">
+                            Web sahifalarni chiroyli, zamonaviy va responsive qilishni o'rganing.
+                        </p>
 
-                    Kursni boshlash →
+                        <div class="mt-7">
+                            <div class="flex justify-between text-xs text-slate-500 mb-2">
+                                <span>Progress</span>
+                                <span>0%</span>
+                            </div>
+                            <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                                <div class="h-full w-0 bg-blue-400 rounded-full"></div>
+                            </div>
+                        </div>
 
-                </a>
+                        <a href="css-course.html" class="mt-8 flex items-center justify-center gap-2 w-full py-3.5 rounded-xl
+                              bg-blue-500 hover:bg-blue-400 text-slate-950 font-bold transition">
+                            Kursni boshlash
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
 
-            </div>
+                <!-- JAVASCRIPT -->
+                <article class="group relative overflow-hidden rounded-3xl border border-slate-800
+                            bg-slate-900/70 p-7 hover:-translate-y-1 hover:border-yellow-400/40
+                            transition duration-300">
+                    <div class="absolute -right-16 -top-16 w-40 h-40 bg-yellow-500/5 rounded-full blur-3xl"></div>
 
+                    <div class="relative">
+                        <div class="flex items-center justify-between">
+                            <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 text-yellow-300
+                                    flex items-center justify-center text-3xl">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <span class="text-xs font-bold px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-300">
+                                BOSHLANG'ICH
+                            </span>
+                        </div>
 
+                        <h2 class="mt-7 text-3xl font-black">JavaScript</h2>
+                        <p class="mt-4 text-slate-400 leading-7 min-h-[84px]">
+                            Saytga interaktivlik, mantiq va real funksiyalar qo'shishni o'rganing.
+                        </p>
 
-            <!-- CSS -->
+                        <div class="mt-7">
+                            <div class="flex justify-between text-xs text-slate-500 mb-2">
+                                <span>Progress</span>
+                                <span>0%</span>
+                            </div>
+                            <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                                <div class="h-full w-0 bg-yellow-300 rounded-full"></div>
+                            </div>
+                        </div>
 
-            <div class="bg-slate-900
-                        border border-slate-800
-                        rounded-3xl
-                        p-8
-                        opacity-80">
-
-                <div class="w-16 h-16
-                            rounded-2xl
-                            bg-blue-500/10
-                            text-blue-400
-                            flex
-                            items-center
-                            justify-center
-                            text-3xl">
-
-                    <i class="fa-brands fa-css3-alt"></i>
-
-                </div>
-
-
-                <h2 class="text-3xl
-                           font-bold
-                           mt-7">
-
-                    CSS
-
-                </h2>
-
-
-                <p class="text-slate-400
-                          leading-7
-                          mt-4">
-
-                    Web sahifalarni
-                    chiroyli va zamonaviy
-                    qilishni o'rganing.
-
-                </p>
-
-
-                <div class="mt-7">
-
-                    <span class="text-slate-400">
-
-                        Boshlang'ich
-
-                    </span>
-
-                </div>
-
-
-                <a href="css-course.html"
-                   class="block
-                          text-center
-                          mt-8
-                          bg-orange-500
-                          hover:bg-orange-600
-                          text-white
-                          py-4
-                          rounded-xl
-                          font-semibold
-                          transition">
-
-                    Kursni boshlash →
-
-                </a>
+                        <a href="js-course.html" class="mt-8 flex items-center justify-center gap-2 w-full py-3.5 rounded-xl
+                              bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-bold transition">
+                            Kursni boshlash
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
 
             </div>
 
-
-
-            <!-- JAVASCRIPT -->
-
-            <div class="bg-slate-900
-                        border border-slate-800
-                        rounded-3xl
-                        p-8
-                        opacity-80">
-
-                <div class="w-16 h-16
-                            rounded-2xl
-                            bg-yellow-500/10
-                            text-yellow-400
-                            flex
-                            items-center
-                            justify-center
-                            text-3xl">
-
-                    <i class="fa-brands fa-js"></i>
-
+            <div class="mt-10 rounded-2xl border border-teal-500/15 bg-teal-500/5 p-5 flex gap-4 items-start">
+                <div
+                    class="w-10 h-10 shrink-0 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center">
+                    <i class="fa-solid fa-lightbulb"></i>
                 </div>
-
-
-                <h2 class="text-3xl
-                           font-bold
-                           mt-7">
-
-                    JavaScript
-
-                </h2>
-
-
-                <p class="text-slate-400
-                          leading-7
-                          mt-4">
-
-                    Saytga interaktivlik
-                    va funksiyalar
-                    qo'shishni o'rganing.
-
-                </p>
-
-
-                <div class="mt-7">
-
-                    <span class="text-slate-400">
-
-                        Boshlang'ich
-
-                    </span>
-
+                <div>
+                    <h3 class="font-bold">Maslahat</h3>
+                    <p class="mt-1 text-sm text-slate-500 leading-6">
+                        HTML'dan boshlang, keyin CSS va JavaScript'ga o'ting. Shu tartibda o'rganish frontend asoslarini
+                        yaxshiroq tushunishga yordam beradi.
+                    </p>
                 </div>
-
-
-                <a href="js-course.html"
-                   class="block
-                          text-center
-                          mt-8
-                          bg-orange-500
-                          hover:bg-orange-600
-                          text-white
-                          py-4
-                          rounded-xl
-                          font-semibold
-                          transition">
-
-                    Kursni boshlash →
-
-                </a>
-
             </div>
-
         </div>
+    </section>
 
-    </div>
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+                <div class="text-center md:text-left">
+                    <div class="font-extrabold text-lg">
+                        <span class="text-teal-400">Abdusalomov</span> Academy
+                    </div>
+                    <p class="mt-2 text-sm text-slate-500">Learn. Code. Create.</p>
+                </div>
+                <div class="flex gap-3 text-slate-500">
+                    <a href="index.html" class="hover:text-teal-400 transition">Bosh sahifa</a>
+                    <span>•</span>
+                    <a href="about.html" class="hover:text-teal-400 transition">Men haqimda</a>
+                    <span>•</span>
+                    <a href="contact.html" class="hover:text-teal-400 transition">Bog'lanish</a>
+                </div>
+                <p class="text-sm text-slate-600">© 2026 Abdusalomov Academy</p>
+            </div>
+        </div>
+    </footer>
 
-</section>
+    <!-- MOBILE MENU JS -->
 
+    <script>
 
-
-<!-- FOOTER -->
-
-<footer class="border-t
-               border-slate-800
-               py-8">
-
-    <div class="max-w-7xl
-                mx-auto
-                px-6
-                text-center">
-
-        <p class="text-slate-500">
-
-            © 2026 Abdusalomov Academy.
-            Barcha huquqlar himoyalangan.
-
-        </p>
-
-    </div>
-
-</footer>
-
-
-
-<!-- MOBILE MENU JS -->
-
-<script>
-
-const menuBtn =
-    document.getElementById("menuBtn");
+        const menuBtn =
+            document.getElementById("menuBtn");
 
 
-const mobileMenu =
-    document.getElementById("mobileMenu");
+        const mobileMenu =
+            document.getElementById("mobileMenu");
 
 
-if (menuBtn && mobileMenu) {
+        if (menuBtn && mobileMenu) {
 
-    menuBtn.addEventListener("click", () => {
+            menuBtn.addEventListener("click", () => {
 
-        mobileMenu.classList.toggle("hidden");
+                mobileMenu.classList.toggle("hidden");
 
-    });
-
-
-    const mobileLinks =
-        mobileMenu.querySelectorAll("a");
+            });
 
 
-    mobileLinks.forEach(link => {
+            const mobileLinks =
+                mobileMenu.querySelectorAll("a");
 
-        link.addEventListener("click", () => {
 
-            mobileMenu.classList.add("hidden");
+            mobileLinks.forEach(link => {
 
-        });
+                link.addEventListener("click", () => {
 
-    });
+                    mobileMenu.classList.add("hidden");
 
-}
+                });
 
-</script>
+            });
+
+        }
+
+    </script>
 
 
 </body>

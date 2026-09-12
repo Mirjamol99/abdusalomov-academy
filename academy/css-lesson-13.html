@@ -23,12 +23,12 @@
 
             <a href="index.html" class="text-2xl md:text-3xl font-extrabold">
 
-                <span class="text-blue-500">Abdusalomov</span>
+                <span class="text-cyan-400">Abdusalomov</span>
                 Academy
 
             </a>
 
-            <a href="css-course.html" class="text-slate-400 hover:text-blue-400
+            <a href="css-course.html" class="text-slate-400 hover:text-cyan-400
                   flex items-center gap-2">
 
                 <i class="fa-solid fa-arrow-left"></i>
@@ -453,7 +453,7 @@
 
         <section class="lesson-box">
 
-            <span class="text-blue-400 font-bold">
+            <span class="text-cyan-400 font-bold">
                 MINI TEST 🧠
             </span>
 
@@ -505,9 +505,9 @@
 
         <section class="mt-10
                     bg-gradient-to-r
-                    from-blue-600/20
+                    from-cyan-600/20
                     to-cyan-500/10
-                    border border-blue-500/20
+                    border border-cyan-500/20
                     rounded-3xl p-8 text-center">
 
             <div class="text-5xl mb-5">
@@ -533,8 +533,8 @@
 
         <section class="mt-8">
 
-            <button id="completeBtn" onclick="completeLesson()" class="w-full bg-blue-600
-                   hover:bg-blue-700
+            <button id="completeBtn" onclick="completeLesson()" class="w-full bg-cyan-600
+                   hover:bg-cyan-500
                    px-7 py-5 rounded-2xl
                    font-bold text-lg
                    transition">
@@ -546,7 +546,7 @@
             </button>
 
             <p id="completeMessage" class="text-center
-                  text-green-400
+                  text-emerald-400
                   font-semibold mt-5">
             </p>
 
@@ -582,7 +582,7 @@
             border-radius: 999px;
             background: rgba(59, 130, 246, .1);
             border: 1px solid rgba(59, 130, 246, .2);
-            color: #60a5fa;
+            color: #67e8f9;
             font-weight: 700;
         }
 
@@ -602,7 +602,7 @@
             justify-content: center;
             border-radius: 16px;
             background: rgba(59, 130, 246, .1);
-            color: #60a5fa;
+            color: #67e8f9;
             font-size: 25px;
             margin-bottom: 20px;
         }
@@ -641,7 +641,7 @@
         }
 
         .color-text {
-            color: #60a5fa;
+            color: #67e8f9;
         }
 
         .size-text {
@@ -745,7 +745,7 @@
             text-align: center;
             letter-spacing: 4px;
             font-weight: 800;
-            color: #60a5fa;
+            color: #67e8f9;
         }
 
         .arial {
@@ -771,8 +771,8 @@
 
             background:
                 linear-gradient(135deg,
-                    #1d4ed8,
-                    #7c3aed);
+                    #155e75,
+                    #0f766e);
         }
 
         .hero-demo span {
@@ -790,7 +790,7 @@
 
         .hero-demo p {
             margin-top: 15px;
-            color: #dbeafe;
+            color: #cffafe;
         }
 
         .hero-demo button {
@@ -799,7 +799,7 @@
             border: none;
             border-radius: 12px;
             background: white;
-            color: #1d4ed8;
+            color: #155e75;
             font-weight: 800;
             cursor: pointer;
             transition: .3s;
@@ -824,8 +824,8 @@
         }
 
         .answer-btn:hover {
-            border-color: #3b82f6;
-            color: #60a5fa;
+            border-color: #22d3ee;
+            color: #67e8f9;
             transform: translateY(-2px);
         }
 
@@ -850,7 +850,154 @@
             }
 
         }
-    </style>
+    
+/* Modern Abdusalomov Academy teal/cyan refresh */
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(6,182,212,.10), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(20,184,166,.08), transparent 30%),
+    #020617;
+}
+
+.lesson-number {
+  box-shadow: 0 10px 30px rgba(6,182,212,.08);
+}
+
+.lesson-box {
+  background: rgba(15,23,42,.78);
+  border-color: rgba(51,65,85,.75);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  transition: .3s ease;
+}
+
+.lesson-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34,211,238,.35);
+}
+
+.lesson-icon {
+  box-shadow: inset 0 0 24px rgba(6,182,212,.08);
+}
+
+.code-box {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 12px 40px rgba(0,0,0,.18);
+}
+
+.demo-text,
+.weight-demo,
+.align-demo,
+.decoration-demo,
+.transform-demo,
+.font-demo,
+.line-demo,
+.spacing-demo,
+.hero-demo {
+  border: 1px solid rgba(51,65,85,.65);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.02);
+}
+
+.demo-text,
+.weight-demo,
+.align-demo,
+.decoration-demo,
+.transform-demo,
+.font-demo,
+.line-demo,
+.spacing-demo {
+  transition: .3s ease;
+}
+
+.demo-text:hover,
+.weight-demo:hover,
+.align-demo:hover,
+.decoration-demo:hover,
+.transform-demo:hover,
+.font-demo:hover,
+.line-demo:hover,
+.spacing-demo:hover {
+  border-color: rgba(34,211,238,.30);
+  transform: translateY(-2px);
+}
+
+.color-text,
+.spacing-demo {
+  color: #67e8f9;
+}
+
+.hero-demo {
+  background: linear-gradient(135deg, #155e75, #0f766e);
+  box-shadow: 0 20px 60px rgba(6,182,212,.14);
+  transition: .3s ease;
+}
+
+.hero-demo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 70px rgba(6,182,212,.20);
+}
+
+.hero-demo button {
+  color: #155e75;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+.hero-demo button:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,.24);
+}
+
+.answer-btn {
+  cursor: pointer;
+}
+
+.answer-btn:hover {
+  border-color: rgba(34,211,238,.65);
+  color: #67e8f9;
+  transform: translateY(-2px);
+}
+
+#completeBtn {
+  box-shadow: 0 12px 32px rgba(6,182,212,.18);
+}
+
+#completeBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(6,182,212,.28);
+}
+
+@media (max-width: 640px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lesson-box {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .lesson-title {
+    font-size: 22px;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+
+  .size-text {
+    font-size: 30px;
+  }
+
+  .hero-demo h3 {
+    font-size: 29px;
+  }
+
+  .spacing-demo {
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+}
+
+</style>
 
 
     <script>
@@ -868,7 +1015,7 @@
                     "✅ To'g'ri! Matnni markazga joylashtirish uchun text-align: center ishlatiladi.";
 
                 result.className =
-                    "mt-6 font-bold text-lg text-green-400";
+                    "mt-6 font-bold text-lg text-emerald-400";
 
             } else {
 
@@ -940,13 +1087,13 @@
 
 
             button.classList.remove(
-                "bg-blue-600",
-                "hover:bg-blue-700"
+                "bg-cyan-600",
+                "hover:bg-cyan-500"
             );
 
 
             button.classList.add(
-                "bg-green-600"
+                "bg-emerald-600"
             );
 
 

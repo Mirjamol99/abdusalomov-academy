@@ -29,21 +29,33 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background: #020617;
+            background:
+                radial-gradient(circle at 10% 8%, rgba(6, 182, 212, .09), transparent 28%),
+                radial-gradient(circle at 90% 32%, rgba(20, 184, 166, .07), transparent 26%),
+                #020617;
         }
 
         .lesson-card {
-            transition: all .25s ease;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
         }
 
         .lesson-card:hover {
             transform: translateY(-5px);
-            border-color: #facc15;
+            border-color: rgba(34, 211, 238, .38);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .22);
         }
 
         .locked {
             opacity: .55;
+        }
+
+        .progress-glow {
+            box-shadow: 0 0 20px rgba(34, 211, 238, .20);
         }
     </style>
 </head>
@@ -66,7 +78,7 @@
         <a href="index.html"
            class="text-2xl md:text-3xl font-extrabold">
 
-            <span class="text-yellow-400">
+            <span class="text-cyan-400">
                 Abdusalomov
             </span>
 
@@ -77,7 +89,7 @@
 
         <a href="index.html"
            class="text-slate-400
-                  hover:text-yellow-400
+                  hover:text-cyan-400
                   transition">
 
             <i class="fa-solid fa-house"></i>
@@ -105,9 +117,9 @@
                     items-center gap-2
                     px-5 py-2
                     rounded-full
-                    bg-yellow-400/10
-                    border border-yellow-400/20
-                    text-yellow-400
+                    bg-cyan-500/10
+                    border border-cyan-500/20
+                    text-cyan-400
                     font-bold">
 
             <i class="fa-brands fa-js"></i>
@@ -122,7 +134,7 @@
 
             JavaScript
 
-            <span class="text-yellow-400">
+            <span class="text-cyan-400">
                 60 ta dars
             </span>
 
@@ -156,7 +168,7 @@
                 </span>
 
                 <span id="progressText"
-                      class="text-yellow-400 font-bold">
+                      class="text-cyan-400 font-bold">
 
                     0 / 60
 
@@ -172,7 +184,7 @@
 
                 <div id="progressBar"
                      class="h-full
-                            bg-yellow-400
+                            bg-cyan-500
                             transition-all duration-500"
                      style="width: 0%">
 
@@ -216,7 +228,7 @@
 
         <h2 class="text-xl font-bold">
 
-            <span class="text-yellow-400">
+            <span class="text-cyan-400">
                 Abdusalomov
             </span>
             Academy
@@ -614,8 +626,8 @@ function renderLessons() {
 
                    class="block
                           text-center
-                          bg-yellow-400
-                          hover:bg-yellow-300
+                          bg-cyan-500
+                          hover:bg-cyan-400
                           text-slate-950
                           font-extrabold
                           py-3
@@ -661,7 +673,7 @@ function renderLessons() {
                         justify-between
                         mb-5">
 
-                <span class="text-yellow-400
+                <span class="text-cyan-400
                              font-extrabold">
 
                     ${String(number).padStart(2, "0")}-DARS

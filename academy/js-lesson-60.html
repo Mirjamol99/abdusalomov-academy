@@ -21,6 +21,7 @@
 
         body {
             background: #020617;
+            overflow-x: hidden;
         }
 
         .lesson-box {
@@ -29,9 +30,15 @@
             border-radius: 24px;
             padding: 30px;
             margin-top: 28px;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+        .lesson-box:hover {
+            border-color: rgba(250,204,21,.35);
+            box-shadow: 0 18px 50px rgba(0,0,0,.18);
         }
 
         .code-box {
+            position: relative;
             background: #020617;
             border: 1px solid #1e293b;
             border-radius: 16px;
@@ -39,6 +46,22 @@
             margin-top: 20px;
             overflow-x: auto;
         }
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #334155;
+            transition: .2s;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .copy-btn:hover { background: #334155; color: white; }
 
         .code-box pre {
             color: #4ade80;
@@ -77,6 +100,29 @@
 
         .demo-input:focus {
             border-color: #facc15;
+        }
+        .next-lesson {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 16px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            transition: .2s;
+            text-decoration: none;
+        }
+        .next-lesson:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
+        }
+        @media (max-width: 640px) {
+            .lesson-box { padding: 20px; border-radius: 18px; }
+            .code-box { padding: 18px; padding-top: 52px; }
         }
     </style>
 </head>
@@ -252,6 +298,7 @@
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>localStorage.setItem(
     "name",
@@ -297,6 +344,7 @@
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let name =
     localStorage.getItem("name");
@@ -341,6 +389,7 @@ console.log(name);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>localStorage.removeItem(
     "name"
@@ -381,6 +430,7 @@ console.log(name);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>localStorage.clear();</code></pre>
 
@@ -424,6 +474,7 @@ console.log(name);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>localStorage.setItem(
     "age",
@@ -441,6 +492,7 @@ console.log(name);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let age =
     localStorage.getItem("age");
@@ -458,6 +510,7 @@ console.log(age);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let age =
     Number(
@@ -494,6 +547,7 @@ console.log(age + 1);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let user = {
     name: "Mirjamol",
@@ -544,6 +598,7 @@ console.log(data);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let data =
     '{"name":"Mirjamol","age":15}';
@@ -582,6 +637,7 @@ console.log(user.name);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let user = {
     name: "Ali",
@@ -606,6 +662,7 @@ localStorage.setItem(
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let savedUser =
     JSON.parse(
@@ -643,6 +700,7 @@ console.log(savedUser.city);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let fruits = [
     "Apple",
@@ -667,6 +725,7 @@ localStorage.setItem(
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let savedFruits =
     JSON.parse(
@@ -744,6 +803,7 @@ console.log(savedFruits);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let form =
     document.querySelector("#nameForm");
@@ -797,6 +857,7 @@ form.addEventListener(
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let savedName =
     localStorage.getItem("name");
@@ -837,6 +898,7 @@ if (savedName) {
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let cart = [
     {
@@ -863,6 +925,7 @@ localStorage.setItem(
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let cart =
     JSON.parse(
@@ -890,6 +953,7 @@ console.log(cart);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let cart =
     JSON.parse(
@@ -949,6 +1013,7 @@ localStorage.setItem(
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>cart =
     cart.filter(function(item) {
@@ -989,6 +1054,7 @@ localStorage.setItem(
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>localStorage.setItem(
     "theme",
@@ -1006,6 +1072,7 @@ localStorage.setItem(
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let theme =
     localStorage.getItem("theme");
@@ -1039,6 +1106,7 @@ console.log(theme);</code></pre>
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let completedLessons =
     JSON.parse(
@@ -1076,6 +1144,7 @@ localStorage.setItem(
 
 
     <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let name =
     localStorage.getItem("name");
@@ -1479,6 +1548,7 @@ if (name !== null) {
             saqlang:
 
             <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let user = {
     name: "Ali",
@@ -1928,108 +1998,106 @@ if (savedUserName) {
 
 
 /* =====================================
-   5. COMPLETE LESSON
+   5. LESSON HELPERS
 ===================================== */
 
-let completeBtn =
-    document.querySelector(
-        "#completeBtn"
-    );
-
-
-completeBtn.addEventListener(
-    "click",
-    function() {
-
-
-        let completedLessons =
-            JSON.parse(
-                localStorage.getItem(
-                    "jsCompletedLessons"
-                )
-            ) || [];
-
-
-        /*
-            59-dars tugaganini tekshiramiz
-        */
-
-        if (
-            !completedLessons.includes(59)
-        ) {
-
-            alert(
-                "Avval 59-darsni tugating!"
-            );
-
-
-            window.location.href =
-                "js-lesson-59.html";
-
-
-            return;
-
-        }
-
-
-        /*
-            60-darsni saqlaymiz
-        */
-
-        if (
-            !completedLessons.includes(60)
-        ) {
-
-            completedLessons.push(60);
-
-        }
-
-
-        localStorage.setItem(
-            "jsCompletedLessons",
-            JSON.stringify(
-                completedLessons
-            )
-        );
-
-
-        document.querySelector(
-            "#message"
-        ).textContent =
-            "🎉 60-dars tugatildi! 61-dars ochildi.";
-
-
-        completeBtn.textContent =
-            "✅ 60-DARS TUGATILDI";
-
-
-        completeBtn.disabled = true;
-
-
-        completeBtn.classList.remove(
-            "bg-yellow-400",
-            "hover:bg-yellow-300"
-        );
-
-
-        completeBtn.classList.add(
-            "bg-green-600",
-            "text-white"
-        );
-
-
-        setTimeout(
-            function() {
-
-                window.location.href =
-                    "js-course.html";
-
-            },
-            1200
-        );
-
+function getCompletedLessons() {
+    try {
+        const data = JSON.parse(localStorage.getItem("jsCompletedLessons"));
+        return Array.isArray(data) ? data : [];
+    } catch (error) {
+        return [];
     }
-);
+}
+
+function saveCompletedLessons(lessons) {
+    localStorage.setItem("jsCompletedLessons", JSON.stringify(lessons));
+}
+
+function copyCode(button) {
+    const code = button.parentElement.querySelector("code").innerText;
+
+    navigator.clipboard.writeText(code).then(() => {
+        const oldText = button.textContent;
+        button.textContent = "✅ Nusxalandi";
+
+        setTimeout(() => {
+            button.textContent = oldText;
+        }, 1200);
+    }).catch(() => {
+        button.textContent = "❌ Xatolik";
+        setTimeout(() => {
+            button.textContent = "📋 Nusxalash";
+        }, 1200);
+    });
+}
+
+function addNextLessonLink() {
+    if (document.querySelector("#nextLessonLink")) return;
+
+    const completeSection = document.querySelector("#completeBtn")?.closest("section");
+    if (!completeSection) return;
+
+    const link = document.createElement("a");
+    link.id = "nextLessonLink";
+    link.className = "next-lesson";
+    link.href = "js-lesson-61.html";
+    link.innerHTML = '🚀 61-DARSNI BOSHLASH <i class="fa-solid fa-arrow-right"></i>';
+
+    completeSection.appendChild(link);
+}
+
+function showCompletedState() {
+    const completedLessons = getCompletedLessons();
+
+    if (!completedLessons.includes(60)) return;
+
+    document.querySelector("#message").textContent =
+        "🎉 60-dars tugatilgan! 61-dars ochildi.";
+
+    const btn = document.querySelector("#completeBtn");
+    btn.textContent = "✅ 60-DARS TUGATILDI";
+    btn.disabled = true;
+
+    btn.classList.remove("bg-yellow-400", "hover:bg-yellow-300");
+    btn.classList.add("bg-green-600", "text-white");
+
+    addNextLessonLink();
+}
+
+
+/* =====================================
+   6. COMPLETE LESSON
+===================================== */
+
+document.querySelector("#completeBtn").addEventListener("click", function() {
+    const completedLessons = getCompletedLessons();
+
+    if (!completedLessons.includes(59)) {
+        alert("Avval 59-darsni tugating!");
+        window.location.href = "js-lesson-59.html";
+        return;
+    }
+
+    if (!completedLessons.includes(60)) {
+        completedLessons.push(60);
+    }
+
+    saveCompletedLessons(completedLessons);
+
+    document.querySelector("#message").textContent =
+        "🎉 60-dars tugatildi! 61-dars ochildi.";
+
+    this.textContent = "✅ 60-DARS TUGATILDI";
+    this.disabled = true;
+
+    this.classList.remove("bg-yellow-400", "hover:bg-yellow-300");
+    this.classList.add("bg-green-600", "text-white");
+
+    addNextLessonLink();
+});
+
+showCompletedState();
 
 </script>
 

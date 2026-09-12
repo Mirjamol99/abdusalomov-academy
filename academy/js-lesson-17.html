@@ -12,16 +12,25 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <style>
+    <style id="jjr5b2">
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+
         .lesson-box {
             background: #0f172a;
             border: 1px solid #1e293b;
             border-radius: 24px;
             padding: 30px;
             margin-top: 28px;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+        .lesson-box:hover {
+            border-color: rgba(250,204,21,.35);
+            box-shadow: 0 18px 50px rgba(0,0,0,.18);
         }
 
         .code-box {
+            position: relative;
             background: #020617;
             border: 1px solid #1e293b;
             border-radius: 16px;
@@ -29,6 +38,20 @@
             margin-top: 20px;
             overflow-x: auto;
         }
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #334155;
+            transition: .2s;
+        }
+        .copy-btn:hover { background: #334155; color: white; }
 
         .code-box pre {
             color: #4ade80;
@@ -37,6 +60,29 @@
 
         code {
             color: #facc15;
+        }
+        @media (max-width: 640px) {
+            .lesson-box { padding: 20px; border-radius: 18px; }
+            .code-box { padding: 18px; padding-top: 52px; }
+        }
+
+        .next-lesson {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 16px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            transition: .2s;
+        }
+        .next-lesson:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -179,6 +225,7 @@
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>if (shart) {
     // shart true bo‘lsa
@@ -213,6 +260,7 @@
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let age = 15;
 
@@ -225,6 +273,7 @@ if (age >= 18) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Kirish mumkin emas</code></pre>
 
@@ -257,6 +306,7 @@ if (age >= 18) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let age = 20;
 
@@ -269,6 +319,7 @@ if (age >= 18) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Kirish mumkin</code></pre>
 
@@ -301,6 +352,7 @@ if (age >= 18) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let isLogin = false;
 
@@ -313,6 +365,7 @@ if (isLogin) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Iltimos, tizimga kiring.</code></pre>
 
@@ -330,6 +383,7 @@ if (isLogin) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let number = 7;
 
@@ -342,6 +396,7 @@ if (number > 10) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>10 dan katta emas</code></pre>
 
@@ -402,6 +457,7 @@ if (number > 10) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>if (birinchiShart) {
 
@@ -437,6 +493,7 @@ if (number > 10) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let age = 20;
 
@@ -451,6 +508,7 @@ if (age < 13) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Katta yoshli</code></pre>
 
@@ -468,6 +526,7 @@ if (age < 13) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let score = 85;
 
@@ -486,6 +545,7 @@ if (score >= 90) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>B</code></pre>
 
@@ -520,6 +580,7 @@ if (score >= 90) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let score = 72;
 
@@ -536,6 +597,7 @@ if (score >= 90) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Yaxshi</code></pre>
 
@@ -553,6 +615,7 @@ if (score >= 90) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let temperature = 10;
 
@@ -569,6 +632,7 @@ if (temperature > 30) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Sovuq</code></pre>
 
@@ -586,6 +650,7 @@ if (temperature > 30) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let username = "admin";
 
@@ -600,6 +665,7 @@ if (username === "admin") {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Admin panel</code></pre>
 
@@ -617,6 +683,7 @@ if (username === "admin") {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let age = 20;
 let hasTicket = true;
@@ -632,6 +699,7 @@ if (age >= 18 && hasTicket) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Kirish mumkin</code></pre>
 
@@ -655,6 +723,7 @@ if (age >= 18 && hasTicket) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let number = 15;
 
@@ -687,6 +756,7 @@ if (number > 20) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>2</code></pre>
 
@@ -717,6 +787,7 @@ if (number > 20) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>if (shart) {
 
@@ -747,6 +818,7 @@ if (number > 20) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let age = 16;
 
@@ -759,6 +831,7 @@ if (age >= 18) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let score = 75;
 
@@ -791,6 +864,7 @@ if (score >= 90) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let price = 150000;
 
@@ -807,6 +881,7 @@ if (price >= 500000) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>10% chegirma</code></pre>
 
@@ -994,79 +1069,112 @@ if (price >= 500000) {
 
 
 <script>
+function copyCode(button) {
+    const code = button.parentElement.querySelector("code").innerText;
+
+    navigator.clipboard.writeText(code).then(() => {
+        const oldText = button.textContent;
+        button.textContent = "✅ Nusxalandi";
+
+        setTimeout(() => {
+            button.textContent = oldText;
+        }, 1200);
+    });
+}
+
+function restoreLessonState() {
+    const completedLessons =
+        JSON.parse(localStorage.getItem("jsCompletedLessons")) || [];
+
+    if (completedLessons.includes(17)) {
+        document.getElementById("message").textContent =
+            "🎉 17-dars allaqachon tugatilgan! 18-dars ochiq.";
+
+        const button = document.getElementById("completeBtn");
+
+        button.textContent = "✅ 17-DARS TUGATILDI";
+        button.disabled = true;
+
+        button.classList.remove(
+            "bg-yellow-400",
+            "hover:bg-yellow-300"
+        );
+
+        button.classList.add(
+            "bg-green-600",
+            "text-white"
+        );
+
+        if (!document.getElementById("nextLessonLink")) {
+            const nextLink = document.createElement("a");
+
+            nextLink.id = "nextLessonLink";
+            nextLink.href = "js-lesson-18.html";
+            nextLink.className = "next-lesson";
+            nextLink.innerHTML =
+                '18-DARSNI BOSHLASH <i class="fa-solid fa-arrow-right"></i>';
+
+            button.insertAdjacentElement("afterend", nextLink);
+        }
+    }
+}
 
 function completeLesson() {
-
     let completedLessons =
-        JSON.parse(
-            localStorage.getItem("jsCompletedLessons")
-        ) || [];
-
+        JSON.parse(localStorage.getItem("jsCompletedLessons")) || [];
 
     // 16-dars tugatilganini tekshirish
-
     if (!completedLessons.includes(16)) {
-
         alert("Avval 16-darsni tugating!");
-
-        window.location.href =
-            "js-lesson-16.html";
-
+        window.location.href = "js-lesson-16.html";
         return;
     }
 
-
     // 17-darsni saqlash
-
     if (!completedLessons.includes(17)) {
-
         completedLessons.push(17);
-
     }
-
 
     localStorage.setItem(
         "jsCompletedLessons",
         JSON.stringify(completedLessons)
     );
 
-
     document.getElementById("message").textContent =
         "🎉 17-dars tugatildi! 18-dars ochildi.";
-
 
     const button =
         document.getElementById("completeBtn");
 
-
     button.textContent =
         "✅ 17-DARS TUGATILDI";
 
-
     button.disabled = true;
-
 
     button.classList.remove(
         "bg-yellow-400",
         "hover:bg-yellow-300"
     );
 
-
     button.classList.add(
         "bg-green-600",
         "text-white"
     );
 
+    if (!document.getElementById("nextLessonLink")) {
+        const nextLink = document.createElement("a");
 
-    setTimeout(() => {
+        nextLink.id = "nextLessonLink";
+        nextLink.href = "js-lesson-18.html";
+        nextLink.className = "next-lesson";
+        nextLink.innerHTML =
+            '18-DARSNI BOSHLASH <i class="fa-solid fa-arrow-right"></i>';
 
-        window.location.href =
-            "js-course.html";
-
-    }, 1200);
-
+        button.insertAdjacentElement("afterend", nextLink);
+    }
 }
 
+document.addEventListener("DOMContentLoaded", restoreLessonState);
 </script>
 
 </body>

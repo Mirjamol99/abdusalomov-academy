@@ -10,14 +10,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background: #020617;
+            background:
+                radial-gradient(circle at 12% 12%, rgba(6, 182, 212, .10), transparent 30%),
+                radial-gradient(circle at 88% 82%, rgba(20, 184, 166, .08), transparent 30%),
+                #020617;
         }
 
         .glass {
-            background: rgba(15, 23, 42, 0.85);
-            border: 1px solid rgba(51, 65, 85, 0.8);
-            backdrop-filter: blur(15px);
+            background: rgba(15, 23, 42, .78);
+            border: 1px solid rgba(51, 65, 85, .75);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, .28);
+            transition: border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .glass:hover {
+            border-color: rgba(34, 211, 238, .28);
+            box-shadow: 0 28px 90px rgba(0, 0, 0, .32);
+        }
+
+        input {
+            transition: border-color .2s ease, box-shadow .2s ease;
+        }
+
+        input:focus {
+            box-shadow: 0 0 0 3px rgba(34, 211, 238, .08);
+        }
+
+        .brand-dot {
+            box-shadow: 0 0 30px rgba(34, 211, 238, .25);
         }
     </style>
 </head>
@@ -29,15 +55,15 @@
         <!-- LOGO -->
         <div class="text-center mb-8">
 
-            <a
-                href="./index.html"
-                class="text-3xl font-extrabold"
-            >
-                <span class="text-yellow-400">
-                    Abdusalomov
-                </span>
-                Academy
-            </a>
+            <div class="inline-flex items-center justify-center gap-3">
+                <span class="brand-dot w-3 h-3 rounded-full bg-cyan-400"></span>
+                <a
+                    href="./index.html"
+                    class="text-3xl font-extrabold tracking-tight"
+                >
+                    <span class="text-cyan-400">Abdusalomov</span> Academy
+                </a>
+            </div>
 
             <p class="text-slate-400 mt-3">
                 Yangi akkaunt yarating 🚀
@@ -86,7 +112,7 @@
                             px-5 py-4
                             outline-none
                             transition
-                            focus:border-yellow-400
+                            focus:border-cyan-400
                         "
                     >
 
@@ -117,7 +143,7 @@
                             px-5 py-4
                             outline-none
                             transition
-                            focus:border-yellow-400
+                            focus:border-cyan-400
                         "
                     >
 
@@ -148,7 +174,7 @@
                             px-5 py-4
                             outline-none
                             transition
-                            focus:border-yellow-400
+                            focus:border-cyan-400
                         "
                     >
 
@@ -179,7 +205,7 @@
                             px-5 py-4
                             outline-none
                             transition
-                            focus:border-yellow-400
+                            focus:border-cyan-400
                         "
                     >
 
@@ -214,7 +240,7 @@
                                 pr-14
                                 outline-none
                                 transition
-                                focus:border-yellow-400
+                                focus:border-cyan-400
                             "
                         >
 
@@ -270,7 +296,7 @@
                                 pr-14
                                 outline-none
                                 transition
-                                focus:border-yellow-400
+                                focus:border-cyan-400
                             "
                         >
 
@@ -331,8 +357,8 @@
                     type="submit"
                     class="
                         w-full
-                        bg-yellow-400
-                        hover:bg-yellow-300
+                        bg-cyan-500
+                        hover:bg-cyan-400
                         active:scale-[0.98]
                         text-slate-950
                         font-extrabold
@@ -355,8 +381,8 @@
                 <a
                     href="./login.html"
                     class="
-                        text-yellow-400
-                        hover:text-yellow-300
+                        text-cyan-400
+                        hover:text-cyan-300
                         font-bold
                     "
                 >

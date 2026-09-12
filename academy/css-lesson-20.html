@@ -24,13 +24,13 @@
         <a href="index.html"
            class="text-2xl md:text-3xl font-extrabold">
 
-            <span class="text-blue-500">Abdusalomov</span>
+            <span class="text-cyan-400">Abdusalomov</span>
             Academy
 
         </a>
 
         <a href="css-course.html"
-           class="text-slate-400 hover:text-blue-400
+           class="text-slate-400 hover:text-cyan-400
                   flex items-center gap-2">
 
             <i class="fa-solid fa-arrow-left"></i>
@@ -372,7 +372,7 @@
 
     <section class="lesson-box">
 
-        <span class="text-blue-400 font-bold">
+        <span class="text-cyan-400 font-bold">
             YAKUNIY MINI TEST 🧠
         </span>
 
@@ -432,9 +432,9 @@
 
     <section class="mt-10
                     bg-gradient-to-r
-                    from-blue-600/20
+                    from-cyan-600/20
                     to-cyan-500/10
-                    border border-blue-500/20
+                    border border-cyan-500/20
                     rounded-3xl p-8 text-center">
 
         <div class="text-6xl mb-5">
@@ -463,8 +463,8 @@
         <button
             id="completeBtn"
             onclick="completeLesson()"
-            class="w-full bg-blue-600
-                   hover:bg-blue-700
+            class="w-full bg-cyan-600
+                   hover:bg-cyan-500
                    px-7 py-5 rounded-2xl
                    font-bold text-lg
                    transition">
@@ -474,7 +474,7 @@
         </button>
 
         <p id="completeMessage"
-           class="text-center text-green-400
+           class="text-center text-emerald-400
                   font-semibold mt-5">
         </p>
 
@@ -512,11 +512,11 @@
 
     border-radius: 999px;
 
-    background: rgba(59,130,246,.1);
+    background: rgba(6,182,212,.10);
 
-    border: 1px solid rgba(59,130,246,.2);
+    border: 1px solid rgba(6,182,212,.20);
 
-    color: #60a5fa;
+    color: #67e8f9;
 
     font-weight: 700;
 }
@@ -543,9 +543,9 @@
 
     border-radius: 16px;
 
-    background: rgba(59,130,246,.1);
+    background: rgba(6,182,212,.10);
 
-    color: #60a5fa;
+    color: #67e8f9;
 
     font-size: 25px;
 
@@ -589,7 +589,7 @@
 
     padding: 25px;
 
-    background: #2563eb;
+    background: #0e7490;
 
     border-radius: 16px;
 
@@ -603,7 +603,7 @@
 .transition-demo:hover {
     transform: scale(1.05);
 
-    background: #7c3aed;
+    background: #0f766e;
 }
 
 
@@ -620,7 +620,7 @@
     align-items: center;
     justify-content: center;
 
-    background: #2563eb;
+    background: #0e7490;
 
     border-radius: 18px;
 
@@ -643,7 +643,7 @@
 
     width: 250px;
 
-    background: #7c3aed;
+    background: #0f766e;
 
     border-radius: 16px;
 
@@ -672,7 +672,7 @@
     align-items: center;
     justify-content: center;
 
-    background: #2563eb;
+    background: #0e7490;
 
     border-radius: 20px;
 
@@ -711,7 +711,7 @@
     align-items: center;
     justify-content: center;
 
-    background: #2563eb;
+    background: #0e7490;
 
     border-radius: 18px;
 
@@ -800,10 +800,10 @@
 .final-card:hover {
     transform: translateY(-10px);
 
-    border-color: #3b82f6;
+    border-color: #22d3ee;
 
     box-shadow:
-        0 20px 50px rgba(37,99,235,.2);
+        0 20px 50px rgba(6,182,212,.20);
 }
 
 .final-icon {
@@ -819,9 +819,9 @@
 
     border-radius: 20px;
 
-    background: rgba(59,130,246,.1);
+    background: rgba(6,182,212,.10);
 
-    color: #60a5fa;
+    color: #67e8f9;
 
     font-size: 30px;
 }
@@ -851,7 +851,7 @@
 
     border-radius: 14px;
 
-    background: #2563eb;
+    background: #0e7490;
 
     color: white;
 
@@ -865,7 +865,7 @@
 .final-card button:hover {
     transform: scale(1.03);
 
-    background: #1d4ed8;
+    background: #155e75;
 }
 
 
@@ -890,9 +890,9 @@
 }
 
 .answer-btn:hover {
-    border-color: #3b82f6;
+    border-color: #22d3ee;
 
-    color: #60a5fa;
+    color: #67e8f9;
 
     transform: translateY(-2px);
 }
@@ -910,6 +910,141 @@
         animation: none;
     }
 
+}
+
+
+/* Modern Abdusalomov Academy teal/cyan refresh */
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(6,182,212,.10), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(20,184,166,.08), transparent 30%),
+    #020617;
+}
+
+.lesson-number {
+  box-shadow: 0 10px 30px rgba(6,182,212,.08);
+}
+
+.lesson-box {
+  background: rgba(15,23,42,.78);
+  border-color: rgba(51,65,85,.75);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  transition: .3s ease;
+}
+
+.lesson-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34,211,238,.35);
+}
+
+.lesson-icon {
+  box-shadow: inset 0 0 24px rgba(6,182,212,.08);
+}
+
+.code-box {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 12px 40px rgba(0,0,0,.18);
+}
+
+.transition-demo,
+.transform-demo,
+.translate-demo,
+.rotate-demo,
+.animation-area,
+.pulse-demo,
+.final-card {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 14px 40px rgba(0,0,0,.18);
+}
+
+.transition-demo:hover {
+  box-shadow: 0 18px 42px rgba(6,182,212,.18);
+}
+
+.transform-demo,
+.translate-demo,
+.rotate-demo {
+  box-shadow: 0 12px 34px rgba(6,182,212,.16);
+}
+
+.animated-box {
+  box-shadow: 0 10px 30px rgba(6,182,212,.18);
+}
+
+.pulse-demo {
+  box-shadow: 0 12px 36px rgba(20,184,166,.20);
+}
+
+.final-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.final-card::before {
+  content: "";
+  position: absolute;
+  inset: -55% 8% auto;
+  height: 220px;
+  background: radial-gradient(circle, rgba(34,211,238,.15), transparent 68%);
+  pointer-events: none;
+}
+
+.final-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.final-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(34,211,238,.48);
+  box-shadow: 0 22px 52px rgba(6,182,212,.16);
+}
+
+.final-icon {
+  box-shadow: 0 16px 38px rgba(6,182,212,.18);
+}
+
+.answer-btn {
+  cursor: pointer;
+}
+
+.answer-btn:hover {
+  border-color: rgba(34,211,238,.65);
+  color: #67e8f9;
+  transform: translateY(-2px);
+}
+
+#completeBtn {
+  box-shadow: 0 12px 32px rgba(6,182,212,.18);
+}
+
+#completeBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(6,182,212,.28);
+}
+
+@media (max-width: 640px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lesson-box {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .lesson-title {
+    font-size: 22px;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+
+  .translate-demo {
+    width: 100%;
+    max-width: 250px;
+  }
 }
 
 </style>
@@ -930,7 +1065,7 @@ function checkAnswer(correct) {
             "✅ To'g'ri! CSS animatsiyasi @keyframes orqali yaratiladi.";
 
         result.className =
-            "mt-6 font-bold text-lg text-green-400";
+            "mt-6 font-bold text-lg text-emerald-400";
 
     } else {
 
@@ -1002,13 +1137,13 @@ function completeLesson() {
 
 
     button.classList.remove(
-        "bg-blue-600",
-        "hover:bg-blue-700"
+        "bg-cyan-600",
+        "hover:bg-cyan-500"
     );
 
 
     button.classList.add(
-        "bg-green-600"
+        "bg-emerald-600"
     );
 
 

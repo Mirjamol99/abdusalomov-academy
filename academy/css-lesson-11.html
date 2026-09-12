@@ -25,13 +25,13 @@
         <a href="index.html"
            class="text-2xl md:text-3xl font-extrabold">
 
-            <span class="text-blue-500">Abdusalomov</span>
+            <span class="text-cyan-400">Abdusalomov</span>
             Academy
 
         </a>
 
         <a href="css-course.html"
-           class="text-slate-400 hover:text-blue-400
+           class="text-slate-400 hover:text-cyan-400
                   flex items-center gap-2">
 
             <i class="fa-solid fa-arrow-left"></i>
@@ -468,7 +468,7 @@
 
     <section class="lesson-box">
 
-        <span class="text-blue-400 font-bold">
+        <span class="text-cyan-400 font-bold">
             MINI TEST 🧠
         </span>
 
@@ -529,9 +529,9 @@
 
     <section class="mt-10
                     bg-gradient-to-r
-                    from-blue-600/20
+                    from-cyan-600/20
                     to-cyan-500/10
-                    border border-blue-500/20
+                    border border-cyan-500/20
                     rounded-3xl p-8 text-center">
 
         <div class="text-5xl mb-5">
@@ -560,8 +560,8 @@
         <button
             id="completeBtn"
             onclick="completeLesson()"
-            class="w-full bg-blue-600
-                   hover:bg-blue-700
+            class="w-full bg-cyan-600
+                   hover:bg-cyan-500
                    px-7 py-5 rounded-2xl
                    font-bold text-lg
                    transition">
@@ -574,7 +574,7 @@
 
         <p id="completeMessage"
            class="text-center
-                  text-green-400
+                  text-emerald-400
                   font-semibold mt-5">
         </p>
 
@@ -611,7 +611,7 @@
     border-radius: 999px;
     background: rgba(59,130,246,.1);
     border: 1px solid rgba(59,130,246,.2);
-    color: #60a5fa;
+    color: #67e8f9;
     font-weight: 700;
 }
 
@@ -631,7 +631,7 @@
     justify-content: center;
     border-radius: 16px;
     background: rgba(59,130,246,.1);
-    color: #60a5fa;
+    color: #67e8f9;
     font-size: 25px;
     margin-bottom: 20px;
 }
@@ -680,7 +680,7 @@
 }
 
 .static-demo {
-    color: #60a5fa;
+    color: #67e8f9;
 }
 
 .relative-demo {
@@ -697,7 +697,7 @@
     top: 15px;
     width: 150px;
     padding: 25px;
-    background: #2563eb;
+    background: #0e7490;
     border-radius: 15px;
     text-align: center;
     font-weight: 800;
@@ -718,7 +718,7 @@
     top: 20px;
     right: 20px;
     padding: 20px;
-    background: #7c3aed;
+    background: #0f766e;
     border-radius: 15px;
     font-weight: 800;
     color: white;
@@ -736,7 +736,7 @@
     position: sticky;
     top: 0;
     padding: 18px;
-    background: #2563eb;
+    background: #0e7490;
     text-align: center;
     font-weight: 800;
 }
@@ -771,14 +771,14 @@
 .z-one {
     top: 30px;
     left: 30%;
-    background: #2563eb;
+    background: #0e7490;
     z-index: 1;
 }
 
 .z-two {
     top: 55px;
     left: 42%;
-    background: #7c3aed;
+    background: #0f766e;
     z-index: 2;
 }
 
@@ -804,7 +804,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #2563eb;
+    background: #0e7490;
     font-size: 35px;
 }
 
@@ -824,7 +824,7 @@
     top: 20px;
     right: 20px;
     padding: 7px 12px;
-    background: #16a34a;
+    background: #0f766e;
     border-radius: 999px;
     font-size: 12px;
     font-weight: 800;
@@ -845,8 +845,8 @@
 }
 
 .answer-btn:hover {
-    border-color: #3b82f6;
-    color: #60a5fa;
+    border-color: #22d3ee;
+    color: #67e8f9;
     transform: translateY(-2px);
 }
 
@@ -867,6 +867,113 @@
 
 }
 
+
+/* Modern Abdusalomov Academy teal/cyan refresh */
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(6,182,212,.10), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(20,184,166,.08), transparent 30%),
+    #020617;
+}
+
+.lesson-number {
+  box-shadow: 0 10px 30px rgba(6,182,212,.08);
+}
+
+.lesson-box {
+  background: rgba(15,23,42,.78);
+  border-color: rgba(51,65,85,.75);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  transition: .3s ease;
+}
+
+.lesson-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34,211,238,.35);
+}
+
+.lesson-icon {
+  box-shadow: inset 0 0 24px rgba(6,182,212,.08);
+}
+
+.code-box {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 12px 40px rgba(0,0,0,.18);
+}
+
+.demo,
+.relative-demo,
+.absolute-demo,
+.sticky-demo,
+.z-demo,
+.profile-demo {
+  border: 1px solid rgba(51,65,85,.65);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.02);
+}
+
+.relative-box,
+.absolute-box,
+.sticky-header,
+.z-one,
+.z-two,
+.avatar {
+  background: linear-gradient(135deg, #0e7490, #155e75);
+  box-shadow: 0 8px 22px rgba(6,182,212,.12);
+}
+
+.project-card {
+  background: rgba(17,24,39,.82);
+  border-color: rgba(71,85,105,.75);
+  backdrop-filter: blur(10px);
+}
+
+.answer-btn {
+  cursor: pointer;
+}
+
+.answer-btn:hover {
+  border-color: rgba(34,211,238,.65);
+  color: #67e8f9;
+  transform: translateY(-2px);
+}
+
+#completeBtn {
+  box-shadow: 0 12px 32px rgba(6,182,212,.18);
+}
+
+#completeBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(6,182,212,.28);
+}
+
+@media (max-width: 640px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lesson-box {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .lesson-title {
+    font-size: 22px;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+
+  .z-one {
+    left: 20%;
+  }
+
+  .z-two {
+    left: 35%;
+  }
+}
+
 </style>
 
 
@@ -885,7 +992,7 @@ function checkAnswer(correct) {
             "✅ To'g'ri! Elementni ekranga biriktirish uchun position: fixed ishlatiladi.";
 
         result.className =
-            "mt-6 font-bold text-lg text-green-400";
+            "mt-6 font-bold text-lg text-emerald-400";
 
     } else {
 
@@ -957,13 +1064,13 @@ function completeLesson() {
 
 
     button.classList.remove(
-        "bg-blue-600",
-        "hover:bg-blue-700"
+        "bg-cyan-600",
+        "hover:bg-cyan-500"
     );
 
 
     button.classList.add(
-        "bg-green-600"
+        "bg-emerald-600"
     );
 
 

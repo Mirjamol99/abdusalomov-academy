@@ -15,8 +15,12 @@
     >
 
     <style>
-        body {
+        html {
             scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
         }
 
         .lesson-box {
@@ -25,15 +29,42 @@
             border-radius: 24px;
             padding: 30px;
             margin-top: 28px;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .lesson-box:hover {
+            border-color: rgba(250,204,21,.35);
+            box-shadow: 0 18px 50px rgba(0,0,0,.18);
         }
 
         .code-box {
+            position: relative;
             background: #020617;
             border: 1px solid #1e293b;
             border-radius: 16px;
             padding: 22px;
             margin-top: 20px;
             overflow-x: auto;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #334155;
+            transition: .2s;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background: #334155;
+            color: white;
         }
 
         .code-box pre {
@@ -58,6 +89,39 @@
             border: 1px solid #334155;
             border-radius: 18px;
             padding: 24px;
+        }
+
+        .next-lesson {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 16px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            transition: .2s;
+            text-decoration: none;
+        }
+
+        .next-lesson:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .lesson-box {
+                padding: 20px;
+                border-radius: 18px;
+            }
+
+            .code-box {
+                padding: 18px;
+                padding-top: 52px;
+            }
         }
     </style>
 </head>
@@ -175,6 +239,7 @@
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -206,6 +271,7 @@ console.log(now);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -223,6 +289,7 @@ console.log(now);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Mon Aug 10 2026 15:30:00 GMT+0500</code></pre>
 
@@ -244,6 +311,7 @@ console.log(now);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -255,6 +323,7 @@ console.log(year);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>2026</code></pre>
 
@@ -284,6 +353,7 @@ console.log(year);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -341,6 +411,7 @@ console.log(month);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -374,6 +445,7 @@ console.log(month);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -408,6 +480,7 @@ console.log(day);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -469,6 +542,7 @@ console.log(day);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -502,6 +576,7 @@ console.log(hours);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -527,6 +602,7 @@ console.log(minutes);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -552,6 +628,7 @@ console.log(seconds);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -586,6 +663,7 @@ console.log(milliseconds);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -637,6 +715,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let date = new Date(
     2026,
@@ -684,6 +763,7 @@ console.log(date);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let date = new Date(
     2026,
@@ -707,6 +787,7 @@ console.log(date);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>new Date(
     year,
@@ -735,6 +816,7 @@ console.log(date);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let date = new Date(
     "2026-08-10"
@@ -776,6 +858,7 @@ console.log(date);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -787,6 +870,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>10/08/2026</code></pre>
 
@@ -808,6 +892,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -842,6 +927,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -874,6 +960,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -888,6 +975,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>10.08.2026</code></pre>
 
@@ -909,6 +997,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -937,6 +1026,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let date1 = new Date(
     "2026-08-10"
@@ -955,6 +1045,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>true</code></pre>
 
@@ -997,6 +1088,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let now = new Date();
 
@@ -1030,6 +1122,7 @@ console.log(time);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let date1 = new Date(
     "2026-08-10"
@@ -1071,6 +1164,7 @@ console.log(difference);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let date1 = new Date(
     "2026-08-10"
@@ -1096,6 +1190,7 @@ console.log(days);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>5</code></pre>
 
@@ -1117,6 +1212,7 @@ console.log(days);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let birthYear = 2008;
 
@@ -1170,6 +1266,7 @@ console.log(age);</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>function showTime() {
 
@@ -1214,6 +1311,7 @@ showTime();</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>function formatTime(value) {
 
@@ -1231,6 +1329,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>05</code></pre>
 
@@ -1252,6 +1351,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>function showTime() {
 
@@ -1313,6 +1413,7 @@ showTime();</code></pre>
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>function showTime() {
 
@@ -1361,6 +1462,7 @@ setInterval(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let today = new Date();
 
@@ -1593,6 +1695,7 @@ console.log(
 
 
     <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>function updateClock() {
 
@@ -1797,6 +1900,7 @@ setInterval(
 
 
         <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let date1 = new Date(
     "2026-08-10"
@@ -1871,6 +1975,7 @@ let date2 = new Date(
 
 
         <div class="code-box">
+        <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let product = {
 
@@ -2133,90 +2238,131 @@ setInterval(
    LESSON COMPLETE
 ===================================== */
 
-function completeLesson() {
 
-    let completedLessons =
-        JSON.parse(
-            localStorage.getItem(
-                "jsCompletedLessons"
-            )
-        ) || [];
-
-
-    /*
-        49-dars tugagan bo‘lishi kerak
-    */
-
-    if (!completedLessons.includes(49)) {
-
-        alert(
-            "Avval 49-darsni tugating!"
-        );
-
-        window.location.href =
-            "js-lesson-49.html";
-
-        return;
-
+function getCompletedLessons() {
+    try {
+        const data = JSON.parse(localStorage.getItem("jsCompletedLessons"));
+        return Array.isArray(data) ? data : [];
+    } catch (error) {
+        return [];
     }
+}
 
+function saveCompletedLessons(lessons) {
+    localStorage.setItem("jsCompletedLessons", JSON.stringify(lessons));
+}
 
-    /*
-        50-darsni saqlash
-    */
+function copyCode(button) {
+    const code = button.parentElement.querySelector("code").innerText;
 
-    if (!completedLessons.includes(50)) {
+    navigator.clipboard.writeText(code).then(() => {
+        const oldText = button.textContent;
+        button.textContent = "✅ Nusxalandi";
 
-        completedLessons.push(50);
+        setTimeout(() => {
+            button.textContent = oldText;
+        }, 1200);
+    }).catch(() => {
+        button.textContent = "❌ Xatolik";
 
-    }
+        setTimeout(() => {
+            button.textContent = "📋 Nusxalash";
+        }, 1200);
+    });
+}
 
+function showCompletedState() {
+    const message = document.getElementById("message");
+    const button = document.getElementById("completeBtn");
 
-    localStorage.setItem(
-        "jsCompletedLessons",
-        JSON.stringify(completedLessons)
-    );
+    if (!message || !button) return;
 
+    message.textContent =
+        "🎉 50-dars allaqachon tugatilgan! 51-dars ochiq.";
 
-    document.getElementById(
-        "message"
-    ).textContent =
-        "🎉 50-dars tugatildi! 51-dars ochildi.";
-
-
-    const button =
-        document.getElementById(
-            "completeBtn"
-        );
-
-
-    button.textContent =
-        "✅ 50-DARS TUGATILDI";
-
-
+    button.textContent = "✅ 50-DARS TUGATILDI";
     button.disabled = true;
-
 
     button.classList.remove(
         "bg-yellow-400",
         "hover:bg-yellow-300"
     );
 
+    button.classList.add(
+        "bg-green-600",
+        "text-white"
+    );
+
+    if (!document.getElementById("nextLessonBtn")) {
+        const nextBtn = document.createElement("a");
+
+        nextBtn.id = "nextLessonBtn";
+        nextBtn.href = "js-lesson-51.html";
+        nextBtn.className = "next-lesson";
+        nextBtn.innerHTML =
+            '51-DARSNI BOSHLASH <i class="fa-solid fa-arrow-right"></i>';
+
+        button.insertAdjacentElement("afterend", nextBtn);
+    }
+}
+
+function restoreLessonState() {
+    const completedLessons = getCompletedLessons();
+
+    if (completedLessons.includes(50)) {
+        showCompletedState();
+    }
+}
+
+function completeLesson() {
+    let completedLessons = getCompletedLessons();
+
+    // 49-dars tugagan bo‘lishi kerak
+    if (!completedLessons.includes(49)) {
+        alert("Avval 49-darsni tugating!");
+        window.location.href = "js-lesson-49.html";
+        return;
+    }
+
+    // 50-darsni saqlash
+    if (!completedLessons.includes(50)) {
+        completedLessons.push(50);
+        saveCompletedLessons(completedLessons);
+    }
+
+    document.getElementById("message").textContent =
+        "🎉 50-dars tugatildi! 51-dars ochildi.";
+
+    const button = document.getElementById("completeBtn");
+
+    button.textContent = "✅ 50-DARS TUGATILDI";
+    button.disabled = true;
+
+    button.classList.remove(
+        "bg-yellow-400",
+        "hover:bg-yellow-300"
+    );
 
     button.classList.add(
         "bg-green-600",
         "text-white"
     );
 
+    if (!document.getElementById("nextLessonBtn")) {
+        const nextBtn = document.createElement("a");
 
-    setTimeout(function() {
+        nextBtn.id = "nextLessonBtn";
+        nextBtn.href = "js-lesson-51.html";
+        nextBtn.className = "next-lesson";
+        nextBtn.innerHTML =
+            '51-DARSNI BOSHLASH <i class="fa-solid fa-arrow-right"></i>';
 
-        window.location.href =
-            "js-course.html";
-
-    }, 1200);
-
+        button.insertAdjacentElement("afterend", nextBtn);
+    }
 }
+
+document.addEventListener("DOMContentLoaded", restoreLessonState);
+
 
 </script>
 

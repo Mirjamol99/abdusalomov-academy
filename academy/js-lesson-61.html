@@ -23,6 +23,10 @@
             scroll-behavior: smooth;
         }
 
+        body {
+            overflow-x: hidden;
+        }
+
 
         body {
             background: #020617;
@@ -31,12 +35,90 @@
 
         .glass {
             background: rgba(15, 23, 42, 0.8);
-
-            border:
-                1px solid
-                rgba(51, 65, 85, 0.8);
-
+            border: 1px solid rgba(51, 65, 85, 0.8);
             backdrop-filter: blur(15px);
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .glass:hover {
+            border-color: rgba(250, 204, 21, .28);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .18);
+        }
+
+        .code-box {
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #334155;
+            transition: .2s;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .copy-btn:hover {
+            background: #334155;
+            color: white;
+        }
+
+        .final-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(34, 197, 94, .12);
+            border: 1px solid rgba(34, 197, 94, .28);
+            color: #4ade80;
+            font-weight: 800;
+        }
+
+        .final-card {
+            background: linear-gradient(135deg, rgba(15,23,42,.96), rgba(2,6,23,.96));
+            border: 1px solid rgba(250,204,21,.25);
+            box-shadow: 0 25px 70px rgba(0,0,0,.25);
+        }
+
+        .final-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 16px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            transition: .2s;
+            text-decoration: none;
+        }
+
+        .final-link:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .glass {
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 20px;
+            }
+
+            .code-box {
+                padding-top: 58px;
+            }
         }
 
 
@@ -658,7 +740,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -719,7 +803,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -792,7 +878,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -855,7 +943,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -907,7 +997,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -1002,7 +1094,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -1073,7 +1167,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -1143,7 +1239,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -1197,7 +1295,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -1260,7 +1360,9 @@
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-7
@@ -1749,7 +1851,9 @@ renderTasks();</code></pre>
         "
     >
 
-<pre
+<button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
+
+        <pre
     class="
         text-green-400
         leading-8
@@ -2123,28 +2227,47 @@ renderTasks();</code></pre>
 
 
 <!-- =====================================
-     NEXT LESSON
+     COURSE COMPLETE
 ===================================== -->
 
-<section
-    class="
-        glass
-        rounded-3xl
-        p-8
-        mt-10
-        text-center
-    "
->
+<section class="glass final-card rounded-3xl p-8 mt-10 text-center">
+    <div class="text-6xl mb-5">🏆</div>
 
-    <div class="text-6xl mb-5">
-        🌐
+    <span class="final-badge">🎓 KURS YAKUNI</span>
+
+    <h2 class="text-3xl md:text-5xl font-extrabold mt-6">
+        JavaScript kursini tugatdingiz!
+    </h2>
+
+    <p class="text-slate-400 text-lg leading-8 mt-5">
+        61 ta darsning barchasini yakunladingiz.
+        Endi o‘rgangan bilimlaringizni real loyihalarda
+        qo‘llash va portfolio yaratish vaqti.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-4 mt-8 text-left">
+        <div class="bg-slate-950 rounded-2xl p-5">
+            <div class="text-2xl">💻</div>
+            <h3 class="font-bold text-lg mt-3">Real loyihalar</h3>
+            <p class="text-slate-400 mt-2">Todo List va boshqa loyihalarni mustaqil yarating.</p>
+        </div>
+
+        <div class="bg-slate-950 rounded-2xl p-5">
+            <div class="text-2xl">🚀</div>
+            <h3 class="font-bold text-lg mt-3">Portfolio</h3>
+            <p class="text-slate-400 mt-2">Eng yaxshi loyihalaringizni portfolio'ga qo‘shing.</p>
+        </div>
+
+        <div class="bg-slate-950 rounded-2xl p-5">
+            <div class="text-2xl">📚</div>
+            <h3 class="font-bold text-lg mt-3">Keyingi bosqich</h3>
+            <p class="text-slate-400 mt-2">JavaScript bilimlaringizni amaliyot bilan mustahkamlang.</p>
+        </div>
     </div>
 
-
-   
-
-
-    
+    <a href="js-course.html" class="final-link">
+        ← JavaScript kursiga qaytish
+    </a>
 </section>
 
 
@@ -2176,7 +2299,7 @@ renderTasks();</code></pre>
         "
     >
 
-        JAVA SCRIPT tugatdingizmi?
+        JavaScript kursini tugatdingizmi?
 
     </h2>
 

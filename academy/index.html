@@ -4,867 +4,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Abdusalomov Academy</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        academy: {
+                            50: "#f0fdfa",
+                            100: "#ccfbf1",
+                            400: "#2dd4bf",
+                            500: "#14b8a6",
+                            600: "#0d9488",
+                            700: "#0f766e",
+                            950: "#042f2e"
+                        }
+                    },
+                    boxShadow: {
+                        glow: "0 0 60px rgba(20,184,166,.15)"
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="bg-slate-950 text-white overflow-x-hidden">
 
-    <!-- BACKGROUND GLOW -->
-
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-
-        <div class="absolute top-20 left-10 w-72 h-72
-                bg-blue-600/20 rounded-full blur-3xl animate-pulse">
-        </div>
-
-        <div class="absolute bottom-20 right-10 w-80 h-80
-                bg-purple-600/20 rounded-full blur-3xl animate-pulse">
-        </div>
-
+    <!-- BACKGROUND -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 -right-40 w-[30rem] h-[30rem] bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 w-96 h-96 bg-teal-700/10 rounded-full blur-3xl"></div>
     </div>
 
     <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-xl">
+        <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
 
-    <header class="border-b border-slate-800/70 bg-slate-950/80 backdrop-blur-lg sticky top-0 z-50">
-
-        <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-
-            <!-- Logo -->
-            <a href="./index.html" class="text-2xl md:text-3xl font-extrabold">
-
-                <span class="text-blue-500">Abdusalomov</span>
-                <span class="text-white">Academy</span>
-
+            <a href="./index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-teal-500 text-slate-950 flex items-center justify-center
+                            shadow-lg shadow-teal-500/20 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-code text-lg"></i>
+                </div>
+                <div>
+                    <div class="text-lg font-extrabold tracking-tight">
+                        <span class="text-teal-400">Abdusalomov</span> Academy
+                    </div>
+                    <div class="text-[11px] uppercase tracking-[.2em] text-slate-500">
+                        Learn. Code. Create.
+                    </div>
+                </div>
             </a>
 
-
-            <!-- Desktop Menu -->
-            <ul class="hidden md:flex items-center gap-8 text-slate-300 font-medium">
-
-                <li>
-                    <a href="./index.html" class="hover:text-blue-400 transition duration-300">
-                        Bosh sahifa
-                    </a>
-                </li>
-
-                <li>
-                    <a href="courses.html" class="hover:text-blue-400 transition duration-300">
-                        Kurslar
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html" class="hover:text-blue-400 transition duration-300">
-                        Men haqimda
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html" class="hover:text-blue-400 transition duration-300">
-                        Bog'lanish
-                    </a>
-                </li>
-
+            <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <li><a href="./index.html" class="text-teal-400 transition">Bosh sahifa</a></li>
+                <li><a href="courses.html" class="hover:text-teal-400 transition">Kurslar</a></li>
+                <li><a href="about.html" class="hover:text-teal-400 transition">Men haqimda</a></li>
+                <li><a href="contact.html" class="hover:text-teal-400 transition">Bog'lanish</a></li>
             </ul>
 
-
-            <!-- Desktop Button -->
             <div id="authButtons" class="hidden md:flex items-center gap-3">
-
-                <a href="./login.html" class="border border-slate-700 hover:border-blue-500
-               hover:text-blue-400 px-5 py-2.5 rounded-xl transition">
-                    🔐 Kirish
+                <a href="./login.html" class="px-4 py-2.5 rounded-xl border border-slate-700 hover:border-teal-500
+                          hover:text-teal-400 transition text-sm font-semibold">
+                    <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i>Kirish
                 </a>
-
-                <a href="./register.html" class="bg-blue-600 hover:bg-blue-700
-               px-5 py-2.5 rounded-xl transition">
-                    📝 Ro'yxatdan o'tish
+                <a href="./register.html" class="px-4 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950
+                          transition text-sm font-bold">
+                    Ro'yxatdan o'tish
                 </a>
-
             </div>
 
-
-            <!-- Mobile Button -->
-
-            <button id="menuBtn" class="md:hidden text-2xl">
-
+            <button id="menuBtn" class="lg:hidden w-10 h-10 rounded-xl border border-slate-800
+                                         hover:bg-slate-900 transition text-lg" aria-label="Menyu">
                 <i class="fa-solid fa-bars"></i>
-
             </button>
         </nav>
 
-
         <!-- MOBILE MENU -->
-        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-slate-950">
-
-            <!-- HOME -->
-            <a href="./index.html" class="block px-6 py-4 text-white
-               hover:bg-slate-900 transition">
-                <i class="fa-solid fa-house mr-2"></i>
-                Bosh sahifa
-            </a>
-
-
-            <!-- COURSES -->
-            <a href="./courses.html" class="block px-6 py-4 text-white
-               hover:bg-slate-900 transition">
-                <i class="fa-solid fa-book mr-2"></i>
-                Kurslar
-            </a>
-
-
-            <!-- ABOUT -->
-            <a href="./about.html" class="block px-6 py-4 text-white
-               hover:bg-slate-900 transition">
-                <i class="fa-solid fa-user mr-2"></i>
-                Men haqimda
-            </a>
-
-
-            <!-- CONTACT -->
-            <a href="./contact.html" class="block px-6 py-4 text-white
-               hover:bg-slate-900 transition">
-                <i class="fa-solid fa-phone mr-2"></i>
-                Bog'lanish
-            </a>
-
-
-            <!-- AUTH -->
-            <div id="mobileAuth" class="border-t border-slate-800 mt-2 pt-2">
-
-                <!-- LOGIN -->
-                <a href="./login.html" class="block px-6 py-4 text-blue-400
-                   hover:bg-slate-900 transition">
-                    🔐 Kirish
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-800 bg-slate-950">
+            <div class="px-5 py-4 space-y-1">
+                <a href="./index.html" class="block px-4 py-3 rounded-xl bg-slate-900 text-teal-400">
+                    <i class="fa-solid fa-house w-6"></i>Bosh sahifa
                 </a>
-
-
-                <!-- REGISTER -->
-                <a href="./register.html" class="block px-6 py-4 text-blue-400
-                   hover:bg-slate-900 transition">
-                    📝 Ro'yxatdan o'tish
+                <a href="./courses.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900">
+                    <i class="fa-solid fa-book w-6"></i>Kurslar
                 </a>
-
+                <a href="./about.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900">
+                    <i class="fa-solid fa-user w-6"></i>Men haqimda
+                </a>
+                <a href="./contact.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900">
+                    <i class="fa-solid fa-paper-plane w-6"></i>Bog'lanish
+                </a>
+                <div id="mobileAuth" class="pt-3 mt-3 border-t border-slate-800 space-y-1">
+                    <a href="./login.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900 text-teal-400">
+                        <i class="fa-solid fa-arrow-right-to-bracket w-6"></i>Kirish
+                    </a>
+                    <a href="./register.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900 text-teal-400">
+                        <i class="fa-solid fa-user-plus w-6"></i>Ro'yxatdan o'tish
+                    </a>
+                </div>
             </div>
-
         </div>
-
-
     </header>
 
-
-
     <!-- HERO -->
-
-    <section class="min-h-[85vh] flex items-center">
-
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2
-                gap-16 items-center py-20">
-
-
-            <!-- LEFT -->
-
-            <div>
-
-                <!-- Badge -->
-                <span class="inline-block bg-blue-600/20
-                         border border-blue-500/30
-                         text-blue-400 px-4 py-2
-                         rounded-full text-sm font-semibold">
-
-                    🚀 Frontend Developer
-
-                </span>
-
-
-                <!-- Title -->
-
-                <h1 class="text-5xl md:text-7xl
-                       font-extrabold mt-8
-                       leading-tight">
-
-                    Dasturlashni
-
-                    <span class="text-transparent
-                             bg-clip-text
-                             bg-gradient-to-r
-                             from-blue-400
-                             to-cyan-300">
-
-                        0 dan
-
-                    </span>
-
-                    o'rganing.
-
-                </h1>
-
-
-                <!-- Description -->
-
-                <p class="text-slate-400 text-lg md:text-xl
-                      mt-8 leading-relaxed max-w-xl">
-
-                    Abdusalomov Academy orqali HTML, CSS va JavaScript
-                    dasturlash tillarini zamonaviy va amaliy darslar
-                    yordamida bosqichma-bosqich o'rganing.
-
-                </p>
-
-
-                <!-- Buttons -->
-
-                <div class="flex flex-wrap gap-4 mt-10">
-
-                    <a href="courses.html" class="bg-blue-600
-                          hover:bg-blue-700
-                          hover:scale-105
-                          transition duration-300
-                          px-8 py-4
-                          rounded-xl
-                          font-semibold
-                          shadow-lg
-                          shadow-blue-500/30">
-
-                        <i class="fa-solid fa-play mr-2"></i>
-                        Darslarni boshlash
-
-                    </a>
-
-
-                    <a href="#courses" class="border border-slate-700
-                          hover:border-blue-500
-                          hover:text-blue-400
-                          transition duration-300
-                          px-8 py-4
-                          rounded-xl
-                          font-semibold">
-
-                        Kurslarni ko'rish
-
-                    </a>
-
-                </div>
-
-
-                <!-- Stats -->
-
-                <div class="flex gap-10 mt-12">
+    <main>
+        <section class="relative">
+            <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32">
+                <div class="grid lg:grid-cols-[1.08fr_.92fr] gap-16 items-center">
 
                     <div>
-                        <h3 class="text-3xl font-bold">3+</h3>
-                        <p class="text-slate-500 text-sm">
-                            Kurslar
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-3xl font-bold">100+</h3>
-                        <p class="text-slate-500 text-sm">
-                            Darslar
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-3xl font-bold">∞</h3>
-                        <p class="text-slate-500 text-sm">
-                            Imkoniyat
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT -->
-
-            <div class="flex justify-center">
-
-                <div class="relative w-full max-w-md">
-
-                    <!-- Glow -->
-
-                    <div class="absolute inset-0
-                            bg-blue-600/20
-                            blur-3xl rounded-full">
-                    </div>
-
-
-                    <!-- Code Card -->
-
-                    <div class="relative bg-slate-900
-                            border border-slate-700
-                            rounded-3xl
-                            p-6
-                            shadow-2xl">
-
-                        <!-- Top -->
-
-                        <div class="flex items-center gap-2 mb-6">
-
-                            <span class="w-3 h-3 bg-red-500 rounded-full"></span>
-                            <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
-                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
-
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full
+                                    border border-teal-500/20 bg-teal-500/10 text-teal-300 text-sm font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                            Frontend dasturlash akademiyasi
                         </div>
 
+                        <h1 class="mt-7 text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.02]">
+                            Dasturlashni
+                            <span class="block text-transparent bg-clip-text
+                                         bg-gradient-to-r from-teal-300 via-cyan-400 to-teal-500">
+                                0 dan boshlang.
+                            </span>
+                        </h1>
 
-                        <!-- Code -->
+                        <p class="mt-7 max-w-2xl text-lg lg:text-xl leading-8 text-slate-400">
+                            Abdusalomov Academy — frontend dasturlashni sodda,
+                            amaliy va bosqichma-bosqich o'rganish uchun yaratilgan ta'lim platformasi.
+                        </p>
 
-                        <div class="font-mono text-sm md:text-base
-                                leading-8 text-slate-300">
-
-                            <p>
-                                <span class="text-purple-400">&lt;html&gt;</span>
-                            </p>
-
-                            <p class="pl-4">
-                                <span class="text-purple-400">&lt;body&gt;</span>
-                            </p>
-
-                            <p class="pl-8">
-                                <span class="text-blue-400">&lt;h1&gt;</span>
-                            </p>
-
-                            <p class="pl-12 text-white">
-                                Abdusalomov Academy
-                            </p>
-
-                            <p class="pl-8">
-                                <span class="text-blue-400">&lt;/h1&gt;</span>
-                            </p>
-
-                            <p class="pl-8">
-                                <span class="text-green-400">&lt;p&gt;</span>
-                            </p>
-
-                            <p class="pl-12 text-slate-400">
-                                Learn. Code. Create.
-                            </p>
-
-                            <p class="pl-8">
-                                <span class="text-green-400">&lt;/p&gt;</span>
-                            </p>
-
-                            <p class="pl-4">
-                                <span class="text-purple-400">&lt;/body&gt;</span>
-                            </p>
-
-                            <p>
-                                <span class="text-purple-400">&lt;/html&gt;</span>
-                            </p>
-
+                        <div class="mt-9 flex flex-wrap gap-3">
+                            <a href="courses.html" class="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-teal-500
+                                      hover:bg-teal-400 text-slate-950 font-bold transition
+                                      shadow-lg shadow-teal-500/20 hover:-translate-y-0.5">
+                                <i class="fa-solid fa-rocket"></i>
+                                Kurslarni boshlash
+                            </a>
+                            <a href="#about" class="inline-flex items-center gap-3 px-7 py-4 rounded-xl border border-slate-700
+                                      hover:border-teal-500/50 hover:text-teal-400 transition font-semibold">
+                                Men haqimda
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
                         </div>
 
+                        <div class="mt-12 flex flex-wrap gap-x-10 gap-y-5">
+                            <div>
+                                <div class="text-3xl font-black">3+</div>
+                                <div class="mt-1 text-sm text-slate-500">Kurslar</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-black">100+</div>
+                                <div class="mt-1 text-sm text-slate-500">Darslar</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-black">∞</div>
+                                <div class="mt-1 text-sm text-slate-500">Imkoniyat</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CODE PREVIEW -->
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-teal-500/10 blur-3xl rounded-full"></div>
+
+                        <div class="relative rounded-3xl border border-slate-800 bg-slate-900/90
+                                    shadow-glow overflow-hidden">
+                            <div class="flex items-center justify-between px-5 py-4 border-b border-slate-800">
+                                <div class="flex gap-2">
+                                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                                </div>
+                                <span class="text-xs text-slate-500 font-mono">index.html</span>
+                            </div>
+
+                            <div class="p-6 sm:p-8 font-mono text-sm sm:text-base leading-8 overflow-x-auto">
+                                <div><span class="text-fuchsia-400">&lt;section</span> <span
+                                        class="text-teal-300">class</span>=<span
+                                        class="text-amber-300">"academy"</span><span
+                                        class="text-fuchsia-400">&gt;</span></div>
+                                <div class="pl-5"><span class="text-fuchsia-400">&lt;h1&gt;</span></div>
+                                <div class="pl-10 text-white">Learn. Code. Create.</div>
+                                <div class="pl-5"><span class="text-fuchsia-400">&lt;/h1&gt;</span></div>
+                                <div class="pl-5 mt-2"><span class="text-fuchsia-400">&lt;p</span> <span
+                                        class="text-teal-300">class</span>=<span
+                                        class="text-amber-300">"text-teal-400"</span><span
+                                        class="text-fuchsia-400">&gt;</span></div>
+                                <div class="pl-10 text-slate-400">Build your future with code.</div>
+                                <div class="pl-5"><span class="text-fuchsia-400">&lt;/p&gt;</span></div>
+                                <div><span class="text-fuchsia-400">&lt;/section&gt;</span></div>
+                            </div>
+
+                            <div class="px-6 pb-6">
+                                <div class="rounded-2xl border border-teal-500/20 bg-teal-500/5 p-5">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-teal-500/15 text-teal-400 flex items-center justify-center">
+                                            <i class="fa-solid fa-terminal"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold">Bugun boshlang.</p>
+                                            <p class="text-sm text-slate-500">Har bir katta loyiha kichik qadamdan
+                                                boshlanadi.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-
             </div>
+        </section>
 
-        </div>
+        <!-- COURSES -->
+        <section id="courses" class="py-24 border-t border-slate-900">
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
-    </section>
+                <div class="max-w-2xl mb-14">
+                    <p class="text-sm font-bold tracking-[.2em] text-teal-400 uppercase">O'quv yo'nalishlari</p>
+                    <h2 class="mt-3 text-4xl lg:text-5xl font-black">Kurslar</h2>
+                    <p class="mt-5 text-lg text-slate-400">
+                        Frontend dasturlash asoslarini tartibli ravishda o'rganing va amaliyot orqali mustahkamlang.
+                    </p>
+                </div>
 
-    <!-- COURSES -->
+                <div class="grid md:grid-cols-3 gap-6">
 
-    <section id="courses" class="py-24">
+                    <!-- HTML -->
+                    <article class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-6
+                                    hover:-translate-y-1 hover:border-orange-400/40 transition duration-300">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-400 flex items-center justify-center text-2xl">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <h3 class="mt-6 text-2xl font-bold">HTML</h3>
+                        <p class="mt-3 text-slate-400 leading-7">
+                            Web sahifa tuzilishini 0 dan o'rganing va mustahkam poydevor yarating.
+                        </p>
+                        <a href="courses.html"
+                            class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-teal-400 group-hover:gap-3 transition-all">
+                            Kursni ko'rish <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
 
-        <div class="max-w-7xl mx-auto px-6">
+                    <!-- CSS -->
+                    <article class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-6
+                                    hover:-translate-y-1 hover:border-blue-400/40 transition duration-300">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <h3 class="mt-6 text-2xl font-bold">CSS</h3>
+                        <p class="mt-3 text-slate-400 leading-7">
+                            Rang, joylashuv, animatsiya va responsive dizayn bilan chiroyli interfeyslar yarating.
+                        </p>
+                        <a href="courses.html"
+                            class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-teal-400 group-hover:gap-3 transition-all">
+                            Kursni ko'rish <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <!-- JS -->
+                    <article class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-6
+                                    hover:-translate-y-1 hover:border-yellow-400/40 transition duration-300">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-300 flex items-center justify-center text-2xl">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <h3 class="mt-6 text-2xl font-bold">JavaScript</h3>
+                        <p class="mt-3 text-slate-400 leading-7">
+                            Web sahifalarga mantiq, interaktivlik va real funksiyalar qo'shishni o'rganing.
+                        </p>
+                        <a href="courses.html"
+                            class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-teal-400 group-hover:gap-3 transition-all">
+                            Kursni ko'rish <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
 
 
-            <!-- Heading -->
 
-            <div class="text-center mb-16">
-
-                <span class="text-blue-400 font-semibold">
-                    O'QUV KURSLARI
-                </span>
-
-                <h2 class="text-4xl md:text-5xl
-                       font-bold mt-3">
-
-                    Kurslar
-
-                </h2>
-
-                <p class="text-slate-400 mt-4 text-lg">
-
-                    Frontend dasturlashni
-                    bosqichma-bosqich o'rganing.
-
-                </p>
-
+                </div>
             </div>
-
-
-            <!-- Cards -->
-
-            <div class="grid md:grid-cols-3 gap-8">
-
-
-                <!-- HTML -->
-
-                <div class="group bg-slate-900
-                        border border-slate-800
-                        rounded-2xl p-8
-                        hover:-translate-y-2
-                        hover:border-orange-500/50
-                        transition duration-300">
-
-                    <div class="w-14 h-14
-                            flex items-center justify-center
-                            bg-orange-500/10
-                            rounded-xl
-                            text-orange-500
-                            text-2xl">
-
-                        <i class="fa-brands fa-html5"></i>
-
-                    </div>
-
-                    <h3 class="text-2xl font-bold mt-6">
-                        HTML
-                    </h3>
-
-                    <p class="text-slate-400 mt-4 leading-relaxed">
-
-                        HTML asoslarini 0 dan o'rganing
-                        va birinchi web sahifalaringizni yarating.
-
-                    </p>
-
-                    <a href="courses.html" class="inline-block mt-8
-                          bg-blue-600
-                          hover:bg-blue-700
-                          px-6 py-3
-                          rounded-xl
-                          font-semibold
-                          transition">
-
-                        Boshlash →
-
-                    </a>
-
-                </div>
-
-
-                <!-- CSS -->
-
-                <div class="group bg-slate-900
-                        border border-slate-800
-                        rounded-2xl p-8
-                        hover:-translate-y-2
-                        hover:border-blue-500/50
-                        transition duration-300">
-
-                    <div class="w-14 h-14
-                            flex items-center justify-center
-                            bg-blue-500/10
-                            rounded-xl
-                            text-blue-500
-                            text-2xl">
-
-                        <i class="fa-brands fa-css3-alt"></i>
-
-                    </div>
-
-                    <h3 class="text-2xl font-bold mt-6">
-                        CSS
-                    </h3>
-
-                    <p class="text-slate-400 mt-4 leading-relaxed">
-
-                        Web sahifalarni chiroyli,
-                        zamonaviy va responsive qilishni o'rganing.
-
-                    </p>
-
-                    <a href="courses.html" class="inline-block mt-8
-                          bg-blue-600
-                          hover:bg-blue-700
-                          px-6 py-3
-                          rounded-xl
-                          font-semibold
-                          transition">
-
-                        Boshlash →
-
-                    </a>
-
-                </div>
-
-
-                <!-- JavaScript -->
-
-                <div class="group bg-slate-900
-                        border border-slate-800
-                        rounded-2xl p-8
-                        hover:-translate-y-2
-                        hover:border-yellow-500/50
-                        transition duration-300">
-
-                    <div class="w-14 h-14
-                            flex items-center justify-center
-                            bg-yellow-500/10
-                            rounded-xl
-                            text-yellow-400
-                            text-2xl">
-
-                        <i class="fa-brands fa-js"></i>
-
-                    </div>
-
-                    <h3 class="text-2xl font-bold mt-6">
-                        JavaScript
-                    </h3>
-
-                    <p class="text-slate-400 mt-4 leading-relaxed">
-
-                        Web sahifalarga interaktivlik
-                        va real funksiyalar qo'shishni o'rganing.
-
-                    </p>
-
-                    <a href="courses.html" class="inline-block mt-8
-                          bg-blue-600
-                          hover:bg-blue-700
-                          px-6 py-3
-                          rounded-xl
-                          font-semibold
-                          transition">
-                        Boshlash →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- WHY ACADEMY -->
-
-    <section class="py-24 border-t border-slate-900">
-
-        <div class="max-w-7xl mx-auto px-6">
-
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-
-
-                <!-- Text -->
-
-                <div>
-
-                    <span class="text-blue-400 font-semibold">
-                        NEGA BIZ?
-                    </span>
-
-                    <h2 class="text-4xl md:text-5xl
-                           font-bold mt-4">
-
-                        Dasturlashni
-                        amaliy tarzda
-                        o'rganing.
-
-                    </h2>
-
-                    <p class="text-slate-400 mt-6 text-lg leading-relaxed">
-
-                        Bizning maqsadimiz — dasturlashni
-                        boshlayotganlar uchun tushunarli,
-                        sodda va amaliy ta'lim muhitini yaratish.
-
-                    </p>
-
-                </div>
-
-
-                <!-- Features -->
-
-                <div class="grid sm:grid-cols-2 gap-5">
-
-
-                    <div class="bg-slate-900
-                            border border-slate-800
-                            rounded-2xl p-6">
-
-                        <i class="fa-solid fa-code
-                              text-blue-400 text-2xl">
-                        </i>
-
-                        <h3 class="font-bold text-lg mt-4">
-                            Amaliy darslar
-                        </h3>
-
-                        <p class="text-slate-500 mt-2">
-                            Har bir mavzuni kod yozib o'rganing.
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-24 border-t border-slate-900">
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+                    <div>
+                        <p class="text-sm font-bold tracking-[.2em] text-teal-400 uppercase">Men haqimda</p>
+                        <h2 class="mt-4 text-4xl lg:text-5xl font-black leading-tight">
+                            Kod yozishdan ko'ra,
+                            <span class="text-teal-400">yaratishni</span> o'rganing.
+                        </h2>
+
+                        <p class="mt-6 text-lg text-slate-400 leading-8">
+                            Abdusalomov Academy frontend dasturlashni o'rganayotganlar uchun
+                            amaliy va tushunarli muhit yaratish maqsadida ishlab chiqilmoqda.
                         </p>
 
-                    </div>
-
-
-                    <div class="bg-slate-900
-                            border border-slate-800
-                            rounded-2xl p-6">
-
-                        <i class="fa-solid fa-bolt
-                              text-yellow-400 text-2xl">
-                        </i>
-
-                        <h3 class="font-bold text-lg mt-4">
-                            Sodda tushuntirish
-                        </h3>
-
-                        <p class="text-slate-500 mt-2">
-                            Murakkab mavzularni oddiy usulda o'rganing.
+                        <p class="mt-4 text-slate-500 leading-7">
+                            Bu yerda asosiy e'tibor faqat mavzuni o'qishga emas,
+                            balki kod yozish, xatolarni topish va real loyihalarda foydalanishga qaratiladi.
                         </p>
 
+                        <a href="about.html"
+                            class="mt-8 inline-flex items-center gap-3 px-6 py-3.5 rounded-xl
+                                  border border-slate-700 hover:border-teal-500 hover:text-teal-400 transition font-semibold">
+                            Batafsil ma'lumot
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
 
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h3 class="mt-5 font-bold text-lg">Amaliy darslar</h3>
+                            <p class="mt-2 text-slate-500 leading-6">Mavzuni kod yozish orqali o'zlashtiring.</p>
+                        </div>
 
-                    <div class="bg-slate-900
-                            border border-slate-800
-                            rounded-2xl p-6">
+                        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                                <i class="fa-solid fa-route"></i>
+                            </div>
+                            <h3 class="mt-5 font-bold text-lg">Bosqichma-bosqich</h3>
+                            <p class="mt-2 text-slate-500 leading-6">Noldan boshlab tartibli ravishda rivojlaning.</p>
+                        </div>
 
-                        <i class="fa-solid fa-laptop
-                              text-green-400 text-2xl">
-                        </i>
+                        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h3 class="mt-5 font-bold text-lg">Real loyihalar</h3>
+                            <p class="mt-2 text-slate-500 leading-6">Bilimingizni haqiqiy loyihalarda sinang.</p>
+                        </div>
 
-                        <h3 class="font-bold text-lg mt-4">
-                            Real loyihalar
-                        </h3>
-
-                        <p class="text-slate-500 mt-2">
-                            O'rganganlaringizni loyihalarda sinang.
-                        </p>
-
-                    </div>
-
-
-                    <div class="bg-slate-900
-                            border border-slate-800
-                            rounded-2xl p-6">
-
-                        <i class="fa-solid fa-graduation-cap
-                              text-purple-400 text-2xl">
-                        </i>
-
-                        <h3 class="font-bold text-lg mt-4">
-                            Bosqichma-bosqich
-                        </h3>
-
-                        <p class="text-slate-500 mt-2">
-                            Noldan boshlab yuqoriga ko'tariling.
-                        </p>
-
+                        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="mt-5 font-bold text-lg">Doimiy o'sish</h3>
+                            <p class="mt-2 text-slate-500 leading-6">Har bir dars — keyingi bosqich uchun qadam.</p>
+                        </div>
                     </div>
 
                 </div>
-
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-    <!-- CTA -->
-
-    <section class="py-24">
-
-        <div class="max-w-5xl mx-auto px-6">
-
-            <div class="relative overflow-hidden
-                    bg-gradient-to-r
-                    from-blue-600
-                    to-cyan-600
-                    rounded-3xl
-                    p-10 md:p-16
-                    text-center">
-
-                <div class="relative z-10">
-
-                    <h2 class="text-3xl md:text-5xl
-                           font-extrabold">
-
-                        Dasturlashni bugun boshlang 🚀
-
-                    </h2>
-
-                    <p class="mt-5 text-blue-100 text-lg">
-
-                        Birinchi qadamingizni Abdusalomov Academy
-                        bilan tashlang.
-
+        <!-- HOW IT WORKS -->
+        <section class="py-24 border-t border-slate-900">
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <p class="text-sm font-bold tracking-[.2em] text-teal-400 uppercase">Qanday ishlaydi?</p>
+                    <h2 class="mt-3 text-4xl lg:text-5xl font-black">3 qadamda boshlang</h2>
+                    <p class="mt-5 text-slate-400">
+                        O'rganish jarayonini oddiy va tushunarli qildik.
                     </p>
-
-                    <a href="courses.html" class="inline-block mt-8
-                          bg-white text-blue-600
-                          hover:bg-slate-100
-                          px-8 py-4
-                          rounded-xl
-                          font-bold
-                          transition">
-
-                        Kurslarni boshlash
-
-                    </a>
-
                 </div>
 
+                <div class="mt-14 grid md:grid-cols-3 gap-6">
+                    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7">
+                        <span class="text-sm font-black text-teal-400">01</span>
+                        <h3 class="mt-5 text-xl font-bold">Kursni tanlang</h3>
+                        <p class="mt-3 text-slate-500 leading-7">
+                            O'zingizga kerakli yo'nalishni tanlab, darslarni boshlang.
+                        </p>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7">
+                        <span class="text-sm font-black text-teal-400">02</span>
+                        <h3 class="mt-5 text-xl font-bold">Darslarni bajaring</h3>
+                        <p class="mt-3 text-slate-500 leading-7">
+                            Har bir mavzuni o'qing, kod yozing va amaliyot qiling.
+                        </p>
+                    </div>
+
+                    <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7">
+                        <span class="text-sm font-black text-teal-400">03</span>
+                        <h3 class="mt-5 text-xl font-bold">Loyiha yarating</h3>
+                        <p class="mt-3 text-slate-500 leading-7">
+                            O'rganganlaringizni o'z loyihangizda qo'llang.
+                        </p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-        </div>
+        <!-- CTA -->
+        <section class="py-24">
+            <div class="max-w-6xl mx-auto px-5 lg:px-8">
+                <div class="relative overflow-hidden rounded-3xl border border-teal-400/20
+                            bg-gradient-to-br from-teal-500/15 via-slate-900 to-cyan-500/10 p-10 md:p-16">
+                    <div class="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-teal-400/10 blur-3xl"></div>
 
-    </section>
+                    <div class="relative max-w-3xl">
+                        <p class="text-sm font-bold tracking-[.2em] text-teal-400 uppercase">Keyingi qadam</p>
+                        <h2 class="mt-4 text-4xl md:text-5xl font-black">
+                            O'rganishni bugun boshlang.
+                        </h2>
+                        <p class="mt-5 text-lg text-slate-400 leading-8">
+                            Birinchi qadamni tashlang. Keyingi natijani esa amaliyot bilan yarating.
+                        </p>
+
+                        <a href="courses.html" class="mt-8 inline-flex items-center gap-3 px-7 py-4 rounded-xl
+                                  bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold transition">
+                            Kurslarni ko'rish
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
+    <footer class="border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
 
-    <footer class="border-t border-slate-800 py-10">
-
-        <div class="max-w-7xl mx-auto px-6">
-
-            <div class="flex flex-col md:flex-row
-                    justify-between items-center gap-6">
-
-
-                <!-- Logo -->
-
-                <div>
-
-                    <h2 class="text-xl font-bold">
-
-                        <span class="text-blue-500">
-                            Abdusalomov
-                        </span>
-
-                        Academy
-
-                    </h2>
-
-                    <p class="text-slate-500 text-sm mt-2">
-                        Learn. Code. Create.
-                    </p>
-
+                <div class="text-center md:text-left">
+                    <div class="font-extrabold text-lg">
+                        <span class="text-teal-400">Abdusalomov</span> Academy
+                    </div>
+                    <p class="mt-2 text-sm text-slate-500">Learn. Code. Create.</p>
                 </div>
 
-
-                <!-- Social -->
-
-                <div class="flex gap-5 text-xl">
-
-                    <a href="https://www.youtube.com/@abdusalomov.o" class="text-slate-400
-                          hover:text-red-500
-                          transition">
-
+                <div class="flex items-center gap-3">
+                    <a href="https://www.youtube.com/@abdusalomov.o" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border border-slate-800 flex items-center justify-center
+                              text-slate-400 hover:text-red-400 hover:border-red-400/30 transition"
+                        aria-label="YouTube">
                         <i class="fa-brands fa-youtube"></i>
-
                     </a>
 
-                    <a href="https://www.instagram.com/mirjamol_abdusalomov?igsh=MTgxZjM5OXB1YzM2NQ==" class="text-slate-400
-                          hover:text-pink-500
-                          transition">
-
+                    <a href="https://www.instagram.com/mirjamol_abdusalomov" target="_blank" rel="noopener noreferrer"
+                        class="w-10 h-10 rounded-xl border border-slate-800 flex items-center justify-center
+                              text-slate-400 hover:text-pink-400 hover:border-pink-400/30 transition"
+                        aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
-
                     </a>
 
-                    <a href="https://t.me/mirjamol_abdusalomov" class="text-slate-400
-                          hover:text-blue-400
-                          transition">
-
+                    <a href="https://t.me/mirjamol_abdusalomov" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl border border-slate-800 flex items-center justify-center
+                              text-slate-400 hover:text-sky-400 hover:border-sky-400/30 transition"
+                        aria-label="Telegram">
                         <i class="fa-brands fa-telegram"></i>
-
                     </a>
-
                 </div>
 
-
-                <!-- Copyright -->
-
-                <p class="text-slate-500 text-sm">
-
-                    © 2026 Abdusalomov Academy
-
-                </p>
-
+                <p class="text-sm text-slate-600">© 2026 Abdusalomov Academy</p>
             </div>
-
         </div>
-
     </footer>
 
     <script>
+        // Mobile menu
+        const menuBtn = document.querySelector("#menuBtn");
+        const mobileMenu = document.querySelector("#mobileMenu");
 
-        const authButtons =
-            document.querySelector("#authButtons");
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
 
-        const currentUser =
-            JSON.parse(
-                localStorage.getItem("academyCurrentUser")
-            );
-
-        if (currentUser) {
-
-            authButtons.innerHTML = `
-
-        <a
-    href="profile.html"
-    class="text-slate-300 hover:text-yellow-400 transition font-bold"
->
-    👤 ${currentUser.firstName}
-</a>
-
-        <button
-            id="logoutBtn"
-            class="bg-red-500/10
-                   text-red-400
-                   hover:bg-red-500/20
-                   px-5 py-2.5
-                   rounded-xl
-                   transition"
-        >
-            🚪 Chiqish
-        </button>
-
-    `;
-
-
-            document
-                .querySelector("#logoutBtn")
-                .addEventListener(
-                    "click",
-                    function () {
-
-                        localStorage.removeItem(
-                            "academyCurrentUser"
-                        );
-
-                        window.location.reload();
-
-                    }
-                );
-
+                const icon = menuBtn.querySelector("i");
+                icon.classList.toggle("fa-bars");
+                icon.classList.toggle("fa-xmark");
+            });
         }
 
+        // Login state
+        const authButtons = document.querySelector("#authButtons");
+        const mobileAuth = document.querySelector("#mobileAuth");
+
+        let currentUser = null;
+
+        try {
+            currentUser = JSON.parse(localStorage.getItem("academyCurrentUser"));
+        } catch (error) {
+            currentUser = null;
+        }
+
+        if (currentUser && authButtons) {
+            authButtons.innerHTML = `
+                <a href="profile.html"
+                   class="px-4 py-2.5 rounded-xl border border-slate-700 hover:border-teal-500
+                          hover:text-teal-400 transition text-sm font-bold">
+                    <i class="fa-solid fa-user mr-2"></i>${currentUser.firstName || "Profil"}
+                </a>
+
+                <button id="logoutBtn"
+                        class="px-4 py-2.5 rounded-xl bg-red-500/10 text-red-400
+                               hover:bg-red-500/20 transition text-sm font-bold">
+                    <i class="fa-solid fa-right-from-bracket mr-2"></i>Chiqish
+                </button>
+            `;
+        }
+
+        if (currentUser && mobileAuth) {
+            mobileAuth.innerHTML = `
+                <a href="./profile.html" class="block px-4 py-3 rounded-xl hover:bg-slate-900 text-teal-400">
+                    <i class="fa-solid fa-user w-6"></i>${currentUser.firstName || "Profil"}
+                </a>
+                <button id="mobileLogoutBtn"
+                        class="w-full text-left block px-4 py-3 rounded-xl hover:bg-slate-900 text-red-400">
+                    <i class="fa-solid fa-right-from-bracket w-6"></i>Chiqish
+                </button>
+            `;
+        }
+
+        function logout() {
+            localStorage.removeItem("academyCurrentUser");
+            window.location.reload();
+        }
+
+        document.addEventListener("click", (event) => {
+            if (event.target.closest("#logoutBtn") || event.target.closest("#mobileLogoutBtn")) {
+                logout();
+            }
+        });
     </script>
 
-
-    <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
-
 </body>
 
 </html>

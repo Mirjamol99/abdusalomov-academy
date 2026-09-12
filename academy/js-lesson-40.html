@@ -15,25 +15,50 @@
     >
 
     <style>
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
         body {
             scroll-behavior: smooth;
-        }
-
-        .lesson-box {
+        }        .lesson-box {
             background: #0f172a;
             border: 1px solid #1e293b;
             border-radius: 24px;
             padding: 30px;
             margin-top: 28px;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
         }
 
-        .code-box {
+        .lesson-box:hover {
+            border-color: rgba(250,204,21,.35);
+            box-shadow: 0 18px 50px rgba(0,0,0,.18);
+        }        .code-box {
+            position: relative;
             background: #020617;
             border: 1px solid #1e293b;
             border-radius: 16px;
             padding: 22px;
             margin-top: 20px;
             overflow-x: auto;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #334155;
+            transition: .2s;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background: #334155;
+            color: white;
         }
 
         .code-box pre {
@@ -58,6 +83,32 @@
             border: 1px solid #334155;
             border-radius: 18px;
             padding: 24px;
+        }
+    
+        .next-lesson {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 16px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            transition: .2s;
+            text-decoration: none;
+        }
+
+        .next-lesson:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .lesson-box { padding: 20px; border-radius: 18px; }
+            .code-box { padding: 18px; padding-top: 52px; }
         }
     </style>
 </head>
@@ -183,6 +234,7 @@
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [5, 12, 18, 25, 30];
 
@@ -198,6 +250,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>18</code></pre>
 
@@ -258,6 +311,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [10, 20, 30, 40];
 
@@ -313,6 +367,7 @@ console.log(result);</code></pre>
 
 
             <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [10, 20, 30, 40];
 
@@ -344,6 +399,7 @@ console.log(result);</code></pre>
 
 
             <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let result = numbers.find(
     number => number > 15
@@ -378,6 +434,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [10, 20, 30, 40];
 
@@ -391,6 +448,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>30</code></pre>
 
@@ -412,6 +470,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let names = [
     "Ali",
@@ -430,6 +489,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Hasan</code></pre>
 
@@ -451,6 +511,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let users = [
 
@@ -484,6 +545,7 @@ console.log(user);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>{
     id: 2,
@@ -509,6 +571,7 @@ console.log(user);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let users = [
 
@@ -562,6 +625,7 @@ console.log(user);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [1, 2, 3, 4];
 
@@ -575,6 +639,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>undefined</code></pre>
 
@@ -605,6 +670,7 @@ console.log(result);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [
     10,
@@ -623,6 +689,7 @@ console.log(index);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>1</code></pre>
 
@@ -683,6 +750,7 @@ console.log(index);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [10, 20, 30, 40];
 
@@ -701,6 +769,7 @@ console.log(index);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>20
 1</code></pre>
@@ -745,6 +814,7 @@ console.log(index);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [10, 20, 30];
 
@@ -758,6 +828,7 @@ console.log(index);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>-1</code></pre>
 
@@ -779,6 +850,7 @@ console.log(index);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let products = [
 
@@ -812,6 +884,7 @@ console.log(product);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>{
     id: 2,
@@ -837,6 +910,7 @@ console.log(product);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let index = products.findIndex(
     product => product.id === 2
@@ -848,6 +922,7 @@ console.log(index);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>1</code></pre>
 
@@ -869,6 +944,7 @@ console.log(index);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let products = [
 
@@ -929,6 +1005,7 @@ console.log(products);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let cart = [
 
@@ -970,6 +1047,7 @@ console.log(product);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let product = cart.find(
     item => item.id === 2
@@ -983,6 +1061,7 @@ console.log(cart);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>quantity: 2</code></pre>
 
@@ -1004,6 +1083,7 @@ console.log(cart);</code></pre>
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let users = [
 
@@ -1037,6 +1117,7 @@ if (user) {
 
 
     <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>User topilmadi</code></pre>
 
@@ -1185,6 +1266,7 @@ if (user) {
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let numbers = [
     5,
@@ -1230,6 +1312,7 @@ if (user) {
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let users = [
 
@@ -1288,6 +1371,7 @@ if (user) {
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let products = [
 
@@ -1454,76 +1538,122 @@ if (user) {
 
 
 <script>
+function copyCode(button) {
+    const code = button.parentElement.querySelector("code").innerText;
 
-function completeLesson() {
+    navigator.clipboard.writeText(code).then(() => {
+        const oldText = button.textContent;
+        button.textContent = "✅ Nusxalandi";
 
-    let completedLessons =
-        JSON.parse(
+        setTimeout(() => {
+            button.textContent = oldText;
+        }, 1200);
+    }).catch(() => {
+        button.textContent = "❌ Xatolik";
+
+        setTimeout(() => {
+            button.textContent = "📋 Nusxalash";
+        }, 1200);
+    });
+}
+
+function getCompletedLessons() {
+    try {
+        const data = JSON.parse(
             localStorage.getItem("jsCompletedLessons")
-        ) || [];
+        );
 
-
-    if (!completedLessons.includes(39)) {
-
-        alert("Avval 39-darsni tugating!");
-
-        window.location.href =
-            "js-lesson-39.html";
-
-        return;
-
+        return Array.isArray(data) ? data : [];
+    } catch (error) {
+        return [];
     }
+}
 
-
-    if (!completedLessons.includes(40)) {
-
-        completedLessons.push(40);
-
-    }
-
-
+function saveCompletedLessons(lessons) {
     localStorage.setItem(
         "jsCompletedLessons",
-        JSON.stringify(completedLessons)
+        JSON.stringify(lessons)
     );
+}
 
+function showNextLesson() {
+    if (document.getElementById("nextLessonBtn")) return;
+
+    const section = document.getElementById("completeBtn").closest("section");
+
+    const nextBtn = document.createElement("a");
+    nextBtn.id = "nextLessonBtn";
+    nextBtn.href = "js-lesson-41.html";
+    nextBtn.className = "next-lesson";
+    nextBtn.innerHTML =
+        '41-DARSNI BOSHLASH <i class="fa-solid fa-arrow-right"></i>';
+
+    section.appendChild(nextBtn);
+}
+
+function restoreLessonState() {
+    const completedLessons = getCompletedLessons();
+    const message = document.getElementById("message");
+    const button = document.getElementById("completeBtn");
+
+    if (completedLessons.includes(40)) {
+        message.textContent =
+            "🎉 40-dars allaqachon tugatilgan! 41-dars ochiq.";
+
+        button.textContent = "✅ 40-DARS TUGATILDI";
+        button.disabled = true;
+
+        button.classList.remove(
+            "bg-yellow-400",
+            "hover:bg-yellow-300"
+        );
+
+        button.classList.add(
+            "bg-green-600",
+            "text-white"
+        );
+
+        showNextLesson();
+    }
+}
+
+function completeLesson() {
+    const completedLessons = getCompletedLessons();
+
+    if (!completedLessons.includes(39)) {
+        alert("Avval 39-darsni tugating!");
+        window.location.href = "js-lesson-39.html";
+        return;
+    }
+
+    if (!completedLessons.includes(40)) {
+        completedLessons.push(40);
+    }
+
+    saveCompletedLessons(completedLessons);
 
     document.getElementById("message").textContent =
         "🎉 40-dars tugatildi! 41-dars ochildi.";
 
+    const button = document.getElementById("completeBtn");
 
-    const button =
-        document.getElementById("completeBtn");
-
-
-    button.textContent =
-        "✅ 40-DARS TUGATILDI";
-
-
+    button.textContent = "✅ 40-DARS TUGATILDI";
     button.disabled = true;
-
 
     button.classList.remove(
         "bg-yellow-400",
         "hover:bg-yellow-300"
     );
 
-
     button.classList.add(
         "bg-green-600",
         "text-white"
     );
 
-
-    setTimeout(function() {
-
-        window.location.href =
-            "js-course.html";
-
-    }, 1200);
-
+    showNextLesson();
 }
 
+document.addEventListener("DOMContentLoaded", restoreLessonState);
 </script>
 
 

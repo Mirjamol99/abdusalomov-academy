@@ -13,21 +13,82 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+
         .lesson-box {
             background: #0f172a;
             border: 1px solid #1e293b;
             border-radius: 24px;
             padding: 30px;
             margin-top: 28px;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+
+        .lesson-box:hover {
+            border-color: rgba(250,204,21,.35);
+            box-shadow: 0 18px 50px rgba(0,0,0,.18);
         }
 
         .code-box {
+            position: relative;
             background: #020617;
             border: 1px solid #1e293b;
             border-radius: 16px;
             padding: 22px;
             margin-top: 20px;
             overflow-x: auto;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #334155;
+            transition: .2s;
+        }
+
+        .copy-btn:hover {
+            background: #334155;
+            color: white;
+        }
+
+        .next-lesson {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 16px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            transition: .2s;
+        }
+
+        .next-lesson:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .lesson-box {
+                padding: 20px;
+                border-radius: 18px;
+            }
+
+            .code-box {
+                padding: 18px;
+                padding-top: 52px;
+            }
         }
 
         .code-box pre {
@@ -162,6 +223,7 @@
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let name = "Mirjamol";
 
@@ -220,6 +282,7 @@ let score = 95;</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let age = 15;
 
@@ -276,6 +339,7 @@ console.log(age);</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let city = "Toshkent";
 
@@ -294,6 +358,7 @@ console.log(city);</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Samarqand</code></pre>
 
@@ -329,6 +394,7 @@ console.log(city);</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>const birthYear = 2010;
 
@@ -374,6 +440,7 @@ console.log(birthYear);</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>const country = "Uzbekistan";
 
@@ -426,6 +493,7 @@ country = "USA";</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>var name = "Mirjamol";
 
@@ -457,6 +525,7 @@ console.log(name);</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>var age = 15;
 
@@ -475,6 +544,7 @@ console.log(age);</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>16</code></pre>
 
@@ -622,6 +692,7 @@ console.log(age);</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let score = 0;
 
@@ -640,6 +711,7 @@ score = 20;</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let userAge = 15;
 
@@ -673,6 +745,7 @@ userAge = 16;</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>const country = "Uzbekistan";
 
@@ -705,6 +778,7 @@ const pi = 3.14;</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let name = "Ali";
 
@@ -725,6 +799,7 @@ let $price = 5000;</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>// Noto‘g‘ri
 
@@ -758,6 +833,7 @@ let 1name = "Ali";</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let firstName = "Ali";
 
@@ -785,6 +861,7 @@ let phoneNumber = "998901234567";</code></pre>
 
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let firstName = "Mirjamol";
 
@@ -973,18 +1050,75 @@ console.log(country);</code></pre>
 
 <script>
 
+function copyCode(button) {
+    const code = button.parentElement.querySelector("code").innerText;
+
+    navigator.clipboard.writeText(code).then(() => {
+        const oldText = button.textContent;
+        button.textContent = "✅ Nusxalandi";
+
+        setTimeout(() => {
+            button.textContent = oldText;
+        }, 1200);
+    });
+}
+
+function restoreLessonState() {
+    let completedLessons =
+        JSON.parse(
+            localStorage.getItem("jsCompletedLessons")
+        ) || [];
+
+    if (completedLessons.includes(4)) {
+        const button = document.getElementById("completeBtn");
+        const message = document.getElementById("message");
+
+        message.textContent =
+            "🎉 4-dars allaqachon tugatilgan! 5-dars ochiq 🔓";
+
+        button.textContent = "✅ 4-DARS TUGATILDI";
+        button.disabled = true;
+
+        button.classList.remove(
+            "bg-yellow-400",
+            "hover:bg-yellow-300"
+        );
+
+        button.classList.add(
+            "bg-green-600",
+            "text-white"
+        );
+
+        if (!document.getElementById("nextLessonBtn")) {
+            const next = document.createElement("a");
+
+            next.id = "nextLessonBtn";
+            next.href = "js-lesson-5.html";
+            next.className = "next-lesson";
+
+            next.innerHTML =
+                '5-DARSNI BOSHLASH <i class="fa-solid fa-arrow-right"></i>';
+
+            button.parentElement.appendChild(next);
+        }
+    }
+}
+
+document.addEventListener(
+    "DOMContentLoaded",
+    restoreLessonState
+);
+
+
 function completeLesson() {
 
     let completedLessons =
         JSON.parse(
-            localStorage.getItem(
-                "jsCompletedLessons"
-            )
+            localStorage.getItem("jsCompletedLessons")
         ) || [];
 
 
     // 3-dars tugatilganini tekshirish
-
     if (!completedLessons.includes(3)) {
 
         alert(
@@ -995,12 +1129,10 @@ function completeLesson() {
             "js-lesson-3.html";
 
         return;
-
     }
 
 
     // 4-darsni saqlash
-
     if (!completedLessons.includes(4)) {
 
         completedLessons.push(4);
@@ -1047,12 +1179,18 @@ function completeLesson() {
     );
 
 
-    setTimeout(() => {
+    if (!document.getElementById("nextLessonBtn")) {
+        const next = document.createElement("a");
 
-        window.location.href =
-            "js-course.html";
+        next.id = "nextLessonBtn";
+        next.href = "js-lesson-5.html";
+        next.className = "next-lesson";
 
-    }, 1200);
+        next.innerHTML =
+            '5-DARSNI BOSHLASH <i class="fa-solid fa-arrow-right"></i>';
+
+        button.parentElement.appendChild(next);
+    }
 
 }
 

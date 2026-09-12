@@ -13,21 +13,47 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+
         .lesson-box {
             background: #0f172a;
             border: 1px solid #1e293b;
             border-radius: 24px;
             padding: 30px;
             margin-top: 28px;
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+        }
+        .lesson-box:hover {
+            border-color: rgba(250,204,21,.35);
+            box-shadow: 0 18px 50px rgba(0,0,0,.18);
         }
 
         .code-box {
+            position: relative;
             background: #020617;
             border: 1px solid #1e293b;
             border-radius: 16px;
             padding: 22px;
             margin-top: 20px;
             overflow-x: auto;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid #334155;
+            transition: .2s;
+        }
+        .copy-btn:hover {
+            background: #334155;
+            color: white;
         }
 
         .code-box pre {
@@ -37,6 +63,30 @@
 
         code {
             color: #facc15;
+        }
+
+        @media (max-width: 640px) {
+            .lesson-box { padding: 20px; border-radius: 18px; }
+            .code-box { padding: 18px; padding-top: 52px; }
+        }
+
+        .next-lesson {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 12px;
+            padding: 16px;
+            border-radius: 16px;
+            background: #16a34a;
+            color: white;
+            font-weight: 800;
+            transition: .2s;
+        }
+        .next-lesson:hover {
+            background: #22c55e;
+            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -179,6 +229,7 @@
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>while (shart) {
 
@@ -217,6 +268,7 @@
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -231,6 +283,7 @@ while (i <= 5) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>1
 2
@@ -276,6 +329,7 @@ while (i <= 5) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -350,6 +404,7 @@ while (i <= 3) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -388,6 +443,7 @@ while (i <= 5) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -402,6 +458,7 @@ while (i <= 10) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>1
 2
@@ -428,6 +485,7 @@ while (i <= 10) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 10;
 
@@ -442,6 +500,7 @@ while (i >= 1) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>10
 9
@@ -468,6 +527,7 @@ while (i >= 1) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 2;
 
@@ -482,6 +542,7 @@ while (i <= 10) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>2
 4
@@ -503,6 +564,7 @@ while (i <= 10) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -517,6 +579,7 @@ while (i <= 10) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>1
 3
@@ -546,6 +609,7 @@ while (i <= 10) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -564,6 +628,7 @@ while (i <= 10) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>2
 4
@@ -585,6 +650,7 @@ while (i <= 10) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 let sum = 0;
@@ -602,6 +668,7 @@ console.log(sum);</code></pre>
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>15</code></pre>
 
@@ -629,6 +696,7 @@ console.log(sum);</code></pre>
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 let number = 5;
@@ -646,6 +714,7 @@ while (i <= 10) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>5 x 1 = 5
 5 x 2 = 10
@@ -677,6 +746,7 @@ while (i <= 10) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -695,6 +765,7 @@ while (i <= 10) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>1
 2
@@ -729,6 +800,7 @@ while (i <= 10) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 0;
 
@@ -747,6 +819,7 @@ while (i < 5) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>1
 2
@@ -767,6 +840,7 @@ while (i < 5) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let word = "JavaScript";
 let i = 0;
@@ -782,6 +856,7 @@ while (i < word.length) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>J
 a
@@ -816,6 +891,7 @@ t</code></pre>
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let fruits = [
     "Olma",
@@ -836,6 +912,7 @@ while (i < fruits.length) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Olma
 Banan
@@ -864,6 +941,7 @@ Uzum</code></pre>
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let number = 0;
 
@@ -880,6 +958,7 @@ while (number < 10) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>Son hali 10 dan kichik
 Son hali 10 dan kichik
@@ -909,6 +988,7 @@ Son hali 10 dan kichik</code></pre>
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -938,6 +1018,7 @@ while (i <= 5) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -963,6 +1044,7 @@ while (i <= 5) {
         </h2>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>// for
 
@@ -975,6 +1057,7 @@ for (let i = 1; i <= 5; i++) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>// while
 
@@ -1065,6 +1148,7 @@ while (i <= 5) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -1079,6 +1163,7 @@ while (i <= 3) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 10;
 
@@ -1093,6 +1178,7 @@ while (i >= 6) {
         </div>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 2;
 
@@ -1126,6 +1212,7 @@ while (i <= 10) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>let i = 1;
 
@@ -1150,6 +1237,7 @@ while (i <= 100) {
         </p>
 
         <div class="code-box">
+            <button class="copy-btn" onclick="copyCode(this)">📋 Nusxalash</button>
 
 <pre><code>5
 10
@@ -1369,76 +1457,112 @@ while (i <= 100) {
 
 <script>
 
+function copyCode(button) {
+    const code = button.parentElement.querySelector("code").innerText;
+
+    navigator.clipboard.writeText(code).then(() => {
+        const oldText = button.textContent;
+        button.textContent = "✅ Nusxalandi";
+
+        setTimeout(() => {
+            button.textContent = oldText;
+        }, 1200);
+    });
+}
+
+function restoreLessonState() {
+    const completedLessons =
+        JSON.parse(localStorage.getItem("jsCompletedLessons")) || [];
+
+    const message = document.getElementById("message");
+    const button = document.getElementById("completeBtn");
+
+    if (completedLessons.includes(21)) {
+        message.textContent =
+            "🎉 21-dars allaqachon tugatilgan! 22-dars ochiq.";
+
+        button.textContent = "✅ 21-DARS TUGATILDI";
+        button.disabled = true;
+
+        button.classList.remove(
+            "bg-yellow-400",
+            "hover:bg-yellow-300",
+            "text-slate-950"
+        );
+
+        button.classList.add(
+            "bg-green-600",
+            "text-white"
+        );
+
+        if (!document.getElementById("nextLessonBtn")) {
+            const next = document.createElement("a");
+            next.id = "nextLessonBtn";
+            next.href = "js-lesson-22.html";
+            next.className = "next-lesson";
+            next.innerHTML =
+                "22-DARSNI BOSHLASH <i class='fa-solid fa-arrow-right'></i>";
+
+            button.parentElement.appendChild(next);
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", restoreLessonState);
+
 function completeLesson() {
-
     let completedLessons =
-        JSON.parse(
-            localStorage.getItem("jsCompletedLessons")
-        ) || [];
-
+        JSON.parse(localStorage.getItem("jsCompletedLessons")) || [];
 
     // 20-dars tugatilganini tekshirish
-
     if (!completedLessons.includes(20)) {
-
         alert("Avval 20-darsni tugating!");
-
-        window.location.href =
-            "js-lesson-20.html";
-
+        window.location.href = "js-lesson-20.html";
         return;
     }
 
-
     // 21-darsni saqlash
-
     if (!completedLessons.includes(21)) {
-
         completedLessons.push(21);
-
     }
-
 
     localStorage.setItem(
         "jsCompletedLessons",
         JSON.stringify(completedLessons)
     );
 
-
     document.getElementById("message").textContent =
         "🎉 21-dars tugatildi! 22-dars ochildi.";
-
 
     const button =
         document.getElementById("completeBtn");
 
-
     button.textContent =
         "✅ 21-DARS TUGATILDI";
 
-
     button.disabled = true;
-
 
     button.classList.remove(
         "bg-yellow-400",
-        "hover:bg-yellow-300"
+        "hover:bg-yellow-300",
+        "text-slate-950"
     );
-
 
     button.classList.add(
         "bg-green-600",
         "text-white"
     );
 
+    if (!document.getElementById("nextLessonBtn")) {
+        const next = document.createElement("a");
+        next.id = "nextLessonBtn";
+        next.href = "js-lesson-22.html";
+        next.className = "next-lesson";
+        next.innerHTML =
+            "22-DARSNI BOSHLASH <i class='fa-solid fa-arrow-right'></i>";
 
-    setTimeout(() => {
-
-        window.location.href =
-            "js-course.html";
-
-    }, 1200);
-
+        button.parentElement.appendChild(next);
+    }
 }
 
 </script>
